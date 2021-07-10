@@ -3,9 +3,8 @@
         "SE_PlacingBlock": {
             "trigger": "minecraft:placed_block",
             "conditions": {
-                "block": "minecraft:barrel",
                 "item": {
-                    "item": "minecraft:barrel",
+                    "item": "minecraft:player_head",
                     "nbt": "{SE_AdvancedWire:1b}"
                 }
             }

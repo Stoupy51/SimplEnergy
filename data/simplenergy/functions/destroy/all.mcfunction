@@ -5,8 +5,8 @@
 
 #Wires
     execute as @e[type=minecraft:armor_stand,tag=SE_SimpleWire] at @s unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/simple_wire
-    execute as @e[type=minecraft:armor_stand,tag=SE_AdvancedWire] at @s unless block ~ ~ ~ minecraft:redstone_block run function simplenergy:destroy/advanced_wire
-    execute as @e[type=minecraft:armor_stand,tag=SE_EliteWire] at @s unless block ~ ~ ~ minecraft:redstone_block run function simplenergy:destroy/elite_wire
+    execute as @e[type=minecraft:armor_stand,tag=SE_AdvancedWire] at @s unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/advanced_wire
+    execute as @e[type=minecraft:armor_stand,tag=SE_EliteWire] at @s unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/elite_wire
 
 
 #Batteries
