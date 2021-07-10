@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "SE_PlacingBlock": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "block": "minecraft:barrel",
+                "item": {
+                    "item": "minecraft:barrel",
+                    "nbt": "{SE_FurnaceGenerator:1b}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "simplenergy:place/furnace_generator"
+    }
+}

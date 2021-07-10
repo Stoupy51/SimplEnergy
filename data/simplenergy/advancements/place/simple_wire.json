@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "SE_PlacingBlock": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "item": {
+                    "item": "minecraft:player_head",
+                    "nbt": "{SE_SimpleWire:1b}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "simplenergy:place/simple_wire"
+    }
+}

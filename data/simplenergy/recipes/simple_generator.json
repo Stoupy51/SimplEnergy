@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "WCW",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:redstone"
+        },
+        "W": {
+            "item": "minecraft:water_bucket"
+        },
+        "C": {
+            "item": "minecraft:cauldron"
+        }
+    },
+    "result": {
+        "item": "minecraft:ghast_spawn_egg",
+        "SE_CauldronGenerator": "1b",
+        "SE_Crafted": "1b",
+        "count": 1
+    }
+}
