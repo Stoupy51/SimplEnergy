@@ -4,7 +4,7 @@
     #Furnace Generator
         summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012001,BlockEntityTag:{Lock:"SE_Placed"},SE_FurnaceGenerator:1b,HideFlags:127,display:{Lore:['[{"text":"[Generate : 10 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 800 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Furnace Generator","color":"white","italic":false}]'}}}}
     #Solar Panel
-        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012002,BlockEntityTag:{Lock:"SE_Placed"},SE_SolarPanel:1b,HideFlags:127,display:{Lore:['[{"text":"[Generate : 4 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 600 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Solar Panel","color":"white","italic":false}]'}}}}
+        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012003,BlockEntityTag:{Lock:"SE_Placed"},SE_SolarPanel:1b,HideFlags:127,display:{Lore:['[{"text":"[Generate : 4 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 600 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Solar Panel","color":"white","italic":false}]'}}}}
 
 #Wires
     #Simple Wire
