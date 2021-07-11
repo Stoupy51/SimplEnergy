@@ -11,6 +11,7 @@
 
 #Power Consumers
 	execute as @e[type=minecraft:armor_stand,tag=SE_ElectricFurnace] at @s if score @s EF_Joule matches 10.. run function simplenergy:work/electric_furnace
+	execute as @e[type=minecraft:armor_stand,tag=SE_ElectricLamp] at @s run function simplenergy:visual/electric_lamp
 	execute as @e[type=minecraft:armor_stand,tag=SE_ElectricLamp] at @s if score @s EF_Joule matches 1.. run scoreboard players remove @s EF_Joule 1
 
 #Visuals
@@ -19,4 +20,3 @@
 	execute as @e[type=minecraft:armor_stand,tag=SE_EliteBattery] at @s run function simplenergy:visual/elite_battery
 	execute as @e[type=minecraft:armor_stand,tag=SE_ElectricFurnace] at @s run function simplenergy:visual/electric_furnace
 	execute as @e[type=minecraft:armor_stand,tag=SE_ElectricSmelter] at @s run function simplenergy:visual/electric_smelter
-	execute as @e[type=minecraft:armor_stand,tag=SE_ElectricLamp] at @s run function simplenergy:visual/electric_lamp
