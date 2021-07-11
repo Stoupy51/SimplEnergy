@@ -1,5 +1,5 @@
 #Destroy
-    execute as @e[type=minecraft:armor_stand,tag=SE_Destroyer,limit=1] run function simplenergy:destroy/all
+    execute if entity @e[type=minecraft:armor_stand,tag=SE_Destroyer,limit=1] run function simplenergy:destroy/all
 
 #Timer
     scoreboard players add Second SE_Timer 1
@@ -11,6 +11,7 @@
 
 #Work
 	execute as @e[type=minecraft:armor_stand,tag=SE_ElectricSmelter] at @s if score @s EF_Joule matches 4.. run function simplenergy:work/electric_smelter
+	execute as @e[type=minecraft:armor_stand,tag=SE_ElectricBrewing] at @s if score @s EF_Joule matches 1.. run function simplenergy:work/electric_brewing_stand
 
 #Fixes
 	clear @a minecraft:cobblestone{SE_CustomTextureItem:1b}

@@ -1,3 +1,4 @@
+data modify block ~ ~ ~ Items insert 0 value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011942,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}}
 execute if score @s EF_Joule matches ..0 run data modify block ~ ~ ~ Items[0] set value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011942,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}}
 execute if score @s EF_Joule matches 1..1600 run data modify block ~ ~ ~ Items[0] set value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011941,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}}
 execute if score @s EF_Joule matches 1601..3200 run data modify block ~ ~ ~ Items[0] set value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011940,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}}

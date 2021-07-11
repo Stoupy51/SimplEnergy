@@ -12,7 +12,5 @@ execute as @e[type=minecraft:armor_stand,tag=SE_SetNew,limit=1] at @s store resu
 tag @e[type=minecraft:armor_stand,tag=SE_SetNew,limit=1] remove SE_SetNew
 execute at @e[type=minecraft:area_effect_cloud,tag=SE_Placed,limit=1] run setblock ~ ~ ~ barrel[facing=down]{CustomName:'[{"text":"Simple Battery"}]'}
 execute at @e[type=minecraft:area_effect_cloud,tag=SE_Placed,limit=1] run data modify block ~ ~ ~ Lock set value ""
-execute at @e[type=minecraft:area_effect_cloud,tag=SE_Placed,limit=1] run playsound minecraft:block.stone.place block @a ~ ~ ~ 2
 kill @e[type=minecraft:area_effect_cloud,tag=SE_Placed,limit=1]
-
 advancement revoke @s only simplenergy:place/simple_battery

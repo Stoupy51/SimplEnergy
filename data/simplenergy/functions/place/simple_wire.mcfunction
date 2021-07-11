@@ -10,7 +10,5 @@ execute at @e[type=minecraft:area_effect_cloud,tag=SE_Placed,limit=1] run summon
 execute at @e[type=minecraft:area_effect_cloud,tag=SE_Placed,limit=1] as @e[type=minecraft:armor_stand,tag=EF_Wire,distance=..2] at @s run function simplenergy:work/wire_update
 scoreboard players set @e[type=minecraft:armor_stand,tag=SE_SetNew,limit=1] EF_Watt 20
 tag @e[type=minecraft:armor_stand,tag=SE_SetNew,limit=1] remove SE_SetNew
-execute at @e[type=minecraft:area_effect_cloud,tag=SE_Placed,limit=1] run playsound minecraft:block.stone.place block @a ~ ~ ~ 2
 kill @e[type=minecraft:area_effect_cloud,tag=SE_Placed,limit=1]
-
 advancement revoke @s only simplenergy:place/simple_wire

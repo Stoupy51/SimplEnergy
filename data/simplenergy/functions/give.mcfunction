@@ -3,6 +3,8 @@
         summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012000,BlockEntityTag:{Lock:"SE_Placed"},SE_CauldronGenerator:1b,HideFlags:127,display:{Lore:['[{"text":"[Generate : 2 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 500 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Cauldron Generator","color":"white","italic":false}]'}}}}
     #Furnace Generator
         summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012001,BlockEntityTag:{Lock:"SE_Placed"},SE_FurnaceGenerator:1b,HideFlags:127,display:{Lore:['[{"text":"[Generate : 10 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 800 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Furnace Generator","color":"white","italic":false}]'}}}}
+    #Solar Panel
+        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012002,BlockEntityTag:{Lock:"SE_Placed"},SE_SolarPanel:1b,HideFlags:127,display:{Lore:['[{"text":"[Generate : 4 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 600 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Solar Panel","color":"white","italic":false}]'}}}}
 
 #Wires
     #Simple Wire
@@ -26,7 +28,9 @@
     #Electric Smelter
         summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012302,BlockEntityTag:{Lock:"SE_Placed"},SE_ElectricSmelter:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 80 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 6400 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Electric Smelter","color":"white","italic":false}]'}}}}
     #Electric Brewing Stand
-        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012304,BlockEntityTag:{Lock:"SE_Placed"},SE_ElectricBrewing:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 15 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 1200 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Electric Brewing Stand","color":"white","italic":false}]'}}}}
+        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012304,BlockEntityTag:{Lock:"SE_Placed"},SE_ElectricBrewing:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 20 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 1200 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Electric Brewing Stand","color":"white","italic":false}]'}}}}
+    #Electric Lamp
+        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012305,BlockEntityTag:{Lock:"SE_Placed"},SE_ElectricLamp:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 1 Watt]","color":"gray","italic":false}]'],Name:'[{"text":"Electric Lamp","color":"white","italic":false}]'}}}}
 
 #Others
     #Wattmeter

@@ -17,7 +17,5 @@ scoreboard players set @e[type=minecraft:armor_stand,tag=SE_SetNew,limit=1] EF_W
 scoreboard players set @e[type=minecraft:armor_stand,tag=SE_SetNew,limit=1] EF_Joule 0
 scoreboard players set @e[type=minecraft:armor_stand,tag=SE_SetNew,limit=1] EF_EnergyStorage 800
 tag @e[type=minecraft:armor_stand,tag=SE_SetNew,limit=1] remove SE_SetNew
-execute at @e[type=minecraft:area_effect_cloud,tag=SE_Placed,limit=1] run playsound minecraft:block.stone.place block @a ~ ~ ~ 2
 kill @e[type=minecraft:area_effect_cloud,tag=SE_Placed,limit=1]
-
 advancement revoke @s only simplenergy:place/electric_furnace

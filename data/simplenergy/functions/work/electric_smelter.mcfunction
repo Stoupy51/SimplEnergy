@@ -1,10 +1,13 @@
-execute if data block ~ ~ ~ Items[{Slot:0b}] run scoreboard players remove @s EF_Joule 4
-execute if data block ~ ~ ~ Items[{Slot:0b}] run data merge block ~ ~ ~ {BurnTime:210s}
-execute if data block ~ ~ ~ Items[{Slot:0b}] run data merge block ~ ~ ~ {BurnTime:210s}
-data modify block ~ ~ ~ Items insert 0 value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011998,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}}
+execute store result score CookTime SE_Timer run data get block ~ ~ ~ CookTime
+execute store result score BurnTime SE_Timer run data get block ~ ~ ~ BurnTime
+execute if score CookTime SE_Timer matches 1.. run scoreboard players remove @s EF_Joule 4
+execute if score CookTime SE_Timer matches 1.. run scoreboard players add CookTime SE_Timer 7
+execute if score CookTime SE_Timer matches 200.. run scoreboard players set CookTime SE_Timer 199
+execute store result block ~ ~ ~ CookTime short 1 run scoreboard players get CookTime SE_Timer
 
+scoreboard players add BurnTime SE_Timer 2
+execute unless score CookTime SE_Timer matches 1.. unless score BurnTime SE_Timer matches 221.. run scoreboard players remove @s EF_Joule 4
+execute if score BurnTime SE_Timer matches 221.. run scoreboard players set BurnTime SE_Timer 220
+execute store result block ~ ~ ~ BurnTime short 1 run scoreboard players get BurnTime SE_Timer
 
-execute store result score CookTime EF_Temp run data get block ~ ~ ~ CookTime
-scoreboard players add CookTime EF_Temp 3
-execute if score CookTime EF_Temp matches 200.. run scoreboard players set CookTime EF_Temp 199
-execute if score CookTime EF_Temp matches 11.. store result block ~ ~ ~ CookTime int 1 run scoreboard players get CookTime EF_Temp
+data modify block ~ ~ ~ Items insert 0 value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011942,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}}
