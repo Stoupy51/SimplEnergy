@@ -2,6 +2,7 @@ execute store result score CookTime SE_Timer run data get block ~ ~ ~ CookTime
 execute store result score BurnTime SE_Timer run data get block ~ ~ ~ BurnTime
 execute if score CookTime SE_Timer matches 1.. run scoreboard players remove @s EF_Joule 10
 execute if score CookTime SE_Timer matches 1.. run scoreboard players add CookTime SE_Timer 10
+execute if score CookTime SE_Timer matches 1.. run playsound simplenergy:electric_furnace block @a[distance=..10] ~ ~ ~ 0.25
 execute if score CookTime SE_Timer matches 200.. run scoreboard players set CookTime SE_Timer 199
 execute store result block ~ ~ ~ CookTime short 1 run scoreboard players get CookTime SE_Timer
 
