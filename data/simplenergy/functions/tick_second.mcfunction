@@ -20,3 +20,4 @@
 	execute as @e[type=minecraft:armor_stand,tag=SE_EliteBattery] at @s run function simplenergy:visual/elite_battery
 	execute as @e[type=minecraft:armor_stand,tag=SE_ElectricFurnace] at @s run function simplenergy:visual/electric_furnace
 	execute as @e[type=minecraft:armor_stand,tag=SE_ElectricSmelter] at @s run function simplenergy:visual/electric_smelter
+	execute as @e[type=minecraft:armor_stand,tag=SE_ElectricBrewing] at @s run function simplenergy:visual/electric_brewing_stand
