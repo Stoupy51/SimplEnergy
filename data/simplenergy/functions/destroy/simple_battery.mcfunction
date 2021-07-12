@@ -8,4 +8,4 @@ execute if score @s EF_Joule matches 1.. run setblock ~ ~ ~ oak_sign{Text1:'[{"t
 execute if score @s EF_Joule matches 1.. run data modify entity @e[type=item,limit=1,sort=nearest,distance=..1,nbt={Item:{tag:{SE_SimpleBattery:1b}}}] Item.tag.display.Lore append from block ~ ~ ~ Text1
 execute if score @s EF_Joule matches 1.. run setblock ~ ~ ~ air
 kill @s
-execute as @e[type=minecraft:armor_stand,tag=EF_Wire,distance=..2] at @s run function simplenergy:work/wire_update
+execute as @e[type=minecraft:glow_item_frame,tag=EF_Wire,distance=..2] at @s run function simplenergy:work/wire_update

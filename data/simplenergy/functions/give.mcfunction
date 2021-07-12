@@ -33,5 +33,5 @@
         summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012305,BlockEntityTag:{Lock:"SE_Placed"},SE_ElectricLamp:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 1 Watt]","color":"gray","italic":false}]'],Name:'[{"text":"Electric Lamp","color":"white","italic":false}]'}}}}
 
 #Others
-    #Wattmeter
-        summon item ~ ~ ~ {Item:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2012900,SE_Wattmeter:1b,HideFlags:127,display:{Lore:['[{"text":"Allow you to check","color":"gray","italic":false}]','[{"text":"machines power","color":"gray","italic":false}]'],Name:'[{"text":"Wattmeter","color":"yellow","italic":false}]'}}}}
+    #Joulemeter
+        summon item ~ ~ ~ {Item:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2012900,SE_Joulemeter:1b,HideFlags:127,display:{Lore:['[{"text":"Allow you to check","color":"gray","italic":false}]','[{"text":"machines power","color":"gray","italic":false}]'],Name:'[{"text":"Joulemeter","color":"yellow","italic":false}]'}}}}
