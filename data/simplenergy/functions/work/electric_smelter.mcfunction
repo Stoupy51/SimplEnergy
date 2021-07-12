@@ -2,6 +2,7 @@ execute store result score CookTime SE_Timer run data get block ~ ~ ~ CookTime
 execute store result score BurnTime SE_Timer run data get block ~ ~ ~ BurnTime
 execute if score CookTime SE_Timer matches 1.. run scoreboard players remove @s EF_Joule 4
 execute if score CookTime SE_Timer matches 1.. run scoreboard players add CookTime SE_Timer 7
+execute if score Second SE_Timer matches 0 if score CookTime SE_Timer matches 1.. run playsound simplenergy:electric_smelter block @a[distance=..10] ~ ~ ~ 0.25
 execute if score CookTime SE_Timer matches 200.. run scoreboard players set CookTime SE_Timer 199
 execute store result block ~ ~ ~ CookTime short 1 run scoreboard players get CookTime SE_Timer
 
@@ -11,3 +12,4 @@ execute if score BurnTime SE_Timer matches 221.. run scoreboard players set Burn
 execute store result block ~ ~ ~ BurnTime short 1 run scoreboard players get BurnTime SE_Timer
 
 data modify block ~ ~ ~ Items insert 0 value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011942,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}}
+
