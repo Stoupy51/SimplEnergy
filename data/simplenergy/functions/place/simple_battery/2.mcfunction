@@ -1,4 +1,3 @@
-function simplenergy:place/detect_pos
 execute store result score EF_Next EF_Joule run data get block ~ ~ ~ Items[0].tag.Energy
 setblock ~ ~ ~ barrel[facing=down]{CustomName:'[{"text":"Simple Battery"}]'}
 data modify block ~ ~ ~ Lock set value ""
