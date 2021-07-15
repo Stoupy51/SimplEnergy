@@ -1,4 +1,4 @@
 scoreboard players set @s EF_EnergyStorage 5000
-scoreboard players set @s EF_Joule 0
-execute store result score @s EF_Joule run data get block ~ ~ ~ Items[0].tag.Energy
+scoreboard players operation @s EF_Joule = EF_Next EF_Joule
+scoreboard players reset EF_Next EF_Joule
 tag @s remove SE_SetNew
