@@ -1,6 +1,6 @@
 #Timer
-	scoreboard players set Second SE_Timer 0
-	execute store result score DayTime SE_Timer run time query daytime
+	scoreboard players set Second SE_Data 0
+	execute store result score DayTime SE_Data run time query daytime
 
 #Generators
 	execute as @e[type=minecraft:glow_item_frame,tag=SE_CauldronGenerator] at @s unless block ~ ~ ~ minecraft:cauldron unless score @s EF_Joule matches 500.. run function simplenergy:work/cauldron_generator
