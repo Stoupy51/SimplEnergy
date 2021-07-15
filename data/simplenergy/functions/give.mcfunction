@@ -16,21 +16,21 @@
 
 #Batteries
     #Simple Battery
-        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012200,BlockEntityTag:{Lock:"SE_Placed"},SE_SimpleBattery:1b,HideFlags:127,display:{Lore:['[{"text":"[Energy Storage : 1.5 kJ]","color":"gray","italic":false}]'],Name:'[{"text":"Simple Battery","color":"white","italic":false}]'}}}}
+        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012100,BlockEntityTag:{Lock:"SE_Placed",Items:[{Slot:13b,id:"minecraft:cobblestone",Count:1b,tag:{Energy:0,CustomModelData:2011992,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}}]},SE_SimpleBattery:1b,HideFlags:127,display:{Lore:['[{"text":"[Energy Storage : 1.5 kJ]","color":"gray","italic":false}]'],Name:'[{"text":"Simple Battery","color":"white","italic":false}]'}}}}
     #Advanced Battery
-        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012201,BlockEntityTag:{Lock:"SE_Placed"},SE_AdvancedBattery:1b,HideFlags:127,display:{Lore:['[{"text":"[Energy Storage : 5 kJ]","color":"gray","italic":false}]'],Name:'[{"text":"Advanced Battery","color":"aqua","italic":false}]'}}}}
+        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012101,BlockEntityTag:{Lock:"SE_Placed",Items:[{Slot:13b,id:"minecraft:cobblestone",Count:1b,tag:{Energy:0,CustomModelData:2011992,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}}]},SE_AdvancedBattery:1b,HideFlags:127,display:{Lore:['[{"text":"[Energy Storage : 5 kJ]","color":"gray","italic":false}]'],Name:'[{"text":"Advanced Battery","color":"aqua","italic":false}]'}}}}
     #Elite Battery
-        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012202,BlockEntityTag:{Lock:"SE_Placed"},SE_EliteBattery:1b,HideFlags:127,display:{Lore:['[{"text":"[Energy Storage : 20 kJ]","color":"gray","italic":false}]'],Name:'[{"text":"Elite Battery","color":"red","italic":false}]'}}}}
+        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012102,BlockEntityTag:{Lock:"SE_Placed",Items:[{Slot:13b,id:"minecraft:cobblestone",Count:1b,tag:{Energy:0,CustomModelData:2011992,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}}]},SE_EliteBattery:1b,HideFlags:127,display:{Lore:['[{"text":"[Energy Storage : 20 kJ]","color":"gray","italic":false}]'],Name:'[{"text":"Elite Battery","color":"red","italic":false}]'}}}}
 
 #Power Consumers
     #Electric Furnace
-        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012300,BlockEntityTag:{Lock:"SE_Placed"},SE_ElectricFurnace:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 10 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 800 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Electric Furnace","color":"white","italic":false}]'}}}}
+        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012200,BlockEntityTag:{Lock:"SE_Placed"},SE_ElectricFurnace:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 10 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 800 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Electric Furnace","color":"white","italic":false}]'}}}}
     #Electric Smelter
-        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012302,BlockEntityTag:{Lock:"SE_Placed"},SE_ElectricSmelter:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 80 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 6400 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Electric Smelter","color":"white","italic":false}]'}}}}
+        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012202,BlockEntityTag:{Lock:"SE_Placed"},SE_ElectricSmelter:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 80 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 6400 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Electric Smelter","color":"white","italic":false}]'}}}}
     #Electric Brewing Stand
-        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012304,BlockEntityTag:{Lock:"SE_Placed"},SE_ElectricBrewing:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 20 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 1200 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Electric Brewing Stand","color":"white","italic":false}]'}}}}
+        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012204,BlockEntityTag:{Lock:"SE_Placed"},SE_ElectricBrewing:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 20 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 1200 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Electric Brewing Stand","color":"white","italic":false}]'}}}}
     #Electric Lamp
-        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012305,BlockEntityTag:{Lock:"SE_Placed"},SE_ElectricLamp:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 1 Watt]","color":"gray","italic":false}]'],Name:'[{"text":"Electric Lamp","color":"white","italic":false}]'}}}}
+        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012205,BlockEntityTag:{Lock:"SE_Placed"},SE_ElectricLamp:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 1 Watt]","color":"gray","italic":false}]'],Name:'[{"text":"Electric Lamp","color":"white","italic":false}]'}}}}
 
 #Others
     #Joulemeter
