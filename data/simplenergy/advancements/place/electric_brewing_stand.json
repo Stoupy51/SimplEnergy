@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "simplenergy:place/electric_brewing_stand"
+        "function": "simplenergy:place/electric_brewing_stand/1"
     }
 }

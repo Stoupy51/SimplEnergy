@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "simplenergy:place/electric_smelter"
+        "function": "simplenergy:place/electric_smelter/1"
     }
 }

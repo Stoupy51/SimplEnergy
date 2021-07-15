@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "simplenergy:place/advanced_battery"
+        "function": "simplenergy:place/advanced_battery/1"
     }
 }

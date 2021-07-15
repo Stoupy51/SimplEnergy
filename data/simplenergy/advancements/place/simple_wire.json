@@ -11,6 +11,6 @@
         }
     },
     "rewards": {
-        "function": "simplenergy:place/simple_wire"
+        "function": "simplenergy:place/simple_wire/1"
     }
 }

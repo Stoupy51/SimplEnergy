@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "simplenergy:place/furnace_generator"
+        "function": "simplenergy:place/furnace_generator/1"
     }
 }

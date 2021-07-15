@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "simplenergy:place/elite_battery"
+        "function": "simplenergy:place/elite_battery/1"
     }
 }

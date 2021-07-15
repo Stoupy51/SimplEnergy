@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "simplenergy:place/electric_lamp"
+        "function": "simplenergy:place/electric_lamp/1"
     }
 }
