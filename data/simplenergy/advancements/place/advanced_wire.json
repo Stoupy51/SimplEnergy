@@ -11,6 +11,6 @@
         }
     },
     "rewards": {
-        "function": "simplenergy:place/advanced_wire"
+        "function": "simplenergy:place/advanced_wire/1"
     }
 }

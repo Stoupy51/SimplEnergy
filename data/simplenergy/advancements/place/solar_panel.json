@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "simplenergy:place/solar_panel"
+        "function": "simplenergy:place/solar_panel/1"
     }
 }

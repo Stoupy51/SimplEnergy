@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "simplenergy:place/cauldron_generator"
+        "function": "simplenergy:place/cauldron_generator/1"
     }
 }
