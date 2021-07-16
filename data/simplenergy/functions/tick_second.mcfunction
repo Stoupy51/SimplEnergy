@@ -1,6 +1,7 @@
-#Timer
+#Others
 	scoreboard players set Second SE_Data 0
 	execute store result score DayTime SE_Data run time query daytime
+	execute as @e[type=item,nbt={Item:{tag:{SE_Simplunium:1b}}}] at @s if block ~ ~-1 ~ minecraft:crafting_table run function simplenergy:place/custom_crafting_table
 
 #Generators
 	execute as @e[type=minecraft:glow_item_frame,tag=SE_CauldronGenerator] at @s unless block ~ ~ ~ minecraft:cauldron unless score @s EF_Joule matches 500.. run function simplenergy:work/cauldron_generator
@@ -13,6 +14,7 @@
 	execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricLamp] at @s if score @s EF_Joule matches 1.. run scoreboard players remove @s EF_Joule 1
 
 #Visuals
+	execute as @e[type=minecraft:glow_item_frame,tag=SE_FurnaceGenerator] at @s run schedule function simplenergy:visual/furnace_generator 1t replace
 	execute as @e[type=minecraft:glow_item_frame,tag=SE_SimpleBattery] at @s run function simplenergy:visual/simple_battery
 	execute as @e[type=minecraft:glow_item_frame,tag=SE_AdvancedBattery] at @s run function simplenergy:visual/advanced_battery
 	execute as @e[type=minecraft:glow_item_frame,tag=SE_EliteBattery] at @s run function simplenergy:visual/elite_battery
