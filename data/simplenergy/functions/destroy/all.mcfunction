@@ -18,3 +18,6 @@
     execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricSmelter] at @s unless block ~ ~ ~ minecraft:furnace run function simplenergy:destroy/electric_smelter
     execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricBrewing] at @s unless block ~ ~ ~ minecraft:brewing_stand run function simplenergy:destroy/electric_brewing_stand
     execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricLamp] at @s unless block ~ ~ ~ minecraft:redstone_lamp unless block ~ ~ ~ minecraft:glowstone run function simplenergy:destroy/electric_lamp
+
+#Others
+    execute as @e[type=minecraft:glow_item_frame,tag=SE_CraftingTable] at @s unless block ~ ~ ~ minecraft:barrel run function simplenergy:destroy/simple_crafting_table
