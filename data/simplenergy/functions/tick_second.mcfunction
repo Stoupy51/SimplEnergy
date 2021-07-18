@@ -3,6 +3,11 @@
 	execute store result score DayTime SE_Data run time query daytime
 	execute as @e[type=item,nbt={Item:{tag:{SE_Simplunium:1b}}}] at @s if block ~ ~-1 ~ minecraft:crafting_table run function simplenergy:place/simple_crafting_table
 	execute as @a at @s run function simplenergy:generate/player
+	execute as @e[type=minecraft:glow_item_frame,tag=SE_SolarPanel] at @s run function simplenergy:balance/all
+	execute as @e[type=minecraft:glow_item_frame,tag=SE_SimpleBattery] at @s run function simplenergy:balance/all
+	execute as @e[type=minecraft:glow_item_frame,tag=SE_AdvancedBattery] at @s run function simplenergy:balance/all
+	execute as @e[type=minecraft:glow_item_frame,tag=SE_EliteBattery] at @s run function simplenergy:balance/all
+	tag @e[type=minecraft:glow_item_frame,tag=SE_Balanced] remove SE_Balanced
 
 #Generators
 	execute as @e[type=minecraft:glow_item_frame,tag=SE_CauldronGenerator] at @s unless block ~ ~ ~ minecraft:cauldron unless score @s EF_Joule matches 500.. run function simplenergy:work/cauldron_generator
