@@ -1,3 +1,5 @@
+execute unless entity @s[nbt={SelectedItem:{tag:{SE_Joulemeter:1b}}}] run scoreboard players reset @s SE_JoulemeterUse
+
 execute if score @s SE_JoulemeterUse matches 1.. anchored eyes positioned ^ ^ ^ unless block ~ ~ ~ #simplenergy:non_solid run function simplenergy:work/joulemeter_2
 execute if score @s SE_JoulemeterUse matches 1.. anchored eyes positioned ^ ^ ^0.50 unless block ~ ~ ~ #simplenergy:non_solid run function simplenergy:work/joulemeter_2
 execute if score @s SE_JoulemeterUse matches 1.. anchored eyes positioned ^ ^ ^0.75 unless block ~ ~ ~ #simplenergy:non_solid run function simplenergy:work/joulemeter_2

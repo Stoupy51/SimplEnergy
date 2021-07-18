@@ -1,4 +1,3 @@
-kill @e[type=item,nbt={Item:{id:"minecraft:barrel"}},limit=1,sort=nearest,distance=..1]
 kill @e[type=item,nbt={Item:{id:"minecraft:cobblestone",tag:{SE_CustomTextureItem:1b}}},sort=nearest,distance=..1]
 
 execute if score @s SE_Data matches 2012000 run kill @e[type=item,nbt={Item:{tag:{SE_CauldronGenerator:1b}}},limit=1,sort=nearest,distance=..1]
@@ -16,5 +15,5 @@ execute if score @s SE_Data matches 2012204 run kill @e[type=item,nbt={Item:{tag
 execute if score @s SE_Data matches 2012205 run kill @e[type=item,nbt={Item:{tag:{SE_ElectricLamp:1b}}},limit=1,sort=nearest,distance=..1]
 execute if score @s SE_Data matches 2012900 run kill @e[type=item,nbt={Item:{tag:{SE_Joulemeter:1b}}},limit=1,sort=nearest,distance=..1]
 
-summon item ~ ~ ~ {Motion:[0.00,0.3,0.00],Item:{id:"minecraft:crafting_table",Count:1b}}
+data merge entity @e[type=item,nbt={Item:{id:"minecraft:barrel"}},limit=1,sort=nearest,distance=..1] {Item:{id:"minecraft:crafting_table",Count:1b}}
 kill @s
