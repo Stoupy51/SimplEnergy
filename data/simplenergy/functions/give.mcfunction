@@ -34,4 +34,10 @@
 
 #Others
     #Joulemeter
-        summon item ~ ~ ~ {Item:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2012900,SE_Joulemeter:1b,HideFlags:127,display:{Lore:['[{"text":"Allow you to check","color":"gray","italic":false}]','[{"text":"machines energy","color":"gray","italic":false}]'],Name:'[{"text":"Joulemeter","color":"yellow","italic":false}]'}}}}
+        summon item ~ ~ ~ {Item:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{Unbreakable:1b,CustomModelData:2012900,SE_Joulemeter:1b,HideFlags:127,display:{Lore:['[{"text":"Allow you to check","color":"gray","italic":false}]','[{"text":"machines energy","color":"gray","italic":false}]'],Name:'[{"text":"Joulemeter","color":"yellow","italic":false}]'}}}}
+    #Simplunium Ore
+        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012899,BlockEntityTag:{Lock:"SE_Placed"},SE_SimpluniumOre:1b,HideFlags:127,display:{Name:'[{"text":"Simplunium Ore","color":"white","italic":false}]'}}}}
+    #Simplunium
+        summon item ~ ~ ~ {Item:{id:"minecraft:command_block",Count:1b,tag:{Unbreakable:1b,CustomModelData:2012898,SE_Simplunium:1b,HideFlags:127,display:{Name:'[{"text":"Simplunium","color":"white","italic":false}]'}}}}
+    #Simplunium Block
+        summon item ~ ~ ~ {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012897,BlockEntityTag:{Lock:"SE_Placed"},SE_SimpluniumBlock:1b,HideFlags:127,display:{Name:'[{"text":"Block of Simplunium","color":"white","italic":false}]'}}}}

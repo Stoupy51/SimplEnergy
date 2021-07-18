@@ -33,7 +33,13 @@ data modify storage simplenergy:craft 2012204 set value {Slot:16b,id:"minecraft:
 #Electric Lamp
 data modify storage simplenergy:craft 2012205 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012205,BlockEntityTag:{Lock:"SE_Placed"},SE_ElectricLamp:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 1 Watt]","color":"gray","italic":false}]'],Name:'[{"text":"Electric Lamp","color":"white","italic":false}]'}}}
 #Joulemeter
-data modify storage simplenergy:craft 2012900 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2012900,SE_Joulemeter:1b,HideFlags:127,display:{Lore:['[{"text":"Allow you to check","color":"gray","italic":false}]','[{"text":"machines energy","color":"gray","italic":false}]'],Name:'[{"text":"Joulemeter","color":"yellow","italic":false}]'}}}
+data modify storage simplenergy:craft 2012900 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{Unbreakable:1b,CustomModelData:2012900,SE_Joulemeter:1b,HideFlags:127,display:{Lore:['[{"text":"Allow you to check","color":"gray","italic":false}]','[{"text":"machines energy","color":"gray","italic":false}]'],Name:'[{"text":"Joulemeter","color":"yellow","italic":false}]'}}}
+#Simplunium Ore
+data modify storage simplenergy:craft 2012899 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012899,BlockEntityTag:{Lock:"SE_Placed"},SE_SimpluniumOre:1b,HideFlags:127,display:{Name:'[{"text":"Simplunium Ore","color":"white","italic":false}]'}}}
+#Simplunium
+data modify storage simplenergy:craft 2012898 set value {Slot:16b,id:"minecraft:command_block",Count:9b,tag:{Unbreakable:1b,CustomModelData:2012898,SE_Simplunium:1b,HideFlags:127,display:{Name:'[{"text":"Simplunium","color":"white","italic":false}]'}}}
+#Simplunium Block
+data modify storage simplenergy:craft 2012897 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012897,BlockEntityTag:{Lock:"SE_Placed"},SE_SimpluniumBlock:1b,HideFlags:127,display:{Name:'[{"text":"Block of Simplunium","color":"white","italic":false}]'}}}
 
 
 schedule function simplenergy:post_load 2s replace
