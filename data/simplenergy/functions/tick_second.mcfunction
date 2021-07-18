@@ -2,6 +2,7 @@
 	scoreboard players set Second SE_Data 0
 	execute store result score DayTime SE_Data run time query daytime
 	execute as @e[type=item,nbt={Item:{tag:{SE_Simplunium:1b}}}] at @s if block ~ ~-1 ~ minecraft:crafting_table run function simplenergy:place/simple_crafting_table
+	execute as @a at @s run function simplenergy:generate/player
 
 #Generators
 	execute as @e[type=minecraft:glow_item_frame,tag=SE_CauldronGenerator] at @s unless block ~ ~ ~ minecraft:cauldron unless score @s EF_Joule matches 500.. run function simplenergy:work/cauldron_generator
