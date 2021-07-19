@@ -15,4 +15,3 @@ item replace block ~ ~ ~ container.23 with minecraft:cobblestone{CustomModelData
 item replace block ~ ~ ~ container.24 with minecraft:cobblestone{CustomModelData:2011929,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}
 item replace block ~ ~ ~ container.25 with minecraft:cobblestone{CustomModelData:2011929,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}
 item replace block ~ ~ ~ container.26 with minecraft:cobblestone{CustomModelData:2011930,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}
-

@@ -1,7 +1,10 @@
+function simplenergy:craft/drop_gui
 function simplenergy:craft/gui
 
 #Verifying if craft has been done
-execute if entity @s[tag=SE_WaitingCraft] unless data block ~ ~ ~ Items[{Slot:16b}] run function simplenergy:craft/crafted
+scoreboard players set Crafted SE_Data 0
+execute store result score Crafted SE_Data run data get block ~ ~ ~ Items[{Slot:16b}].tag.CustomModelData
+execute unless score @s[tag=SE_WaitingCraft] SE_Data = Crafted SE_Data run function simplenergy:craft/crafted
 
 tag @s remove SE_WaitingCraft
 item replace block ~ ~ ~ container.16 with minecraft:air
