@@ -1,3 +1,4 @@
+#Look at where the block has been placed
 execute positioned ~-8 ~ ~-8 if block ~ ~ ~ player_head{SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220135]}} run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["SE_Placed"],Duration:0}
 execute positioned ~-8 ~ ~-7 if block ~ ~ ~ player_head{SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220135]}} run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["SE_Placed"],Duration:0}
 execute positioned ~-8 ~ ~-6 if block ~ ~ ~ player_head{SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220135]}} run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["SE_Placed"],Duration:0}
