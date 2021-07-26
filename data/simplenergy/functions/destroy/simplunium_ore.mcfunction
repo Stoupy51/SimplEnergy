@@ -1,3 +1,4 @@
-data merge entity @e[type=item,nbt={Item:{id:"minecraft:deepslate_coal_ore"}},limit=1,sort=nearest,distance=..1] {Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012899,BlockEntityTag:{Lock:"SE_Placed"},SE_SimpluniumOre:1b,HideFlags:127,display:{Name:'[{"text":"Simplunium Ore","color":"white","italic":false}]'}}}}
-execute as @e[type=item,nbt={Item:{id:"minecraft:coal"}},distance=..1] run data merge entity @s {Item:{id:"minecraft:command_block",Count:1b,tag:{Unbreakable:1b,CustomModelData:2012898,SE_Simplunium:1b,HideFlags:127,display:{Name:'[{"text":"Simplunium","color":"white","italic":false}]'}}}}
+#Replace the item
+    data modify entity @e[type=item,nbt={Item:{id:"minecraft:deepslate_coal_ore"}},limit=1,sort=nearest,distance=..1] Item set from storage simplenergy:items 2012899
+    data modify entity @e[type=item,nbt={Item:{id:"minecraft:coal"}},limit=1,sort=nearest,distance=..1] Item set from storage simplenergy:items 2012898
 kill @s

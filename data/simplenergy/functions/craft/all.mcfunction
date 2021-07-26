@@ -7,7 +7,7 @@ execute store result score Crafted SE_Data run data get block ~ ~ ~ Items[{Slot:
 execute unless score @s[tag=SE_WaitingCraft] SE_Data = Crafted SE_Data run function simplenergy:craft/crafted
 
 tag @s remove SE_WaitingCraft
-item replace block ~ ~ ~ container.16 with minecraft:air
+item replace block ~ ~ ~ container.16 with minecraft:cobblestone{CustomModelData:2011929,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}
 scoreboard players set @s SE_Data 0
 
 #Cauldron Generator

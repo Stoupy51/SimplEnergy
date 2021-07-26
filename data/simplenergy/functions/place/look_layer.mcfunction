@@ -1,3 +1,4 @@
+#Look at where the block has been placed
 execute positioned ~-8 ~ ~-8 if block ~ ~ ~ barrel{Lock:"SE_Placed"} run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["SE_Placed"],Duration:0}
 execute positioned ~-8 ~ ~-7 if block ~ ~ ~ barrel{Lock:"SE_Placed"} run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["SE_Placed"],Duration:0}
 execute positioned ~-8 ~ ~-6 if block ~ ~ ~ barrel{Lock:"SE_Placed"} run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["SE_Placed"],Duration:0}
