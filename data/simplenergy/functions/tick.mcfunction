@@ -8,7 +8,6 @@
 #Others
     execute as @a[scores={SE_JoulemeterUse=1..}] at @s run function simplenergy:work/joulemeter
     execute as @e[type=minecraft:glow_item_frame,tag=SE_CraftingTable] at @s if entity @p[distance=..7] run function simplenergy:craft/all
-    execute as @a at @s run function simplenergy:generate/player
 
 #Work
 	execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricSmelter] at @s if score @s EF_Joule matches 4.. run function simplenergy:work/electric_smelter
