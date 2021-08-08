@@ -13,6 +13,7 @@
     scoreboard players operation Y SE_Data %= 100 SE_Data
     scoreboard players operation Z SE_Data %= 400 SE_Data
     execute store result score PosX SE_Data run data get entity @s Pos[0] 10
+    execute store result score PosY SE_Data run data get entity @s Pos[1] 10
     execute store result score PosZ SE_Data run data get entity @s Pos[2] 10
 
 #I add the offset to the coordinates
