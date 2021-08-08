@@ -2,7 +2,7 @@ scoreboard objectives add SE_Data dummy
 scoreboard objectives add SE_CauldronGen dummy
 scoreboard objectives add SE_JoulemeterUse minecraft.used:minecraft.warped_fungus_on_a_stick
 
-scoreboard players set SimplEnergy EF_Versions 1023
+scoreboard players set SimplEnergy EF_Versions 1024
 
 
 

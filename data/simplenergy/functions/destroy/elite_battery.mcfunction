@@ -9,4 +9,4 @@
     execute if score @s EF_Joule matches 1.. run data modify entity @e[type=minecraft:item,limit=1,sort=nearest,distance=..1,nbt={Item:{tag:{SE_EliteBattery:1b}}}] Item.tag.display.Lore append from block ~ ~ ~ Text1
     execute if score @s EF_Joule matches 1.. run setblock ~ ~ ~ air
 kill @s
-execute as @e[type=minecraft:glow_item_frame,tag=EF_Wire,distance=..2] at @s run function simplenergy:visual/wire_update
+execute as @e[type=minecraft:glow_item_frame,tag=EF_Wire,distance=..2] at @s run function energy_flux:wire_update
