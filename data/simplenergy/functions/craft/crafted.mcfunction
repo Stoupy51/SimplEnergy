@@ -35,3 +35,4 @@ scoreboard players remove Count SE_Data 1
 execute store result block ~ ~ ~ Items[{Slot:22b}].Count byte 1 run scoreboard players get Count SE_Data
 
 function simplenergy:craft/drop
+tag @s remove SE_WaitingCraft
