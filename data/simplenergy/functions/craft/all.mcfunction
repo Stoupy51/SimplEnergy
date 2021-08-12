@@ -3,12 +3,15 @@ function simplenergy:craft/gui
 
 #Verifying if craft has been done
 scoreboard players set Crafted SE_Data 0
+scoreboard players set Count SE_Data 0
 execute store result score Crafted SE_Data run data get block ~ ~ ~ Items[{Slot:16b}].tag.CustomModelData
-execute unless score @s[tag=SE_WaitingCraft] SE_Data = Crafted SE_Data run function simplenergy:craft/crafted
+execute store result score Count SE_Data run data get block ~ ~ ~ Items[{Slot:16b}].Count
+execute unless score @s[tag=SE_WaitingCraft] SE_Data = Crafted SE_Data unless score @s SE_Data2 = Count SE_Data run function simplenergy:craft/crafted
 
 tag @s remove SE_WaitingCraft
 item replace block ~ ~ ~ container.16 with minecraft:cobblestone{CustomModelData:2011929,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}
 scoreboard players set @s SE_Data 0
+scoreboard players set @s SE_Data2 1
 
 #Cauldron Generator
     execute if entity @s[tag=!SE_WaitingCraft] unless data block ~ ~ ~ Items[{Slot:3b}] if block ~ ~ ~ barrel{Items:[{Slot:2b,id:"minecraft:iron_ingot"},{Slot:4b,id:"minecraft:iron_ingot"},{Slot:11b,id:"minecraft:iron_ingot"},{Slot:12b,id:"minecraft:redstone"},{Slot:13b,id:"minecraft:iron_ingot"},{Slot:20b,id:"minecraft:iron_ingot"},{Slot:21b,id:"minecraft:iron_ingot"},{Slot:22b,id:"minecraft:iron_ingot"}]} run function simplenergy:craft/items/cauldron_generator
