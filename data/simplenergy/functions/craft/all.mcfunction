@@ -6,8 +6,9 @@ scoreboard players set Crafted SE_Data2 0
 scoreboard players set Count SE_Data2 0
 execute store result score Crafted SE_Data2 run data get block ~ ~ ~ Items[{Slot:16b}].tag.CustomModelData
 execute store result score Count SE_Data2 run data get block ~ ~ ~ Items[{Slot:16b}].Count
-execute unless score @s SE_Data2 = Count SE_Data2 run function simplenergy:craft/drop
+execute if score @s[tag=SE_WaitingCraft] SE_Data = Crafted SE_Data2 unless score Count SE_Data2 = @s SE_Data2 run function simplenergy:craft/crafted
 execute unless score @s[tag=SE_WaitingCraft] SE_Data = Crafted SE_Data2 run function simplenergy:craft/crafted
+execute unless score @s SE_Data2 = Count SE_Data2 run function simplenergy:craft/drop
 
 tag @s remove SE_WaitingCraft
 item replace block ~ ~ ~ container.16 with minecraft:cobblestone{CustomModelData:2011929,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}
