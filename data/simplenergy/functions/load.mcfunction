@@ -7,7 +7,7 @@ scoreboard players set SimplEnergy EF_Versions 1024
 
 
 #Cauldron Generator
-data modify storage simplenergy:items 2012000 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012000,BlockEntityTag:{Lock:"SE_Placed"},SE_CauldronGenerator:1b,HideFlags:127,display:{Lore:['[{"text":"[Generate : 2 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 500 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Cauldron Generator","color":"white","italic":false}]'}}}
+data modify storage simplenergy:items 2012000 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012000,BlockEntityTag:{Lock:"SE_Placed"},SE_CauldronGenerator:1b,HideFlags:127,display:{Lore:['[{"text":"[Generate : 20 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 500 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Cauldron Generator","color":"white","italic":false}]'}}}
 #Furnace Generator
 data modify storage simplenergy:items 2012001 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012001,BlockEntityTag:{Lock:"SE_Placed"},SE_FurnaceGenerator:1b,HideFlags:127,display:{Lore:['[{"text":"[Generate : 10 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 800 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Furnace Generator","color":"white","italic":false}]'}}}
 #Solar Panel
