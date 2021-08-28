@@ -7,9 +7,9 @@ execute as @e[type=minecraft:glow_item_frame,tag=!SE_Balance,tag=!SE_Balanced,ta
     scoreboard players operation Balance SE_Data = Energy SE_Data
     scoreboard players operation Balance SE_Data /= Count SE_Data
     scoreboard players operation Remain SE_Data %= Count SE_Data
-    scoreboard players operation @e[type=minecraft:glow_item_frame,tag=SE_Balance] EF_Joule = Balance SE_Data
-    scoreboard players operation @s EF_Joule += Remain SE_Data
-    execute if score @s EF_Joule > @s EF_EnergyStorage run scoreboard players operation @s EF_Joule = @s EF_EnergyStorage
+    scoreboard players operation @e[type=minecraft:glow_item_frame,tag=SE_Balance] EF_kJ = Balance SE_Data
+    scoreboard players operation @s EF_kJ += Remain SE_Data
+    execute if score @s EF_kJ > @s EF_EnergyStorage run scoreboard players operation @s EF_kJ = @s EF_EnergyStorage
 
 #Continue
     tag @e[type=minecraft:glow_item_frame,tag=SE_Balance] remove SE_Balance

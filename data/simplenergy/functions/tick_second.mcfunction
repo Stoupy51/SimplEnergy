@@ -10,14 +10,14 @@
 	tag @e[type=minecraft:glow_item_frame,tag=SE_Balanced] remove SE_Balanced
 
 #Generators
-	execute as @e[type=minecraft:glow_item_frame,tag=SE_CauldronGenerator] at @s unless block ~ ~ ~ minecraft:cauldron unless score @s EF_Joule matches 500.. run function simplenergy:work/cauldron_generator
-	execute as @e[type=minecraft:glow_item_frame,tag=SE_FurnaceGenerator] at @s unless score @s EF_Joule matches 800.. run function simplenergy:work/furnace_generator
-	execute as @e[type=minecraft:glow_item_frame,tag=SE_SolarPanel] at @s unless score @s EF_Joule matches 600.. run function simplenergy:work/solar_panel
+	execute as @e[type=minecraft:glow_item_frame,tag=SE_CauldronGenerator] at @s unless block ~ ~ ~ minecraft:cauldron unless score @s EF_kJ matches 500.. run function simplenergy:work/cauldron_generator
+	execute as @e[type=minecraft:glow_item_frame,tag=SE_FurnaceGenerator] at @s unless score @s EF_kJ matches 800.. run function simplenergy:work/furnace_generator
+	execute as @e[type=minecraft:glow_item_frame,tag=SE_SolarPanel] at @s unless score @s EF_kJ matches 600.. run function simplenergy:work/solar_panel
 
 #Power Consumers
-	execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricFurnace] at @s if score @s EF_Joule matches 10.. run function simplenergy:work/electric_furnace
+	execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricFurnace] at @s if score @s EF_kJ matches 10.. run function simplenergy:work/electric_furnace
 	execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricLamp] at @s run function simplenergy:visual/electric_lamp
-	execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricLamp] at @s if score @s EF_Joule matches 1.. run scoreboard players remove @s EF_Joule 1
+	execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricLamp] at @s if score @s EF_kJ matches 1.. run scoreboard players remove @s EF_kJ 1
 
 #Visuals
 	execute as @e[type=minecraft:glow_item_frame,tag=SE_FurnaceGenerator] at @s run function simplenergy:visual/furnace_generator
