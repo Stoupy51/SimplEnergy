@@ -10,8 +10,8 @@
     execute as @e[type=minecraft:glow_item_frame,tag=SE_CraftingTable] at @s if entity @p[distance=..7] run function simplenergy:craft/all
 
 #Work
-	execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricSmelter] at @s if score @s EF_Joule matches 4.. run function simplenergy:work/electric_smelter
-	execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricBrewing] at @s if score @s EF_Joule matches 1.. run function simplenergy:work/electric_brewing_stand
+	execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricSmelter] at @s if score @s EF_kJ matches 4.. run function simplenergy:work/electric_smelter
+	execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricBrewing] at @s if score @s EF_kJ matches 1.. run function simplenergy:work/electric_brewing_stand
 
 #Fixes
 	clear @a minecraft:cobblestone{SE_CustomTextureItem:1b}

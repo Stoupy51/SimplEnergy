@@ -3,7 +3,7 @@
     execute store result score BurnTime SE_Data run data get block ~ ~ ~ BurnTime
 
 #Change CookTime value and use Energy & playsound on work
-    execute if score CookTime SE_Data matches 1.. run scoreboard players remove @s EF_Joule 4
+    execute if score CookTime SE_Data matches 1.. run scoreboard players remove @s EF_kJ 4
     execute if score CookTime SE_Data matches 1.. run scoreboard players add CookTime SE_Data 7
     execute if score Second SE_Data matches 0 if score CookTime SE_Data matches 1.. run playsound simplenergy:electric_smelter block @a[distance=..10] ~ ~ ~ 0.25
     execute if score CookTime SE_Data matches 200.. run scoreboard players set CookTime SE_Data 199
@@ -11,7 +11,7 @@
 
 #Change BurnTime value and use Energy
     scoreboard players add BurnTime SE_Data 2
-    execute unless score CookTime SE_Data matches 1.. unless score BurnTime SE_Data matches 221.. run scoreboard players remove @s EF_Joule 4
+    execute unless score CookTime SE_Data matches 1.. unless score BurnTime SE_Data matches 221.. run scoreboard players remove @s EF_kJ 4
     execute if score BurnTime SE_Data matches 221.. run scoreboard players set BurnTime SE_Data 220
     execute store result block ~ ~ ~ BurnTime short 1 run scoreboard players get BurnTime SE_Data
 
