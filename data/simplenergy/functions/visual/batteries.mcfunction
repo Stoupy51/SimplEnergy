@@ -2,8 +2,8 @@ scoreboard players set 1000 SE_Data 1000
 scoreboard players set 10 SE_Data 10
 scoreboard players operation Part1 SE_Data = @s EF_kJ
 scoreboard players operation Part2 SE_Data = @s EF_kJ
-scoreboard players operation MaxP1 SE_Data = @s EF_EnergyStorage
-scoreboard players operation MaxP2 SE_Data = @s EF_EnergyStorage
+scoreboard players operation MaxP1 SE_Data = @s EF_kJmax
+scoreboard players operation MaxP2 SE_Data = @s EF_kJmax
 scoreboard players operation Part1 SE_Data /= 1000 SE_Data
 scoreboard players operation Part2 SE_Data %= 1000 SE_Data
 scoreboard players operation Part2 SE_Data /= 10 SE_Data
