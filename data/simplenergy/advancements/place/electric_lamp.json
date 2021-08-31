@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "SE_PlacingBlock": {
+        "requirement": {
             "trigger": "minecraft:placed_block",
             "conditions": {
                 "block": "minecraft:barrel",
