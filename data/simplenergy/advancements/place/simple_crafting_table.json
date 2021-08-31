@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "SE_PlacingBlock": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "block": "minecraft:barrel",
+                "item": {
+                    "nbt": "{SE_CraftingTable:1b}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "simplenergy:place/simple_crafting_table/1"
+    }
+}
