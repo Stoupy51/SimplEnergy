@@ -1,3 +1,4 @@
+execute if score @s EF_kJ matches 10.. run function simplenergy:work/electric_furnace
 #Update gui depends on CookTime
     execute store result score CookTime SE_Data run data get block ~ ~ ~ CookTime
     execute unless block ~ ~ ~ minecraft:furnace{Items:[{Slot:0b}]} run function simplenergy:visual/electric_furnace_0
