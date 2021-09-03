@@ -9,9 +9,9 @@
     execute as @e[type=minecraft:glow_item_frame,tag=SE_EliteWire] at @s unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/elite_wire
 
 #Batteries
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_SimpleBattery] at @s unless block ~ ~ ~ minecraft:barrel run function simplenergy:destroy/simple_battery
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_AdvancedBattery] at @s unless block ~ ~ ~ minecraft:barrel run function simplenergy:destroy/advanced_battery
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_EliteBattery] at @s unless block ~ ~ ~ minecraft:barrel run function simplenergy:destroy/elite_battery
+    execute as @e[type=minecraft:glow_item_frame,tag=SE_SimpleBattery] at @s unless block ~ ~ ~ minecraft:cobbled_deepslate run function simplenergy:destroy/simple_battery
+    execute as @e[type=minecraft:glow_item_frame,tag=SE_AdvancedBattery] at @s unless block ~ ~ ~ minecraft:gold_block run function simplenergy:destroy/advanced_battery
+    execute as @e[type=minecraft:glow_item_frame,tag=SE_EliteBattery] at @s unless block ~ ~ ~ minecraft:iron_block run function simplenergy:destroy/elite_battery
 
 #Power Consumers
     execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricFurnace] at @s unless block ~ ~ ~ minecraft:furnace run function simplenergy:destroy/electric_furnace
