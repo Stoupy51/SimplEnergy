@@ -19,6 +19,6 @@
     summon minecraft:marker ~ 10 ~ {Tags:["SE_OrePos"]}
     summon minecraft:marker ~ 10 ~ {Tags:["SE_OrePos"]}
     summon minecraft:marker ~ 10 ~ {Tags:["SE_OrePos"]}
-    execute as @e[type=minecraft:marker,tag=SE_OrePos] at @s run function simplenergy:generate/simplunium
+    execute as @e[type=marker,tag=SE_OrePos] at @s run function simplenergy:generate/simplunium
 
 tag @s remove SE_ChunkInit

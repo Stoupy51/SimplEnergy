@@ -1,5 +1,5 @@
 #Destroy
-    execute if entity @e[type=minecraft:glow_item_frame,tag=SE_Destroyer,limit=1] run function simplenergy:destroy/all
+    execute if entity @e[type=glow_item_frame,tag=SE_Destroyer,limit=1] run function simplenergy:destroy/all
 
 #Timer
     scoreboard players add Second SE_Data 1
@@ -7,11 +7,11 @@
 
 #Others
     execute as @a[scores={SE_JoulemeterUse=1..}] at @s run function simplenergy:work/joulemeter
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_CraftingTable] at @s if entity @p[distance=..7] run function simplenergy:craft/all
+    execute as @e[type=glow_item_frame,tag=SE_CraftingTable] at @s if entity @p[distance=..7] run function simplenergy:craft/all
 
 #Work
-	execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricSmelter] at @s if score @s EF_kJ matches 4.. run function simplenergy:work/electric_smelter
-	execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricBrewing] at @s if score @s EF_kJ matches 1.. run function simplenergy:work/electric_brewing_stand
+	execute as @e[type=glow_item_frame,tag=SE_ElectricSmelter] at @s if score @s EF_kJ matches 4.. run function simplenergy:work/electric_smelter
+	execute as @e[type=glow_item_frame,tag=SE_ElectricBrewing] at @s if score @s EF_kJ matches 1.. run function simplenergy:work/electric_brewing_stand
 
 #Fixes
 	clear @a minecraft:cobblestone{SE_CustomTextureItem:1b}
