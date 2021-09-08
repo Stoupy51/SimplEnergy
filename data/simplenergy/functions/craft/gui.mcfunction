@@ -9,7 +9,7 @@ item replace block ~ ~ ~ container.10 with minecraft:cobblestone{CustomModelData
 item replace block ~ ~ ~ container.14 with minecraft:cobblestone{CustomModelData:2011929,SE_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}
 item replace block ~ ~ ~ container.15 with minecraft:cobblestone{CustomModelData:2011929,SE_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}
 item replace block ~ ~ ~ container.17 with minecraft:cobblestone{CustomModelData:2011929,SE_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}
-item replace block ~ ~ ~ container.18 with minecraft:cobblestone{CustomModelData:2011929,SE_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}
+data modify block ~ ~ ~ Items append from storage simplenergy:items 2012896
 item replace block ~ ~ ~ container.19 with minecraft:cobblestone{CustomModelData:2011929,SE_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}
 item replace block ~ ~ ~ container.23 with minecraft:cobblestone{CustomModelData:2011929,SE_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}
 item replace block ~ ~ ~ container.24 with minecraft:cobblestone{CustomModelData:2011929,SE_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}
