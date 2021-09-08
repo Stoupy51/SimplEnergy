@@ -7,6 +7,7 @@
 	execute as @e[type=glow_item_frame,tag=SE_SimpleBattery] at @s run function simplenergy:balance/all
 	execute as @e[type=glow_item_frame,tag=SE_AdvancedBattery] at @s run function simplenergy:balance/all
 	execute as @e[type=glow_item_frame,tag=SE_EliteBattery] at @s run function simplenergy:balance/all
+	execute as @a[tag=!SE_FirstJoin] at @s run function simplenergy:first_join
 	tag @e[type=glow_item_frame,tag=SE_Balanced] remove SE_Balanced
 
 #Visuals & Work

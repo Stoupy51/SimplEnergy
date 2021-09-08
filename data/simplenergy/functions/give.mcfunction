@@ -16,6 +16,7 @@ summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SE_Give:1b}}}
 summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SE_Give:1b}}}
 summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SE_Give:1b}}}
 summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SE_Give:1b}}}
+summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SE_Give:1b}}}
 
 data modify entity @e[type=item,nbt={Item:{tag:{SE_Give:1b}}},limit=1] Item set from storage simplenergy:items 2012000
 data modify entity @e[type=item,nbt={Item:{tag:{SE_Give:1b}}},limit=1] Item set from storage simplenergy:items 2012001
@@ -31,6 +32,7 @@ data modify entity @e[type=item,nbt={Item:{tag:{SE_Give:1b}}},limit=1] Item set 
 data modify entity @e[type=item,nbt={Item:{tag:{SE_Give:1b}}},limit=1] Item set from storage simplenergy:items 2012300
 data modify entity @e[type=item,nbt={Item:{tag:{SE_Give:1b}}},limit=1] Item set from storage simplenergy:items 2012400
 data modify entity @e[type=item,nbt={Item:{tag:{SE_Give:1b}}},limit=1] Item set from storage simplenergy:items 2012500
+data modify entity @e[type=item,nbt={Item:{tag:{SE_Give:1b}}},limit=1] Item set from storage simplenergy:items 2012896
 data modify entity @e[type=item,nbt={Item:{tag:{SE_Give:1b}}},limit=1] Item set from storage simplenergy:items 2012897
 data modify entity @e[type=item,nbt={Item:{tag:{SE_Give:1b}}},limit=1] Item set from storage simplenergy:items 2012898
 data modify entity @e[type=item,nbt={Item:{tag:{SE_Give:1b}}},limit=1] Item set from storage simplenergy:items 2012899

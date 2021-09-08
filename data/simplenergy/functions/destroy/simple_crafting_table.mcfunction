@@ -1,5 +1,5 @@
 #Kill undesired items
-    kill @e[type=item,nbt={Item:{id:"minecraft:cobblestone",tag:{SE_CustomTextureItem:1b}}},sort=nearest,distance=..1]
+    kill @e[type=item,nbt={Item:{tag:{SE_CustomTextureItem:1b}}},sort=nearest,distance=..1]
     execute if score @s SE_Data matches 2012000 run kill @e[type=item,nbt={Item:{tag:{SE_CauldronGenerator:1b}}},limit=1,sort=nearest,distance=..1]
     execute if score @s SE_Data matches 2012001 run kill @e[type=item,nbt={Item:{tag:{SE_FurnaceGenerator:1b}}},limit=1,sort=nearest,distance=..1]
     execute if score @s SE_Data matches 2012003 run kill @e[type=item,nbt={Item:{tag:{SE_SolarPanel:1b}}},limit=1,sort=nearest,distance=..1]
