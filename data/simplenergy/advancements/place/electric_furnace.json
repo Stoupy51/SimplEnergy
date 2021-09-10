@@ -5,7 +5,7 @@
             "conditions": {
                 "block": "minecraft:barrel",
                 "item": {
-                    "nbt": "{SE_ElectricFurnace:1b}"
+                    "nbt": "{SE_ElectricFurnace:1s}"
                 }
             }
         }

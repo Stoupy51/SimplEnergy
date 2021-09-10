@@ -14,4 +14,4 @@
 	execute as @e[type=glow_item_frame,tag=SE_ElectricBrewing] at @s if score @s EF_kJ matches 1.. run function simplenergy:work/electric_brewing_stand
 
 #Fixes
-	clear @a minecraft:cobblestone{SE_CustomTextureItem:1b}
+	clear @a minecraft:cobblestone{SE_CustomTextureItem:1s}
