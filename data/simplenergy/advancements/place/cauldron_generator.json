@@ -5,7 +5,7 @@
             "conditions": {
                 "block": "minecraft:barrel",
                 "item": {
-                    "nbt": "{SE_CauldronGenerator:1b}"
+                    "nbt": "{SE_CauldronGenerator:1s}"
                 }
             }
         }
