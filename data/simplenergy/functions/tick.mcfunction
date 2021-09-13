@@ -1,7 +1,7 @@
 #Timer
     scoreboard players add Second SE_Data 1
     scoreboard players add tick_2 SE_Data 1
-    execute if score Second tick_2 matches 2.. run function simplenergy:tick_2
+    execute if score tick_2 SE_Data matches 2.. run function simplenergy:tick_2
     execute if score Second SE_Data matches 20.. run function simplenergy:tick_second
 
 #Work
