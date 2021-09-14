@@ -1,6 +1,7 @@
 #Store CookTime & BurnTime into a score to change the value
-    execute store result score CookTime SE_Data run data get block ~ ~ ~ CookTime
-    execute store result score BurnTime SE_Data run data get block ~ ~ ~ BurnTime
+    data modify storage simplenergy:items Temp set from block ~ ~ ~
+    execute store result score CookTime SE_Data run data get storage simplenergy:items Temp.CookTime
+    execute store result score BurnTime SE_Data run data get storage simplenergy:items Temp.BurnTime
 
 #Change CookTime value and use Energy & playsound on work
     execute if score CookTime SE_Data matches 1.. run scoreboard players remove @s EF_kJ 4

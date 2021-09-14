@@ -1,6 +1,6 @@
 #Update the gui to default
     data modify block ~ ~ ~ Items insert 0 value {Slot:0b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011999,SE_CustomTextureItem:1s,display:{Name:'[{"text":""}]'}}}
-    execute if block ~ ~ ~ minecraft:furnace{Items:[{Slot:1b}],BurnTime:0s} run data modify block ~ ~ ~ Items[0] set value {Slot:0b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011975,SE_CustomTextureItem:1s,display:{Name:'[{"text":""}]'}}}
+    execute if block ~ ~ ~ minecraft:furnace{Items:[{Slot:1b}],BurnTime:0s} run data modify block ~ ~ ~ Items[0].tag.CustomModelData set value 2011975
 
 #Update the gui & produce Energy while working
     execute store result score BurnTime SE_Data run data get block ~ ~ ~ BurnTime
