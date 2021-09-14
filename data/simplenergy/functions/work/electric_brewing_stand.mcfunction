@@ -1,6 +1,7 @@
 #Store Fuel & BrewTime into a score to change the value
-    execute store result score BrewTime SE_Data run data get block ~ ~ ~ BrewTime
-    execute store result score Fuel SE_Data run data get block ~ ~ ~ Fuel
+    data modify storage simplenergy:items Temp set from block ~ ~ ~
+    execute store result score BrewTime SE_Data run data get storage simplenergy:items Temp.BrewTime
+    execute store result score Fuel SE_Data run data get storage simplenergy:items Temp.Fuel
 
 #Change BrewTime value and use Energy & playsound on work
     execute if score BrewTime SE_Data matches 4.. run scoreboard players remove @s EF_kJ 1
