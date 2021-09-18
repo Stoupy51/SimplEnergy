@@ -1,0 +1,37 @@
+{
+    "display": {
+        "title": {
+            "text": "Use the Sun's Power"
+        },
+        "description": {
+            "text": "Get your first Solar Panel"
+        },
+        "icon": {
+            "item": "minecraft:barrel",
+            "nbt": "{CustomModelData:2012003}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "SimplEnergy": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["minecraft:barrel"],
+                        "nbt": "{SE_SolarPanel:1s}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "SimplEnergy"
+        ]
+    ],
+    "parent": "simplenergy:simplunium"
+}

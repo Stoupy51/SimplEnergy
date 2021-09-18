@@ -1,0 +1,37 @@
+{
+    "display": {
+        "title": {
+            "text": "More and More Energy Storage!"
+        },
+        "description": {
+            "text": "Upgrade an Advanced Battery"
+        },
+        "icon": {
+            "item": "minecraft:barrel",
+            "nbt": "{CustomModelData:2012102}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "SimplEnergy": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["minecraft:barrel"],
+                        "nbt": "{SE_EliteBattery:1s}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "SimplEnergy"
+        ]
+    ],
+    "parent": "simplenergy:visible/advanced_battery"
+}

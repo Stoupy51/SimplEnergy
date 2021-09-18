@@ -1,0 +1,37 @@
+{
+    "display": {
+        "title": {
+            "text": "A Simple Energy Storage"
+        },
+        "description": {
+            "text": "Craft your first Simple Battery"
+        },
+        "icon": {
+            "item": "minecraft:barrel",
+            "nbt": "{CustomModelData:2012100}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "SimplEnergy": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["minecraft:barrel"],
+                        "nbt": "{SE_SimpleBattery:1s}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "SimplEnergy"
+        ]
+    ],
+    "parent": "simplenergy:visible/cauldron_generator"
+}
