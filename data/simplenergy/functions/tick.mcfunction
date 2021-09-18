@@ -7,3 +7,4 @@
 #Work
 	execute as @e[type=glow_item_frame,tag=SE_ElectricSmelter] at @s if score @s EF_kJ matches 4.. run function simplenergy:work/electric_smelter
 	execute as @e[type=glow_item_frame,tag=SE_ElectricBrewing] at @s if score @s EF_kJ matches 1.. run function simplenergy:work/electric_brewing_stand
+    execute as @e[type=armor_stand,tag=SE_Furnaces] at @s run function simplenergy:work/all_furnace
