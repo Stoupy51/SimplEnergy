@@ -1,0 +1,37 @@
+{
+    "display": {
+        "title": {
+            "text": "The Simplier Generator"
+        },
+        "description": {
+            "text": "Craft your first Cauldron Generator"
+        },
+        "icon": {
+            "item": "minecraft:barrel",
+            "nbt": "{CustomModelData:2012000}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "SimplEnergy": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["minecraft:barrel"],
+                        "nbt": "{SE_CauldronGenerator:1s}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "SimplEnergy"
+        ]
+    ],
+    "parent": "simplenergy:simplunium"
+}

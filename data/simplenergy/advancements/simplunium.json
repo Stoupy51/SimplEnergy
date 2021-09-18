@@ -1,0 +1,37 @@
+{
+    "display": {
+        "title": {
+            "text": "Simplunium"
+        },
+        "description": {
+            "text": "A Simple Start"
+        },
+        "icon": {
+            "item": "minecraft:command_block",
+            "nbt": "{CustomModelData:2012898}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false,
+        "background": "simplenergy:textures/ores/simplunium_block.png"
+    },
+    "criteria": {
+        "SimplEnergy": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["minecraft:command_block"],
+                        "nbt": "{SE_Simplunium:1s}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "SimplEnergy"
+        ]
+    ]
+}

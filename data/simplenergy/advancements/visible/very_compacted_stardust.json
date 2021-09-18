@@ -1,0 +1,40 @@
+{
+    "display": {
+        "title": {
+            "text": "Can we name it Compacted Compacted Stardust Fragment?"
+        },
+        "description": {
+            "text": "Get your first Very Compacted Stardust"
+        },
+        "icon": {
+            "item": "minecraft:command_block",
+            "nbt": "{CustomModelData:2013014}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "StardustFragment": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["minecraft:command_block"],
+                        "nbt": "{SF_VeryCompactedStardust:1s}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "StardustFragment"
+        ]
+    ],
+    "rewards": {
+        "experience": 30
+    },
+    "parent": "stardust:visible/compacted_stardust"
+}
