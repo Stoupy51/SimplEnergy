@@ -6,4 +6,5 @@ tag @s add SE_Placer
 #Update scores
     execute as @e[type=glow_item_frame,tag=SE_SetNew,limit=1] at @s run function simplenergy:place/electric_furnace/3
 advancement revoke @s only simplenergy:place/electric_furnace
+function simplenergy:place/all_furnace/furnace
 tag @s remove SE_Placer
