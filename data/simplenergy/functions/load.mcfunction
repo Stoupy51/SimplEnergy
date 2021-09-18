@@ -40,7 +40,7 @@ data modify storage simplenergy:items 2012205 set value {Slot:16b,id:"minecraft:
 #Joulemeter
 data modify storage simplenergy:items 2012900 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{Unbreakable:1b,CustomModelData:2012900,SE_Joulemeter:1s,HideFlags:127,display:{Lore:['[{"text":"Allow you to check","italic":false,"color":"gray"}]','[{"text":"machines energy","italic":false,"color":"gray"}]'],Name:'[{"text":"Joulemeter","italic":false,"color":"yellow"}]'}}}
 #Simplunium Ore
-data modify storage simplenergy:items 2012899 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012899,BlockEntityTag:{Lock:"SE_Placed"},SE_SimpluniumOre:1s,HideFlags:127,display:{Name:'[{"text":"Simplunium Ore","italic":false,"color":"white"}]'}}}
+data modify storage simplenergy:items 2012899 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{SE_Cookable:1b,CustomModelData:2012899,BlockEntityTag:{Lock:"SE_Placed"},SE_SimpluniumOre:1s,HideFlags:127,display:{Name:'[{"text":"Simplunium Ore","italic":false,"color":"white"}]'}}}
 #Simplunium
 data modify storage simplenergy:items 2012898 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{Unbreakable:1b,CustomModelData:2012898,SE_Simplunium:1s,HideFlags:127,display:{Name:'[{"text":"Simplunium","italic":false,"color":"white"}]'}}}
 #Simplunium Block

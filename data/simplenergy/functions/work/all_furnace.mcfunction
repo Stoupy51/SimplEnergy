@@ -1,8 +1,13 @@
 #Choose Type Of Furnace
     data modify storage simplenergy:items Furnace set from block ~ ~ ~
     execute store result score CookTime SE_Data2 run data get storage simplenergy:items Furnace.CookTime
-    execute if data storage simplenergy:items Furnace.RecipesUsed."simplenergy:barrel" if score CookTime SE_Data2 matches ..1 if score @s SE_Data2 matches 2012899 run data modify storage simplenergy:items Furnace.Items[{Slot:2b}].tag set from storage simplenergy:items 2012898.tag
+    execute store result score Item SE_Data2 run data get storage simplenergy:items Furnace.Items[{Slot:2b}].tag.CustomModelData
+    execute if data storage simplenergy:items Furnace.RecipesUsed."simplenergy:barrel" if score CookTime SE_Data2 matches ..8 run function simplenergy:work/all_furnace_2
+    execute if data storage simplenergy:items Furnace.RecipesUsed."simplenergy:barrel_blast" if score CookTime SE_Data2 matches ..8 run function simplenergy:work/all_furnace_2
+
 execute store result score @s SE_Data2 run data get storage simplenergy:items Furnace.Items[{Slot:0b}].tag.CustomModelData
-execute if score @s SE_Data2 matches 0 run data modify storage simplenergy:items Furnace.CookTime set value 0s
-data modify block ~ ~ ~ CookTime set from storage simplenergy:items Furnace.CookTime
+execute unless data storage simplenergy:items Furnace.Items[{Slot:0b}].tag.SE_Cookable run scoreboard players set CookTime SE_Data2 0
+execute if score CookTime SE_Data2 matches 0 store result block ~ ~ ~ CookTime short 1 run scoreboard players get CookTime SE_Data2
 data modify block ~ ~ ~ Items set from storage simplenergy:items Furnace.Items
+execute if block ~ ~ ~ furnace if score CookTime SE_Data2 matches 199 run data modify block ~ ~-1 ~ TransferCooldown set value 2
+execute if block ~ ~ ~ blast_furnace if score CookTime SE_Data2 matches 99 run data modify block ~ ~-1 ~ TransferCooldown set value 2
