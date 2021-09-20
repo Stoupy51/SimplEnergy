@@ -20,6 +20,7 @@ Here is a small list of features:
 - A Crafting Manual
 - Some Batteries
 - Some Wires
+- Customs Advancements
 - Simples Energy Consumers
 
 If you plan to create your own Energy Datapack in Minecraft, join our Discord https://discord.gg/a2yX6GD4J7 !
