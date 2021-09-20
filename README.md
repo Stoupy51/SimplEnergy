@@ -7,6 +7,7 @@ Example video of SimplEnergy :
 https://www.youtube.com/watch?v=3rKrggNTog4
 
 Don't forget to download the resource pack !
+![SimplEnergy Image](https://cdn.discordapp.com/attachments/547163400900444163/889450877893611520/SimplEnergy_2.jpg)
 
 # What is SimplEnergy
 SimplEnergy is a simple Energy Datapack created to add simples energy mechanics in your survival world.
