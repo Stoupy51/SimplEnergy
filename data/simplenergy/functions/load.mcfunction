@@ -4,8 +4,8 @@ scoreboard objectives add SE_JoulemeterUse minecraft.used:minecraft.warped_fungu
 
 scoreboard players set SimplEnergy EF_Versions 1031
 scoreboard players set Second SE_Data 0
-
-
+forceload add 0 0
+schedule function simplenergy:world_bottom_start 2s
 
 #Cauldron Generator
 data modify storage simplenergy:items 2012000 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2012000,BlockEntityTag:{Lock:"SE_Placed"},SE_CauldronGenerator:1s,HideFlags:127,display:{Lore:['[{"text":"[Generate : 20 kW]","italic":false,"color":"gray"}]','[{"text":"[Energy Buffer : 500 kJ]","italic":false,"color":"gray"}]'],Name:'[{"text":"Cauldron Generator","italic":false,"color":"white"}]'}}}
