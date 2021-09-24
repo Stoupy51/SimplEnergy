@@ -1,16 +1,16 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:placed_block",
-            "conditions": {
-                "block": "minecraft:barrel",
-                "item": {
-                    "nbt": "{SE_ElectricSmelter:1s}"
-                }
-            }
-        }
-    },
-    "rewards": {
-        "function": "simplenergy:place/electric_smelter/1"
-    }
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:barrel",
+				"item": {
+					"nbt": "{SE_ElectricSmelter:1s}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "simplenergy:place/electric_smelter/1"
+	}
 }

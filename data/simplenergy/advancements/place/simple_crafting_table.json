@@ -1,16 +1,16 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:placed_block",
-            "conditions": {
-                "block": "minecraft:barrel",
-                "item": {
-                    "nbt": "{SE_CraftingTable:1s}"
-                }
-            }
-        }
-    },
-    "rewards": {
-        "function": "simplenergy:place/simple_crafting_table/1"
-    }
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:barrel",
+				"item": {
+					"nbt": "{SE_CraftingTable:1s}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "simplenergy:place/simple_crafting_table/1"
+	}
 }

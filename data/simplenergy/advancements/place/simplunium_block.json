@@ -1,16 +1,16 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:placed_block",
-            "conditions": {
-                "block": "minecraft:barrel",
-                "item": {
-                    "nbt": "{SE_SimpluniumBlock:1s}"
-                }
-            }
-        }
-    },
-    "rewards": {
-        "function": "simplenergy:place/simplunium_block/1"
-    }
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:barrel",
+				"item": {
+					"nbt": "{SE_SimpluniumBlock:1s}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "simplenergy:place/simplunium_block/1"
+	}
 }
