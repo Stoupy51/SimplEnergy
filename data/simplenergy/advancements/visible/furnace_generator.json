@@ -1,37 +1,37 @@
 {
-    "display": {
-        "title": {
-            "text": "Also named the Coal Generator"
-        },
-        "description": {
-            "text": "Craft your first Furnace Generator"
-        },
-        "icon": {
-            "item": "minecraft:barrel",
-            "nbt": "{CustomModelData:2012001}"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
-    },
-    "criteria": {
-        "SimplEnergy": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "items": ["minecraft:barrel"],
-                        "nbt": "{SE_FurnaceGenerator:1s}"
-                    }
-                ]
-            }
-        }
-    },
-    "requirements": [
-        [
-            "SimplEnergy"
-        ]
-    ],
-    "parent": "simplenergy:simplunium"
+	"display": {
+		"title": {
+			"text": "Also named the Coal Generator"
+		},
+		"description": {
+			"text": "Craft your first Furnace Generator"
+		},
+		"icon": {
+			"item": "minecraft:barrel",
+			"nbt": "{CustomModelData:2012001}"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"SimplEnergy": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": ["minecraft:barrel"],
+						"nbt": "{SE_FurnaceGenerator:1s}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"SimplEnergy"
+		]
+	],
+	"parent": "simplenergy:simplunium"
 }

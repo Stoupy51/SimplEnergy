@@ -1,16 +1,16 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:placed_block",
-            "conditions": {
-                "block": "minecraft:barrel",
-                "item": {
-                    "nbt": "{SE_ElectricLamp:1s}"
-                }
-            }
-        }
-    },
-    "rewards": {
-        "function": "simplenergy:place/electric_lamp/1"
-    }
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:barrel",
+				"item": {
+					"nbt": "{SE_ElectricLamp:1s}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "simplenergy:place/electric_lamp/1"
+	}
 }

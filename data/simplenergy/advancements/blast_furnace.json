@@ -1,13 +1,13 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:placed_block",
-            "conditions": {
-                "block": "minecraft:blast_furnace"
-            }
-        }
-    },
-    "rewards": {
-        "function": "simplenergy:place/all_furnace/blast_furnace"
-    }
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:blast_furnace"
+			}
+		}
+	},
+	"rewards": {
+		"function": "simplenergy:place/all_furnace/blast_furnace"
+	}
 }
