@@ -13,7 +13,7 @@ execute as @e[type=glow_item_frame,tag=!SE_Balance,tag=!SE_Balanced,tag=SE_Destr
 
 #Continue
     tag @e[type=glow_item_frame,tag=SE_Balance] remove SE_Balance
-    execute if entity @s[tag=SE_SolarPanel] as @e[type=glow_item_frame,tag=SE_SolarPanel,tag=!SE_Balanced,limit=1] at @s run function simplenergy:balance/all
-    execute if entity @s[tag=SE_SimpleBattery] as @e[type=glow_item_frame,tag=SE_SimpleBattery,tag=!SE_Balanced,limit=1] at @s run function simplenergy:balance/all
-    execute if entity @s[tag=SE_AdvancedBattery] as @e[type=glow_item_frame,tag=SE_AdvancedBattery,tag=!SE_Balanced,limit=1] at @s run function simplenergy:balance/all
-    execute if entity @s[tag=SE_EliteBattery] as @e[type=glow_item_frame,tag=SE_EliteBattery,tag=!SE_Balanced,limit=1] at @s run function simplenergy:balance/all
+    execute as @s[tag=SE_SolarPanel] as @e[type=glow_item_frame,tag=SE_SolarPanel,tag=!SE_Balanced,limit=1] at @s run function simplenergy:balance/all
+    execute as @s[tag=SE_SimpleBattery] as @e[type=glow_item_frame,tag=SE_SimpleBattery,tag=!SE_Balanced,limit=1] at @s run function simplenergy:balance/all
+    execute as @s[tag=SE_AdvancedBattery] as @e[type=glow_item_frame,tag=SE_AdvancedBattery,tag=!SE_Balanced,limit=1] at @s run function simplenergy:balance/all
+    execute as @s[tag=SE_EliteBattery] as @e[type=glow_item_frame,tag=SE_EliteBattery,tag=!SE_Balanced,limit=1] at @s run function simplenergy:balance/all
