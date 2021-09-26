@@ -1,3 +1,4 @@
+scoreboard objectives add EF_Versions dummy
 scoreboard objectives add SE_Data dummy
 scoreboard objectives add SE_Data2 dummy
 scoreboard objectives add SE_JoulemeterUse minecraft.used:minecraft.warped_fungus_on_a_stick
