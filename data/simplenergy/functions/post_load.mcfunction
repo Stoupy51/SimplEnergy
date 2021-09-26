@@ -12,3 +12,4 @@ scoreboard players reset EF_Loaded SE_Data
 scoreboard players reset EF_Missing SE_Data
 
 execute unless entity @a run schedule function simplenergy:post_load 5s replace
+execute unless entity @a run schedule function energy_flux:post_load 101t replace
