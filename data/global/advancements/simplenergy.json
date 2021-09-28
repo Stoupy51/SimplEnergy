@@ -1,0 +1,19 @@
+{
+	"display": {
+		"title": "SimplEnergy",
+		"description": "v1.3.3",
+		"icon": {
+			"item": "minecraft:command_block",
+			"nbt": "{CustomModelData:2012898}"
+		},
+		"show_toast": false,
+		"announce_to_chat": false,
+		"frame": "goal"
+    },
+    "parent": "global:energy_flux",
+	"criteria": {
+        "always": {
+			"trigger": "minecraft:tick"
+		}
+    }
+}
