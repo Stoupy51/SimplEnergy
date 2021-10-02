@@ -1,10 +1,10 @@
-execute as @e[type=glow_item_frame,tag=!SE_Balance,tag=!SE_Balanced,tag=SE_Destroyer,distance=..1.1] if score @s EF_kJmax = Energy SE_Data at @s run function simplenergy:balance/found
+execute as @e[type=glow_item_frame,tag=!SE_Balance,tag=!SE_Balanced,tag=SE_Destroyer,distance=..1.1] if score @s EF_kJmax = Temp SE_Data at @s run function simplenergy:balance/found
 #Redistributes Energy
-	scoreboard players set Energy SE_Data 0
+	scoreboard players set Temp SE_Data 0
 	scoreboard players set Count SE_Data 0
 	execute as @e[type=glow_item_frame,tag=SE_Balance] run function simplenergy:balance/add
-	scoreboard players operation Remain SE_Data = Energy SE_Data
-	scoreboard players operation Balance SE_Data = Energy SE_Data
+	scoreboard players operation Remain SE_Data = Temp SE_Data
+	scoreboard players operation Balance SE_Data = Temp SE_Data
 	scoreboard players operation Balance SE_Data /= Count SE_Data
 	scoreboard players operation Remain SE_Data %= Count SE_Data
 	scoreboard players operation @e[type=glow_item_frame,tag=SE_Balance] EF_kJ = Balance SE_Data
