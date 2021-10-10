@@ -12,7 +12,7 @@
 
 #Change BurnTime value and use Energy
 	scoreboard players add BurnTime SE_Data 21
-	execute unless score CookTime SE_Data matches 1.. unless score BurnTime SE_Data matches 221.. run scoreboard players remove @s EF_kJ 10
+	execute if data storage simplenergy:items Temp.Items[{Slot:0b}] unless score BurnTime SE_Data matches 221.. run scoreboard players remove @s EF_kJ 10
 	execute if score BurnTime SE_Data matches 221.. run scoreboard players set BurnTime SE_Data 220
 	execute store result block ~ ~ ~ BurnTime short 1 run scoreboard players get BurnTime SE_Data
 
