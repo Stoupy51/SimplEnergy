@@ -16,5 +16,5 @@
 	execute if score @s SE_Data matches 2012900 run kill @e[type=item,nbt={Item:{tag:{SE_Joulemeter:1s}}},limit=1,sort=nearest,distance=..1]
 
 #Replace the item
-	data modify entity @e[type=item,nbt={Item:{id:"minecraft:barrel"}},predicate=!stardust:has_tag,limit=1,sort=nearest,distance=..1] Item set from storage simplenergy:items 2012004
+	data modify entity @e[type=item,nbt={Item:{id:"minecraft:barrel"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1] Item set from storage simplenergy:items 2012004
 kill @s

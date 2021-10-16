@@ -17,4 +17,4 @@
 	execute store result block ~ ~ ~ BurnTime short 1 run scoreboard players get BurnTime SE_Data
 
 #Change gui texture
-	data modify block ~ ~ ~ Items insert 0 value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011998,SE_CustomTextureItem:1s,display:{Name:'[{"text":""}]'}}}
+	data modify block ~ ~ ~ Items insert 0 value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011998,CustomItem:1s,SE_CustomTextureItem:1s,display:{Name:'[{"text":""}]'}}}
