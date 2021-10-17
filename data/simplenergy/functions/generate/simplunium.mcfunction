@@ -1,11 +1,6 @@
 #Define a -/+ value offset randomly with UUID.
 #I divide values by 10 to keep a digit
 #Init values
-	scoreboard players set 400 SE_Data 400
-	scoreboard players set 260 SE_Data 260
-	scoreboard players set -10 SE_Data -10
-	scoreboard players set 10 SE_Data 10
-	scoreboard players set -1 SE_Data -1
 	execute store result score X SE_Data run data get entity @s UUID[1] 1
 	execute store result score Y SE_Data run data get entity @s UUID[2] 1
 	execute store result score Z SE_Data run data get entity @s UUID[3] 1

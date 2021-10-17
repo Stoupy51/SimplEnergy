@@ -5,6 +5,13 @@ scoreboard objectives add SE_JoulemeterUse minecraft.used:minecraft.warped_fungu
 
 scoreboard players set SimplEnergy EF_Versions 1033
 scoreboard players set Second SE_Data 0
+
+scoreboard players set 400 SE_Data 400
+scoreboard players set 260 SE_Data 260
+scoreboard players set -10 SE_Data -10
+scoreboard players set 10 SE_Data 10
+scoreboard players set -1 SE_Data -1
+
 forceload add 0 0
 schedule function simplenergy:world_bottom_start 2s
 

@@ -35,12 +35,4 @@ scoreboard players reset PosX SE_Data
 scoreboard players reset PosY SE_Data
 scoreboard players reset PosZ SE_Data
 scoreboard players reset MaxY SE_Data
-scoreboard players reset 1500 SE_Data
-scoreboard players reset 1000 SE_Data
-scoreboard players reset 400 SE_Data
-scoreboard players reset 260 SE_Data
-scoreboard players reset 200 SE_Data
-scoreboard players reset 100 SE_Data
-scoreboard players reset 10 SE_Data
-scoreboard players reset -1 SE_Data
 tag @s remove SE_ChunkInit
