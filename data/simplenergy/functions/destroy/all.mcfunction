@@ -4,9 +4,9 @@
 	execute as @e[type=glow_item_frame,tag=SE_SolarPanel] at @s unless block ~ ~ ~ minecraft:daylight_detector run function simplenergy:destroy/solar_panel
 
 #Wires
-	execute as @e[type=glow_item_frame,tag=SE_SimpleWire] at @s unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/simple_wire
-	execute as @e[type=glow_item_frame,tag=SE_AdvancedWire] at @s unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/advanced_wire
-	execute as @e[type=glow_item_frame,tag=SE_EliteWire] at @s unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/elite_wire
+	execute as @e[type=item_frame,tag=SE_SimpleWire] at @s unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/simple_wire
+	execute as @e[type=item_frame,tag=SE_AdvancedWire] at @s unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/advanced_wire
+	execute as @e[type=item_frame,tag=SE_EliteWire] at @s unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/elite_wire
 
 #Batteries
 	execute as @e[type=glow_item_frame,tag=SE_SimpleBattery] at @s unless block ~ ~ ~ minecraft:cobbled_deepslate run function simplenergy:destroy/simple_battery
