@@ -1,0 +1,9 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/written_book"
+    },
+    "overrides": [
+		{ "predicate": { "custom_model_data": 2012895 }, "model": "simplenergy:manual" }
+	]
+}
