@@ -4,5 +4,4 @@
 	"predicate": {
 	  "nbt": "{Item:{tag:{CustomItem:1s}}}"
 	}
-  }
-  
+}

@@ -4,9 +4,9 @@
 	execute as @e[type=glow_item_frame,tag=SE_SolarPanel] at @s unless block ~ ~ ~ minecraft:daylight_detector run function simplenergy:destroy/solar_panel
 
 #Wires
-	execute as @e[type=item_frame,tag=SE_SimpleWire] at @s unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/simple_wire
-	execute as @e[type=item_frame,tag=SE_AdvancedWire] at @s unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/advanced_wire
-	execute as @e[type=item_frame,tag=SE_EliteWire] at @s unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/elite_wire
+	execute as @e[type=item_frame,tag=SE_SimpleWire,predicate=!simplenergy:check_player_head] at @s run function simplenergy:destroy/simple_wire
+	execute as @e[type=item_frame,tag=SE_AdvancedWire,predicate=!simplenergy:check_player_head] at @s run function simplenergy:destroy/advanced_wire
+	execute as @e[type=item_frame,tag=SE_EliteWire,predicate=!simplenergy:check_player_head] at @s run function simplenergy:destroy/elite_wire
 
 #Batteries
 	execute as @e[type=glow_item_frame,tag=SE_SimpleBattery] at @s unless block ~ ~ ~ minecraft:cobbled_deepslate run function simplenergy:destroy/simple_battery
@@ -21,5 +21,5 @@
 
 #Others
 	execute as @e[type=glow_item_frame,tag=SE_CraftingTable] at @s unless block ~ ~ ~ minecraft:barrel run function simplenergy:destroy/simple_crafting_table
-	execute as @e[type=glow_item_frame,tag=SE_SimpluniumOre] at @s unless block ~ ~ ~ minecraft:cobbled_deepslate run function simplenergy:destroy/simplunium_ore
 	execute as @e[type=glow_item_frame,tag=SE_SimpluniumBlock] at @s unless block ~ ~ ~ minecraft:iron_block run function simplenergy:destroy/simplunium_block
+	execute as @e[type=item_frame,tag=SE_SimpluniumOre,predicate=!simplenergy:check_deepslate_coal_ore] at @s run function simplenergy:destroy/simplunium_ore
