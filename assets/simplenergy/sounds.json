@@ -1,0 +1,18 @@
+{
+	"furnace_generator": {
+		"subtitle":"Furnace Generator",
+		"sounds": ["simplenergy:furnace_generator"]
+	},
+	"electric_furnace": {
+		"subtitle":"Electric Furnace",
+		"sounds": ["simplenergy:electric_furnace"]
+	},
+	"electric_smelter": {
+		"subtitle":"Electric Smelter",
+		"sounds": ["simplenergy:electric_smelter"]
+	},
+	"electric_brewing_stand": {
+		"subtitle":"Electric Brewing Stand",
+		"sounds": ["simplenergy:electric_brewing_stand"]
+	}
+}

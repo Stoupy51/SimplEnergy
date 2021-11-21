@@ -1,0 +1,9 @@
+{
+    "parent": "item/handheld_rod",
+    "textures": {
+        "layer0": "item/warped_fungus_on_a_stick"
+    },
+    "overrides": [
+		{ "predicate": { "custom_model_data": 2012900 }, "model": "simplenergy:joulemeter" }
+	]
+}

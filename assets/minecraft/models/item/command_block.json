@@ -1,0 +1,7 @@
+{
+    "parent": "block/command_block",
+    "overrides": [
+		{ "predicate": { "custom_model_data": 2012896 }, "model": "simplenergy:ores/raw_simplunium" },
+		{ "predicate": { "custom_model_data": 2012898 }, "model": "simplenergy:ores/simplunium" }
+    ]
+}

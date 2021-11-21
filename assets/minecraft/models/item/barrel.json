@@ -1,0 +1,23 @@
+{
+    "parent": "block/barrel",
+    "overrides": [
+      { "predicate": { "custom_model_data": 2012000 }, "model": "simplenergy:blocks/cauldron_generator" },
+      { "predicate": { "custom_model_data": 2012001 }, "model": "simplenergy:blocks/furnace_generator" },
+      { "predicate": { "custom_model_data": 2012002 }, "model": "simplenergy:blocks/furnace_generator_on" },
+      { "predicate": { "custom_model_data": 2012003 }, "model": "simplenergy:blocks/solar_panel" },
+      { "predicate": { "custom_model_data": 2012004 }, "model": "simplenergy:blocks/simple_crafting_table" },
+      { "predicate": { "custom_model_data": 2012100 }, "model": "simplenergy:blocks/simple_battery" },
+      { "predicate": { "custom_model_data": 2012101 }, "model": "simplenergy:blocks/advanced_battery" },
+      { "predicate": { "custom_model_data": 2012102 }, "model": "simplenergy:blocks/elite_battery" },
+      { "predicate": { "custom_model_data": 2012200 }, "model": "simplenergy:blocks/electric_furnace" },
+      { "predicate": { "custom_model_data": 2012201 }, "model": "simplenergy:blocks/electric_furnace_on" },
+      { "predicate": { "custom_model_data": 2012202 }, "model": "simplenergy:blocks/electric_smelter" },
+      { "predicate": { "custom_model_data": 2012203 }, "model": "simplenergy:blocks/electric_smelter_on" },
+      { "predicate": { "custom_model_data": 2012204 }, "model": "simplenergy:blocks/electric_brewing_stand" },
+      { "predicate": { "custom_model_data": 2012205 }, "model": "simplenergy:blocks/electric_lamp" },
+      { "predicate": { "custom_model_data": 2012206 }, "model": "simplenergy:blocks/electric_lamp_on" },
+
+      { "predicate": { "custom_model_data": 2012897 }, "model": "simplenergy:ores/simplunium_block" },
+      { "predicate": { "custom_model_data": 2012899 }, "model": "simplenergy:ores/simplunium_ore" }
+    ]
+}
