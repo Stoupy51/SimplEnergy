@@ -1,28 +1,5 @@
-#Generate Simplunium Ore (x24) at world bottom + 16
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	summon minecraft:marker ~ 0 ~ {Tags:["SE_OrePos"]}
+#Generate Simplunium Ore (x32) at world bottom + 16
+	execute as @e[limit=32] run summon marker ~ 0 ~ {Tags:["SE_OrePos"]}
 	execute as @e[type=marker,tag=SE_OrePos] at @s run function simplenergy:generate/simplunium
 
 scoreboard players reset X SE_Data

@@ -38,5 +38,9 @@ execute store result storage simplenergy:items Count[{Slot:22b}].Count byte 1 ru
 
 data modify block ~ ~ ~ Items set from storage simplenergy:items Count
 
+scoreboard players remove @s SE_CraftCount 1
+execute if score @s SE_CraftCount matches 1.. run function simplenergy:craft/crafted
+
+
 function simplenergy:craft/drop
 tag @s remove SE_WaitingCraft

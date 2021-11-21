@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:blasting",
 	"ingredient": {
-		"item": "minecraft:barrel"
+		"item": "minecraft:command_block"
 	},
 	"result": "minecraft:command_block",
 	"experience": 1.0,

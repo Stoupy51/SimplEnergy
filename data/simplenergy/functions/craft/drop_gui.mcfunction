@@ -1,4 +1,3 @@
-data modify storage simplenergy:items Drops set from block ~ ~ ~ Items
 execute unless data storage simplenergy:items Drops[{Slot:0b,tag:{SE_CustomTextureItem:1s}}] run data modify storage simplenergy:items Drop set from storage simplenergy:items Drops[{Slot:0b}]
 execute if data storage simplenergy:items Drop run function simplenergy:craft/dropped
 
