@@ -7,5 +7,5 @@
 	scoreboard players add Temp SE_Data 1
 	scoreboard players operation Count SE_Data *= Temp SE_Data
 	data modify entity @e[type=item,nbt={Item:{id:"minecraft:coal"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1] Item set from storage simplenergy:items 2012896
-	execute store result entity @e[type=item,nbt={Item:{tag:{SE_RawSimplunium:1s}}},limit=1,sort=nearest,distance=..1] Item.Count byte 1 run scoreboard players get Count SE_Data
+	execute store result entity @e[type=item,nbt={Item:{tag:{SE_RawSimplunium:1b}}},limit=1,sort=nearest,distance=..1] Item.Count byte 1 run scoreboard players get Count SE_Data
 kill @s

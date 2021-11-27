@@ -2,7 +2,7 @@
 	scoreboard players set Second SE_Data 0
 	execute store result score DayTime SE_Data run time query daytime
 	execute as @e[type=glow_item_frame,tag=SE_CraftingTable,predicate=!simplenergy:is_barrel_open] at @s if entity @p[distance=..7] run function simplenergy:craft/all
-	execute as @e[type=item,nbt={Item:{tag:{SE_SimpluniumIngot:1s}}}] at @s if block ~ ~-1 ~ minecraft:crafting_table run function simplenergy:place/simple_crafting_table
+	execute as @e[type=item,nbt={Item:{tag:{SE_SimpluniumIngot:1b}}}] at @s if block ~ ~-1 ~ minecraft:crafting_table run function simplenergy:place/simple_crafting_table
 	execute as @a at @s run function simplenergy:generate/player
 	execute as @e[type=glow_item_frame,tag=SE_SolarPanel] at @s run function simplenergy:balance/all
 	execute as @e[type=glow_item_frame,tag=SE_CauldronGenerator] at @s run function simplenergy:balance/all
