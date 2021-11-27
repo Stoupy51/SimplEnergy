@@ -22,7 +22,7 @@
 				"items": [
 					{
 						"items": ["minecraft:player_head"],
-						"nbt": "{SE_AdvancedWire:1s}"
+						"nbt": "{SE_AdvancedWire:1b}"
 					}
 				]
 			}
