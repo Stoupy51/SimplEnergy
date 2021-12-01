@@ -1,5 +1,5 @@
 {
-	"values": [
-		"simplenergy:load"
-	]
+    "values": [
+        "#load:_private/load"
+    ]
 }
