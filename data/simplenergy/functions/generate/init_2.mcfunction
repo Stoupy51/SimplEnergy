@@ -1,5 +1,5 @@
-#Generate Simplunium Ore (x12) at world bottom + 16
-	execute as @e[limit=12] run summon marker ~ 0 ~ {Tags:["SE_OrePos"]}
+#Generate Simplunium Ore (x8) at world bottom + 16
+	execute as @e[limit=8] run summon marker ~ 0 ~ {Tags:["SE_OrePos"]}
 	execute as @e[type=marker,tag=SE_OrePos] at @s run function simplenergy:generate/simplunium
 
 scoreboard players reset X SE_Data
