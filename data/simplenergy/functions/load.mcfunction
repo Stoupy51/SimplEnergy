@@ -1,10 +1,10 @@
-scoreboard objectives add EF_Versions dummy
+scoreboard objectives add load.status dummy
 scoreboard objectives add SE_Data dummy
 scoreboard objectives add SE_Data2 dummy
 scoreboard objectives add SE_CraftCount dummy
 scoreboard objectives add SE_JoulemeterUse minecraft.used:minecraft.warped_fungus_on_a_stick
 
-scoreboard players set SimplEnergy EF_Versions 1040
+scoreboard players set SimplEnergy load.status 1050
 scoreboard players set Second SE_Data 0
 
 scoreboard players set 400 SE_Data 400
@@ -68,5 +68,3 @@ schedule function simplenergy:world_bottom_start 2s
 	data modify storage simplenergy:items CraftingTableGui set from storage simplenergy:items CraftLock
 	data modify storage simplenergy:items CraftingTableGui append from storage simplenergy:items 2012895
 	data modify storage simplenergy:items CraftingTableGui append value {Slot:26b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011930,CustomItem:1b,SE_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}}
-
-schedule function simplenergy:post_load 2s replace
