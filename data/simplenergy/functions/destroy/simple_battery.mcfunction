@@ -4,4 +4,4 @@
 #Update the Battery to keep Energy
 	execute if score @s EF_kJ matches 1.. run function simplenergy:destroy/keep_energy
 kill @s
-execute as @e[type=#energy_flux:wires,tag=EF_Wire,distance=..2] at @s run function energy_flux:wire_update
+function energy_flux:wire_update
