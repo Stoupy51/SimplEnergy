@@ -9,6 +9,7 @@ scoreboard players set Second SE_Data 0
 
 scoreboard players set 400 SE_Data 400
 scoreboard players set 260 SE_Data 260
+scoreboard players set 80 SE_Data 80
 scoreboard players set 64 SE_Data 64
 scoreboard players set 10 SE_Data 10
 scoreboard players set 4 SE_Data 4
