@@ -1,7 +1,7 @@
 # SimplEnergy
 [​Don't forget to join the Discord if you are a User or a Creator of Energy Datapacks : https://discord.gg/a2yX6GD4J7]
 
-Requires at least Energy Flux [v1.3.0] : https://github.com/Stoupy51/EnergyFlux
+Requires at least Energy Flux [v1.3.1] : https://github.com/Stoupy51/EnergyFlux
 
 Example video of SimplEnergy :
 https://www.youtube.com/watch?v=3rKrggNTog4
