@@ -4,7 +4,7 @@
 	execute positioned ~ ~1 ~ run function simplenergy:work/solar_panel_2
 
 #Produce Energy depends on DayTime
-execute if score Temp SE_Data matches 1 if score DayTime SE_Data matches 13500..22500 run scoreboard players add @s EF_kJ 1
-execute if score Temp SE_Data matches 1 unless score DayTime SE_Data matches 13500..22500 run scoreboard players add @s EF_kJ 4
+execute if score Temp SE_Data matches 1 if score DayTime SE_Data matches 13500..22500 run scoreboard players add @s energy.storage 1
+execute if score Temp SE_Data matches 1 unless score DayTime SE_Data matches 13500..22500 run scoreboard players add @s energy.storage 4
 
-execute if score @s EF_kJ matches 600.. run scoreboard players set @s EF_kJ 600
+execute if score @s energy.storage matches 600.. run scoreboard players set @s energy.storage 600

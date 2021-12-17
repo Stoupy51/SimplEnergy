@@ -3,10 +3,10 @@
 	execute as @e[type=glow_item_frame,tag=SE_FurnaceGenerator] at @s unless block ~ ~ ~ minecraft:furnace run function simplenergy:destroy/furnace_generator
 	execute as @e[type=glow_item_frame,tag=SE_SolarPanel] at @s unless block ~ ~ ~ minecraft:daylight_detector run function simplenergy:destroy/solar_panel
 
-#Wires
-	execute as @e[type=item_frame,tag=SE_SimpleWire,predicate=!simplenergy:check_player_head] at @s run function simplenergy:destroy/simple_wire
-	execute as @e[type=item_frame,tag=SE_AdvancedWire,predicate=!simplenergy:check_player_head] at @s run function simplenergy:destroy/advanced_wire
-	execute as @e[type=item_frame,tag=SE_EliteWire,predicate=!simplenergy:check_player_head] at @s run function simplenergy:destroy/elite_wire
+#Cables
+	execute as @e[type=item_frame,tag=SE_SimpleCable,predicate=!simplenergy:check_player_head] at @s run function simplenergy:destroy/simple_cable
+	execute as @e[type=item_frame,tag=SE_AdvancedCable,predicate=!simplenergy:check_player_head] at @s run function simplenergy:destroy/advanced_cable
+	execute as @e[type=item_frame,tag=SE_EliteCable,predicate=!simplenergy:check_player_head] at @s run function simplenergy:destroy/elite_cable
 
 #Batteries
 	execute as @e[type=glow_item_frame,tag=SE_SimpleBattery] at @s unless block ~ ~ ~ minecraft:cobbled_deepslate run function simplenergy:destroy/simple_battery

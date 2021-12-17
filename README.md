@@ -19,7 +19,7 @@ Here is a small list of features:
 - A Custom Crafting Table
 - A Crafting Manual
 - Some Batteries
-- Some Wires
+- Some Cables
 - Customs Advancements
 - Simples Energy Consumers
 
@@ -29,7 +29,7 @@ Feel free to use SimplEnergy as a datapack template!
 
 Credits :
 - Resource Pack : VieuxGreluchon
-- Wires visual : AirDox
+- Cables visual : AirDox
 
 # Datapack rules applied for compabilities :
 Always name your scores and tags with a unique prefix to avoid Datapacks problems,
