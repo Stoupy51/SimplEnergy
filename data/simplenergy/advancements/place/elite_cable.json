@@ -1,0 +1,16 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"item": {
+					"items": ["minecraft:player_head"],
+					"nbt": "{SE_EliteCable:1b}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "simplenergy:place/elite_cable/1"
+	}
+}
