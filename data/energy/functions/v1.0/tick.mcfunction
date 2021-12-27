@@ -1,5 +1,5 @@
 
-schedule function energy:v1.0/queue/tick 1t replace
+execute if score #queue_process energy.data matches 1 run schedule function energy:v1.0/queue/tick 1t replace
 schedule function energy:v1.0/tick 20t replace
 
 #setup network transfer capacity
