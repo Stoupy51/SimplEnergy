@@ -24,3 +24,5 @@
 
 #Update From Old Energy System to New One
 	execute as @e[tag=EF_Use] run function simplenergy:update_from_energy_flux
+#Update Old Ores to New
+	execute as @e[type=item_frame,tag=SE_SimpluniumOre] at @s run function simplenergy:update_from_item_frame

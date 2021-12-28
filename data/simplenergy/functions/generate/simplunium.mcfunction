@@ -35,16 +35,16 @@
 	execute store result entity @s Pos[2] double 0.1 run scoreboard players get PosZ SE_Data
 
 #Placing Ore
-	execute at @s if block ~ ~ ~ #simplenergy:for_simplunium_ore run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SE_Destroyer","SE_SimpluniumOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"cobblestone",Count:1b,tag:{CustomModelData:2012899}}}
+	execute at @s if block ~ ~ ~ #simplenergy:for_simplunium_ore run summon glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SE_Destroyer","SE_SimpluniumOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"cobblestone",Count:1b,tag:{CustomModelData:2012899}}}
 	execute at @s if block ~ ~ ~ #simplenergy:for_simplunium_ore run setblock ~ ~ ~ deepslate_coal_ore
-	execute at @s positioned ~0.8 ~0.8 ~0.8 if block ~ ~ ~ #simplenergy:for_simplunium_ore run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SE_Destroyer","SE_SimpluniumOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"cobblestone",Count:1b,tag:{CustomModelData:2012899}}}
+	execute at @s positioned ~0.8 ~0.8 ~0.8 if block ~ ~ ~ #simplenergy:for_simplunium_ore run summon glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SE_Destroyer","SE_SimpluniumOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"cobblestone",Count:1b,tag:{CustomModelData:2012899}}}
 	execute at @s positioned ~0.8 ~0.8 ~0.8 if block ~ ~ ~ #simplenergy:for_simplunium_ore run setblock ~ ~ ~ deepslate_coal_ore
-	execute at @s positioned ~ ~0.8 ~0.8 if block ~ ~ ~ #simplenergy:for_simplunium_ore run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SE_Destroyer","SE_SimpluniumOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"cobblestone",Count:1b,tag:{CustomModelData:2012899}}}
+	execute at @s positioned ~ ~0.8 ~0.8 if block ~ ~ ~ #simplenergy:for_simplunium_ore run summon glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SE_Destroyer","SE_SimpluniumOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"cobblestone",Count:1b,tag:{CustomModelData:2012899}}}
 	execute at @s positioned ~ ~0.8 ~0.8 if block ~ ~ ~ #simplenergy:for_simplunium_ore run setblock ~ ~ ~ deepslate_coal_ore
-	execute at @s positioned ~0.8 ~0.8 ~ if block ~ ~ ~ #simplenergy:for_simplunium_ore run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SE_Destroyer","SE_SimpluniumOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"cobblestone",Count:1b,tag:{CustomModelData:2012899}}}
+	execute at @s positioned ~0.8 ~0.8 ~ if block ~ ~ ~ #simplenergy:for_simplunium_ore run summon glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SE_Destroyer","SE_SimpluniumOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"cobblestone",Count:1b,tag:{CustomModelData:2012899}}}
 	execute at @s positioned ~0.8 ~0.8 ~ if block ~ ~ ~ #simplenergy:for_simplunium_ore run setblock ~ ~ ~ deepslate_coal_ore
-	execute at @s positioned ~0.8 ~ ~0.8 if block ~ ~ ~ #simplenergy:for_simplunium_ore run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SE_Destroyer","SE_SimpluniumOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"cobblestone",Count:1b,tag:{CustomModelData:2012899}}}
+	execute at @s positioned ~0.8 ~ ~0.8 if block ~ ~ ~ #simplenergy:for_simplunium_ore run summon glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SE_Destroyer","SE_SimpluniumOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"cobblestone",Count:1b,tag:{CustomModelData:2012899}}}
 	execute at @s positioned ~0.8 ~ ~0.8 if block ~ ~ ~ #simplenergy:for_simplunium_ore run setblock ~ ~ ~ deepslate_coal_ore
-	execute at @s positioned ~ ~0.8 ~ if block ~ ~ ~ #simplenergy:for_simplunium_ore run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SE_Destroyer","SE_SimpluniumOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"cobblestone",Count:1b,tag:{CustomModelData:2012899}}}
+	execute at @s positioned ~ ~0.8 ~ if block ~ ~ ~ #simplenergy:for_simplunium_ore run summon glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SE_Destroyer","SE_SimpluniumOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"cobblestone",Count:1b,tag:{CustomModelData:2012899}}}
 	execute at @s positioned ~ ~0.8 ~ if block ~ ~ ~ #simplenergy:for_simplunium_ore run setblock ~ ~ ~ deepslate_coal_ore
 kill @s
