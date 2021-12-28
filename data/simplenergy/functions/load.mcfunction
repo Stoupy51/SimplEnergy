@@ -5,6 +5,7 @@ scoreboard objectives add SE_CraftCount dummy
 scoreboard objectives add SE_MultimeterUse minecraft.used:minecraft.warped_fungus_on_a_stick
 
 scoreboard players set SimplEnergy load.status 1060
+scoreboard players set #queue_process energy.data 1
 scoreboard players set Second SE_Data 0
 
 scoreboard players set 400 SE_Data 400
