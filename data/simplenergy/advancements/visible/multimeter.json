@@ -4,7 +4,7 @@
 			"text": "Measuring Energy"
 		},
 		"description": {
-			"text": "Obtain a Joulemeter"
+			"text": "Obtain a Multimeter"
 		},
 		"icon": {
 			"item": "minecraft:warped_fungus_on_a_stick",
@@ -22,7 +22,7 @@
 				"items": [
 					{
 						"items": ["minecraft:warped_fungus_on_a_stick"],
-						"nbt": "{SE_Joulemeter:1b}"
+						"nbt": "{SE_Multimeter:1b}"
 					}
 				]
 			}
