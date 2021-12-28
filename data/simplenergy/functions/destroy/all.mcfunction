@@ -22,4 +22,4 @@
 #Others
 	execute as @e[type=glow_item_frame,tag=SE_CraftingTable] at @s unless block ~ ~ ~ minecraft:barrel run function simplenergy:destroy/simple_crafting_table
 	execute as @e[type=glow_item_frame,tag=SE_SimpluniumBlock] at @s unless block ~ ~ ~ minecraft:iron_block run function simplenergy:destroy/simplunium_block
-	execute as @e[type=item_frame,tag=SE_SimpluniumOre,predicate=!simplenergy:check_deepslate_coal_ore] at @s run function simplenergy:destroy/simplunium_ore
+	execute as @e[type=glow_item_frame,tag=SE_SimpluniumOre,predicate=!simplenergy:check_deepslate_coal_ore] at @s run function simplenergy:destroy/simplunium_ore
