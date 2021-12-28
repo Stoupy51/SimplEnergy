@@ -13,7 +13,7 @@
 	execute if score @s SE_Data matches 2012202 run kill @e[type=item,nbt={Item:{tag:{SE_ElectricSmelter:1b}}},limit=1,sort=nearest,distance=..1]
 	execute if score @s SE_Data matches 2012204 run kill @e[type=item,nbt={Item:{tag:{SE_ElectricBrewing:1b}}},limit=1,sort=nearest,distance=..1]
 	execute if score @s SE_Data matches 2012205 run kill @e[type=item,nbt={Item:{tag:{SE_ElectricLamp:1b}}},limit=1,sort=nearest,distance=..1]
-	execute if score @s SE_Data matches 2012900 run kill @e[type=item,nbt={Item:{tag:{SE_Joulemeter:1b}}},limit=1,sort=nearest,distance=..1]
+	execute if score @s SE_Data matches 2012900 run kill @e[type=item,nbt={Item:{tag:{SE_Multimeter:1b}}},limit=1,sort=nearest,distance=..1]
 
 #Replace the item
 	data modify entity @e[type=item,nbt={Item:{id:"minecraft:barrel"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1] Item set from storage simplenergy:items 2012004

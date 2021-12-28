@@ -33,5 +33,5 @@
 			"SimplEnergy"
 		]
 	],
-	"parent": "simplenergy:visible/joulemeter"
+	"parent": "simplenergy:visible/multimeter"
 }
