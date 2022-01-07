@@ -1,7 +1,7 @@
 #Store Fuel & BrewTime into a score to change the value
-	data modify storage simplenergy:items Temp set from block ~ ~ ~
-	execute store result score BrewTime SE_Data run data get storage simplenergy:items Temp.BrewTime
-	execute store result score BurnTime SE_Data run data get storage simplenergy:items Temp.Fuel
+	data modify storage simplenergy:items all.Temp set from block ~ ~ ~
+	execute store result score BrewTime SE_Data run data get storage simplenergy:items all.Temp.BrewTime
+	execute store result score BurnTime SE_Data run data get storage simplenergy:items all.Temp.Fuel
 
 #Change BrewTime value and use Energy & playsound on work
 	execute if score BrewTime SE_Data matches 4.. run scoreboard players remove @s energy.storage 1
@@ -16,4 +16,4 @@
 	execute store result block ~ ~ ~ Fuel byte 1 run scoreboard players get BurnTime SE_Data
 
 #Change gui texture
-	data modify block ~ ~ ~ Items insert 0 value {Slot:4b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011936,CustomItem:1b,SE_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}}
+	data modify block ~ ~ ~ Items insert 0 value {Slot:4b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011936,SF_CustomItem:1b,SE_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}}

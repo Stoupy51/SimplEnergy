@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "2012895.tag",
+									"source": "all.2012895.tag",
 									"target": "{}",
 									"op": "merge"
 								}

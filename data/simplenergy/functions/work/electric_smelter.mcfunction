@@ -1,7 +1,7 @@
 #Store CookTime & BurnTime into a score to change the value
-	data modify storage simplenergy:items Temp set from block ~ ~ ~
-	execute store result score CookTime SE_Data run data get storage simplenergy:items Temp.CookTime
-	execute store result score BurnTime SE_Data run data get storage simplenergy:items Temp.BurnTime
+	data modify storage simplenergy:items all.Temp set from block ~ ~ ~
+	execute store result score CookTime SE_Data run data get storage simplenergy:items all.Temp.CookTime
+	execute store result score BurnTime SE_Data run data get storage simplenergy:items all.Temp.BurnTime
 
 #Change CookTime value and use Energy & playsound on work
 	execute if score CookTime SE_Data matches 1.. run scoreboard players remove @s energy.storage 4
@@ -16,4 +16,4 @@
 	execute store result block ~ ~ ~ BurnTime short 1 run scoreboard players get BurnTime SE_Data
 
 #Change gui texture
-	data modify block ~ ~ ~ Items insert 0 value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011942,CustomItem:1b,SE_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}}
+	data modify block ~ ~ ~ Items insert 0 value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011942,SF_CustomItem:1b,SE_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}}
