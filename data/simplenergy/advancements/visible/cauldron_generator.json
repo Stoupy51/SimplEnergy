@@ -22,7 +22,7 @@
 				"items": [
 					{
 						"items": ["minecraft:barrel"],
-						"nbt": "{SE_CauldronGenerator:1b}"
+						"nbt": "{SimplEnergy_CauldronGenerator:1b}"
 					}
 				]
 			}

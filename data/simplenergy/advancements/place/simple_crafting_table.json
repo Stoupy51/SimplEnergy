@@ -5,7 +5,7 @@
 			"conditions": {
 				"block": "minecraft:barrel",
 				"item": {
-					"nbt": "{SE_CraftingTable:1b}"
+					"nbt": "{SimplEnergy_CraftingTable:1b}"
 				}
 			}
 		}

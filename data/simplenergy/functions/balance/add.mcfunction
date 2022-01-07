@@ -1,2 +1,2 @@
-scoreboard players operation Temp SE_Data += @s energy.storage
-scoreboard players add Count SE_Data 1
+scoreboard players operation Temp SimplEnergy_Data += @s energy.storage
+scoreboard players add Count SimplEnergy_Data 1

@@ -5,7 +5,7 @@
 			"conditions": {
 				"block": "minecraft:barrel",
 				"item": {
-					"nbt": "{SE_FurnaceGenerator:1b}"
+					"nbt": "{SimplEnergy_FurnaceGenerator:1b}"
 				}
 			}
 		}

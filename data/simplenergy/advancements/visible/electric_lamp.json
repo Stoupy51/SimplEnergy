@@ -22,7 +22,7 @@
 				"items": [
 					{
 						"items": ["minecraft:barrel"],
-						"nbt": "{SE_ElectricLamp:1b}"
+						"nbt": "{SimplEnergy_ElectricLamp:1b}"
 					}
 				]
 			}
