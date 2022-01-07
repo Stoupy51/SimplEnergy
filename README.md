@@ -30,7 +30,3 @@ Feel free to use SimplEnergy as a datapack template!
 Credits :
 - Resource Pack : VieuxGreluchon
 - Cables visual : AirDox
-
-# Datapack rules applied for compabilities :
-Always name your scores and tags with a unique prefix to avoid Datapacks problems,
-for Energy Flux I use "EF_", and "SE_" for SimplEnergy.

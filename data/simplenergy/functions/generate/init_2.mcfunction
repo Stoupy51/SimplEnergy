@@ -2,17 +2,17 @@
 	function simplenergy:generate/correct_position
 
 #Generate Simplunium Ore (x8) at world bottom + 16
-	execute as @e[limit=8] run summon marker ~ 0 ~ {Tags:["SE_OrePos"]}
-	execute as @e[type=marker,tag=SE_OrePos] at @s run function simplenergy:generate/simplunium
+	execute as @e[limit=8] run summon marker ~ 0 ~ {Tags:["SimplEnergy_OrePos"]}
+	execute as @e[type=marker,tag=SimplEnergy_OrePos] at @s run function simplenergy:generate/simplunium
 
-scoreboard players reset X SE_Data
-scoreboard players reset Y SE_Data
-scoreboard players reset Z SE_Data
-scoreboard players reset NewX SE_Data
-scoreboard players reset NewY SE_Data
-scoreboard players reset NewZ SE_Data
-scoreboard players reset PosX SE_Data
-scoreboard players reset PosY SE_Data
-scoreboard players reset PosZ SE_Data
-scoreboard players reset MaxY SE_Data
-tag @s remove SE_ChunkInit
+scoreboard players reset X SimplEnergy_Data
+scoreboard players reset Y SimplEnergy_Data
+scoreboard players reset Z SimplEnergy_Data
+scoreboard players reset NewX SimplEnergy_Data
+scoreboard players reset NewY SimplEnergy_Data
+scoreboard players reset NewZ SimplEnergy_Data
+scoreboard players reset PosX SimplEnergy_Data
+scoreboard players reset PosY SimplEnergy_Data
+scoreboard players reset PosZ SimplEnergy_Data
+scoreboard players reset MaxY SimplEnergy_Data
+tag @s remove SimplEnergy_ChunkInit
