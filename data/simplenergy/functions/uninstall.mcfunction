@@ -11,3 +11,6 @@ kill @e[tag=SimplEnergy_Destroyer]
 clear @a #simplenergy:items{SimplEnergy_CustomItem:1b}
 
 datapack disable "file/SimplEnergy [v1.6.0]"
+datapack disable "file/SimplEnergy [v1.6.0].zip"
+datapack disable "file/SimplEnergy"
+datapack disable "file/SimplEnergy.zip"
