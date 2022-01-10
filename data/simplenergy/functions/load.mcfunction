@@ -21,7 +21,8 @@ scoreboard players set -1 SimplEnergy_Data -1
 
 forceload add 0 0
 # Check region
-execute positioned 0 -64 0 unless entity @e[tag=SimplEnergy_Forceload,dx=15,dy=319,dz=15] run summon marker ~ ~ ~ {Tags:["SimplEnergy_Forceload","global.forceload"]}
+execute unless score ForceLoaded SimplEnergy_Data matches 1 run summon marker 0 -64 0 {Tags:["SimplEnergy_Forceload","global.forceload"]}
+scoreboard players set ForceLoaded SimplEnergy_Data 1
 
 schedule function simplenergy:world_bottom_start 2s
 #define storage simplenergy:items
