@@ -1,7 +1,6 @@
 
 #ensure scores are initialized
 scoreboard players add @s energy.storage 0
-scoreboard players add @s energy.change_rate 0
 scoreboard players add @s energy.max_storage 0
 scoreboard players add @s energy.transfer_rate 0
 scoreboard players add @s energy.network_id 0

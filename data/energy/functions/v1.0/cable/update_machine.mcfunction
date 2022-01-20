@@ -1,5 +1,4 @@
 
-
 #check if valid side
 scoreboard players operation #cable.in energy.data = #cable.direction energy.data
 scoreboard players set #cable.out energy.data 1
@@ -20,3 +19,6 @@ execute if score #cable.out energy.data matches 1 if score #cable.direction ener
 execute if score #cable.out energy.data matches 1 if score #cable.direction energy.data matches 3 run scoreboard players add #cable.model_data energy.data 8
 execute if score #cable.out energy.data matches 1 if score #cable.direction energy.data matches 4 run scoreboard players add #cable.model_data energy.data 16
 execute if score #cable.out energy.data matches 1 if score #cable.direction energy.data matches 5 run scoreboard players add #cable.model_data energy.data 32
+
+#assign cable connected tag
+tag @s add energy.cable_connected

@@ -8,6 +8,7 @@ scoreboard objectives add energy.max_storage dummy
 scoreboard objectives add energy.transfer_rate dummy
 
 scoreboard objectives add energy.transfer_capacity dummy
+scoreboard objectives add energy.transfer_remaining dummy
 scoreboard objectives add energy.transfer_queue dummy
 scoreboard objectives add energy.network_id dummy
 scoreboard objectives add energy.network_id_up dummy
