@@ -4,13 +4,13 @@
 	execute as @e[type=glow_item_frame,tag=SimplEnergy_CraftingTable,predicate=!simplenergy:is_barrel_open] at @s if entity @p[distance=..7] run function simplenergy:craft/all
 	execute as @e[type=item,nbt={Item:{tag:{SimplEnergy_SimpluniumIngot:1b}}}] at @s if block ~ ~-1 ~ minecraft:crafting_table run function simplenergy:place/simple_crafting_table
 	execute as @a at @s run function simplenergy:generate/player
-	execute as @e[type=glow_item_frame,tag=SimplEnergy_SolarPanel] at @s run function simplenergy:balance/all
-	execute as @e[type=glow_item_frame,tag=SimplEnergy_CauldronGenerator] at @s run function simplenergy:balance/all
-	execute as @e[type=glow_item_frame,tag=SimplEnergy_SimpleBattery] at @s run function simplenergy:balance/all
-	execute as @e[type=glow_item_frame,tag=SimplEnergy_AdvancedBattery] at @s run function simplenergy:balance/all
-	execute as @e[type=glow_item_frame,tag=SimplEnergy_EliteBattery] at @s run function simplenergy:balance/all
-	execute as @a[tag=!SimplEnergy_FirstJoin] at @s run function simplenergy:first_join
+	execute as @e[type=glow_item_frame,tag=SimplEnergy_SolarPanel,limit=1] at @s run function simplenergy:balance/all
+	execute as @e[type=glow_item_frame,tag=SimplEnergy_CauldronGenerator,limit=1] at @s run function simplenergy:balance/all
+	execute as @e[type=glow_item_frame,tag=SimplEnergy_SimpleBattery,limit=1] at @s run function simplenergy:balance/all
+	execute as @e[type=glow_item_frame,tag=SimplEnergy_AdvancedBattery,limit=1] at @s run function simplenergy:balance/all
+	execute as @e[type=glow_item_frame,tag=SimplEnergy_EliteBattery,limit=1] at @s run function simplenergy:balance/all
 	tag @e[type=glow_item_frame,tag=SimplEnergy_Balanced] remove SimplEnergy_Balanced
+	execute as @a[tag=!SimplEnergy_FirstJoin] at @s run function simplenergy:first_join
 	execute as @e[type=marker,tag=SimplEnergy_Furnaces] at @s unless block ~ ~ ~ #simplenergy:furnaces run kill @s
 
 #Visuals & Work
