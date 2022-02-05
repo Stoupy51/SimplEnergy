@@ -1,5 +1,5 @@
 # SimplEnergy
-[​Don't forget to join the Discord if you are a User or a Creator of Energy Datapacks : https://discord.gg/a2yX6GD4J7]
+[Join our Energy Datapacks Discord Server here : : https://discord.gg/a2yX6GD4J7]
 
 Example video of SimplEnergy :
 https://www.youtube.com/watch?v=3rKrggNTog4
