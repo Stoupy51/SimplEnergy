@@ -7,6 +7,6 @@ execute if score @s SimplEnergy_Data2 matches 180.. run scoreboard players reset
 
 execute if block ~ ~ ~ minecraft:water_cauldron[level=3] if score @s SimplEnergy_Data2 matches 1.. run scoreboard players set @s SimplEnergy_Data2 1
 
-scoreboard players add @s energy.storage 20
+scoreboard players add @s energy.storage 5
 
 execute if score @s energy.storage matches 500.. run scoreboard players set @s energy.storage 500
