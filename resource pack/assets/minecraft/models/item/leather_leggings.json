@@ -1,0 +1,10 @@
+{
+    "parent": "item/handheld",
+  	"textures": {
+    	"layer0": "item/leather_leggings",
+    	"layer1": "item/leather_leggings_overlay"
+  	},
+    "overrides": [
+		{ "predicate": { "custom_model_data": 2012602 }, "model": "simplenergy:equipments/simplunium_leggings" }
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:diamond_sword",
+					"functions": [
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "simplenergy:items"
+							},
+							"ops": [
+								{
+									"source": "all.2012604.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
