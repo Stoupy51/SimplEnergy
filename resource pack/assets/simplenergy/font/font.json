@@ -19,5 +19,6 @@
 	{ "type": "bitmap", "file": "simplenergy:font/page_16.png",	"ascent": 12, "height": 139, "chars": ["\uec11"] },
 	{ "type": "bitmap", "file": "simplenergy:font/page_17.png",	"ascent": 12, "height": 139, "chars": ["\uec12"] },
 	{ "type": "bitmap", "file": "simplenergy:font/page_18.png",	"ascent": 12, "height": 139, "chars": ["\uec13"] },
-	{ "type": "bitmap", "file": "simplenergy:font/page_19.png",	"ascent": 12, "height": 139, "chars": ["\uec14"] }
+	{ "type": "bitmap", "file": "simplenergy:font/page_19.png",	"ascent": 12, "height": 139, "chars": ["\uec14"] },
+	{ "type": "bitmap", "file": "simplenergy:font/page_20.png",	"ascent": 12, "height": 139, "chars": ["\uec15"] }
 ]}
