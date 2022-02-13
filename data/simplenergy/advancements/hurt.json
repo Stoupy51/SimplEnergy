@@ -5,6 +5,6 @@
 		}
 	},
 	"rewards": {
-		"function": "simplenergy:other/hurt"
+		"function": "simplenergy:opti/hurt_tag"
 	}
 }
