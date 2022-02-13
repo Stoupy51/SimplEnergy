@@ -3,6 +3,10 @@ scoreboard objectives add SimplEnergy_Data dummy
 scoreboard objectives add SimplEnergy_Data2 dummy
 scoreboard objectives add SimplEnergy_CraftCount dummy
 scoreboard objectives add SimplEnergy_MultimeterUse minecraft.used:minecraft.warped_fungus_on_a_stick
+scoreboard objectives add SimplEnergy_HelmetDurability dummy
+scoreboard objectives add SimplEnergy_ChestplateDurability dummy
+scoreboard objectives add SimplEnergy_LeggingsDurability dummy
+scoreboard objectives add SimplEnergy_BootsDurability dummy
 
 scoreboard players set SimplEnergy load.status 1070
 scoreboard players set Second SimplEnergy_Data 0

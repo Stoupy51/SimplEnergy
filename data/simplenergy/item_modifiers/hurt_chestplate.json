@@ -1,0 +1,13 @@
+{
+	"function": "minecraft:set_damage",
+	"damage": {
+		"type": "minecraft:score",
+		"target": {
+			"type": "minecraft:fixed",
+			"name": "Temp"
+		},
+		"score": "SimplEnergy_Data",
+		"scale": 0.0124
+	},
+	"add": true
+}
