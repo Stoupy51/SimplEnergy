@@ -20,6 +20,7 @@ Here is a small list of features:
 - Some Cables
 - Customs Advancements
 - Simples Energy Consumers
+- New Armor & Tools
 
 If you plan to create your own Energy Datapack in Minecraft, join our Discord https://discord.gg/a2yX6GD4J7 !
 Feel free to use SimplEnergy as a datapack template!
