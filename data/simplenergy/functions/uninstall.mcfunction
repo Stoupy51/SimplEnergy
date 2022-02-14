@@ -2,6 +2,10 @@ scoreboard objectives remove SimplEnergy_Data
 scoreboard objectives remove SimplEnergy_Data2
 scoreboard objectives remove SimplEnergy_CraftCount
 scoreboard objectives remove SimplEnergy_MultimeterUse
+scoreboard objectives remove SimplEnergy_HelmetDurability
+scoreboard objectives remove SimplEnergy_ChestplateDurability
+scoreboard objectives remove SimplEnergy_LeggingsDurability
+scoreboard objectives remove SimplEnergy_BootsDurability
 
 data remove storage simplenergy:items all
 
