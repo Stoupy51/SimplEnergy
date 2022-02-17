@@ -11,5 +11,5 @@ execute if score #machine.direction energy.data matches 5 run scoreboard players
 
 #define connected tags
 tag @s remove energy.consumer_connected
-execute if entity @s[tag=energy.send,tag=energy.receive] align xyz if entity @e[type=#energy:valid_block_entities,distance=..1.5,tag=energy.receive,tag=!energy.send] run tag @s add energy.consumer_connected
-execute if entity @s[tag=energy.send,tag=!energy.receive] align xyz if entity @e[type=#energy:valid_block_entities,distance=..1.5,tag=energy.receive] run tag @s add energy.consumer_connected
+execute if entity @s[tag=energy.send,tag=energy.receive] align xyz run function energy:v1.0/machine/update_adjacent_machine_2
+execute if entity @s[tag=energy.send,tag=!energy.receive] align xyz run function energy:v1.0/machine/update_adjacent_machine_3
