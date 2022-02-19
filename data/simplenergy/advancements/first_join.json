@@ -1,0 +1,12 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:tick"
+		}
+	},
+	"rewards": {
+		"loot": [
+			"simplenergy:first_join"
+		]
+	}
+}
