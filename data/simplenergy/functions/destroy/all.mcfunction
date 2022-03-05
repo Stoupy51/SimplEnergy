@@ -23,3 +23,5 @@
 	execute if entity @s[tag=SimplEnergy_CraftingTable] unless block ~ ~ ~ minecraft:barrel run function simplenergy:destroy/simple_crafting_table
 	execute if entity @s[tag=SimplEnergy_SimpluniumBlock] unless block ~ ~ ~ minecraft:iron_block run function simplenergy:destroy/simplunium_block
 	execute if entity @s[tag=SimplEnergy_SimpluniumOre,predicate=!simplenergy:check_deepslate_coal_ore] run function simplenergy:destroy/simplunium_ore
+
+kill @s[tag=SimplEnergy_SimpleCraftingTable]
