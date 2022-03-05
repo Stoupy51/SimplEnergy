@@ -8,7 +8,7 @@ scoreboard objectives add SimplEnergy_ChestplateDurability dummy
 scoreboard objectives add SimplEnergy_LeggingsDurability dummy
 scoreboard objectives add SimplEnergy_BootsDurability dummy
 
-scoreboard players set SimplEnergy load.status 1072
+scoreboard players set SimplEnergy load.status 1080
 scoreboard players set Second SimplEnergy_Data 0
 
 scoreboard players set 400 SimplEnergy_Data 400
