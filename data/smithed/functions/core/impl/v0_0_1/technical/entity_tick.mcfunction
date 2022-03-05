@@ -1,0 +1,1 @@
+execute if entity @s[tag=smd.armor_stand,type=minecraft:armor_stand] run function #smithed:core/events/entity/armor_stand

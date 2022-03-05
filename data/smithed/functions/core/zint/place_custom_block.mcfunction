@@ -1,0 +1,1 @@
+function #smithed:core/pub/block/api/place_block
