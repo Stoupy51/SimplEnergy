@@ -17,4 +17,3 @@
 	execute positioned ~ ~-6 ~ run function simplenergy:place/look_layer_head
 	execute positioned ~ ~-7 ~ run function simplenergy:place/look_layer_head
 	execute positioned ~ ~-8 ~ run function simplenergy:place/look_layer_head
-#anchored eyes facing ^ ^ ^2 
