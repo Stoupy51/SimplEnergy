@@ -1,0 +1,1 @@
+function #smithed:core/pub/player/damage/magic

@@ -1,0 +1,18 @@
+{
+    "criteria": {
+      "craft": {
+        "trigger": "minecraft:entity_hurt_player",
+        "conditions": {
+          "damage": {
+            "type": {
+              "is_explosion": true
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "smithed:core/zint/player/damage/explosion"
+    }
+  }
+  

@@ -1,5 +1,9 @@
 {
     "values": [
+		"#smithed:core/pub/technical/enumerate",
+        "#smithed:core/pub/technical/resolve",
+		"#smithed:crafter/pub/technical/enumerate",
+        "#smithed:crafter/pub/technical/resolve",
 		"#energy:load",
 		"simplenergy:load"
 	]

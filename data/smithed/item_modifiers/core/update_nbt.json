@@ -1,0 +1,16 @@
+[
+    {
+      "function": "minecraft:copy_nbt",
+      "source": {
+        "type": "minecraft:storage",
+        "source": "smd:core"
+      },
+      "ops": [
+        {
+          "source": "item.tag",
+          "target": "{}",
+          "op": "merge"
+        }
+      ]
+    }
+]
