@@ -1,5 +1,6 @@
 {
     "values":[
-        "#smithed:crafter/pub/block/place"
+        "#smithed:crafter/pub/block/place",
+		"simplenergy:place/all"
     ]
 }

@@ -1,9 +1,9 @@
 {
- "replace":false,
- "values": [
- "minecraft:air",
- "minecraft:cave_air",
- "minecraft:void_air",
- "minecraft:structure_void"
- ]
+	"replace": false,
+	"values": [
+		"minecraft:air",
+		"minecraft:cave_air",
+		"minecraft:void_air",
+		"minecraft:structure_void"
+	]
 }
