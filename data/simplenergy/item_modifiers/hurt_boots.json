@@ -6,7 +6,7 @@
 			"type": "minecraft:fixed",
 			"name": "Temp"
 		},
-		"score": "SimplEnergy_Data",
+		"score": "simplenergy.data",
 		"scale": 0.0153
 	},
 	"add": true

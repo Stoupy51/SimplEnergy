@@ -1,10 +1,10 @@
 
-scoreboard players remove #maxTry SimplEnergy_Data 1
-scoreboard players set Temp SimplEnergy_Data 0
+scoreboard players remove #maxTry simplenergy.data 1
+scoreboard players set Temp simplenergy.data 0
 
 execute if block ~ ~ ~ #simplenergy:air run function simplenergy:generate/utils/in_air
-execute if score Temp SimplEnergy_Data matches 0 run function simplenergy:generate/utils/in_block
+execute if score Temp simplenergy.data matches 0 run function simplenergy:generate/utils/in_block
 
 #Try a new time if the block is still not adjacent to air
-execute if score Temp SimplEnergy_Data matches 0 unless score #maxTry SimplEnergy_Data matches 0 run function simplenergy:generate/utils/new_random_position
+execute if score Temp simplenergy.data matches 0 unless score #maxTry simplenergy.data matches 0 run function simplenergy:generate/utils/new_random_position
 

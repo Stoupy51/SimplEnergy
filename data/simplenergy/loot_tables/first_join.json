@@ -10,7 +10,7 @@
 					"functions": [
 						{
 							"function": "minecraft:set_nbt",
-							"tag": "{display:{Lore:['{\"translate\":\"Drop a Simplunium Ingot on\",\"italic\":false,\"color\":\"gray\"}','{\"translate\":\"a crafting table to get a\",\"italic\":false,\"color\":\"gray\"}','{\"translate\":\"Simple Crafting Table\",\"italic\":false,\"color\":\"gray\"}']}}"
+							"tag": "{display:{Lore:['{\"translate\":\"Drop a Simplunium Ingot on\",\"italic\":false,\"color\":\"gray\"}','{\"translate\":\"a crafting table to get a\",\"italic\":false,\"color\":\"gray\"}','{\"translate\":\"Simple Crafting Table\",\"italic\":false,\"color\":\"gray\"}','{\"translate\":\"SimplEnergy\",\"italic\":true,\"color\":\"blue\"}']}}"
 						}
 					]
 				}

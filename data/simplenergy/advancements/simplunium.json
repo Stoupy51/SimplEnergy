@@ -23,7 +23,7 @@
 				"items": [
 					{
 						"items": ["minecraft:command_block"],
-						"nbt": "{SimplEnergy_SimpluniumIngot:1b}"
+						"nbt": "{simplenergy:{simplunium_ingot:1b}}"
 					}
 				]
 			}
