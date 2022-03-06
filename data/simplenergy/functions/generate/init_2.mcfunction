@@ -5,16 +5,16 @@
 	execute at @s run function #simplenergy:generate_ores
 
 
-scoreboard players reset x.random SimplEnergy_Data
-scoreboard players reset z.random SimplEnergy_Data
-scoreboard players reset x SimplEnergy_Data
-scoreboard players reset y SimplEnergy_Data
-scoreboard players reset z SimplEnergy_Data
-scoreboard players reset MaxY SimplEnergy_Data
-scoreboard players reset PosX SimplEnergy_Data
-scoreboard players reset PosY SimplEnergy_Data
-scoreboard players reset PosZ SimplEnergy_Data
-scoreboard players reset #xzVariation SimplEnergy_Data
-scoreboard players reset #maxHeight SimplEnergy_Data
-scoreboard players reset #maxTry SimplEnergy_Data
-tag @s remove SimplEnergy_ChunkInit
+scoreboard players reset x.random simplenergy.data
+scoreboard players reset z.random simplenergy.data
+scoreboard players reset x simplenergy.data
+scoreboard players reset y simplenergy.data
+scoreboard players reset z simplenergy.data
+scoreboard players reset MaxY simplenergy.data
+scoreboard players reset PosX simplenergy.data
+scoreboard players reset PosY simplenergy.data
+scoreboard players reset PosZ simplenergy.data
+scoreboard players reset #xzVariation simplenergy.data
+scoreboard players reset #maxHeight simplenergy.data
+scoreboard players reset #maxTry simplenergy.data
+tag @s remove simplenergy.chunk_init

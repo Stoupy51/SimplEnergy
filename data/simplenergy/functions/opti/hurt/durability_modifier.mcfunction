@@ -1,7 +1,7 @@
 
 #Score Manipulation to get new Damage Amount
-execute if score Random SimplEnergy_Data matches 0 run scoreboard players operation Temp2 SimplEnergy_Data = Temp SimplEnergy_Data
-execute if score Random SimplEnergy_Data matches 0 run scoreboard players operation Temp2 SimplEnergy_Data /= DurabilityMultiplier SimplEnergy_Data
-execute if score Random SimplEnergy_Data matches 0 run scoreboard players add Temp2 SimplEnergy_Data 1
-execute if score Random SimplEnergy_Data matches 0 run scoreboard players operation Temp SimplEnergy_Data -= Temp2 SimplEnergy_Data
-execute if score Random SimplEnergy_Data matches 0 if score Temp SimplEnergy_Data matches 0 run scoreboard players set Temp SimplEnergy_Data -1
+execute if score Random simplenergy.data matches 0 run scoreboard players operation Temp2 simplenergy.data = Temp simplenergy.data
+execute if score Random simplenergy.data matches 0 run scoreboard players operation Temp2 simplenergy.data /= DurabilityMultiplier simplenergy.data
+execute if score Random simplenergy.data matches 0 run scoreboard players add Temp2 simplenergy.data 1
+execute if score Random simplenergy.data matches 0 run scoreboard players operation Temp simplenergy.data -= Temp2 simplenergy.data
+execute if score Random simplenergy.data matches 0 if score Temp simplenergy.data matches 0 run scoreboard players set Temp simplenergy.data -1

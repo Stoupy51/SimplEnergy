@@ -1,61 +1,31 @@
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
-summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:1b,tag:{SimplEnergy_Give:1b}}}
 
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012000
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012001
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012003
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012004
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012100
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012101
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012102
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012103
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012200
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012202
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012204
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012205
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012300
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012400
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012500
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012600
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012601
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012602
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012603
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012604
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012605
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012606
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012607
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012608
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012895
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012896
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012897
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012898
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012899
-data modify entity @e[type=item,nbt={Item:{tag:{SimplEnergy_Give:1b}}},limit=1] Item set from storage simplenergy:items all.2012900
+loot give @s loot smithed:crafter/blocks/table
+
+loot give @s loot simplenergy:i/advanced_battery
+loot give @s loot simplenergy:i/advanced_cable
+loot give @s loot simplenergy:i/cauldron_generator
+loot give @s loot simplenergy:i/electric_brewing_stand
+loot give @s loot simplenergy:i/electric_furnace
+loot give @s loot simplenergy:i/electric_lamp
+loot give @s loot simplenergy:i/electric_smelter
+loot give @s loot simplenergy:i/elite_battery_creative
+loot give @s loot simplenergy:i/elite_battery
+loot give @s loot simplenergy:i/elite_cable
+loot give @s loot simplenergy:i/furnace_generator
+loot give @s loot simplenergy:i/multimeter
+loot give @s loot simplenergy:i/raw_simplunium
+loot give @s loot simplenergy:i/simple_battery
+loot give @s loot simplenergy:i/simple_cable
+loot give @s loot simplenergy:i/simplenergy_manual
+loot give @s loot simplenergy:i/simplunium_block
+loot give @s loot simplenergy:i/simplunium_boots
+loot give @s loot simplenergy:i/simplunium_chestplate
+loot give @s loot simplenergy:i/simplunium_helmet
+loot give @s loot simplenergy:i/simplunium_hoe
+loot give @s loot simplenergy:i/simplunium_ingot
+loot give @s loot simplenergy:i/simplunium_leggings
+loot give @s loot simplenergy:i/simplunium_ore
+loot give @s loot simplenergy:i/simplunium_pickaxe
+loot give @s loot simplenergy:i/simplunium_shovel
+loot give @s loot simplenergy:i/simplunium_sword
+loot give @s loot simplenergy:i/solar_panel

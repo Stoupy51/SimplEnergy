@@ -1,20 +1,21 @@
-scoreboard objectives remove SimplEnergy_Data
-scoreboard objectives remove SimplEnergy_Data2
-scoreboard objectives remove SimplEnergy_CraftCount
-scoreboard objectives remove SimplEnergy_MultimeterUse
-scoreboard objectives remove SimplEnergy_HelmetDurability
-scoreboard objectives remove SimplEnergy_ChestplateDurability
-scoreboard objectives remove SimplEnergy_LeggingsDurability
-scoreboard objectives remove SimplEnergy_BootsDurability
+
+scoreboard objectives remove simplenergy.data
+scoreboard objectives remove simplenergy.data_2
+scoreboard objectives remove simplenergy.craft_count
+scoreboard objectives remove simplenergy.multimeter_use
+scoreboard objectives remove simplenergy.head
+scoreboard objectives remove simplenergy.chest
+scoreboard objectives remove simplenergy.legs
+scoreboard objectives remove simplenergy.boots
 
 data remove storage simplenergy:items all
 
-tp @e[tag=SimplEnergy_Destroyer] 0 -1000 0
-kill @e[tag=SimplEnergy_Destroyer]
+tp @e[tag=simplenergy.destroyer] 0 -1000 0
+kill @e[tag=simplenergy.destroyer]
 
-clear @a #simplenergy:items{SimplEnergy_CustomItem:1b}
+clear @a #simplenergy:items{simplenergy:{custom_item:1b}}
 
-datapack disable "file/SimplEnergy [v1.6.0]"
-datapack disable "file/SimplEnergy [v1.6.0].zip"
+datapack disable "file/SimplEnergy [v1.8.0]"
+datapack disable "file/SimplEnergy [v1.8.0].zip"
 datapack disable "file/SimplEnergy"
 datapack disable "file/SimplEnergy.zip"

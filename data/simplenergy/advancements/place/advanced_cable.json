@@ -5,7 +5,7 @@
 			"conditions": {
 				"item": {
 					"items": ["minecraft:player_head"],
-					"nbt": "{SimplEnergy_AdvancedCable:1b}"
+					"nbt": "{simplenergy:{advanced_cable:1b}}"
 				}
 			}
 		}

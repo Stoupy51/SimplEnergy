@@ -1,5 +1,5 @@
 
-tag @s add SimplEnergy_Placer
+tag @s add simplenergy.placer
 
 execute if data storage smd:core blockApi{id:"simplenergy:simplunium_ore"} run function simplenergy:place/simplunium_ore/main
 execute if data storage smd:core blockApi{id:"simplenergy:simplunium_block"} run function simplenergy:place/simplunium_block/main
@@ -17,4 +17,4 @@ execute if data storage smd:core blockApi{id:"simplenergy:electric_smelter"} run
 execute if data storage smd:core blockApi{id:"simplenergy:electric_brewing_stand"} run function simplenergy:place/electric_brewing_stand/main
 execute if data storage smd:core blockApi{id:"simplenergy:electric_lamp"} run function simplenergy:place/electric_lamp/main
 
-tag @s remove SimplEnergy_Placer
+tag @s remove simplenergy.placer

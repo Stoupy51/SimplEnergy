@@ -22,7 +22,7 @@
 				"items": [
 					{
 						"items": ["minecraft:warped_fungus_on_a_stick"],
-						"nbt": "{SimplEnergy_Multimeter:1b}"
+						"nbt": "{simplenergy:{multimeter:1b}}"
 					}
 				]
 			}
