@@ -7,15 +7,15 @@
 	summon area_effect_cloud ~ ~ ~ {Tags:["simplenergy.temp"],Duration:0}
 	execute as @e[type=area_effect_cloud,tag=simplenergy.temp,limit=1] run function simplenergy:generate/utils/fill_storage
 	
-	execute store result score x.random simplenergy.data run data get storage simplenergy:items all.Temp[0]
-	execute store result score z.random simplenergy.data run data get storage simplenergy:items all.Temp[2]
+	execute store result score x.random simplenergy.data run data get storage simplenergy:items temp[0]
+	execute store result score z.random simplenergy.data run data get storage simplenergy:items temp[2]
 	scoreboard players operation x simplenergy.data = x.random simplenergy.data
 	scoreboard players operation z simplenergy.data = z.random simplenergy.data
-	execute store result score y simplenergy.data run data get storage simplenergy:items all.Temp[1]
+	execute store result score y simplenergy.data run data get storage simplenergy:items temp[1]
 
-	data modify storage simplenergy:items all.Temp set from entity @s Pos
-	execute store result score PosX simplenergy.data run data get storage simplenergy:items all.Temp[0] 10
-	execute store result score PosZ simplenergy.data run data get storage simplenergy:items all.Temp[2] 10
+	data modify storage simplenergy:items temp set from entity @s Pos
+	execute store result score PosX simplenergy.data run data get storage simplenergy:items temp[0] 10
+	execute store result score PosZ simplenergy.data run data get storage simplenergy:items temp[2] 10
 
 #Edit X & Z Pos : they can take a value between -#xzVariation & +#xzVariation
 #Examples for #xzVariation = 400 : -37.4, 14.3, 0.1, ...
@@ -36,7 +36,7 @@
 	scoreboard players operation PosY simplenergy.data += y simplenergy.data
 
 #Update Position
-	execute store result storage simplenergy:items all.Temp[0] double 0.1 run scoreboard players get PosX simplenergy.data
-	execute store result storage simplenergy:items all.Temp[1] double 0.1 run scoreboard players get PosY simplenergy.data
-	execute store result storage simplenergy:items all.Temp[2] double 0.1 run scoreboard players get PosZ simplenergy.data
-	data modify entity @s Pos set from storage simplenergy:items all.Temp
+	execute store result storage simplenergy:items temp[0] double 0.1 run scoreboard players get PosX simplenergy.data
+	execute store result storage simplenergy:items temp[1] double 0.1 run scoreboard players get PosY simplenergy.data
+	execute store result storage simplenergy:items temp[2] double 0.1 run scoreboard players get PosZ simplenergy.data
+	data modify entity @s Pos set from storage simplenergy:items temp

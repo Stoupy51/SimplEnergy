@@ -1,7 +1,7 @@
 #Store CookTime & BurnTime into a score to change the value
-	data modify storage simplenergy:items all.Temp set from block ~ ~ ~
-	execute store result score CookTime simplenergy.data run data get storage simplenergy:items all.Temp.CookTime
-	execute store result score BurnTime simplenergy.data run data get storage simplenergy:items all.Temp.BurnTime
+	data modify storage simplenergy:items temp set from block ~ ~ ~
+	execute store result score CookTime simplenergy.data run data get storage simplenergy:items temp.CookTime
+	execute store result score BurnTime simplenergy.data run data get storage simplenergy:items temp.BurnTime
 
 #Change CookTime value and use Energy & playsound on work
 	execute if score CookTime simplenergy.data matches 1.. run scoreboard players remove @s energy.storage 4

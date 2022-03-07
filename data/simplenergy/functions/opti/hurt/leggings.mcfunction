@@ -1,7 +1,7 @@
 
 #Storing difference between old and new Durability in a score
-	scoreboard players operation Temp simplenergy.data = Leggings simplenergy.data
-	scoreboard players operation Temp simplenergy.data -= @s simplenergy.legs
+	scoreboard players operation temp simplenergy.data = Leggings simplenergy.data
+	scoreboard players operation temp simplenergy.data -= @s simplenergy.legs
 
 #Select random number between 0 and DurabilityMultiplier
 	summon area_effect_cloud ~ ~ ~ {Tags:["simplenergy.temp"]}
@@ -10,4 +10,4 @@
 #Applying durability modifier
 	function simplenergy:opti/hurt/durability_modifier
 	item replace entity @s armor.legs from entity @s armor.legs simplenergy:hurt_leggings
-	execute if score Random simplenergy.data matches 0 run scoreboard players operation @s simplenergy.legs += Temp simplenergy.data
+	execute if score Random simplenergy.data matches 0 run scoreboard players operation @s simplenergy.legs += temp simplenergy.data

@@ -8,6 +8,6 @@
 		}
 	},
 	"rewards": {
-		"function": "simplenergy:place/all_furnace/furnace"
+		"function": "simplenergy:furnace/furnace"
 	}
 }
