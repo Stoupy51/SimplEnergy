@@ -1,5 +1,5 @@
 #Get and Search machines with same Energy Storage from SimplEnergy
-	scoreboard players operation Temp simplenergy.data = @s energy.max_storage
+	scoreboard players operation temp simplenergy.data = @s energy.max_storage
 	tag @s add simplenergy.balance
 	tag @s add simplenergy.balanced
 	execute if entity @e[type=glow_item_frame,tag=!simplenergy.balance,tag=!simplenergy.balanced,tag=simplenergy.destroyer,distance=..1.1] run function simplenergy:balance/balance

@@ -8,6 +8,8 @@ scoreboard objectives remove simplenergy.chest
 scoreboard objectives remove simplenergy.legs
 scoreboard objectives remove simplenergy.boots
 
+data remove storage simplenergy:items furnace
+data remove storage simplenergy:items temp
 data remove storage simplenergy:items all
 
 tp @e[tag=simplenergy.destroyer] 0 -1000 0

@@ -8,6 +8,6 @@
 		}
 	},
 	"rewards": {
-		"function": "simplenergy:place/all_furnace/blast_furnace"
+		"function": "simplenergy:furnace/blast_furnace"
 	}
 }

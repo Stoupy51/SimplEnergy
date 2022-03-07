@@ -1,7 +1,7 @@
 #Store Fuel & BrewTime into a score to change the value
-	data modify storage simplenergy:items all.Temp set from block ~ ~ ~
-	execute store result score BrewTime simplenergy.data run data get storage simplenergy:items all.Temp.BrewTime
-	execute store result score BurnTime simplenergy.data run data get storage simplenergy:items all.Temp.Fuel
+	data modify storage simplenergy:items temp set from block ~ ~ ~
+	execute store result score BrewTime simplenergy.data run data get storage simplenergy:items temp.BrewTime
+	execute store result score BurnTime simplenergy.data run data get storage simplenergy:items temp.Fuel
 
 #Change BrewTime value and use Energy & playsound on work
 	execute if score BrewTime simplenergy.data matches 4.. run scoreboard players remove @s energy.storage 1
