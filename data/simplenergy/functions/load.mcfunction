@@ -2,7 +2,6 @@
 scoreboard objectives add load.status dummy
 scoreboard objectives add simplenergy.data dummy
 scoreboard objectives add simplenergy.data_2 dummy
-scoreboard objectives add simplenergy.craft_count dummy
 scoreboard objectives add simplenergy.multimeter_use minecraft.used:minecraft.warped_fungus_on_a_stick
 scoreboard objectives add simplenergy.head dummy
 scoreboard objectives add simplenergy.chest dummy
@@ -39,13 +38,13 @@ schedule function simplenergy:world_bottom_start 2s
 
 #Resources
 	#Simplunium Ore
-		data modify storage simplenergy:items all.2012899 set value {Slot:16b,id:"minecraft:barrel"						,Count:1b,tag:{ctc:{id:"simplunium_ore",from:"stoupy:simplenergy",traits:{"metal/simplunium":1b,"block":1b,"ore":1b,"cookable":1b}}	,CustomModelData:2012899,simplenergy:{simplunium_ore:1b}				,display:{Lore:['{"translate":"SimplEnergy","color":"blue","italic":true}'],Name:'[{"text":"Simplunium Ore","italic":false,"color":"white"}]'}		,BlockEntityTag:{Items:[{id:"minecraft:stone",Count:1b,Slot:0b,tag:{smithed:{block:{id:"simplenergy:simplunium_ore"}}}}]}}}
+		data modify storage simplenergy:items all.2012899 set value {Slot:16b,id:"minecraft:barrel"						,Count:1b,tag:{ctc:{id:"simplunium_ore",from:"stoupy:simplenergy",traits:{"metal/simplunium":1b,"block":1b,"ore":1b,"cookable":1b}}	,CustomModelData:2012899,simplenergy:{simplunium_ore:1b}	,display:{Lore:['{"translate":"SimplEnergy","color":"blue","italic":true}'],Name:'[{"text":"Simplunium Ore","italic":false,"color":"white"}]'}		,BlockEntityTag:{Items:[{id:"minecraft:stone",Count:1b,Slot:0b,tag:{smithed:{block:{id:"simplenergy:simplunium_ore"}}}}]}}}
 	#Simplunium Ingot
-		data modify storage simplenergy:items all.2012898 set value {Slot:16b,id:"minecraft:command_block"				,Count:1b,tag:{ctc:{id:"simplunium_ingot",from:"stoupy:simplenergy",traits:{"metal/simplunium":1b,"ingot":1b}}						,CustomModelData:2012898,simplenergy:{simplunium_ingot:1b}				,display:{Lore:['{"translate":"SimplEnergy","color":"blue","italic":true}'],Name:'[{"text":"Simplunium Ingot","italic":false,"color":"white"}]'}}}
+		data modify storage simplenergy:items all.2012898 set value {Slot:16b,id:"minecraft:command_block"				,Count:1b,tag:{ctc:{id:"simplunium_ingot",from:"stoupy:simplenergy",traits:{"metal/simplunium":1b,"ingot":1b}}						,CustomModelData:2012898,simplenergy:{simplunium_ingot:1b}	,display:{Lore:['{"translate":"SimplEnergy","color":"blue","italic":true}'],Name:'[{"text":"Simplunium Ingot","italic":false,"color":"white"}]'}}}
 	#Simplunium Block
-		data modify storage simplenergy:items all.2012897 set value {Slot:16b,id:"minecraft:barrel"						,Count:1b,tag:{ctc:{id:"simplunium_block",from:"stoupy:simplenergy",traits:{"metal/simplunium":1b,"block":1b}}						,CustomModelData:2012897,simplenergy:{simplunium_block:1b}				,display:{Lore:['{"translate":"SimplEnergy","color":"blue","italic":true}'],Name:'[{"text":"Simplunium Block","italic":false,"color":"white"}]'}	,BlockEntityTag:{Items:[{id:"minecraft:stone",Count:1b,Slot:0b,tag:{smithed:{block:{id:"simplenergy:simplunium_block"}}}}]}}}
+		data modify storage simplenergy:items all.2012897 set value {Slot:16b,id:"minecraft:barrel"						,Count:1b,tag:{ctc:{id:"simplunium_block",from:"stoupy:simplenergy",traits:{"metal/simplunium":1b,"block":1b}}						,CustomModelData:2012897,simplenergy:{simplunium_block:1b}	,display:{Lore:['{"translate":"SimplEnergy","color":"blue","italic":true}'],Name:'[{"text":"Simplunium Block","italic":false,"color":"white"}]'}	,BlockEntityTag:{Items:[{id:"minecraft:stone",Count:1b,Slot:0b,tag:{smithed:{block:{id:"simplenergy:simplunium_block"}}}}]}}}
 	#Raw Simplunium
-		data modify storage simplenergy:items all.2012896 set value {Slot:16b,id:"minecraft:command_block"				,Count:1b,tag:{ctc:{id:"raw_simplunium",from:"stoupy:simplenergy",traits:{"metal/simplunium":1b,"ore":1b,"cookable":1b}}			,CustomModelData:2012896,simplenergy:{raw_simplunium:1b}				,display:{Lore:['{"translate":"SimplEnergy","color":"blue","italic":true}'],Name:'[{"text":"Raw Simplunium","italic":false,"color":"white"}]'}}}
+		data modify storage simplenergy:items all.2012896 set value {Slot:16b,id:"minecraft:command_block"				,Count:1b,tag:{ctc:{id:"raw_simplunium",from:"stoupy:simplenergy",traits:{"metal/simplunium":1b,"ore":1b,"cookable":1b}}			,CustomModelData:2012896,simplenergy:{raw_simplunium:1b}	,display:{Lore:['{"translate":"SimplEnergy","color":"blue","italic":true}'],Name:'[{"text":"Raw Simplunium","italic":false,"color":"white"}]'}}}
 
 #Tools/Equipments
 	#Multimeter
