@@ -5,5 +5,5 @@
 	execute if score Second simplenergy.data matches 20.. run function simplenergy:tick_second
 
 #Others
-	execute as @e[type=glow_item_frame,tag=simplenergy.destroyer] at @s run function simplenergy:opti/tick_glows
+	execute as @e[type=glow_item_frame,tag=simplenergy.tick_glows] at @s run function simplenergy:opti/tick_glows
 	execute as @e[type=marker,tag=simplenergy.furnace] at @s run function simplenergy:furnace/tick
