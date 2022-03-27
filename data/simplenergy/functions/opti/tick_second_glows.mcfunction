@@ -8,4 +8,5 @@
 	execute if entity @s[tag=simplenergy.electric_smelter] run function simplenergy:visual/electric_smelter
 	execute if entity @s[tag=simplenergy.electric_brewing_stand] run function simplenergy:visual/electric_brewing_stand
 
-tag @s remove simplenergy.balanced
+#Balancing
+	execute if entity @s[tag=simplenergy.balancing,tag=!simplenergy.balance,tag=!simplenergy.balanced] run function simplenergy:balance/all
