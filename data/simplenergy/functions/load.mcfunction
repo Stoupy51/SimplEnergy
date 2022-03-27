@@ -9,27 +9,27 @@ scoreboard objectives add simplenergy.legs dummy
 scoreboard objectives add simplenergy.boots dummy
 
 scoreboard players set SimplEnergy load.status 1080
-scoreboard players set Second simplenergy.data 0
+scoreboard players set #second simplenergy.data 0
 
-scoreboard players set 400 simplenergy.data 400
-scoreboard players set 260 simplenergy.data 260
-scoreboard players set 100 simplenergy.data 100
-scoreboard players set 80 simplenergy.data 80
-scoreboard players set 64 simplenergy.data 64
-scoreboard players set 10 simplenergy.data 10
-scoreboard players set 5 simplenergy.data 5
-scoreboard players set 4 simplenergy.data 4
-scoreboard players set 2 simplenergy.data 2
+scoreboard players set #400 simplenergy.data 400
+scoreboard players set #260 simplenergy.data 260
+scoreboard players set #100 simplenergy.data 100
+scoreboard players set #80 simplenergy.data 80
+scoreboard players set #64 simplenergy.data 64
+scoreboard players set #10 simplenergy.data 10
+scoreboard players set #5 simplenergy.data 5
+scoreboard players set #4 simplenergy.data 4
+scoreboard players set #2 simplenergy.data 2
 
-scoreboard players set -10 simplenergy.data -10
-scoreboard players set -1 simplenergy.data -1
+scoreboard players set #-10 simplenergy.data -10
+scoreboard players set #-1 simplenergy.data -1
 
 tag Stoupy51 add convention.debug
 
 forceload add 0 0
 # Check region
-execute unless score ForceLoaded simplenergy.data matches 1 run summon marker 0 -64 0 {Tags:["simplenergy.forceload","global.forceload"]}
-scoreboard players set ForceLoaded simplenergy.data 1
+execute unless score #force_loaded simplenergy.data matches 1 run summon marker 0 -64 0 {Tags:["simplenergy.forceload","global.forceload"]}
+scoreboard players set #force_loaded simplenergy.data 1
 
 schedule function simplenergy:world_bottom_start 2s
 #define storage simplenergy:items

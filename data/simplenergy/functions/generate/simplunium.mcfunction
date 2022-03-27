@@ -1,7 +1,7 @@
 
 function simplenergy:generate/utils/random_position
 
-scoreboard players set #maxTry simplenergy.data 50
+scoreboard players set #max_attempts simplenergy.data 50
 execute at @s run function simplenergy:generate/utils/find_adjacent_air
 
 #Placing Ore
