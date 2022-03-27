@@ -4,9 +4,9 @@
 	execute if entity @s[tag=simplenergy.solar_panel] unless block ~ ~ ~ minecraft:daylight_detector run function simplenergy:destroy/solar_panel
 
 #Cables
-	execute if entity @s[tag=simplenergy.simple_cable,predicate=!simplenergy:check_player_head] run function simplenergy:destroy/simple_cable
-	execute if entity @s[tag=simplenergy.advanced_cable,predicate=!simplenergy:check_player_head] run function simplenergy:destroy/advanced_cable
-	execute if entity @s[tag=simplenergy.elite_cable,predicate=!simplenergy:check_player_head] run function simplenergy:destroy/elite_cable
+	execute if entity @s[tag=simplenergy.simple_cable] unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/simple_cable
+	execute if entity @s[tag=simplenergy.advanced_cable] unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/advanced_cable
+	execute if entity @s[tag=simplenergy.elite_cable] unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/elite_cable
 
 #Batteries
 	execute if entity @s[tag=simplenergy.simple_battery] unless block ~ ~ ~ minecraft:cobbled_deepslate run function simplenergy:destroy/simple_battery
@@ -21,6 +21,4 @@
 
 #Others
 	execute if entity @s[tag=simplenergy.simplunium_block] unless block ~ ~ ~ minecraft:iron_block run function simplenergy:destroy/simplunium_block
-	execute if entity @s[tag=simplenergy.simplunium_ore,predicate=!simplenergy:check_deepslate_coal_ore] run function simplenergy:destroy/simplunium_ore
-
-kill @s[tag=SimplEnergy_SimpleCraftingTable]
+	execute if entity @s[tag=simplenergy.simplunium_ore] unless block ~ ~ ~ minecraft:deepslate_coal_ore run function simplenergy:destroy/simplunium_ore

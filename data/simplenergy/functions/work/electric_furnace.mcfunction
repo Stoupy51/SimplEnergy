@@ -8,12 +8,13 @@
 	execute if score CookTime simplenergy.data matches 1.. run scoreboard players add CookTime simplenergy.data 10
 	execute if score CookTime simplenergy.data matches 1.. run playsound simplenergy:electric_furnace block @a[distance=..10] ~ ~ ~ 0.25
 	execute if score CookTime simplenergy.data matches 200.. run scoreboard players set CookTime simplenergy.data 199
-	execute store result block ~ ~ ~ CookTime short 1 run scoreboard players get CookTime simplenergy.data
+	execute if score CookTime simplenergy.data matches 1.. store result block ~ ~ ~ CookTime short 1 run scoreboard players get CookTime simplenergy.data
 
 #Change BurnTime value and use Energy
+	scoreboard players operation OldBurnTime simplenergy.data = BurnTime simplenergy.data
 	scoreboard players add BurnTime simplenergy.data 21
 	execute if score BurnTime simplenergy.data matches 221.. run scoreboard players set BurnTime simplenergy.data 220
-	execute store result block ~ ~ ~ BurnTime short 1 run scoreboard players get BurnTime simplenergy.data
+	execute if score OldBurnTime simplenergy.data matches ..200 store result block ~ ~ ~ BurnTime short 1 run scoreboard players get BurnTime simplenergy.data
 
 #Change gui texture
-	data modify block ~ ~ ~ Items insert 0 value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011998,simplenergy:{texture_item:1b},display:{Name:'[{"text":""}]'}}}
+	execute unless data storage simplenergy:items temp.Items[{Slot:1b}] run data modify block ~ ~ ~ Items insert 0 value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011998,simplenergy:{texture_item:1b},display:{Name:'[{"text":""}]'}}}
