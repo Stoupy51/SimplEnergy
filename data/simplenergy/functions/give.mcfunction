@@ -17,6 +17,7 @@ loot give @s loot simplenergy:i/raw_simplunium
 loot give @s loot simplenergy:i/simple_battery
 loot give @s loot simplenergy:i/simple_cable
 loot give @s loot simplenergy:i/simplenergy_manual
+loot give @s loot simplenergy:i/simplunium_axe
 loot give @s loot simplenergy:i/simplunium_block
 loot give @s loot simplenergy:i/simplunium_boots
 loot give @s loot simplenergy:i/simplunium_chestplate
