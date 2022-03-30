@@ -15,7 +15,7 @@ data remove storage simplenergy:items all
 tp @e[tag=simplenergy.destroyer] 0 -1000 0
 kill @e[tag=simplenergy.destroyer]
 
-clear @a #simplenergy:items{simplenergy:{custom_item:1b}}
+clear @a #simplenergy:items{simplenergy:{}}
 
 datapack disable "file/SimplEnergy [v1.8.0]"
 datapack disable "file/SimplEnergy [v1.8.0].zip"
