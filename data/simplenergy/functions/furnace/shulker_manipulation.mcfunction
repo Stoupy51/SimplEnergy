@@ -11,7 +11,6 @@ execute if score #valid simplenergy.data matches 0 store result storage simplene
 
 execute store result storage simplenergy:items furnace.Items[{Slot:0b}].Count byte -0.999 run data get storage simplenergy:items furnace.Items[{Slot:0b}].Count -1
 data modify block ~ ~ ~ CookTime set value 0s
-clone -29999999 0 2013 -29999999 0 2013 20 72 45
 
 #for cook experience
 execute store result score #recipe simplenergy.data run data get storage simplenergy:items furnace.RecipesUsed."simplenergy:cb_cb"
