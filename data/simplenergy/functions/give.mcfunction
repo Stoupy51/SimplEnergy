@@ -8,8 +8,8 @@ loot give @s loot simplenergy:i/electric_brewing_stand
 loot give @s loot simplenergy:i/electric_furnace
 loot give @s loot simplenergy:i/electric_lamp
 loot give @s loot simplenergy:i/electric_smelter
-loot give @s loot simplenergy:i/elite_battery_creative
 loot give @s loot simplenergy:i/elite_battery
+loot give @s loot simplenergy:i/elite_battery_creative
 loot give @s loot simplenergy:i/elite_cable
 loot give @s loot simplenergy:i/furnace_generator
 loot give @s loot simplenergy:i/multimeter
