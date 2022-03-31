@@ -1,3 +1,4 @@
+
 #Timer
 	scoreboard players add #second simplenergy.data 1
 	scoreboard players add #tick_2 simplenergy.data 1
