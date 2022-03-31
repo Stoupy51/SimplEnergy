@@ -1,3 +1,4 @@
+
 #Others
 	scoreboard players set #second simplenergy.data 0
 	execute store result score #day_time simplenergy.data run time query daytime

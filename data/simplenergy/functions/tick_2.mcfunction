@@ -1,3 +1,4 @@
+
 scoreboard players set #tick_2 simplenergy.data 0
 #Destroy
 	execute as @e[type=#energy:valid_block_entities,tag=simplenergy.destroyer] at @s run function simplenergy:destroy/all
