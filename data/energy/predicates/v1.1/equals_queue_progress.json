@@ -24,7 +24,7 @@
 					"type": "minecraft:fixed",
 					"name": "#progress"
 				},
-				"score": "energy.update_queue"
+				"score": "energy.data"
 			},
 			"max": {
 				"type": "minecraft:score",
@@ -32,7 +32,7 @@
 					"type": "minecraft:fixed",
 					"name": "#progress"
 				},
-				"score": "energy.update_queue"
+				"score": "energy.data"
 			}
 		}
 	}

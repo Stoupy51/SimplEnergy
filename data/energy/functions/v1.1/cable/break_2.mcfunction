@@ -32,4 +32,4 @@ execute as @e[type=#energy:valid_block_entities,tag=!energy.cable,predicate=ener
 
 #setup network transfer capacity
 scoreboard players reset * energy.transfer_capacity
-execute as @e[type=#energy:valid_block_entities,tag=energy.cable] at @s run function energy:v1.1/energy/setup_cables
+execute as @e[type=#energy:valid_block_entities,tag=energy.cable] at @s run function energy:v1.1/cable/setup_cable_network

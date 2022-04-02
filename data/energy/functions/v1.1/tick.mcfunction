@@ -1,11 +1,7 @@
 
-#trigger update for queue system
-scoreboard players reset * energy.update_queue
-scoreboard players set #progress energy.update_queue 0
-execute as @e[type=#energy:valid_block_entities,scores={energy.storage=0..}] run function energy:v1.1/energy/update
-execute as @e[type=#energy:valid_block_entities,tag=energy.processed] at @s run function energy:v1.1/energy/remove_tags
-function energy:v1.1/energy/queue/tick
+schedule function energy:v1.1/tick 1t replace
 
+scoreboard players add #progress energy.data 1
+execute if score #progress energy.data matches 20.. run function energy:v1.1/energy/setup_queue
 
-
-schedule function energy:v1.1/tick 20t replace
+execute as @e[type=#energy:valid_block_entities,tag=energy.send,predicate=energy:v1.1/equals_queue_progress] at @s run function energy:v1.1/energy/process_networks
