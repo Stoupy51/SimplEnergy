@@ -1,6 +1,5 @@
 
 scoreboard objectives add energy.data dummy
-scoreboard objectives add energy.usage_rate dummy
 scoreboard objectives add energy.change_rate dummy
 
 scoreboard objectives add energy.storage dummy
