@@ -4,7 +4,7 @@
 		"type": "minecraft:score",
 		"target": {
 			"type": "minecraft:fixed",
-			"name": "temp"
+			"name": "#temp"
 		},
 		"score": "simplenergy.data",
 		"scale": 0.0133

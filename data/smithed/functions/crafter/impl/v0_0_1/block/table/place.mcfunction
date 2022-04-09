@@ -1,2 +1,0 @@
-setblock ~ ~ ~ barrel[facing=up]{CustomName:'{"translate":"block.smithed.crafter.gui","font":"smithed:crafter/gui","color":"white","with":[{"translate":"block.smithed.crafter","color":"#3F3F3F","font":"minecraft:default"}]}'}
-summon armor_stand ~ ~-0.5 ~ {Tags:["smd.crafter","smd.default","smd.armor_stand"],Invisible:1b,Marker:1b,NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:furnace",Count:1b,tag:{CustomModelData:4250001}}]}

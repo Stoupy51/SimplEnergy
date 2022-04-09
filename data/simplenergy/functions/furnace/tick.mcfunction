@@ -12,7 +12,7 @@
 
 #Disable cooking if not permitted
 	scoreboard players set #reset simplenergy.data 0
-	execute unless data storage simplenergy:items furnace.input_ctc.traits."cookable" run function #simplenergy:disable_cooking
+	execute if score #found simplenergy.data matches 0 run function #simplenergy:disable_cooking
 	execute if score #reset simplenergy.data matches 0 store result score #reset simplenergy.data unless score #output_cmd simplenergy.data matches 0 unless score #output_cmd simplenergy.data = #excepted_cmd simplenergy.data
 	execute if score #reset simplenergy.data matches 1 run data modify block ~ ~ ~ CookTime set value 0s
 
