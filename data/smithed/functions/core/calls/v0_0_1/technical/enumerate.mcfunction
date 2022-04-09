@@ -1,3 +1,0 @@
-execute unless score #smd.core.major load.status matches 0.. run scoreboard players set #smd.core.major load.status 0
-execute if score #smd.core.major load.status matches 0 unless score #smd.core.minor load.status matches 0.. run scoreboard players set #smd.core.minor load.status 0
-execute if score #smd.core.major load.status matches 0 if score #smd.core.minor load.status matches 0 unless score #smd.core.patch load.status matches 1.. run scoreboard players set #smd.core.patch load.status 1

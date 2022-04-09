@@ -1,1 +1,0 @@
-execute if entity @s[tag=smd.inside_crafter] unless entity @e[tag=smd.crafter,distance=..6,type=armor_stand] run tag @s remove smd.inside_crafter

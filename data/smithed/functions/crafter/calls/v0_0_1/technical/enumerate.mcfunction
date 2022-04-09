@@ -1,3 +1,0 @@
-execute unless score #smd.crafter.major load.status matches 0.. run scoreboard players set #smd.crafter.major load.status 0
-execute if score #smd.crafter.major load.status matches 0 unless score #smd.crafter.minor load.status matches 0.. run scoreboard players set #smd.crafter.minor load.status 0
-execute if score #smd.crafter.major load.status matches 0 if score #smd.crafter.minor load.status matches 0 unless score #smd.crafter.patch load.status matches 1.. run scoreboard players set #smd.crafter.patch load.status 1

@@ -1,1 +1,0 @@
-function #smithed:crafter/pub/block/table/craft
