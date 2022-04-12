@@ -1,5 +1,5 @@
 
-loot give @s loot smithed:crafter/blocks/table
+loot give @s loot smithed.crafter:blocks/table
 
 loot give @s loot simplenergy:i/advanced_battery
 loot give @s loot simplenergy:i/advanced_cable
