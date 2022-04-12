@@ -6,7 +6,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:barrel",
+					"name": "minecraft:soul_campfire",
 					"functions": [
 						{
 							"function": "minecraft:copy_nbt",

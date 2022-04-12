@@ -22,7 +22,9 @@
 			"conditions": {
 				"items": [
 					{
-						"items": ["minecraft:command_block"],
+						"items": [
+							"minecraft:command_block"
+						],
 						"nbt": "{simplenergy:{simplunium_ingot:1b}}"
 					}
 				]
