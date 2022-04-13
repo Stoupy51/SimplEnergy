@@ -5,4 +5,4 @@
 	execute if score #furnace_type simplenergy.data matches 1 if score #cook_time simplenergy.data matches 90.. if score #found simplenergy.data matches 1 run function simplenergy:furnace/shulker_manipulation
 
 #Apply new storage values
-	data modify block ~ ~ ~ Items set from storage simplenergy:items furnace.Items
+	data modify block ~ ~ ~ Items set from storage simplenergy:main furnace.Items

@@ -1,3 +1,3 @@
 
-data modify storage simplenergy:items temp set from entity @s UUID
+data modify storage simplenergy:main temp set from entity @s UUID
 kill @s
