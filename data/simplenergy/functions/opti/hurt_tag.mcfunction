@@ -4,13 +4,13 @@
 
 #Revoke advancement & Storing player inventory
 	advancement revoke @s only simplenergy:hurt
-	data modify storage simplenergy:items temp set from entity @s Inventory
+	data modify storage simplenergy:main temp set from entity @s Inventory
 
 #Checking Durability Change
-	execute store result score #helmet simplenergy.data run data get storage simplenergy:items temp[{Slot:103b}].tag.Damage
-	execute store result score #chestplate simplenergy.data run data get storage simplenergy:items temp[{Slot:102b}].tag.Damage
-	execute store result score #leggings simplenergy.data run data get storage simplenergy:items temp[{Slot:101b}].tag.Damage
-	execute store result score #boots simplenergy.data run data get storage simplenergy:items temp[{Slot:100b}].tag.Damage
+	execute store result score #helmet simplenergy.data run data get storage simplenergy:main temp[{Slot:103b}].tag.Damage
+	execute store result score #chestplate simplenergy.data run data get storage simplenergy:main temp[{Slot:102b}].tag.Damage
+	execute store result score #leggings simplenergy.data run data get storage simplenergy:main temp[{Slot:101b}].tag.Damage
+	execute store result score #boots simplenergy.data run data get storage simplenergy:main temp[{Slot:100b}].tag.Damage
 
 #Send Hurt Signal
 	function #simplenergy:hurt
