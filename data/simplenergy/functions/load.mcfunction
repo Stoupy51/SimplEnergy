@@ -11,6 +11,11 @@ scoreboard objectives add simplenergy.boots dummy
 scoreboard players set SimplEnergy load.status 1080
 scoreboard players set #second simplenergy.data 0
 
+scoreboard players set #1000000000 simplenergy.data 1000000000
+scoreboard players set #10000000 simplenergy.data 10000000
+scoreboard players set #1000000 simplenergy.data 1000000
+scoreboard players set #10000 simplenergy.data 10000
+scoreboard players set #1000 simplenergy.data 1000
 scoreboard players set #400 simplenergy.data 400
 scoreboard players set #260 simplenergy.data 260
 scoreboard players set #100 simplenergy.data 100
@@ -32,6 +37,8 @@ execute unless score #force_loaded simplenergy.data matches 1 run summon marker 
 scoreboard players set #force_loaded simplenergy.data 1
 
 schedule function simplenergy:world_bottom_start 2s
+
+#define storage energy:temp
 #define storage simplenergy:main
 #define storage smithed.crafter:main
 #define storage smithed.custom_block:main

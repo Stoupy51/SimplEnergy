@@ -1,0 +1,16 @@
+[
+	{
+		"function": "minecraft:set_lore",
+		"entity": "this",
+		"lore": [
+			[
+				{"text":"[Charge: ","color":"gray","italic": false},
+				{"score":{"name":"#part_1","objective":"simplenergy.data"}},
+				{"text":"."},
+				{"score":{"name":"#part_2","objective":"simplenergy.data"}},
+				{"nbt":"scale","storage":"simplenergy:main"}
+			]
+		],
+		"replace": true
+	}
+]
