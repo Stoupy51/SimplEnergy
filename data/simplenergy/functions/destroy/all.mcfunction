@@ -1,3 +1,4 @@
+
 #Generators
 	execute if entity @s[tag=simplenergy.cauldron_generator] unless block ~ ~ ~ #minecraft:cauldrons run function simplenergy:destroy/cauldron_generator
 	execute if entity @s[tag=simplenergy.furnace_generator] unless block ~ ~ ~ minecraft:furnace run function simplenergy:destroy/furnace_generator
