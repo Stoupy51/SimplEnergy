@@ -1,4 +1,5 @@
-execute if score @s energy.storage matches 10.. run function simplenergy:work/electric_furnace
+
+execute if score @s energy.storage matches 10.. if data block ~ ~ ~ Items[{Slot:0b}] run function simplenergy:work/electric_furnace
 #Update gui depends on CookTime
 	execute store result score #cook_time simplenergy.data run data get block ~ ~ ~ CookTime
 	execute if score @s energy.storage matches ..0 run data modify block ~ ~ ~ Items[{Slot:1b}] set value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011998,simplenergy:{texture_item:1b},display:{Name:'[{"text":""}]'}}}
