@@ -30,6 +30,7 @@ scoreboard players set #-10 simplenergy.data -10
 scoreboard players set #-1 simplenergy.data -1
 
 tag Stoupy51 add convention.debug
+gamerule maxCommandChainLength 2147483647
 
 forceload add 0 0
 # Check region
