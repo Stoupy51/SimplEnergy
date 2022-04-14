@@ -1,3 +1,4 @@
+
 #Check if there is no block above
 	scoreboard players set #count simplenergy.data 1
 	scoreboard players set #temp simplenergy.data 1
