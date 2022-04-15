@@ -8,7 +8,7 @@
 	execute positioned ~ ~3 ~ run function simplenergy:furnace/look_layer
 	execute positioned ~ ~2 ~ run function simplenergy:furnace/look_layer
 	execute positioned ~ ~1 ~ run function simplenergy:furnace/look_layer
-	execute run function simplenergy:furnace/look_layer
+	function simplenergy:furnace/look_layer
 	execute positioned ~ ~-1 ~ run function simplenergy:furnace/look_layer
 	execute positioned ~ ~-2 ~ run function simplenergy:furnace/look_layer
 	execute positioned ~ ~-3 ~ run function simplenergy:furnace/look_layer
