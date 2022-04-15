@@ -1,37 +1,20 @@
 {
 	"display": {
-		"title": {
-			"text": "Measuring Energy"
-		},
-		"description": {
-			"text": "Obtain a Multimeter"
-		},
-		"icon": {
-			"item": "minecraft:warped_fungus_on_a_stick",
-			"nbt": "{CustomModelData:2012900}"
-		},
+		"icon": { "item": "minecraft:warped_fungus_on_a_stick", "nbt": "{CustomModelData:2012900}" },
+		"title": { "text": "Measuring Energy", "color": "gray" },
+		"description": { "text": "Obtain a Multimeter", "color": "green" },
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
-		"hidden": true
+		"hidden": false
 	},
-	"criteria": {
-		"SimplEnergy": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": ["minecraft:warped_fungus_on_a_stick"],
-						"nbt": "{simplenergy:{multimeter:1b}}"
-					}
-				]
-			}
-		}
-	},
-	"requirements": [
-		[
-			"SimplEnergy"
-		]
-	],
-	"parent": "simplenergy:simplunium"
+	"parent": "simplenergy:visible/simplunium_ingot",
+	"criteria": { "all": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "simplenergy:items",
+			"nbt": "{simplenergy:{multimeter:1b}}"
+		}]}
+	}},
+	"requirements": [ [ "all" ] ]
 }

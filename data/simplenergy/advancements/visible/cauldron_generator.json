@@ -1,37 +1,20 @@
 {
 	"display": {
-		"title": {
-			"text": "The Simpler Generator"
-		},
-		"description": {
-			"text": "Craft your first Cauldron Generator"
-		},
-		"icon": {
-			"item": "minecraft:barrel",
-			"nbt": "{CustomModelData:2012000}"
-		},
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012000}" },
+		"title": { "text": "The Simpler Generator", "color": "gray" },
+		"description": { "text": "Craft your first Cauldron Generator", "color": "green" },
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {
-		"SimplEnergy": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": ["minecraft:barrel"],
-						"nbt": "{simplenergy:{cauldron_generator:1b}}"
-					}
-				]
-			}
-		}
-	},
-	"requirements": [
-		[
-			"SimplEnergy"
-		]
-	],
-	"parent": "simplenergy:simplunium"
+	"parent": "simplenergy:visible/simplunium_ingot",
+	"criteria": { "all": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "simplenergy:items",
+			"nbt": "{simplenergy:{cauldron_generator:1b}}"
+		}]}
+	}},
+	"requirements": [ [ "all" ] ]
 }

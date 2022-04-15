@@ -1,0 +1,20 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:command_block", "nbt": "{CustomModelData:2012898}" },
+		"title": { "text": "SimplEnergy", "color": "gray" },
+		"description": { "text": "Obtain a Simplunium Ingot", "color": "green" },
+		"background": "simplenergy:textures/ores/simplunium_block.png",
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": { "all": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "simplenergy:items",
+			"nbt": "{simplenergy:{simplunium_ingot:1b}}"
+		}]}
+	}},
+	"requirements": [ [ "all" ] ]
+}

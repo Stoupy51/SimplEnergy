@@ -1,37 +1,20 @@
 {
 	"display": {
-		"title": {
-			"text": "Faster Brewing"
-		},
-		"description": {
-			"text": "Obtain an Electric Brewing Stand"
-		},
-		"icon": {
-			"item": "minecraft:barrel",
-			"nbt": "{CustomModelData:2012204}"
-		},
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012204}" },
+		"title": { "text": "Faster Brewing", "color": "gray" },
+		"description": { "text": "Obtain an Electric Brewing Stand", "color": "green" },
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {
-		"SimplEnergy": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": ["minecraft:barrel"],
-						"nbt": "{simplenergy:{electric_brewing_stand:1b}}"
-					}
-				]
-			}
-		}
-	},
-	"requirements": [
-		[
-			"SimplEnergy"
-		]
-	],
-	"parent": "simplenergy:visible/electric_lamp"
+	"parent": "simplenergy:visible/electric_lamp",
+	"criteria": { "all": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "simplenergy:items",
+			"nbt": "{simplenergy:{electric_brewing_stand:1b}}"
+		}]}
+	}},
+	"requirements": [ [ "all" ] ]
 }

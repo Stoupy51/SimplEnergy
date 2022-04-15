@@ -1,37 +1,20 @@
 {
 	"display": {
-		"title": {
-			"text": "Use the Sunlight"
-		},
-		"description": {
-			"text": "Get your first Solar Panel"
-		},
-		"icon": {
-			"item": "minecraft:barrel",
-			"nbt": "{CustomModelData:2012003}"
-		},
+		"icon": { "item": "minecraft:soul_campfire", "nbt": "{CustomModelData:2012003}" },
+		"title": { "text": "Use the Sunlight", "color": "gray" },
+		"description": { "text": "Get your first Solar Panel", "color": "green" },
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {
-		"SimplEnergy": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": ["minecraft:barrel"],
-						"nbt": "{simplenergy:{solar_panel:1b}}"
-					}
-				]
-			}
-		}
-	},
-	"requirements": [
-		[
-			"SimplEnergy"
-		]
-	],
-	"parent": "simplenergy:simplunium"
+	"parent": "simplenergy:visible/furnace_generator",
+	"criteria": { "all": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "simplenergy:items",
+			"nbt": "{simplenergy:{solar_panel:1b}}"
+		}]}
+	}},
+	"requirements": [ [ "all" ] ]
 }
