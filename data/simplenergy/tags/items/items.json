@@ -2,6 +2,7 @@
 	"values": [
 		"command_block",
 		"barrel",
+		"soul_campfire",
 		"player_head",
 		"written_book",
 		"warped_fungus_on_a_stick",
@@ -10,9 +11,9 @@
 		"diamond_axe",
 		"diamond_hoe",
 		"diamond_shovel",
-		"diamond_helmet",
-		"diamond_chestplate",
-		"diamond_leggings",
-		"diamond_boots"
+		"leather_helmet",
+		"leather_chestplate",
+		"leather_leggings",
+		"leather_boots"
 	]
 }

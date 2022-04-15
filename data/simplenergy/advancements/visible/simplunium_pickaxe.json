@@ -1,8 +1,8 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012200}" },
-		"title": { "text": "A Better Furnace", "color": "gray" },
-		"description": { "text": "Craft your first Electric Furnace", "color": "green" },
+		"icon": { "item": "minecraft:diamond_pickaxe", "nbt": "{CustomModelData:2012605}" },
+		"title": { "text": "Simplunium Age", "color": "gray" },
+		"description": { "text": "Craft a Simplunium Pickaxe", "color": "green" },
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
@@ -13,7 +13,7 @@
 		"trigger": "minecraft:inventory_changed",
 		"conditions": { "items": [{
 			"tag": "simplenergy:items",
-			"nbt": "{simplenergy:{electric_furnace:1b}}"
+			"nbt": "{simplenergy:{simplunium_pickaxe:1b}}"
 		}]}
 	}},
 	"requirements": [ [ "all" ] ]

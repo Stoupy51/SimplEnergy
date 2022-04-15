@@ -1,37 +1,20 @@
 {
 	"display": {
-		"title": {
-			"text": "Also named the Coal Generator"
-		},
-		"description": {
-			"text": "Craft your first Furnace Generator"
-		},
-		"icon": {
-			"item": "minecraft:barrel",
-			"nbt": "{CustomModelData:2012001}"
-		},
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012001}" },
+		"title": { "text": "Also named the Coal Generator", "color": "gray" },
+		"description": { "text": "Craft your first Furnace Generator", "color": "green" },
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {
-		"SimplEnergy": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": ["minecraft:barrel"],
-						"nbt": "{simplenergy:{furnace_generator:1b}}"
-					}
-				]
-			}
-		}
-	},
-	"requirements": [
-		[
-			"SimplEnergy"
-		]
-	],
-	"parent": "simplenergy:simplunium"
+	"parent": "simplenergy:visible/cauldron_generator",
+	"criteria": { "all": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "simplenergy:items",
+			"nbt": "{simplenergy:{furnace_generator:1b}}"
+		}]}
+	}},
+	"requirements": [ [ "all" ] ]
 }

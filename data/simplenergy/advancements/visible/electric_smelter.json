@@ -1,37 +1,20 @@
 {
 	"display": {
-		"title": {
-			"text": "A Very Fast Smelter"
-		},
-		"description": {
-			"text": "Upgrade an Electric Furnace"
-		},
-		"icon": {
-			"item": "minecraft:barrel",
-			"nbt": "{CustomModelData:2012202}"
-		},
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012202}" },
+		"title": { "text": "A Very Fast Smelter", "color": "gray" },
+		"description": { "text": "Upgrade an Electric Furnace", "color": "green" },
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"criteria": {
-		"SimplEnergy": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": ["minecraft:barrel"],
-						"nbt": "{simplenergy:{electric_smelter:1b}}"
-					}
-				]
-			}
-		}
-	},
-	"requirements": [
-		[
-			"SimplEnergy"
-		]
-	],
-	"parent": "simplenergy:visible/electric_furnace"
+	"parent": "simplenergy:visible/electric_furnace",
+	"criteria": { "all": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "simplenergy:items",
+			"nbt": "{simplenergy:{electric_smelter:1b}}"
+		}]}
+	}},
+	"requirements": [ [ "all" ] ]
 }
