@@ -1,5 +1,5 @@
 
-#Custom hurt durability for Simplunium Armor & Tools
+#Custom durability for Simplunium Armor & Tools
 	scoreboard players set #durability_multiplier simplenergy.data 7000
 	execute unless score @s simplenergy.head = #helmet simplenergy.data if data storage simplenergy:main durability[{Slot:103b,tag:{simplenergy:{simplunium:1b}}}] run function simplenergy:opti/durability_multiplier/helmet
 	execute unless score @s simplenergy.chest = #chestplate simplenergy.data if data storage simplenergy:main durability[{Slot:102b,tag:{simplenergy:{simplunium:1b}}}] run function simplenergy:opti/durability_multiplier/chestplate
