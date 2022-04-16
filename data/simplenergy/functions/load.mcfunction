@@ -7,6 +7,8 @@ scoreboard objectives add simplenergy.head dummy
 scoreboard objectives add simplenergy.chest dummy
 scoreboard objectives add simplenergy.legs dummy
 scoreboard objectives add simplenergy.boots dummy
+scoreboard objectives add simplenergy.offhand dummy
+scoreboard objectives add simplenergy.mainhand dummy
 
 scoreboard players set SimplEnergy load.status 1080
 scoreboard players set #second simplenergy.data 0

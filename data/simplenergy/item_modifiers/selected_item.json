@@ -1,0 +1,383 @@
+[
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.03100
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"tag": "simplenergy:tools/golden"
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.01690
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"tag": "simplenergy:tools/wooden"
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.00760
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"tag": "simplenergy:tools/stone"
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.00395
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"tag": "simplenergy:tools/iron"
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.00064
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"tag": "simplenergy:tools/diamond"
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.00049
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"tag": "simplenergy:tools/netherite"
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.01562
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"items": [
+								"minecraft:fishing_rod",
+								"minecraft:flint_and_steel"
+							]
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.03950
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"items": [
+								"minecraft:carrot_on_a_stick"
+							]
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.00420
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"items": [
+								"minecraft:shears"
+							]
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.00297
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"items": [
+								"minecraft:shield"
+							]
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.00260
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"items": [
+								"minecraft:bow"
+							]
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.00399
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"items": [
+								"minecraft:trident"
+							]
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.00215
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"items": [
+								"minecraft:crossbow"
+							]
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.00999
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"items": [
+								"minecraft:warped_fungus_on_a_stick"
+							]
+						}
+					}
+				}
+			}
+		]
+	}
+]

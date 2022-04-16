@@ -1,13 +1,158 @@
-{
-	"function": "minecraft:set_damage",
-	"damage": {
-		"type": "minecraft:score",
-		"target": {
-			"type": "minecraft:fixed",
-			"name": "#temp"
+[
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.01333
 		},
-		"score": "simplenergy.data",
-		"scale": 0.0133
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"legs": {
+							"tag": "simplenergy:armor/leather"
+						}
+					}
+				}
+			}
+		]
 	},
-	"add": true
-}
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.00444
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"legs": {
+							"tag": "simplenergy:armor/chainmail"
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.00952
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"legs": {
+							"tag": "simplenergy:armor/golden"
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.00444
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"legs": {
+							"tag": "simplenergy:armor/iron"
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.00202
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"legs": {
+							"tag": "simplenergy:armor/diamond"
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#temp"
+			},
+			"score": "simplenergy.data",
+			"scale": 0.00180
+		},
+		"add": true,
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"legs": {
+							"tag": "simplenergy:armor/netherite"
+						}
+					}
+				}
+			}
+		]
+	}
+]
