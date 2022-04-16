@@ -1,0 +1,10 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:item_durability_changed"
+		}
+	},
+	"rewards": {
+		"function": "simplenergy:opti/call_durability"
+	}
+}

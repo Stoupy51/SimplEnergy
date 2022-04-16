@@ -6,6 +6,8 @@ execute store result score @s simplenergy.head run data get storage simplenergy:
 execute store result score @s simplenergy.chest run data get storage simplenergy:main temp[{Slot:102b}].tag.Damage
 execute store result score @s simplenergy.legs run data get storage simplenergy:main temp[{Slot:101b}].tag.Damage
 execute store result score @s simplenergy.boots run data get storage simplenergy:main temp[{Slot:100b}].tag.Damage
+execute store result score @s simplenergy.offhand run data get storage simplenergy:main temp[{Slot:-106b}].tag.Damage
+execute store result score @s simplenergy.mainhand run data get entity @s SelectedItem.tag.Damage
 data remove storage simplenergy:main temp
 
 setblock -29999999 0 2013 minecraft:yellow_shulker_box
