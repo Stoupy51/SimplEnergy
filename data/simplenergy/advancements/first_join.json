@@ -6,7 +6,7 @@
 	},
 	"rewards": {
 		"loot": [
-			"simplenergy:first_join"
+			"simplenergy:i/simplenergy_manual"
 		]
 	}
 }
