@@ -4,6 +4,6 @@
     	"layer0": "item/diamond_axe"
   	},
     "overrides": [
-		{ "predicate": { "custom_model_data": 2012606 }, "model": "simplenergy:equipments/simplunium_axe" }
+		{ "predicate": { "custom_model_data": 2012106 }, "model": "simplenergy:equipments/simplunium_axe" }
 	]
 }

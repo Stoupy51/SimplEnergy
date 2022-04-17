@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:soul_campfire", "nbt": "{CustomModelData:2012003}" },
+		"icon": { "item": "minecraft:soul_campfire", "nbt": "{CustomModelData:2012303}" },
 		"title": { "text": "Use the Sunlight", "color": "gray" },
 		"description": { "text": "Get your first Solar Panel", "color": "green" },
 		"frame": "task",

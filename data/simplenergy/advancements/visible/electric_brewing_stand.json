@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012204}" },
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012404}" },
 		"title": { "text": "Faster Brewing", "color": "gray" },
 		"description": { "text": "Obtain an Electric Brewing Stand", "color": "green" },
 		"frame": "task",

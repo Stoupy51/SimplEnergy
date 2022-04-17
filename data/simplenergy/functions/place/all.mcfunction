@@ -2,6 +2,8 @@
 tag @s add simplenergy.placer
 
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:simplunium_ore"} run function simplenergy:place/simplunium_ore/main
+execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:deepslate_simplunium_ore"} run function simplenergy:place/deepslate_simplunium_ore/main
+execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:raw_simplunium_block"} run function simplenergy:place/raw_simplunium_block/main
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:simplunium_block"} run function simplenergy:place/simplunium_block/main
 
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:simple_battery"} run function simplenergy:place/simple_battery/main

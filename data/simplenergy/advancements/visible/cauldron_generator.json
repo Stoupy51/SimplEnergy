@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012000}" },
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012300}" },
 		"title": { "text": "The Simpler Generator", "color": "gray" },
 		"description": { "text": "Craft your first Cauldron Generator", "color": "green" },
 		"frame": "task",

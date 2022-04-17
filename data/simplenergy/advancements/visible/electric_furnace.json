@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012200}" },
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012400}" },
 		"title": { "text": "A Better Furnace", "color": "gray" },
 		"description": { "text": "Craft your first Electric Furnace", "color": "green" },
 		"frame": "task",

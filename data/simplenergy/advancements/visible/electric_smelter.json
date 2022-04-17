@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012202}" },
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012402}" },
 		"title": { "text": "A Very Fast Smelter", "color": "gray" },
 		"description": { "text": "Upgrade an Electric Furnace", "color": "green" },
 		"frame": "task",
