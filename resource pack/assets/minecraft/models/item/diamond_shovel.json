@@ -4,6 +4,6 @@
     	"layer0": "item/diamond_shovel"
   	},
     "overrides": [
-		{ "predicate": { "custom_model_data": 2012608 }, "model": "simplenergy:equipments/simplunium_shovel" }
+		{ "predicate": { "custom_model_data": 2012108 }, "model": "simplenergy:equipments/simplunium_shovel" }
 	]
 }

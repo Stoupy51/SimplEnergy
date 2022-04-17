@@ -4,7 +4,7 @@
 		"description": "v1.8.0",
 		"icon": {
 			"item": "minecraft:command_block",
-			"nbt": "{CustomModelData:2012898}"
+			"nbt": "{CustomModelData:2012005}"
 		},
 		"show_toast": false,
 		"announce_to_chat": false,

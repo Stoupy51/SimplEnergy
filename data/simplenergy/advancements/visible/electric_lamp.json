@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012205}" },
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012405}" },
 		"title": { "text": "Light Up Your House", "color": "gray" },
 		"description": { "text": "Get your first Electric Lamp", "color": "green" },
 		"frame": "task",

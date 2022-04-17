@@ -5,6 +5,6 @@
     	"layer1": "item/leather_chestplate_overlay"
   	},
     "overrides": [
-		{ "predicate": { "custom_model_data": 2012601 }, "model": "simplenergy:equipments/simplunium_chestplate" }
+		{ "predicate": { "custom_model_data": 2012101 }, "model": "simplenergy:equipments/simplunium_chestplate" }
 	]
 }

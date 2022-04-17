@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:diamond_pickaxe", "nbt": "{CustomModelData:2012605}" },
+		"icon": { "item": "minecraft:diamond_pickaxe", "nbt": "{CustomModelData:2012105}" },
 		"title": { "text": "Simplunium Age", "color": "gray" },
 		"description": { "text": "Craft a Simplunium Pickaxe", "color": "green" },
 		"frame": "task",

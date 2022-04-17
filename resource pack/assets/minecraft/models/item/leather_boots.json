@@ -5,6 +5,6 @@
         "layer1": "item/leather_boots_overlay"
     },
     "overrides": [
-		{ "predicate": { "custom_model_data": 2012603 }, "model": "simplenergy:equipments/simplunium_boots" }
+		{ "predicate": { "custom_model_data": 2012103 }, "model": "simplenergy:equipments/simplunium_boots" }
 	]
 }

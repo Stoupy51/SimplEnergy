@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012102}" },
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012202}" },
 		"title": { "text": "More and More Energy Storage!", "color": "gray" },
 		"description": { "text": "Upgrade an Advanced Battery", "color": "green" },
 		"frame": "task",

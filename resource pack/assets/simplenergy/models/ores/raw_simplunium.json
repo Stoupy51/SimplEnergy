@@ -1,6 +1,6 @@
 {
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "simplenergy:ores/raw_simplunium"
-    }
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "simplenergy:ores/raw_simplunium"
+	}
 }
