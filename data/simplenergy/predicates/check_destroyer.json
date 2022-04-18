@@ -2,7 +2,7 @@
 	"condition": "minecraft:location_check",
 	"predicate": {
 		"block": {
-			"tag": "simplenergy:all_simplenergy"
+			"tag": "simplenergy:check_destroyer"
 		}
 	}
 }

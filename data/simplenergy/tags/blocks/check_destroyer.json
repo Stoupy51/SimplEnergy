@@ -11,6 +11,7 @@
 		"minecraft:furnace",
 		"minecraft:brewing_stand",
 		"minecraft:redstone_lamp",
-		"minecraft:deepslate_coal_ore"
+		"minecraft:deepslate_coal_ore",
+		"minecraft:raw_iron_block"
 	]
 }
