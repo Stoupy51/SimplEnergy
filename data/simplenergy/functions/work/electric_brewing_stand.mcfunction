@@ -6,7 +6,8 @@
 #Change BrewTime value and use Energy & playsound on work
 	execute if score #brew_time simplenergy.data matches 4.. run scoreboard players remove @s energy.storage 1
 	execute if score #brew_time simplenergy.data matches 4.. run scoreboard players remove #brew_time simplenergy.data 3
-	execute if score #second simplenergy.data matches 0 if score #brew_time simplenergy.data matches 4.. run playsound simplenergy:electric_brewing_stand block @a[distance=..10] ~ ~ ~ 0.25
+	execute if score #second simplenergy.data matches 0 if score #brew_time simplenergy.data matches 4.. run playsound simplenergy:electric_brewing_stand block @a[distance=..10,tag=!simplenergy.ps.electric_brewing_stand] ~ ~ ~ 0.25
+	execute if score #second simplenergy.data matches 0 if score #brew_time simplenergy.data matches 4.. run tag @a[distance=..10] add simplenergy.ps.electric_brewing_stand
 	execute store result block ~ ~ ~ BrewTime short 1 run scoreboard players get #brew_time simplenergy.data
 
 #Change Fuel value and use Energy
