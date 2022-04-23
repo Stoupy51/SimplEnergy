@@ -64,7 +64,7 @@ schedule function simplenergy:world_bottom_start 2s
 
 #Tools/Equipments
 	#Multimeter
-		data modify storage simplenergy:main all.2012900 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick"	,Count:1b,tag:{ctc:{id:"multimeter",from:"stoupy:simplenergy",traits:{"tool":1b}},Unbreakable:1b										,CustomModelData:2012900,simplenergy:{multimeter:1b}							,HideFlags:127,display:{Lore:['[{"text":"Allow you to analyse machines","italic":false,"color":"gray"}]','[{"text":"to get their energy information","italic":false,"color":"gray"}]','[{"text":"[Hold in offhand for passive use]","italic":false,"color":"white"}]','{"translate":"SimplEnergy","color":"blue","italic":true}'],Name:'[{"text":"Multimeter","italic":false,"color":"yellow"}]'}}}
+		data modify storage simplenergy:main all.2012900 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick"	,Count:1b,tag:{ctc:{id:"multimeter",from:"stoupy:simplenergy",traits:{"tool":1b}},smithed:{noInteract:1b},Unbreakable:1b				,CustomModelData:2012900,simplenergy:{multimeter:1b}							,HideFlags:127,display:{Lore:['[{"text":"Allow you to analyse machines","italic":false,"color":"gray"}]','[{"text":"to get their energy information","italic":false,"color":"gray"}]','[{"text":"[Hold in offhand for passive use]","italic":false,"color":"white"}]','{"translate":"SimplEnergy","color":"blue","italic":true}'],Name:'[{"text":"Multimeter","italic":false,"color":"yellow"}]'}}}
 	#SimplEnergy Manual
 		function simplenergy:manual
 	#Simplunium Armor/Tools
