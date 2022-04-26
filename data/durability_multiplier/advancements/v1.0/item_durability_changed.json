@@ -5,6 +5,6 @@
 		}
 	},
 	"rewards": {
-		"function": "simplenergy:opti/call_durability"
+		"function": "durability_multiplier:v1.0/advancements/item_durability_changed"
 	}
 }
