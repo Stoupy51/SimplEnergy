@@ -1,5 +1,6 @@
 {
     "values": [
+		"durability_multiplier:v1.0/load",
 		"#smithed.custom_block:load",
 		"#smithed.crafter:load",
 		"#energy:load",
