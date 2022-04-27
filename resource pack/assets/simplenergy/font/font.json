@@ -1,4 +1,5 @@
-{"providers": [
+{
+"providers": [
 	{ "type": "bitmap", "file": "simplenergy:font/none.png",						"ascent": 8, "height": 19, "chars": ["\uec00"] },
 	{ "type": "bitmap", "file": "simplenergy:font/none.png",						"ascent": 8, "height": 13, "chars": ["\uec01\uec01"] },
 	{ "type": "bitmap", "file": "simplenergy:font/main_page.png",					"ascent": 12, "height": 139, "chars": ["\uec02"] },
@@ -18,9 +19,8 @@
 	{ "type": "bitmap", "file": "simplenergy:font/i/simple_cable.png",				"ascent": 12, "height": 139, "chars": ["\uec10"] },
 	{ "type": "bitmap", "file": "simplenergy:font/i/advanced_cable.png",			"ascent": 12, "height": 139, "chars": ["\uec11"] },
 	{ "type": "bitmap", "file": "simplenergy:font/i/elite_cable.png",				"ascent": 12, "height": 139, "chars": ["\uec12"] },
-	{ "type": "bitmap", "file": "simplenergy:font/i/simplunium_block.png",			"ascent": 12, "height": 139, "chars": ["\uec13"] },
-	{ "type": "bitmap", "file": "simplenergy:font/i/simplunium_ingot.png",			"ascent": 12, "height": 139, "chars": ["\uec14"] },
-	{ "type": "bitmap", "file": "simplenergy:font/i/simplunium_ore.png",			"ascent": 12, "height": 139, "chars": ["\uec15"] },
-	{ "type": "bitmap", "file": "simplenergy:font/i/simplunium_equipments.png",		"ascent": 12, "height": 139, "chars": ["\uec16"] },
-	{ "type": "bitmap", "file": "simplenergy:font/i/multimeter.png",				"ascent": 12, "height": 139, "chars": ["\uec17"] }
-]}
+	{ "type": "bitmap", "file": "simplenergy:font/i/simplunium_ore.png",			"ascent": 12, "height": 139, "chars": ["\uec13"] },
+	{ "type": "bitmap", "file": "simplenergy:font/i/simplunium_equipments.png",		"ascent": 12, "height": 139, "chars": ["\uec14"] },
+	{ "type": "bitmap", "file": "simplenergy:font/i/multimeter.png",				"ascent": 12, "height": 139, "chars": ["\uec15"] }
+]
+}
