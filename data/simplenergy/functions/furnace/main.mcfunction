@@ -5,9 +5,9 @@
 	data modify storage simplenergy:main furnace.input_ctc set from storage simplenergy:main furnace.Items[{Slot:0b}].tag.ctc
 
 	scoreboard players set #found simplenergy.data 0
-	data modify block -29999999 0 2013 Items set from storage simplenergy:main furnace.Items
-	execute positioned -29999999 0 2013 run function #simplenergy:furnace_recipes
-	execute store result score #excepted_cmd simplenergy.data run data get block -29999999 0 2013 Items[{Slot:3b}].tag.CustomModelData
+	data modify block -30000000 14 1610 Items set from storage simplenergy:main furnace.Items
+	execute positioned -30000000 14 1610 run function #simplenergy:furnace_recipes
+	execute store result score #excepted_cmd simplenergy.data run data get block -30000000 14 1610 Items[{Slot:3b}].tag.CustomModelData
 
 #Disable cooking if not permitted
 	scoreboard players set #reset simplenergy.data 0

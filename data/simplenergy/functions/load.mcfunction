@@ -1,16 +1,9 @@
 
-scoreboard objectives add load.status dummy
 scoreboard objectives add simplenergy.data dummy
 scoreboard objectives add simplenergy.data_2 dummy
 scoreboard objectives add simplenergy.multimeter_use minecraft.used:minecraft.warped_fungus_on_a_stick
-scoreboard objectives add simplenergy.head dummy
-scoreboard objectives add simplenergy.chest dummy
-scoreboard objectives add simplenergy.legs dummy
-scoreboard objectives add simplenergy.boots dummy
-scoreboard objectives add simplenergy.offhand dummy
-scoreboard objectives add simplenergy.mainhand dummy
 
-scoreboard players set SimplEnergy load.status 1080
+scoreboard players set SimplEnergy load.status 1081
 scoreboard players set #second simplenergy.data 0
 
 scoreboard players set #1000000000 simplenergy.data 1000000000

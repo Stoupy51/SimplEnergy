@@ -22,15 +22,15 @@ execute if score #energy simplenergy.data matches 1000000000.. run scoreboard pl
 execute if score #energy simplenergy.data matches 1000000000.. run scoreboard players operation #part_2 simplenergy.data /= #1000000 simplenergy.data
 
 #Apply the new lore to the item
-setblock -29999999 0 2013 yellow_shulker_box
+setblock -30000000 14 1610 yellow_shulker_box
 
 execute store result score #slot simplenergy.data run data get storage energy:temp list[0].Slot
 data modify storage energy:temp list[0].Slot set value 0b
-data modify block -29999999 0 2013 Items append from storage energy:temp list[0]
-item modify block -29999999 0 2013 container.0 simplenergy:energy_storage_lore
+data modify block -30000000 14 1610 Items append from storage energy:temp list[0]
+item modify block -30000000 14 1610 container.0 simplenergy:energy_storage_lore
 execute store result storage energy:temp list[0].Slot byte 1 run scoreboard players get #slot simplenergy.data
 
-execute unless data storage energy:temp list[0].tag.energy.has_storage_lore run data modify storage energy:temp list[0].tag.display.Lore insert -2 from block -29999999 0 2013 Items[0].tag.display.Lore[0]
-execute if data storage energy:temp list[0].tag.energy.has_storage_lore run data modify storage energy:temp list[0].tag.display.Lore[-2] set from block -29999999 0 2013 Items[0].tag.display.Lore[0]
+execute unless data storage energy:temp list[0].tag.energy.has_storage_lore run data modify storage energy:temp list[0].tag.display.Lore insert -2 from block -30000000 14 1610 Items[0].tag.display.Lore[0]
+execute if data storage energy:temp list[0].tag.energy.has_storage_lore run data modify storage energy:temp list[0].tag.display.Lore[-2] set from block -30000000 14 1610 Items[0].tag.display.Lore[0]
 data modify storage energy:temp list[0].tag.energy.has_storage_lore set value 1b
 data remove storage simplenergy:main scale
