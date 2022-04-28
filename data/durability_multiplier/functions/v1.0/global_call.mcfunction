@@ -8,7 +8,7 @@ data modify storage durability_multiplier:main feet set from storage durability_
 data modify storage durability_multiplier:main offhand set from storage durability_multiplier:main Inventory[{Slot:-106b}]
 data modify storage durability_multiplier:main mainhand set from entity @s SelectedItem
 data remove storage durability_multiplier:main Inventory
-setblock -29999999 0 2013 minecraft:yellow_shulker_box
+setblock -30000000 14 1610 minecraft:yellow_shulker_box
 
 #Checking Durability Change
 execute store result score #head durability_multiplier.data run data get storage durability_multiplier:main head.tag.Damage
