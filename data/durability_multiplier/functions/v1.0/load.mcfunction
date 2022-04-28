@@ -15,3 +15,5 @@ scoreboard players set #1000 durability_multiplier.data 1000
 #Place a yellow shulker box for inventory manipulation
 execute in minecraft:overworld run forceload add -30000000 1600
 execute in minecraft:overworld run setblock -30000000 14 1610 minecraft:yellow_shulker_box
+
+schedule function durability_multiplier:v1.0/tick 2s replace
