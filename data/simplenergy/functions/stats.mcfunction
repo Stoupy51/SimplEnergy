@@ -26,7 +26,7 @@ tellraw @s [{"text":"\n[SimplEnergy Stats]","color":"green"}]
 execute store result score #temp simplenergy.data if entity @e[tag=simplenergy.destroyer]
 tellraw @s ["",{"text":"Custom blocks loaded: ","color":"gray"},{"score":{"name":"#temp","objective":"simplenergy.data"},"color":"gold"}]
 
-execute store result score #temp simplenergy.data if entity @e[type=glow_item_frame,tag=simplenergy.simplunium_ore]
+execute store result score #temp simplenergy.data if entity @e[type=glow_item_frame,tag=simplenergy.ore]
 tellraw @s ["",{"text":"Custom ores: ","color":"gray"},{"score":{"name":"#temp","objective":"simplenergy.data"},"color":"gold"}]
 
 execute store result score #temp simplenergy.data if entity @e[type=marker,tag=simplenergy.chunk_scan]

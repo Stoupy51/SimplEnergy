@@ -1,5 +1,5 @@
+
 #Store CookTime & BurnTime into a score to change the value
-	data modify storage simplenergy:main temp set from block ~ ~ ~
 	execute store result score #cook_time simplenergy.data run data get storage simplenergy:main temp.CookTime
 	execute store result score #burn_time simplenergy.data run data get storage simplenergy:main temp.BurnTime
 
