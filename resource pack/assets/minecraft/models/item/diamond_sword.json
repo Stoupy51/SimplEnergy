@@ -4,6 +4,6 @@
     	"layer0": "item/diamond_sword"
   	},
     "overrides": [
-		{ "predicate": { "custom_model_data": 2012104 }, "model": "simplenergy:equipments/simplunium_sword" }
+		{ "predicate": { "custom_model_data": 2012105 }, "model": "simplenergy:equipments/simplunium_sword" }
 	]
 }

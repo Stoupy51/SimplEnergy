@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:warped_fungus_on_a_stick", "nbt": "{CustomModelData:2012900}" },
+		"icon": { "item": "minecraft:warped_fungus_on_a_stick", "nbt": "{CustomModelData:2012110}" },
 		"title": { "text": "Measuring Energy", "color": "gray" },
 		"description": { "text": "Obtain a Multimeter", "color": "green" },
 		"frame": "task",

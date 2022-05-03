@@ -9,7 +9,6 @@ loot give @s loot simplenergy:i/raw_simplunium
 loot give @s loot simplenergy:i/simplunium_ingot
 loot give @s loot simplenergy:i/simplunium_nugget
 
-loot give @s loot simplenergy:i/multimeter
 loot give @s loot simplenergy:i/simplenergy_manual
 loot give @s loot simplenergy:i/simplunium_helmet
 loot give @s loot simplenergy:i/simplunium_chestplate
@@ -20,6 +19,8 @@ loot give @s loot simplenergy:i/simplunium_pickaxe
 loot give @s loot simplenergy:i/simplunium_axe
 loot give @s loot simplenergy:i/simplunium_hoe
 loot give @s loot simplenergy:i/simplunium_shovel
+loot give @s loot simplenergy:i/multimeter
+loot give @s loot simplenergy:i/wrench
 
 loot give @s loot simplenergy:i/simple_battery
 loot give @s loot simplenergy:i/advanced_battery
