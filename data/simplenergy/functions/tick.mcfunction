@@ -1,6 +1,6 @@
 
 #Timer & Other
-	execute as @a[tag=simplenergy.durability_changed] run function simplenergy:opti/item_durability_changed
+	execute as @a at @s run function simplenergy:opti/tick_players
 	scoreboard players add #second simplenergy.data 1
 	scoreboard players add #tick_2 simplenergy.data 1
 	execute if score #tick_2 simplenergy.data matches 2.. run function simplenergy:tick_2

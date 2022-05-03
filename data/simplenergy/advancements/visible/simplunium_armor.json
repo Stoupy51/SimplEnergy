@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:leather_chestplate", "nbt": "{CustomModelData:2012101}" },
+		"icon": { "item": "minecraft:leather_chestplate", "nbt": "{CustomModelData:2012102}" },
 		"title": { "text": "Cover Me with Simplunium", "color": "gray" },
 		"description": { "text": "Better than diamond armor", "color": "green" },
 		"frame": "task",

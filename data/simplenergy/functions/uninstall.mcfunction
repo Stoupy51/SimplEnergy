@@ -1,7 +1,7 @@
 
 scoreboard objectives remove simplenergy.data
 scoreboard objectives remove simplenergy.data_2
-scoreboard objectives remove simplenergy.multimeter_use
+scoreboard objectives remove simplenergy.right_click
 
 data remove storage simplenergy:main Inventory
 data remove storage simplenergy:main Items
