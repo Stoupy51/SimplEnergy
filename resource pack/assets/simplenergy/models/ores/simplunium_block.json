@@ -2,17 +2,5 @@
 	"parent": "minecraft:block/cube_all",
 	"textures": {
 		"all": "simplenergy:ores/simplunium_block"
-	},
-	"display": {
-		"head": {
-			"rotation": [ 0, 0, 0 ],
-			"translation": [ 0, -30.42, 0 ],
-			"scale": [ 1.605, 1.605, 1.605 ]
-		},
-		"fixed": {
-            "rotation": [ -90, 0, 0 ],
-            "translation": [ 0, 0, -16 ],
-            "scale": [ 2.001, 2.001, 2.001 ]
-        }
 	}
 }

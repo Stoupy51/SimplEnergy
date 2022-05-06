@@ -1,6 +1,6 @@
 {
-    "parent": "block/barrel",
-    "overrides": [
-      { "predicate": { "custom_model_data": 2012303 }, "model": "simplenergy:blocks/solar_panel" }
-    ]
+	"parent": "block/barrel",
+	"overrides": [
+		{ "predicate": { "custom_model_data": 2012303 }, "model": "simplenergy:blocks/solar_panel" }
+	]
 }
