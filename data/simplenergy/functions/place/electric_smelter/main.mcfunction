@@ -1,5 +1,5 @@
 
-execute align xyz positioned ~0.5 ~ ~0.5 unless entity @e[type=marker,distance=..0.9,tag=simplenergy.furnace,limit=1] run summon marker ~ ~ ~ {Tags:["simplenergy.furnace"]}
+function furnace_nbt_recipes:v1.0/advancements/placed_furnace
 
 scoreboard players set #success simplenergy.data 0
 execute store success score #success simplenergy.data if entity @s[y_rotation=-46..45] run setblock ~ ~ ~ furnace[facing=north]{CustomName:'{"text":"Electric Smelter"}',Items:[{Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011942,simplenergy:{texture_item:1b},display:{Name:'[{"text":""}]'}}}]}
