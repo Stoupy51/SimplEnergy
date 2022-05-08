@@ -1,5 +1,5 @@
 {
 	"values": [
-		"simplenergy:furnace/disable_cooking"
+		"simplenergy:calls/furnace_nbt_recipes/disable_cooking"
 	]
 }

@@ -33,12 +33,18 @@ forceload add 0 0
 execute unless score #force_loaded simplenergy.data matches 1 run summon marker 0 -64 0 {Tags:["simplenergy.forceload","global.forceload"]}
 scoreboard players set #force_loaded simplenergy.data 1
 
-schedule function simplenergy:world_bottom_start 2s
+schedule function simplenergy:opti/world_bottom_start 2s
 
 #define storage energy:temp
 #define storage simplenergy:main
 #define storage smithed.crafter:main
 #define storage smithed.custom_block:main
+#define score_holder #success
+#define score_holder #energy
+#define score_holder #valid
+#define score_holder #count
+#define score_holder #temp
+#define score_holder #pos
 
 
 
