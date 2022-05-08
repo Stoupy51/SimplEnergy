@@ -1,5 +1,5 @@
 {
 	"values": [
-		"simplenergy:furnace/smelting_recipes"
+		"simplenergy:calls/furnace_nbt_recipes/smelting_recipes"
 	]
 }
