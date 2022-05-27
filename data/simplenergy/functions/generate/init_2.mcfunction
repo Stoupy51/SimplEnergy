@@ -1,9 +1,9 @@
+
 #Correct Position
 	function simplenergy:generate/correct_position
 
 #Call function tag
 	execute at @s run function #simplenergy:generate_ores
-
 
 scoreboard players reset #x.random simplenergy.data
 scoreboard players reset #z.random simplenergy.data
