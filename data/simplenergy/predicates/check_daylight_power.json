@@ -1,0 +1,33 @@
+{
+	"condition": "minecraft:alternative",
+	"terms": [
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"block": {
+					"state": {
+						"inverted": false,
+						"power": {
+							"min": 10,
+							"max": 15
+						}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"block": {
+					"state": {
+						"inverted": true,
+						"power": {
+							"min": 0,
+							"max": 5
+						}
+					}
+				}
+			}
+		}
+	]
+}
