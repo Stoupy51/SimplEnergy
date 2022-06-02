@@ -12,6 +12,7 @@
 		"#minecraft:small_flowers",
 		"#minecraft:standing_signs",
 		"#minecraft:wall_signs",
+		"#minecraft:leaves",
 		"minecraft:grass",
 		"minecraft:fern",
 		"minecraft:dead_bush",
@@ -32,8 +33,6 @@
 		"minecraft:seagrass",
 		"minecraft:ladder",
 		"minecraft:tall_seagrass",
-		"minecraft:snow",
-		"#minecraft:leaves",
-		"#minecraft:trapdoors"
+		"minecraft:snow"
 	]
 }
