@@ -1,5 +1,5 @@
 
-function energy:v1.2/player/modify_energy_4
+function energy:v1.2/player/modify_energy_3
 
 #loop over inv
 data remove storage energy:temp list[0]
