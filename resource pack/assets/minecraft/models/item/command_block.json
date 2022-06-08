@@ -3,6 +3,7 @@
     "overrides": [
 		{ "predicate": { "custom_model_data": 2012004 }, "model": "simplenergy:ores/raw_simplunium" },
 		{ "predicate": { "custom_model_data": 2012005 }, "model": "simplenergy:ores/simplunium_ingot" },
-		{ "predicate": { "custom_model_data": 2012006 }, "model": "simplenergy:ores/simplunium_nugget" }
+		{ "predicate": { "custom_model_data": 2012006 }, "model": "simplenergy:ores/simplunium_nugget" },
+		{ "predicate": { "custom_model_data": 2012007 }, "model": "simplenergy:ores/simplunium_dust" }
     ]
 }
