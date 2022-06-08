@@ -62,6 +62,8 @@ schedule function simplenergy:opti/world_bottom_start 2s
 		data modify storage simplenergy:main all.2012005 set value {Slot:16b,id:"minecraft:command_block"				,Count:1b,tag:{ctc:{id:"simplunium_ingot",from:"stoupy:simplenergy",traits:{"metal/simplunium":1b,"ingot":1b}}							,CustomModelData:2012005,simplenergy:{simplunium_ingot:1b}						,display:{Lore:['{"translate":"SimplEnergy","color":"blue","italic":true}'],Name:'[{"text":"Simplunium Ingot","italic":false,"color":"white"}]'}}}
 	#Simplunium Nugget
 		data modify storage simplenergy:main all.2012006 set value {Slot:16b,id:"minecraft:command_block"				,Count:1b,tag:{ctc:{id:"simplunium_nugget",from:"stoupy:simplenergy",traits:{"metal/simplunium":1b,"nugget":1b}}						,CustomModelData:2012006,simplenergy:{simplunium_nugget:1b}						,display:{Lore:['{"translate":"SimplEnergy","color":"blue","italic":true}'],Name:'[{"text":"Simplunium Nugget","italic":false,"color":"white"}]'}}}
+	#Simplunium Dust
+		data modify storage simplenergy:main all.2012007 set value {Slot:16b,id:"minecraft:command_block"				,Count:1b,tag:{ctc:{id:"simplunium_dust",from:"stoupy:simplenergy",traits:{"metal/simplunium":1b,"dust":1b}}							,CustomModelData:2012007,simplenergy:{simplunium_dust:1b}						,display:{Lore:['{"translate":"SimplEnergy","color":"blue","italic":true}'],Name:'[{"text":"Simplunium Dust","italic":false,"color":"white"}]'}}}
 
 
 
