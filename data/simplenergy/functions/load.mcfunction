@@ -37,6 +37,7 @@ schedule function simplenergy:opti/world_bottom_start 2s
 #define storage energy:temp
 #define storage simplenergy:main
 #define storage smithed.crafter:main
+#define storage smithed.crafter:input
 #define storage smithed.custom_block:main
 #define score_holder #success
 #define score_holder #energy
