@@ -2,7 +2,7 @@
 	"replace": false,
 	"values": [
 		"#simplenergy:air",
-		"#minecraft:carpets",
+		"#minecraft:wool_carpets",
 		"#minecraft:buttons",
 		"#minecraft:banners",
 		"#minecraft:flower_pots",
@@ -12,6 +12,7 @@
 		"#minecraft:small_flowers",
 		"#minecraft:standing_signs",
 		"#minecraft:wall_signs",
+		"minecraft:moss_carpet",
 		"minecraft:player_head",
 		"minecraft:player_wall_head",
 		"minecraft:grass",
