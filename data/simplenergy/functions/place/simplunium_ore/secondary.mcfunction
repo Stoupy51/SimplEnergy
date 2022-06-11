@@ -4,3 +4,4 @@ data modify entity @s Item set value {id:"deepslate",Count:1b,tag:{CustomModelDa
 tag @s add simplenergy.ore
 tag @s add simplenergy.simplunium_ore
 tag @s add simplenergy.destroy_deepslate_coal_ore
+tag @s add simplenergy.item_destroy

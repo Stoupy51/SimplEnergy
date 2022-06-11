@@ -1,7 +1,7 @@
 
 #Materials
-	execute if entity @s[tag=simplenergy.simplunium_ore] unless block ~ ~ ~ minecraft:deepslate_coal_ore run function simplenergy:destroy/simplunium_ore
-	execute if entity @s[tag=simplenergy.deepslate_simplunium_ore] unless block ~ ~ ~ minecraft:deepslate_coal_ore run function simplenergy:destroy/deepslate_simplunium_ore
+	execute if entity @s[tag=simplenergy.simplunium_ore] unless block ~ ~ ~ minecraft:polished_deepslate run function simplenergy:destroy/simplunium_ore
+	execute if entity @s[tag=simplenergy.deepslate_simplunium_ore] unless block ~ ~ ~ minecraft:polished_deepslate run function simplenergy:destroy/deepslate_simplunium_ore
 	execute if entity @s[tag=simplenergy.raw_simplunium_block] unless block ~ ~ ~ minecraft:raw_iron_block run function simplenergy:destroy/raw_simplunium_block
 	execute if entity @s[tag=simplenergy.simplunium_block] unless block ~ ~ ~ minecraft:iron_block run function simplenergy:destroy/simplunium_block
 
