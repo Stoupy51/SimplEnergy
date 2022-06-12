@@ -32,7 +32,7 @@ forceload add 0 0
 # Check region
 execute unless score #force_loaded simplenergy.data matches 1 store success score #force_loaded simplenergy.data run summon marker 0 -64 0 {Tags:["simplenergy.forceload","global.forceload"]}
 
-schedule function simplenergy:opti/world_bottom_start 2s
+schedule function simplenergy:utils/world_bottom_start 2s
 
 #define storage energy:temp
 #define storage simplenergy:main
