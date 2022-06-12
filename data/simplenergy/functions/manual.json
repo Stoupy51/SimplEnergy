@@ -9,13 +9,13 @@
 		{"text":"\\uec03","color":"white","font":"simplenergy:font"},
 
 		{"text":"\\n\\n\\n\\uec01"},
-		{"text":"\\uec00","clickEvent":{"action":"change_page","value":3},"hoverEvent":{"action":"show_text","contents":[{"text":"Smithed Crafting Table","italic":false,"color":"white"}]}},
+		{"text":"\\uec00","clickEvent":{"action":"change_page","value":3},"hoverEvent":{"action":"show_text","contents":[{"text":"Heavy Workbench","italic":false,"color":"white"}]}},
 		{"text":"\\uec00","clickEvent":{"action":"change_page","value":4},"hoverEvent":{"action":"show_text","contents":[{"text":"SimplEnergy Manual","italic":false,"color":"white"}]}},
 		{"text":"\\uec00","clickEvent":{"action":"change_page","value":5},"hoverEvent":{"action":"show_text","contents":[{"text":"Cauldron Generator","italic":false,"color":"white"}]}},
 		{"text":"\\uec00","clickEvent":{"action":"change_page","value":6},"hoverEvent":{"action":"show_text","contents":[{"text":"Furnace Generator","italic":false,"color":"white"}]}},
 		{"text":"\\uec00","clickEvent":{"action":"change_page","value":7},"hoverEvent":{"action":"show_text","contents":[{"text":"Solar Panel","italic":false,"color":"white"}]}},
 		{"text":"\\n\\uec01","color":"reset"},
-		{"text":"\\uec00","clickEvent":{"action":"change_page","value":3},"hoverEvent":{"action":"show_text","contents":[{"text":"Smithed Crafting Table","italic":false,"color":"white"}]}},
+		{"text":"\\uec00","clickEvent":{"action":"change_page","value":3},"hoverEvent":{"action":"show_text","contents":[{"text":"Heavy Workbench","italic":false,"color":"white"}]}},
 		{"text":"\\uec00","clickEvent":{"action":"change_page","value":4},"hoverEvent":{"action":"show_text","contents":[{"text":"SimplEnergy Manual","italic":false,"color":"white"}]}},
 		{"text":"\\uec00","clickEvent":{"action":"change_page","value":5},"hoverEvent":{"action":"show_text","contents":[{"text":"Cauldron Generator","italic":false,"color":"white"}]}},
 		{"text":"\\uec00","clickEvent":{"action":"change_page","value":6},"hoverEvent":{"action":"show_text","contents":[{"text":"Furnace Generator","italic":false,"color":"white"}]}},
@@ -80,5 +80,6 @@
 	'{"text":"\\uec12","color":"white","font":"simplenergy:font"}',
 	'{"text":"\\uec13","color":"white","font":"simplenergy:font"}',
 	'{"text":"\\uec14","color":"white","font":"simplenergy:font"}',
-	'{"text":"\\uec15","color":"white","font":"simplenergy:font"}'
+	'{"text":"\\uec15","color":"white","font":"simplenergy:font"}',
+	'{"text":"\\uec16","color":"white","font":"simplenergy:font"}'
 ]
