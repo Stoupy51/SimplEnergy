@@ -28,8 +28,8 @@ scoreboard players set #-1 simplenergy.data -1
 tag Stoupy51 add convention.debug
 gamerule maxCommandChainLength 2147483647
 
-forceload add 0 0
 # Check region
+forceload add 0 0
 execute unless score #force_loaded simplenergy.data matches 1 store success score #force_loaded simplenergy.data run summon marker 0 -64 0 {Tags:["simplenergy.forceload","global.forceload"]}
 
 schedule function simplenergy:utils/world_bottom_start 2s

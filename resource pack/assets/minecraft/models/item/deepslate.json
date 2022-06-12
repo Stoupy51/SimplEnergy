@@ -1,6 +1,8 @@
 {
 	"parent": "block/deepslate",
 	"overrides": [
+		{ "predicate": { "custom_model_data": 2011929 }, "model": "simplenergy:none" },
+
 		{ "predicate": { "custom_model_data": 2012000 }, "model": "simplenergy:placed_model/simplunium_ore" },
 		{ "predicate": { "custom_model_data": 2012001 }, "model": "simplenergy:placed_model/deepslate_simplunium_ore" },
 		{ "predicate": { "custom_model_data": 2012002 }, "model": "simplenergy:placed_model/raw_simplunium_block" },

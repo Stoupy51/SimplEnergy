@@ -1,6 +1,6 @@
 {
-  "pack": {
-    "pack_format": 8,
-    "description": "SimplEnergy Resourcepack [v1.9.x]"
-  }
+	"pack": {
+		"pack_format": 9,
+		"description": "SimplEnergy Resourcepack [v1.9.x]"
+	}
 }
