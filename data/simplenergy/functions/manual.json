@@ -58,10 +58,12 @@
 		{"text":"\\uec00","clickEvent":{"action":"change_page","value":18},"hoverEvent":{"action":"show_text","contents":[{"text":"Simplunium Ore","italic":false,"color":"white"}]}},
 		{"text":"\\uec00","clickEvent":{"action":"change_page","value":19},"hoverEvent":{"action":"show_text","contents":[{"text":"Simplunium Equipments","italic":false,"color":"white"}]}},
 		{"text":"\\uec00","clickEvent":{"action":"change_page","value":20},"hoverEvent":{"action":"show_text","contents":[{"text":"Multimeter","italic":false,"color":"white"}]}},
+		{"text":"\\uec00","clickEvent":{"action":"change_page","value":21},"hoverEvent":{"action":"show_text","contents":[{"text":"Wrench","italic":false,"color":"white"}]}},
 		{"text":"\\n\\uec01","color":"reset"},
 		{"text":"\\uec00","clickEvent":{"action":"change_page","value":18},"hoverEvent":{"action":"show_text","contents":[{"text":"Simplunium Ore","italic":false,"color":"white"}]}},
 		{"text":"\\uec00","clickEvent":{"action":"change_page","value":19},"hoverEvent":{"action":"show_text","contents":[{"text":"Simplunium Equipments","italic":false,"color":"white"}]}},
-		{"text":"\\uec00","clickEvent":{"action":"change_page","value":20},"hoverEvent":{"action":"show_text","contents":[{"text":"Multimeter","italic":false,"color":"white"}]}}
+		{"text":"\\uec00","clickEvent":{"action":"change_page","value":20},"hoverEvent":{"action":"show_text","contents":[{"text":"Multimeter","italic":false,"color":"white"}]}},
+		{"text":"\\uec00","clickEvent":{"action":"change_page","value":21},"hoverEvent":{"action":"show_text","contents":[{"text":"Wrench","italic":false,"color":"white"}]}}
 	]',
 	'{"text":"\\uec04","color":"white","font":"simplenergy:font"}',
 	'{"text":"\\uec05","color":"white","font":"simplenergy:font"}',
