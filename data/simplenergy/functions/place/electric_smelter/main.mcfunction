@@ -7,4 +7,4 @@ execute if score #success simplenergy.data matches 0 store success score #succes
 
 function simplenergy:place/glow_item_frame_rotation
 function furnace_nbt_recipes:v1.0/advancements/placed_furnace
-execute as @e[type=glow_item_frame,tag=simplenergy.new] at @s run function simplenergy:place/electric_smelter/secondary
+execute as @e[tag=simplenergy.new] at @s run function simplenergy:place/electric_smelter/secondary

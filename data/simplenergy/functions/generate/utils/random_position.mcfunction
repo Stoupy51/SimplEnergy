@@ -5,7 +5,7 @@
 #I multiply values by 10 to keep a digit after decimal.
 #Init values
 	summon area_effect_cloud ~ ~ ~ {Tags:["simplenergy.temp"],Duration:0}
-	execute as @e[type=area_effect_cloud,tag=simplenergy.temp,limit=1] run function simplenergy:generate/utils/fill_storage
+	execute as @e[tag=simplenergy.temp,limit=1] run function simplenergy:generate/utils/fill_storage
 	
 	execute store result score #x.random simplenergy.data run data get storage simplenergy:main temp[0]
 	execute store result score #z.random simplenergy.data run data get storage simplenergy:main temp[2]

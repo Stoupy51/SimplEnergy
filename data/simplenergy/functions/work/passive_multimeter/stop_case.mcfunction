@@ -1,4 +1,4 @@
 
 tag @s add simplenergy.temp
-execute as @e[type=#energy:valid_block_entities,scores={energy.max_storage=1..},limit=1,sort=nearest,distance=..1.5] at @s run function simplenergy:work/passive_multimeter/found_entity
+execute as @e[scores={energy.max_storage=1..},limit=1,sort=nearest,distance=..1.5] at @s run function simplenergy:work/passive_multimeter/found_entity
 tag @s remove simplenergy.temp

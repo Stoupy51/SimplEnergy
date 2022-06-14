@@ -5,7 +5,7 @@ scoreboard players operation #damage durability_multiplier.data -= @s durability
 
 #Select random number between 0 and #multiplier
 summon area_effect_cloud -30000000 14 1610 {Tags:["durability_multiplier.temp"]}
-execute as @e[type=area_effect_cloud,tag=durability_multiplier.temp] run function durability_multiplier:v1.0/technical/random
+execute as @e[tag=durability_multiplier.temp] run function durability_multiplier:v1.0/technical/random
 
 #Applying durability modifier
 execute if score #random durability_multiplier.data matches ..999 run function durability_multiplier:v1.0/technical/durability_modifier
