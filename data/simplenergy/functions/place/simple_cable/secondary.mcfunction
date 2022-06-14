@@ -1,6 +1,6 @@
 
 function simplenergy:place/block_tags
-data modify entity @s Item set value {id:"cobblestone",Count:1b,tag:{CustomModelData:2012500}}
+item replace entity @s container.0 with cobblestone{CustomModelData:2012500}
 tag @s add simplenergy.cable
 tag @s add simplenergy.simple_cable
 tag @s add simplenergy.destroy_player_head

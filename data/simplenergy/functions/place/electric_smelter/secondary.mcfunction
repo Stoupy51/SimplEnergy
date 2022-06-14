@@ -1,6 +1,6 @@
 
 function simplenergy:place/block_tags
-data modify entity @s Item set value {id:"deepslate",Count:1b,tag:{CustomModelData:2012402}}
+item replace entity @s container.0 with deepslate{CustomModelData:2012402}
 tag @s add simplenergy.rotable
 tag @s add simplenergy.tick_glows
 tag @s add simplenergy.electric_smelter
