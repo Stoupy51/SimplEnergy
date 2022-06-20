@@ -9,12 +9,11 @@
 		"hidden": true
 	},
 	"parent": "simplenergy:visible/simplunium_pickaxe",
-	"criteria": { "all": {
+	"criteria": { "requirement": {
 		"trigger": "minecraft:inventory_changed",
 		"conditions": { "items": [{
 			"tag": "simplenergy:items",
 			"nbt": "{ctc:{traits:{\"armor\":1b}},simplenergy:{simplunium:1b}}"
 		}]}
-	}},
-	"requirements": [ [ "all" ] ]
+	}}
 }

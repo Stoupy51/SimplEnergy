@@ -1,4 +1,6 @@
 
+data modify storage furnace_nbt_recipes:main furnace set from block ~ ~ ~
+
 #Define what type of furnace is being used
 	scoreboard players set #type furnace_nbt_recipes.data 0
 	execute store result score #type furnace_nbt_recipes.data if block ~ ~ ~ blast_furnace

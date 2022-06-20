@@ -9,12 +9,11 @@
 		"hidden": false
 	},
 	"parent": "simplenergy:visible/advanced_cable",
-	"criteria": { "all": {
+	"criteria": { "requirement": {
 		"trigger": "minecraft:inventory_changed",
 		"conditions": { "items": [{
 			"tag": "simplenergy:items",
 			"nbt": "{simplenergy:{elite_cable:1b}}"
 		}]}
-	}},
-	"requirements": [ [ "all" ] ]
+	}}
 }

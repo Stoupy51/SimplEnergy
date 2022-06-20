@@ -9,12 +9,11 @@
 		"hidden": false
 	},
 	"parent": "simplenergy:visible/electric_lamp",
-	"criteria": { "all": {
+	"criteria": { "requirement": {
 		"trigger": "minecraft:inventory_changed",
 		"conditions": { "items": [{
 			"tag": "simplenergy:items",
 			"nbt": "{simplenergy:{electric_brewing_stand:1b}}"
 		}]}
-	}},
-	"requirements": [ [ "all" ] ]
+	}}
 }
