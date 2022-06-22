@@ -8,7 +8,7 @@
 		},
 		"show_toast": false,
 		"announce_to_chat": false,
-		"frame": "goal"
+		"frame": "challenge"
     },
     "parent": "global:stoupy51",
 	"criteria": {

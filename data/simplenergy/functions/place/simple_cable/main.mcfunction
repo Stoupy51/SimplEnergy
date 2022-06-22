@@ -3,5 +3,5 @@
 	execute anchored eyes facing ^ ^ ^2 run function simplenergy:place/look_all_head
 #Place the custom block
 	execute as @e[tag=simplenergy.placed] at @s run function simplenergy:place/simple_cable/primary
-#Revoke advancement
+#Advancement
 	advancement revoke @s only simplenergy:place/simple_cable
