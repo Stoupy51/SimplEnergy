@@ -16,7 +16,7 @@ Admin tips:
 - /function simplenergy:stats		`Shows you some statistics`
 
 SimplEnergy is a simple Technology Datapack created to add simple energy mechanics in your survival world.
-It is also created to help the development of Energy data packs by using an energy library as simple as possible.
+Also, it has been made to help the development of energy data packs by using an energy library as simple as possible.
 
 ### Small list of features added by SimplEnergy:
 - Energy system
