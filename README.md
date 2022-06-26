@@ -35,6 +35,6 @@ Also, it has been made to help the development of energy data packs by using an 
 [Join our Energy Datapacks Discord Server here: https://discord.gg/a2yX6GD4J7]
 
 Credits :
-- Used libraries authors
+- [Used libraries authors](https://github.com/Stoupy51/Energy-Datapack-Template#-librairiesmodules-used-conventions-guideline-tips-followed)
 - VieuxGreluchon for Resource Pack
 - AirDox_ for cables visual 
