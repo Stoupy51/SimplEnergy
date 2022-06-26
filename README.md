@@ -1,7 +1,7 @@
 
 # ⚡ SimplEnergy
 
-![Direct link for server resource packs](https://github.com/Stoupy51/SimplEnergy/blob/main/resource pack.zip)
+[Direct link for server resource packs](https://github.com/Stoupy51/SimplEnergy/blob/main/resource%20pack.zip)
 
 ![SimplEnergy Image](https://cdn.discordapp.com/attachments/547163400900444163/889450877893611520/SimplEnergy_2.jpg)
 
