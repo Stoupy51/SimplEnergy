@@ -1,31 +1,36 @@
-# SimplEnergy
-[Join our Energy Datapacks Discord Server here : https://discord.gg/a2yX6GD4J7]
+## SimplEnergy
+[Join our Energy Datapacks Discord Server here: https://discord.gg/a2yX6GD4J7]
 
 Example video of SimplEnergy :
 https://www.youtube.com/watch?v=3rKrggNTog4
 
-Don't forget to download the resource pack !
+[Direct link for server resource packs](https://github.com/Stoupy51/SimplEnergy/blob/main/resource pack.zip)
+
 ![SimplEnergy Image](https://cdn.discordapp.com/attachments/547163400900444163/889450877893611520/SimplEnergy_2.jpg)
 
 # What is SimplEnergy
-SimplEnergy is a simple Energy Datapack created to add simples energy mechanics in your survival world.
-It is also created to help the development of Energy Datapacks, it was made as a template for whoever wants to create its own Energy Datapack
-Here is a small list of features:
-- Energy System
-- Simples Generators
-- A Custom Ore with a bad name
-- A Custom Crafting Table
-- A Crafting Manual
-- Some Batteries
-- Some Cables
-- Customs Advancements
-- Simples Energy Consumers
-- New Armor & Tools
+Admin tips:
+- /function simplenergy:_give		Give you all items of the datapack
+- /function simplenergy:uninstall	Before removing the datapack
+- /function simplenergy:stats		Shows you some statistics
 
-If you plan to create your own Energy Datapack in Minecraft, join our Discord https://discord.gg/a2yX6GD4J7 !
-Feel free to use SimplEnergy as a datapack template!
+SimplEnergy is a simple Technology Datapack created to add simple energy mechanics in your survival world.
+It is also created to help the development of Energy data packs by using an energy library as simple as possible.
+
+Small list of features added by SimplEnergy:
+- Energy system
+- A few basic generators
+- A new ore used as a main material
+- A crafting manual
+- 3 tiers of batteries to store energy
+- 3 tiers of cable to transfer energy
+- 15+ custom advancements
+- A few basic energy consumers
+- New armor & tools
+
 
 
 Credits :
-- Resource Pack : VieuxGreluchon
-- Cables visual : AirDox
+- Used libraries authors
+- VieuxGreluchon for Resource Pack
+- AirDox_ for cables visual 
