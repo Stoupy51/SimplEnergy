@@ -11,9 +11,9 @@ https://www.youtube.com/watch?v=3rKrggNTog4
 
 # 📖 What is SimplEnergy
 Admin tips:
-- /function simplenergy:_give		Give you all items of the datapack
-- /function simplenergy:uninstall	Before removing the datapack
-- /function simplenergy:stats		Shows you some statistics
+- /function simplenergy:_give		`Give you all items of the datapack`
+- /function simplenergy:uninstall	`Before removing the datapack`
+- /function simplenergy:stats		`Shows you some statistics`
 
 SimplEnergy is a simple Technology Datapack created to add simple energy mechanics in your survival world.
 It is also created to help the development of Energy data packs by using an energy library as simple as possible.
