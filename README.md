@@ -10,7 +10,7 @@ https://www.youtube.com/watch?v=3rKrggNTog4
 
 
 # 📖 What is SimplEnergy
-Admin tips:
+### Admin tips:
 - /function simplenergy:_give		`Give you all items of the datapack`
 - /function simplenergy:uninstall	`Before removing the datapack`
 - /function simplenergy:stats		`Shows you some statistics`
