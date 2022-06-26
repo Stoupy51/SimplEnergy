@@ -15,7 +15,7 @@ https://www.youtube.com/watch?v=3rKrggNTog4
 - /function simplenergy:uninstall	`Before removing the datapack`
 - /function simplenergy:stats		`Shows you some statistics`
 
-SimplEnergy is a simple Technology Datapack created to add simple energy mechanics in your survival world.
+SimplEnergy is a simple Technology data pack created to add simple energy mechanics in your survival world.
 Also, it has been made to help the development of energy data packs by using an energy library as simple as possible.
 
 ### Small list of features added by SimplEnergy:
