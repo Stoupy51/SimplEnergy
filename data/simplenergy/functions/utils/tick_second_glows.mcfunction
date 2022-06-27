@@ -7,6 +7,3 @@
 	execute if entity @s[tag=simplenergy.electric_furnace] run function simplenergy:visual/electric_furnace
 	execute if entity @s[tag=simplenergy.electric_smelter] run function simplenergy:visual/electric_smelter
 	execute if entity @s[tag=simplenergy.electric_brewing_stand] run function simplenergy:visual/electric_brewing_stand
-
-execute if entity @s[tag=!simplenergy.update_v1.9.0] run data modify entity @s Item.id set value "deepslate"
-tag @s[tag=!simplenergy.update_v1.9.0] add simplenergy.update_v1.9.0
