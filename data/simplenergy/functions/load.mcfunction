@@ -16,6 +16,7 @@ scoreboard players set #260 simplenergy.data 260
 scoreboard players set #100 simplenergy.data 100
 scoreboard players set #80 simplenergy.data 80
 scoreboard players set #64 simplenergy.data 64
+scoreboard players set #20 simplenergy.data 20
 scoreboard players set #10 simplenergy.data 10
 scoreboard players set #8 simplenergy.data 8
 scoreboard players set #5 simplenergy.data 5
