@@ -20,8 +20,9 @@
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:input {recipe:[{Count:1b,tag:{ctc:{id:"simplunium_ingot"}}}]} run loot replace block ~ ~ ~ container.16 loot simplenergy:i/simplunium_nugget_x9
 
 #Advanced Cable
-	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 3 if data storage smithed.crafter:input {recipe:[{Count:8b,id:"minecraft:lapis_lazuli"},{Count:1b,tag:{ctc:{id:"simple_cable"}}}]} run loot replace block ~ ~ ~ container.16 loot simplenergy:i/advanced_cable
+	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:input {recipe:[{Count:8b,id:"minecraft:lapis_lazuli"},{Count:1b,tag:{ctc:{id:"simple_cable"}}}]} run loot replace block ~ ~ ~ container.16 loot simplenergy:i/advanced_cable
 
 #Elite Cable
-	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 3 if data storage smithed.crafter:input {recipe:[{Count:8b,id:"minecraft:redstone"},{Count:1b,tag:{ctc:{id:"advanced_cable"}}}]} run loot replace block ~ ~ ~ container.16 loot simplenergy:i/elite_cable
+	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:input {recipe:[{Count:8b,id:"minecraft:redstone"},{Count:1b,tag:{ctc:{id:"advanced_cable"}}}]} run loot replace block ~ ~ ~ container.16 loot simplenergy:i/elite_cable
+
 
