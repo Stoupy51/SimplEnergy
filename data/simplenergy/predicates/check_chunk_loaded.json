@@ -3,7 +3,9 @@
 		"condition": "minecraft:location_check",
 		"offsetX": 16,
 		"offsetZ": 16,
-		"predicate": {}
+		"predicate": {
+			"block": {}
+		}
 	},
 	{
 		"condition": "minecraft:location_check",
