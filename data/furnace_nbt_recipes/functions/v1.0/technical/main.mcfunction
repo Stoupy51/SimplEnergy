@@ -25,4 +25,5 @@ data modify storage furnace_nbt_recipes:main furnace set from block ~ ~ ~
 #Otherwise, continue
 	execute if score #reset furnace_nbt_recipes.data matches 0 if score #found furnace_nbt_recipes.data matches 1 run function furnace_nbt_recipes:v1.0/technical/cook
 	execute if score #reset furnace_nbt_recipes.data matches 1 run data modify block ~ ~ ~ CookTime set value 0s
+	execute if score #reset furnace_nbt_recipes.data matches 1 if score #nbt_smelting.major load.status matches 1.. align xyz run scoreboard players set @e[tag=nbt_smelting.furnace.active,dx=-1,dy=-1,dz=-1] nbt_smelting.data 0
 

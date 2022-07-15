@@ -1,5 +1,6 @@
 {
 	"values": [
+		"furnace_nbt_recipes:v1.0/calls/smoking_recipes",
 		"simplenergy:calls/furnace_nbt_recipes/smoking_recipes"
 	]
 }

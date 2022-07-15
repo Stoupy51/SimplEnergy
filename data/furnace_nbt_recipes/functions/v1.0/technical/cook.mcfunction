@@ -10,4 +10,3 @@
 	execute if score #reset furnace_nbt_recipes.data matches 1 run scoreboard players set #found furnace_nbt_recipes.data 0
 	execute if score #reset furnace_nbt_recipes.data matches 1 run function #furnace_nbt_recipes:v1/recipes_used
 	execute if score #reset furnace_nbt_recipes.data matches 1 if score #found furnace_nbt_recipes matches 0 run function furnace_nbt_recipes:v1.0/calls/xp/1.0
-
