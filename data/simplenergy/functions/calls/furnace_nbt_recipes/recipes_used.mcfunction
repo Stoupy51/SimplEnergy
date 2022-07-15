@@ -6,9 +6,11 @@
 ##value 1: blasting
 ##value 2: smoking
 
-#Simplunium Ore
-	execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if score #type furnace_nbt_recipes.data matches 0 if data storage furnace_nbt_recipes:main input.tag.ctc{id:"simplunium_ore"} run function simplenergy:calls/furnace_nbt_recipes/xp/2.0
-	execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if score #type furnace_nbt_recipes.data matches 1 if data storage furnace_nbt_recipes:main input.tag.ctc{id:"simplunium_ore"} run function simplenergy:calls/furnace_nbt_recipes/xp/2.5
+#To Simplunium Ingot
+	execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input.tag.ctc{id:"simplunium_ore"} run function simplenergy:calls/furnace_nbt_recipes/xp/2.5
+	execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input.tag.ctc{id:"deepslate_simplunium_ore"} run function simplenergy:calls/furnace_nbt_recipes/xp/2.5
+	execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input.tag.ctc{id:"raw_simplunium"} run function simplenergy:calls/furnace_nbt_recipes/xp/2.5
+	execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input.tag.ctc{id:"simplunium_dust"} run function simplenergy:calls/furnace_nbt_recipes/xp/2.5
 
 #Simplunium Armor & Tools
 	execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input.tag.ctc{traits:{"metal/simplunium":1b,"armor":1b}} run function simplenergy:calls/furnace_nbt_recipes/xp/2.0
