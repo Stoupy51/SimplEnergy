@@ -5,11 +5,14 @@ execute store result score #energy simplenergy.data run data get storage energy:
 scoreboard players operation #part_1 simplenergy.data = #energy simplenergy.data
 scoreboard players operation #part_2 simplenergy.data = #energy simplenergy.data
 
-#MJ, GJ, TJ cases
-execute if score #energy simplenergy.data matches ..999999 run data modify storage simplenergy:main scale set value " MJ]"
-execute if score #energy simplenergy.data matches ..999999 run scoreboard players operation #part_1 simplenergy.data /= #1000 simplenergy.data
-execute if score #energy simplenergy.data matches ..999999 run scoreboard players operation #part_2 simplenergy.data %= #1000 simplenergy.data
-execute if score #energy simplenergy.data matches ..999999 run scoreboard players operation #part_2 simplenergy.data /= #10 simplenergy.data
+#kJ, MJ, GJ, TJ cases
+execute if score #energy simplenergy.data matches ..999 run data modify storage simplenergy:main scale set value " kJ]"
+execute if score #energy simplenergy.data matches ..999 run scoreboard players set #part_2 simplenergy.data 0
+
+execute if score #energy simplenergy.data matches 1000..999999 run data modify storage simplenergy:main scale set value " MJ]"
+execute if score #energy simplenergy.data matches 1000..999999 run scoreboard players operation #part_1 simplenergy.data /= #1000 simplenergy.data
+execute if score #energy simplenergy.data matches 1000..999999 run scoreboard players operation #part_2 simplenergy.data %= #1000 simplenergy.data
+execute if score #energy simplenergy.data matches 1000..999999 run scoreboard players operation #part_2 simplenergy.data /= #10 simplenergy.data
 
 execute if score #energy simplenergy.data matches 1000000..999999999 run data modify storage simplenergy:main scale set value " GJ]"
 execute if score #energy simplenergy.data matches 1000000..999999999 run scoreboard players operation #part_1 simplenergy.data /= #1000000 simplenergy.data
