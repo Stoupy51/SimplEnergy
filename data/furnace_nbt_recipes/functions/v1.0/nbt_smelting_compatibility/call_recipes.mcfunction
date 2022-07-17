@@ -1,6 +1,7 @@
 
 #define storage nbt_smelting:io
 data modify storage nbt_smelting:io item set from storage furnace_nbt_recipes:main input
+data remove block ~ ~ ~ Items[{Slot:2b}]
 
 execute if score #type furnace_nbt_recipes.data matches 0 run function #nbt_smelting:v1/furnace
 execute if score #type furnace_nbt_recipes.data matches 1 run function #nbt_smelting:v1/blast_furnace
