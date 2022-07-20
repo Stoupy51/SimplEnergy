@@ -18,4 +18,4 @@
 	execute if score #old_burn_time simplenergy.data matches ..200 store result block ~ ~ ~ BurnTime short 1 run scoreboard players get #burn_time simplenergy.data
 
 #Change gui texture
-	execute unless data storage simplenergy:main temp.Items[{Slot:1b}] run data modify block ~ ~ ~ Items insert 0 value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2011998,simplenergy:{texture_item:1b},display:{Name:'""'}}}
+	execute unless data storage simplenergy:main temp.Items[{Slot:1b}] run item replace block ~ ~ ~ container.1 with cobblestone{CustomModelData:2011998,simplenergy:{texture_item:1b},display:{Name:'""'}}
