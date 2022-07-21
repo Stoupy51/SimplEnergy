@@ -4,8 +4,8 @@
 #Define a -/+ value offset randomly with UUID.
 #I multiply values by 10 to keep a digit after decimal.
 #Init values
-	summon area_effect_cloud ~ ~ ~ {Tags:["simplenergy.temp"]}
-	execute as @e[type=area_effect_cloud,tag=simplenergy.temp] run function simplenergy:generate/utils/fill_storage
+	summon marker ~ ~ ~ {Tags:["simplenergy.temp"]}
+	execute as @e[type=marker,tag=simplenergy.temp] run function simplenergy:generate/utils/fill_storage
 	
 	execute store result score #x.random simplenergy.data run data get storage simplenergy:main temp[0]
 	execute store result score #z.random simplenergy.data run data get storage simplenergy:main temp[2]

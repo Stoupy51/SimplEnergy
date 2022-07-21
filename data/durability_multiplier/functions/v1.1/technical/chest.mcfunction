@@ -4,7 +4,7 @@ scoreboard players operation #damage durability_multiplier.data = #chest durabil
 scoreboard players operation #damage durability_multiplier.data -= @s durability_multiplier.chest
 
 #Select random number between 0 and #multiplier
-summon area_effect_cloud -30000000 14 1610 {Tags:["durability_multiplier.temp"]}
+summon marker -30000000 14 1610 {Tags:["durability_multiplier.temp"]}
 execute as @e[tag=durability_multiplier.temp] run function durability_multiplier:v1.1/technical/random
 
 #Applying durability modifier
