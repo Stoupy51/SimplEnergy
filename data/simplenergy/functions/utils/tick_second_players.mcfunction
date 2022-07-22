@@ -1,7 +1,7 @@
 
 function simplenergy:generate/player
 
-setblock -30000000 14 1610 minecraft:yellow_shulker_box
+setblock -30000000 14 1610 yellow_shulker_box
 forceload add -30000000 1600
 
 #playsound remove tags
