@@ -1,32 +1,32 @@
 [
 	{
 		"condition": "minecraft:location_check",
-		"offsetX": 16,
-		"offsetZ": 16,
+		"offsetX": 32,
+		"offsetZ": 32,
 		"predicate": {
 			"block": {}
 		}
 	},
 	{
 		"condition": "minecraft:location_check",
-		"offsetX": 16,
-		"offsetZ": -16,
+		"offsetX": 32,
+		"offsetZ": -32,
 		"predicate": {
 			"block": {}
 		}
 	},
 	{
 		"condition": "minecraft:location_check",
-		"offsetX": -16,
-		"offsetZ": 16,
+		"offsetX": -32,
+		"offsetZ": 32,
 		"predicate": {
 			"block": {}
 		}
 	},
 	{
 		"condition": "minecraft:location_check",
-		"offsetX": -16,
-		"offsetZ": -16,
+		"offsetX": -32,
+		"offsetZ": -32,
 		"predicate": {
 			"block": {}
 		}
