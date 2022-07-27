@@ -9,11 +9,11 @@
 		"show_toast": false,
 		"announce_to_chat": false,
 		"frame": "challenge"
-    },
-    "parent": "global:stoupy51",
+	},
+	"parent": "global:stoupy51",
 	"criteria": {
-        "always": {
+		"always": {
 			"trigger": "minecraft:tick"
 		}
-    }
+	}
 }
