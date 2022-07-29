@@ -2,7 +2,7 @@
 execute if entity @p store result score #game_version load.status run data get entity @p DataVersion
 
 execute unless score #game_version load.status matches 3105.. run tellraw @a {"text":"SimplEnergy Error: You need at least Minecraft 1.19+.","italic":false,"color":"red"}
-execute if score #game_version load.status matches 3105.. run tellraw @a[tag=convention.debug] {"text":"[Loaded SimplEnergy v1.9.6]","italic":false,"color":"green"}
+execute if score #game_version load.status matches 3105.. run tellraw @a[tag=convention.debug] {"text":"[Loaded SimplEnergy v1.9.7]","italic":false,"color":"green"}
 
 # Check region
 forceload add 0 0
