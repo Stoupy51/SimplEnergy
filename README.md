@@ -32,15 +32,15 @@ Also, it has been made to help the development of energy data packs by using an 
 
 # 📚 Misc
 
-|   	| Compatibilities 	|   	|   	|   	|
-|---	|-----------------	|---	|---	|---	|
-| ✅ 	| Multiplayer     	|   	|   	|   	|
-| ✅ 	| Vanilla         	|   	|   	|   	|
-| ✅ 	| Fabric          	|   	|   	|   	|
-| ✅ 	| Forge           	|   	|   	|   	|
-| ✅ 	| Spigot          	|   	|   	|   	|
-| ✅ 	| Paper           	|   	|   	|   	|
-| ❓ 	| Realms          	|   	|   	|   	|
+|   	| Compatibilities 	|
+|---	|-----------------	|
+| ✅ 	| Multiplayer     	|
+| ✅ 	| Vanilla         	|
+| ✅ 	| Fabric          	|
+| ✅ 	| Forge           	|
+| ✅ 	| Spigot          	|
+| ✅ 	| Paper           	|
+| ❓ 	| Realms          	|
 
 [Join our Energy Datapacks Discord Server here: https://discord.gg/a2yX6GD4J7]
 
