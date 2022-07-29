@@ -1,5 +1,5 @@
 
-scoreboard players set #tick_2 simplenergy.data 0
+scoreboard players set #tick_2 simplenergy.data 1
 #Destroy
 	execute as @e[tag=simplenergy.destroyer,tag=!simplenergy.item_destroy,predicate=!simplenergy:check_destroyer] at @s run function simplenergy:destroy/all
 
