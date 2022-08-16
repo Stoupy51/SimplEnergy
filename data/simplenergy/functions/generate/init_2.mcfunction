@@ -5,6 +5,7 @@
 #Call function tag
 	execute at @s run function #simplenergy:generate_ores
 
+kill @e[tag=simplenergy.temp]
 scoreboard players reset #x.random simplenergy.data
 scoreboard players reset #z.random simplenergy.data
 scoreboard players reset #x simplenergy.data
