@@ -3,7 +3,7 @@ scoreboard objectives add simplenergy.data dummy
 scoreboard objectives add simplenergy.data_2 dummy
 scoreboard objectives add simplenergy.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
 
-scoreboard players set SimplEnergy load.status 1097
+scoreboard players set SimplEnergy load.status 1098
 scoreboard players set #second simplenergy.data 0
 
 scoreboard players set #1000000000 simplenergy.data 1000000000
@@ -16,6 +16,7 @@ scoreboard players set #260 simplenergy.data 260
 scoreboard players set #100 simplenergy.data 100
 scoreboard players set #80 simplenergy.data 80
 scoreboard players set #64 simplenergy.data 64
+scoreboard players set #32 simplenergy.data 32
 scoreboard players set #20 simplenergy.data 20
 scoreboard players set #10 simplenergy.data 10
 scoreboard players set #8 simplenergy.data 8

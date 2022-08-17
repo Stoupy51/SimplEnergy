@@ -1,11 +1,6 @@
 
-#Check for an unvisited zone
-	execute positioned ~75 0 ~75 if predicate simplenergy:check_chunk_loaded unless entity @e[distance=..120,tag=simplenergy.chunk_scan] run function simplenergy:generate/init
-	execute positioned ~-75 0 ~75 if predicate simplenergy:check_chunk_loaded unless entity @e[distance=..120,tag=simplenergy.chunk_scan] run function simplenergy:generate/init
-	execute positioned ~75 0 ~-75 if predicate simplenergy:check_chunk_loaded unless entity @e[distance=..120,tag=simplenergy.chunk_scan] run function simplenergy:generate/init
-	execute positioned ~-75 0 ~-75 if predicate simplenergy:check_chunk_loaded unless entity @e[distance=..120,tag=simplenergy.chunk_scan] run function simplenergy:generate/init
+#Check for an unvisited zone if dimension is authorized
+	scoreboard players set #authorized simplenergy.data 1
+	function #simplenergy:generate_denied_dimensions
+	execute if score #authorized simplenergy.data matches 1 run function simplenergy:generate/player_2
 
-	execute positioned ~ 0 ~75 if predicate simplenergy:check_chunk_loaded unless entity @e[distance=..120,tag=simplenergy.chunk_scan] run function simplenergy:generate/init
-	execute positioned ~75 0 ~ if predicate simplenergy:check_chunk_loaded unless entity @e[distance=..120,tag=simplenergy.chunk_scan] run function simplenergy:generate/init
-	execute positioned ~-75 0 ~ if predicate simplenergy:check_chunk_loaded unless entity @e[distance=..120,tag=simplenergy.chunk_scan] run function simplenergy:generate/init
-	execute positioned ~ 0 ~-75 if predicate simplenergy:check_chunk_loaded unless entity @e[distance=..120,tag=simplenergy.chunk_scan] run function simplenergy:generate/init
