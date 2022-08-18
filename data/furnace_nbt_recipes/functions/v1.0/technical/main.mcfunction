@@ -13,9 +13,9 @@ data modify storage furnace_nbt_recipes:main furnace set from block ~ ~ ~
 	data modify storage furnace_nbt_recipes:main input set from storage furnace_nbt_recipes:main furnace.Items[{Slot:0b}]
 
 	scoreboard players set #found furnace_nbt_recipes.data 0
-	execute in minecraft:overworld run data modify block -30000000 14 1610 Items set from storage furnace_nbt_recipes:main furnace.Items
-	execute in minecraft:overworld positioned -30000000 14 1610 run function furnace_nbt_recipes:v1.0/technical/call_recipes
-	execute store result score #excepted_cmd furnace_nbt_recipes.data in minecraft:overworld run data get block -30000000 14 1610 Items[{Slot:3b}].tag.CustomModelData
+	execute in overworld run data modify block -30000000 14 1610 Items set from storage furnace_nbt_recipes:main furnace.Items
+	execute in overworld positioned -30000000 14 1610 run function furnace_nbt_recipes:v1.0/technical/call_recipes
+	execute store result score #excepted_cmd furnace_nbt_recipes.data in overworld run data get block -30000000 14 1610 Items[{Slot:3b}].tag.CustomModelData
 
 #Disable cooking if not permitted
 	scoreboard players set #reset furnace_nbt_recipes.data 0

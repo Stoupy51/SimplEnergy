@@ -13,7 +13,7 @@ scoreboard players set #1000 durability_multiplier.data 1000
 #define storage durability_multiplier:main
 
 #Place a yellow shulker box for inventory manipulation
-execute in minecraft:overworld run forceload add -30000000 1600
+execute in overworld run forceload add -30000000 1600
 
 schedule function durability_multiplier:v1.2/load_delayed 2s replace
 schedule function durability_multiplier:v1.2/tick 2s replace

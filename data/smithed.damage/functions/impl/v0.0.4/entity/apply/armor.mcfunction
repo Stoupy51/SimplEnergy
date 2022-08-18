@@ -4,8 +4,8 @@
 #  adapted from TCC
 
 # get values (x100)
-execute store result score #10armor smithed.damage run attribute @s minecraft:generic.armor get 10
-execute store result score #10toughness smithed.damage run attribute @s minecraft:generic.armor_toughness get 10
+execute store result score #10armor smithed.damage run attribute @s generic.armor get 10
+execute store result score #10toughness smithed.damage run attribute @s generic.armor_toughness get 10
 scoreboard players operation #damage smithed.damage = @s smithed.damage
 
 

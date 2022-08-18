@@ -18,8 +18,8 @@ forceload remove -30000000 1600
 forceload add -30000000 1600
 
 execute unless block -30000000 0 1602 yellow_shulker_box run setblock -30000000 0 1602 yellow_shulker_box
-execute unless block -30000000 0 1603 minecraft:oak_wall_sign run setblock -30000000 0 1603 minecraft:oak_wall_sign[facing=south]
-fill -30000000 1 1600 -30000000 1 1615 minecraft:bedrock
+execute unless block -30000000 0 1603 oak_wall_sign run setblock -30000000 0 1603 oak_wall_sign[facing=south]
+fill -30000000 1 1600 -30000000 1 1615 bedrock
 
 function smithed.custom_block:impl/v0.0.1/technical/def_const
 
