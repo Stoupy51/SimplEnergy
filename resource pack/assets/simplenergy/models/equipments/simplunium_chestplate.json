@@ -1,5 +1,5 @@
 {
-    "parent": "item/handheld",
+    "parent": "item/generated",
     "textures": {
         "layer0": "simplenergy:equipments/simplunium_chestplate",
         "layer1": "simplenergy:equipments/simplunium_chestplate"
