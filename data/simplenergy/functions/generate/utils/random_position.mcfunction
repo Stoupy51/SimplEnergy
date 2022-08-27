@@ -4,14 +4,10 @@
 #Define a -/+ value offset randomly with UUID.
 #I multiply values by 10 to keep a digit after decimal.
 #Init values
-	summon marker ~ ~ ~ {Tags:["simplenergy.temp"]}
-	execute as @e[type=marker,tag=simplenergy.temp] run function simplenergy:generate/utils/fill_storage
+	function simplenergy:generate/utils/fill_storage
 	
-	execute store result score #x.random simplenergy.data run data get storage simplenergy:main temp[0]
-	execute store result score #z.random simplenergy.data run data get storage simplenergy:main temp[2]
 	scoreboard players operation #x simplenergy.data = #x.random simplenergy.data
 	scoreboard players operation #z simplenergy.data = #z.random simplenergy.data
-	execute store result score #y simplenergy.data run data get storage simplenergy:main temp[1]
 
 	data modify storage simplenergy:main temp set from entity @s Pos
 	execute store result score #pos_x simplenergy.data run data get storage simplenergy:main temp[0] 10

@@ -27,6 +27,9 @@ scoreboard players set #2 simplenergy.data 2
 scoreboard players set #-10 simplenergy.data -10
 scoreboard players set #-1 simplenergy.data -1
 
+scoreboard players set #seed simplenergy.data 0
+execute store result score #seed simplenergy.data run seed
+
 tag Stoupy51 add convention.debug
 gamerule maxCommandChainLength 2147483647
 
