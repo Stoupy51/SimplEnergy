@@ -3,8 +3,8 @@
 ####################
 
 tag @s remove smithed.crafter.assembled_output
-execute as @a[distance=..12, sort=nearest, tag=smithed.inside_crafter] run function smithed.crafter:impl/v0.0.3/block/table/crafting/output/cursor_check/main
-execute if entity @s[tag=!smithed.no_shift_click] unless entity @a[distance=..12, sort=nearest, tag=smithed.inside_crafter, tag=!smithed.shift_clicked] run function smithed.crafter:impl/v0.0.3/block/table/crafting/output/shift_click/main
+execute as @a[distance=..12, sort=nearest, tag=smithed.inside_crafter] run function smithed.crafter:impl/v0.0.3/block/table/crafting/output/cursor_check/
+execute if entity @s[tag=!smithed.no_shift_click] unless entity @a[distance=..12, sort=nearest, tag=smithed.inside_crafter, tag=!smithed.shift_clicked] run function smithed.crafter:impl/v0.0.3/block/table/crafting/output/shift_click/
 
 function smithed.crafter:impl/v0.0.3/block/table/crafting/output/clear_input/test
 

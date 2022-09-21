@@ -11,6 +11,6 @@
 		}
 	},
 	"rewards": {
-		"function": "simplenergy:place/elite_cable/main"
+		"function": "simplenergy:place/elite_cable/"
 	}
 }
