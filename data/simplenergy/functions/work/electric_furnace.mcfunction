@@ -20,3 +20,4 @@
 
 #Change gui texture
 	execute unless data storage simplenergy:main temp.Items[{Slot:1b}] run item replace block ~ ~ ~ container.1 with cobblestone{CustomModelData:2011998,simplenergy:{texture_item:1b},display:{Name:'""'}}
+
