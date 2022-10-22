@@ -1,7 +1,7 @@
 {
-	"parent": "minecraft:item/generated",
+	"parent": "item/generated",
 	"textures": {
-		"layer0": "minecraft:item/soul_campfire"
+		"layer0": "item/soul_campfire"
 	},
 	"overrides": [
 		{ "predicate": { "custom_model_data": 2012303 }, "model": "simplenergy:blocks/solar_panel" }
