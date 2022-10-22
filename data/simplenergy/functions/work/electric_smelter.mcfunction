@@ -6,8 +6,9 @@
 #Change CookTime value and use Energy & playsound on work
 	execute if score #cook_time simplenergy.data matches 1.. run scoreboard players remove @s energy.storage 4
 	execute if score #cook_time simplenergy.data matches 1.. run scoreboard players add #cook_time simplenergy.data 7
-	execute if score #second simplenergy.data matches 0 if score #cook_time simplenergy.data matches 1.. run playsound simplenergy:electric_smelter block @a[distance=..10,tag=!simplenergy.ps.electric_smelter] ~ ~ ~ 0.25
-	execute if score #second simplenergy.data matches 0 if score #cook_time simplenergy.data matches 1.. run tag @a[distance=..10] add simplenergy.ps.electric_smelter
+	execute if score #second simplenergy.data matches 0 if score #cook_time simplenergy.data matches 1.. run playsound simplenergy:electric_smelter block @a[distance=2..12,tag=!simplenergy.ps.electric_smelter] ~ ~ ~ 0.04
+	execute if score #second simplenergy.data matches 0 if score #cook_time simplenergy.data matches 1.. run playsound simplenergy:electric_smelter block @a[distance=..2,tag=!simplenergy.ps.electric_smelter] ~ ~ ~ 0.20
+	execute if score #second simplenergy.data matches 0 if score #cook_time simplenergy.data matches 1.. run tag @a[distance=..12] add simplenergy.ps.electric_smelter
 	execute if score #cook_time simplenergy.data matches 200.. run scoreboard players set #cook_time simplenergy.data 199
 	execute if score #cook_time simplenergy.data matches 1.. store result block ~ ~ ~ CookTime short 1 run scoreboard players get #cook_time simplenergy.data
 
