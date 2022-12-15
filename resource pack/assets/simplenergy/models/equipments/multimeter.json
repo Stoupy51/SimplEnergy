@@ -1,7 +1,7 @@
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "simplenergy:equipments/multimeter"
+		"layer0": "simplenergy:item/equipments/multimeter"
 	},
 	"display": {
 		"thirdperson_righthand": {

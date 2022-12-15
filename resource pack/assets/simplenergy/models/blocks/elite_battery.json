@@ -1,12 +1,12 @@
 {
 	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"down": "simplenergy:blocks/elite_battery_bottom",
-		"up": "simplenergy:blocks/elite_battery_top",
-		"north": "simplenergy:blocks/elite_battery_side",
-		"south": "simplenergy:blocks/elite_battery_side",
-		"west": "simplenergy:blocks/elite_battery_side",
-		"east": "simplenergy:blocks/elite_battery_side"
+		"down": "simplenergy:item/blocks/elite_battery_bottom",
+		"up": "simplenergy:item/blocks/elite_battery_top",
+		"north": "simplenergy:item/blocks/elite_battery_side",
+		"south": "simplenergy:item/blocks/elite_battery_side",
+		"west": "simplenergy:item/blocks/elite_battery_side",
+		"east": "simplenergy:item/blocks/elite_battery_side"
 	},
 	"elements": [{
 		"from": [ 0, 0, 0 ],

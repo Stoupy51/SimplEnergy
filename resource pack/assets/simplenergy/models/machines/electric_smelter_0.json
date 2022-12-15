@@ -1,6 +1,6 @@
 {
 	"textures": {
-		"texture": "simplenergy:machines/electric_smelter_0"
+		"texture": "simplenergy:item/machines/electric_smelter_0"
 	},
 	"elements": [ 
 		{

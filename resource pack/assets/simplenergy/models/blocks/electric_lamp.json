@@ -1,6 +1,6 @@
 {
 	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "simplenergy:blocks/electric_lamp_off"
+		"all": "simplenergy:item/blocks/electric_lamp_off"
 	}
 }

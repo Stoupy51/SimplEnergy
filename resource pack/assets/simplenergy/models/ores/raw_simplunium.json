@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "simplenergy:ores/raw_simplunium"
+		"layer0": "simplenergy:item/ores/raw_simplunium"
 	}
 }

@@ -1,12 +1,12 @@
 {
 	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"down": "simplenergy:blocks/electric_smelter_top",
-		"up": "simplenergy:blocks/electric_smelter_top",
-		"north": "simplenergy:blocks/electric_smelter_front_on",
-		"south": "simplenergy:blocks/electric_smelter_side",
-		"west": "simplenergy:blocks/electric_smelter_side",
-		"east": "simplenergy:blocks/electric_smelter_side"
+		"down": "simplenergy:item/blocks/electric_smelter_top",
+		"up": "simplenergy:item/blocks/electric_smelter_top",
+		"north": "simplenergy:item/blocks/electric_smelter_front_on",
+		"south": "simplenergy:item/blocks/electric_smelter_side",
+		"west": "simplenergy:item/blocks/electric_smelter_side",
+		"east": "simplenergy:item/blocks/electric_smelter_side"
 	},
 	"elements": [{
 		"from": [ 0, 0, 0 ],

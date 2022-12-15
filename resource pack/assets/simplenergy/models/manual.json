@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "simplenergy:manual"
+        "layer0": "simplenergy:item/manual"
     }
 }

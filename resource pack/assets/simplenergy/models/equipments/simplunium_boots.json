@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "simplenergy:equipments/simplunium_boots",
-        "layer1": "simplenergy:equipments/simplunium_boots"
+        "layer0": "simplenergy:item/equipments/simplunium_boots",
+        "layer1": "simplenergy:item/equipments/simplunium_boots"
     }
 }

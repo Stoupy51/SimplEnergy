@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "simplenergy:equipments/wrench"
+		"layer0": "simplenergy:item/equipments/wrench"
 	},
 	"display": {
 		"thirdperson_righthand": {

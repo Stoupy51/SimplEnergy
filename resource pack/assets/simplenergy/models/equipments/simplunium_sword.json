@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "simplenergy:equipments/simplunium_sword"
+        "layer0": "simplenergy:item/equipments/simplunium_sword"
     }
 }

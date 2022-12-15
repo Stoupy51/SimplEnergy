@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "simplenergy:equipments/simplunium_axe"
+        "layer0": "simplenergy:item/equipments/simplunium_axe"
     }
 }

@@ -1,12 +1,12 @@
 {
 	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"down": "simplenergy:blocks/furnace_generator_top",
-		"up": "simplenergy:blocks/furnace_generator_top",
-		"north": "simplenergy:blocks/furnace_generator_front_off",
-		"south": "simplenergy:blocks/furnace_generator_side",
-		"west": "simplenergy:blocks/furnace_generator_side",
-		"east": "simplenergy:blocks/furnace_generator_side"
+		"down": "simplenergy:item/blocks/furnace_generator_top",
+		"up": "simplenergy:item/blocks/furnace_generator_top",
+		"north": "simplenergy:item/blocks/furnace_generator_front_off",
+		"south": "simplenergy:item/blocks/furnace_generator_side",
+		"west": "simplenergy:item/blocks/furnace_generator_side",
+		"east": "simplenergy:item/blocks/furnace_generator_side"
 	},
 	"elements": [{
 		"from": [ 0, 0, 0 ],

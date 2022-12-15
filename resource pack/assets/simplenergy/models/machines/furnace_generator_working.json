@@ -1,6 +1,6 @@
 {
 	"textures": {
-		"texture": "simplenergy:machines/furnace_generator_working"
+		"texture": "simplenergy:item/machines/furnace_generator_working"
 	},
 	"elements": [ 
 		{

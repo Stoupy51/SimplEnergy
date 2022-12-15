@@ -1,6 +1,6 @@
 {
 	"textures": {
-		"texture": "simplenergy:machines/electric_brewing_stand_5"
+		"texture": "simplenergy:item/machines/electric_brewing_stand_5"
 	},
 	"elements": [ 
 		{

@@ -1,7 +1,7 @@
 {
 	"parent": "simplenergy:wire_pos",
 	"textures": {
-		"0": "simplenergy:simple_wire"
+		"0": "simplenergy:item/simple_wire"
 	},
 	"elements": [
 		{
