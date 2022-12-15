@@ -12,11 +12,11 @@
 							"function": "minecraft:copy_nbt",
 							"source": {
 								"type": "minecraft:storage",
-								"source": "simplenergy:main"
+								"source": "simplenergy:manual"
 							},
 							"ops": [
 								{
-									"source": "all.2012100.tag",
+									"source": "Item.tag",
 									"target": "{}",
 									"op": "merge"
 								}

@@ -9,9 +9,9 @@
 	scoreboard players operation #x simplenergy.data = #x.random simplenergy.data
 	scoreboard players operation #z simplenergy.data = #z.random simplenergy.data
 
-	data modify storage simplenergy:main temp set from entity @s Pos
-	execute store result score #pos_x simplenergy.data run data get storage simplenergy:main temp[0] 10
-	execute store result score #pos_z simplenergy.data run data get storage simplenergy:main temp[2] 10
+	data modify storage simplenergy:temp all set from entity @s Pos
+	execute store result score #pos_x simplenergy.data run data get storage simplenergy:temp all[0] 10
+	execute store result score #pos_z simplenergy.data run data get storage simplenergy:temp all[2] 10
 
 #Edit X & Z Pos : they can take a value between -#xzVariation & +#xzVariation
 #Examples for #xzVariation = 400 : -37.4, 14.3, 0.1, ...
@@ -32,7 +32,7 @@
 	scoreboard players operation #pos_y simplenergy.data += #y simplenergy.data
 
 #Update Position
-	execute store result storage simplenergy:main temp[0] double 0.1 run scoreboard players get #pos_x simplenergy.data
-	execute store result storage simplenergy:main temp[1] double 0.1 run scoreboard players get #pos_y simplenergy.data
-	execute store result storage simplenergy:main temp[2] double 0.1 run scoreboard players get #pos_z simplenergy.data
-	data modify entity @s Pos set from storage simplenergy:main temp
+	execute store result storage simplenergy:temp all[0] double 0.1 run scoreboard players get #pos_x simplenergy.data
+	execute store result storage simplenergy:temp all[1] double 0.1 run scoreboard players get #pos_y simplenergy.data
+	execute store result storage simplenergy:temp all[2] double 0.1 run scoreboard players get #pos_z simplenergy.data
+	data modify entity @s Pos set from storage simplenergy:temp all

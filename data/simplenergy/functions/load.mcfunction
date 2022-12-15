@@ -37,6 +37,9 @@ schedule function simplenergy:utils/world_bottom_start 2s
 
 #define storage energy:temp
 #define storage simplenergy:main
+#define storage simplenergy:temp
+#define storage simplenergy:inventory
+#define storage simplenergy:manual
 #define storage smithed.crafter:main
 #define storage smithed.crafter:input
 #define storage smithed.custom_block:main
@@ -72,7 +75,7 @@ schedule function simplenergy:utils/world_bottom_start 2s
 
 #Tools/Equipments
 	#SimplEnergy Manual
-		data modify storage simplenergy:main all.2012100 set value {Slot:18b,id:"minecraft:written_book"				,Count:1b,tag:{ctc:{id:"simplenergy_manual",from:"stoupy:simplenergy",traits:{}}														,CustomModelData:2012100,simplenergy:{simplenergy_manual:1b}					,HideFlags:127,display:{Lore:['{"translate":"SimplEnergy","color":"blue","italic":true}']},pages:[],title:"SimplEnergy Manual",author:""}}
+		data modify storage simplenergy:manual Item set value {Slot:18b,id:"minecraft:written_book"				,Count:1b,tag:{ctc:{id:"simplenergy_manual",from:"stoupy:simplenergy",traits:{}}														,CustomModelData:2012100,simplenergy:{simplenergy_manual:1b}					,HideFlags:127,display:{Lore:['{"translate":"SimplEnergy","color":"blue","italic":true}']},pages:[],title:"SimplEnergy Manual",author:""}}
 		function simplenergy:manual
 	#Simplunium Armor/Tools
 		data modify storage simplenergy:main all.2012101 set value {Slot:16b,id:"minecraft:leather_helmet"				,Count:1b,tag:{ctc:{id:"simplunium_helmet",from:"stoupy:simplenergy",traits:{"metal/simplunium":1b,"armor":1b}}							,CustomModelData:2012101,simplenergy:{simplunium:1b,simplunium_helmet:1b}		,HideFlags:64,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Slot:"head",Amount:4,Operation:0,UUID:[I;201301,201301,201301,201302]}	,{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Slot:"head",Amount:2,Operation:0,UUID:[I;201301,201301,201302,201302]}]						,display:{color:3487029,Lore:['{"translate":"SimplEnergy","color":"blue","italic":true}']	,Name:'[{"text":"Simplunium Helmet","italic":false,"color":"white"}]'}}}
