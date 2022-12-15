@@ -5,6 +5,6 @@
 		}
 	},
 	"rewards": {
-		"function": "simplenergy:utils/inventory_changed"
+		"function": "simplenergy:advancements/inventory_changed"
 	}
 }
