@@ -1,6 +1,9 @@
 
 advancement revoke @s only simplenergy:inventory_changed
 
+#Pre-inventory check
+clear @s #simplenergy:texture_item{simplenergy:{texture_item:1b}}
+
 #Storage define
 data modify storage simplenergy:main Inventory set from entity @s Inventory
 
