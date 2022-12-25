@@ -1,6 +1,5 @@
 {
 	"values": [
-		"furnace_nbt_recipes:v1.0/calls/blasting_recipes",
 		"simplenergy:calls/furnace_nbt_recipes/blasting_recipes"
 	]
 }

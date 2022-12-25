@@ -1,6 +1,5 @@
 {
 	"values": [
-		"#smithed.crafter:recipes/shaped",
 		"simplenergy:calls/smithed/shaped_recipes"
 	]
 }

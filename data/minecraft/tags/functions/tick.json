@@ -1,5 +1,5 @@
 {
 	"values": [
-		"simplenergy:tick"
+		"simplenergy:utils/tick_verification"
 	]
 }

@@ -1,9 +1,0 @@
-{
-	"type": "minecraft:smelting",
-	"ingredient": {
-		"tag": "furnace_nbt_recipes:armor/leather"
-	},
-	"result": "minecraft:command_block",
-	"experience": 1,
-	"cookingtime": 200
-}
