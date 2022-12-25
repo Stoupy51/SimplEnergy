@@ -8,12 +8,12 @@ execute if entity @p store result score #game_version load.status run data get e
 
 ## Check if SimplEnergy is loadable (dependencies)
 scoreboard players set #error load.status 0
-execute unless score #game_version load.status matches 3105.. run scoreboard players set #error load.status 1
-execute unless score #smithed.custom_block.major load.status matches 0.. run scoreboard players set #error load.status 2
-execute unless score #smithed.crafter.major load.status matches 0.. run scoreboard players set #error load.status 2
-execute unless score #energy.major load.status matches 0.. run scoreboard players set #error load.status 2
-execute unless score DurabilityMultiplier load.status matches 10.. run scoreboard players set #error load.status 2
-execute unless score FurnaceNbtRecipes load.status matches 10.. run scoreboard players set #error load.status 2
+execute if score #error load.status matches 0 unless score #game_version load.status matches 3105.. run scoreboard players set #error load.status 1
+execute if score #error load.status matches 0 unless score #smithed.custom_block.major load.status matches 0.. run scoreboard players set #error load.status 2
+execute if score #error load.status matches 0 unless score #smithed.crafter.major load.status matches 0.. run scoreboard players set #error load.status 2
+execute if score #error load.status matches 0 unless score #energy.major load.status matches 0.. run scoreboard players set #error load.status 2
+execute if score #error load.status matches 0 unless score DurabilityMultiplier load.status matches 10.. run scoreboard players set #error load.status 2
+execute if score #error load.status matches 0 unless score FurnaceNbtRecipes load.status matches 10.. run scoreboard players set #error load.status 2
 
 # Decode error
 execute if score #error load.status matches 1 run tellraw @a {"text":"SimplEnergy Error: This version is made for Minecraft 1.19+.","color":"red"}
