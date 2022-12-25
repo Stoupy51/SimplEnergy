@@ -30,6 +30,19 @@ Also, it has been made to help the development of energy data packs by using an 
 - New armor & tools
 
 
+# 📚 Librairies/Modules used, conventions, guideline, tips followed
+- [Smithed Custom Block Placement](https://wiki.smithed.dev/libraries/custom-block/)
+- [Smithed Crafter](https://wiki.smithed.dev/libraries/crafter/)
+- [DatapackEnergy](https://github.com/ICY105/DatapackEnergy)
+- [Stoupy's Durability Multiplier](https://github.com/Stoupy51/DurabilityMultiplier)
+- [Stoupy's Furnace NBT Recipes](https://github.com/Stoupy51/FurnaceNbtRecipes)
+- [Lantern Load](https://github.com/LanternMC/load)
+- [Smithed Conventions](https://wiki.smithed.dev/conventions)
+- [Minecraft Datapacks Conventions](https://mc-datapacks.github.io/en/conventions/index.html)
+- [Minecraft Datapacks Style Guideline](https://mc-datapacks.github.io/en/style_guideline/index.html)
+- [Minecraft Datapacks Tips](https://mc-datapacks.github.io/en/tips/index.html)
+
+
 # 📚 Misc
 
 |   	| Compatibilities 	|
