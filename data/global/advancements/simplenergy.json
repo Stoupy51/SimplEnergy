@@ -1,7 +1,7 @@
 {
 	"display": {
 		"title": "SimplEnergy",
-		"description": "v1.9.9",
+		"description": "v1.9.9b",
 		"icon": {
 			"item": "minecraft:command_block",
 			"nbt": "{CustomModelData:2012005}"
