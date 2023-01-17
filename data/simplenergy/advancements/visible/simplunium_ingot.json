@@ -3,7 +3,7 @@
 		"icon": { "item": "minecraft:command_block", "nbt": "{CustomModelData:2012005}" },
 		"title": { "text": "SimplEnergy", "color": "gray" },
 		"description": { "text": "Obtain a Simplunium Ingot", "color": "green" },
-		"background": "simplenergy:textures/advancement_background.png",
+		"background": "simplenergy:textures/item/advancement_background.png",
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
