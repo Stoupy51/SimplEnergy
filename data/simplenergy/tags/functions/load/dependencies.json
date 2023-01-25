@@ -1,0 +1,24 @@
+{
+	"values": [
+		{
+			"id": "#furnace_nbt_recipes:load",
+			"required": false
+		},
+		{
+			"id": "#durability_multiplier:load",
+			"required": false
+		},
+		{
+			"id": "#smithed.custom_block:load",
+			"required": false
+		},
+		{
+			"id": "#smithed.crafter:load",
+			"required": false
+		},
+		{
+			"id": "#energy:load",
+			"required": false
+		}
+	]
+}

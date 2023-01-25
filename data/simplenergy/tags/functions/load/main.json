@@ -1,0 +1,9 @@
+{
+	"values": [
+		{
+			"id": "#simplenergy:load/dependencies",
+			"required": false
+		},
+		"simplenergy:load/"
+	]
+}
