@@ -23,9 +23,9 @@
 	scoreboard players operation #pos_z simplenergy.data += #z simplenergy.data
 
 #Edit Y Pos : Y can take a value between world bottom and "#maxHeight"
-	scoreboard players operation #pos_y simplenergy.data = #world_bottom simplenergy.data
+	scoreboard players operation #pos_y simplenergy.data = _OVERWORLD_BOTTOM smart_ore_generation.data
 	scoreboard players operation #pos_y simplenergy.data *= #10 simplenergy.data
-	scoreboard players operation #y_max simplenergy.data = #world_bottom simplenergy.data
+	scoreboard players operation #y_max simplenergy.data = _OVERWORLD_BOTTOM smart_ore_generation.data
 	scoreboard players operation #y_max simplenergy.data *= #-10 simplenergy.data
 	scoreboard players operation #y_max simplenergy.data += #max_height simplenergy.data
 	scoreboard players operation #y simplenergy.data %= #y_max simplenergy.data
