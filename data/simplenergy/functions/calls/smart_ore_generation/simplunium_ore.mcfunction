@@ -1,6 +1,5 @@
 
 ## Try to find a random position adjacent to air in the region to generate the ore
-scoreboard players set #max_attempts smart_ore_generation.data 50
 function #smart_ore_generation:v1/slots/random_position
 
 # Placing Simplunium Ore patch

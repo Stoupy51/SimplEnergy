@@ -1,6 +1,10 @@
 {
 	"values": [
 		{
+			"id": "#smart_ore_generation:load",
+			"required": false
+		},
+		{
 			"id": "#furnace_nbt_recipes:load",
 			"required": false
 		},
