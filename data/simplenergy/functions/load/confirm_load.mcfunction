@@ -46,6 +46,7 @@ schedule function simplenergy:utils/world_bottom_start 2s
 #define storage smithed.crafter:input
 #define storage smithed.custom_block:main
 #define storage smithed.damage:main
+#define score_holder #dimension
 #define score_holder #success
 #define score_holder #energy
 #define score_holder #valid
