@@ -1,6 +1,10 @@
 {
 	"values": [
 		"minecraft:item_frame",
-		"minecraft:glow_item_frame"
+		"minecraft:glow_item_frame",
+		{
+			"required": false,
+			"id": "minecraft:item_display"
+		}
 	]
 }
