@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.2012402.tag",
+									"source": "all.electric_smelter.tag",
 									"target": "{}",
 									"op": "merge"
 								}

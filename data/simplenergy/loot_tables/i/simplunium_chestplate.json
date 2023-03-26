@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.2012102.tag",
+									"source": "all.simplunium_chestplate.tag",
 									"target": "{}",
 									"op": "merge"
 								}

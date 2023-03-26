@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.2012301.tag",
+									"source": "all.furnace_generator.tag",
 									"target": "{}",
 									"op": "merge"
 								}

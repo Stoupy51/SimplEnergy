@@ -21,3 +21,4 @@ execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:elect
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:electric_lamp"} run function simplenergy:place/electric_lamp/
 
 tag @s remove simplenergy.placer
+

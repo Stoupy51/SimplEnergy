@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.2012404.tag",
+									"source": "all.electric_brewing_stand.tag",
 									"target": "{}",
 									"op": "merge"
 								}

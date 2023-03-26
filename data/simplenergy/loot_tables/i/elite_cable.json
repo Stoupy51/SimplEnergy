@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.2012700.tag",
+									"source": "all.elite_cable.tag",
 									"target": "{}",
 									"op": "merge"
 								}

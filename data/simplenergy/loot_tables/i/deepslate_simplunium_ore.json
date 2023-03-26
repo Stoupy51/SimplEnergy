@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.2012001.tag",
+									"source": "all.deepslate_simplunium_ore.tag",
 									"target": "{}",
 									"op": "merge"
 								}

@@ -4,7 +4,7 @@ execute unless entity @p run schedule function simplenergy:load/waiting_for_play
 execute if entity @p store result score #game_version simplenergy.data run data get entity @p DataVersion
 
 # Check if the game version is supported
-execute if entity @p unless score #game_version simplenergy.data matches 3105.. run scoreboard players set #load_error simplenergy.data 1
+execute if entity @p unless score #game_version simplenergy.data matches 3337.. run scoreboard players set #load_error simplenergy.data 1
 
 # Decode error
 execute if score #load_error simplenergy.data matches 1 run tellraw @a {"text":"SimplEnergy Error: This version is made for Minecraft 1.19+.","color":"red"}

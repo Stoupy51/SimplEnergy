@@ -1,6 +1,6 @@
 
 scoreboard objectives remove simplenergy.data
-scoreboard objectives remove simplenergy.data_2
+scoreboard objectives remove simplenergy.timer_data
 scoreboard objectives remove simplenergy.right_click
 
 data remove storage simplenergy:main all
@@ -14,3 +14,4 @@ kill @e[tag=simplenergy.destroyer]
 clear @a #simplenergy:items{ctc:{from:"stoupy:simplenergy"}}
 
 tellraw @s {"text":"You can now disable SimplEnergy or delete it of your data packs folder","color":"green"}
+

@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.2012405.tag",
+									"source": "all.electric_lamp.tag",
 									"target": "{}",
 									"op": "merge"
 								}

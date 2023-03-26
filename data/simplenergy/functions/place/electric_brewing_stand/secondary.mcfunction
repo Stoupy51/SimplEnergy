@@ -1,7 +1,7 @@
 
 function simplenergy:place/block_tags
 item replace entity @s container.0 with deepslate{CustomModelData:2012404}
-tag @s add simplenergy.tick_glows
+tag @s add simplenergy.tick_entities
 tag @s add simplenergy.electric_brewing_stand
 tag @s add simplenergy.destroy_brewing_stand
 tag @s add energy.receive

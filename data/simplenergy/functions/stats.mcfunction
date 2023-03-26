@@ -29,10 +29,8 @@ tellraw @s ["",{"text":"Custom blocks loaded: ","color":"gray"},{"score":{"name"
 execute store result score #temp simplenergy.data if entity @e[tag=simplenergy.ore]
 tellraw @s ["",{"text":"Custom ores: ","color":"gray"},{"score":{"name":"#temp","objective":"simplenergy.data"},"color":"gold"}]
 
-execute store result score #temp simplenergy.data if entity @e[tag=simplenergy.chunk_scan]
-tellraw @s ["",{"text":"Chunks markers: ","color":"gray"},{"score":{"name":"#temp","objective":"simplenergy.data"},"color":"gold"}]
-
 execute store result score #temp simplenergy.data if entity @e[tag=furnace_nbt_recipes.furnace]
 tellraw @s ["",{"text":"Markers on furnaces: ","color":"gray"},{"score":{"name":"#temp","objective":"simplenergy.data"},"color":"gold"}]
 
 scoreboard players reset #temp simplenergy.data
+

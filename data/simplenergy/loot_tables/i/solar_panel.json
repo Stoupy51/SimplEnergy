@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.2012303.tag",
+									"source": "all.solar_panel.tag",
 									"target": "{}",
 									"op": "merge"
 								}

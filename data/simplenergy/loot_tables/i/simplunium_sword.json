@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.2012105.tag",
+									"source": "all.simplunium_sword.tag",
 									"target": "{}",
 									"op": "merge"
 								}

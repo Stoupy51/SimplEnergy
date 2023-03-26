@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.2012300.tag",
+									"source": "all.cauldron_generator.tag",
 									"target": "{}",
 									"op": "merge"
 								}

@@ -1,5 +1,5 @@
 
-#Look at where the block has been placed
+# Look at where the block has been placed
 execute positioned ~-8 ~ ~-8 if block ~ ~ ~ #simplenergy:player_heads{SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220135]}} run summon marker ~ ~ ~ {Tags:["simplenergy.placed"]}
 execute positioned ~-8 ~ ~-7 if block ~ ~ ~ #simplenergy:player_heads{SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220135]}} run summon marker ~ ~ ~ {Tags:["simplenergy.placed"]}
 execute positioned ~-8 ~ ~-6 if block ~ ~ ~ #simplenergy:player_heads{SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220135]}} run summon marker ~ ~ ~ {Tags:["simplenergy.placed"]}

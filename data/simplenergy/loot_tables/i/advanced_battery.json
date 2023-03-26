@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.2012201.tag",
+									"source": "all.advanced_battery.tag",
 									"target": "{}",
 									"op": "merge"
 								}

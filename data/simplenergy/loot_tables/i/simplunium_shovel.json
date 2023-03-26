@@ -16,7 +16,7 @@
 							},
 							"ops": [
 								{
-									"source": "all.2012109.tag",
+									"source": "all.simplunium_shovel.tag",
 									"target": "{}",
 									"op": "merge"
 								}
