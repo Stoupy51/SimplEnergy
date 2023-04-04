@@ -13,6 +13,7 @@ scoreboard players set #1000000 simplenergy.data 1000000
 scoreboard players set #10000 simplenergy.data 10000
 scoreboard players set #1000 simplenergy.data 1000
 scoreboard players set #400 simplenergy.data 400
+scoreboard players set #360 simplenergy.data 360
 scoreboard players set #260 simplenergy.data 260
 scoreboard players set #100 simplenergy.data 100
 scoreboard players set #80 simplenergy.data 80

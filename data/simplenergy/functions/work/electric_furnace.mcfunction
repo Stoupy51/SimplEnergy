@@ -7,8 +7,8 @@ execute store result score #burn_time simplenergy.data run data get storage simp
 # Change CookTime value and use Energy & playsound on work
 execute if score #cook_time simplenergy.data matches 1.. run scoreboard players remove @s energy.storage 10
 execute if score #cook_time simplenergy.data matches 1.. run scoreboard players add #cook_time simplenergy.data 15
-execute if score #cook_time simplenergy.data matches 1.. run playsound simplenergy:electric_furnace block @a[distance=2..12,tag=!simplenergy.ps.electric_furnace] ~ ~ ~ 0.04
-execute if score #cook_time simplenergy.data matches 1.. run playsound simplenergy:electric_furnace block @a[distance=..2,tag=!simplenergy.ps.electric_furnace] ~ ~ ~ 0.20
+execute if score #cook_time simplenergy.data matches 1.. run playsound simplenergy:electric_furnace block @a[distance=4..12,tag=!simplenergy.ps.electric_furnace] ~ ~ ~ 0.04
+execute if score #cook_time simplenergy.data matches 1.. run playsound simplenergy:electric_furnace block @a[distance=..4,tag=!simplenergy.ps.electric_furnace] ~ ~ ~ 0.20
 execute if score #cook_time simplenergy.data matches 1.. run tag @a[distance=..12] add simplenergy.ps.electric_furnace
 execute if score #cook_time simplenergy.data matches 200.. run scoreboard players set #cook_time simplenergy.data 199
 execute if score #cook_time simplenergy.data matches 1.. store result block ~ ~ ~ CookTime short 1 run scoreboard players get #cook_time simplenergy.data
