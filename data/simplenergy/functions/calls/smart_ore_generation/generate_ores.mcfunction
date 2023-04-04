@@ -3,7 +3,6 @@
 scoreboard players set #dimension smart_ore_generation.data -1
 execute if predicate simplenergy:in_overworld run scoreboard players set #dimension smart_ore_generation.data 0
 
-
 # Generate Simplunium Ore (x4) in the overworld only
 scoreboard players operation #min_height smart_ore_generation.data = _OVERWORLD_BOTTOM smart_ore_generation.data
 scoreboard players set #max_height smart_ore_generation.data 40

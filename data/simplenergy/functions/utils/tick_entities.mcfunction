@@ -1,4 +1,12 @@
 
+#> simplenergy:utils/tick_entities
+#
+# @within			simplenergy:tick
+# @executed			as and at current entity (custom block)
+#
+# @description		Function executed every tick for every entity with simplenergy.tick_entities tag
+#
+
 # Copy block data to storage
 data modify storage simplenergy:temp all set from block ~ ~ ~
 

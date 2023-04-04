@@ -1,5 +1,13 @@
 
-# Setblock yellow
+#> simplenergy:utils/tick_second_players
+#
+# @within			simplenergy:tick_second
+# @executed			as and at current player
+#
+# @description		Function executed every second for each player
+#
+
+# Setblock yellow shulker box at force loaded chunk (Used for energy lore and more)
 setblock -30000000 14 1610 yellow_shulker_box
 forceload add -30000000 1600
 

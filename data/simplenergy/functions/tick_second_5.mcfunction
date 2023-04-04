@@ -1,4 +1,12 @@
 
+#> simplenergy:tick_second_5
+#
+# @within			simplenergy:tick
+# @executed			default context
+#
+# @description		Function executed every 5 seconds
+#
+
 # Timer
 scoreboard players set #second_5 simplenergy.data -10
 

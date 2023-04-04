@@ -25,4 +25,3 @@ execute store result score @s smithed.data if entity @s[scores={smithed.data=0}]
 # Elite Cable
 execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:input {recipe:[{Count:8b,id:"minecraft:redstone"},{Count:1b,tag:{ctc:{id:"advanced_cable"}}}]} run loot replace block ~ ~ ~ container.16 loot simplenergy:i/elite_cable
 
-

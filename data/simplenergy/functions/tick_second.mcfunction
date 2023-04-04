@@ -1,4 +1,12 @@
 
+#> simplenergy:tick_second
+#
+# @within			simplenergy:tick
+# @executed			default context
+#
+# @description		Function executed every second
+#
+
 # Timer
 scoreboard players set #second simplenergy.data 0
 

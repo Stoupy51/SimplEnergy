@@ -1,4 +1,12 @@
 
+#> simplenergy:utils/tick_second_entities
+#
+# @within			simplenergy:tick_second
+# @executed			as and at current entity (custom block)
+#
+# @description		Function executed every second for every entity with simplenergy.destroyer tag that is are not ore
+#
+
 # Work Functions
 execute if entity @s[tag=simplenergy.cauldron_generator] unless score @s energy.storage matches 500.. unless block ~ ~ ~ cauldron run function simplenergy:work/cauldron_generator
 execute if entity @s[tag=simplenergy.solar_panel] unless score @s energy.storage matches 600.. run function simplenergy:work/solar_panel

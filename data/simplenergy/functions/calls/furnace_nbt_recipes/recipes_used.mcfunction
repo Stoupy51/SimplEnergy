@@ -16,4 +16,3 @@ execute if score #found furnace_nbt_recipes.data matches 0 store result score #f
 execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input.tag.ctc{traits:{"metal/simplunium":1b,"armor":1b}} run function simplenergy:calls/furnace_nbt_recipes/xp/2.0
 execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input.tag.ctc{traits:{"metal/simplunium":1b,"tool":1b}} run function simplenergy:calls/furnace_nbt_recipes/xp/2.0
 
-

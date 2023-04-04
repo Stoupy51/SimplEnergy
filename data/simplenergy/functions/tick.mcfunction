@@ -1,4 +1,12 @@
 
+#> simplenergy:tick
+#
+# @within			simplenergy:utils/tick_verification
+# @executed			default context
+#
+# @description		Function executed every tick
+#
+
 # Timers
 scoreboard players add #second simplenergy.data 1
 scoreboard players add #second_5 simplenergy.data 1
