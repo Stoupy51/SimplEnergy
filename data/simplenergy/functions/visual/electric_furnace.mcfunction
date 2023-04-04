@@ -12,8 +12,8 @@ execute if score @s energy.storage matches 601..799 run item replace block ~ ~ ~
 execute if score @s energy.storage matches 800.. run item replace block ~ ~ ~ container.1 with cobblestone{CustomModelData:2011993,simplenergy:{texture_item:1b},display:{Name:'""'}}
 
 # Update block visual depends on CookTime
-execute if score #cook_time simplenergy.data matches 0 run data modify entity @s[tag=simplenergy.update_visual] Item.tag.CustomModelData set value 2012400
+execute if score #cook_time simplenergy.data matches 0 run data modify entity @s[tag=simplenergy.update_visual] item.tag.CustomModelData set value 2012400
 tag @s remove simplenergy.update_visual
 execute if score #cook_time simplenergy.data matches 0 run tag @s add simplenergy.update_visual
-execute unless score #cook_time simplenergy.data matches 0 run data modify entity @s Item.tag.CustomModelData set value 2012401
+execute unless score #cook_time simplenergy.data matches 0 run data modify entity @s item.tag.CustomModelData set value 2012401
 
