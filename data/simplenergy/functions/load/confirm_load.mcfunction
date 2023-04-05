@@ -47,6 +47,7 @@ gamerule maxCommandChainLength 2147483647
 #define score_holder #count
 #define score_holder #temp
 #define score_holder #pos
+#define loot_table none
 
 
 
