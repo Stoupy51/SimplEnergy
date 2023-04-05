@@ -2,7 +2,7 @@
 #> simplenergy:utils/tick_second_entities
 #
 # @within			simplenergy:tick_second
-# @executed			as and at current entity (custom block)
+# @executed			as & at current entity (custom block)
 #
 # @description		Function executed every second for every entity with simplenergy.destroyer tag that is are not ore
 #

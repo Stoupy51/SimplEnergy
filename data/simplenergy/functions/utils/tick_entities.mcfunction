@@ -2,7 +2,7 @@
 #> simplenergy:utils/tick_entities
 #
 # @within			simplenergy:tick
-# @executed			as and at current entity (custom block)
+# @executed			as & at current entity (custom block)
 #
 # @description		Function executed every tick for every entity with simplenergy.tick_entities tag
 #
