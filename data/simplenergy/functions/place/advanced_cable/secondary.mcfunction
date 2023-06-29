@@ -9,7 +9,7 @@ tag @s add energy.cable
 # Item display brightness, translation, and rotation
 data remove entity @s brightness
 data modify entity @s transformation.translation[1] set value -0.24f
-data modify entity @s Rotation set value [180.0f, 180.0f]
+data modify entity @s Rotation set value [0.0f, 180.0f]
 
 # Call on a new cable to initialize its connections
 scoreboard players set @s energy.transfer_rate 60

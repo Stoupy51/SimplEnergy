@@ -3,10 +3,17 @@
 		"requirement": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"item": {
-					"items": ["minecraft:player_head"],
-					"nbt": "{simplenergy:{advanced_cable:1b}}"
-				}
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:player_head"
+							],
+							"nbt": "{simplenergy:{advanced_cable:1b}}"
+						}
+					}
+				]
 			}
 		}
 	},

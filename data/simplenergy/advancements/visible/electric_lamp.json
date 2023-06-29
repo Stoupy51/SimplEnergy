@@ -1,19 +1,34 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2012405}" },
-		"title": { "text": "Light Up Your House", "color": "gray" },
-		"description": { "text": "Get your first Electric Lamp", "color": "green" },
+		"icon": {
+			"item": "minecraft:barrel",
+			"nbt": "{CustomModelData:2012405}"
+		},
+		"title": {
+			"text": "Light Up Your House",
+			"color": "gray"
+		},
+		"description": {
+			"text": "Get your first Electric Lamp",
+			"color": "green"
+		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
 	"parent": "simplenergy:visible/electric_smelter",
-	"criteria": { "requirement": {
-		"trigger": "minecraft:inventory_changed",
-		"conditions": { "items": [{
-			"tag": "simplenergy:items",
-			"nbt": "{simplenergy:{electric_lamp:1b}}"
-		}]}
-	}}
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "simplenergy:items",
+						"nbt": "{simplenergy:{electric_lamp:1b}}"
+					}
+				]
+			}
+		}
+	}
 }
