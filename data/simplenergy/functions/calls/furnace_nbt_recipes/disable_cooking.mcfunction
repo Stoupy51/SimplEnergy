@@ -1,5 +1,5 @@
 
-## Called by function tag #furnace_nbt_recipes:v1.0/disable_cooking
+## Called by function tag #furnace_nbt_recipes:v1/disable_cooking
 ## In this function, you should only disable recipes that you added yourself.
 ## For instance, barrel and command_block recipes are added by default
 ## in the furnace_nbt_recipes/recipes/ folder.
