@@ -4,6 +4,11 @@
 			"trigger": "minecraft:tick"
 		}
 	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
 	"rewards": {
 		"loot": [
 			"simplenergy:i/simplenergy_manual"

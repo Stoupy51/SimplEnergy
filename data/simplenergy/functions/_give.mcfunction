@@ -25,7 +25,7 @@ loot give @s loot simplenergy:i/wrench
 loot give @s loot simplenergy:i/simple_battery
 loot give @s loot simplenergy:i/advanced_battery
 loot give @s loot simplenergy:i/elite_battery
-loot give @s loot simplenergy:i/elite_battery_creative
+loot give @s loot simplenergy:i/elite_creative_battery
 
 loot give @s loot simplenergy:i/cauldron_generator
 loot give @s loot simplenergy:i/furnace_generator

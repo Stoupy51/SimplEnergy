@@ -10,7 +10,6 @@ execute if score #is_silk_touch simplenergy.data matches 0 run scoreboard player
 execute if score #is_silk_touch simplenergy.data matches 0 run scoreboard players add #temp simplenergy.data 1
 execute if score #is_silk_touch simplenergy.data matches 0 run scoreboard players operation #count simplenergy.data *= #temp simplenergy.data
 execute if score #is_silk_touch simplenergy.data matches 0 store result entity @e[type=item,nbt={Age:0s,Item:{tag:{simplenergy:{raw_simplunium:1b}}}},limit=1,sort=nearest,distance=..1] Item.Count byte 1 run scoreboard players get #count simplenergy.data
-execute if score #is_silk_touch simplenergy.data matches 0 if predicate simplenergy:chance/0.1 run loot spawn ~ ~ ~ loot simplenergy:i/simplunium_dust
 
 # Remove the block
 kill @s

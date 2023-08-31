@@ -30,5 +30,10 @@
 				]
 			}
 		}
-	}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
 }

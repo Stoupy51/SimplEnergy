@@ -6,10 +6,10 @@
 			"predicate": {
 				"block": {
 					"state": {
-						"inverted": false,
+						"inverted": "false",
 						"power": {
-							"min": 10,
-							"max": 15
+							"min": "10",
+							"max": "15"
 						}
 					}
 				}
@@ -20,10 +20,10 @@
 			"predicate": {
 				"block": {
 					"state": {
-						"inverted": true,
+						"inverted": "true",
 						"power": {
-							"min": 0,
-							"max": 5
+							"min": "0",
+							"max": "5"
 						}
 					}
 				}

@@ -4,6 +4,11 @@
 			"trigger": "minecraft:inventory_changed"
 		}
 	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
 	"rewards": {
 		"function": "simplenergy:advancements/inventory_changed"
 	}

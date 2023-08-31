@@ -17,6 +17,11 @@
 			}
 		}
 	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
 	"rewards": {
 		"function": "simplenergy:place/advanced_cable/"
 	}
