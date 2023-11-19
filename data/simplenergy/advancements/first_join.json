@@ -10,8 +10,6 @@
 		]
 	],
 	"rewards": {
-		"loot": [
-			"simplenergy:i/simplenergy_manual"
-		]
+		"function": "simplenergy:advancements/first_join"
 	}
 }
