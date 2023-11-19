@@ -2,5 +2,6 @@
 	"pack": {
 		"pack_format": 17,
 		"description": "SimplEnergy [v2.0.0]"
-	}
+	},
+	"id": "simplenergy"
 }
