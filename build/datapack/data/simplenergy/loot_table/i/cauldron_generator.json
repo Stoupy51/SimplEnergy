@@ -1,0 +1,35 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"energy": {"generation": 5,"max_storage": 500},
+									"simplenergy": {"cauldron_generator": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								},
+								"minecraft:lore": [
+									"{\"text\":\"[Energy Generation: 5 kW]\",\"italic\":false,\"color\":\"gray\"}",
+									"{\"text\":\"[Energy Buffer: 500 kJ]\",\"italic\":false,\"color\":\"gray\"}",
+									"{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"
+								],
+								"minecraft:item_name": "{'text': 'Cauldron Generator', 'italic': false, 'color': 'white'}",
+								"minecraft:container": [
+									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:cauldron_generator","from": "simplenergy"}}}}}}
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

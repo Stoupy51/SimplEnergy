@@ -1,0 +1,51 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"pattern": [
+		"CCC",
+		"CRC",
+		"III"
+	],
+	"key": {
+		"C": {
+			"item": "minecraft:copper_block"
+		},
+		"R": {
+			"item": "minecraft:redstone"
+		},
+		"I": {
+			"item": "minecraft:iron_ingot"
+		}
+	},
+	"result": {
+		"id": "minecraft:furnace",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"energy": {
+					"storage": 0,
+					"max_storage": 10000
+				},
+				"simplenergy": {
+					"simple_battery": true
+				},
+				"smithed": {
+					"ignore": {"functionality": true,"crafting": true}
+				}
+			},
+			"minecraft:lore": [
+				"{\"text\":\"[Energy Storage: 10 MJ]\",\"italic\":false,\"color\":\"gray\"}",
+				"{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"
+			],
+			"minecraft:custom_model_data": 2012019,
+			"minecraft:item_name": "{'text': 'Simple Battery', 'italic': false, 'color': 'white'}",
+			"minecraft:container": [
+				{
+					"slot": 0,
+					"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:simple_battery","from": "simplenergy"}}}}}
+				}
+			]
+		}
+	}
+}
+

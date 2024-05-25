@@ -1,0 +1,52 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"pattern": [
+		"LLL",
+		"LDL",
+		"III"
+	],
+	"key": {
+		"L": {
+			"item": "minecraft:lapis_lazuli"
+		},
+		"D": {
+			"item": "minecraft:daylight_detector"
+		},
+		"I": {
+			"item": "minecraft:iron_block"
+		}
+	},
+	"result": {
+		"id": "minecraft:furnace",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"energy": {
+					"generation": 4,
+					"max_storage": 600
+				},
+				"simplenergy": {
+					"solar_panel": true
+				},
+				"smithed": {
+					"ignore": {"functionality": true,"crafting": true}
+				}
+			},
+			"minecraft:lore": [
+				"{\"text\":\"[Energy Generation: 4 kW]\",\"italic\":false,\"color\":\"gray\"}",
+				"{\"text\":\"[Energy Buffer: 600 kJ]\",\"italic\":false,\"color\":\"gray\"}",
+				"{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"
+			],
+			"minecraft:custom_model_data": 2012025,
+			"minecraft:item_name": "{'text': 'Solar Panel', 'italic': false, 'color': 'white'}",
+			"minecraft:container": [
+				{
+					"slot": 0,
+					"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:solar_panel","from": "simplenergy"}}}}}
+				}
+			]
+		}
+	}
+}
+

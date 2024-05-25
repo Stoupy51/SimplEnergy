@@ -1,0 +1,8 @@
+{
+	"parent": "minecraft:item/leather_chestplate",
+	"textures": {
+		"layer0": "simplenergy:item/simplunium_chestplate",
+		"layer1": "simplenergy:item/simplunium_chestplate"
+	}
+}
+

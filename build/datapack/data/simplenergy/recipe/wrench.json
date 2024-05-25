@@ -1,0 +1,38 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"pattern": [
+		"I",
+		"I"
+	],
+	"key": {
+		"I": {
+			"item": "minecraft:iron_ingot"
+		}
+	},
+	"result": {
+		"id": "minecraft:warped_fungus_on_a_stick",
+		"count": 1,
+		"components": {
+			"minecraft:unbreakable": {
+				"show_in_tooltip": false
+			},
+			"minecraft:lore": [
+				"{\"text\":\"Provides you the ability to instantly\",\"italic\":false,\"color\":\"gray\"}",
+				"{\"text\":\"break cables and rotates machines while sneaking\",\"italic\":false,\"color\":\"gray\"}",
+				"{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"
+			],
+			"minecraft:custom_model_data": 2012018,
+			"minecraft:item_name": "{'text': 'Wrench', 'italic': false, 'color': 'white'}",
+			"minecraft:custom_data": {
+				"simplenergy": {
+					"wrench": true
+				},
+				"smithed": {
+					"ignore": {"functionality": true,"crafting": true}
+				}
+			}
+		}
+	}
+}
+

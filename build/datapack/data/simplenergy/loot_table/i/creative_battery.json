@@ -1,0 +1,36 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"energy": {"storage": 2000000000,"max_storage": 2147483647},
+									"simplenergy": {"creative_battery": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								},
+								"minecraft:enchantment_glint_override": true,
+								"minecraft:lore": [
+									"{\"text\":\"[Energy Storage: 2147 GJ]\",\"italic\":false,\"color\":\"gray\"}",
+									"{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"
+								],
+								"minecraft:custom_model_data": 2012022,
+								"minecraft:item_name": "{'text': 'Creative Battery', 'italic': false, 'color': 'white'}",
+								"minecraft:container": [
+									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:creative_battery","from": "simplenergy"}}}}}}
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

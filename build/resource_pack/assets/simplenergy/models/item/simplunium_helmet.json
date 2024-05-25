@@ -1,0 +1,8 @@
+{
+	"parent": "minecraft:item/leather_helmet",
+	"textures": {
+		"layer0": "simplenergy:item/simplunium_helmet",
+		"layer1": "simplenergy:item/simplunium_helmet"
+	}
+}
+

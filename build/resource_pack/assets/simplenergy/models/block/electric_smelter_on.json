@@ -1,0 +1,9 @@
+{
+	"parent": "block/orientable",
+	"textures": {
+		"front": "simplenergy:block/electric_smelter_front_on",
+		"side": "simplenergy:block/electric_smelter_side",
+		"top": "simplenergy:block/electric_smelter_top"
+	}
+}
+

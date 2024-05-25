@@ -1,0 +1,55 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"pattern": [
+		"III",
+		"RFR",
+		"SSS"
+	],
+	"key": {
+		"I": {
+			"item": "minecraft:iron_block"
+		},
+		"R": {
+			"item": "minecraft:redstone"
+		},
+		"F": {
+			"item": "minecraft:furnace"
+		},
+		"S": {
+			"item": "minecraft:stone"
+		}
+	},
+	"result": {
+		"id": "minecraft:furnace",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"energy": {
+					"generation": 10,
+					"max_storage": 800
+				},
+				"simplenergy": {
+					"furnace_generator": true
+				},
+				"smithed": {
+					"ignore": {"functionality": true,"crafting": true}
+				}
+			},
+			"minecraft:lore": [
+				"{\"text\":\"[Energy Generation: 10 kW]\",\"italic\":false,\"color\":\"gray\"}",
+				"{\"text\":\"[Energy Buffer: 800 kJ]\",\"italic\":false,\"color\":\"gray\"}",
+				"{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"
+			],
+			"minecraft:custom_model_data": 2012023,
+			"minecraft:item_name": "{'text': 'Furnace Generator', 'italic': false, 'color': 'white'}",
+			"minecraft:container": [
+				{
+					"slot": 0,
+					"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:furnace_generator","from": "simplenergy"}}}}}
+				}
+			]
+		}
+	}
+}
+

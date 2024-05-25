@@ -1,0 +1,11 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "item/leather_chestplate",
+		"layer1": "item/leather_chestplate_overlay"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 2012009}, "model": "simplenergy:item/simplunium_chestplate" }
+	]
+}
+

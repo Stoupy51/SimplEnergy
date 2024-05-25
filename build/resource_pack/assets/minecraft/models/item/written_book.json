@@ -1,0 +1,10 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "item/written_book"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 2011999}, "model": "simplenergy:item/manual" }
+	]
+}
+

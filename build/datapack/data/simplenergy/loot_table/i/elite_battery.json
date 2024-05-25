@@ -1,0 +1,35 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"energy": {"storage": 0,"max_storage": 50000},
+									"simplenergy": {"elite_battery": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								},
+								"minecraft:lore": [
+									"{\"text\":\"[Energy Storage: 50 MJ]\",\"italic\":false,\"color\":\"gray\"}",
+									"{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"
+								],
+								"minecraft:custom_model_data": 2012021,
+								"minecraft:item_name": "{'text': 'Elite Battery', 'italic': false, 'color': 'white'}",
+								"minecraft:container": [
+									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:elite_battery","from": "simplenergy"}}}}}}
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

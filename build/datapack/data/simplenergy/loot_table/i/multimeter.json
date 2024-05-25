@@ -1,0 +1,36 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:warped_fungus_on_a_stick",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:unbreakable": {
+									"show_in_tooltip": false
+								},
+								"minecraft:lore": [
+									"{\"text\":\"Allows you to analyse machines\",\"italic\":false,\"color\":\"gray\"}",
+									"{\"text\":\"to get their energy information\",\"italic\":false,\"color\":\"gray\"}",
+									"{\"text\":\"[Hold in offhand for passive use]\",\"italic\":false,\"color\":\"white\"}",
+									"{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"
+								],
+								"minecraft:custom_model_data": 2012017,
+								"minecraft:item_name": "{'text': 'Multimeter', 'italic': false, 'color': 'white'}",
+								"minecraft:custom_data": {
+									"simplenergy": {"multimeter": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
