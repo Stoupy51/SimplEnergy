@@ -15,7 +15,6 @@
 									"simplenergy": {"creative_battery": true},
 									"smithed": {"ignore": {"functionality": true,"crafting": true}}
 								},
-								"minecraft:enchantment_glint_override": true,
 								"minecraft:lore": [
 									"{\"text\":\"[Energy Storage: 2147 GJ]\",\"italic\":false,\"color\":\"gray\"}",
 									"{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"

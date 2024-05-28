@@ -14,7 +14,7 @@ tag @s add simplenergy.electric_brewing_stand
 tag @s add simplenergy.vanilla.minecraft_brewing_stand
 
 # Modify item display entity to match the custom block
-item replace entity @s container.0 with deepslate[minecraft:custom_model_data=2012030]
+item replace entity @s container.0 with minecraft:furnace[minecraft:custom_model_data=2012030]
 data modify entity @s transformation.scale set value [1.002f,1.008f,1.002f]
 data modify entity @s transformation.translation[1] set value 0.003f
 data modify entity @s brightness set value {block:15,sky:15}
@@ -32,4 +32,8 @@ execute if score #rotation simplenergy.data matches 0 store success score #rotat
 execute if score #rotation simplenergy.data matches 0 store success score #rotation simplenergy.data if block ~ ~ ~ iron_trapdoor[facing=south] run data modify entity @s Rotation[0] set value 0.0f
 execute if score #rotation simplenergy.data matches 0 store success score #rotation simplenergy.data if block ~ ~ ~ iron_trapdoor[facing=west] run data modify entity @s Rotation[0] set value 90.0f
 # No more cases for now
+
+data modify entity @s Rotation[0] set value 180.0f
+data modify entity @s transformation.scale[1] set value 1.025f
+data modify entity @s transformation.translation[1] set value 0.01f
 
