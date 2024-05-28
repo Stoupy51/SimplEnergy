@@ -1,6 +1,7 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"category": "misc",
+	"group": "simple_cable",
 	"pattern": [
 		"ICI",
 		"IOI",
@@ -18,7 +19,7 @@
 		}
 	},
 	"result": {
-		"id": "minecraft:item_frame",
+		"id": "minecraft:player_head",
 		"count": 1,
 		"components": {
 			"minecraft:custom_data": {

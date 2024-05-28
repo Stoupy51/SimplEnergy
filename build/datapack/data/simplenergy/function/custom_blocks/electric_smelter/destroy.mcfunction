@@ -8,5 +8,6 @@
 execute as @e[type=item,nbt={Item:{id:"minecraft:furnace"}},limit=1,sort=nearest,distance=..1] run function simplenergy:custom_blocks/electric_smelter/replace_item
 
 # Kill the custom block entity
+function energy:v1/api/break_machine
 kill @s
 

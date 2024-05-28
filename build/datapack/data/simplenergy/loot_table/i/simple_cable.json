@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:item_frame",
+					"name": "minecraft:player_head",
 					"functions": [
 						{
 							"function": "minecraft:set_components",

@@ -39,12 +39,12 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 		# "pulveriser": TODO,
 
 		"simple_cable": {
-			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: "energy", "custom_data": {"energy": {"transfer":20}}, "lore": ['{"text":"[Transfer Speed: 20 kW]","italic":false,"color":"gray"}'],
+			"id": CUSTOM_BLOCK_HEAD, CATEGORY: "energy", "custom_data": {"energy": {"transfer":20}}, "lore": ['{"text":"[Transfer Speed: 20 kW]","italic":false,"color":"gray"}'],
 			RESULT_OF_CRAFTING:[
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["ICI","IOI","ICI"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:coal")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["ICI","IOI","ICI"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:charcoal")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","COC","III"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:coal")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","COC","III"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:charcoal")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","group":"simple_cable","shape":["ICI","IOI","ICI"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:coal")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","group":"simple_cable","shape":["ICI","IOI","ICI"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:charcoal")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","group":"simple_cable","shape":["III","COC","III"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:coal")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","group":"simple_cable","shape":["III","COC","III"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:charcoal")}},
 			],
 			"profile": {
 				"id": [-709098200,1001541428,-2043264882,-430220135],
@@ -52,7 +52,7 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 			},
 		},
 		"advanced_cable": {
-			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: "energy", "custom_data": {"energy": {"transfer":60}}, "lore": ['{"text":"[Transfer Speed: 60 kW]","italic":false,"color":"gray"}'],
+			"id": CUSTOM_BLOCK_HEAD, CATEGORY: "energy", "custom_data": {"energy": {"transfer":60}}, "lore": ['{"text":"[Transfer Speed: 60 kW]","italic":false,"color":"gray"}'],
 			RESULT_OF_CRAFTING:[
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("simple_cable", NAMESPACE)] + 8*[ingr_repr("minecraft:lapis_lazuli")]},
 			],
@@ -62,7 +62,7 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 			},
 		},
 		"elite_cable": {
-			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: "energy", "custom_data": {"energy": {"transfer":120}}, "lore": ['{"text":"[Transfer Speed: 120 kW]","italic":false,"color":"gray"}'],
+			"id": CUSTOM_BLOCK_HEAD, CATEGORY: "energy", "custom_data": {"energy": {"transfer":120}}, "lore": ['{"text":"[Transfer Speed: 120 kW]","italic":false,"color":"gray"}'],
 			RESULT_OF_CRAFTING:[
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("advanced_cable", NAMESPACE)] + 4*[ingr_repr("minecraft:redstone_block")]},
 			],
@@ -74,26 +74,26 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 	}
 
 	# Custom blocks
-	database_additions["simplunium_block"] = {VANILLA_BLOCK: {"id": "minecraft:iron_block", "block_states":[]}}
+	database_additions["simplunium_block"] = {VANILLA_BLOCK: {"id": "minecraft:iron_block", "apply_facing": False}}
 	database_additions["simplunium_ore"] = {VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES, NO_SILK_TOUCH_DROP: "raw_simplunium"}
 	database_additions["deepslate_simplunium_ore"] = {VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES, NO_SILK_TOUCH_DROP: "raw_simplunium"}
-	database_additions["raw_simplunium_block"] = {VANILLA_BLOCK: {"id": "minecraft:raw_iron_block", "block_states":[]}}
-	database_additions["simple_battery"][VANILLA_BLOCK] = {"id": "minecraft:copper_block", "block_states":[]}
-	database_additions["advanced_battery"][VANILLA_BLOCK] = {"id": "minecraft:gold_block", "block_states":[]}
-	database_additions["elite_battery"][VANILLA_BLOCK] = {"id": "minecraft:iron_block", "block_states":[]}
-	database_additions["creative_battery"][VANILLA_BLOCK] = {"id": "minecraft:iron_block", "block_states":[]}
-	database_additions["cauldron_generator"][VANILLA_BLOCK] = {"id": "minecraft:cauldron", "block_states":[]}
-	database_additions["furnace_generator"][VANILLA_BLOCK] = {"id": "minecraft:furnace", "block_states":["facing"]}
-	database_additions["solar_panel"][VANILLA_BLOCK] = {"id": "minecraft:daylight_detector", "block_states":[]}
-	database_additions["electric_furnace"][VANILLA_BLOCK] = {"id": "minecraft:furnace", "block_states":["facing"]}
-	database_additions["electric_smelter"][VANILLA_BLOCK] = {"id": "minecraft:furnace", "block_states":["facing"]}
-	database_additions["electric_brewing_stand"][VANILLA_BLOCK] = {"id": "minecraft:brewing_stand", "block_states":[]}
+	database_additions["raw_simplunium_block"] = {VANILLA_BLOCK: {"id": "minecraft:raw_iron_block", "apply_facing": False}}
+	database_additions["simple_battery"][VANILLA_BLOCK] = {"id": "minecraft:copper_block", "apply_facing": False}
+	database_additions["advanced_battery"][VANILLA_BLOCK] = {"id": "minecraft:gold_block", "apply_facing": False}
+	database_additions["elite_battery"][VANILLA_BLOCK] = {"id": "minecraft:iron_block", "apply_facing": False}
+	database_additions["creative_battery"][VANILLA_BLOCK] = {"id": "minecraft:iron_block", "apply_facing": False}
+	database_additions["cauldron_generator"][VANILLA_BLOCK] = {"id": "minecraft:cauldron", "apply_facing": False}
+	database_additions["furnace_generator"][VANILLA_BLOCK] = {"id": "minecraft:furnace", "apply_facing": True}
+	database_additions["solar_panel"][VANILLA_BLOCK] = {"id": "minecraft:daylight_detector", "apply_facing": False}
+	database_additions["electric_furnace"][VANILLA_BLOCK] = {"id": "minecraft:furnace", "apply_facing": True}
+	database_additions["electric_smelter"][VANILLA_BLOCK] = {"id": "minecraft:furnace", "apply_facing": True}
+	database_additions["electric_brewing_stand"][VANILLA_BLOCK] = {"id": "minecraft:brewing_stand", "apply_facing": False}
 	database_additions["electric_brewing_stand"][COMMANDS_ON_PLACEMENT] = "data modify entity @s Rotation[0] set value 180.0f"
 	database_additions["electric_brewing_stand"][COMMANDS_ON_PLACEMENT] += "\ndata modify entity @s transformation.scale[1] set value 1.025f"
 	database_additions["electric_brewing_stand"][COMMANDS_ON_PLACEMENT] += "\ndata modify entity @s transformation.translation[1] set value 0.01f"
-	database_additions["simple_cable"][VANILLA_BLOCK] = {"id": "minecraft:player_head", "block_states":[]}
-	database_additions["advanced_cable"][VANILLA_BLOCK] = {"id": "minecraft:player_head", "block_states":[]}
-	database_additions["elite_cable"][VANILLA_BLOCK] = {"id": "minecraft:player_head", "block_states":[]}
+	database_additions["simple_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(database_additions["simple_cable"]["profile"]) + "}"}
+	database_additions["advanced_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(database_additions["advanced_cable"]["profile"]) + "}"}
+	database_additions["elite_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(database_additions["elite_cable"]["profile"]) + "}"}
 
 	# Update the database with new data
 	for k, v in database_additions.items():
