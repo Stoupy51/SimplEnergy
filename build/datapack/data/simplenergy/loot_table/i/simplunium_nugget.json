@@ -15,9 +15,9 @@
 									"simplenergy": {"simplunium_nugget": true}
 								},
 								"minecraft:custom_model_data": 2012005,
-								"minecraft:item_name": "{'text': 'Simplunium Nugget', 'italic': false, 'color': 'white'}",
+								"minecraft:item_name": "{'translate':'simplenergy.simplunium_nugget', 'italic': false, 'color': 'white'}",
 								"minecraft:lore": [
-									"{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"
+									"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
 								]
 							}
 						}

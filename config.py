@@ -13,10 +13,9 @@ BUILD_COPY_DESTINATIONS: tuple[str, str] = ("D:/latest_snapshot/world/datapacks"
 
 # Dev constants
 HAS_MANUAL: bool = True								# Do the program generate a manual/guide? (WARNING: if an item is malformed in the database, the server log will be flooded on load by the manual hiding the malformed item)
-DEBUG_MODE: bool = False							# Shows up grids in manual,
 DATABASE_DEBUG: str = f"{ROOT}/database_debug.json"	# Dump of the database for debugging purposes
 CMD_CACHE: str = f"{ROOT}/cmd_cache.json"			# Cache of all items Custom Model Data
-ENABLE_TRANSLATIONS: bool = False					# Will convert all the text components to translate and generate a lang file (WARNING: The algorithm is pretty slow, so it's recommended to disable it when not needed)
+ENABLE_TRANSLATIONS: bool = True					# Will convert all the text components to translate and generate a lang file (WARNING: The algorithm is pretty slow, so it's recommended to disable it when not needed)
 LANG_FILE_DEBUG: str = f"{ROOT}/debug_lang.json"	# Dump of the lang file for debugging purposes
 MERGE_LIBS: bool = False							# Make new zip of merged libraries with the datapack and resource pack using Smithed Weld
 
@@ -47,14 +46,16 @@ DEPENDENCIES: dict[str, dict[str, list[int] | str]] = {
 SOURCE_LORE: list[dict] = [{"text": DATAPACK_NAME,"italic":True,"color":"blue"}]	# Appended lore to any custom item, can be an empty string
 
 # Manual configuration
+DEBUG_MODE: bool = False							# Shows up grids in manual
 MANUAL_PATH: str = f"{ROOT}/manual"					# Cached manual assets
+MANUAL_HIGH_RESOLUTION: bool = True					# Enable the high resolution for the manual to increase the craft resolutions
 CACHE_MANUAL_ASSETS: bool = True					# Caches the MC assets and the items renders for the manual (manual/items/*.png)
-CACHE_MANUAL_PAGES: bool = True					# Caches the content of the manual and the images (manual/pages/*.png)
+CACHE_MANUAL_PAGES: bool = False					# Caches the content of the manual and the images (manual/pages/*.png)
 MANUAL_DEBUG: str = f"{ROOT}/debug_manual.json"		# Dump of the manual for debugging purposes
 MANUAL_NAME: str = f"{DATAPACK_NAME} Manual"		# Name of the manual, used for the title of the book and first page
 MAX_ITEMS_PER_ROW: int = 5		# Max number of items per row in the manual, should not exceed 6
 MAX_ROWS_PER_PAGE: int = 5		# Max number of rows per page in the manual, should not exceed 6
-OPENGL_RESOLUTION: int = 64		# Resolution of the OpenGL renders used in the manual, best value is 64 <--- 64x64
+OPENGL_RESOLUTION: int = 256	# Resolution of the OpenGL renders used in the manual, best value is 256 <--- 256x256
 MANUAL_FIRST_PAGE_TEXT: list[dict] = [{"text":"The following manual will guide you through recipes and energy statistics about devices.", "color":"#505050"}]	# Text for the first page of the manual
 
 
@@ -95,5 +96,6 @@ configuration = {
 	"max_rows_per_page": MAX_ROWS_PER_PAGE,
 	"opengl_resolution": OPENGL_RESOLUTION,
 	"manual_first_page_text": MANUAL_FIRST_PAGE_TEXT,
+	"manual_high_resolution": MANUAL_HIGH_RESOLUTION,
 }
 

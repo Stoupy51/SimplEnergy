@@ -22,13 +22,13 @@
 				"show_in_tooltip": false
 			},
 			"minecraft:lore": [
-				"{\"text\":\"Allows you to analyse machines\",\"italic\":false,\"color\":\"gray\"}",
-				"{\"text\":\"to get their energy information\",\"italic\":false,\"color\":\"gray\"}",
-				"{\"text\":\"[Hold in offhand for passive use]\",\"italic\":false,\"color\":\"white\"}",
-				"{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"
+				"{\"translate\":\"simplenergy.allows_you_to_analyse_machines\",\"italic\":false,\"color\":\"gray\"}",
+				"{\"translate\":\"simplenergy.to_get_their_energy_information\",\"italic\":false,\"color\":\"gray\"}",
+				"{\"translate\":\"simplenergy.hold_in_offhand_for_passive_use\",\"italic\":false,\"color\":\"white\"}",
+				"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
 			],
 			"minecraft:custom_model_data": 2012017,
-			"minecraft:item_name": "{'text': 'Multimeter', 'italic': false, 'color': 'white'}",
+			"minecraft:item_name": "{'translate':'simplenergy.multimeter', 'italic': false, 'color': 'white'}",
 			"minecraft:custom_data": {
 				"simplenergy": {
 					"multimeter": true

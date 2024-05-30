@@ -23,9 +23,9 @@
 									{"type": "generic.armor","amount": 6.5,"operation": "add_value","slot": "chest","id": "simplenergy:generic.armor.chest"}
 								],
 								"minecraft:custom_model_data": 2012009,
-								"minecraft:item_name": "{'text': 'Simplunium Chestplate', 'italic': false, 'color': 'white'}",
+								"minecraft:item_name": "{'translate':'simplenergy.simplunium_chestplate', 'italic': false, 'color': 'white'}",
 								"minecraft:lore": [
-									"{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"
+									"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
 								]
 							}
 						}

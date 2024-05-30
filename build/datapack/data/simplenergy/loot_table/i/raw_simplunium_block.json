@@ -15,9 +15,9 @@
 									"simplenergy": {"raw_simplunium_block": true}
 								},
 								"minecraft:custom_model_data": 2012003,
-								"minecraft:item_name": "{'text': 'Raw Simplunium Block', 'italic': false, 'color': 'white'}",
+								"minecraft:item_name": "{'translate':'simplenergy.raw_simplunium_block', 'italic': false, 'color': 'white'}",
 								"minecraft:lore": [
-									"{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"
+									"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
 								],
 								"minecraft:container": [
 									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:raw_simplunium_block","from": "simplenergy"}}}}}}

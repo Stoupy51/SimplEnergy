@@ -34,11 +34,11 @@
 				}
 			},
 			"minecraft:lore": [
-				"{\"text\":\"[Energy Storage: 10 MJ]\",\"italic\":false,\"color\":\"gray\"}",
-				"{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"
+				"{\"translate\":\"simplenergy.energy_storage_10_mj\",\"italic\":false,\"color\":\"gray\"}",
+				"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
 			],
 			"minecraft:custom_model_data": 2012019,
-			"minecraft:item_name": "{'text': 'Simple Battery', 'italic': false, 'color': 'white'}",
+			"minecraft:item_name": "{'translate':'simplenergy.simple_battery', 'italic': false, 'color': 'white'}",
 			"minecraft:container": [
 				{
 					"slot": 0,
