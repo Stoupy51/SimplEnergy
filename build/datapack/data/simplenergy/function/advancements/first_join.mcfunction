@@ -1,7 +1,7 @@
 
 #> simplenergy:advancements/first_join
 #
-# @within	???
+# @within	advancement simplenergy:first_join
 #
 
 execute unless score #SimplEnergyLoaded load.status matches 1 run advancement revoke @s only simplenergy:first_join

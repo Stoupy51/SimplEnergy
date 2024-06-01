@@ -1,7 +1,7 @@
 
 #> simplenergy:custom_blocks/_player_head/search_advanced_cable
 #
-# @within	???
+# @within	advancement simplenergy:custom_block_head/advanced_cable
 #
 
 # Search where the head has been placed

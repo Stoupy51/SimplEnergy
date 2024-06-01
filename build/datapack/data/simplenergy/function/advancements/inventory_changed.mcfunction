@@ -1,7 +1,7 @@
 
 #> simplenergy:advancements/inventory_changed
 #
-# @within	???
+# @within	advancement simplenergy:inventory_changed
 #
 
 # Revoke advancement

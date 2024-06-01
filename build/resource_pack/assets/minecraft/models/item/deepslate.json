@@ -1,7 +1,27 @@
 {
 	"parent": "block/deepslate",
 	"overrides": [
-		{ "predicate": { "custom_model_data": 2010000}, "model": "minecraft:item/none" }
+		{"predicate": {"custom_model_data": 2010000},"model": "minecraft:item/none"},
+		{"predicate": {"custom_model_data": 2012980},"model": "simplenergy:block/gui/furnace_generator_working.png"},
+		{"predicate": {"custom_model_data": 2012981},"model": "simplenergy:block/gui/furnace_generator.png"},
+		{"predicate": {"custom_model_data": 2012982},"model": "simplenergy:block/gui/electric_smelter_5.png"},
+		{"predicate": {"custom_model_data": 2012983},"model": "simplenergy:block/gui/electric_smelter_4.png"},
+		{"predicate": {"custom_model_data": 2012984},"model": "simplenergy:block/gui/electric_smelter_3.png"},
+		{"predicate": {"custom_model_data": 2012985},"model": "simplenergy:block/gui/electric_smelter_2.png"},
+		{"predicate": {"custom_model_data": 2012986},"model": "simplenergy:block/gui/electric_smelter_1.png"},
+		{"predicate": {"custom_model_data": 2012987},"model": "simplenergy:block/gui/electric_smelter_0.png"},
+		{"predicate": {"custom_model_data": 2012988},"model": "simplenergy:block/gui/electric_furnace_5.png"},
+		{"predicate": {"custom_model_data": 2012989},"model": "simplenergy:block/gui/electric_furnace_4.png"},
+		{"predicate": {"custom_model_data": 2012990},"model": "simplenergy:block/gui/electric_furnace_3.png"},
+		{"predicate": {"custom_model_data": 2012991},"model": "simplenergy:block/gui/electric_furnace_2.png"},
+		{"predicate": {"custom_model_data": 2012992},"model": "simplenergy:block/gui/electric_furnace_1.png"},
+		{"predicate": {"custom_model_data": 2012993},"model": "simplenergy:block/gui/electric_furnace_0.png"},
+		{"predicate": {"custom_model_data": 2012994},"model": "simplenergy:block/gui/electric_brewing_stand_5.png"},
+		{"predicate": {"custom_model_data": 2012995},"model": "simplenergy:block/gui/electric_brewing_stand_4.png"},
+		{"predicate": {"custom_model_data": 2012996},"model": "simplenergy:block/gui/electric_brewing_stand_3.png"},
+		{"predicate": {"custom_model_data": 2012997},"model": "simplenergy:block/gui/electric_brewing_stand_2.png"},
+		{"predicate": {"custom_model_data": 2012998},"model": "simplenergy:block/gui/electric_brewing_stand_1.png"},
+		{"predicate": {"custom_model_data": 2012999},"model": "simplenergy:block/gui/electric_brewing_stand_0.png"}
 	]
 }
 
