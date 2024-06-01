@@ -1,8 +1,10 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:soul_campfire",
-			"nbt": "{CustomModelData:2012303}"
+			"id": "minecraft:furnace",
+			"components": {
+				"minecraft:custom_model_data": 2012025
+			}
 		},
 		"title": {
 			"translate":"simplenergy.use_the_sunlight",
@@ -17,15 +19,15 @@
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "simplenergy:visible/furnace_generator",
 	"criteria": {
 		"requirement": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
-						"tag": "simplenergy:items",
-						"nbt": "{simplenergy:{solar_panel:1b}}"
+						"components": {
+							"minecraft:custom_data": "{\"simplenergy\": {\"solar_panel\": true}}"
+						}
 					}
 				]
 			}
@@ -35,6 +37,7 @@
 		[
 			"requirement"
 		]
-	]
+	],
+	"parent": "simplenergy:visible/furnace_generator"
 }
 

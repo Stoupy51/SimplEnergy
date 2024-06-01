@@ -1,8 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:barrel",
-			"nbt": "{CustomModelData:2012300}"
+			"id": "minecraft:furnace"
 		},
 		"title": {
 			"translate":"simplenergy.the_simpler_generator",
@@ -17,15 +16,15 @@
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "simplenergy:visible/simplunium_ingot",
 	"criteria": {
 		"requirement": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
-						"tag": "simplenergy:items",
-						"nbt": "{simplenergy:{cauldron_generator:1b}}"
+						"components": {
+							"minecraft:custom_data": "{\"simplenergy\": {\"cauldron_generator\": true}}"
+						}
 					}
 				]
 			}
@@ -35,6 +34,7 @@
 		[
 			"requirement"
 		]
-	]
+	],
+	"parent": "simplenergy:visible/simplunium_ingot"
 }
 

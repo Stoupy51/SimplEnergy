@@ -4,12 +4,7 @@
 			"id": "#simplenergy:load/dependencies",
 			"required": false
 		},
-		"simplenergy:load/main",
-		{
-			"id": "#simplenergy:load/dependencies",
-			"required": false
-		},
-		"simplenergy:load/"
+		"simplenergy:load/main"
 	]
 }
 

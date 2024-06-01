@@ -1,8 +1,10 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:barrel",
-			"nbt": "{CustomModelData:2012200}"
+			"id": "minecraft:furnace",
+			"components": {
+				"minecraft:custom_model_data": 2012019
+			}
 		},
 		"title": {
 			"translate":"simplenergy.a_simple_energy_storage",
@@ -17,15 +19,15 @@
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "simplenergy:visible/simplunium_ingot",
 	"criteria": {
 		"requirement": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
-						"tag": "simplenergy:items",
-						"nbt": "{simplenergy:{simple_battery:1b}}"
+						"components": {
+							"minecraft:custom_data": "{\"simplenergy\": {\"simple_battery\": true}}"
+						}
 					}
 				]
 			}
@@ -35,6 +37,7 @@
 		[
 			"requirement"
 		]
-	]
+	],
+	"parent": "simplenergy:visible/simplunium_ingot"
 }
 

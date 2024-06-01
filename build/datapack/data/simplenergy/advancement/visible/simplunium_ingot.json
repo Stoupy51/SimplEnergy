@@ -1,8 +1,10 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:command_block",
-			"nbt": "{CustomModelData:2012005}"
+			"id": "minecraft:command_block",
+			"components": {
+				"minecraft:custom_model_data": 2012004
+			}
 		},
 		"title": {
 			"text":"SimplEnergy",
@@ -24,8 +26,9 @@
 			"conditions": {
 				"items": [
 					{
-						"tag": "simplenergy:items",
-						"nbt": "{simplenergy:{simplunium_ingot:1b}}"
+						"components": {
+							"minecraft:custom_data": "{\"simplenergy\": {\"simplunium_ingot\": true}}"
+						}
 					}
 				]
 			}
