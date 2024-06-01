@@ -33,28 +33,15 @@ def main(config: dict) -> None:
 		"wrench": {'display': {'title': {'text': 'Having the control!', 'color': 'gray'}, 'description': {'text': 'Craft a wrench to rotate machines and break cables', 'color': 'green'}, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': True}, 'parent': 'simplenergy:visible/simplunium_armor'},
 
 		"simplunium_armor": {
-			'display': { "icon": {
-				"id": database["simplunium_chestplate"]["id"],
-				"components": {
+			'display': { "icon": {"id": database["simplunium_chestplate"]["id"],"components": {
 					"minecraft:custom_model_data": database["simplunium_chestplate"]["custom_model_data"],
-					"minecraft:dyed_color": database["simplunium_chestplate"]["dyed_color"]
+					"minecraft:dyed_color": database["simplunium_chestplate"]["dyed_color"],
 				}},
 				'title': {'text': 'Cover Me with Simplunium', 'color': 'gray'}, 'description': {'text': 'Better than diamond armor', 'color': 'green'}, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': True
 			},
-			"criteria": {
-				"requirement": {
-					"trigger": "minecraft:inventory_changed",
-					"conditions": {
-						"items": [
-							{
-								"components": {
-									"minecraft:custom_data": json.dumps({"smithed": {"dict": {"armor": {"simplunium": True}}}})
-								}
-							}
-						]
-					}
-				}
-			},
+			"criteria": {"requirement": {"trigger": "minecraft:inventory_changed","conditions": {
+				"items": [{"components": {"minecraft:custom_data": json.dumps({"smithed": {"dict": {"armor": {"simplunium": True}}}})}
+			}]}}},
 			'parent': 'simplenergy:visible/simplunium_pickaxe'
 		},
 	}
