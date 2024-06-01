@@ -3,7 +3,7 @@
 from python_datapack.utils.database_helper import *
 
 # Imports
-from .additions import main as additions_main
+from .database.additions import main as additions_main
 
 # Constants
 simplunium_durability = 3 * VanillaEquipments.PICKAXE.value[DEFAULT_ORE.IRON]["durability"]

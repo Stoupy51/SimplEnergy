@@ -1,9 +1,0 @@
-{
-    "parent": "item/handheld",
-  	"textures": {
-    	"layer0": "item/diamond_hoe"
-  	},
-    "overrides": [
-		{ "predicate": { "custom_model_data": 2012108 }, "model": "simplenergy:equipments/simplunium_hoe" }
-	]
-}
