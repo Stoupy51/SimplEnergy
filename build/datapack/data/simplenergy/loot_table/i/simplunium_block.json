@@ -11,8 +11,20 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"block": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},
-									"simplenergy": {"simplunium_block": true}
+									"smithed": {
+										"dict": {
+											"block": {
+												"simplunium": true
+											}
+										},
+										"ignore": {
+											"functionality": true,
+											"crafting": true
+										}
+									},
+									"simplenergy": {
+										"simplunium_block": true
+									}
 								},
 								"minecraft:custom_model_data": 2012000,
 								"minecraft:item_name": "{'translate':'simplenergy.simplunium_block', 'italic': false, 'color': 'white'}",
@@ -20,9 +32,51 @@
 									"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
 								],
 								"minecraft:container": [
-									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:simplunium_block","from": "simplenergy"}}}}}}
+									{
+										"slot": 0,
+										"item": {
+											"id": "minecraft:stone",
+											"count": 1,
+											"components": {
+												"minecraft:custom_data": {
+													"smithed": {
+														"block": {
+															"id": "simplenergy:simplunium_block",
+															"from": "simplenergy"
+														}
+													}
+												}
+											}
+										}
+									}
 								]
 							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:barrel",
+					"functions": [
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "simplenergy:main"
+							},
+							"ops": [
+								{
+									"source": "all.simplunium_block.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							]
 						}
 					]
 				}

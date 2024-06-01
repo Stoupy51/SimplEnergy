@@ -1,0 +1,40 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:barrel",
+			"nbt": "{CustomModelData:2012300}"
+		},
+		"title": {
+			"translate":"simplenergy.the_simpler_generator",
+			"color": "gray"
+		},
+		"description": {
+			"translate":"simplenergy.craft_your_first_cauldron_generator",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "simplenergy:visible/simplunium_ingot",
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "simplenergy:items",
+						"nbt": "{simplenergy:{cauldron_generator:1b}}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
+}
+

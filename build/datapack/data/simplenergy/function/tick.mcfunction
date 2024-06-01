@@ -14,3 +14,9 @@ execute if score #second simplenergy.data matches 20.. run function simplenergy:
 execute if score #second_5 simplenergy.data matches 90.. run function simplenergy:second_5
 execute if score #minute simplenergy.data matches 1200.. run function simplenergy:minute
 
+# Tick entities
+execute as @e[type=item_display,tag=simplenergy.tick_entities,sort=random] at @s run function simplenergy:utils/tick_entities
+
+# Check for new items
+execute as @e[type=item,tag=!simplenergy.checked] at @s run function simplenergy:destroy/item_check/
+

@@ -1,0 +1,40 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:warped_fungus_on_a_stick",
+			"nbt": "{CustomModelData:2012111}"
+		},
+		"title": {
+			"translate":"simplenergy.having_the_control",
+			"color": "gray"
+		},
+		"description": {
+			"translate":"simplenergy.craft_a_wrench_to_rotate_machines_and_break_cables",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": true
+	},
+	"parent": "simplenergy:visible/simplunium_armor",
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "simplenergy:items",
+						"nbt": "{simplenergy:{wrench:1b}}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
+}
+

@@ -53,9 +53,9 @@ CACHE_MANUAL_ASSETS: bool = True					# Caches the MC assets and the items render
 CACHE_MANUAL_PAGES: bool = True						# Caches the content of the manual and the images (manual/pages/*.png)
 MANUAL_DEBUG: str = f"{ROOT}/debug_manual.json"		# Dump of the manual for debugging purposes
 MANUAL_NAME: str = f"{DATAPACK_NAME} Manual"		# Name of the manual, used for the title of the book and first page
-MAX_ITEMS_PER_ROW: int = 5		# Max number of items per row in the manual, should not exceed 6
-MAX_ROWS_PER_PAGE: int = 5		# Max number of rows per page in the manual, should not exceed 6
-OPENGL_RESOLUTION: int = 256	# Resolution of the OpenGL renders used in the manual, best value is 256 <--- 256x256
+MAX_ITEMS_PER_ROW: int = 5							# Max number of items per row in the manual, should not exceed 6
+MAX_ROWS_PER_PAGE: int = 5							# Max number of rows per page in the manual, should not exceed 6
+OPENGL_RESOLUTION: int = 256						# Resolution of the OpenGL renders used in the manual, best value is 256 <--- 256x256
 MANUAL_FIRST_PAGE_TEXT: list[dict] = [{"text":"The following manual will guide you through recipes and energy statistics about devices.", "color":"#505050"}]	# Text for the first page of the manual
 
 

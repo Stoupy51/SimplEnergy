@@ -1,0 +1,40 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:leather_chestplate",
+			"nbt": "{CustomModelData:2012102}"
+		},
+		"title": {
+			"translate":"simplenergy.cover_me_with_simplunium",
+			"color": "gray"
+		},
+		"description": {
+			"translate":"simplenergy.better_than_diamond_armor",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": true
+	},
+	"parent": "simplenergy:visible/simplunium_pickaxe",
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "simplenergy:items",
+						"nbt": "{ctc:{traits:{\"armor\":1b}},simplenergy:{simplunium:1b}}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
+}
+

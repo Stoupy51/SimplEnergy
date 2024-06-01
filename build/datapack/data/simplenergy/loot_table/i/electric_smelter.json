@@ -11,9 +11,19 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"energy": {"usage": 80,"max_storage": 6400},
-									"simplenergy": {"electric_smelter": true},
-									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+									"energy": {
+										"usage": 80,
+										"max_storage": 6400
+									},
+									"simplenergy": {
+										"electric_smelter": true
+									},
+									"smithed": {
+										"ignore": {
+											"functionality": true,
+											"crafting": true
+										}
+									}
 								},
 								"minecraft:lore": [
 									"{\"translate\":\"simplenergy.power_usage_80_kw\",\"italic\":false,\"color\":\"gray\"}",
@@ -23,9 +33,51 @@
 								"minecraft:custom_model_data": 2012028,
 								"minecraft:item_name": "{'translate':'simplenergy.electric_smelter', 'italic': false, 'color': 'white'}",
 								"minecraft:container": [
-									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:electric_smelter","from": "simplenergy"}}}}}}
+									{
+										"slot": 0,
+										"item": {
+											"id": "minecraft:stone",
+											"count": 1,
+											"components": {
+												"minecraft:custom_data": {
+													"smithed": {
+														"block": {
+															"id": "simplenergy:electric_smelter",
+															"from": "simplenergy"
+														}
+													}
+												}
+											}
+										}
+									}
 								]
 							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:barrel",
+					"functions": [
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "simplenergy:main"
+							},
+							"ops": [
+								{
+									"source": "all.electric_smelter.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							]
 						}
 					]
 				}

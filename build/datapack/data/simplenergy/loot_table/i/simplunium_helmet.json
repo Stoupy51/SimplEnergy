@@ -11,8 +11,21 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"armor": {"simplunium": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},
-									"simplenergy": {"simplunium_helmet": true}
+									"smithed": {
+										"dict": {
+											"armor": {
+												"simplunium": true,
+												"helmet": true
+											}
+										},
+										"ignore": {
+											"functionality": true,
+											"crafting": true
+										}
+									},
+									"simplenergy": {
+										"simplunium_helmet": true
+									}
 								},
 								"minecraft:dyed_color": {
 									"rgb": 4605510,
@@ -20,7 +33,13 @@
 								},
 								"minecraft:max_damage": 495,
 								"minecraft:attribute_modifiers": [
-									{"type": "generic.armor","amount": 2.5,"operation": "add_value","slot": "head","id": "simplenergy:generic.armor.head"}
+									{
+										"type": "generic.armor",
+										"amount": 2.5,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "simplenergy:generic.armor.head"
+									}
 								],
 								"minecraft:custom_model_data": 2012008,
 								"minecraft:item_name": "{'translate':'simplenergy.simplunium_helmet', 'italic': false, 'color': 'white'}",
@@ -28,6 +47,32 @@
 									"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
 								]
 							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_helmet",
+					"functions": [
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "simplenergy:main"
+							},
+							"ops": [
+								{
+									"source": "all.simplunium_helmet.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							]
 						}
 					]
 				}

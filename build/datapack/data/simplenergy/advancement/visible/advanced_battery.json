@@ -1,0 +1,40 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:barrel",
+			"nbt": "{CustomModelData:2012201}"
+		},
+		"title": {
+			"translate":"simplenergy.more_energy_storage",
+			"color": "gray"
+		},
+		"description": {
+			"translate":"simplenergy.upgrade_a_simple_battery",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "simplenergy:visible/simple_battery",
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "simplenergy:items",
+						"nbt": "{simplenergy:{advanced_battery:1b}}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
+}
+

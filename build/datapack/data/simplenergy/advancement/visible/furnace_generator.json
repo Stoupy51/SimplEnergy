@@ -1,0 +1,40 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:barrel",
+			"nbt": "{CustomModelData:2012301}"
+		},
+		"title": {
+			"translate":"simplenergy.also_named_the_coal_generator",
+			"color": "gray"
+		},
+		"description": {
+			"translate":"simplenergy.craft_your_first_furnace_generator",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "simplenergy:visible/cauldron_generator",
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "simplenergy:items",
+						"nbt": "{simplenergy:{furnace_generator:1b}}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
+}
+

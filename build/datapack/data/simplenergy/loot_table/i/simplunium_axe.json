@@ -11,14 +11,45 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"tools": {"simplunium": true,"axe": true}},"ignore": {"functionality": true,"crafting": true}},
-									"simplenergy": {"simplunium_axe": true}
+									"smithed": {
+										"dict": {
+											"tools": {
+												"simplunium": true,
+												"axe": true
+											}
+										},
+										"ignore": {
+											"functionality": true,
+											"crafting": true
+										}
+									},
+									"simplenergy": {
+										"simplunium_axe": true
+									}
 								},
 								"minecraft:max_damage": 750,
 								"minecraft:attribute_modifiers": [
-									{"type": "generic.attack_damage","amount": 10,"operation": "add_value","slot": "mainhand","id": "simplenergy:generic.attack_damage.mainhand"},
-									{"type": "generic.attack_speed","amount": -3.1,"operation": "add_value","slot": "mainhand","id": "simplenergy:generic.attack_speed.mainhand"},
-									{"type": "player.mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "simplenergy:player.mining_efficiency.mainhand"}
+									{
+										"type": "generic.attack_damage",
+										"amount": 10,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "simplenergy:generic.attack_damage.mainhand"
+									},
+									{
+										"type": "generic.attack_speed",
+										"amount": -3.1,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "simplenergy:generic.attack_speed.mainhand"
+									},
+									{
+										"type": "player.mining_efficiency",
+										"amount": 0.2,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "simplenergy:player.mining_efficiency.mainhand"
+									}
 								],
 								"minecraft:custom_model_data": 2012014,
 								"minecraft:item_name": "{'translate':'simplenergy.simplunium_axe', 'italic': false, 'color': 'white'}",
@@ -26,6 +57,32 @@
 									"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
 								]
 							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:diamond_axe",
+					"functions": [
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "simplenergy:main"
+							},
+							"ops": [
+								{
+									"source": "all.simplunium_axe.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							]
 						}
 					]
 				}

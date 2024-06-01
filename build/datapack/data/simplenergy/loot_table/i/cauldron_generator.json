@@ -11,9 +11,19 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"energy": {"generation": 5,"max_storage": 500},
-									"simplenergy": {"cauldron_generator": true},
-									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+									"energy": {
+										"generation": 5,
+										"max_storage": 500
+									},
+									"simplenergy": {
+										"cauldron_generator": true
+									},
+									"smithed": {
+										"ignore": {
+											"functionality": true,
+											"crafting": true
+										}
+									}
 								},
 								"minecraft:lore": [
 									"{\"translate\":\"simplenergy.energy_generation_5_kw\",\"italic\":false,\"color\":\"gray\"}",
@@ -22,9 +32,51 @@
 								],
 								"minecraft:item_name": "{'translate':'simplenergy.cauldron_generator', 'italic': false, 'color': 'white'}",
 								"minecraft:container": [
-									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:cauldron_generator","from": "simplenergy"}}}}}}
+									{
+										"slot": 0,
+										"item": {
+											"id": "minecraft:stone",
+											"count": 1,
+											"components": {
+												"minecraft:custom_data": {
+													"smithed": {
+														"block": {
+															"id": "simplenergy:cauldron_generator",
+															"from": "simplenergy"
+														}
+													}
+												}
+											}
+										}
+									}
 								]
 							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:barrel",
+					"functions": [
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "simplenergy:main"
+							},
+							"ops": [
+								{
+									"source": "all.cauldron_generator.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							]
 						}
 					]
 				}
