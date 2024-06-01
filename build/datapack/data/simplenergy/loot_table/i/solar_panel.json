@@ -11,19 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"energy": {
-										"generation": 4,
-										"max_storage": 600
-									},
-									"simplenergy": {
-										"solar_panel": true
-									},
-									"smithed": {
-										"ignore": {
-											"functionality": true,
-											"crafting": true
-										}
-									}
+									"energy": {"generation": 4,"max_storage": 600},
+									"simplenergy": {"solar_panel": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
 								},
 								"minecraft:lore": [
 									"{\"translate\":\"simplenergy.energy_generation_4_kw\",\"italic\":false,\"color\":\"gray\"}",
@@ -33,51 +23,9 @@
 								"minecraft:custom_model_data": 2012025,
 								"minecraft:item_name": "{'translate':'simplenergy.solar_panel', 'italic': false, 'color': 'white'}",
 								"minecraft:container": [
-									{
-										"slot": 0,
-										"item": {
-											"id": "minecraft:stone",
-											"count": 1,
-											"components": {
-												"minecraft:custom_data": {
-													"smithed": {
-														"block": {
-															"id": "simplenergy:solar_panel",
-															"from": "simplenergy"
-														}
-													}
-												}
-											}
-										}
-									}
+									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:solar_panel","from": "simplenergy"}}}}}}
 								]
 							}
-						}
-					]
-				}
-			]
-		},
-		{
-			"rolls": 1,
-			"bonus_rolls": 0,
-			"entries": [
-				{
-					"type": "minecraft:item",
-					"name": "minecraft:soul_campfire",
-					"functions": [
-						{
-							"function": "minecraft:copy_nbt",
-							"source": {
-								"type": "minecraft:storage",
-								"source": "simplenergy:main"
-							},
-							"ops": [
-								{
-									"source": "all.solar_panel.tag",
-									"target": "{}",
-									"op": "merge"
-								}
-							]
 						}
 					]
 				}
