@@ -8,8 +8,8 @@
 scoreboard players set #working simplenergy.data 1
 execute if score #working simplenergy.data matches 1 if score @s energy.storage matches 500.. run scoreboard players set #working simplenergy.data 0
 execute if score #working simplenergy.data matches 1 if block ~ ~ ~ cauldron run scoreboard players set #working simplenergy.data 0
-execute if score #working simplenergy.data matches 1 run data modify entity @s item.components."minecraft:custom_model_data" set value 1
-execute if score #working simplenergy.data matches 0 run data modify entity @s item.components."minecraft:custom_model_data" set value 0
+# execute if score #working simplenergy.data matches 1 run data modify entity @s item.components."minecraft:custom_model_data" set value 2
+# execute if score #working simplenergy.data matches 0 run data modify entity @s item.components."minecraft:custom_model_data" set value 1
 execute if score #working simplenergy.data matches 0 run return 0
 
 # Increase timer data and setblock depending on timer data
