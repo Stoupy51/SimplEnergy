@@ -1,5 +1,5 @@
 
-#> simplenergy:right_click/wrench/rotate/furnace
+#> simplenergy:utils/wrench/rotate/furnace
 #
 # @within	#simplenergy:wrench_rotate
 #

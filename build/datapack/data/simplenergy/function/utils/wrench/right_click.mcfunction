@@ -1,11 +1,11 @@
 
-#> simplenergy:right_click/wrench/
+#> simplenergy:utils/wrench/right_click
 #
-# @within	simplenergy:right_click/all
+# @within	simplenergy:utils/on_right_click
 #
 
 # Look at where player is looking at and stop when found a block
 scoreboard players set #raycast simplenergy.data 0
-execute anchored eyes positioned ^ ^ ^.2 run function simplenergy:right_click/wrench/raycast
+execute anchored eyes positioned ^ ^ ^.2 run function simplenergy:utils/wrench/raycast
 scoreboard players reset #raycast simplenergy.data
 

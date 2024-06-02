@@ -1,8 +1,8 @@
 
-#> simplenergy:right_click/wrench/rotate
+#> simplenergy:utils/wrench/rotate
 #
 # @within	simplenergy:calls/mechanization/wrench_modify
-#			simplenergy:right_click/wrench/stop_case
+#			simplenergy:utils/wrench/stop_case
 #
 
 # Copy block data

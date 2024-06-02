@@ -1,8 +1,7 @@
 
-#> simplenergy:right_click/multimeter/raycast
+#> simplenergy:utils/multimeter/right_click/raycast
 #
-# @within	simplenergy:right_click/multimeter/
-#			simplenergy:right_click/multimeter/raycast
+# @within	???
 #
 
 # Stop case when raycast hits a block that is solid

@@ -23,6 +23,6 @@
 		]
 	],
 	"rewards": {
-		"function": "simplenergy:right_click/all"
+		"function": "simplenergy:utils/on_right_click"
 	}
 }

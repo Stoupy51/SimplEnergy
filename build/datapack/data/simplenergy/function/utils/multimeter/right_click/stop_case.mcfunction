@@ -1,7 +1,7 @@
 
-#> simplenergy:right_click/multimeter/stop_case
+#> simplenergy:utils/multimeter/right_click/stop_case
 #
-# @within	simplenergy:right_click/multimeter/raycast
+# @within	???
 #
 
 # Tellraw Energy Display
