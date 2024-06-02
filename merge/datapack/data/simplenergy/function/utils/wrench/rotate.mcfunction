@@ -1,5 +1,6 @@
 
 # Copy block data
+scoreboard players set #success simplenergy.data 1
 data modify storage simplenergy:main Block set from block ~ ~ ~
 
 # Rotate custom block
@@ -13,5 +14,5 @@ function #simplenergy:wrench_rotate
 
 # Memory clean up and particle effect
 data remove storage simplenergy:main Block
-particle falling_dust furnace ~ ~ ~ .5 .5 .5 0.1 10
+particle block{block_state:"minecraft:furnace"} ~ ~ ~ .5 .5 .5 0.1 10
 
