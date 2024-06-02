@@ -8,7 +8,7 @@
 #
 
 execute if entity @s[tag=simplenergy.vanilla.minecraft_brewing_stand] unless block ~ ~ ~ minecraft:brewing_stand run function simplenergy:custom_blocks/_groups/minecraft_brewing_stand
-execute if entity @s[tag=simplenergy.vanilla.minecraft_cauldron] unless block ~ ~ ~ minecraft:cauldron run function simplenergy:custom_blocks/_groups/minecraft_cauldron
+execute if entity @s[tag=simplenergy.vanilla.minecraft_cauldron] unless block ~ ~ ~ #minecraft:cauldrons run function simplenergy:custom_blocks/_groups/minecraft_cauldron
 execute if entity @s[tag=simplenergy.vanilla.minecraft_copper_block] unless block ~ ~ ~ minecraft:copper_block run function simplenergy:custom_blocks/_groups/minecraft_copper_block
 execute if entity @s[tag=simplenergy.vanilla.minecraft_daylight_detector] unless block ~ ~ ~ minecraft:daylight_detector run function simplenergy:custom_blocks/_groups/minecraft_daylight_detector
 execute if entity @s[tag=simplenergy.vanilla.minecraft_furnace] unless block ~ ~ ~ minecraft:furnace run function simplenergy:custom_blocks/_groups/minecraft_furnace

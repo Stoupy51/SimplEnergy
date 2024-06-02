@@ -23,8 +23,8 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{NAMESPACE}:block/solar_panel_side", "top": f"{NAMESPACE}:block/solar_panel_top"}},
 		},
 
-		"electric_furnace": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":10, "max_storage": 800}},				RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LFL","III"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"F":ingr_repr("minecraft:furnace"),"I":ingr_repr("minecraft:iron_block")}}],								"lore": ['{"text":"[Power Usage: 10 kW]","italic":false,"color":"gray"}','{"text":"[Energy Buffer: 800 kJ]","italic":false,"color":"gray"}']},
-		"electric_smelter": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":80, "max_storage": 6400}},				RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","IFI","BBB"],"ingredients":{"I":ingr_repr("simplunium_ingot", NAMESPACE),"F":ingr_repr("electric_furnace", NAMESPACE),"B":ingr_repr("simplunium_block", NAMESPACE)}}],			"lore": ['{"text":"[Power Usage: 80 kW]","italic":false,"color":"gray"}','{"text":"[Energy Buffer: 6400 kJ]","italic":false,"color":"gray"}']},
+		"electric_furnace": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":20, "max_storage": 1600}},				RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LFL","III"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"F":ingr_repr("minecraft:furnace"),"I":ingr_repr("minecraft:iron_block")}}],								"lore": ['{"text":"[Power Usage: 20 kW]","italic":false,"color":"gray"}','{"text":"[Energy Buffer: 1600 kJ]","italic":false,"color":"gray"}']},
+		"electric_smelter": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":100, "max_storage": 8000}},				RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","IFI","BBB"],"ingredients":{"I":ingr_repr("simplunium_ingot", NAMESPACE),"F":ingr_repr("electric_furnace", NAMESPACE),"B":ingr_repr("simplunium_block", NAMESPACE)}}],			"lore": ['{"text":"[Power Usage: 100 kW]","italic":false,"color":"gray"}','{"text":"[Energy Buffer: 8000 kJ]","italic":false,"color":"gray"}']},
 		"electric_brewing_stand": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":40, "max_storage": 2400}},	RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","IBI","LLL"],"ingredients":{"I":ingr_repr("simplunium_ingot", NAMESPACE),"B":ingr_repr("minecraft:brewing_stand"),"L":ingr_repr("minecraft:lapis_block")}}],											"lore": ['{"text":"[Power Usage: 40 kW]","italic":false,"color":"gray"}','{"text":"[Energy Buffer: 2400 kJ]","italic":false,"color":"gray"}'],
 			OVERRIDE_MODEL: {"parent":"block/brewing_stand","textures":{"base":f"{NAMESPACE}:block/electric_brewing_stand_base","stand":f"{NAMESPACE}:block/electric_brewing_stand"},
@@ -39,7 +39,7 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 		# "pulveriser": TODO,
 
 		"simple_cable": {
-			"id": CUSTOM_BLOCK_HEAD, CATEGORY: "energy", "custom_data": {"energy": {"transfer":20}}, "lore": ['{"text":"[Transfer Speed: 20 kW]","italic":false,"color":"gray"}'],
+			"id": CUSTOM_BLOCK_HEAD, CATEGORY: "energy", "custom_data": {"energy": {"transfer":40}}, "lore": ['{"text":"[Transfer Speed: 40 kW]","italic":false,"color":"gray"}'],
 			RESULT_OF_CRAFTING:[
 				{"type":"crafting_shaped","result_count":1,"category":"misc","group":"simple_cable","shape":["ICI","IOI","ICI"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:coal")}},
 				{"type":"crafting_shaped","result_count":1,"category":"misc","group":"simple_cable","shape":["ICI","IOI","ICI"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:charcoal")}},
@@ -52,7 +52,7 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 			},
 		},
 		"advanced_cable": {
-			"id": CUSTOM_BLOCK_HEAD, CATEGORY: "energy", "custom_data": {"energy": {"transfer":60}}, "lore": ['{"text":"[Transfer Speed: 60 kW]","italic":false,"color":"gray"}'],
+			"id": CUSTOM_BLOCK_HEAD, CATEGORY: "energy", "custom_data": {"energy": {"transfer":120}}, "lore": ['{"text":"[Transfer Speed: 120 kW]","italic":false,"color":"gray"}'],
 			RESULT_OF_CRAFTING:[
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("simple_cable", NAMESPACE)] + 8*[ingr_repr("minecraft:lapis_lazuli")]},
 			],
@@ -62,7 +62,7 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 			},
 		},
 		"elite_cable": {
-			"id": CUSTOM_BLOCK_HEAD, CATEGORY: "energy", "custom_data": {"energy": {"transfer":120}}, "lore": ['{"text":"[Transfer Speed: 120 kW]","italic":false,"color":"gray"}'],
+			"id": CUSTOM_BLOCK_HEAD, CATEGORY: "energy", "custom_data": {"energy": {"transfer":240}}, "lore": ['{"text":"[Transfer Speed: 240 kW]","italic":false,"color":"gray"}'],
 			RESULT_OF_CRAFTING:[
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("advanced_cable", NAMESPACE)] + 4*[ingr_repr("minecraft:redstone_block")]},
 			],

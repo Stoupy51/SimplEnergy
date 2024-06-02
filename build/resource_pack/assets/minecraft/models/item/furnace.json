@@ -16,7 +16,8 @@
 		{ "predicate": { "custom_model_data": 2012027}, "model": "simplenergy:block/electric_furnace_on" },
 		{ "predicate": { "custom_model_data": 2012028}, "model": "simplenergy:block/electric_smelter" },
 		{ "predicate": { "custom_model_data": 2012029}, "model": "simplenergy:block/electric_smelter_on" },
-		{ "predicate": { "custom_model_data": 2012030}, "model": "simplenergy:block/electric_brewing_stand" }
+		{ "predicate": { "custom_model_data": 2012030}, "model": "simplenergy:block/electric_brewing_stand" },
+		{ "predicate": { "custom_model_data": 2012031}, "model": "simplenergy:block/electric_brewing_stand_on" }
 	]
 }
 

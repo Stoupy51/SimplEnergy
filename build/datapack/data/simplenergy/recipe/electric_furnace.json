@@ -23,8 +23,8 @@
 		"components": {
 			"minecraft:custom_data": {
 				"energy": {
-					"usage": 10,
-					"max_storage": 800
+					"usage": 20,
+					"max_storage": 1600
 				},
 				"simplenergy": {
 					"electric_furnace": true
@@ -34,8 +34,8 @@
 				}
 			},
 			"minecraft:lore": [
-				"{\"translate\":\"simplenergy.power_usage_10_kw\",\"italic\":false,\"color\":\"gray\"}",
-				"{\"translate\":\"simplenergy.energy_buffer_800_kj\",\"italic\":false,\"color\":\"gray\"}",
+				"{\"translate\":\"simplenergy.power_usage_20_kw\",\"italic\":false,\"color\":\"gray\"}",
+				"{\"translate\":\"simplenergy.energy_buffer_1600_kj\",\"italic\":false,\"color\":\"gray\"}",
 				"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
 			],
 			"minecraft:custom_model_data": 2012026,

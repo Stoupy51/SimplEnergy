@@ -1,4 +1,8 @@
 {
+	"cauldron_generator": {
+		"subtitle": "Cauldron Generator",
+		"sounds": ["simplenergy:cauldron_generator"]
+	},
 	"electric_brewing_stand": {
 		"subtitle": "Electric Brewing Stand",
 		"sounds": ["simplenergy:electric_brewing_stand"]

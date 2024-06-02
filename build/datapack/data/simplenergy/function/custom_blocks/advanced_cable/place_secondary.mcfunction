@@ -19,6 +19,6 @@ data modify entity @s transformation.translation[1] set value 0.003f
 data modify entity @s brightness set value {block:15,sky:15}
 
 tag @s add energy.cable
-scoreboard players set @s energy.transfer_rate 60
+scoreboard players set @s energy.transfer_rate 120
 function energy:v1/api/init_cable
 

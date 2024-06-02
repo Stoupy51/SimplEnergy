@@ -24,7 +24,7 @@
 		"components": {
 			"minecraft:custom_data": {
 				"energy": {
-					"transfer": 20
+					"transfer": 40
 				},
 				"simplenergy": {
 					"simple_cable": true
@@ -34,7 +34,7 @@
 				}
 			},
 			"minecraft:lore": [
-				"{\"translate\":\"simplenergy.transfer_speed_20_kw\",\"italic\":false,\"color\":\"gray\"}",
+				"{\"translate\":\"simplenergy.transfer_speed_40_kw\",\"italic\":false,\"color\":\"gray\"}",
 				"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
 			],
 			"minecraft:profile": {

@@ -11,12 +11,12 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"energy": {"transfer": 120},
+									"energy": {"transfer": 240},
 									"simplenergy": {"elite_cable": true},
 									"smithed": {"ignore": {"functionality": true,"crafting": true}}
 								},
 								"minecraft:lore": [
-									"{\"translate\":\"simplenergy.transfer_speed_120_kw\",\"italic\":false,\"color\":\"gray\"}",
+									"{\"translate\":\"simplenergy.transfer_speed_240_kw\",\"italic\":false,\"color\":\"gray\"}",
 									"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
 								],
 								"minecraft:profile": {
