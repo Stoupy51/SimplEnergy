@@ -113,15 +113,15 @@ execute if score #old_burn_time {namespace}.data matches ..200 store result bloc
 
 	# Cauldron Generator
 	energy = database["cauldron_generator"]["custom_data"]["energy"]
-	default_cmd = database["cauldron_generator"]["custom_model_data"] if 1 == 2 else 0
+	default_cmd = database["cauldron_generator"]["custom_model_data"] if 1 == 2 else 1
 	working_cmd = default_cmd + 1
 	content = f"""
 # Stop function if no water or full
 scoreboard players set #working {namespace}.data 1
 execute if score #working {namespace}.data matches 1 if score @s energy.storage matches {energy["max_storage"]}.. run scoreboard players set #working {namespace}.data 0
 execute if score #working {namespace}.data matches 1 if block ~ ~ ~ cauldron run scoreboard players set #working {namespace}.data 0
-execute if score #working {namespace}.data matches 1 run data modify entity @s item.components."minecraft:custom_model_data" set value {working_cmd}
-execute if score #working {namespace}.data matches 0 run data modify entity @s item.components."minecraft:custom_model_data" set value {default_cmd}
+# execute if score #working {namespace}.data matches 1 run data modify entity @s item.components."minecraft:custom_model_data" set value {working_cmd}
+# execute if score #working {namespace}.data matches 0 run data modify entity @s item.components."minecraft:custom_model_data" set value {default_cmd}
 execute if score #working {namespace}.data matches 0 run return 0
 
 # Increase timer data and setblock depending on timer data
