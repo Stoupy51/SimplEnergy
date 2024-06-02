@@ -1,7 +1,7 @@
 
 ## Copy scores
 scoreboard players set #energy simplenergy.data 0
-execute store result score #energy simplenergy.data run data get storage energy:temp list[0].tag.energy.storage
+execute store result score #energy simplenergy.data run data get storage energy:temp list[0].components."minecraft:custom_data".energy.storage
 scoreboard players operation #part_1 simplenergy.data = #energy simplenergy.data
 scoreboard players operation #part_2 simplenergy.data = #energy simplenergy.data
 
@@ -39,8 +39,8 @@ item modify block -30000000 14 1610 container.0 simplenergy:energy_storage_lore
 execute store result storage energy:temp list[0].Slot byte 1 run scoreboard players get #slot simplenergy.data
 
 # Add the lore to the item at the correct index
-execute unless data storage energy:temp list[0].tag.energy.has_storage_lore run data modify storage energy:temp list[0].tag.display.Lore insert -2 from block -30000000 14 1610 Items[0].tag.display.Lore[0]
-execute if data storage energy:temp list[0].tag.energy.has_storage_lore run data modify storage energy:temp list[0].tag.display.Lore[-2] set from block -30000000 14 1610 Items[0].tag.display.Lore[0]
-data modify storage energy:temp list[0].tag.energy.has_storage_lore set value 1b
+execute unless data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore" insert -2 from block -30000000 14 1610 Items[0].components."minecraft:lore"[0]
+execute if data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore"[-2] set from block -30000000 14 1610 Items[0].components."minecraft:lore"[0]
+data modify storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore set value 1b
 data remove storage simplenergy:main scale
 
