@@ -24,6 +24,12 @@ def main(config: dict) -> None:
 	# Setup machines
 	setup_machines(config, gui)
 
+	# Setup rotatable tags
+	rotatables = ["furnace_generator", "electric_furnace", "electric_smelter"]
+	for rotatable in rotatables:
+		file: str = f"{config['build_datapack']}/data/{config['namespace']}/function/custom_blocks/{rotatable}/place_secondary.mcfunction"
+		write_to_file(file, f"\n# Make the block rotatable by wrench\ntag @s add {config['namespace']}.rotatable")
+
 
 	info("User code executed")
 
