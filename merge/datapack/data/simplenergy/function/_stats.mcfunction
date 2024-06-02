@@ -7,7 +7,7 @@ execute store result score #senders simplenergy.data if entity @e[scores={energy
 execute store result score #receivers simplenergy.data if entity @e[scores={energy.transfer_rate=1..},tag=!energy.send,tag=energy.receive]
 execute store result score #batteries simplenergy.data if entity @e[scores={energy.transfer_rate=1..},tag=energy.send,tag=energy.receive]
 
-execute store result score #custom_blocks simplenergy.data if entity @e[tag=simplenergy.destroyer]
+execute store result score #custom_blocks simplenergy.data if entity @e[tag=simplenergy.custom_block]
 execute store result score #custom_ores simplenergy.data if entity @e[tag=simplenergy.ore]
 execute store result score #markers simplenergy.data if entity @e[tag=furnace_nbt_recipes.furnace]
 

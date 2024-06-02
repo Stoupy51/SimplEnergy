@@ -1,5 +1,5 @@
 
-# SimplEnergy - Destroyer when using Mechanization's wrench
-execute if entity @s[tag=simplenergy.destroyer] run setblock ~ ~ ~ air destroy
-execute if entity @s[tag=simplenergy.destroyer] run function simplenergy:destroy/all
+# When using Mechanization's wrench
+execute if entity @s[tag=simplenergy.custom_block] run setblock ~ ~ ~ air destroy
+execute if entity @s[tag=simplenergy.custom_block] run function simplenergy:destroy/all
 
