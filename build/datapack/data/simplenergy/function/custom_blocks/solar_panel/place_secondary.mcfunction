@@ -28,3 +28,6 @@ execute store result score @s energy.storage run data get storage simplenergy:te
 scoreboard players operation @s energy.transfer_rate = @s energy.max_storage
 function energy:v1/api/init_machine
 
+# Add tag for loop every second
+tag @s add simplenergy.second
+

@@ -20,3 +20,7 @@ execute as @e[type=item_display,tag=simplenergy.tick_entities,sort=random] at @s
 # Check for new items
 execute as @e[type=item,tag=!simplenergy.checked] at @s run function simplenergy:destroy/item_check/
 
+
+# Custom blocks tick functions
+execute as @e[tag=simplenergy.tick] at @s run function simplenergy:custom_blocks/tick
+
