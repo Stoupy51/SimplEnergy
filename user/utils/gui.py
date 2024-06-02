@@ -4,7 +4,7 @@ from python_datapack.utils.print import *
 from python_datapack.utils.io import *
 from user.setup_database import STARTING_CMD
 from copy import deepcopy
-GUI_VANILLA_ITEM = "deepslate"
+GUI_VANILLA_ITEM = "cobblestone"
 
 # Util function to get next custom_model_data (decreasing)
 next_cmd: int = STARTING_CMD + 1000
@@ -24,7 +24,8 @@ def setup_gui_in_resource_packs(config: dict) -> dict[str, int]:
 	vanilla_gui = f"{config['build_resource_pack']}/assets/minecraft/models/item/{GUI_VANILLA_ITEM}.json"
 	model = {"parent": "block/deepslate","overrides": []}
 	for gui, cmd in generated_gui.items():
-		model["overrides"].append({"predicate": {"custom_model_data": cmd}, "model": f"simplenergy:block/{gui}"})
+		model["overrides"].append({"predicate": {"custom_model_data": cmd}, "model": f"simplenergy:block/{gui.replace('.png', '')}"})
+	sort_override_model(model)
 	content = super_json_dump(model).replace('{"','{ "').replace('"}','" }').replace(',"', ', "')
 	write_to_file(vanilla_gui, content)
 
