@@ -2,9 +2,6 @@
 # Revoke advancement
 advancement revoke @s only simplenergy:inventory_changed
 
-# Pre-inventory check by removing forbidden items
-clear @s #simplenergy:texture_item{simplenergy:{texture_item:1b}}
-
 # Copy inventory to storage for efficiency
 data modify storage simplenergy:inventory all set from entity @s Inventory
 
