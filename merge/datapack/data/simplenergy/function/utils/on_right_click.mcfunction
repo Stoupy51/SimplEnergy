@@ -6,8 +6,8 @@ advancement revoke @s only simplenergy:right_click
 data modify storage simplenergy:main SelectedItemTag set from entity @s SelectedItem.components."minecraft:custom_data"
 
 # Switch on SelectedItem tag to run the right click function
-execute if data storage simplenergy:main SelectedItemTag.simplenergy.multimeter run function simplenergy:right_click/multimeter/
-execute if data storage simplenergy:main SelectedItemTag.simplenergy.wrench run function simplenergy:right_click/wrench/
+execute if data storage simplenergy:main SelectedItemTag.simplenergy.multimeter run function simplenergy:utils/multimeter/right_click/main
+execute if data storage simplenergy:main SelectedItemTag.simplenergy.wrench run function simplenergy:utils/wrench/right_click
 
 # Memory clean up
 data remove storage simplenergy:main SelectedItemTag
