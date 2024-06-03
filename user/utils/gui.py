@@ -22,7 +22,7 @@ def setup_gui_in_resource_packs(config: dict) -> dict[str, int]:
 	
 	# Write vanilla model
 	vanilla_gui = f"{config['build_resource_pack']}/assets/minecraft/models/item/{GUI_VANILLA_ITEM}.json"
-	model = {"parent": "block/deepslate","overrides": []}
+	model = {"parent": f"block/{GUI_VANILLA_ITEM}", "overrides": []}
 	for gui, cmd in generated_gui.items():
 		model["overrides"].append({"predicate": {"custom_model_data": cmd}, "model": f"simplenergy:block/{gui.replace('.png', '')}"})
 	sort_override_model(model)

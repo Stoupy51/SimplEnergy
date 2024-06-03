@@ -22,3 +22,7 @@ tag @s add energy.cable
 scoreboard players set @s energy.transfer_rate 120
 function energy:v1/api/init_cable
 
+# Cable rotation for models
+data modify entity @s Rotation set value [0.0f, 180.0f]
+data modify entity @s transformation.translation[1] set value 0.25f
+
