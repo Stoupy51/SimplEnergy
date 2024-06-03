@@ -7,7 +7,7 @@ def insert_lib_call(path: str, is_machine: bool):
 	if is_machine:
 		FILES_TO_WRITE[path] = FILES_TO_WRITE[path].replace("\nkill @s", "\nfunction energy:v1/api/break_machine\nkill @s")
 	else:
-		FILES_TO_WRITE[path] = FILES_TO_WRITE[path].replace("\nkill @s", "\nfunction energy:v1/api/break_item\nkill @s")
+		FILES_TO_WRITE[path] = FILES_TO_WRITE[path].replace("\nkill @s", "\nfunction energy:v1/api/break_cable\nkill @s")
 
 # Add commands to place and destroy functions for energy items
 def complete_place_and_destroy(config: dict) -> None:

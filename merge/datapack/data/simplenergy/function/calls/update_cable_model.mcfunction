@@ -1,7 +1,5 @@
 
-# Calculate the model
-scoreboard players operation #model simplenergy.data /= #100 simplenergy.data
-scoreboard players operation #model simplenergy.data *= #100 simplenergy.data
+# Add the model offset
 scoreboard players operation #model simplenergy.data += @s energy.data
 
 # Apply the model
