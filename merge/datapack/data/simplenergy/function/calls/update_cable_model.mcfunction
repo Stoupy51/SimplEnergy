@@ -1,6 +1,5 @@
 
 # Calculate the model
-execute store result score #model simplenergy.data run data get entity @s item.components."minecraft:custom_model_data"
 scoreboard players operation #model simplenergy.data /= #100 simplenergy.data
 scoreboard players operation #model simplenergy.data *= #100 simplenergy.data
 scoreboard players operation #model simplenergy.data += @s energy.data
