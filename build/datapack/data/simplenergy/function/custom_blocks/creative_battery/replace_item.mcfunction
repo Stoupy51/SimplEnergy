@@ -7,3 +7,6 @@
 data modify entity @s Item.components set from storage simplenergy:items all.creative_battery.components
 data modify entity @s Item.id set from storage simplenergy:items all.creative_battery.id
 
+# Keep energy
+function simplenergy:utils/keep_energy
+
