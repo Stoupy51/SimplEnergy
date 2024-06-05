@@ -12,7 +12,12 @@ def setup_cables_models(config: dict) -> None:
 	build_datapack: str = config['build_datapack']
 	build_resource_pack: str = config['build_resource_pack']
 	textures_folder = config['textures_folder']
-	cable_update_content: str = "# Get the base model\n"
+	cable_update_content: str = f"""
+# Stop if not {namespace} cable
+execute unless entity @s[tag={namespace}.custom_block] run return 0
+
+# Get the base model
+"""
 
 	# Setup the vanilla model
 	vanilla_model: str = f"{build_resource_pack}/assets/minecraft/models/item/{GUI_VANILLA_ITEM}.json"
@@ -69,8 +74,8 @@ data modify entity @s transformation.translation[1] set value 0.25f
 scoreboard players operation #model {namespace}.data += @s energy.data
 
 # Apply the model
-item replace entity @s[tag={namespace}.custom_block,tag=energy.cable] container.0 with {GUI_VANILLA_ITEM}
-execute store result entity @s[tag={namespace}.custom_block,tag=energy.cable] item.components."minecraft:custom_model_data" int 1 run scoreboard players get #model {namespace}.data
+item replace entity @s container.0 with {GUI_VANILLA_ITEM}
+execute store result entity @s item.components."minecraft:custom_model_data" int 1 run scoreboard players get #model {namespace}.data
 scoreboard players reset #model {namespace}.data
 """
 	write_to_file(f"{build_datapack}/data/{namespace}/function/calls/cable_update.mcfunction", cable_update_content)
