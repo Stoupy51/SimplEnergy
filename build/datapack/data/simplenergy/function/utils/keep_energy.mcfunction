@@ -13,7 +13,7 @@ data modify storage energy:temp list append from entity @s Item
 execute store result storage energy:temp list[0].components."minecraft:custom_data".energy.storage int 1 run scoreboard players get #storage simplenergy.data
 
 # Call the update_energy_lore function
-function simplenergy:calls/update_energy_lore
+function simplenergy:calls/update_energy_lore/main
 
 # Prevent stack with other batteries
 execute store result storage energy:temp list[0].components."minecraft:custom_data".simplenergy.not_stackable int 1 run scoreboard players get #stack simplenergy.data

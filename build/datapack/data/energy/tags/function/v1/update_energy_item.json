@@ -1,6 +1,6 @@
 {
 	"values": [
-		"simplenergy:calls/energy_lore"
+		"simplenergy:calls/update_energy_lore/main"
 	]
 }
 

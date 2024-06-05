@@ -79,7 +79,6 @@
 	"simplenergy.custom_blocks_loaded": "Custom blocks loaded: ",
 	"simplenergy.custom_ores": "Custom ores: ",
 	"simplenergy.markers_on_furnaces": "Markers on furnaces: ",
-	"simplenergy.charge": "[Charge: ",
 	"simplenergy.obtain_a_simplunium_ingot": "Obtain a Simplunium Ingot",
 	"simplenergy.more_energy_storage": "More Energy Storage!",
 	"simplenergy.upgrade_a_simple_battery": "Upgrade a Simple Battery",
@@ -112,6 +111,7 @@
 	"simplenergy.having_the_control": "Having the control!",
 	"simplenergy.craft_a_wrench_to_rotate_machines_and_break_cables": "Craft a wrench to rotate machines and break cables",
 	"simplenergy.cover_me_with_simplunium": "Cover Me with Simplunium",
-	"simplenergy.better_than_diamond_armor": "Better than diamond armor"
+	"simplenergy.better_than_diamond_armor": "Better than diamond armor",
+	"simplenergy.charge": "[Charge: "
 }
 
