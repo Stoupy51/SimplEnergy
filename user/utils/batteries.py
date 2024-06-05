@@ -3,7 +3,7 @@
 from python_datapack.utils.print import *
 from python_datapack.utils.io import *
 
-# Setup machines work and visuals
+# Setup functions for keeping energy for batteries
 def keep_energy_for_batteries(config: dict) -> None:
 	database: dict[str, dict] = config['database']
 	namespace: str = config['namespace']

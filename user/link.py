@@ -6,7 +6,9 @@ from python_datapack.utils.io import *
 from user.utils.advancements import add_visible_advancements
 from user.utils.batteries import keep_energy_for_batteries
 from user.utils.energy import complete_place_and_destroy
+from user.utils.balancing import setup_energy_balancing
 from user.utils.gui import setup_gui_in_resource_packs
+from user.utils.rotatable import setup_rotatable_tags
 from user.utils.cables import setup_cables_models
 from user.utils.machines import setup_machines
 
@@ -27,13 +29,13 @@ def main(config: dict) -> None:
 	setup_machines(config, gui)
 
 	# Setup rotatable tags
-	rotatables = ["furnace_generator", "electric_furnace", "electric_smelter"]
-	for rotatable in rotatables:
-		file: str = f"{config['build_datapack']}/data/{config['namespace']}/function/custom_blocks/{rotatable}/place_secondary.mcfunction"
-		write_to_file(file, f"\n# Make the block rotatable by wrench\ntag @s add {config['namespace']}.rotatable")
+	setup_rotatable_tags(config, ["furnace_generator", "electric_furnace", "electric_smelter"])
 
 	# Keep energy for batteries
 	keep_energy_for_batteries(config)
+
+	# Setup energy balancing
+	setup_energy_balancing(config, ["solar_panel", "cauldron_generator", "simple_battery", "advanced_battery", "elite_battery"])
 	
 	# Setup cables models
 	setup_cables_models(config)
