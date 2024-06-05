@@ -14,7 +14,7 @@
 			"translate":"simplenergy.obtain_a_simplunium_ingot",
 			"color": "green"
 		},
-		"background": "simplenergy:textures/item/advancement_background.png",
+		"background": "simplenergy:textures/block/gui/advancement_background.png",
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

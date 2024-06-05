@@ -6,8 +6,19 @@ from python_datapack.utils.io import *
 # Add visible advancements to the datapack
 def add_visible_advancements(config: dict) -> None:
 	database: dict = config['database']
+	textures_folder: str = config['textures_folder']
+	build_resource_pack: str = config['build_resource_pack']
+	namespace: str = config['namespace']
+
+	# Copy advancement texture
+	source: str = f"{textures_folder}/advancement_background.png"
+	destination: str = f"{build_resource_pack}/assets/{namespace}/textures/block/gui/advancement_background.png"
+	super_copy(source, destination)
+
+	# Advancements list
+	background: str = f"{namespace}:textures/block/gui/advancement_background.png"
 	advancements: dict[str, dict] = {
-		"simplunium_ingot": {'display': {'title': {'text': 'SimplEnergy', 'color': 'gray'}, 'description': {'text': 'Obtain a Simplunium Ingot', 'color': 'green'}, 'background': 'simplenergy:textures/item/advancement_background.png', 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': False}},
+		"simplunium_ingot": {'display': {'title': {'text': 'SimplEnergy', 'color': 'gray'}, 'description': {'text': 'Obtain a Simplunium Ingot', 'color': 'green'}, 'background': background, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': False}},
 		"advanced_battery": {'display': {'title': {'text': 'More Energy Storage!', 'color': 'gray'}, 'description': {'text': 'Upgrade a Simple Battery', 'color': 'green'}, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': False}, 'parent': 'simplenergy:visible/simple_battery'},
 		"advanced_cable": {'display': {'title': {'text': 'Better Cable, Faster Transfer', 'color': 'gray'}, 'description': {'text': 'Upgrade a Simple Cable', 'color': 'green'}, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': False}, 'parent': 'simplenergy:visible/simple_cable'},
 		"cauldron_generator": {'display': {'title': {'text': 'The Simpler Generator', 'color': 'gray'}, 'description': {'text': 'Craft your first Cauldron Generator', 'color': 'green'}, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': False}, 'parent': 'simplenergy:visible/simplunium_ingot'},
@@ -59,7 +70,7 @@ def add_visible_advancements(config: dict) -> None:
 		# Set the criteria
 		if not adv.get("criteria"):
 			criteria = {"requirement": {"trigger": "minecraft:inventory_changed","conditions": {"items": [{"components": {}}]}}}
-			criteria["requirement"]["conditions"]["items"][0]["components"]["minecraft:custom_data"] = json.dumps({config['namespace']:{item:True}})
+			criteria["requirement"]["conditions"]["items"][0]["components"]["minecraft:custom_data"] = json.dumps({namespace:{item:True}})
 			advancement["criteria"] = criteria
 
 		# Set the advancement
