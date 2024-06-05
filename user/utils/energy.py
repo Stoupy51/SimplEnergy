@@ -32,10 +32,10 @@ function energy:v1/api/init_cable
 			else:
 				# Else, if if's a machine
 				insert_lib_call(destroy, is_machine = True)
-				if "usage" in energy or "generate" in energy:
+				if "usage" in energy or "generation" in energy:
 					write_to_file(placement, f"""
 # Energy part
-tag @s add energy.{"send" if "generate" in energy else "receive"}
+tag @s add energy.{"send" if "generation" in energy else "receive"}
 scoreboard players set @s energy.max_storage {energy['max_storage']}
 scoreboard players operation @s energy.transfer_rate = @s energy.max_storage
 scoreboard players add @s energy.storage 0

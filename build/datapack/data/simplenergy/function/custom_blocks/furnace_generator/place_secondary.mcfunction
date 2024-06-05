@@ -26,12 +26,11 @@ execute if score #rotation simplenergy.data matches 3 run data modify entity @s 
 execute if score #rotation simplenergy.data matches 4 run data modify entity @s Rotation[0] set value 90.0f
 
 # Energy part
-tag @s add energy.receive
 tag @s add energy.send
-data modify storage simplenergy:temp energy set from entity @p[tag=simplenergy.placer] SelectedItem.components."minecraft:custom_data".energy
-execute store result score @s energy.max_storage run data get storage simplenergy:temp energy.max_storage
-execute store result score @s energy.storage run data get storage simplenergy:temp energy.storage
+scoreboard players set @s energy.max_storage 800
 scoreboard players operation @s energy.transfer_rate = @s energy.max_storage
+scoreboard players add @s energy.storage 0
+scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
 # Make the block rotatable by wrench

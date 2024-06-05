@@ -19,12 +19,11 @@ data modify entity @s transformation.translation[1] set value 0.003f
 data modify entity @s brightness set value {block:15,sky:15}
 
 # Energy part
-tag @s add energy.receive
 tag @s add energy.send
-data modify storage simplenergy:temp energy set from entity @p[tag=simplenergy.placer] SelectedItem.components."minecraft:custom_data".energy
-execute store result score @s energy.max_storage run data get storage simplenergy:temp energy.max_storage
-execute store result score @s energy.storage run data get storage simplenergy:temp energy.storage
+scoreboard players set @s energy.max_storage 500
 scoreboard players operation @s energy.transfer_rate = @s energy.max_storage
+scoreboard players add @s energy.storage 0
+scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
 # Add tag for loop every second
