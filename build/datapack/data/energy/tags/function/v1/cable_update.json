@@ -1,6 +1,6 @@
 {
 	"values": [
-		"simplenergy:calls/update_cable"
+		"simplenergy:calls/cable_update"
 	]
 }
 
