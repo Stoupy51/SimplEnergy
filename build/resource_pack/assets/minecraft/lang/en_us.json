@@ -1,9 +1,4 @@
 {
-	"simplenergy_error_this_version_is_made_for_minecraft_1_21": "SimplEnergy Error: This version is made for Minecraft 1.21+.",
-	"simplenergy_error_libraries_are_missingplease_download_the_right": "SimplEnergy Error: Libraries are missing\nplease download the right SimplEnergy datapack\nor download each of these libraries one by one:",
-	"simplenergy.common_signals": "- [Common Signals]",
-	"simplenergy.smithed_custom_block_placement": "- [Smithed Custom Block Placement]",
-	"simplenergy.datapackenergy": "- [DatapackEnergy]",
 	"simplenergy.loaded_simplenergy_v2_0_0": "[Loaded SimplEnergy v2.0.0]",
 	"simplenergy.simplunium_block": "Simplunium Block",
 	"simplenergy.simplunium_ore": "Simplunium Ore",
@@ -108,6 +103,11 @@
 	"simplenergy.craft_a_wrench_to_rotate_machines_and_break_cables": "Craft a wrench to rotate machines and break cables",
 	"simplenergy.cover_me_with_simplunium": "Cover Me with Simplunium",
 	"simplenergy.better_than_diamond_armor": "Better than diamond armor",
-	"simplenergy.charge": "[Charge: "
+	"simplenergy.charge": "[Charge: ",
+	"simplenergy_error_this_version_is_made_for_minecraft_1_21": "SimplEnergy Error: This version is made for Minecraft 1.21+.",
+	"simplenergy_error_libraries_are_missingplease_download_the_right": "SimplEnergy Error: Libraries are missing\nplease download the right SimplEnergy datapack\nor download each of these libraries one by one:",
+	"simplenergy.common_signals": "- [Common Signals]",
+	"simplenergy.smithed_custom_block": "- [Smithed Custom Block]",
+	"simplenergy.datapackenergy": "- [DatapackEnergy]"
 }
 
