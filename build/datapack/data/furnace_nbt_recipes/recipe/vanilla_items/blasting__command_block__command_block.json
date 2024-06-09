@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:blasting",
+	"ingredient": {
+		"item": "minecraft:command_block"
+	},
+	"result": {
+		"id": "minecraft:command_block"
+	},
+	"experience": 0.8,
+	"cookingtime": 100
+}
+

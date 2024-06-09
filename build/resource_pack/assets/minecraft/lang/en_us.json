@@ -108,6 +108,8 @@
 	"simplenergy_error_libraries_are_missingplease_download_the_right": "SimplEnergy Error: Libraries are missing\nplease download the right SimplEnergy datapack\nor download each of these libraries one by one:",
 	"simplenergy.common_signals": "- [Common Signals]",
 	"simplenergy.smithed_custom_block": "- [Smithed Custom Block]",
+	"simplenergy.smithed_crafter": "- [Smithed Crafter]",
+	"simplenergy.furnace_nbt_recipes": "- [Furnace NBT Recipes]",
 	"simplenergy.datapackenergy": "- [DatapackEnergy]"
 }
 

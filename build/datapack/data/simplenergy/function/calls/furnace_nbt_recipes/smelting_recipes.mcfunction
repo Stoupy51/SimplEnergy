@@ -4,24 +4,17 @@
 # @within	#furnace_nbt_recipes:v1/smelting_recipes
 #
 
-## Called by function tag #furnace_nbt_recipes:v1/smelting_recipes
-## You are allowed to call a loot table with more than 1 output count.
-## (x1 cobblestone -> x2 stone for instance)
-## Here are some examples with SimplEnergy recipes
-
-# Simplunium Ore
-execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input.components."minecraft:custom_data".ctc{id:"simplunium_ore"} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_ingot
-
-# Deepslate Simplunium Ore
-execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input.components."minecraft:custom_data".ctc{id:"deepslate_simplunium_ore"} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_ingot
-
-# Raw Simplunium
-execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input.components."minecraft:custom_data".ctc{id:"raw_simplunium"} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_ingot
-
-# Simplunium Dust
-execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input.components."minecraft:custom_data".ctc{id:"simplunium_dust"} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_ingot
-
-# Simplunium Armor & Tools
-execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input.components."minecraft:custom_data".ctc{traits:{"metal/simplunium":1b,"armor":1b}} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_nugget
-execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input.components."minecraft:custom_data".ctc{traits:{"metal/simplunium":1b,"tool":1b}} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_nugget
+execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"components": {"custom_data": {"simplenergy": {"raw_simplunium": true}}}} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_ingot
+execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"components": {"custom_data": {"simplenergy": {"simplunium_dust": true}}}} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_ingot
+execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"components": {"custom_data": {"simplenergy": {"simplunium_ore": true}}}} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_ingot
+execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"components": {"custom_data": {"simplenergy": {"deepslate_simplunium_ore": true}}}} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_ingot
+execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"components": {"custom_data": {"simplenergy": {"simplunium_helmet": true}}}} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_nugget
+execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"components": {"custom_data": {"simplenergy": {"simplunium_chestplate": true}}}} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_nugget
+execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"components": {"custom_data": {"simplenergy": {"simplunium_leggings": true}}}} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_nugget
+execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"components": {"custom_data": {"simplenergy": {"simplunium_boots": true}}}} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_nugget
+execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"components": {"custom_data": {"simplenergy": {"simplunium_sword": true}}}} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_nugget
+execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"components": {"custom_data": {"simplenergy": {"simplunium_pickaxe": true}}}} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_nugget
+execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"components": {"custom_data": {"simplenergy": {"simplunium_axe": true}}}} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_nugget
+execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"components": {"custom_data": {"simplenergy": {"simplunium_shovel": true}}}} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_nugget
+execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"components": {"custom_data": {"simplenergy": {"simplunium_hoe": true}}}} run loot replace block ~ ~ ~ container.3 loot simplenergy:i/simplunium_nugget
 
