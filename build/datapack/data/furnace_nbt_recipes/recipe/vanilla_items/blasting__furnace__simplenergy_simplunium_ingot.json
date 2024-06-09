@@ -1,0 +1,36 @@
+{
+	"type": "minecraft:blasting",
+	"ingredient": {
+		"item": "minecraft:furnace"
+	},
+	"result": {
+		"id": "minecraft:command_block",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"smithed": {
+					"dict": {
+						"ingot": {
+							"simplunium": true
+						}
+					},
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				},
+				"simplenergy": {
+					"simplunium_ingot": true
+				}
+			},
+			"minecraft:custom_model_data": 2012004,
+			"minecraft:item_name": "{'translate':'simplenergy.simplunium_ingot', 'italic': false, 'color': 'white'}",
+			"minecraft:lore": [
+				"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
+			]
+		}
+	},
+	"experience": 0.8,
+	"cookingtime": 100
+}
+
