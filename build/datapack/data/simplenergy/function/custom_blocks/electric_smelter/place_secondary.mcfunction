@@ -25,6 +25,9 @@ execute if score #rotation simplenergy.data matches 2 run data modify entity @s 
 execute if score #rotation simplenergy.data matches 3 run data modify entity @s Rotation[0] set value 0.0f
 execute if score #rotation simplenergy.data matches 4 run data modify entity @s Rotation[0] set value 90.0f
 
+# Furnace NBT Recipes
+execute align xyz positioned ~.5 ~ ~.5 unless entity @e[type=marker,dx=-1,dy=-1,dz=-1,tag=furnace_nbt_recipes.furnace] run summon marker ~ ~ ~ {Tags:["furnace_nbt_recipes.furnace"]}
+
 # Energy part
 tag @s add energy.receive
 scoreboard players set @s energy.max_storage 8000
