@@ -35,7 +35,7 @@ DEPENDENCIES: dict[str, dict[str, list[int] | str]] = {
 	# The version dict key contains the minimum required version of the dependency in [major, minor, patch] format
 	# The main key is the dependency namespace to check for
 	# The name can be whatever you want, it's just used in messages
-	"energy": {"version":[1, 8, 0], "name":"DatapackEnergy", "url":"https://github.com/ICY105/DatapackEnergy"},
+	"energy": {"version":[1, 7, 0], "name":"DatapackEnergy", "url":"https://github.com/ICY105/DatapackEnergy"},
 }
 
 # Technical constants
