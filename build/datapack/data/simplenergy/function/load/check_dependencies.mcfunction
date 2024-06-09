@@ -13,9 +13,8 @@ execute if score #dependency_error simplenergy.data matches 0 unless score #smit
 execute if score #dependency_error simplenergy.data matches 0 if score #smithed.custom_block.major load.status matches 0 unless score #smithed.custom_block.minor load.status matches 3.. run scoreboard players set #dependency_error simplenergy.data 1
 execute if score #dependency_error simplenergy.data matches 0 unless score #smithed.crafter.major load.status matches 0.. run scoreboard players set #dependency_error simplenergy.data 1
 execute if score #dependency_error simplenergy.data matches 0 if score #smithed.crafter.major load.status matches 0 unless score #smithed.crafter.minor load.status matches 3.. run scoreboard players set #dependency_error simplenergy.data 1
-execute if score #dependency_error simplenergy.data matches 0 if score #smithed.crafter.major load.status matches 0 if score #smithed.crafter.minor load.status matches 3 unless score #smithed.crafter.patch load.status matches 1.. run scoreboard players set #dependency_error simplenergy.data 1
 execute if score #dependency_error simplenergy.data matches 0 unless score #furnace_nbt_recipes.major load.status matches 1.. run scoreboard players set #dependency_error simplenergy.data 1
-execute if score #dependency_error simplenergy.data matches 0 if score #furnace_nbt_recipes.major load.status matches 1 unless score #furnace_nbt_recipes.minor load.status matches 4.. run scoreboard players set #dependency_error simplenergy.data 1
+execute if score #dependency_error simplenergy.data matches 0 if score #furnace_nbt_recipes.major load.status matches 1 unless score #furnace_nbt_recipes.minor load.status matches 5.. run scoreboard players set #dependency_error simplenergy.data 1
 execute if score #dependency_error simplenergy.data matches 0 unless score #energy.major load.status matches 1.. run scoreboard players set #dependency_error simplenergy.data 1
 execute if score #dependency_error simplenergy.data matches 0 if score #energy.major load.status matches 1 unless score #energy.minor load.status matches 7.. run scoreboard players set #dependency_error simplenergy.data 1
 

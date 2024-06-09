@@ -13,15 +13,15 @@ execute store result score #markers simplenergy.data if entity @e[tag=furnace_nb
 
 # Display numbers
 tellraw @s [{"text":"\n[Datapack Energy Stats]","color":"yellow"}]
-tellraw @s ["",{"text":"Entities: ","color":"gray"},{"score":{"name":"#temp","objective":"simplenergy.data"},"color":"gold"}]
-tellraw @s ["",{"text":"Cables: ","color":"gray"},{"score":{"name":"#temp","objective":"simplenergy.data"},"color":"gold"}]
-tellraw @s ["",{"text":"Devices: ","color":"gray"},{"score":{"name":"#temp","objective":"simplenergy.data"},"color":"gold"}]
-tellraw @s ["",{"text":"Only energy.send: ","color":"gray"},{"score":{"name":"#temp","objective":"simplenergy.data"},"color":"gold"}]
-tellraw @s ["",{"text":"Only energy.receive: ","color":"gray"},{"score":{"name":"#temp","objective":"simplenergy.data"},"color":"gold"}]
-tellraw @s ["",{"text":"Send & Receive: ","color":"gray"},{"score":{"name":"#temp","objective":"simplenergy.data"},"color":"gold"}]
+tellraw @s ["",{"text":"Entities: ","color":"gray"},{"score":{"name":"#entities","objective":"simplenergy.data"},"color":"gold"}]
+tellraw @s ["",{"text":"Cables: ","color":"gray"},{"score":{"name":"#cables","objective":"simplenergy.data"},"color":"gold"}]
+tellraw @s ["",{"text":"Devices: ","color":"gray"},{"score":{"name":"#devices","objective":"simplenergy.data"},"color":"gold"}]
+tellraw @s ["",{"text":"Only energy.send: ","color":"gray"},{"score":{"name":"#senders","objective":"simplenergy.data"},"color":"gold"}]
+tellraw @s ["",{"text":"Only energy.receive: ","color":"gray"},{"score":{"name":"#receivers","objective":"simplenergy.data"},"color":"gold"}]
+tellraw @s ["",{"text":"Send & Receive: ","color":"gray"},{"score":{"name":"#batteries","objective":"simplenergy.data"},"color":"gold"}]
 
 tellraw @s [{"text":"\n[SimplEnergy Stats]","color":"green"}]
-tellraw @s ["",{"text":"Custom blocks loaded: ","color":"gray"},{"score":{"name":"#temp","objective":"simplenergy.data"},"color":"gold"}]
-tellraw @s ["",{"text":"Custom ores: ","color":"gray"},{"score":{"name":"#temp","objective":"simplenergy.data"},"color":"gold"}]
-tellraw @s ["",{"text":"Markers on furnaces: ","color":"gray"},{"score":{"name":"#temp","objective":"simplenergy.data"},"color":"gold"}]
+tellraw @s ["",{"text":"Custom blocks loaded: ","color":"gray"},{"score":{"name":"#custom_blocks","objective":"simplenergy.data"},"color":"gold"}]
+tellraw @s ["",{"text":"Custom ores: ","color":"gray"},{"score":{"name":"#custom_ores","objective":"simplenergy.data"},"color":"gold"}]
+tellraw @s ["",{"text":"Markers on furnaces: ","color":"gray"},{"score":{"name":"#markers","objective":"simplenergy.data"},"color":"gold"}]
 
