@@ -2,6 +2,7 @@
 #> simplenergy:custom_blocks/deepslate_simplunium_ore/place_main
 #
 # @within	simplenergy:custom_blocks/place
+#			simplenergy:calls/smart_ore_generation/veins/deepslate_simplunium_ore
 #
 
 tag @s add simplenergy.placer

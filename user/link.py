@@ -3,6 +3,7 @@
 from python_datapack.constants import *
 from python_datapack.utils.print import *
 from python_datapack.utils.io import *
+from user.utils.custom_ore_generation import setup_custom_ore_generation
 from user.utils.advancements import add_visible_advancements
 from user.utils.batteries import keep_energy_for_batteries
 from user.utils.energy import complete_place_and_destroy
@@ -38,6 +39,9 @@ def main(config: dict) -> None:
 	
 	# Setup cables models
 	setup_cables_models(config)
+
+	# Setup custom ore generation
+	setup_custom_ore_generation(config)
 
 	info("User code executed")
 

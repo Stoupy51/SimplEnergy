@@ -110,6 +110,7 @@
 	"simplenergy.smithed_custom_block": "- [Smithed Custom Block]",
 	"simplenergy.smithed_crafter": "- [Smithed Crafter]",
 	"simplenergy.furnace_nbt_recipes": "- [Furnace NBT Recipes]",
+	"simplenergy.smart_ore_generation": "- [Smart Ore Generation]",
 	"simplenergy.datapackenergy": "- [DatapackEnergy]"
 }
 
