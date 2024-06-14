@@ -6,7 +6,6 @@
 
 # Get all recipes
 recipe give @s simplenergy:multimeter
-recipe give @s simplenergy:wrench
 recipe give @s simplenergy:simple_battery
 recipe give @s simplenergy:cauldron_generator
 recipe give @s simplenergy:furnace_generator
