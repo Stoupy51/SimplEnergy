@@ -18,7 +18,7 @@
 								"minecraft:lore": [
 									"{\"translate\":\"simplenergy.power_usage_40_kw\",\"italic\":false,\"color\":\"gray\"}",
 									"{\"translate\":\"simplenergy.energy_buffer_2400_kj\",\"italic\":false,\"color\":\"gray\"}",
-									"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
+									"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
 								],
 								"minecraft:custom_model_data": 2012030,
 								"minecraft:item_name": "{'translate':'simplenergy.electric_brewing_stand', 'italic': false, 'color': 'white'}",

@@ -7,7 +7,7 @@
 			}
 		},
 		"title": {
-			"text":"SimplEnergy",
+			"translate":"simplenergy",
 			"color": "gray"
 		},
 		"description": {

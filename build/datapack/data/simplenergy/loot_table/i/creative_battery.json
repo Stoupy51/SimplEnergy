@@ -17,7 +17,7 @@
 								},
 								"minecraft:lore": [
 									"{\"translate\":\"simplenergy.energy_storage_2147_gj\",\"italic\":false,\"color\":\"gray\"}",
-									"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
+									"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
 								],
 								"minecraft:custom_model_data": 2012022,
 								"minecraft:item_name": "{'translate':'simplenergy.creative_battery', 'italic': false, 'color': 'white'}",

@@ -18,7 +18,7 @@
 								"minecraft:lore": [
 									"{\"translate\":\"simplenergy.energy_generation_5_kw\",\"italic\":false,\"color\":\"gray\"}",
 									"{\"translate\":\"simplenergy.energy_buffer_500_kj\",\"italic\":false,\"color\":\"gray\"}",
-									"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
+									"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
 								],
 								"minecraft:item_name": "{'translate':'simplenergy.cauldron_generator', 'italic': false, 'color': 'white'}",
 								"minecraft:container": [

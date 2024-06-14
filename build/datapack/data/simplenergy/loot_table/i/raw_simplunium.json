@@ -17,7 +17,7 @@
 								"minecraft:custom_model_data": 2012006,
 								"minecraft:item_name": "{'translate':'simplenergy.raw_simplunium', 'italic': false, 'color': 'white'}",
 								"minecraft:lore": [
-									"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
+									"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
 								]
 							}
 						}

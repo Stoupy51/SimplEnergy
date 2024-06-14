@@ -18,7 +18,7 @@
 								"minecraft:lore": [
 									"{\"translate\":\"simplenergy.energy_generation_4_kw\",\"italic\":false,\"color\":\"gray\"}",
 									"{\"translate\":\"simplenergy.energy_buffer_600_kj\",\"italic\":false,\"color\":\"gray\"}",
-									"{'text':'SimplEnergy', 'italic': true, 'color': 'blue'}"
+									"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
 								],
 								"minecraft:custom_model_data": 2012025,
 								"minecraft:item_name": "{'translate':'simplenergy.solar_panel', 'italic': false, 'color': 'white'}",
