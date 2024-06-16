@@ -1,12 +1,12 @@
 
-#> simplenergy:load/waiting_for_player
+#> simplenergy:v2.0.0/load/valid_dependencies
 #
-# @within	simplenergy:load/secondary
-#			simplenergy:load/waiting_for_player 1t replace
+# @within	simplenergy:v2.0.0/load/secondary
+#			simplenergy:v2.0.0/load/valid_dependencies 1t replace
 #
 
 # Waiting for a player to get the game version, but stop function if no player found
-execute unless entity @p run schedule function simplenergy:load/waiting_for_player 1t replace
+execute unless entity @p run schedule function simplenergy:v2.0.0/load/valid_dependencies 1t replace
 execute unless entity @p run return 0
 execute store result score #game_version simplenergy.data run data get entity @p DataVersion
 
@@ -32,5 +32,5 @@ execute if score #dependency_error simplenergy.data matches 1 unless score #ener
 execute if score #dependency_error simplenergy.data matches 1 if score #energy.major load.status matches 1 unless score #energy.minor load.status matches 7.. run tellraw @a {"translate":"simplenergy.datapackenergy","color":"gold","clickEvent":{"action":"open_url","value":"https://github.com/ICY105/DatapackEnergy"}}
 
 # Load SimplEnergy
-execute if score #game_version simplenergy.data matches 1.. if score #mcload_error simplenergy.data matches 0 if score #dependency_error simplenergy.data matches 0 run function simplenergy:load/confirm_load
+execute if score #game_version simplenergy.data matches 1.. if score #mcload_error simplenergy.data matches 0 if score #dependency_error simplenergy.data matches 0 run function simplenergy:v2.0.0/load/confirm_load
 

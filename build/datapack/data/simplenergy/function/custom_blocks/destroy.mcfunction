@@ -1,9 +1,9 @@
 
 #> simplenergy:custom_blocks/destroy
 #
-# @within	simplenergy:tick_2
-#			simplenergy:second
-#			simplenergy:second_5
+# @within	simplenergy:v2.0.0/tick_2
+#			simplenergy:v2.0.0/second
+#			simplenergy:v2.0.0/second_5
 #			simplenergy:calls/common_signals/on_ore_destroyed
 #
 

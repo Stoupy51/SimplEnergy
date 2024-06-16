@@ -1,17 +1,12 @@
 
-#> simplenergy:load/confirm_load
+#> simplenergy:v2.0.0/load/confirm_load
 #
-# @within	simplenergy:load/waiting_for_player
+# @within	simplenergy:v2.0.0/load/valid_dependencies
 #
 
 tellraw @a[tag=convention.debug] {"translate":"simplenergy.loaded_simplenergy_v2_0_0","color":"green"}
 
-scoreboard objectives add simplenergy.private dummy
-scoreboard objectives add simplenergy.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
-
 scoreboard players set #simplenergy.loaded load.status 1
-# "#second" starts at a random time for better load distribution
-execute store result score #second simplenergy.data run random value 1..19
 
 # Items storage
 data modify storage simplenergy:items all set value {}

@@ -1,7 +1,7 @@
 
 #> simplenergy:balancing/main
 #
-# @within	simplenergy:second_5
+# @within	simplenergy:v2.0.0/second_5
 #
 
 # Stop if already balanced
