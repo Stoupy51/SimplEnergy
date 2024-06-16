@@ -15,6 +15,9 @@ from user.utils.machines import setup_machines
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 def main(config: dict) -> None:
+	namespace: str = config['namespace']
+	version: str = config['version']
+	functions: str = f"{config['build_datapack']}/data/{namespace}/function"
 	
 	# Add commands to place and destroy functions for energy items
 	complete_place_and_destroy(config)
@@ -43,5 +46,9 @@ def main(config: dict) -> None:
 	# Setup custom ore generation
 	setup_custom_ore_generation(config)
 
-	info("User code executed")
+	# Setup additional things
+	write_to_file(f"{functions}/v{version}/tick_2.mcfunction", f"""
+# Passive multimeter
+execute as @a[tag=!global.ignore.gui,tag=simplenergy.state.multimeter] at @s anchored eyes positioned ^ ^ ^.2 run function simplenergy:utils/multimeter/passive/main
+""")
 

@@ -5,7 +5,7 @@ from python_datapack.utils.io import *
 
 # Setup energy balancing
 def setup_energy_balancing(config: dict, can_balance: list[str]) -> None:
-	database: dict[str, dict] = config['database']
+	version: str = config['version']
 	namespace: str = config['namespace']
 	build_datapack: str = config['build_datapack']
 	functions_folder: str = f"{build_datapack}/data/{namespace}/function"
@@ -14,7 +14,7 @@ def setup_energy_balancing(config: dict, can_balance: list[str]) -> None:
 	adjacent_tag: str = f"{namespace}.adjacent"
 
 	# Write in second_5.mcfunction a call to balancing function
-	write_to_file(f"{functions_folder}/second_5.mcfunction", f"""
+	write_to_file(f"{functions_folder}/v{version}/second_5.mcfunction", f"""
 # Energy Balancing system (balance every device having at least 20 kJ)
 execute as @e[tag={can_balance_tag},scores={{energy.storage=20..}}] at @s[tag=!{balanced_tag}] run function {namespace}:balancing/main
 tag @e[tag={balanced_tag}] remove {balanced_tag}
