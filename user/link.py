@@ -12,6 +12,7 @@ from user.utils.gui import setup_gui_in_resource_packs
 from user.utils.rotatable import setup_rotatable_tags
 from user.utils.cables import setup_cables_models
 from user.utils.machines import setup_machines
+from user.utils.remaining import setup_remaining
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 def main(config: dict) -> None:
@@ -47,8 +48,5 @@ def main(config: dict) -> None:
 	setup_custom_ore_generation(config)
 
 	# Setup additional things
-	write_to_file(f"{functions}/v{version}/tick_2.mcfunction", f"""
-# Passive multimeter
-execute as @a[tag=!global.ignore.gui,tag=simplenergy.state.multimeter] at @s anchored eyes positioned ^ ^ ^.2 run function simplenergy:utils/multimeter/passive/main
-""")
+	setup_remaining(config)
 

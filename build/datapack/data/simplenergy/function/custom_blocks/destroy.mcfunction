@@ -5,6 +5,7 @@
 #			simplenergy:v2.0.0/second
 #			simplenergy:v2.0.0/second_5
 #			simplenergy:calls/common_signals/on_ore_destroyed
+#			simplenergy:calls/mechanization/wrench_break
 #
 
 execute if entity @s[tag=simplenergy.vanilla.minecraft_brewing_stand] unless block ~ ~ ~ minecraft:brewing_stand run function simplenergy:custom_blocks/_groups/minecraft_brewing_stand

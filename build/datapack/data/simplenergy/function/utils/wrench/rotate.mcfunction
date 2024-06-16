@@ -12,6 +12,7 @@ data modify storage simplenergy:main Block set from block ~ ~ ~
 # Rotate custom block
 execute store result score #rotation simplenergy.data run data get entity @s Rotation[0]
 scoreboard players add #rotation simplenergy.data 90
+scoreboard players set #360 simplenergy.data 360
 scoreboard players operation #rotation simplenergy.data %= #360 simplenergy.data
 execute store result entity @s Rotation[0] float 1 run scoreboard players get #rotation simplenergy.data
 

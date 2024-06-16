@@ -1,8 +1,8 @@
 
 #> simplenergy:utils/wrench/raycast
 #
-# @within	simplenergy:utils/wrench/raycast
-#			simplenergy:utils/wrench/right_click
+# @within	simplenergy:utils/wrench/right_click
+#			simplenergy:utils/wrench/raycast
 #
 
 # Stop case when raycast hits a block that is from wrench_raycast tag
