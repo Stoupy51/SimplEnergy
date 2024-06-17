@@ -7,13 +7,15 @@ def main(config: dict) -> dict[str, dict]:
 
 	## TODO: complete item definition (and dynamic)
 	external_database: dict[str, dict] = {
-		"mechanization:raw_tin": {"id":"minecraft:structure_block",			"custom_data": {"smithed": {"dict": {"raw": {"tin": True}}},			"mechanization": {"id": "raw_tin"}}},
-		"mechanization:tin_ore": {"id":"minecraft:blast_furnace",			"custom_data": {"smithed": {"dict": {"ore": {"tin": True}}},			"mechanization": {"id": "tin_ore"}}},
-		"mechanization:tin_ingot": {"id":"minecraft:structure_block",		"custom_data": {"smithed": {"dict": {"ingot": {"tin": True}}},			"mechanization": {"id": "tin_ingot"}}},
+		"mechanization:raw_tin": {"id":"minecraft:structure_block",					"custom_data": {"smithed": {"dict": {"raw": {"tin": True}}},			"mechanization": {"id": "raw_tin"}}},
+		"mechanization:tin_ore": {"id":"minecraft:blast_furnace",					"custom_data": {"smithed": {"dict": {"ore": {"tin": True}}},			"mechanization": {"id": "tin_ore"}}},
+		"mechanization:deepslate_tin_ore": {"id":"minecraft:blast_furnace",			"custom_data": {"smithed": {"dict": {"ore": {"tin": True}}},			"mechanization": {"id": "tin_ore"}}},
+		"mechanization:tin_ingot": {"id":"minecraft:structure_block",				"custom_data": {"smithed": {"dict": {"ingot": {"tin": True}}},			"mechanization": {"id": "tin_ingot"}}},
 
-		"mechanization:raw_titanium": {"id":"minecraft:structure_block",	"custom_data": {"smithed": {"dict": {"raw": {"titanium": True}}},		"mechanization": {"id": "raw_titanium"}}},
-		"mechanization:titanium_ore": {"id":"minecraft:blast_furnace",		"custom_data": {"smithed": {"dict": {"ore": {"titanium": True}}},		"mechanization": {"id": "titanium_ore"}}},
-		"mechanization:titanium_ingot": {"id":"minecraft:structure_block",	"custom_data": {"smithed": {"dict": {"ingot": {"titanium": True}}},		"mechanization": {"id": "titanium_ingot"}}},
+		"mechanization:raw_titanium": {"id":"minecraft:structure_block",			"custom_data": {"smithed": {"dict": {"raw": {"titanium": True}}},		"mechanization": {"id": "raw_titanium"}}},
+		"mechanization:titanium_ore": {"id":"minecraft:blast_furnace",				"custom_data": {"smithed": {"dict": {"ore": {"titanium": True}}},		"mechanization": {"id": "titanium_ore"}}},
+		"mechanization:deepslate_titanium_ore": {"id":"minecraft:blast_furnace",	"custom_data": {"smithed": {"dict": {"ore": {"titanium": True}}},		"mechanization": {"id": "titanium_ore"}}},
+		"mechanization:titanium_ingot": {"id":"minecraft:structure_block",			"custom_data": {"smithed": {"dict": {"ingot": {"titanium": True}}},		"mechanization": {"id": "titanium_ingot"}}},
 	}
 
 	# Mechanization config

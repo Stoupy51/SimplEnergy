@@ -108,17 +108,17 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 
 	# Dusts
 	dusts: dict[str, dict] = {
-		"copper":		{"pulverize":["raw_copper","copper_ore"],			"smelt":ingr_repr("minecraft:copper_ingot")},
-		"iron":			{"pulverize":["raw_iron","iron_ore"],				"smelt":ingr_repr("minecraft:iron_ingot")},
-		"gold":			{"pulverize":["raw_gold","gold_ore"],				"smelt":ingr_repr("minecraft:gold_ingot")},
-		"lapis":		{"pulverize":["lapis_ore"],							"smelt":ingr_repr("minecraft:lapis_lazuli")},
-		"diamond":		{"pulverize":["diamond_ore"],						"smelt":ingr_repr("minecraft:diamond")},
-		"emerald":		{"pulverize":["emerald_ore"],						"smelt":ingr_repr("minecraft:emerald")},
-		"quartz":		{"pulverize":["nether_quartz_ore"],					"smelt":ingr_repr("minecraft:quartz")},
-		"netherite":	{"pulverize":["ancient_debris"],					"smelt":ingr_repr("minecraft:netherite_scrap")},
-		"simplunium":	{"pulverize":["raw_simplunium","simplunium_ore"],	"smelt":ingr_repr("simplunium_ingot", NAMESPACE)},
-		"tin":			{"pulverize":["raw_tin","tin_ore"],					"smelt":ingr_repr("tin_ingot", "mechanization")},
-		"titanium":		{"pulverize":["raw_titanium","titanium_ore"],		"smelt":ingr_repr("titanium_ingot", "mechanization")},
+		"copper":		{"pulverize":["raw_copper","copper_ore","deepslate_copper_ore"],				"smelt":ingr_repr("minecraft:copper_ingot")},
+		"iron":			{"pulverize":["raw_iron","iron_ore","deepslate_iron_ore"],						"smelt":ingr_repr("minecraft:iron_ingot")},
+		"gold":			{"pulverize":["raw_gold","gold_ore","deepslate_gold_ore"],						"smelt":ingr_repr("minecraft:gold_ingot")},
+		"lapis":		{"pulverize":["lapis_ore","deepslate_lapis_ore"],								"smelt":ingr_repr("minecraft:lapis_lazuli")},
+		"diamond":		{"pulverize":["diamond_ore","deepslate_diamond_ore"],							"smelt":ingr_repr("minecraft:diamond")},
+		"emerald":		{"pulverize":["emerald_ore","deepslate_emerald_ore"],							"smelt":ingr_repr("minecraft:emerald")},
+		"quartz":		{"pulverize":["nether_quartz_ore"],												"smelt":ingr_repr("minecraft:quartz")},
+		"netherite":	{"pulverize":["ancient_debris"],												"smelt":ingr_repr("minecraft:netherite_scrap")},
+		"simplunium":	{"pulverize":["raw_simplunium","simplunium_ore","deepslate_simplunium_ore"],	"smelt":ingr_repr("simplunium_ingot", NAMESPACE)},
+		"tin":			{"pulverize":["raw_tin","tin_ore","deepslate_tin_ore"],							"smelt":ingr_repr("tin_ingot", "mechanization")},
+		"titanium":		{"pulverize":["raw_titanium","titanium_ore","deepslate_titanium_ore"],			"smelt":ingr_repr("titanium_ingot", "mechanization")},
 	}
 	for material, data in dusts.items():
 		dust: str = material + "_dust"

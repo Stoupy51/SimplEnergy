@@ -11,6 +11,12 @@
 		"item_name": "{'text': 'Tin Ore', 'italic': false, 'color': 'white'}",
 		"lore": ["[{'text': 'Mechanization', 'italic': true, 'color': 'blue'}]"]
 	},
+	"mechanization:deepslate_tin_ore": {
+		"id": "minecraft:blast_furnace",
+		"custom_data": {"smithed": {"dict": {"ore": {"tin": true}}},"mechanization": {"id": "tin_ore"}},
+		"item_name": "{'text': 'Deepslate Tin Ore', 'italic': false, 'color': 'white'}",
+		"lore": ["[{'text': 'Mechanization', 'italic': true, 'color': 'blue'}]"]
+	},
 	"mechanization:tin_ingot": {
 		"id": "minecraft:structure_block",
 		"custom_data": {"smithed": {"dict": {"ingot": {"tin": true}}},"mechanization": {"id": "tin_ingot"}},
@@ -27,6 +33,12 @@
 		"id": "minecraft:blast_furnace",
 		"custom_data": {"smithed": {"dict": {"ore": {"titanium": true}}},"mechanization": {"id": "titanium_ore"}},
 		"item_name": "{'text': 'Titanium Ore', 'italic': false, 'color': 'white'}",
+		"lore": ["[{'text': 'Mechanization', 'italic': true, 'color': 'blue'}]"]
+	},
+	"mechanization:deepslate_titanium_ore": {
+		"id": "minecraft:blast_furnace",
+		"custom_data": {"smithed": {"dict": {"ore": {"titanium": true}}},"mechanization": {"id": "titanium_ore"}},
+		"item_name": "{'text': 'Deepslate Titanium Ore', 'italic': false, 'color': 'white'}",
 		"lore": ["[{'text': 'Mechanization', 'italic': true, 'color': 'blue'}]"]
 	},
 	"mechanization:titanium_ingot": {
