@@ -18,8 +18,15 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 
 		"cauldron_generator": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":5, "max_storage": 500}},		RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["I I","IRI","III"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"R":ingr_repr("minecraft:redstone")}}],																		"lore": ['{"text":"[Energy Generation: 5 kW]","italic":false,"color":"gray"}','{"text":"[Energy Buffer: 500 kJ]","italic":false,"color":"gray"}'],
-			OVERRIDE_MODEL: {"parent":"block/cauldron", "textures": {"side": f"{NAMESPACE}:block/cauldron_generator_side", "top": f"{NAMESPACE}:block/cauldron_generator_top", "bottom": f"{NAMESPACE}:block/cauldron_generator_bottom"}},
-		},
+			OVERRIDE_MODEL: {"parent":"block/cauldron", "textures": {"side": f"{NAMESPACE}:block/cauldron_generator_side", "top": f"{NAMESPACE}:block/cauldron_generator_top", "bottom": f"{NAMESPACE}:block/cauldron_generator_bottom"},
+			"display":{
+				"gui":{"rotation":[30,225,0],"translation":[0,0,0],"scale":[0.625,0.625,0.625]},
+				"ground":{"rotation":[0,0,0],"translation":[0,3,0],"scale":[0.25,0.25,0.25]},
+				"fixed":{"rotation":[0,0,0],"translation":[0,0,0],"scale":[0.5,0.5,0.5]},
+				"thirdperson_righthand":{"rotation":[75,45,0],"translation":[0,2.5,0],"scale":[0.375,0.375,0.375]},
+				"firstperson_righthand":{"rotation":[0,45,0],"translation":[0,0,0],"scale":[0.40,0.40,0.40]},
+				"firstperson_lefthand":{"rotation":[0,225,0],"translation":[0,0,0],"scale":[0.40,0.40,0.40]}
+		}}},
 		"furnace_generator": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":10, "max_storage": 800}},		RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","RFR","SSS"],"ingredients":{"I":ingr_repr("minecraft:iron_block"),"R":ingr_repr("minecraft:redstone"),"F":ingr_repr("minecraft:furnace"),"S":ingr_repr("minecraft:stone")}}],	"lore": ['{"text":"[Energy Generation: 10 kW]","italic":false,"color":"gray"}','{"text":"[Energy Buffer: 800 kJ]","italic":false,"color":"gray"}']},
 		"solar_panel": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":4, "max_storage": 600}},		RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LDL","III"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"D":ingr_repr("minecraft:daylight_detector"),"I":ingr_repr("minecraft:iron_block")}}],									"lore": ['{"text":"[Energy Generation: 4 kW]","italic":false,"color":"gray"}','{"text":"[Energy Buffer: 600 kJ]","italic":false,"color":"gray"}'],
@@ -97,6 +104,31 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 	database_additions["simple_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(database_additions["simple_cable"]["profile"]) + "}"}
 	database_additions["advanced_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(database_additions["advanced_cable"]["profile"]) + "}"}
 	database_additions["elite_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(database_additions["elite_cable"]["profile"]) + "}"}
+
+
+	# Dusts
+	dusts: dict[str, dict] = {
+		"copper":		{"pulverize":["raw_copper","copper_ore"],			"smelt":ingr_repr("minecraft:copper_ingot")},
+		"iron":			{"pulverize":["raw_iron","iron_ore"],				"smelt":ingr_repr("minecraft:iron_ingot")},
+		"gold":			{"pulverize":["raw_gold","gold_ore"],				"smelt":ingr_repr("minecraft:gold_ingot")},
+		"lapis":		{"pulverize":["lapis_ore"],							"smelt":ingr_repr("minecraft:lapis_lazuli")},
+		"diamond":		{"pulverize":["diamond_ore"],						"smelt":ingr_repr("minecraft:diamond")},
+		"emerald":		{"pulverize":["emerald_ore"],						"smelt":ingr_repr("minecraft:emerald")},
+		"quartz":		{"pulverize":["nether_quartz_ore"],					"smelt":ingr_repr("minecraft:quartz")},
+		"netherite":	{"pulverize":["ancient_debris"],					"smelt":ingr_repr("minecraft:netherite_scrap")},
+		"simplunium":	{"pulverize":["raw_simplunium","simplunium_ore"],	"smelt":ingr_repr("simplunium_ingot", NAMESPACE)},
+		"tin":			{"pulverize":["raw_tin","tin_ore"],					"smelt":ingr_repr("tin_ingot", "mechanization")},
+		"titanium":		{"pulverize":["raw_titanium","titanium_ore"],		"smelt":ingr_repr("titanium_ingot", "mechanization")},
+	}
+	for material, data in dusts.items():
+		dust: str = material + "_dust"
+		ingredient: dict = ingr_repr(dust, NAMESPACE)
+		database_additions[dust] = {"id": CUSTOM_ITEM_VANILLA, CATEGORY: "material"}
+		database_additions[dust][RESULT_OF_CRAFTING] = [
+			{"type":"smelting","result_count":1,"category":"misc","group":material,"experience":0.8,"cookingtime":200,"ingredient":ingredient, "result":data["smelt"]},
+			{"type":"blasting","result_count":1,"category":"misc","group":material,"experience":0.8,"cookingtime":100,"ingredient":ingredient, "result":data["smelt"]},
+		]
+
 
 	# Update the database with new data
 	for k, v in database_additions.items():
