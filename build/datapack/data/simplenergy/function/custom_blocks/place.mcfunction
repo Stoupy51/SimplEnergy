@@ -19,5 +19,6 @@ execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:solar
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:electric_furnace"} run function simplenergy:custom_blocks/electric_furnace/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:electric_smelter"} run function simplenergy:custom_blocks/electric_smelter/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:electric_brewing_stand"} run function simplenergy:custom_blocks/electric_brewing_stand/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:pulverizer"} run function simplenergy:custom_blocks/pulverizer/place_main
 tag @s remove simplenergy.placer
 

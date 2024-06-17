@@ -299,6 +299,16 @@
 		"custom_model_data": 2012030,
 		"item_name": "{'text': 'Electric Brewing Stand', 'italic': false, 'color': 'white'}"
 	},
+	"pulverizer": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"usage": 120,"max_storage": 6400},"simplenergy": {"pulverizer": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["DDD","IFI","CCC"],"ingredients": {"D": {"item": "minecraft:diamond"},"I": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}},"F": {"components": {"minecraft:custom_data": {"simplenergy": {"electric_furnace": true}}}},"C": {"item": "minecraft:copper_block"}}}],
+		"lore": ["{\"text\":\"[Power Usage: 120 kW]\",\"italic\":false,\"color\":\"gray\"}","{\"text\":\"[Energy Buffer: 6400 kJ]\",\"italic\":false,\"color\":\"gray\"}","{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": true},
+		"custom_model_data": 2012043,
+		"item_name": "{'text': 'Pulverizer', 'italic': false, 'color': 'white'}"
+	},
 	"simple_cable": {
 		"id": "minecraft:player_head",
 		"category": "energy",

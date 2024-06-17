@@ -8,6 +8,7 @@
 #			simplenergy:calls/mechanization/wrench_break
 #
 
+execute if entity @s[tag=simplenergy.vanilla.minecraft_barrel] unless block ~ ~ ~ minecraft:barrel run function simplenergy:custom_blocks/_groups/minecraft_barrel
 execute if entity @s[tag=simplenergy.vanilla.minecraft_brewing_stand] unless block ~ ~ ~ minecraft:brewing_stand run function simplenergy:custom_blocks/_groups/minecraft_brewing_stand
 execute if entity @s[tag=simplenergy.vanilla.minecraft_cauldron] unless block ~ ~ ~ #minecraft:cauldrons run function simplenergy:custom_blocks/_groups/minecraft_cauldron
 execute if entity @s[tag=simplenergy.vanilla.minecraft_copper_block] unless block ~ ~ ~ minecraft:copper_block run function simplenergy:custom_blocks/_groups/minecraft_copper_block
