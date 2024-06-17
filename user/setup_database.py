@@ -23,7 +23,7 @@ def main(config: dict) -> dict[str, dict]:
 	database = additions_main(database)
 
 	# Final adjustments
-	deterministic_custom_model_data(config, database, STARTING_CMD, black_list = ["simple_cable", "advanced_cable", "elite_cable", "cauldron_generator"])
+	deterministic_custom_model_data(config, database, STARTING_CMD, black_list = ["simple_cable", "advanced_cable", "elite_cable"])
 	clean_up_empty_recipes(database)
 	add_item_name_and_lore_if_missing(config, database)
 	add_private_custom_data_for_namespace(config, database)

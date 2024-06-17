@@ -1,7 +1,10 @@
 {
 	"display": {
 		"icon": {
-			"id": "minecraft:furnace"
+			"id": "minecraft:furnace",
+			"components": {
+				"minecraft:custom_model_data": 2012032
+			}
 		},
 		"title": {
 			"translate":"simplenergy.the_simpler_generator",

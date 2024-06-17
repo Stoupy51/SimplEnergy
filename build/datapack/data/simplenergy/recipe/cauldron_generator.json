@@ -35,6 +35,7 @@
 				"{\"translate\":\"simplenergy.energy_buffer_500_kj\",\"italic\":false,\"color\":\"gray\"}",
 				"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
 			],
+			"minecraft:custom_model_data": 2012032,
 			"minecraft:item_name": "{'translate':'simplenergy.cauldron_generator', 'italic': false, 'color': 'white'}",
 			"minecraft:container": [
 				{

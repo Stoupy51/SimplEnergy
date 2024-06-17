@@ -1,0 +1,9 @@
+{
+	"parent": "block/cauldron",
+	"textures": {
+		"side": "simplenergy:block/cauldron_generator_side",
+		"top": "simplenergy:block/cauldron_generator_top",
+		"bottom": "simplenergy:block/cauldron_generator_bottom"
+	}
+}
+
