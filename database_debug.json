@@ -240,7 +240,9 @@
 		"custom_data": {"energy": {"generation": 5,"max_storage": 500},"simplenergy": {"cauldron_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["I I","IRI","III"],"ingredients": {"I": {"item": "minecraft:iron_ingot"},"R": {"item": "minecraft:redstone"}}}],
 		"lore": ["{\"text\":\"[Energy Generation: 5 kW]\",\"italic\":false,\"color\":\"gray\"}","{\"text\":\"[Energy Buffer: 500 kJ]\",\"italic\":false,\"color\":\"gray\"}","{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
+		"override_model": {"parent": "block/cauldron","textures": {"side": "simplenergy:block/cauldron_generator_side","top": "simplenergy:block/cauldron_generator_top","bottom": "simplenergy:block/cauldron_generator_bottom"}},
 		"vanilla_block": {"id": "minecraft:cauldron","apply_facing": false},
+		"custom_model_data": 2012032,
 		"item_name": "{'text': 'Cauldron Generator', 'italic': false, 'color': 'white'}"
 	},
 	"furnace_generator": {

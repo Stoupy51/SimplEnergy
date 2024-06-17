@@ -26,5 +26,6 @@
 	"solar_panel": 2012025,
 	"electric_furnace": 2012026,
 	"electric_smelter": 2012028,
-	"electric_brewing_stand": 2012030
+	"electric_brewing_stand": 2012030,
+	"cauldron_generator": 2012032
 }
