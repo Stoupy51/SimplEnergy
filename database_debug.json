@@ -52,7 +52,7 @@
 		"id": "minecraft:command_block",
 		"category": "material",
 		"custom_data": {"smithed": {"dict": {"nugget": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_nugget": true}},
-		"result_of_crafting": [{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_helmet": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_chestplate": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_leggings": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_boots": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_sword": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_pickaxe": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_axe": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_shovel": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_hoe": true}}}}}],
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_helmet": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_chestplate": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_leggings": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_boots": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_sword": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_pickaxe": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_axe": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_shovel": true}}}}},{"type": "smelting","result_count": 1,"category": "equipment","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_hoe": true}}}}}],
 		"custom_model_data": 2012005,
 		"item_name": "{'text': 'Simplunium Nugget', 'italic': false, 'color': 'white'}",
 		"lore": ["{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"]
@@ -69,6 +69,7 @@
 		"id": "minecraft:command_block",
 		"category": "material",
 		"custom_data": {"smithed": {"dict": {"dust": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_dust": true}},
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"category": "misc","group": "simplunium","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_dust": true}}}},"result": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "simplunium","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_dust": true}}}},"result": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}}}],
 		"custom_model_data": 2012007,
 		"item_name": "{'text': 'Simplunium Dust', 'italic': false, 'color': 'white'}",
 		"lore": ["{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"]
@@ -240,7 +241,7 @@
 		"custom_data": {"energy": {"generation": 5,"max_storage": 500},"simplenergy": {"cauldron_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["I I","IRI","III"],"ingredients": {"I": {"item": "minecraft:iron_ingot"},"R": {"item": "minecraft:redstone"}}}],
 		"lore": ["{\"text\":\"[Energy Generation: 5 kW]\",\"italic\":false,\"color\":\"gray\"}","{\"text\":\"[Energy Buffer: 500 kJ]\",\"italic\":false,\"color\":\"gray\"}","{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
-		"override_model": {"parent": "block/cauldron","textures": {"side": "simplenergy:block/cauldron_generator_side","top": "simplenergy:block/cauldron_generator_top","bottom": "simplenergy:block/cauldron_generator_bottom"}},
+		"override_model": {"parent": "block/cauldron","textures": {"side": "simplenergy:block/cauldron_generator_side","top": "simplenergy:block/cauldron_generator_top","bottom": "simplenergy:block/cauldron_generator_bottom"},"display": {"gui": {"rotation": [30,225,0],"translation": [0,0,0],"scale": [0.625,0.625,0.625]},"ground": {"rotation": [0,0,0],"translation": [0,3,0],"scale": [0.25,0.25,0.25]},"fixed": {"rotation": [0,0,0],"translation": [0,0,0],"scale": [0.5,0.5,0.5]},"thirdperson_righthand": {"rotation": [75,45,0],"translation": [0,2.5,0],"scale": [0.375,0.375,0.375]},"firstperson_righthand": {"rotation": [0,45,0],"translation": [0,0,0],"scale": [0.4,0.4,0.4]},"firstperson_lefthand": {"rotation": [0,225,0],"translation": [0,0,0],"scale": [0.4,0.4,0.4]}}},
 		"vanilla_block": {"id": "minecraft:cauldron","apply_facing": false},
 		"custom_model_data": 2012032,
 		"item_name": "{'text': 'Cauldron Generator', 'italic': false, 'color': 'white'}"
@@ -327,5 +328,95 @@
 		"profile": {"id": [-709098200,1001541428,-2043264882,-430220135],"properties": [{"name": "textures","value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjlmMzJjOWNkNTU2MzJmNjEzZjRhMDU2ZGEyYzJhYTkzZjMwOTk2ZGY2NzMxZTcyYmM1NDA4NzA4ZGE5MWYzOCJ9fX0="}]},
 		"vanilla_block": {"apply_facing": false,"id": "minecraft:player_head{profile:{'id': [-709098200, 1001541428, -2043264882, -430220135], 'properties': [{'name': 'textures', 'value': 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjlmMzJjOWNkNTU2MzJmNjEzZjRhMDU2ZGEyYzJhYTkzZjMwOTk2ZGY2NzMxZTcyYmM1NDA4NzA4ZGE5MWYzOCJ9fX0='}]}}"},
 		"item_name": "{'text': 'Elite Cable', 'italic': false, 'color': 'white'}"
+	},
+	"copper_dust": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"category": "misc","group": "copper","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"copper_dust": true}}}},"result": {"item": "minecraft:copper_ingot"}},{"type": "blasting","result_count": 1,"category": "misc","group": "copper","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"copper_dust": true}}}},"result": {"item": "minecraft:copper_ingot"}}],
+		"custom_model_data": 2012033,
+		"item_name": "{'text': 'Copper Dust', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
+		"custom_data": {"simplenergy": {"copper_dust": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"iron_dust": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"category": "misc","group": "iron","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"iron_dust": true}}}},"result": {"item": "minecraft:iron_ingot"}},{"type": "blasting","result_count": 1,"category": "misc","group": "iron","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"iron_dust": true}}}},"result": {"item": "minecraft:iron_ingot"}}],
+		"custom_model_data": 2012034,
+		"item_name": "{'text': 'Iron Dust', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
+		"custom_data": {"simplenergy": {"iron_dust": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"gold_dust": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"category": "misc","group": "gold","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"gold_dust": true}}}},"result": {"item": "minecraft:gold_ingot"}},{"type": "blasting","result_count": 1,"category": "misc","group": "gold","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"gold_dust": true}}}},"result": {"item": "minecraft:gold_ingot"}}],
+		"custom_model_data": 2012035,
+		"item_name": "{'text': 'Gold Dust', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
+		"custom_data": {"simplenergy": {"gold_dust": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"lapis_dust": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"category": "misc","group": "lapis","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"lapis_dust": true}}}},"result": {"item": "minecraft:lapis_lazuli"}},{"type": "blasting","result_count": 1,"category": "misc","group": "lapis","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"lapis_dust": true}}}},"result": {"item": "minecraft:lapis_lazuli"}}],
+		"custom_model_data": 2012036,
+		"item_name": "{'text': 'Lapis Dust', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
+		"custom_data": {"simplenergy": {"lapis_dust": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"diamond_dust": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"category": "misc","group": "diamond","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"diamond_dust": true}}}},"result": {"item": "minecraft:diamond"}},{"type": "blasting","result_count": 1,"category": "misc","group": "diamond","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"diamond_dust": true}}}},"result": {"item": "minecraft:diamond"}}],
+		"custom_model_data": 2012037,
+		"item_name": "{'text': 'Diamond Dust', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
+		"custom_data": {"simplenergy": {"diamond_dust": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"emerald_dust": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"category": "misc","group": "emerald","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"emerald_dust": true}}}},"result": {"item": "minecraft:emerald"}},{"type": "blasting","result_count": 1,"category": "misc","group": "emerald","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"emerald_dust": true}}}},"result": {"item": "minecraft:emerald"}}],
+		"custom_model_data": 2012038,
+		"item_name": "{'text': 'Emerald Dust', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
+		"custom_data": {"simplenergy": {"emerald_dust": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"quartz_dust": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"category": "misc","group": "quartz","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"quartz_dust": true}}}},"result": {"item": "minecraft:quartz"}},{"type": "blasting","result_count": 1,"category": "misc","group": "quartz","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"quartz_dust": true}}}},"result": {"item": "minecraft:quartz"}}],
+		"custom_model_data": 2012039,
+		"item_name": "{'text': 'Quartz Dust', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
+		"custom_data": {"simplenergy": {"quartz_dust": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"netherite_dust": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"category": "misc","group": "netherite","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"netherite_dust": true}}}},"result": {"item": "minecraft:netherite_scrap"}},{"type": "blasting","result_count": 1,"category": "misc","group": "netherite","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"netherite_dust": true}}}},"result": {"item": "minecraft:netherite_scrap"}}],
+		"custom_model_data": 2012040,
+		"item_name": "{'text': 'Netherite Dust', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
+		"custom_data": {"simplenergy": {"netherite_dust": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"tin_dust": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"category": "misc","group": "tin","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"tin_dust": true}}}},"result": {"components": {"minecraft:custom_data": {"mechanization": {"tin_ingot": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "tin","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"tin_dust": true}}}},"result": {"components": {"minecraft:custom_data": {"mechanization": {"tin_ingot": true}}}}}],
+		"custom_model_data": 2012041,
+		"item_name": "{'text': 'Tin Dust', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
+		"custom_data": {"simplenergy": {"tin_dust": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"titanium_dust": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"category": "misc","group": "titanium","experience": 0.8,"cookingtime": 200,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"titanium_dust": true}}}},"result": {"components": {"minecraft:custom_data": {"mechanization": {"titanium_ingot": true}}}}},{"type": "blasting","result_count": 1,"category": "misc","group": "titanium","experience": 0.8,"cookingtime": 100,"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"titanium_dust": true}}}},"result": {"components": {"minecraft:custom_data": {"mechanization": {"titanium_ingot": true}}}}}],
+		"custom_model_data": 2012042,
+		"item_name": "{'text': 'Titanium Dust', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
+		"custom_data": {"simplenergy": {"titanium_dust": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	}
 }

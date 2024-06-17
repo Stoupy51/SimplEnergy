@@ -4,7 +4,17 @@
 		{ "predicate": { "custom_model_data": 2012004}, "model": "simplenergy:item/simplunium_ingot" },
 		{ "predicate": { "custom_model_data": 2012005}, "model": "simplenergy:item/simplunium_nugget" },
 		{ "predicate": { "custom_model_data": 2012006}, "model": "simplenergy:item/raw_simplunium" },
-		{ "predicate": { "custom_model_data": 2012007}, "model": "simplenergy:item/simplunium_dust" }
+		{ "predicate": { "custom_model_data": 2012007}, "model": "simplenergy:item/simplunium_dust" },
+		{ "predicate": { "custom_model_data": 2012033}, "model": "simplenergy:item/copper_dust" },
+		{ "predicate": { "custom_model_data": 2012034}, "model": "simplenergy:item/iron_dust" },
+		{ "predicate": { "custom_model_data": 2012035}, "model": "simplenergy:item/gold_dust" },
+		{ "predicate": { "custom_model_data": 2012036}, "model": "simplenergy:item/lapis_dust" },
+		{ "predicate": { "custom_model_data": 2012037}, "model": "simplenergy:item/diamond_dust" },
+		{ "predicate": { "custom_model_data": 2012038}, "model": "simplenergy:item/emerald_dust" },
+		{ "predicate": { "custom_model_data": 2012039}, "model": "simplenergy:item/quartz_dust" },
+		{ "predicate": { "custom_model_data": 2012040}, "model": "simplenergy:item/netherite_dust" },
+		{ "predicate": { "custom_model_data": 2012041}, "model": "simplenergy:item/tin_dust" },
+		{ "predicate": { "custom_model_data": 2012042}, "model": "simplenergy:item/titanium_dust" }
 	]
 }
 

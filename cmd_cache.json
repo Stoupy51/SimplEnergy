@@ -27,5 +27,15 @@
 	"electric_furnace": 2012026,
 	"electric_smelter": 2012028,
 	"electric_brewing_stand": 2012030,
-	"cauldron_generator": 2012032
+	"cauldron_generator": 2012032,
+	"copper_dust": 2012033,
+	"iron_dust": 2012034,
+	"gold_dust": 2012035,
+	"lapis_dust": 2012036,
+	"diamond_dust": 2012037,
+	"emerald_dust": 2012038,
+	"quartz_dust": 2012039,
+	"netherite_dust": 2012040,
+	"tin_dust": 2012041,
+	"titanium_dust": 2012042
 }

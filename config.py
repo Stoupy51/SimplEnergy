@@ -39,7 +39,7 @@ DEPENDENCIES: dict[str, dict[str, list[int] | str]] = {
 }
 
 # Technical constants
-SOURCE_LORE: list[dict] = [{"text": DATAPACK_NAME,"italic":True,"color":"blue"}]	# Appended lore to any custom item, can be an empty string
+SOURCE_LORE: list[dict] = [{"text":DATAPACK_NAME,"italic":True,"color":"blue"}]	# Appended lore to any custom item, can be an empty string
 
 # Manual configuration
 DEBUG_MODE: bool = False							# Shows up grids in manual
