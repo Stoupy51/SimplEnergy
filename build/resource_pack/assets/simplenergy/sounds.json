@@ -18,6 +18,10 @@
 	"furnace_generator": {
 		"subtitle": "Furnace Generator",
 		"sounds": ["simplenergy:furnace_generator"]
+	},
+	"pulverizer": {
+		"subtitle": "Pulverizer",
+		"sounds": ["simplenergy:pulverizer"]
 	}
 }
 

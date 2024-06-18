@@ -9,8 +9,8 @@ def setup_machines(config: dict, gui: dict[str, int]) -> None:
 	database: dict[str, dict] = config['database']
 	namespace: str = config['namespace']
 	build_datapack: str = config['build_datapack']
-	custom_blocks = f"{build_datapack}/data/{namespace}/function/custom_blocks"
-	gui_data = 'hide_tooltip={},custom_data={"common_signals":{"temp":true}}'
+	CUSTOM_BLOCKS = f"{build_datapack}/data/{namespace}/function/custom_blocks"
+	GUI_DATA = 'hide_tooltip={},custom_data={"common_signals":{"temp":true}}'
 
 	# Solar panel
 	energy = database["solar_panel"]["custom_data"]["energy"]
@@ -18,20 +18,20 @@ def setup_machines(config: dict, gui: dict[str, int]) -> None:
 execute if predicate {namespace}:check_daylight_power run scoreboard players add @s energy.storage {energy["generation"]}
 execute if score @s energy.storage > @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 """
-	write_to_file(f"{custom_blocks}/solar_panel/second.mcfunction", content)
+	write_to_file(f"{CUSTOM_BLOCKS}/solar_panel/second.mcfunction", content)
 
 
 	# Furnace Generator
 	energy = database["furnace_generator"]["custom_data"]["energy"]
 	default_gui = gui["gui/furnace_generator.png"]
-	working_gui = gui["gui/furnace_generator_working.png"]
+	working_gui = gui["gui/furnace_generator_on.png"]
 	default_cmd = database["furnace_generator"]["custom_model_data"]
 	working_cmd = default_cmd + 1
 	content = f"""# Update the gui to default
 execute store result score #burn_time {namespace}.data run data get block ~ ~ ~ BurnTime
-execute if score #burn_time {namespace}.data matches 0 run item replace block ~ ~ ~ container.0 with {GUI_VANILLA_ITEM}[custom_model_data={default_gui},{gui_data}]
+execute if score #burn_time {namespace}.data matches 0 run item replace block ~ ~ ~ container.0 with {GUI_VANILLA_ITEM}[custom_model_data={default_gui},{GUI_DATA}]
 execute if score #burn_time {namespace}.data matches 0 run data modify entity @s item.components."minecraft:custom_model_data" set value {default_cmd}
-execute if score #burn_time {namespace}.data matches 1.. run item replace block ~ ~ ~ container.0 with {GUI_VANILLA_ITEM}[custom_model_data={working_gui},{gui_data}]
+execute if score #burn_time {namespace}.data matches 1.. run item replace block ~ ~ ~ container.0 with {GUI_VANILLA_ITEM}[custom_model_data={working_gui},{GUI_DATA}]
 execute if score #burn_time {namespace}.data matches 1.. run data modify entity @s item.components."minecraft:custom_model_data" set value {working_cmd}
 
 # Update the gui & produce Energy while working
@@ -43,7 +43,7 @@ execute if score @s energy.storage > @s energy.max_storage run scoreboard player
 data modify block ~ ~ ~ CookTimeTotal set value -200s
 data modify block ~ ~ ~ CookTime set value 0s
 """
-	write_to_file(f"{custom_blocks}/furnace_generator/second.mcfunction", content)
+	write_to_file(f"{CUSTOM_BLOCKS}/furnace_generator/second.mcfunction", content)
 
 	# Electric Smelter & Electric Furnace & Electric Brewing Stand
 	for machine in ["electric_smelter", "electric_furnace", "electric_brewing_stand"]:
@@ -68,13 +68,13 @@ data modify block ~ ~ ~ CookTime set value 0s
 		previous_max = 0
 		for i, gui_name in enumerate(all_gui):
 			if i == 0:
-				machine_gui.append(f'execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[custom_model_data={gui[gui_name]},{gui_data}]')
+				machine_gui.append(f'execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[custom_model_data={gui[gui_name]},{GUI_DATA}]')
 			elif i == (nb_gui - 1):
-				machine_gui.append(f'execute if score @s energy.storage matches {previous_max + 1}.. run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[custom_model_data={gui[gui_name]},{gui_data}]')
+				machine_gui.append(f'execute if score @s energy.storage matches {previous_max + 1}.. run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[custom_model_data={gui[gui_name]},{GUI_DATA}]')
 			else:
 				gui_min = previous_max + 1
 				previous_max = (i * energy["max_storage"] // nb_gui_2) - 1
-				machine_gui.append(f'execute if score @s energy.storage matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[custom_model_data={gui[gui_name]},{gui_data}]')
+				machine_gui.append(f'execute if score @s energy.storage matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[custom_model_data={gui[gui_name]},{GUI_DATA}]')
 		machine_gui = "\n".join(machine_gui)
 
 		default_cmd = database[machine]["custom_model_data"]
@@ -96,7 +96,7 @@ execute if score #cook_time {namespace}.data matches 0 run tag @s add {namespace
 execute if score #cook_time {namespace}.data matches 1.. run data modify entity @s item.components."minecraft:custom_model_data" set value {working_cmd}
 execute if score #cook_time {namespace}.data matches 1.. if score #second {namespace}.data matches 0 run playsound {namespace}:{machine} block @a[distance=..12] ~ ~ ~ {0.25 if machine != "electric_brewing_stand" else 1.0}
 """
-		write_to_file(f"{custom_blocks}/{machine}/tick.mcfunction", content)
+		write_to_file(f"{CUSTOM_BLOCKS}/{machine}/tick.mcfunction", content)
 		content = f"""
 # Change {cook} value and use energy
 execute if score #cook_time {namespace}.data matches 1.. run scoreboard players remove @s energy.storage {energy["usage"] // 20}
@@ -109,7 +109,7 @@ scoreboard players add #burn_time {namespace}.data 21
 execute if score #burn_time {namespace}.data matches 21.. run scoreboard players set #burn_time {namespace}.data 20
 execute if score #old_burn_time {namespace}.data matches ..200 store result block ~ ~ ~ {burn} {burn_type} 1 run scoreboard players get #burn_time {namespace}.data
 """
-		write_to_file(f"{custom_blocks}/{machine}/work.mcfunction", content)
+		write_to_file(f"{CUSTOM_BLOCKS}/{machine}/work.mcfunction", content)
 
 	# Cauldron Generator
 	energy = database["cauldron_generator"]["custom_data"]["energy"]
@@ -139,7 +139,47 @@ scoreboard players add @s energy.storage {energy["generation"]}
 execute if score @s energy.storage matches {energy["max_storage"]}.. run scoreboard players set @s energy.storage {energy["max_storage"]}
 playsound {namespace}:cauldron_generator block @a[distance=..12] ~ ~ ~ 0.25
 """
-	write_to_file(f"{custom_blocks}/cauldron_generator/second.mcfunction", content)
+	write_to_file(f"{CUSTOM_BLOCKS}/cauldron_generator/second.mcfunction", content)
+
+
+	# Pulverizer
+	energy = database["pulverizer"]["custom_data"]["energy"]
+	all_gui = [x for x in gui if "pulverizer_" in x]
+	gui_slot = 0
+	nb_gui = len(all_gui)
+	nb_gui_2 = nb_gui - 2	# nb_gui-2 because we don't count the 0 and last
+	machine_gui = []
+	previous_max = 0
+	for i, gui_name in enumerate(all_gui):
+		if i == 0:
+			machine_gui.append(f'execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[custom_model_data={gui[gui_name]},{GUI_DATA}]')
+		elif i == (nb_gui - 1):
+			machine_gui.append(f'execute if score @s energy.storage matches {previous_max + 1}.. run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[custom_model_data={gui[gui_name]},{GUI_DATA}]')
+		else:
+			gui_min = previous_max + 1
+			previous_max = (i * energy["max_storage"] // nb_gui_2) - 1
+			machine_gui.append(f'execute if score @s energy.storage matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[custom_model_data={gui[gui_name]},{GUI_DATA}]')
+	machine_gui = "\n".join(machine_gui)
+
+	default_cmd = database["pulverizer"]["custom_model_data"]
+	working_cmd = default_cmd + 1
+	content = f"""
+# Launch work function if enough power
+scoreboard players set #cooking {namespace}.data 0
+execute if score @s energy.storage matches {energy["usage"]}.. run function {namespace}:custom_blocks/pulverizer/work
+
+# Update gui depending on energy storage
+{machine_gui}
+
+# Update block visual depends on cook time, and playsound every second
+execute if score #cooking {namespace}.data matches 0 run data modify entity @s[tag={namespace}.update_visual] item.components."minecraft:custom_model_data" set value {default_cmd}
+tag @s remove {namespace}.update_visual
+execute if score #cooking {namespace}.data matches 0 run tag @s add {namespace}.update_visual
+execute if score #cooking {namespace}.data matches 1 run data modify entity @s item.components."minecraft:custom_model_data" set value {working_cmd}
+execute if score #cooking {namespace}.data matches 1 if score #second {namespace}.data matches 0 run playsound {namespace}:pulverizer block @a[distance=..12] ~ ~ ~ 0.25
+"""
+	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/tick.mcfunction", content)
+
 
 	return
 

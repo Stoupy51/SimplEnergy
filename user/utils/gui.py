@@ -62,6 +62,8 @@ def setup_gui_in_resource_packs(config: dict) -> dict[str, int]:
 			content["display"]["gui"]["translation"] = [ 0, 75, -76 ]
 		elif "furnace_generator" in gui:
 			content["display"]["gui"]["translation"] = [ 0, 39, -76 ]
+		elif "pulverizer" in gui:
+			content["display"]["gui"]["translation"] = [ -78, 75, -76 ]
 		
 		write_to_file(path, super_json_dump(content, max_level = 3))
 

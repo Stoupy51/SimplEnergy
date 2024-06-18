@@ -10,7 +10,6 @@ def setup_remaining(config: dict) -> None:
 	build_datapack: str = config['build_datapack']
 	functions: str = f"{build_datapack}/data/{namespace}/function"
 
-
 	# Passive multimeter working every 2 ticks
 	write_to_file(f"{functions}/v{version}/tick_2.mcfunction", f"""
 # Passive multimeter
@@ -217,6 +216,11 @@ advancement revoke @s only {namespace}:inventory_changed
 tag @s remove {namespace}.state.multimeter
 execute if items entity @s weapon.offhand *[custom_data~{{"{namespace}":{{"multimeter":true}}}}] run tag @s add {namespace}.state.multimeter
 """)
+
+
+	# Private score
+	write_to_file(f"{functions}/v{version}/load/confirm_load.mcfunction", f"scoreboard objectives add {namespace}.private dummy\n", prepend = True)
+
 
 	return
 

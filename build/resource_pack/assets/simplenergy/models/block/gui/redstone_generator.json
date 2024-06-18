@@ -1,6 +1,6 @@
 {
 	"textures": {
-		"all": "simplenergy:block/gui/furnace_generator_working"
+		"all": "simplenergy:block/gui/redstone_generator"
 	},
 	"elements": [
 		{
@@ -17,8 +17,7 @@
 		},
 		"gui": {
 			"rotation": [0,0,0],
-			"scale": [3.66,3.66,3.66],
-			"translation": [0,39,-76]
+			"scale": [3.66,3.66,3.66]
 		},
 		"ground": {
 			"rotation": [0,0,0],
