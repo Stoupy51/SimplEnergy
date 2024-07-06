@@ -4,7 +4,7 @@
 # @within	simplenergy:v2.0.0/load/tick_verification
 #
 
-#Timers
+# Timers
 scoreboard players add #tick_2 simplenergy.data 1
 scoreboard players add #second simplenergy.data 1
 scoreboard players add #second_5 simplenergy.data 1
