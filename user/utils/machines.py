@@ -145,7 +145,7 @@ playsound {namespace}:cauldron_generator block @a[distance=..12] ~ ~ ~ 0.25
 	# Pulverizer
 	energy = database["pulverizer"]["custom_data"]["energy"]
 	all_gui = [x for x in gui if "pulverizer_" in x]
-	gui_slot = 0
+	gui_slot = 26
 	nb_gui = len(all_gui)
 	nb_gui_2 = nb_gui - 2	# nb_gui-2 because we don't count the 0 and last
 	machine_gui = []
@@ -170,6 +170,8 @@ execute if score @s energy.storage matches {energy["usage"]}.. run function {nam
 
 # Update gui depending on energy storage
 {machine_gui}
+
+# Update gui for each slot
 
 # Update block visual depends on cook time, and playsound every second
 execute if score #cooking {namespace}.data matches 0 run data modify entity @s[tag={namespace}.update_visual] item.components."minecraft:custom_model_data" set value {default_cmd}
