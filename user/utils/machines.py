@@ -3,6 +3,7 @@
 from python_datapack.utils.print import *
 from python_datapack.utils.io import *
 from user.utils.gui import GUI_VANILLA_ITEM
+from user.utils.pulverizer import pulverizer
 
 # Setup machines work and visuals
 def setup_machines(config: dict, gui: dict[str, int]) -> None:
@@ -143,44 +144,7 @@ playsound {namespace}:cauldron_generator block @a[distance=..12] ~ ~ ~ 0.25
 
 
 	# Pulverizer
-	energy = database["pulverizer"]["custom_data"]["energy"]
-	all_gui = [x for x in gui if "pulverizer_" in x]
-	gui_slot = 26
-	nb_gui = len(all_gui)
-	nb_gui_2 = nb_gui - 2	# nb_gui-2 because we don't count the 0 and last
-	machine_gui = []
-	previous_max = 0
-	for i, gui_name in enumerate(all_gui):
-		if i == 0:
-			machine_gui.append(f'execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[custom_model_data={gui[gui_name]},{GUI_DATA}]')
-		elif i == (nb_gui - 1):
-			machine_gui.append(f'execute if score @s energy.storage matches {previous_max + 1}.. run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[custom_model_data={gui[gui_name]},{GUI_DATA}]')
-		else:
-			gui_min = previous_max + 1
-			previous_max = (i * energy["max_storage"] // nb_gui_2) - 1
-			machine_gui.append(f'execute if score @s energy.storage matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[custom_model_data={gui[gui_name]},{GUI_DATA}]')
-	machine_gui = "\n".join(machine_gui)
-
-	default_cmd = database["pulverizer"]["custom_model_data"]
-	working_cmd = default_cmd + 1
-	content = f"""
-# Launch work function if enough power
-scoreboard players set #cooking {namespace}.data 0
-execute if score @s energy.storage matches {energy["usage"]}.. run function {namespace}:custom_blocks/pulverizer/work
-
-# Update gui depending on energy storage
-{machine_gui}
-
-# Update gui for each slot
-
-# Update block visual depends on cook time, and playsound every second
-execute if score #cooking {namespace}.data matches 0 run data modify entity @s[tag={namespace}.update_visual] item.components."minecraft:custom_model_data" set value {default_cmd}
-tag @s remove {namespace}.update_visual
-execute if score #cooking {namespace}.data matches 0 run tag @s add {namespace}.update_visual
-execute if score #cooking {namespace}.data matches 1 run data modify entity @s item.components."minecraft:custom_model_data" set value {working_cmd}
-execute if score #cooking {namespace}.data matches 1 if score #second {namespace}.data matches 0 run playsound {namespace}:pulverizer block @a[distance=..12] ~ ~ ~ 0.25
-"""
-	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/tick.mcfunction", content)
+	pulverizer(config, gui)
 
 
 	return
