@@ -37,8 +37,8 @@ def setup_gui_in_resource_packs(config: dict) -> dict[str, int]:
 				"from": [ -16, -16, 15.9375 ],
 				"to": [ 32, 32, 16 ],
 				"faces": {
-					"north": { "uv": [ 11, 16, 0, 5 ], "rotation": 180, "texture": "#all" },
-					"south": { "uv": [ 0, 5, 11, 16 ], "texture": "#all" }
+					"north": { "uv": [ 11, 16, 0, 5 ], "rotation": 180, "texture": "#layer0" },
+					"south": { "uv": [ 0, 5, 11, 16 ], "texture": "#layer0" }
 				}
 			}
 		],
@@ -51,7 +51,7 @@ def setup_gui_in_resource_packs(config: dict) -> dict[str, int]:
 	}
 	for gui, cmd in generated_gui.items():
 		content = deepcopy(base)
-		content["textures"]["all"] = f"{config['namespace']}:block/{gui.replace('.png', '')}"
+		content["textures"]["layer0"] = f"{config['namespace']}:block/{gui.replace('.png', '')}"
 		path = f"{config['build_resource_pack']}/assets/{config['namespace']}/models/block/{gui.replace('.png', '.json')}"
 
 		if "electric_brewing_stand" in gui:
@@ -64,6 +64,10 @@ def setup_gui_in_resource_packs(config: dict) -> dict[str, int]:
 			content["display"]["gui"]["translation"] = [ 0, 39, -76 ]
 		elif "pulverizer" in gui:
 			content["display"]["gui"]["translation"] = [ -78, 75, -76 ]
+		else:
+			content["display"].pop("gui")
+			content.pop("elements")
+			content["parent"] = "item/generated"
 		
 		write_to_file(path, super_json_dump(content, max_level = 3))
 

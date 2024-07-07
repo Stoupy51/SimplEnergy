@@ -1,23 +1,12 @@
 {
 	"textures": {
-		"all": "simplenergy:block/gui/progress_unblocked_0"
+		"layer0": "simplenergy:block/gui/progress_unblocked_0"
 	},
-	"elements": [
-		{
-			"from": [-16,-16,15.9375],
-			"to": [32,32,16],
-			"faces": {"north": {"uv": [11,16,0,5],"rotation": 180,"texture": "#all"},"south": {"uv": [0,5,11,16],"texture": "#all"}}
-		}
-	],
 	"display": {
 		"firstperson_lefthand": {
 			"rotation": [0,0,0],
 			"translation": [0,0,0],
 			"scale": [0,0,0]
-		},
-		"gui": {
-			"rotation": [0,0,0],
-			"scale": [3.66,3.66,3.66]
 		},
 		"ground": {
 			"rotation": [0,0,0],
@@ -25,6 +14,7 @@
 			"scale": [0,0,0]
 		}
 	},
-	"gui_light": "front"
+	"gui_light": "front",
+	"parent": "item/generated"
 }
 

@@ -184,6 +184,8 @@
 	"simplenergy.craft_a_wrench_to_rotate_machines_and_break_cables": "Craft a wrench to rotate machines and break cables",
 	"simplenergy.cover_me_with_simplunium": "Cover Me with Simplunium",
 	"simplenergy.better_than_diamond_armor": "Better than diamond armor",
+	"simplenergy.blocked": "Blocked",
+	"simplenergy.place_a_slot_unlocker_to_unlock": "Place a Slot Unlocker to unlock",
 	"simplenergy.charge": "[Charge: ",
 	"simplenergy.datapack_energy_stats": "\n[Datapack Energy Stats]",
 	"simplenergy.entities": "Entities: ",

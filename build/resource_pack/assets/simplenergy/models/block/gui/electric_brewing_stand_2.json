@@ -1,12 +1,12 @@
 {
 	"textures": {
-		"all": "simplenergy:block/gui/electric_brewing_stand_2"
+		"layer0": "simplenergy:block/gui/electric_brewing_stand_2"
 	},
 	"elements": [
 		{
 			"from": [-16,-16,15.9375],
 			"to": [32,32,16],
-			"faces": {"north": {"uv": [11,16,0,5],"rotation": 180,"texture": "#all"},"south": {"uv": [0,5,11,16],"texture": "#all"}}
+			"faces": {"north": {"uv": [11,16,0,5],"rotation": 180,"texture": "#layer0"},"south": {"uv": [0,5,11,16],"texture": "#layer0"}}
 		}
 	],
 	"display": {
