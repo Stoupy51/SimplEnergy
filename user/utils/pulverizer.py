@@ -13,7 +13,7 @@ def pulverizer(config: dict, gui: dict[str, int]) -> None:
 	GUI_DATA = 'hide_tooltip={},custom_data={"common_signals":{"temp":true}}'
 	GUI_DATA_TOOLTIP = 'custom_data={"common_signals":{"temp":true}}'
 	PULVERIZER_SLOTS = 8
-	PULVERIZER_TIME: int = 500
+	PULVERIZER_TIME: int = 200
 
 	# Tick function
 	energy = database["pulverizer"]["custom_data"]["energy"]
@@ -74,7 +74,7 @@ data modify entity @s item.components."minecraft:custom_data".{namespace}.pulver
 
 	# Set the item gui (blocked if not unlocked, progression otherwise)
 	blocked_cmd: int = gui["gui/progress_blocked.png"]
-	progressions_cmd: list[int] = [gui[x] for x in gui if "progress_unblocked_" in x]
+	progressions_cmd: list[str] = [x for x in gui if "progress_unblocked_" in x]
 	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/gui_passive_slot.mcfunction", f"""
 # Get slot and progression, and the item
 scoreboard players set #progression {namespace}.data 0
@@ -87,10 +87,26 @@ $execute unless data storage {namespace}:temp intruder.components."minecraft:cus
 
 # Set item gui (blocked if not unlocked, progression otherwise)
 $execute if data storage {namespace}:temp slot.blocked run item replace block ~ ~ ~ container.$(slot) with {GUI_VANILLA_ITEM}[custom_model_data={blocked_cmd},{GUI_DATA_TOOLTIP},item_name='{{"text":"Blocked","italic":false}}',lore=['{{"text":"Place a Slot Unlocker to unlock","color":"gray","italic":false}}']]
-$execute unless data storage {namespace}:temp slot.blocked run item replace block ~ ~ ~ container.$(slot) with {GUI_VANILLA_ITEM}[custom_model_data={progressions_cmd[0]},{GUI_DATA}]
+$execute unless data storage {namespace}:temp slot.blocked run function {namespace}:custom_blocks/pulverizer/gui_progression {{"index":$(index),"slot":$(slot)}}
 """)
-	# TODO ^^^^^^^^^^^ progression!
 	
+	# Gui progression function
+	progressions_gui: list[str] = []
+	nb_gui = len(progressions_cmd)
+	nb_gui_2 = nb_gui - 2	# nb_gui-2 because we don't count the 0 and last
+	previous_max: int = 0
+	for i, progression in enumerate(progressions_cmd):
+		if i == 0:
+			progressions_gui.append(f'$execute if score #progression {namespace}.data matches ..0 run item replace block ~ ~ ~ container.$(slot) with {GUI_VANILLA_ITEM}[custom_model_data={gui[progression]},{GUI_DATA}]')
+		elif i == (nb_gui - 1):
+			progressions_gui.append(f'$execute if score #progression {namespace}.data matches {previous_max + 1}.. run item replace block ~ ~ ~ container.$(slot) with {GUI_VANILLA_ITEM}[custom_model_data={gui[progression]},{GUI_DATA}]')
+		else:
+			gui_min = previous_max + 1
+			previous_max = (i * PULVERIZER_TIME // nb_gui_2) - 1
+			progressions_gui.append(f'$execute if score #progression {namespace}.data matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.$(slot) with {GUI_VANILLA_ITEM}[custom_model_data={gui[progression]},{GUI_DATA}]')
+	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/gui_progression.mcfunction", "\n".join(progressions_gui))
+
+
 	# Handle intruder item on gui
 	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/handle_item_on_gui.mcfunction", f"""
 # If slot is locked and it's not a Slot Unlocker, drop the item

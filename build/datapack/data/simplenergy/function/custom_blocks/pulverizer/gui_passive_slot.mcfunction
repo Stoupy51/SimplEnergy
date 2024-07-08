@@ -22,5 +22,5 @@ $execute unless data storage simplenergy:temp intruder.components."minecraft:cus
 
 # Set item gui (blocked if not unlocked, progression otherwise)
 $execute if data storage simplenergy:temp slot.blocked run item replace block ~ ~ ~ container.$(slot) with cobblestone[custom_model_data=2012979,custom_data={"common_signals":{"temp":true}},item_name='{"translate":"simplenergy.blocked","italic":false}',lore=['{"translate":"simplenergy.place_a_slot_unlocker_to_unlock","color":"gray","italic":false}']]
-$execute unless data storage simplenergy:temp slot.blocked run item replace block ~ ~ ~ container.$(slot) with cobblestone[custom_model_data=2012978,hide_tooltip={},custom_data={"common_signals":{"temp":true}}]
+$execute unless data storage simplenergy:temp slot.blocked run function simplenergy:custom_blocks/pulverizer/gui_progression {"index":$(index),"slot":$(slot)}
 
