@@ -197,6 +197,15 @@
 		"item_name": "{'text': 'Wrench', 'italic': false, 'color': 'white'}",
 		"custom_data": {"simplenergy": {"wrench": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"slot_unlocker": {
+		"id": "minecraft:command_block",
+		"category": "miscellaneous",
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["QBQ","NGN","NIN"],"ingredients": {"Q": {"item": "minecraft:quartz"},"B": {"item": "minecraft:breeze_rod"},"N": {"item": "minecraft:gold_nugget"},"G": {"item": "minecraft:raw_gold_block"},"I": {"item": "minecraft:iron_block"}}}],
+		"lore": ["{\"text\":\"Unlocks a blocked slot in a machine\",\"italic\":false,\"color\":\"gray\"}","{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
+		"custom_model_data": 2012045,
+		"item_name": "{'text': 'Slot Unlocker', 'italic': false, 'color': 'white'}",
+		"custom_data": {"simplenergy": {"slot_unlocker": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"simple_battery": {
 		"id": "minecraft:furnace",
 		"category": "energy",
