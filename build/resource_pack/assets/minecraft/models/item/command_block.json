@@ -14,7 +14,8 @@
 		{ "predicate": { "custom_model_data": 2012039}, "model": "simplenergy:item/quartz_dust" },
 		{ "predicate": { "custom_model_data": 2012040}, "model": "simplenergy:item/netherite_dust" },
 		{ "predicate": { "custom_model_data": 2012041}, "model": "simplenergy:item/tin_dust" },
-		{ "predicate": { "custom_model_data": 2012042}, "model": "simplenergy:item/titanium_dust" }
+		{ "predicate": { "custom_model_data": 2012042}, "model": "simplenergy:item/titanium_dust" },
+		{ "predicate": { "custom_model_data": 2012045}, "model": "simplenergy:item/slot_unlocker" }
 	]
 }
 

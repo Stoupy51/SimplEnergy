@@ -1,0 +1,31 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:lore": [
+									"{\"translate\":\"simplenergy.unlocks_a_blocked_slot_in_a_machine\",\"italic\":false,\"color\":\"gray\"}",
+									"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
+								],
+								"minecraft:custom_model_data": 2012045,
+								"minecraft:item_name": "{'translate':'simplenergy.slot_unlocker', 'italic': false, 'color': 'white'}",
+								"minecraft:custom_data": {
+									"simplenergy": {"slot_unlocker": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
