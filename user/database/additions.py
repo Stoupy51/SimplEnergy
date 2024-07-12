@@ -18,7 +18,7 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 		"creative_battery": {"id": CUSTOM_BLOCK_VANILLA, "custom_data": {"energy": {"storage":2000000000, "max_storage": 2147483647}}, "lore": ['{"text":"[Energy Storage: 2147 GJ]","italic":false,"color":"gray"}']},
 
 		"cauldron_generator": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":5, "max_storage": 500}},		RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["I I","IRI","III"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"R":ingr_repr("minecraft:redstone")}}],																		"lore": ['{"text":"[Energy Generation: 5 kW]","italic":false,"color":"gray"}','{"text":"[Energy Buffer: 500 kJ]","italic":false,"color":"gray"}'],
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":5, "max_storage": 500}},						RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["I I","IRI","III"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"R":ingr_repr("minecraft:redstone")}}],																		"lore": ['{"text":"[Energy Generation: 5 kW]","italic":false,"color":"gray"}','{"text":"[Energy Buffer: 500 kJ]","italic":false,"color":"gray"}'],
 			OVERRIDE_MODEL: {"parent":"block/cauldron", "textures": {"side": f"{NAMESPACE}:block/cauldron_generator_side", "top": f"{NAMESPACE}:block/cauldron_generator_top", "bottom": f"{NAMESPACE}:block/cauldron_generator_bottom"},
 			"display":{
 				"gui":{"rotation":[30,225,0],"translation":[0,0,0],"scale":[0.625,0.625,0.625]},
@@ -30,7 +30,7 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 		}}},
 		"furnace_generator": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":10, "max_storage": 800}},		RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","RFR","SSS"],"ingredients":{"I":ingr_repr("minecraft:iron_block"),"R":ingr_repr("minecraft:redstone"),"F":ingr_repr("minecraft:furnace"),"S":ingr_repr("minecraft:stone")}}],	"lore": ['{"text":"[Energy Generation: 10 kW]","italic":false,"color":"gray"}','{"text":"[Energy Buffer: 800 kJ]","italic":false,"color":"gray"}']},
 		"solar_panel": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":4, "max_storage": 600}},		RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LDL","III"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"D":ingr_repr("minecraft:daylight_detector"),"I":ingr_repr("minecraft:iron_block")}}],										"lore": ['{"text":"[Energy Generation: 4 kW]","italic":false,"color":"gray"}','{"text":"[Energy Buffer: 600 kJ]","italic":false,"color":"gray"}'],
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":4, "max_storage": 120}},						RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LDL","III"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"D":ingr_repr("minecraft:daylight_detector"),"I":ingr_repr("minecraft:iron_block")}}],										"lore": ['{"text":"[Energy Generation: 4 kW]","italic":false,"color":"gray"}','{"text":"[Energy Buffer: 600 kJ]","italic":false,"color":"gray"}'],
 			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{NAMESPACE}:block/solar_panel_side", "top": f"{NAMESPACE}:block/solar_panel_top"}},
 		},
 

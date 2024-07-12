@@ -268,7 +268,7 @@
 	"solar_panel": {
 		"id": "minecraft:furnace",
 		"category": "energy",
-		"custom_data": {"energy": {"generation": 4,"max_storage": 600},"simplenergy": {"solar_panel": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"energy": {"generation": 4,"max_storage": 120},"simplenergy": {"solar_panel": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["LLL","LDL","III"],"ingredients": {"L": {"item": "minecraft:lapis_lazuli"},"D": {"item": "minecraft:daylight_detector"},"I": {"item": "minecraft:iron_block"}}}],
 		"lore": ["{\"text\":\"[Energy Generation: 4 kW]\",\"italic\":false,\"color\":\"gray\"}","{\"text\":\"[Energy Buffer: 600 kJ]\",\"italic\":false,\"color\":\"gray\"}","{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
 		"override_model": {"parent": "block/daylight_detector","textures": {"side": "simplenergy:block/solar_panel_side","top": "simplenergy:block/solar_panel_top"}},

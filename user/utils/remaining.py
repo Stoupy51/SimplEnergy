@@ -82,7 +82,7 @@ scoreboard players reset @s {namespace}.right_click
 
 	# Setup wrench stuff
 	json_content: dict = {"values": [f"{namespace}:utils/wrench/rotate/furnace"]}
-	write_to_file(f"{build_datapack}/data/{namespace}/tags/function/wrench_rotate.json", super_json_dump(json_content, max_level = -1))
+	write_to_file(f"{build_datapack}/data/{namespace}/tags/function/calls/wrench_rotate.json", super_json_dump(json_content, max_level = -1))
 	write_to_file(f"{functions}/utils/wrench/right_click.mcfunction", f"""
 # Look at where player is looking at and stop when found a block
 scoreboard players set #raycast {namespace}.data 0
@@ -122,7 +122,7 @@ scoreboard players operation #rotation {namespace}.data %= #360 {namespace}.data
 execute store result entity @s Rotation[0] float 1 run scoreboard players get #rotation {namespace}.data
 
 # Rotate base block
-function #{namespace}:wrench_rotate
+function #{namespace}:calls/wrench_rotate
 
 # Memory clean up and particle effect
 data remove storage {namespace}:main Block
