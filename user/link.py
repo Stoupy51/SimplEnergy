@@ -17,8 +17,6 @@ from user.utils.remaining import setup_remaining
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 def main(config: dict) -> None:
 	namespace: str = config['namespace']
-	version: str = config['version']
-	functions: str = f"{config['build_datapack']}/data/{namespace}/function"
 	
 	# Add commands to place and destroy functions for energy items
 	complete_place_and_destroy(config)

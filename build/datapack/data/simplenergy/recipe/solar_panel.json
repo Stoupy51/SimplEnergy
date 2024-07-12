@@ -24,7 +24,7 @@
 			"minecraft:custom_data": {
 				"energy": {
 					"generation": 4,
-					"max_storage": 600
+					"max_storage": 120
 				},
 				"simplenergy": {
 					"solar_panel": true

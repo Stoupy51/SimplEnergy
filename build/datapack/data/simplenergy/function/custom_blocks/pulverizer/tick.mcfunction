@@ -10,7 +10,7 @@ data modify storage simplenergy:temp slots set from entity @s item.components."m
 data modify storage simplenergy:temp Items set from block ~ ~ ~ Items
 
 # Launch work function if enough power
-scoreboard players set #cooking simplenergy.data 0
+scoreboard players set #working simplenergy.data 0
 execute if score @s energy.storage matches 120.. run function simplenergy:custom_blocks/pulverizer/work
 
 # Update gui depending on energy storage
@@ -25,11 +25,9 @@ execute if score @s energy.storage matches 6400.. run item replace block ~ ~ ~ c
 function simplenergy:custom_blocks/pulverizer/gui_for_each_slot
 
 # Update block visual depends on cook time, and playsound every second
-execute if score #cooking simplenergy.data matches 0 run data modify entity @s[tag=simplenergy.update_visual] item.components."minecraft:custom_model_data" set value 2012043
-tag @s remove simplenergy.update_visual
-execute if score #cooking simplenergy.data matches 0 run tag @s add simplenergy.update_visual
-execute if score #cooking simplenergy.data matches 1 run data modify entity @s item.components."minecraft:custom_model_data" set value 2012044
-execute if score #cooking simplenergy.data matches 1 if score #second simplenergy.data matches 0 run playsound simplenergy:pulverizer block @a[distance=..12] ~ ~ ~ 0.25
+execute if score #working simplenergy.data matches 0 run data modify entity @s item.components."minecraft:custom_model_data" set value 2012043
+execute if score #working simplenergy.data matches 1 run data modify entity @s item.components."minecraft:custom_model_data" set value 2012044
+execute if score #working simplenergy.data matches 1 if score #second simplenergy.data matches 0 run playsound simplenergy:pulverizer block @a[distance=..12] ~ ~ ~ 0.25
 
 # Save slots to entity
 data modify entity @s item.components."minecraft:custom_data".simplenergy.pulverizer_slots set from storage simplenergy:temp slots

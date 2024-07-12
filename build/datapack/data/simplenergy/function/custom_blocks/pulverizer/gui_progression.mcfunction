@@ -2,6 +2,7 @@
 #> simplenergy:custom_blocks/pulverizer/gui_progression
 #
 # @within	simplenergy:custom_blocks/pulverizer/gui_passive_slot {"index":$(index),"slot":$(slot)}
+#			simplenergy:custom_blocks/pulverizer/reset_progress {"index":$(index),"slot":$(slot)}
 #
 
 $execute if score #progression simplenergy.data matches ..0 run item replace block ~ ~ ~ container.$(slot) with cobblestone[custom_model_data=2012978,hide_tooltip={},custom_data={"common_signals":{"temp":true}}]

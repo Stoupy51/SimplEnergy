@@ -14,9 +14,11 @@ def pulverizer(config: dict, gui: dict[str, int]) -> None:
 	GUI_DATA_TOOLTIP = 'custom_data={"common_signals":{"temp":true}}'
 	PULVERIZER_SLOTS = 8
 	PULVERIZER_TIME: int = 200
-
-	# Tick function
 	energy = database["pulverizer"]["custom_data"]["energy"]
+
+
+	## Passive parts
+	# Tick function
 	all_gui = [x for x in gui if "pulverizer_" in x]
 	gui_slot = 26
 	nb_gui = len(all_gui)
@@ -43,7 +45,7 @@ data modify storage {namespace}:temp slots set from entity @s item.components."m
 data modify storage {namespace}:temp Items set from block ~ ~ ~ Items
 
 # Launch work function if enough power
-scoreboard players set #cooking {namespace}.data 0
+scoreboard players set #working {namespace}.data 0
 execute if score @s energy.storage matches {energy["usage"]}.. run function {namespace}:custom_blocks/pulverizer/work
 
 # Update gui depending on energy storage
@@ -53,11 +55,9 @@ execute if score @s energy.storage matches {energy["usage"]}.. run function {nam
 function {namespace}:custom_blocks/pulverizer/gui_for_each_slot
 
 # Update block visual depends on cook time, and playsound every second
-execute if score #cooking {namespace}.data matches 0 run data modify entity @s[tag={namespace}.update_visual] item.components."minecraft:custom_model_data" set value {default_cmd}
-tag @s remove {namespace}.update_visual
-execute if score #cooking {namespace}.data matches 0 run tag @s add {namespace}.update_visual
-execute if score #cooking {namespace}.data matches 1 run data modify entity @s item.components."minecraft:custom_model_data" set value {working_cmd}
-execute if score #cooking {namespace}.data matches 1 if score #second {namespace}.data matches 0 run playsound {namespace}:pulverizer block @a[distance=..12] ~ ~ ~ 0.25
+execute if score #working {namespace}.data matches 0 run data modify entity @s item.components."minecraft:custom_model_data" set value {default_cmd}
+execute if score #working {namespace}.data matches 1 run data modify entity @s item.components."minecraft:custom_model_data" set value {working_cmd}
+execute if score #working {namespace}.data matches 1 if score #second {namespace}.data matches 0 run playsound {namespace}:pulverizer block @a[distance=..12] ~ ~ ~ 0.25
 
 # Save slots to entity
 data modify entity @s item.components."minecraft:custom_data".{namespace}.pulverizer_slots set from storage {namespace}:temp slots
@@ -126,6 +126,81 @@ execute if score #drop_item {namespace}.data matches 0 if data storage {namespac
 execute if score #drop_item {namespace}.data matches 0 if data storage {namespace}:temp slot.blocked if score #count {namespace}.data matches 1.. run summon item ~ ~ ~ {{Item:{{id:"minecraft:stone",count:1b,components:{{"minecraft:custom_data":{{"temp":true}}}}}}}}
 execute if score #drop_item {namespace}.data matches 0 if data storage {namespace}:temp slot.blocked if score #count {namespace}.data matches 1.. run data modify entity @n[type=item,nbt={{Item:{{components:{{"minecraft:custom_data":{{"temp":true}}}}}}}}] Item set from storage {namespace}:temp intruder
 """)
+
+
+	## Work parts
+	# Work function
+	for_each_slots: str = "\n".join(f'execute unless data storage {namespace}:temp slots[{i}].blocked run function {namespace}:custom_blocks/pulverizer/gui_active_slot {{"index":{i},"slot":{i+9},"result":{i+9*2}}}' for i in range(PULVERIZER_SLOTS))
+	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/work.mcfunction", f"""
+# Monitor if any slot is working
+{for_each_slots}
+
+# Consume energy if any slot is working
+execute if score #working {namespace}.data matches 1.. run scoreboard players remove @s energy.storage {energy["usage"] // 20}
+""")
+	
+	# Reset progress function
+	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/reset_progress.mcfunction", f"""
+scoreboard players set #progression {namespace}.data 0
+$data modify storage {namespace}:temp slots[$(index)].progression set value 0
+$function {namespace}:custom_blocks/pulverizer/gui_progression {{"index":$(index),"slot":$(slot)}}
+return fail
+""")
+	
+	# Gui for each active slot
+	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/gui_active_slot.mcfunction", f"""
+# Get progression
+scoreboard players set #progression {namespace}.data 0
+$execute store result score #progression {namespace}.data run data get storage {namespace}:temp slots[$(index)].progression
+
+# Isolate ingredient and try to get result
+scoreboard players set #found {namespace}.data 0
+data modify storage {namespace}:main pulverizer.input set value {{}}
+data modify storage {namespace}:main pulverizer.output set value {{}}
+$data modify storage {namespace}:main pulverizer.input set from storage {namespace}:temp Items[{{Slot:$(index)b}}]
+$execute unless data storage {namespace}:main pulverizer.input run return run function {namespace}:custom_blocks/pulverizer/reset_progress {{"index":$(index),"slot":$(slot)}}
+execute summon item_display run function {namespace}:custom_blocks/pulverizer/get_pulverizer_recipe
+
+# If no recipe found, stop
+$execute if score #found {namespace}.data matches 0 run return run function {namespace}:custom_blocks/pulverizer/reset_progress {{"index":$(index),"slot":$(slot)}}
+
+# Else, if output do not match current output slot, stop
+scoreboard players set #output_occupied {namespace}.data 0
+$execute if data storage {namespace}:temp slots[$(result)] run scoreboard players set #output_occupied {namespace}.data 1
+execute if score #output_occupied {namespace}.data matches 1 run scoreboard players set #is_not_same_output {namespace}.data 0
+$execute if score #output_occupied {namespace}.data matches 1 run data modify storage {namespace}:temp copy set from storage {namespace}:temp slots[$(result)]
+execute if score #output_occupied {namespace}.data matches 1 store success score #is_not_same_output {namespace}.data run data modify storage {namespace}:temp copy.id set from storage {namespace}:main pulverizer.output.id
+execute if score #output_occupied {namespace}.data matches 1 if score #is_not_same_output {namespace}.data matches 0 store success score #is_not_same_output {namespace}.data run data modify storage {namespace}:temp copy.components set from storage {namespace}:main pulverizer.output.components
+execute if score #output_occupied {namespace}.data matches 1 if score #is_not_same_output {namespace}.data matches 1 run return fail
+
+# Progress the slot
+scoreboard players add #progression {namespace}.data 1
+$execute if score #progression {namespace}.data matches ..{PULVERIZER_TIME - 1} store result storage {namespace}:temp slots[$(index)].progression int 1 run scoreboard players get #progression {namespace}.data
+
+# Add the item to the result slot
+execute if score #output_occupied {namespace}.data matches 1 store result score #count {namespace}.data run data get storage {namespace}:temp copy.count
+execute if score #output_occupied {namespace}.data matches 1 store result score #to_add {namespace}.data run data get storage {namespace}:main pulverizer.output.count
+execute if score #output_occupied {namespace}.data matches 1 run scoreboard players operation #count {namespace}.data += #to_add {namespace}.data
+$execute if score #output_occupied {namespace}.data matches 1 store result block ~ ~ ~ Items[{{Slot:$(result)b}}].count int 1 run scoreboard players get #count {namespace}.data
+$execute if score #output_occupied {namespace}.data matches 0 run data modify storage {namespace}:main pulverizer.output.Slot set value $(result)b
+$execute if score #output_occupied {namespace}.data matches 0 run data modify block ~ ~ ~ Items[{{Slot:$(result)b}}] set from storage {namespace}:main pulverizer.output
+""")
+	
+	# Get pulverizer recipe function
+	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/get_pulverizer_recipe.mcfunction", f"""
+# Get the recipe
+function #{namespace}:calls/pulverizer_recipes
+
+# Place in storage the given output (if any)
+execute if score #found {namespace}.data matches 1 run data modify storage {namespace}:main pulverizer.output set from entity @s item
+
+# Kill temporary entity
+kill @s
+""")
+	
+	# Write pulverizer recipes JSON file
+	content: dict = {"values":[f"{namespace}:calls/pulverizer_recipes"]}
+	write_to_file(f"{build_datapack}/data/{namespace}/tags/function/calls/pulverizer_recipes.json", super_json_dump(content))
 
 	return
 

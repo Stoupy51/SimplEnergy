@@ -17,7 +17,7 @@ scoreboard players operation #rotation simplenergy.data %= #360 simplenergy.data
 execute store result entity @s Rotation[0] float 1 run scoreboard players get #rotation simplenergy.data
 
 # Rotate base block
-function #simplenergy:wrench_rotate
+function #simplenergy:calls/wrench_rotate
 
 # Memory clean up and particle effect
 data remove storage simplenergy:main Block

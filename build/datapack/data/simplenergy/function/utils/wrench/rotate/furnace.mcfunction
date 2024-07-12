@@ -1,7 +1,7 @@
 
 #> simplenergy:utils/wrench/rotate/furnace
 #
-# @within	#simplenergy:wrench_rotate
+# @within	#simplenergy:calls/wrench_rotate
 #
 
 # Check for furnace rotation
