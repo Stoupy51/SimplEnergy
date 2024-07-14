@@ -6,6 +6,7 @@
 
 tag @s add simplenergy.placer
 function simplenergy:custom_blocks/get_rotation
+setblock ~ ~ ~ air
 execute if score #rotation simplenergy.data matches 1 run setblock ~ ~ ~ minecraft:furnace[facing=north]{"CustomName": "\"Electric Furnace\""}
 execute if score #rotation simplenergy.data matches 2 run setblock ~ ~ ~ minecraft:furnace[facing=east]{"CustomName": "\"Electric Furnace\""}
 execute if score #rotation simplenergy.data matches 3 run setblock ~ ~ ~ minecraft:furnace[facing=south]{"CustomName": "\"Electric Furnace\""}

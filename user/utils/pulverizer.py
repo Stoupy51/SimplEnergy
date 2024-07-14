@@ -231,7 +231,19 @@ kill @s
 """)
 
 	# Keep track of unlocked slots when destroying and placing
-
+	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/destroy.mcfunction", f"""# Copy slots to storage
+data remove storage {namespace}:temp slots
+data modify storage {namespace}:temp slots set from entity @s item.components."minecraft:custom_data".{namespace}.pulverizer_slots
+\n""", prepend = True)
+	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/replace_item.mcfunction", f"""
+# Save slots to the item components
+execute if data storage {namespace}:temp slots run data modify entity @s Item.components."minecraft:custom_data".{namespace}.pulverizer_slots set from storage {namespace}:temp slots
+execute if data storage {namespace}:temp slots run data modify entity @s Item.components."minecraft:lore" prepend value '{{"text":"Unlocked slots saved.","color":"dark_gray","italic":false}}'
+""")
+	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/place_secondary.mcfunction", f"""
+# Copy slots to the item components
+data modify entity @s item.components."minecraft:custom_data".{namespace}.pulverizer_slots set from entity @p[tag={namespace}.placer] SelectedItem.components."minecraft:custom_data".{namespace}.pulverizer_slots
+""")
 
 
 	# ItemIO compatibility

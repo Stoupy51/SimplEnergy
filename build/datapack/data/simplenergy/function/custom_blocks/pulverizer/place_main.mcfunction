@@ -6,6 +6,7 @@
 
 tag @s add simplenergy.placer
 function simplenergy:custom_blocks/get_rotation
+setblock ~ ~ ~ air
 execute if score #rotation simplenergy.data matches 1 run setblock ~ ~ ~ minecraft:barrel[facing=north]{"CustomName": "\"Pulverizer\""}
 execute if score #rotation simplenergy.data matches 2 run setblock ~ ~ ~ minecraft:barrel[facing=east]{"CustomName": "\"Pulverizer\""}
 execute if score #rotation simplenergy.data matches 3 run setblock ~ ~ ~ minecraft:barrel[facing=south]{"CustomName": "\"Pulverizer\""}
