@@ -166,9 +166,9 @@ $execute if score #found {namespace}.data matches 0 run return run function {nam
 
 # Else, if output do not match current output slot, stop
 scoreboard players set #output_occupied {namespace}.data 0
-$execute if data storage {namespace}:temp slots[$(result)] run scoreboard players set #output_occupied {namespace}.data 1
+$execute if data storage {namespace}:temp Items[{{Slot:$(result)b}}] run scoreboard players set #output_occupied {namespace}.data 1
 execute if score #output_occupied {namespace}.data matches 1 run scoreboard players set #is_not_same_output {namespace}.data 0
-$execute if score #output_occupied {namespace}.data matches 1 run data modify storage {namespace}:temp copy set from storage {namespace}:temp slots[$(result)]
+$execute if score #output_occupied {namespace}.data matches 1 run data modify storage {namespace}:temp copy set from storage {namespace}:temp Items[{{Slot:$(result)b}}]
 execute if score #output_occupied {namespace}.data matches 1 store success score #is_not_same_output {namespace}.data run data modify storage {namespace}:temp copy.id set from storage {namespace}:main pulverizer.output.id
 execute if score #output_occupied {namespace}.data matches 1 if score #is_not_same_output {namespace}.data matches 0 store success score #is_not_same_output {namespace}.data run data modify storage {namespace}:temp copy.components set from storage {namespace}:main pulverizer.output.components
 $execute if score #output_occupied {namespace}.data matches 1 if score #is_not_same_output {namespace}.data matches 1 run return run function simplenergy:custom_blocks/pulverizer/reset_progress {{"index":$(index),"slot":$(slot)}}
@@ -176,15 +176,26 @@ $execute if score #output_occupied {namespace}.data matches 1 if score #is_not_s
 # Progress the slot
 scoreboard players add #progression {namespace}.data 1
 $execute if score #progression {namespace}.data matches ..{PULVERIZER_TIME - 1} store result storage {namespace}:temp slots[$(index)].progression int 1 run scoreboard players get #progression {namespace}.data
-execute if score #progression {namespace}.data matches ..{PULVERIZER_TIME - 1} run return 1
 
-# Add the item to the result slot
-execute if score #output_occupied {namespace}.data matches 1 store result score #count {namespace}.data run data get storage {namespace}:temp copy.count
-execute if score #output_occupied {namespace}.data matches 1 store result score #to_add {namespace}.data run data get storage {namespace}:main pulverizer.output.count
-execute if score #output_occupied {namespace}.data matches 1 run scoreboard players operation #count {namespace}.data += #to_add {namespace}.data
+# Calculate the output count
+execute store result score #count {namespace}.data run data get storage {namespace}:temp copy.count
+execute store result score #to_add {namespace}.data run data get storage {namespace}:main pulverizer.output.count
+scoreboard players operation #count {namespace}.data += #to_add {namespace}.data
+execute if score #output_occupied {namespace}.data matches 1 summon item_display run function {namespace}:custom_blocks/pulverizer/entity_get_max_stack_size
+$execute if score #output_occupied {namespace}.data matches 1 if score #count {namespace}.data > #max_stack_size {namespace}.data run return run function simplenergy:custom_blocks/pulverizer/reset_progress {{"index":$(index),"slot":$(slot)}}
+
+# Add the item to the result slot if progression is done
+execute if score #progression {namespace}.data matches ..{PULVERIZER_TIME - 1} run return 1
 $execute if score #output_occupied {namespace}.data matches 1 store result block ~ ~ ~ Items[{{Slot:$(result)b}}].count int 1 run scoreboard players get #count {namespace}.data
 $execute if score #output_occupied {namespace}.data matches 0 run data modify storage {namespace}:main pulverizer.output.Slot set value $(result)b
-$execute if score #output_occupied {namespace}.data matches 0 run data modify block ~ ~ ~ Items[{{Slot:$(result)b}}] set from storage {namespace}:main pulverizer.output
+execute if score #output_occupied {namespace}.data matches 0 run data modify block ~ ~ ~ Items append from storage {namespace}:main pulverizer.output
+
+# Reset progression and remove 1 count to ingredient
+$function simplenergy:custom_blocks/pulverizer/reset_progress {{"index":$(index),"slot":$(slot)}}
+execute store result score #count {namespace}.data run data get storage {namespace}:main pulverizer.input.count
+scoreboard players remove #count {namespace}.data 1
+$execute if score #count {namespace}.data matches 1.. store result block ~ ~ ~ Items[{{Slot:$(index)b}}].count int 1 run scoreboard players get #count {namespace}.data
+$execute if score #count {namespace}.data matches 0 run data remove block ~ ~ ~ Items[{{Slot:$(index)b}}]
 """)
 	
 	# Get pulverizer recipe function
@@ -197,6 +208,31 @@ execute if score #found {namespace}.data matches 1 run data modify storage {name
 
 # Kill temporary entity
 kill @s
+""")
+	
+	# Get max stack size function
+	content: str = ""
+	numbers = [64, 16, 1, 99]
+	numbers += [i for i in range(1, 100) if i not in numbers]
+	for i in numbers:
+		content += f"execute if items entity @s contents *[minecraft:max_stack_size={i}] run return {i}\n"
+	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/get_max_stack_size.mcfunction", f"""
+# Copy item
+data modify entity @s item set from storage {namespace}:temp copy
+
+# Get max stack size
+{content}
+""")
+	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/entity_get_max_stack_size.mcfunction", f"""
+# Get max stack size and kill
+execute store result score #max_stack_size {namespace}.data run function {namespace}:custom_blocks/pulverizer/get_max_stack_size
+kill @s
+""")
+
+
+	# ItemIO compatibility
+	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/place_secondary.mcfunction", f"""
+# ItemIO compatibility
 """)
 
 	return

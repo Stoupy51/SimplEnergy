@@ -33,6 +33,8 @@ scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
+# ItemIO compatibility
+
 # Add tag for loop every tick
 tag @s add simplenergy.tick
 
