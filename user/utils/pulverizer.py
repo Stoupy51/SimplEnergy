@@ -229,6 +229,9 @@ execute store result score #max_stack_size {namespace}.data run function {namesp
 kill @s
 """)
 
+	# Keep track of unlocked slots when destroying and placing
+
+
 
 	# ItemIO compatibility
 	base: str = 'data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig'
