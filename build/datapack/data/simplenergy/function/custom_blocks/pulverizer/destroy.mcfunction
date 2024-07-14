@@ -7,6 +7,10 @@
 # ItemIO compatibility
 function #itemio:calls/container/destroy
 
+# Copy slots to storage
+data remove storage simplenergy:temp slots
+data modify storage simplenergy:temp slots set from entity @s item.components."minecraft:custom_data".simplenergy.pulverizer_slots
+
 # Datapack Energy
 function energy:v1/api/break_machine
 

@@ -33,6 +33,9 @@ scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
+# Copy slots to the item components
+data modify entity @s item.components."minecraft:custom_data".simplenergy.pulverizer_slots set from entity @p[tag=simplenergy.placer] SelectedItem.components."minecraft:custom_data".simplenergy.pulverizer_slots
+
 # ItemIO compatibility
 tag @s add itemio.container
 tag @s add itemio.container.hopper
