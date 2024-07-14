@@ -231,9 +231,20 @@ kill @s
 
 
 	# ItemIO compatibility
-	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/place_secondary.mcfunction", f"""
+	base: str = 'data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig'
+	content: str = f"""
 # ItemIO compatibility
-""")
+tag @s add itemio.container
+tag @s add itemio.container.hopper
+{base} set value []
+"""
+	for i in range(PULVERIZER_SLOTS):
+		content += f'{base} append value {{"Slot":{i},"mode":"input","allowed_side":{{"north":true,"south":true,"east":true,"west":true,"top":true}}}}\n'
+	for i in range(PULVERIZER_SLOTS):
+		content += f'{base} append value {{"Slot":{i+2*9},"mode":"output","allowed_side":{{"bottom":false}}}}\n'
+	content += "function #itemio:calls/container/init\n"
+	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/place_secondary.mcfunction", content)
+	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/destroy.mcfunction", "# ItemIO compatibility\nfunction #itemio:calls/container/destroy\n", prepend = True)
 
 	return
 
