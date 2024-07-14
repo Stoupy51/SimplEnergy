@@ -34,6 +34,26 @@ scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
 # ItemIO compatibility
+tag @s add itemio.container
+tag @s add itemio.container.hopper
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value []
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":0,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":1,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":3,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":4,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":5,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":6,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":7,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":18,"mode":"output","allowed_side":{"bottom":false}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":19,"mode":"output","allowed_side":{"bottom":false}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":20,"mode":"output","allowed_side":{"bottom":false}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":21,"mode":"output","allowed_side":{"bottom":false}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":22,"mode":"output","allowed_side":{"bottom":false}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":23,"mode":"output","allowed_side":{"bottom":false}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":24,"mode":"output","allowed_side":{"bottom":false}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":25,"mode":"output","allowed_side":{"bottom":false}}
+function #itemio:calls/container/init
 
 # Add tag for loop every tick
 tag @s add simplenergy.tick
