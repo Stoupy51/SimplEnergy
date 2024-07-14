@@ -136,7 +136,9 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 			{"type":"smelting","result_count":1,"category":"misc","group":material,"experience":0.8,"cookingtime":200,"ingredient":ingredient, "result":data["smelt"]},
 			{"type":"blasting","result_count":1,"category":"misc","group":material,"experience":0.8,"cookingtime":100,"ingredient":ingredient, "result":data["smelt"]},
 		]
-		database_additions[dust][RESULT_OF_CRAFTING] = []
+		database_additions[dust][RESULT_OF_CRAFTING] = [
+			{"type":PULVERIZING,"result_count":1,"category":"misc","group":material,"ingredient":data["smelt"]},
+		]
 		for pulverize in data["pulverize"]:
 			pulv_ingr: dict = pulverize if isinstance(pulverize, dict) else ingr_repr(f"minecraft:{pulverize}")
 			craft: dict = {"type":PULVERIZING,"result_count":2,"category":"misc","group":material,"ingredient":pulv_ingr,"result":ingredient}
