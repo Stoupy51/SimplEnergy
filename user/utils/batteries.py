@@ -18,6 +18,7 @@ def keep_energy_for_batteries(config: dict) -> None:
 		write_to_file(destroy_file, f"""
 # Keep energy when destroying the block
 scoreboard players operation #storage {namespace}.data = @s energy.storage
+
 """, prepend = True)
 		
 		# Keep energy when replacing the item
@@ -25,6 +26,7 @@ scoreboard players operation #storage {namespace}.data = @s energy.storage
 		write_to_file(replace_item, f"""
 # Keep energy
 function {namespace}:utils/keep_energy
+
 """)
 	
 	# Write keep_energy

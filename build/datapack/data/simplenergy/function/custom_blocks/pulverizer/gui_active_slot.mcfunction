@@ -38,6 +38,7 @@ $execute if score #output_occupied simplenergy.data matches 1 if score #is_not_s
 # Progress the slot
 scoreboard players add #progression simplenergy.data 1
 $execute if score #progression simplenergy.data matches ..199 store result storage simplenergy:temp slots[$(index)].progression int 1 run scoreboard players get #progression simplenergy.data
+scoreboard players add #working simplenergy.data 1
 
 # Calculate the output count
 execute store result score #count simplenergy.data run data get storage simplenergy:temp copy.count

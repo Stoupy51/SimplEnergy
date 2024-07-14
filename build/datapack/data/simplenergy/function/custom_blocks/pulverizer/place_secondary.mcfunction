@@ -45,14 +45,14 @@ data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig ap
 data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":5,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
 data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":6,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
 data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":7,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":18,"mode":"output","allowed_side":{"bottom":false}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":19,"mode":"output","allowed_side":{"bottom":false}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":20,"mode":"output","allowed_side":{"bottom":false}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":21,"mode":"output","allowed_side":{"bottom":false}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":22,"mode":"output","allowed_side":{"bottom":false}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":23,"mode":"output","allowed_side":{"bottom":false}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":24,"mode":"output","allowed_side":{"bottom":false}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":25,"mode":"output","allowed_side":{"bottom":false}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":18,"mode":"output","allowed_side":{"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":19,"mode":"output","allowed_side":{"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":20,"mode":"output","allowed_side":{"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":21,"mode":"output","allowed_side":{"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":22,"mode":"output","allowed_side":{"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":23,"mode":"output","allowed_side":{"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":24,"mode":"output","allowed_side":{"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":25,"mode":"output","allowed_side":{"bottom":true}}
 function #itemio:calls/container/init
 
 # Add tag for loop every tick

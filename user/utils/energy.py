@@ -5,9 +5,9 @@ from python_datapack.utils.io import *
 
 def insert_lib_call(path: str, is_machine: bool):
 	if is_machine:
-		FILES_TO_WRITE[path] = FILES_TO_WRITE[path].replace("\nkill @s", "\nfunction energy:v1/api/break_machine\nkill @s")
+		write_to_file(path, "# Datapack Energy\nfunction energy:v1/api/break_machine\n", prepend = True)
 	else:
-		FILES_TO_WRITE[path] = FILES_TO_WRITE[path].replace("\nkill @s", "\nfunction energy:v1/api/break_cable\nkill @s")
+		write_to_file(path, "# Datapack Energy\nfunction energy:v1/api/break_cable\n", prepend = True)
 
 # Add commands to place and destroy functions for energy items
 def complete_place_and_destroy(config: dict) -> None:
