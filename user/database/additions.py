@@ -11,6 +11,12 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 		"multimeter": {"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: MISC, "unbreakable": {"show_in_tooltip": False},						RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["II","CC","CC"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot")}}], "lore": ['{"text":"Allows you to analyse machines","italic":false,"color":"gray"}','{"text":"to get their energy information","italic":false,"color":"gray"}','{"text":"[Hold in offhand for passive use]","italic":false,"color":"white"}']},
 		"wrench": {"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: MISC, "unbreakable": {"show_in_tooltip": False},							RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":[" I "," II", "I  "],"ingredients":{"I":ingr_repr("simplunium_ingot", NAMESPACE)}}], "lore": ['{"text":"Provides you the ability to instantly","italic":false,"color":"gray"}','{"text":"break cables and rotates machines while sneaking","italic":false,"color":"gray"}']},
 		"slot_unlocker": {"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC, RESULT_OF_CRAFTING: [{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["QBQ","NGN","NIN"],"ingredients":{"Q":ingr_repr("minecraft:quartz"),"B":ingr_repr("minecraft:breeze_rod"),"N":ingr_repr("minecraft:gold_nugget"),"G":ingr_repr("minecraft:raw_gold_block"),"I":ingr_repr("minecraft:iron_block")}}], "lore": ['{"text":"Unlocks a blocked slot in a machine","italic":false,"color":"gray"}']},
+		"battery_switcher": {
+			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: MISC, "unbreakable": {"show_in_tooltip": False},
+			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":[" RS"," SB","S  "],"ingredients":{"R":ingr_repr("minecraft:redstone"),"S":ingr_repr("simplunium_ingot", NAMESPACE),"B":ingr_repr("minecraft:stone_button")}}],
+			"lore": ['{"text":"Allows you to switch batteries states","italic":false,"color":"gray"}','{"text":"[Input / Output / Both]","italic":false,"color":"gray"}'],
+			OVERRIDE_MODEL: {"parent":"item/handheld"},
+		},
 
 		"simple_battery": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 10000}},			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","CRC","III"],"ingredients":{"C":ingr_repr("minecraft:copper_block"),"R":ingr_repr("minecraft:redstone"),"I":ingr_repr("minecraft:iron_ingot")}}],								"lore": ['{"text":"[Energy Storage: 10 MJ]","italic":false,"color":"gray"}']},
 		"advanced_battery": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 25000}},		RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["GGG","GXG","SSS"],"ingredients":{"G":ingr_repr("minecraft:gold_block"),"X":ingr_repr("simple_battery", NAMESPACE),"S":ingr_repr("simplunium_ingot", NAMESPACE)}}],					"lore": ['{"text":"[Energy Storage: 25 MJ]","italic":false,"color":"gray"}']},
@@ -110,26 +116,31 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 
 	# Dusts
 	dusts: dict[str, dict] = {
-		"copper":		{"pulverize":["raw_copper","copper_ore","deepslate_copper_ore"],				"smelt":ingr_repr("minecraft:copper_ingot")},
-		"iron":			{"pulverize":["raw_iron","iron_ore","deepslate_iron_ore"],						"smelt":ingr_repr("minecraft:iron_ingot")},
-		"gold":			{"pulverize":["raw_gold","gold_ore","deepslate_gold_ore"],						"smelt":ingr_repr("minecraft:gold_ingot")},
-		"lapis":		{"pulverize":["lapis_ore","deepslate_lapis_ore"],								"smelt":ingr_repr("minecraft:lapis_lazuli")},
-		"diamond":		{"pulverize":["diamond_ore","deepslate_diamond_ore"],							"smelt":ingr_repr("minecraft:diamond")},
-		"emerald":		{"pulverize":["emerald_ore","deepslate_emerald_ore"],							"smelt":ingr_repr("minecraft:emerald")},
-		"quartz":		{"pulverize":["nether_quartz_ore"],												"smelt":ingr_repr("minecraft:quartz")},
-		"netherite":	{"pulverize":["ancient_debris"],												"smelt":ingr_repr("minecraft:netherite_scrap")},
-		"simplunium":	{"pulverize":["raw_simplunium","simplunium_ore","deepslate_simplunium_ore"],	"smelt":ingr_repr("simplunium_ingot", NAMESPACE)},
-		"tin":			{"pulverize":["raw_tin","tin_ore","deepslate_tin_ore"],							"smelt":ingr_repr("tin_ingot", "mechanization")},
-		"titanium":		{"pulverize":["raw_titanium","titanium_ore","deepslate_titanium_ore"],			"smelt":ingr_repr("titanium_ingot", "mechanization")},
+		"copper":		{"pulverize":["raw_copper","copper_ore","deepslate_copper_ore"],												"smelt":ingr_repr("minecraft:copper_ingot")},
+		"iron":			{"pulverize":["raw_iron","iron_ore","deepslate_iron_ore"],														"smelt":ingr_repr("minecraft:iron_ingot")},
+		"gold":			{"pulverize":["raw_gold","gold_ore","deepslate_gold_ore"],														"smelt":ingr_repr("minecraft:gold_ingot")},
+		"lapis":		{"pulverize":["lapis_ore","deepslate_lapis_ore"],																"smelt":ingr_repr("minecraft:lapis_lazuli")},
+		"diamond":		{"pulverize":["diamond_ore","deepslate_diamond_ore"],															"smelt":ingr_repr("minecraft:diamond")},
+		"emerald":		{"pulverize":["emerald_ore","deepslate_emerald_ore"],															"smelt":ingr_repr("minecraft:emerald")},
+		"quartz":		{"pulverize":["nether_quartz_ore"],																				"smelt":ingr_repr("minecraft:quartz")},
+		"netherite":	{"pulverize":["ancient_debris"],																				"smelt":ingr_repr("minecraft:netherite_scrap")},
+		"simplunium":	{"pulverize":[ingr_repr(x, NAMESPACE) for x in ["raw_simplunium","simplunium_ore","deepslate_simplunium_ore"]],	"smelt":ingr_repr("simplunium_ingot", NAMESPACE)},
+		"tin":			{"pulverize":[ingr_repr(x, "mechanization") for x in ["raw_tin","tin_ore","deepslate_tin_ore"]],				"smelt":ingr_repr("tin_ingot", "mechanization")},
+		"titanium":		{"pulverize":[ingr_repr(x, "mechanization") for x in ["raw_titanium","titanium_ore","deepslate_titanium_ore"]],	"smelt":ingr_repr("titanium_ingot", "mechanization")},
 	}
 	for material, data in dusts.items():
 		dust: str = material + "_dust"
 		ingredient: dict = ingr_repr(dust, NAMESPACE)
 		database_additions[dust] = {"id": CUSTOM_ITEM_VANILLA, CATEGORY: "material"}
-		database_additions[dust][RESULT_OF_CRAFTING] = [
+		database_additions[dust][USED_FOR_CRAFTING] = [
 			{"type":"smelting","result_count":1,"category":"misc","group":material,"experience":0.8,"cookingtime":200,"ingredient":ingredient, "result":data["smelt"]},
 			{"type":"blasting","result_count":1,"category":"misc","group":material,"experience":0.8,"cookingtime":100,"ingredient":ingredient, "result":data["smelt"]},
 		]
+		database_additions[dust][RESULT_OF_CRAFTING] = []
+		for pulverize in data["pulverize"]:
+			pulv_ingr: dict = pulverize if isinstance(pulverize, dict) else ingr_repr(f"minecraft:{pulverize}")
+			craft: dict = {"type":PULVERIZING,"result_count":2,"category":"misc","group":material,"ingredient":pulv_ingr,"result":ingredient}
+			database_additions[dust][RESULT_OF_CRAFTING].append(craft)
 
 
 	# Update the database with new data

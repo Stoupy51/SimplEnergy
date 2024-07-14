@@ -171,11 +171,12 @@ execute if score #output_occupied {namespace}.data matches 1 run scoreboard play
 $execute if score #output_occupied {namespace}.data matches 1 run data modify storage {namespace}:temp copy set from storage {namespace}:temp slots[$(result)]
 execute if score #output_occupied {namespace}.data matches 1 store success score #is_not_same_output {namespace}.data run data modify storage {namespace}:temp copy.id set from storage {namespace}:main pulverizer.output.id
 execute if score #output_occupied {namespace}.data matches 1 if score #is_not_same_output {namespace}.data matches 0 store success score #is_not_same_output {namespace}.data run data modify storage {namespace}:temp copy.components set from storage {namespace}:main pulverizer.output.components
-execute if score #output_occupied {namespace}.data matches 1 if score #is_not_same_output {namespace}.data matches 1 run return fail
+$execute if score #output_occupied {namespace}.data matches 1 if score #is_not_same_output {namespace}.data matches 1 run return run function simplenergy:custom_blocks/pulverizer/reset_progress {{"index":$(index),"slot":$(slot)}}
 
 # Progress the slot
 scoreboard players add #progression {namespace}.data 1
 $execute if score #progression {namespace}.data matches ..{PULVERIZER_TIME - 1} store result storage {namespace}:temp slots[$(index)].progression int 1 run scoreboard players get #progression {namespace}.data
+execute if score #progression {namespace}.data matches ..{PULVERIZER_TIME - 1} run return 1
 
 # Add the item to the result slot
 execute if score #output_occupied {namespace}.data matches 1 store result score #count {namespace}.data run data get storage {namespace}:temp copy.count
@@ -197,10 +198,6 @@ execute if score #found {namespace}.data matches 1 run data modify storage {name
 # Kill temporary entity
 kill @s
 """)
-	
-	# Write pulverizer recipes JSON file
-	content: dict = {"values":[f"{namespace}:calls/pulverizer_recipes"]}
-	write_to_file(f"{build_datapack}/data/{namespace}/tags/function/calls/pulverizer_recipes.json", super_json_dump(content))
 
 	return
 

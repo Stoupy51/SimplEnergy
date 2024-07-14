@@ -5,6 +5,7 @@
 #			simplenergy:custom_blocks/advanced_battery/replace_item
 #			simplenergy:custom_blocks/elite_battery/replace_item
 #			simplenergy:custom_blocks/creative_battery/replace_item
+#			simplenergy:custom_blocks/battery_switcher/replace_item
 #
 
 # Prepare input for the update_energy_lore function

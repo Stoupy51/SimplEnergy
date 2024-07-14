@@ -33,11 +33,12 @@ execute if score #output_occupied simplenergy.data matches 1 run scoreboard play
 $execute if score #output_occupied simplenergy.data matches 1 run data modify storage simplenergy:temp copy set from storage simplenergy:temp slots[$(result)]
 execute if score #output_occupied simplenergy.data matches 1 store success score #is_not_same_output simplenergy.data run data modify storage simplenergy:temp copy.id set from storage simplenergy:main pulverizer.output.id
 execute if score #output_occupied simplenergy.data matches 1 if score #is_not_same_output simplenergy.data matches 0 store success score #is_not_same_output simplenergy.data run data modify storage simplenergy:temp copy.components set from storage simplenergy:main pulverizer.output.components
-execute if score #output_occupied simplenergy.data matches 1 if score #is_not_same_output simplenergy.data matches 1 run return fail
+$execute if score #output_occupied simplenergy.data matches 1 if score #is_not_same_output simplenergy.data matches 1 run return run function simplenergy:custom_blocks/pulverizer/reset_progress {"index":$(index),"slot":$(slot)}
 
 # Progress the slot
 scoreboard players add #progression simplenergy.data 1
 $execute if score #progression simplenergy.data matches ..199 store result storage simplenergy:temp slots[$(index)].progression int 1 run scoreboard players get #progression simplenergy.data
+execute if score #progression simplenergy.data matches ..199 run return 1
 
 # Add the item to the result slot
 execute if score #output_occupied simplenergy.data matches 1 store result score #count simplenergy.data run data get storage simplenergy:temp copy.count
