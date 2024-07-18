@@ -86,7 +86,7 @@ function {namespace}:calls/update_energy_lore/macro with storage {namespace}:tem
 
 # Indicate that the item lore was updated
 data modify storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore set value 1b
-data remove storage {namespace}:temp macro
+#data remove storage {namespace}:temp macro
 """	
 	
 	# Write the function and add it to the energy function tag
@@ -95,8 +95,8 @@ data remove storage {namespace}:temp macro
 
 	# Write macro function
 	write_to_file(f"{build_datapack}/data/{namespace}/function/calls/update_energy_lore/macro.mcfunction", f"""
-$execute unless data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore" insert -2 value [{{"text":"[Charge: ","color":"gray","italic":false}},"$(part_1).$(part_2)$(scale)"]
-$execute if data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore"[-2] set value [{{"text":"[Charge: ","color":"gray","italic":false}},"$(part_1).$(part_2)$(scale)"]
+$execute unless data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore" insert -2 value '[{{"text":"[Charge: ","color":"gray","italic":false}},"$(part_1).$(part_2)$(scale)"]'
+$execute if data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore"[-2] set value '[{{"text":"[Charge: ","color":"gray","italic":false}},"$(part_1).$(part_2)$(scale)"]'
 """)
 
 	return
