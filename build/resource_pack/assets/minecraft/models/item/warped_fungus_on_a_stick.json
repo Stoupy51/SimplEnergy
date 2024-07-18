@@ -6,7 +6,10 @@
 	"overrides": [
 		{ "predicate": { "custom_model_data": 2012017}, "model": "simplenergy:item/multimeter" },
 		{ "predicate": { "custom_model_data": 2012018}, "model": "simplenergy:item/wrench" },
-		{ "predicate": { "custom_model_data": 2012046}, "model": "simplenergy:item/battery_switcher" }
+		{ "predicate": { "custom_model_data": 2012046}, "model": "simplenergy:item/battery_switcher" },
+		{ "predicate": { "custom_model_data": 2012047}, "model": "simplenergy:item/battery_switcher_both" },
+		{ "predicate": { "custom_model_data": 2012048}, "model": "simplenergy:item/battery_switcher_output" },
+		{ "predicate": { "custom_model_data": 2012049}, "model": "simplenergy:item/battery_switcher_input" }
 	]
 }
 

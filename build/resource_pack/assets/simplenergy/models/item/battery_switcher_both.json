@@ -1,0 +1,7 @@
+{
+	"textures": {
+		"layer0": "simplenergy:item/battery_switcher_both"
+	},
+	"parent": "item/handheld"
+}
+

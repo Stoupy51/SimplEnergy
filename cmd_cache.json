@@ -40,5 +40,8 @@
 	"titanium_dust": 2012042,
 	"pulverizer": 2012043,
 	"slot_unlocker": 2012045,
-	"battery_switcher": 2012046
+	"battery_switcher": 2012046,
+	"battery_switcher_both": 2012047,
+	"battery_switcher_output": 2012048,
+	"battery_switcher_input": 2012049
 }

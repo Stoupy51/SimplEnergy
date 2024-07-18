@@ -58,6 +58,8 @@ data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig ap
 data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":25,"mode":"output","allowed_side":{"bottom":true}}
 function #itemio:calls/container/init
 
+# Make the block rotatable by wrench
+tag @s add simplenergy.rotatable
 # Add tag for loop every tick
 tag @s add simplenergy.tick
 

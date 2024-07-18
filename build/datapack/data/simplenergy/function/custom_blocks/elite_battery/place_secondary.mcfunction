@@ -20,6 +20,7 @@ data modify entity @s transformation.translation[1] set value 0.003f
 data modify entity @s brightness set value {block:15,sky:15}
 
 # Energy part
+tag @s add simplenergy.battery_switcher
 tag @s add energy.receive
 tag @s add energy.send
 data modify storage simplenergy:temp energy set from entity @p[tag=simplenergy.placer] SelectedItem.components."minecraft:custom_data".energy
