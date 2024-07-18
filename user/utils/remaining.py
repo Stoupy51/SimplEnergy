@@ -5,13 +5,12 @@ from python_datapack.utils.io import *
 
 # Setup energy balancing
 def setup_remaining(config: dict) -> None:
-	version: str = config['version']
 	namespace: str = config['namespace']
 	build_datapack: str = config['build_datapack']
 	functions: str = f"{build_datapack}/data/{namespace}/function"
 
 	# Passive multimeter working every 2 ticks
-	write_to_file(f"{functions}/v{version}/tick_2.mcfunction", f"""
+	write_to_versioned_file(config, "tick_2", f"""
 # Passive multimeter
 execute as @a[tag=!global.ignore.gui,tag={namespace}.state.multimeter] at @s anchored eyes positioned ^ ^ ^.2 run function {namespace}:utils/multimeter/passive/main
 """)
@@ -60,7 +59,7 @@ tellraw @s ["",{{"text":"Markers on furnaces: ","color":"gray"}},{{"score":{{"na
 
 
 	## Right click detection
-	write_to_file(f"{functions}/v{version}/load/confirm_load.mcfunction", f"scoreboard objectives add {namespace}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick\n", prepend = True)
+	write_to_versioned_file(config, "load/confirm_load", f"scoreboard objectives add {namespace}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick\n", prepend = True)
 	write_to_file(f"{functions}/utils/on_right_click.mcfunction", f"""
 # Advancement revoke
 advancement revoke @s only {namespace}:right_click
@@ -219,7 +218,7 @@ execute if items entity @s weapon.offhand *[custom_data~{{"{namespace}":{{"multi
 
 
 	# Private score
-	write_to_file(f"{functions}/v{version}/load/confirm_load.mcfunction", f"scoreboard objectives add {namespace}.private dummy\n", prepend = True)
+	write_to_versioned_file(config, "load/confirm_load", f"scoreboard objectives add {namespace}.private dummy\n", prepend = True)
 
 
 	return
