@@ -44,5 +44,5 @@ function simplenergy:calls/update_energy_lore/macro with storage simplenergy:tem
 
 # Indicate that the item lore was updated
 data modify storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore set value 1b
-data remove storage simplenergy:temp macro
+#data remove storage simplenergy:temp macro
 
