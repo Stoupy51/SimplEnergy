@@ -30,7 +30,7 @@ def main(config: dict) -> None:
 	setup_machines(config, gui)
 
 	# Setup rotatable tags
-	setup_rotatable_tags(config, ["furnace_generator", "electric_furnace", "electric_smelter"])
+	setup_rotatable_tags(config, ["furnace_generator", "electric_furnace", "electric_smelter", "pulverizer"])
 
 	# Keep energy for batteries
 	keep_energy_for_batteries(config)

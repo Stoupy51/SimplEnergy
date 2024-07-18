@@ -284,6 +284,7 @@
 		"unbreakable": {"show_in_tooltip": false},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["II","CC","CC"],"ingredients": {"I": {"item": "minecraft:iron_ingot"},"C": {"item": "minecraft:copper_ingot"}}}],
 		"lore": ["{\"text\":\"Allows you to analyse machines\",\"italic\":false,\"color\":\"gray\"}","{\"text\":\"to get their energy information\",\"italic\":false,\"color\":\"gray\"}","{\"text\":\"[Hold in offhand for passive use]\",\"italic\":false,\"color\":\"white\"}","{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
+		"override_model": {"parent": "item/handheld"},
 		"custom_model_data": 2012017,
 		"item_name": "{'text': 'Multimeter', 'italic': false, 'color': 'white'}",
 		"custom_data": {"simplenergy": {"multimeter": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -312,11 +313,35 @@
 		"category": "miscellaneous",
 		"unbreakable": {"show_in_tooltip": false},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": [" RS"," SB","S  "],"ingredients": {"R": {"item": "minecraft:redstone"},"S": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}},"B": {"item": "minecraft:stone_button"}}}],
-		"lore": ["{\"text\":\"Allows you to switch batteries states\",\"italic\":false,\"color\":\"gray\"}","{\"text\":\"[Input / Output / Both]\",\"italic\":false,\"color\":\"gray\"}","{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
+		"lore": ["{\"text\":\"Allows you to switch batteries states\",\"italic\":false,\"color\":\"gray\"}","{\"text\":\"[Input / Output / Both]\",\"italic\":false,\"color\":\"gray\"}","{\"text\":\"[Hold in offhand for passive use]\",\"italic\":false,\"color\":\"white\"}","{\"text\":\"[Right click on a battery to switch]\",\"italic\":false,\"color\":\"white\"}","{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"],
 		"override_model": {"parent": "item/handheld"},
 		"custom_model_data": 2012046,
 		"item_name": "{'text': 'Battery Switcher', 'italic': false, 'color': 'white'}",
 		"custom_data": {"simplenergy": {"battery_switcher": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"battery_switcher_both": {
+		"id": "minecraft:warped_fungus_on_a_stick",
+		"override_model": {"parent": "item/handheld"},
+		"custom_data": {"simplenergy": {"battery_switcher_both": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"custom_model_data": 2012047,
+		"item_name": "{'text': 'Battery Switcher Both', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"]
+	},
+	"battery_switcher_output": {
+		"id": "minecraft:warped_fungus_on_a_stick",
+		"override_model": {"parent": "item/handheld"},
+		"custom_data": {"simplenergy": {"battery_switcher_output": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"custom_model_data": 2012048,
+		"item_name": "{'text': 'Battery Switcher Output', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"]
+	},
+	"battery_switcher_input": {
+		"id": "minecraft:warped_fungus_on_a_stick",
+		"override_model": {"parent": "item/handheld"},
+		"custom_data": {"simplenergy": {"battery_switcher_input": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"custom_model_data": 2012049,
+		"item_name": "{'text': 'Battery Switcher Input', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'SimplEnergy', 'italic': true, 'color': 'blue'}"]
 	},
 	"simple_battery": {
 		"id": "minecraft:furnace",

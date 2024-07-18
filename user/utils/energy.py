@@ -46,6 +46,7 @@ function energy:v1/api/init_machine
 					# Else, it's a battery.
 					write_to_file(placement, f"""
 # Energy part
+tag @s add {config['namespace']}.battery_switcher
 tag @s add energy.receive
 tag @s add energy.send
 data modify storage {config['namespace']}:temp energy set from entity @p[tag={config['namespace']}.placer] SelectedItem.components."minecraft:custom_data".energy
