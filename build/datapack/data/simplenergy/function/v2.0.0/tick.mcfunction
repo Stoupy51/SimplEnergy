@@ -13,5 +13,5 @@ execute if score #second simplenergy.data matches 20.. run function simplenergy:
 execute if score #second_5 simplenergy.data matches 90.. run function simplenergy:v2.0.0/second_5
 
 # Custom blocks tick functions
-execute as @e[tag=simplenergy.tick] at @s run function simplenergy:custom_blocks/tick
+execute if score #tick_entities simplenergy.data matches 1.. as @e[tag=simplenergy.tick] at @s run function simplenergy:custom_blocks/tick
 

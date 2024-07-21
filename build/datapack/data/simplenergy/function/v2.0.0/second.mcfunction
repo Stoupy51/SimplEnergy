@@ -11,5 +11,5 @@ scoreboard players set #second simplenergy.data 0
 execute if score #total_custom_blocks simplenergy.data matches 1.. as @e[type=item_display,tag=simplenergy.custom_block,tag=!simplenergy.vanilla.minecraft_polished_deepslate,predicate=!simplenergy:advanced_check_vanilla_blocks] at @s run function simplenergy:custom_blocks/destroy
 
 # Custom blocks second functions
-execute as @e[tag=simplenergy.second] at @s run function simplenergy:custom_blocks/second
+execute if score #second_entities simplenergy.data matches 1.. as @e[tag=simplenergy.second] at @s run function simplenergy:custom_blocks/second
 

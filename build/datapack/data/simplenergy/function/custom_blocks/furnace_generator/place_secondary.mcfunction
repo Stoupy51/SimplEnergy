@@ -40,4 +40,5 @@ function energy:v1/api/init_machine
 tag @s add simplenergy.rotatable
 # Add tag for loop every second
 tag @s add simplenergy.second
+scoreboard players add #second_entities simplenergy.data 1
 

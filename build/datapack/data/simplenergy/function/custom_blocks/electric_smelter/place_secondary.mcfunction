@@ -40,4 +40,5 @@ function energy:v1/api/init_machine
 tag @s add simplenergy.rotatable
 # Add tag for loop every tick
 tag @s add simplenergy.tick
+scoreboard players add #tick_entities simplenergy.data 1
 

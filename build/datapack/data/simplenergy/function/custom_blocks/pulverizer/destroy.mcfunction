@@ -25,3 +25,7 @@ scoreboard players remove #total_pulverizer simplenergy.data 1
 # Kill the custom block entity
 kill @s
 
+
+# Decrease the number of entities with tick tag
+scoreboard players remove #tick_entities simplenergy.data 1
+
