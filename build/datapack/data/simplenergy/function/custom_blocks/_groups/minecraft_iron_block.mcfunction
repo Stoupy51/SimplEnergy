@@ -4,7 +4,7 @@
 # @within	simplenergy:custom_blocks/destroy
 #
 
-execute if entity @s[tag=simplenergy.simplunium_block] run function simplenergy:custom_blocks/simplunium_block/destroy
-execute if entity @s[tag=simplenergy.elite_battery] run function simplenergy:custom_blocks/elite_battery/destroy
-execute if entity @s[tag=simplenergy.creative_battery] run function simplenergy:custom_blocks/creative_battery/destroy
+execute if score #total_simplunium_block simplenergy.data matches 1.. if entity @s[tag=simplenergy.simplunium_block] run function simplenergy:custom_blocks/simplunium_block/destroy
+execute if score #total_elite_battery simplenergy.data matches 1.. if entity @s[tag=simplenergy.elite_battery] run function simplenergy:custom_blocks/elite_battery/destroy
+execute if score #total_creative_battery simplenergy.data matches 1.. if entity @s[tag=simplenergy.creative_battery] run function simplenergy:custom_blocks/creative_battery/destroy
 

@@ -4,5 +4,5 @@
 # @within	simplenergy:custom_blocks/destroy
 #
 
-execute if entity @s[tag=simplenergy.pulverizer] run function simplenergy:custom_blocks/pulverizer/destroy
+execute if score #total_pulverizer simplenergy.data matches 1.. if entity @s[tag=simplenergy.pulverizer] run function simplenergy:custom_blocks/pulverizer/destroy
 

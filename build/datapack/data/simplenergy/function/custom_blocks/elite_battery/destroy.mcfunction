@@ -13,6 +13,11 @@ function energy:v1/api/break_machine
 # Replace the item with the custom one
 execute as @e[type=item,nbt={Item:{id:"minecraft:iron_block"}},limit=1,sort=nearest,distance=..1] run function simplenergy:custom_blocks/elite_battery/replace_item
 
+# Decrease count scores
+scoreboard players remove #total_custom_blocks simplenergy.data 1
+scoreboard players remove #total_vanilla_iron_block simplenergy.data 1
+scoreboard players remove #total_elite_battery simplenergy.data 1
+
 # Kill the custom block entity
 kill @s
 

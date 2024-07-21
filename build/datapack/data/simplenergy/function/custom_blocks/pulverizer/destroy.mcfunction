@@ -17,6 +17,11 @@ function energy:v1/api/break_machine
 # Replace the item with the custom one
 execute as @e[type=item,nbt={Item:{id:"minecraft:barrel"}},limit=1,sort=nearest,distance=..1] run function simplenergy:custom_blocks/pulverizer/replace_item
 
+# Decrease count scores
+scoreboard players remove #total_custom_blocks simplenergy.data 1
+scoreboard players remove #total_vanilla_barrel simplenergy.data 1
+scoreboard players remove #total_pulverizer simplenergy.data 1
+
 # Kill the custom block entity
 kill @s
 

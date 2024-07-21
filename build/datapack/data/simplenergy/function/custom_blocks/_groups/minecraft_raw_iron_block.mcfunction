@@ -4,5 +4,5 @@
 # @within	simplenergy:custom_blocks/destroy
 #
 
-execute if entity @s[tag=simplenergy.raw_simplunium_block] run function simplenergy:custom_blocks/raw_simplunium_block/destroy
+execute if score #total_raw_simplunium_block simplenergy.data matches 1.. if entity @s[tag=simplenergy.raw_simplunium_block] run function simplenergy:custom_blocks/raw_simplunium_block/destroy
 
