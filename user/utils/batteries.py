@@ -10,7 +10,7 @@ def keep_energy_for_batteries(config: dict) -> None:
 	build_datapack: str = config['build_datapack']
 
 	# For each battery,
-	batteries = [item for item in database if "battery" in item]
+	batteries = ["simple_battery", "advanced_battery", "elite_battery", "creative_battery"]
 	for battery in batteries:
 		
 		# Copy current energy storage before destroying the block
