@@ -144,11 +144,12 @@ playsound {namespace}:cauldron_generator block @a[distance=..12] ~ ~ ~ 0.25
 
 	# Commands on Electric Brewing Stand placement
 	to_add: str = """
+# Rotate the entity and set scale
 data modify entity @s Rotation[0] set value 180.0f
 data modify entity @s transformation.scale[1] set value 1.025f
 data modify entity @s transformation.translation[1] set value 0.01f
 """
-	write_to_file(f"{CUSTOM_BLOCKS}/electric_brewing_stand/place_main.mcfunction", to_add)
+	write_to_file(f"{CUSTOM_BLOCKS}/electric_brewing_stand/place_secondary.mcfunction", to_add)
 
 	# Pulverizer
 	pulverizer(config, gui)

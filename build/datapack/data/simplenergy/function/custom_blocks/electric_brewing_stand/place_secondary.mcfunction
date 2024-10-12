@@ -27,6 +27,11 @@ scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
+# Rotate the entity and set scale
+data modify entity @s Rotation[0] set value 180.0f
+data modify entity @s transformation.scale[1] set value 1.025f
+data modify entity @s transformation.translation[1] set value 0.01f
+
 # Add tag for loop every tick
 tag @s add simplenergy.tick
 scoreboard players add #tick_entities simplenergy.data 1
