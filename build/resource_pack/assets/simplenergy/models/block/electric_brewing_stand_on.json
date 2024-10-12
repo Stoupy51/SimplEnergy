@@ -1,8 +1,8 @@
 {
 	"parent": "block/brewing_stand",
 	"textures": {
-		"base": "simplenergy:block/electric_brewing_stand_base",
-		"stand": "simplenergy:block/electric_brewing_stand"
+		"base": "simplenergy:block/electric_brewing_stand_base_on",
+		"stand": "simplenergy:block/electric_brewing_stand_on"
 	},
 	"display": {
 		"gui": {

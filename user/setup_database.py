@@ -4,6 +4,7 @@ from python_datapack.utils.database_helper import *
 
 # Imports
 from .database.additions import main as additions_main
+from .database.manual_assets import main as manual_assets_main
 
 # Constants
 simplunium_durability = 3 * VanillaEquipments.PICKAXE.value[DEFAULT_ORE.IRON]["durability"]
@@ -43,6 +44,9 @@ def main(config: dict) -> dict[str, dict]:
 	add_private_custom_data_for_namespace(config, database)
 	add_smithed_ignore_vanilla_behaviours_convention(database)
 	print()
+
+	# Copy manual assets that can't be generated
+	manual_assets_main(config)
 
 	# Return database
 	return database

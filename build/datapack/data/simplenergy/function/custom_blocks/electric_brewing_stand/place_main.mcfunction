@@ -15,3 +15,7 @@ scoreboard players add #total_custom_blocks simplenergy.data 1
 scoreboard players add #total_vanilla_brewing_stand simplenergy.data 1
 scoreboard players add #total_electric_brewing_stand simplenergy.data 1
 
+data modify entity @s Rotation[0] set value 180.0f
+data modify entity @s transformation.scale[1] set value 1.025f
+data modify entity @s transformation.translation[1] set value 0.01f
+
