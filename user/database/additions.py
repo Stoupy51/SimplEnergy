@@ -113,9 +113,6 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 	database_additions["electric_furnace"][VANILLA_BLOCK] = {"id": "minecraft:furnace", "apply_facing": True}
 	database_additions["electric_smelter"][VANILLA_BLOCK] = {"id": "minecraft:furnace", "apply_facing": True}
 	database_additions["electric_brewing_stand"][VANILLA_BLOCK] = {"id": "minecraft:brewing_stand", "apply_facing": False}
-	database_additions["electric_brewing_stand"][COMMANDS_ON_PLACEMENT] = "data modify entity @s Rotation[0] set value 180.0f"
-	database_additions["electric_brewing_stand"][COMMANDS_ON_PLACEMENT] += "\ndata modify entity @s transformation.scale[1] set value 1.025f"
-	database_additions["electric_brewing_stand"][COMMANDS_ON_PLACEMENT] += "\ndata modify entity @s transformation.translation[1] set value 0.01f"
 	database_additions["pulverizer"][VANILLA_BLOCK] = {"id": "minecraft:barrel", "apply_facing": True}
 	database_additions["simple_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(database_additions["simple_cable"]["profile"]) + "}"}
 	database_additions["advanced_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(database_additions["advanced_cable"]["profile"]) + "}"}

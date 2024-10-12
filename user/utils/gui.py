@@ -2,8 +2,8 @@
 # Imports
 from python_datapack.utils.print import *
 from python_datapack.utils.io import *
+from python_datapack.manual.main import deepcopy
 from user.setup_database import STARTING_CMD
-from copy import deepcopy
 GUI_VANILLA_ITEM = "cobblestone"
 
 # Util function to get next custom_model_data (decreasing)
