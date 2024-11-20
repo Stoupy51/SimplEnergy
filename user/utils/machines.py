@@ -20,6 +20,11 @@ execute if predicate {namespace}:check_daylight_power run scoreboard players add
 execute if score @s energy.storage > @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 """
 	write_to_file(f"{CUSTOM_BLOCKS}/solar_panel/second.mcfunction", content)
+	write_to_file(f"{CUSTOM_BLOCKS}/solar_panel/place_secondary.mcfunction", """
+# Fix scale
+data modify entity @s transformation.scale[1] set value 1.005f
+data modify entity @s transformation.translation[1] set value 0.002f
+""")
 
 
 	# Furnace Generator

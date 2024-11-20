@@ -26,8 +26,8 @@ function simplenergy:custom_blocks/pulverizer/gui_for_each_slot
 
 # Update block visual depends on cook time, and playsound every second
 execute if score #working simplenergy.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:pulverizer"
-execute if score #working simplenergy.data matches 1 run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:pulverizer_on"
-execute if score #working simplenergy.data matches 1 if score #second simplenergy.data matches 0 run playsound simplenergy:pulverizer block @a[distance=..12] ~ ~ ~ 0.25
+execute if score #working simplenergy.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:pulverizer_on"
+execute if score #working simplenergy.data matches 1.. if score #second simplenergy.data matches 0 run playsound simplenergy:pulverizer block @a[distance=..12] ~ ~ ~ 0.25
 
 # Save slots to entity
 data modify entity @s item.components."minecraft:custom_data".simplenergy.pulverizer_slots set from storage simplenergy:temp slots

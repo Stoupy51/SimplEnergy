@@ -26,6 +26,10 @@ scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
+# Fix scale
+data modify entity @s transformation.scale[1] set value 1.005f
+data modify entity @s transformation.translation[1] set value 0.002f
+
 # Add balancing tag
 tag @s add simplenergy.can_balance
 # Add tag for loop every second

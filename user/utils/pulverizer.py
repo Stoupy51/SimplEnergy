@@ -56,8 +56,8 @@ function {namespace}:custom_blocks/pulverizer/gui_for_each_slot
 
 # Update block visual depends on cook time, and playsound every second
 execute if score #working {namespace}.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
-execute if score #working {namespace}.data matches 1 run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
-execute if score #working {namespace}.data matches 1 if score #second {namespace}.data matches 0 run playsound {namespace}:pulverizer block @a[distance=..12] ~ ~ ~ 0.25
+execute if score #working {namespace}.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
+execute if score #working {namespace}.data matches 1.. if score #second {namespace}.data matches 0 run playsound {namespace}:pulverizer block @a[distance=..12] ~ ~ ~ 0.25
 
 # Save slots to entity
 data modify entity @s item.components."minecraft:custom_data".{namespace}.pulverizer_slots set from storage {namespace}:temp slots
