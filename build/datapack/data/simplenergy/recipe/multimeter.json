@@ -7,12 +7,8 @@
 		"CC"
 	],
 	"key": {
-		"I": {
-			"item": "minecraft:iron_ingot"
-		},
-		"C": {
-			"item": "minecraft:copper_ingot"
-		}
+		"I": "minecraft:iron_ingot",
+		"C": "minecraft:copper_ingot"
 	},
 	"result": {
 		"id": "minecraft:warped_fungus_on_a_stick",
@@ -25,10 +21,10 @@
 				"{\"translate\":\"simplenergy.allows_you_to_analyse_machines\",\"italic\":false,\"color\":\"gray\"}",
 				"{\"translate\":\"simplenergy.to_get_their_energy_information\",\"italic\":false,\"color\":\"gray\"}",
 				"{\"translate\":\"simplenergy.hold_in_offhand_for_passive_use\",\"italic\":false,\"color\":\"white\"}",
-				"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
+				"{\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}"
 			],
-			"minecraft:custom_model_data": 2012017,
-			"minecraft:item_name": "{'translate':'simplenergy.multimeter', 'italic': false, 'color': 'white'}",
+			"minecraft:item_model": "simplenergy:multimeter",
+			"minecraft:item_name": "{\"translate\":\"simplenergy.multimeter\", \"italic\": false, \"color\": \"white\"}",
 			"minecraft:custom_data": {
 				"simplenergy": {
 					"multimeter": true

@@ -1,8 +1,6 @@
 {
 	"type": "minecraft:smelting",
-	"ingredient": {
-		"item": "minecraft:iron_sword"
-	},
+	"ingredient": "minecraft:iron_sword",
 	"result": {
 		"id": "minecraft:command_block",
 		"count": 1,
@@ -23,10 +21,10 @@
 					"simplunium_nugget": true
 				}
 			},
-			"minecraft:custom_model_data": 2012005,
-			"minecraft:item_name": "{'translate':'simplenergy.simplunium_nugget', 'italic': false, 'color': 'white'}",
+			"minecraft:item_model": "simplenergy:simplunium_nugget",
+			"minecraft:item_name": "{\"translate\":\"simplenergy.simplunium_nugget\", \"italic\": false, \"color\": \"white\"}",
 			"minecraft:lore": [
-				"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
+				"{\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}"
 			]
 		}
 	},

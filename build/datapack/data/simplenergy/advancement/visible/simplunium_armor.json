@@ -3,11 +3,7 @@
 		"icon": {
 			"id": "minecraft:leather_chestplate",
 			"components": {
-				"minecraft:custom_model_data": 2012009,
-				"minecraft:dyed_color": {
-					"rgb": 4605510,
-					"show_in_tooltip": false
-				}
+				"minecraft:item_model": "simplenergy:simplunium_chestplate"
 			}
 		},
 		"title": {

@@ -7,21 +7,11 @@
 		"NIN"
 	],
 	"key": {
-		"Q": {
-			"item": "minecraft:quartz"
-		},
-		"B": {
-			"item": "minecraft:breeze_rod"
-		},
-		"N": {
-			"item": "minecraft:gold_nugget"
-		},
-		"G": {
-			"item": "minecraft:raw_gold_block"
-		},
-		"I": {
-			"item": "minecraft:iron_block"
-		}
+		"Q": "minecraft:quartz",
+		"B": "minecraft:breeze_rod",
+		"N": "minecraft:gold_nugget",
+		"G": "minecraft:raw_gold_block",
+		"I": "minecraft:iron_block"
 	},
 	"result": {
 		"id": "minecraft:command_block",
@@ -29,10 +19,10 @@
 		"components": {
 			"minecraft:lore": [
 				"{\"translate\":\"simplenergy.unlocks_a_blocked_slot_in_a_machine\",\"italic\":false,\"color\":\"gray\"}",
-				"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
+				"{\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}"
 			],
-			"minecraft:custom_model_data": 2012045,
-			"minecraft:item_name": "{'translate':'simplenergy.slot_unlocker', 'italic': false, 'color': 'white'}",
+			"minecraft:item_model": "simplenergy:slot_unlocker",
+			"minecraft:item_name": "{\"translate\":\"simplenergy.slot_unlocker\", \"italic\": false, \"color\": \"white\"}",
 			"minecraft:custom_data": {
 				"simplenergy": {
 					"slot_unlocker": true

@@ -1,0 +1,9 @@
+{
+	"parent": "block/orientable",
+	"textures": {
+		"front": "simplenergy:item/furnace_generator_front",
+		"side": "simplenergy:item/furnace_generator_side",
+		"top": "simplenergy:item/furnace_generator_top"
+	}
+}
+

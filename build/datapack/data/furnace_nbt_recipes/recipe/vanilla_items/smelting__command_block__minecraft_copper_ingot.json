@@ -1,8 +1,6 @@
 {
 	"type": "minecraft:smelting",
-	"ingredient": {
-		"item": "minecraft:command_block"
-	},
+	"ingredient": "minecraft:command_block",
 	"result": {
 		"id": "copper_ingot",
 		"count": 1

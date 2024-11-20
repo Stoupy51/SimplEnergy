@@ -11,13 +11,13 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"simplenergy": {"battery_switcher_both": true},
+									"simplenergy": {"battery_switcher": true,"battery_switcher_both": true},
 									"smithed": {"ignore": {"functionality": true,"crafting": true}}
 								},
-								"minecraft:custom_model_data": 2012047,
-								"minecraft:item_name": "{'translate':'simplenergy.battery_switcher_both', 'italic': false, 'color': 'white'}",
+								"minecraft:item_model": "simplenergy:battery_switcher_both",
+								"minecraft:item_name": "{\"translate\":\"simplenergy.battery_switcher_both\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
+									"{\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}"
 								]
 							}
 						}

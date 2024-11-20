@@ -1,9 +1,0 @@
-{
-	"parent": "block/orientable",
-	"textures": {
-		"front": "simplenergy:block/pulverizer_front_on",
-		"side": "simplenergy:block/pulverizer_side",
-		"top": "simplenergy:block/pulverizer_top"
-	}
-}
-

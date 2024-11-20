@@ -14,7 +14,7 @@
 									"smithed": {"dict": {"ore": {"titanium": true}}},
 									"mechanization": {"id": "titanium_ore"}
 								},
-								"minecraft:item_name": "{'translate':'simplenergy.titanium_ore', 'italic': false, 'color': 'white'}",
+								"minecraft:item_name": "{\"translate\":\"simplenergy.titanium_ore\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
 									"[{'translate':'simplenergy.mechanization', 'italic': true, 'color': 'blue'}]"
 								]

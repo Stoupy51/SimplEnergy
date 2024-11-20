@@ -14,7 +14,7 @@
 									"smithed": {"dict": {"ingot": {"tin": true}}},
 									"mechanization": {"id": "tin_ingot"}
 								},
-								"minecraft:item_name": "{'translate':'simplenergy.tin_ingot', 'italic': false, 'color': 'white'}",
+								"minecraft:item_name": "{\"translate\":\"simplenergy.tin_ingot\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
 									"[{'translate':'simplenergy.mechanization', 'italic': true, 'color': 'blue'}]"
 								]

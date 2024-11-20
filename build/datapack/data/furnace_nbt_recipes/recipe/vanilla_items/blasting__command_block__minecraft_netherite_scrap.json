@@ -1,8 +1,6 @@
 {
 	"type": "minecraft:blasting",
-	"ingredient": {
-		"item": "minecraft:command_block"
-	},
+	"ingredient": "minecraft:command_block",
 	"result": {
 		"id": "netherite_scrap",
 		"count": 1

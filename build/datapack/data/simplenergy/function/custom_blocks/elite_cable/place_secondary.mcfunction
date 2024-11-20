@@ -14,8 +14,7 @@ tag @s add simplenergy.elite_cable
 tag @s add simplenergy.vanilla.minecraft_player_head
 
 # Modify item display entity to match the custom block
-data modify entity @s transformation.scale set value [1.002f,1.008f,1.002f]
-data modify entity @s transformation.translation[1] set value 0.003f
+data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 data modify entity @s brightness set value {block:15,sky:15}
 
 tag @s add energy.cable

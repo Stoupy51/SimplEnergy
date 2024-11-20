@@ -3,7 +3,7 @@
 		"icon": {
 			"id": "minecraft:command_block",
 			"components": {
-				"minecraft:custom_model_data": 2012004
+				"minecraft:item_model": "simplenergy:simplunium_ingot"
 			}
 		},
 		"title": {

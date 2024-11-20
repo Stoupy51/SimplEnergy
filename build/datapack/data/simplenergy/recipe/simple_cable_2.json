@@ -8,15 +8,9 @@
 		"ICI"
 	],
 	"key": {
-		"I": {
-			"item": "minecraft:iron_ingot"
-		},
-		"C": {
-			"item": "minecraft:copper_ingot"
-		},
-		"O": {
-			"item": "minecraft:charcoal"
-		}
+		"I": "minecraft:iron_ingot",
+		"C": "minecraft:copper_ingot",
+		"O": "minecraft:charcoal"
 	},
 	"result": {
 		"id": "minecraft:player_head",
@@ -35,7 +29,7 @@
 			},
 			"minecraft:lore": [
 				"{\"translate\":\"simplenergy.transfer_speed_40_kw\",\"italic\":false,\"color\":\"gray\"}",
-				"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
+				"{\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}"
 			],
 			"minecraft:profile": {
 				"id": [
@@ -48,7 +42,7 @@
 					{"name": "textures","value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTE2MTcxZjY3ZGUxNzQxMzA4ZTUxYzNmNTBkODE1M2YzMmIzNDljNDYwODgxYzZjODM5ZTYwMTk1NDM1ODliMSJ9fX0="}
 				]
 			},
-			"minecraft:item_name": "{'translate':'simplenergy.simple_cable', 'italic': false, 'color': 'white'}"
+			"minecraft:item_name": "{\"translate\":\"simplenergy.simple_cable\", \"italic\": false, \"color\": \"white\"}"
 		}
 	}
 }

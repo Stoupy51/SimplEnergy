@@ -3,7 +3,7 @@
 		"icon": {
 			"id": "minecraft:iron_pickaxe",
 			"components": {
-				"minecraft:custom_model_data": 2012013
+				"minecraft:item_model": "simplenergy:simplunium_pickaxe"
 			}
 		},
 		"title": {

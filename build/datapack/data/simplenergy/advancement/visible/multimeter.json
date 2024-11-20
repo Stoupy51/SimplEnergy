@@ -3,7 +3,7 @@
 		"icon": {
 			"id": "minecraft:warped_fungus_on_a_stick",
 			"components": {
-				"minecraft:custom_model_data": 2012017
+				"minecraft:item_model": "simplenergy:multimeter"
 			}
 		},
 		"title": {

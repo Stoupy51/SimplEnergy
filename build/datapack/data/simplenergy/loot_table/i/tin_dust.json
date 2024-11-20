@@ -10,10 +10,10 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:custom_model_data": 2012041,
-								"minecraft:item_name": "{'translate':'simplenergy.tin_dust', 'italic': false, 'color': 'white'}",
+								"minecraft:item_model": "simplenergy:tin_dust",
+								"minecraft:item_name": "{\"translate\":\"simplenergy.tin_dust\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
+									"{\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}"
 								],
 								"minecraft:custom_data": {
 									"simplenergy": {"tin_dust": true},

@@ -3,7 +3,7 @@
 		"icon": {
 			"id": "minecraft:furnace",
 			"components": {
-				"minecraft:custom_model_data": 2012025
+				"minecraft:item_model": "simplenergy:solar_panel"
 			}
 		},
 		"title": {

@@ -14,10 +14,10 @@
 									"smithed": {"dict": {"nugget": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},
 									"simplenergy": {"simplunium_nugget": true}
 								},
-								"minecraft:custom_model_data": 2012005,
-								"minecraft:item_name": "{'translate':'simplenergy.simplunium_nugget', 'italic': false, 'color': 'white'}",
+								"minecraft:item_model": "simplenergy:simplunium_nugget",
+								"minecraft:item_name": "{\"translate\":\"simplenergy.simplunium_nugget\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
+									"{\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}"
 								]
 							}
 						}

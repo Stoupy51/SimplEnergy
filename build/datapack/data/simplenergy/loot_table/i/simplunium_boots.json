@@ -14,18 +14,18 @@
 									"smithed": {"dict": {"armor": {"simplunium": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},
 									"simplenergy": {"simplunium_boots": true}
 								},
-								"minecraft:dyed_color": {
-									"rgb": 4605510,
-									"show_in_tooltip": false
-								},
 								"minecraft:max_damage": 585,
+								"minecraft:equippable": {
+									"slot": "feet",
+									"model": "simplenergy:simplunium"
+								},
 								"minecraft:attribute_modifiers": [
-									{"type": "generic.armor","amount": 2.5,"operation": "add_value","slot": "feet","id": "simplenergy:generic.armor.feet"}
+									{"type": "armor","amount": 2.5,"operation": "add_value","slot": "feet","id": "simplenergy:armor.feet"}
 								],
-								"minecraft:custom_model_data": 2012011,
-								"minecraft:item_name": "{'translate':'simplenergy.simplunium_boots', 'italic': false, 'color': 'white'}",
+								"minecraft:item_model": "simplenergy:simplunium_boots",
+								"minecraft:item_name": "{\"translate\":\"simplenergy.simplunium_boots\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
+									"{\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}"
 								]
 							}
 						}

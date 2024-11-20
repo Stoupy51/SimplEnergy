@@ -7,12 +7,8 @@
 		"III"
 	],
 	"key": {
-		"I": {
-			"item": "minecraft:iron_ingot"
-		},
-		"R": {
-			"item": "minecraft:redstone"
-		}
+		"I": "minecraft:iron_ingot",
+		"R": "minecraft:redstone"
 	},
 	"result": {
 		"id": "minecraft:furnace",
@@ -33,10 +29,10 @@
 			"minecraft:lore": [
 				"{\"translate\":\"simplenergy.energy_generation_5_kw\",\"italic\":false,\"color\":\"gray\"}",
 				"{\"translate\":\"simplenergy.energy_buffer_500_kj\",\"italic\":false,\"color\":\"gray\"}",
-				"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
+				"{\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}"
 			],
-			"minecraft:custom_model_data": 2012032,
-			"minecraft:item_name": "{'translate':'simplenergy.cauldron_generator', 'italic': false, 'color': 'white'}",
+			"minecraft:item_model": "simplenergy:cauldron_generator",
+			"minecraft:item_name": "{\"translate\":\"simplenergy.cauldron_generator\", \"italic\": false, \"color\": \"white\"}",
 			"minecraft:container": [
 				{
 					"slot": 0,

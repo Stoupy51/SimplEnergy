@@ -16,14 +16,14 @@
 								},
 								"minecraft:max_damage": 750,
 								"minecraft:attribute_modifiers": [
-									{"type": "generic.attack_damage","amount": 2,"operation": "add_value","slot": "mainhand","id": "simplenergy:generic.attack_damage.mainhand"},
-									{"type": "generic.attack_speed","amount": -1.0,"operation": "add_value","slot": "mainhand","id": "simplenergy:generic.attack_speed.mainhand"},
-									{"type": "player.mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "simplenergy:player.mining_efficiency.mainhand"}
+									{"type": "attack_damage","amount": 1,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},
+									{"type": "attack_speed","amount": -1.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},
+									{"type": "mining_efficiency","amount": 0.2,"operation": "add_value","slot": "mainhand","id": "simplenergy:mining_efficiency.mainhand"}
 								],
-								"minecraft:custom_model_data": 2012016,
-								"minecraft:item_name": "{'translate':'simplenergy.simplunium_hoe', 'italic': false, 'color': 'white'}",
+								"minecraft:item_model": "simplenergy:simplunium_hoe",
+								"minecraft:item_name": "{\"translate\":\"simplenergy.simplunium_hoe\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{'translate':'simplenergy', 'italic': true, 'color': 'blue'}"
+									"{\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}"
 								]
 							}
 						}
