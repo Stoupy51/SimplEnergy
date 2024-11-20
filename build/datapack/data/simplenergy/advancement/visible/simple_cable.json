@@ -38,7 +38,7 @@
 			"conditions": {
 				"items": [
 					{
-						"components": {
+						"predicates": {
 							"minecraft:custom_data": "{\"simplenergy\": {\"simple_cable\": true}}"
 						}
 					}

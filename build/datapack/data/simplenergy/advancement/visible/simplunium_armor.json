@@ -25,7 +25,7 @@
 			"conditions": {
 				"items": [
 					{
-						"components": {
+						"predicates": {
 							"minecraft:custom_data": "{\"smithed\": {\"dict\": {\"armor\": {\"simplunium\": true}}}}"
 						}
 					}

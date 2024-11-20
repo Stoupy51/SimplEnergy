@@ -3,15 +3,15 @@
 		"icon": {
 			"id": "minecraft:furnace",
 			"components": {
-				"minecraft:item_model": "simplenergy:simple_battery"
+				"minecraft:item_model": "simplenergy:pulverizer"
 			}
 		},
 		"title": {
-			"translate":"simplenergy.a_simple_energy_storage",
+			"translate":"simplenergy.pulverizing",
 			"color": "gray"
 		},
 		"description": {
-			"translate":"simplenergy.craft_your_first_simple_battery",
+			"translate":"simplenergy.craft_your_first_pulverizer",
 			"color": "green"
 		},
 		"frame": "task",
@@ -26,7 +26,7 @@
 				"items": [
 					{
 						"predicates": {
-							"minecraft:custom_data": "{\"simplenergy\": {\"simple_battery\": true}}"
+							"minecraft:custom_data": "{\"simplenergy\": {\"pulverizer\": true}}"
 						}
 					}
 				]
@@ -38,6 +38,6 @@
 			"requirement"
 		]
 	],
-	"parent": "simplenergy:visible/simplunium_ingot"
+	"parent": "simplenergy:visible/electric_brewing_stand"
 }
 
