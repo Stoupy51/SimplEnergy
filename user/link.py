@@ -24,7 +24,7 @@ def main(config: dict) -> None:
 	add_visible_advancements(config)
 
 	# Setup GUI in resource packs
-	gui = setup_gui_in_resource_packs(config)
+	gui: dict[str, str] = setup_gui_in_resource_packs(config)
 
 	# Setup machines
 	setup_machines(config, gui)

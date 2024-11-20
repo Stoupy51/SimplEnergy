@@ -27,17 +27,17 @@ def pulverizer(config: dict, gui: dict[str, int]) -> None:
 	previous_max = 0
 	for i, gui_name in enumerate(all_gui):
 		if i == 0:
-			machine_gui.append(f'execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[custom_model_data={gui[gui_name]},{GUI_DATA}]')
+			machine_gui.append(f'execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[item_model="{gui[gui_name]}",{GUI_DATA}]')
 		elif i == (nb_gui - 1):
-			machine_gui.append(f'execute if score @s energy.storage matches {previous_max + 1}.. run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[custom_model_data={gui[gui_name]},{GUI_DATA}]')
+			machine_gui.append(f'execute if score @s energy.storage matches {previous_max + 1}.. run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[item_model="{gui[gui_name]}",{GUI_DATA}]')
 		else:
 			gui_min = previous_max + 1
 			previous_max = (i * energy["max_storage"] // nb_gui_2) - 1
-			machine_gui.append(f'execute if score @s energy.storage matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[custom_model_data={gui[gui_name]},{GUI_DATA}]')
+			machine_gui.append(f'execute if score @s energy.storage matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[item_model="{gui[gui_name]}",{GUI_DATA}]')
 	machine_gui = "\n".join(machine_gui)
 
-	default_cmd = database["pulverizer"]["custom_model_data"]
-	working_cmd = default_cmd + 1
+	default_model = database["pulverizer"]["item_model"]
+	working_model = default_model + "_on"
 	content = f"""
 # Copy slots to storage
 data modify storage {namespace}:temp slots set value [{{}},{','.join(['{"blocked":true}'] * (PULVERIZER_SLOTS - 1))}]
@@ -55,8 +55,8 @@ execute if score @s energy.storage matches {energy["usage"]}.. run function {nam
 function {namespace}:custom_blocks/pulverizer/gui_for_each_slot
 
 # Update block visual depends on cook time, and playsound every second
-execute if score #working {namespace}.data matches 0 run data modify entity @s item.components."minecraft:custom_model_data" set value {default_cmd}
-execute if score #working {namespace}.data matches 1 run data modify entity @s item.components."minecraft:custom_model_data" set value {working_cmd}
+execute if score #working {namespace}.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
+execute if score #working {namespace}.data matches 1 run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
 execute if score #working {namespace}.data matches 1 if score #second {namespace}.data matches 0 run playsound {namespace}:pulverizer block @a[distance=..12] ~ ~ ~ 0.25
 
 # Save slots to entity
@@ -73,7 +73,7 @@ data modify entity @s item.components."minecraft:custom_data".{namespace}.pulver
 """)
 
 	# Set the item gui (blocked if not unlocked, progression otherwise)
-	blocked_cmd: int = gui["gui/progress_blocked.png"]
+	blocked_model: str = gui["gui/progress_blocked.png"]
 	progressions_cmd: list[str] = [x for x in gui if "progress_unblocked_" in x]
 	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/gui_passive_slot.mcfunction", f"""
 # Get slot and progression, and the item
@@ -86,7 +86,7 @@ $data modify storage {namespace}:temp intruder set from storage {namespace}:temp
 $execute unless data storage {namespace}:temp intruder.components."minecraft:custom_data".common_signals.temp run function {namespace}:custom_blocks/pulverizer/handle_item_on_gui {{"index":$(index),"slot":$(slot)}}
 
 # Set item gui (blocked if not unlocked, progression otherwise)
-$execute if data storage {namespace}:temp slot.blocked run item replace block ~ ~ ~ container.$(slot) with {GUI_VANILLA_ITEM}[custom_model_data={blocked_cmd},{GUI_DATA_TOOLTIP},item_name='{{"text":"Blocked","italic":false}}',lore=['{{"text":"Place a Slot Unlocker to unlock","color":"gray","italic":false}}']]
+$execute if data storage {namespace}:temp slot.blocked run item replace block ~ ~ ~ container.$(slot) with {GUI_VANILLA_ITEM}[item_model="{blocked_model}",{GUI_DATA_TOOLTIP},item_name='{{"text":"Blocked","italic":false}}',lore=['{{"text":"Place a Slot Unlocker to unlock","color":"gray","italic":false}}']]
 $execute unless data storage {namespace}:temp slot.blocked run function {namespace}:custom_blocks/pulverizer/gui_progression {{"index":$(index),"slot":$(slot)}}
 """)
 	
@@ -97,13 +97,13 @@ $execute unless data storage {namespace}:temp slot.blocked run function {namespa
 	previous_max: int = 0
 	for i, progression in enumerate(progressions_cmd):
 		if i == 0:
-			progressions_gui.append(f'$execute if score #progression {namespace}.data matches ..0 run item replace block ~ ~ ~ container.$(slot) with {GUI_VANILLA_ITEM}[custom_model_data={gui[progression]},{GUI_DATA}]')
+			progressions_gui.append(f'$execute if score #progression {namespace}.data matches ..0 run item replace block ~ ~ ~ container.$(slot) with {GUI_VANILLA_ITEM}[item_model="{gui[progression]}",{GUI_DATA}]')
 		elif i == (nb_gui - 1):
-			progressions_gui.append(f'$execute if score #progression {namespace}.data matches {previous_max + 1}.. run item replace block ~ ~ ~ container.$(slot) with {GUI_VANILLA_ITEM}[custom_model_data={gui[progression]},{GUI_DATA}]')
+			progressions_gui.append(f'$execute if score #progression {namespace}.data matches {previous_max + 1}.. run item replace block ~ ~ ~ container.$(slot) with {GUI_VANILLA_ITEM}[item_model="{gui[progression]}",{GUI_DATA}]')
 		else:
 			gui_min = previous_max + 1
 			previous_max = (i * PULVERIZER_TIME // nb_gui_2) - 1
-			progressions_gui.append(f'$execute if score #progression {namespace}.data matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.$(slot) with {GUI_VANILLA_ITEM}[custom_model_data={gui[progression]},{GUI_DATA}]')
+			progressions_gui.append(f'$execute if score #progression {namespace}.data matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.$(slot) with {GUI_VANILLA_ITEM}[item_model="{gui[progression]}",{GUI_DATA}]')
 	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/gui_progression.mcfunction", "\n".join(progressions_gui))
 
 

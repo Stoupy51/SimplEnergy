@@ -8,9 +8,8 @@ from .database.manual_assets import main as manual_assets_main
 
 # Constants
 simplunium_durability = 3 * VanillaEquipments.PICKAXE.value[DEFAULT_ORE.IRON]["durability"]
-STARTING_CMD: int = 2012000	# Prefix for custom_model_data
 ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
-	"simplunium_ingot":	EquipmentsConfig(DEFAULT_ORE.IRON, simplunium_durability, {"generic.attack_damage": 1, "generic.armor": 0.5, "player.mining_efficiency": 0.2}),
+	"simplunium_ingot":	EquipmentsConfig(DEFAULT_ORE.IRON, simplunium_durability, {"attack_damage": 1, "armor": 0.5, "mining_efficiency": 0.2}),
 }
 DUSTS_CONFIGS: dict[str, tuple[list[str|dict], dict]] = {
 	"copper":	(["raw_copper","copper_ore","deepslate_copper_ore"],												ingr_repr("minecraft:copper_ingot")),
@@ -39,7 +38,7 @@ def main(config: dict) -> dict[str, dict]:
 	database = additions_main(database)
 
 	# Final adjustments
-	deterministic_custom_model_data(config, database, STARTING_CMD, black_list = ["simple_cable", "advanced_cable", "elite_cable"])
+	add_item_model_component(config, database, black_list = ["simple_cable", "advanced_cable", "elite_cable"])
 	add_item_name_and_lore_if_missing(config, database)
 	add_private_custom_data_for_namespace(config, database)
 	add_smithed_ignore_vanilla_behaviours_convention(database)
