@@ -322,15 +322,15 @@ execute if score #success {namespace}.data matches 1 run schedule function {name
 """)
 	
 	# Write item modifiers
-	default_cmd: int = database["battery_switcher"]["custom_model_data"]
-	both_cmd: int = database["battery_switcher_both"]["custom_model_data"]
-	input_cmd: int = database["battery_switcher_input"]["custom_model_data"]
-	output_cmd: int = database["battery_switcher_output"]["custom_model_data"]
+	default_model: str = database["battery_switcher"]["item_model"]
+	both_model: str = database["battery_switcher_both"]["item_model"]
+	input_model: str = database["battery_switcher_input"]["item_model"]
+	output_model: str = database["battery_switcher_output"]["item_model"]
 	item_modifier_path: str = f"{build_datapack}/data/{namespace}/item_modifier/battery_switcher"
-	write_to_file(f"{item_modifier_path}/default.json", super_json_dump({"function": "minecraft:set_custom_model_data","value": default_cmd}))
-	write_to_file(f"{item_modifier_path}/both.json", super_json_dump({"function": "minecraft:set_custom_model_data","value": both_cmd}))
-	write_to_file(f"{item_modifier_path}/input.json", super_json_dump({"function": "minecraft:set_custom_model_data","value": input_cmd}))
-	write_to_file(f"{item_modifier_path}/output.json", super_json_dump({"function": "minecraft:set_custom_model_data","value": output_cmd}))
+	write_to_file(f"{item_modifier_path}/default.json", super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":default_model}}))
+	write_to_file(f"{item_modifier_path}/both.json", super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":both_model}}))
+	write_to_file(f"{item_modifier_path}/input.json", super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":input_model}}))
+	write_to_file(f"{item_modifier_path}/output.json", super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":output_model}}))
 
 
 	# Setup first_join advancement

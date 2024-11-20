@@ -7,7 +7,6 @@ ROOT: str = os.path.dirname(os.path.realpath(__file__)).replace("\\", "/")
 MERGE_FOLDER: str = f"{ROOT}/merge"					# If a file exists in both merge and build folder, they will be merged. Otherwise, it's just copied.
 BUILD_FOLDER: str = f"{ROOT}/build"					# Folder where the final datapack and resource pack are built
 ASSETS_FOLDER: str = f"{ROOT}/assets"				# Folder containing the all assets (textures, sounds, ...) for the datapack
-TEXTURES_FOLDER: str = f"{ASSETS_FOLDER}/textures"	# Folder containing the textures for the datapack
 LIBS_FOLDER: str = f"{ROOT}/libs"					# The libraries are copied to the build destination, and merged with the datapack using Weld
 BUILD_COPY_DESTINATIONS: tuple[str, str] = ("D:/latest_snapshot/world/datapacks", "D:/minecraft/snapshot/resourcepacks")	# Can be empty strings if you don't want to copy the generated files
 
@@ -21,14 +20,10 @@ MERGE_LIBS: bool = True								# Make new zip of merged libraries with the datap
 
 # Datapack related constants
 AUTHOR: str = "Stoupy51"				# Author(s) name(s) displayed in pack.mcmeta, also used to add convention.debug tag to the players of the same name(s) <-- showing additionnal displays like datapack loading
-DATAPACK_NAME: str = "SimplEnergy"		# Name of the datapack, used for messages and items lore
-MINECRAFT_VERSION: str = "1.21"			# Text used when loading the datapack to warn the user when the data version is not right
-DATA_VERSION: int = 3947				# Depending on MC version, given by /data get entity @p DataVersion to check if the datapack is not running in an older version of MC
+PROJECT_NAME: str = "SimplEnergy"		# Name of the datapack, used for messages and items lore
 VERSION: str = "2.0.0"					# Datapack version in the following mandatory format: major.minor.patch, ex: 1.0.0 or 1.21.615
 NAMESPACE: str = "simplenergy"			# Should be the same you use in the merge folder. Used to namespace functions, tags, etc.
-DATAPACK_FORMAT: int = 48				# Pack format version, see https://minecraft.wiki/w/Pack_format#List_of_data_pack_formats
-RESOURCE_PACK_FORMAT: int = 34			# Resource pack format version, see https://minecraft.wiki/w/Pack_format#List_of_resource_pack_formats
-DESCRIPTION = f"{DATAPACK_NAME} [{VERSION}] by {AUTHOR}"	# Pack description displayed in pack.mcmeta
+DESCRIPTION: str = f"{PROJECT_NAME} [{VERSION}] by {AUTHOR}"	# Pack description displayed in pack.mcmeta
 DEPENDENCIES: dict[str, dict[str, list[int] | str]] = {
 	# Automagically, the datapack will check for the presence of dependencies and their minimum required versions at runtime
 	# The url is used when the dependency is not found to suggest where to get it
@@ -39,7 +34,7 @@ DEPENDENCIES: dict[str, dict[str, list[int] | str]] = {
 }
 
 # Technical constants
-SOURCE_LORE: list[dict] = [{"text":DATAPACK_NAME,"italic":True,"color":"blue"}]	# Appended lore to any custom item, can be an empty string
+SOURCE_LORE: list[dict] = [{"text":PROJECT_NAME,"italic":True,"color":"blue"}]	# Appended lore to any custom item, can be an empty string
 
 # Manual configuration
 DEBUG_MODE: bool = False							# Shows up grids in manual
@@ -49,7 +44,7 @@ MANUAL_HIGH_RESOLUTION: bool = True					# Enable the high resolution for the man
 CACHE_MANUAL_ASSETS: bool = True					# Caches the MC assets and the items renders for the manual (manual/items/*.png)
 CACHE_MANUAL_PAGES: bool = True						# Caches the content of the manual and the images (manual/pages/*.png)
 MANUAL_DEBUG: str = f"{ROOT}/debug_manual.json"		# Dump of the manual for debugging purposes
-MANUAL_NAME: str = f"{DATAPACK_NAME} Manual"		# Name of the manual, used for the title of the book and first page
+MANUAL_NAME: str = f"{PROJECT_NAME} Manual"			# Name of the manual, used for the title of the book and first page
 MAX_ITEMS_PER_ROW: int = 5							# Max number of items per row in the manual, should not exceed 6
 MAX_ROWS_PER_PAGE: int = 5							# Max number of rows per page in the manual, should not exceed 6
 OPENGL_RESOLUTION: int = 256						# Resolution of the OpenGL renders used in the manual, best value is 256 <--- 256x256
@@ -64,7 +59,6 @@ configuration = {
 	"manual_path": MANUAL_PATH,
 	"build_folder": BUILD_FOLDER,
 	"assets_folder": ASSETS_FOLDER,
-	"textures_folder": TEXTURES_FOLDER,
 	"libs_folder": LIBS_FOLDER,
 	"build_copy_destinations": BUILD_COPY_DESTINATIONS,
 	"has_manual": HAS_MANUAL,
@@ -77,13 +71,9 @@ configuration = {
 	"enable_translations": ENABLE_TRANSLATIONS,
 	"merge_libs": MERGE_LIBS,
 	"author": AUTHOR,
-	"datapack_name": DATAPACK_NAME,
-	"minecraft_version": MINECRAFT_VERSION,
-	"data_version": DATA_VERSION,
+	"project_name": PROJECT_NAME,
 	"version": VERSION,
 	"namespace": NAMESPACE,
-	"datapack_format": DATAPACK_FORMAT,
-	"resource_pack_format": RESOURCE_PACK_FORMAT,
 	"manual_name": MANUAL_NAME,
 	"description": DESCRIPTION,
 	"dependencies": DEPENDENCIES,

@@ -6,12 +6,12 @@ from python_datapack.utils.io import *
 # Add visible advancements to the datapack
 def add_visible_advancements(config: dict) -> None:
 	database: dict = config['database']
-	textures_folder: str = config['textures_folder']
+	assets_folder: str = config['assets_folder']
 	build_resource_pack: str = config['build_resource_pack']
 	namespace: str = config['namespace']
 
 	# Copy advancement texture
-	source: str = f"{textures_folder}/advancement_background.png"
+	source: str = f"{assets_folder}/textures/advancement_background.png"
 	destination: str = f"{build_resource_pack}/assets/{namespace}/textures/block/gui/advancement_background.png"
 	super_copy(source, destination)
 
@@ -37,8 +37,7 @@ def add_visible_advancements(config: dict) -> None:
 
 		"simplunium_armor": {
 			'display': { "icon": {"id": database["simplunium_chestplate"]["id"],"components": {
-					"minecraft:custom_model_data": database["simplunium_chestplate"]["custom_model_data"],
-					"minecraft:dyed_color": database["simplunium_chestplate"]["dyed_color"],
+					"minecraft:item_model": database["simplunium_chestplate"]["item_model"],
 				}},
 				'title': {'text': 'Cover Me with Simplunium', 'color': 'gray'}, 'description': {'text': 'Better than diamond armor', 'color': 'green'}, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': True
 			},
@@ -59,7 +58,7 @@ def add_visible_advancements(config: dict) -> None:
 		# Set icon
 		if not adv.get("display", {}).get("icon"):
 			icon = {"id": data["id"]}
-			components_to_copy = ["custom_model_data", "dyed_color", "profile"]
+			components_to_copy = ["item_model", "dyed_color", "profile"]
 			for component in components_to_copy:
 				if data.get(component):
 					if not icon.get("components"):
