@@ -22,6 +22,7 @@ def add_visible_advancements(config: dict) -> None:
 		"advanced_battery": {'display': {'title': {'text': 'More Energy Storage!', 'color': 'gray'}, 'description': {'text': 'Upgrade a Simple Battery', 'color': 'green'}, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': False}, 'parent': 'simplenergy:visible/simple_battery'},
 		"advanced_cable": {'display': {'title': {'text': 'Better Cable, Faster Transfer', 'color': 'gray'}, 'description': {'text': 'Upgrade a Simple Cable', 'color': 'green'}, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': False}, 'parent': 'simplenergy:visible/simple_cable'},
 		"cauldron_generator": {'display': {'title': {'text': 'The Simplest Generator', 'color': 'gray'}, 'description': {'text': 'Craft your first Cauldron Generator', 'color': 'green'}, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': False}, 'parent': 'simplenergy:visible/simplunium_ingot'},
+		"pulverizer": {'display': {'title': {'text': 'Pulverizing', 'color': 'gray'}, 'description': {'text': 'Craft your first Pulverizer', 'color': 'green'}, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': False}, 'parent': 'simplenergy:visible/electric_brewing_stand'},
 		"electric_brewing_stand": {'display': {'title': {'text': 'Faster Brewing', 'color': 'gray'}, 'description': {'text': 'Obtain an Electric Brewing Stand', 'color': 'green'}, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': False}, 'parent': 'simplenergy:visible/electric_smelter'},
 		"electric_furnace": {'display': {'title': {'text': 'A Better Furnace', 'color': 'gray'}, 'description': {'text': 'Craft your first Electric Furnace', 'color': 'green'}, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': False}, 'parent': 'simplenergy:visible/simplunium_ingot'},
 		"electric_smelter": {'display': {'title': {'text': 'A Very Fast Smelter', 'color': 'gray'}, 'description': {'text': 'Upgrade an Electric Furnace', 'color': 'green'}, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': False}, 'parent': 'simplenergy:visible/electric_furnace'},
@@ -39,10 +40,12 @@ def add_visible_advancements(config: dict) -> None:
 			'display': { "icon": {"id": database["simplunium_chestplate"]["id"],"components": {
 					"minecraft:item_model": database["simplunium_chestplate"]["item_model"],
 				}},
-				'title': {'text': 'Cover Me with Simplunium', 'color': 'gray'}, 'description': {'text': 'Better than diamond armor', 'color': 'green'}, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': True
+				'title': {'text': 'Cover Me with Simplunium', 'color': 'gray'},
+				'description': {'text': 'Better than diamond armor', 'color': 'green'},
+				'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': True
 			},
 			"criteria": {"requirement": {"trigger": "minecraft:inventory_changed","conditions": {
-				"items": [{"components": {"minecraft:custom_data": json.dumps({"smithed": {"dict": {"armor": {"simplunium": True}}}})}
+				"items": [{"predicates": {"minecraft:custom_data": json.dumps({"smithed": {"dict": {"armor": {"simplunium": True}}}})}
 			}]}}},
 			'parent': 'simplenergy:visible/simplunium_pickaxe'
 		},
@@ -68,8 +71,8 @@ def add_visible_advancements(config: dict) -> None:
 		
 		# Set the criteria
 		if not adv.get("criteria"):
-			criteria = {"requirement": {"trigger": "minecraft:inventory_changed","conditions": {"items": [{"components": {}}]}}}
-			criteria["requirement"]["conditions"]["items"][0]["components"]["minecraft:custom_data"] = json.dumps({namespace:{item:True}})
+			criteria = {"requirement": {"trigger": "minecraft:inventory_changed","conditions": {"items": [{"predicates": {}}]}}}
+			criteria["requirement"]["conditions"]["items"][0]["predicates"]["minecraft:custom_data"] = json.dumps({namespace:{item:True}})
 			advancement["criteria"] = criteria
 
 		# Set the advancement
