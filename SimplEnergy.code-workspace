@@ -4,7 +4,10 @@
 			"path": "."
 		},
 		{
-			"path": "../Python Datapack"
+			"path": "../python_datapack"
+		},
+		{
+			"path": "../PythonDatapackTemplate"
 		}
 	],
 	"settings": {}
