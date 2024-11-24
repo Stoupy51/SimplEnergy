@@ -1,22 +1,23 @@
 
 # ⚡ SimplEnergy
 
-[![GitHub](https://img.shields.io/github/v/release/Stoupy51/SimplEnergy?logo=github)](https://github.com/Stoupy51/SimplEnergy/releases/latest)
+[![GitHub](https://img.shields.io/github/v/release/Stoupy51/SimplEnergy?logo=github&label=GitHub)](https://github.com/Stoupy51/SimplEnergy/releases/latest)
 [![Smithed](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.smithed.dev%2Fv2%2Fpacks%2Fsimplenergy%2Fmeta&query=%24.stats.downloads.total&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDQgNCIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cGF0aCBkPSJNLjczNy44NTlsLjg4Ny0uMjg1Yy4wOTktLjAzMi4yMDUtLjAzMi4zMDQgMGwxLjMzNS40MjktMS4wNC4zMzR6bS0uMTk1LjE4OXYuNDg3YzAgLjEwNS4wNjguMTk5LjE2OC4yMzFsMS41MTQuNDg3TDMuMjkgMS45MWMuMS0uMDMyLjE2OC0uMTI2LjE2OC0uMjMxdi0uNDg3bC0xLjIzNC4zOTF6bS44NTkgMS4xOWwuODIzLjI2LjQxMi0uMTI3di4zNzlsLS40MTIuMTMyLS44MjMtLjI2NHptLS40NDguNTA1di4yOTlsMS4yNzIuNDA4LjgyMy0uMjY0di0uM2wtLjgyMy4yNTl6IiBwYWludC1vcmRlcj0ic3Ryb2tlIGZpbGwgbWFya2VycyIgZmlsbD0iIzFiNDhjNCIvPjwvc3ZnPg%3D%3D&logoColor=224bbb&label=Smithed&labelColor=black&color=224bbb)](https://smithed.net/packs/simplenergy)
 [![Modrinth](https://img.shields.io/modrinth/dt/simplenergy?logo=modrinth&label=Modrinth)](https://modrinth.com/datapack/simplenergy)
 [![Discord](https://img.shields.io/discord/1216400498488377467?label=Discord&logo=discord)](https://discord.gg/anxzu6rA9F)
 
 ![SimplEnergy Image](https://cdn.modrinth.com/data/IgpLbmaf/images/cc4f69ede52c7285652fc7fe109a83b822b4434a.jpeg)
-🎥 Datapack showcase : https://www.youtube.com/watch?v=3rKrggNTog4
+🎥 Datapack showcase: https://www.youtube.com/watch?v=3rKrggNTog4
 
 # 📖 What is SimplEnergy
-### 👑 Admin tips:
-- 🎮 /function simplenergy:_give_all               `Give you all items of the datapack`
-- 📊 /function simplenergy:_stats_custom_blocks    `Shows you some statistics`
 
 SimplEnergy is a simple Technology data pack created to add simple energy mechanics in your survival world.<br>
 Also, it has been made to help the development of energy data packs by using an energy library as simple as possible.<br>
 🔗 [Direct link for server resource packs](https://raw.githubusercontent.com/Stoupy51/SimplEnergy/refs/heads/main/build/SimplEnergy_resource_pack_with_libs.zip) (See sha1 in [here](https://github.com/Stoupy51/SimplEnergy/blob/main/build/sha1_hashes.json))
+
+### 👑 Admin tips:
+- 🎮 /function simplenergy:_give_all               `Give you all items of the datapack`
+- 📊 /function simplenergy:_stats_custom_blocks    `Shows you some statistics`
 
 
 ### ✨ Small list of features added by SimplEnergy:
@@ -30,6 +31,7 @@ Also, it has been made to help the development of energy data packs by using an 
 - ⚙️ A few basic energy consumers (furnaces, pulverizer, ...)
 - 🛡️ New armor & tools
 
+<br>
 
 ### 💬 Join our Community
 Join our active [Discord community](https://discord.gg/anxzu6rA9F) to:
@@ -53,9 +55,7 @@ Join our active [Discord community](https://discord.gg/anxzu6rA9F) to:
 
 ## 🔧 Misc
 
-### 🔌 Compatibilities
-
-|   	| Compatibilities 	|
+| 🔌 	| Compatibilities 	|
 |---	|-----------------	|
 | ✅ 	| Multiplayer     	|
 | ✅ 	| Vanilla         	|
