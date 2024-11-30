@@ -1,6 +1,7 @@
 
 # ⚡ SimplEnergy
 
+[![YouTube](https://img.shields.io/youtube/views/3rKrggNTog4?style=flat&logo=youtube&logoColor=red&label=YouTube)](https://www.youtube.com/watch?v=3rKrggNTog4)
 [![GitHub](https://img.shields.io/github/v/release/Stoupy51/SimplEnergy?logo=github&label=GitHub)](https://github.com/Stoupy51/SimplEnergy/releases/latest)
 [![Smithed](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.smithed.dev%2Fv2%2Fpacks%2Fsimplenergy%2Fmeta&query=%24.stats.downloads.total&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDQgNCIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cGF0aCBkPSJNLjczNy44NTlsLjg4Ny0uMjg1Yy4wOTktLjAzMi4yMDUtLjAzMi4zMDQgMGwxLjMzNS40MjktMS4wNC4zMzR6bS0uMTk1LjE4OXYuNDg3YzAgLjEwNS4wNjguMTk5LjE2OC4yMzFsMS41MTQuNDg3TDMuMjkgMS45MWMuMS0uMDMyLjE2OC0uMTI2LjE2OC0uMjMxdi0uNDg3bC0xLjIzNC4zOTF6bS44NTkgMS4xOWwuODIzLjI2LjQxMi0uMTI3di4zNzlsLS40MTIuMTMyLS44MjMtLjI2NHptLS40NDguNTA1di4yOTlsMS4yNzIuNDA4LjgyMy0uMjY0di0uM2wtLjgyMy4yNTl6IiBwYWludC1vcmRlcj0ic3Ryb2tlIGZpbGwgbWFya2VycyIgZmlsbD0iIzFiNDhjNCIvPjwvc3ZnPg%3D%3D&logoColor=224bbb&label=Smithed&labelColor=black&color=224bbb)](https://smithed.net/packs/simplenergy)
 [![Modrinth](https://img.shields.io/modrinth/dt/simplenergy?logo=modrinth&label=Modrinth)](https://modrinth.com/datapack/simplenergy)
@@ -9,7 +10,6 @@
 [![Python Datapack](https://img.shields.io/github/v/release/Stoupy51/python_datapack?logo=github&label=Python%20Datapack)](https://github.com/Stoupy51/PythonDatapackTemplate)
 
 ![SimplEnergy Image](https://cdn.modrinth.com/data/IgpLbmaf/images/cc4f69ede52c7285652fc7fe109a83b822b4434a.jpeg)
-🎥 Datapack showcase: https://www.youtube.com/watch?v=3rKrggNTog4
 
 # 📖 What is SimplEnergy
 
