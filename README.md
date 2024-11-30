@@ -18,8 +18,8 @@ Also, it has been made to help the development of energy data packs by using an 
 🔗 [Direct link for server resource packs](https://raw.githubusercontent.com/Stoupy51/SimplEnergy/refs/heads/main/build/SimplEnergy_resource_pack_with_libs.zip) (See sha1 in [here](https://github.com/Stoupy51/SimplEnergy/blob/main/build/sha1_hashes.json))
 
 ### 👑 Admin tips:
-- 🎮 /function simplenergy:_give_all               `Give you all items of the datapack`
-- 📊 /function simplenergy:_stats_custom_blocks    `Shows you some statistics`
+- 🎮 `/function simplenergy:_give_all` Give you all items of the datapack
+- 📊 `/function simplenergy:_stats_custom_blocks` Shows you some statistics
 
 
 ### ✨ Small list of features added by SimplEnergy:
