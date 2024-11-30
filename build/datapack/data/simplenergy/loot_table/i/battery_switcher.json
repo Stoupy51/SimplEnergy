@@ -18,7 +18,7 @@
 									"{\"translate\":\"simplenergy.input__output__both\",\"italic\":false,\"color\":\"gray\"}",
 									"{\"translate\":\"simplenergy.hold_in_offhand_for_passive_use\",\"italic\":false,\"color\":\"white\"}",
 									"{\"translate\":\"simplenergy.right_click_on_a_battery_to_switch\",\"italic\":false,\"color\":\"white\"}",
-									"{\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}"
+									"[\"\", {\"text\":\"I\", \"color\": \"white\", \"italic\": false, \"font\": \"simplenergy:icons\"}, {\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}]"
 								],
 								"minecraft:item_model": "simplenergy:battery_switcher",
 								"minecraft:item_name": "{\"translate\":\"simplenergy.battery_switcher\", \"italic\": false, \"color\": \"white\"}",

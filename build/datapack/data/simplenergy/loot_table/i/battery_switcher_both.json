@@ -17,7 +17,7 @@
 								"minecraft:item_model": "simplenergy:battery_switcher_both",
 								"minecraft:item_name": "{\"translate\":\"simplenergy.battery_switcher_both\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"{\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}"
+									"[\"\", {\"text\":\"I\", \"color\": \"white\", \"italic\": false, \"font\": \"simplenergy:icons\"}, {\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}]"
 								]
 							}
 						}

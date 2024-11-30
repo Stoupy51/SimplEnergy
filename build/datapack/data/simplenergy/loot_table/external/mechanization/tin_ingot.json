@@ -16,7 +16,7 @@
 								},
 								"minecraft:item_name": "{\"translate\":\"simplenergy.tin_ingot\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"[{'translate':'simplenergy.mechanization', 'italic': true, 'color': 'blue'}]"
+									"['', {'text':'I', 'color': 'white', 'italic': false, 'font': 'simplenergy:icons'}, {'translate':'simplenergy.mechanization', 'italic': true, 'color': 'blue'}]"
 								]
 							}
 						}

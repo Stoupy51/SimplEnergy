@@ -17,7 +17,7 @@
 								},
 								"minecraft:lore": [
 									"{\"translate\":\"simplenergy.transfer_speed_40_kw\",\"italic\":false,\"color\":\"gray\"}",
-									"{\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}"
+									"[\"\", {\"text\":\"I\", \"color\": \"white\", \"italic\": false, \"font\": \"simplenergy:icons\"}, {\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}]"
 								],
 								"minecraft:profile": {
 									"id": [-709098200,1001541428,-2043264882,-430220135],

@@ -17,7 +17,7 @@
 								},
 								"minecraft:lore": [
 									"{\"translate\":\"simplenergy.energy_storage_50_mj\",\"italic\":false,\"color\":\"gray\"}",
-									"{\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}"
+									"[\"\", {\"text\":\"I\", \"color\": \"white\", \"italic\": false, \"font\": \"simplenergy:icons\"}, {\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}]"
 								],
 								"minecraft:item_model": "simplenergy:elite_battery",
 								"minecraft:item_name": "{\"translate\":\"simplenergy.elite_battery\", \"italic\": false, \"color\": \"white\"}",

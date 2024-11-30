@@ -29,7 +29,7 @@
 			},
 			"minecraft:lore": [
 				"{\"translate\":\"simplenergy.energy_storage_10_mj\",\"italic\":false,\"color\":\"gray\"}",
-				"{\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}"
+				"[\"\", {\"text\":\"I\", \"color\": \"white\", \"italic\": false, \"font\": \"simplenergy:icons\"}, {\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}]"
 			],
 			"minecraft:item_model": "simplenergy:simple_battery",
 			"minecraft:item_name": "{\"translate\":\"simplenergy.simple_battery\", \"italic\": false, \"color\": \"white\"}",

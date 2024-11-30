@@ -17,7 +17,7 @@
 									"{\"translate\":\"simplenergy.allows_you_to_analyse_machines\",\"italic\":false,\"color\":\"gray\"}",
 									"{\"translate\":\"simplenergy.to_get_their_energy_information\",\"italic\":false,\"color\":\"gray\"}",
 									"{\"translate\":\"simplenergy.hold_in_offhand_for_passive_use\",\"italic\":false,\"color\":\"white\"}",
-									"{\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}"
+									"[\"\", {\"text\":\"I\", \"color\": \"white\", \"italic\": false, \"font\": \"simplenergy:icons\"}, {\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}]"
 								],
 								"minecraft:item_model": "simplenergy:multimeter",
 								"minecraft:item_name": "{\"translate\":\"simplenergy.multimeter\", \"italic\": false, \"color\": \"white\"}",
