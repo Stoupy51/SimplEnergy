@@ -1,7 +1,7 @@
 
-#> simplenergy:v2.0.0/load/confirm_load
+#> simplenergy:v2.0.1/load/confirm_load
 #
-# @within	simplenergy:v2.0.0/load/valid_dependencies
+# @within	simplenergy:v2.0.1/load/valid_dependencies
 #
 
 scoreboard objectives add simplenergy.private dummy
@@ -19,7 +19,7 @@ data remove storage python_datapack:main universal_manual[{"name":"SimplEnergy"}
 data modify storage python_datapack:main universal_manual append value {"name":"SimplEnergy","loot_table":"simplenergy:i/manual","hover":[{"text":""}, {"translate":"simplenergy_manual"}, {"text":"\\u0021\\u0021\\u1020\\n\\n\\n\\n\\n\\n", "font": "simplenergy:manual", "color": "white"}, {"translate":"simplenergy.the_following_manual_will_guide_you_through_recipes_and_energy_s", "color": "#505050"}]}
 
 # Confirm load
-tellraw @a[tag=convention.debug] {"translate":"simplenergy.loaded_simplenergy_v2_0_0","color":"green"}
+tellraw @a[tag=convention.debug] {"translate":"simplenergy.loaded_simplenergy_v2_0_1","color":"green"}
 scoreboard players set #simplenergy.loaded load.status 1
 
 # Items storage
