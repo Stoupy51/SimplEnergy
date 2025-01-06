@@ -6,8 +6,8 @@
 
 # Store values for efficient look up
 data modify storage simplenergy:temp all set from block ~ ~ ~
-execute store result score #cook_time simplenergy.data run data get storage simplenergy:temp all.CookTime
-execute store result score #burn_time simplenergy.data run data get storage simplenergy:temp all.BurnTime
+execute store result score #cook_time simplenergy.data run data get storage simplenergy:temp all.cooking_time_spent
+execute store result score #burn_time simplenergy.data run data get storage simplenergy:temp all.lit_time_remaining
 execute if score @s energy.storage matches 100.. if data storage simplenergy:temp all.Items[{Slot:0b}] run function simplenergy:custom_blocks/electric_smelter/work
 
 # Update gui depending on energy storage

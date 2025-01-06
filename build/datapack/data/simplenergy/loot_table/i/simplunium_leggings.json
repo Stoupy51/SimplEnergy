@@ -17,7 +17,7 @@
 								"minecraft:max_damage": 675,
 								"minecraft:equippable": {
 									"slot": "legs",
-									"model": "simplenergy:simplunium"
+									"asset_id": "simplenergy:simplunium"
 								},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","amount": 5.5,"operation": "add_value","slot": "legs","id": "simplenergy:armor.legs"}

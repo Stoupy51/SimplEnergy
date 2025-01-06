@@ -60,6 +60,16 @@ def setup_gui_in_resource_packs(config: dict) -> dict[str, str]:
 		super_copy(source, destination)
 		if os.path.exists(source + ".mcmeta"):
 			super_copy(source + ".mcmeta", destination + ".mcmeta")
+		
+		# Write the file in items/
+		path = f"{config['build_resource_pack']}/assets/{config['namespace']}/items/{gui.replace('.png', '')}.json"
+		write_to_file(path, super_json_dump({
+			"model": {
+				"type": "minecraft:model",
+				"model": f"{config['namespace']}:item/{gui.replace('.png', '')}"
+			}
+		}))
 
 	return gui_models
+
 

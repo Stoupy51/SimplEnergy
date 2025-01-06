@@ -34,7 +34,7 @@ data modify entity @s transformation.translation[1] set value 0.002f
 	default_model = database["furnace_generator"]["item_model"]
 	working_model = default_model + "_on"
 	content = f"""# Update the gui to default
-execute store result score #burn_time {namespace}.data run data get block ~ ~ ~ BurnTime
+execute store result score #burn_time {namespace}.data run data get block ~ ~ ~ lit_time_remaining
 execute if score #burn_time {namespace}.data matches 0 run item replace block ~ ~ ~ container.0 with {GUI_VANILLA_ITEM}[item_model="{default_gui}",{GUI_DATA}]
 execute if score #burn_time {namespace}.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
 execute if score #burn_time {namespace}.data matches 1.. run item replace block ~ ~ ~ container.0 with {GUI_VANILLA_ITEM}[item_model="{working_gui}",{GUI_DATA}]
@@ -46,16 +46,16 @@ execute if score #burn_time {namespace}.data matches 1.. run playsound {namespac
 execute if score @s energy.storage > @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 
 # Prevent the furnace from really cooking
-data modify block ~ ~ ~ CookTimeTotal set value -200s
-data modify block ~ ~ ~ CookTime set value 0s
+data modify block ~ ~ ~ cooking_total_time set value -200s
+data modify block ~ ~ ~ cooking_time_spent set value 0s
 """
 	write_to_file(f"{CUSTOM_BLOCKS}/furnace_generator/second.mcfunction", content)
 
 	# Electric Smelter & Electric Furnace & Electric Brewing Stand
 	for machine in ["electric_smelter", "electric_furnace", "electric_brewing_stand"]:
 		energy = database[machine]["custom_data"]["energy"]
-		cook = "CookTime" if machine != "electric_brewing_stand" else "BrewTime"
-		burn = "BurnTime" if machine != "electric_brewing_stand" else "Fuel"
+		cook = "cooking_time_spent" if machine != "electric_brewing_stand" else "BrewTime"
+		burn = "lit_time_remaining" if machine != "electric_brewing_stand" else "Fuel"
 		burn_type = "short" if machine != "electric_brewing_stand" else "byte"
 		gui_slot = 1 if machine != "electric_brewing_stand" else 4
 		ingr_slot = 0 if machine != "electric_brewing_stand" else 3

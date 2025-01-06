@@ -17,7 +17,7 @@
 								"minecraft:max_damage": 720,
 								"minecraft:equippable": {
 									"slot": "chest",
-									"model": "simplenergy:simplunium"
+									"asset_id": "simplenergy:simplunium"
 								},
 								"minecraft:attribute_modifiers": [
 									{"type": "armor","amount": 6.5,"operation": "add_value","slot": "chest","id": "simplenergy:armor.chest"}

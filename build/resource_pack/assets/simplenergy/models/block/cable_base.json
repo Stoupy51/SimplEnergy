@@ -1,8 +1,7 @@
 {
 	"parent": "block/block",
 	"display": {
-		"head": {"rotation": [0,0,0],"translation": [0,-30.42,0],"scale": [1.605,1.605,1.605]},
-		"fixed": {"rotation": [90,0,0],"translation": [0,0,-8],"scale": [2.02,2.02,2.02]}
+		"fixed": {"rotation": [180,0,0],"translation": [0,-4,0],"scale": [1.005,1.005,1.005]}
 	}
 }
 

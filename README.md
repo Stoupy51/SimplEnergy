@@ -72,3 +72,13 @@ Join our active [Discord community](https://discord.gg/anxzu6rA9F) to:
 - 📚 [Used libraries authors](https://github.com/Stoupy51/SimplEnergy#-librairiesmodules-used-conventions-guideline-tips-followed)
 - 🎨 VieuxGreluchon for Resource Pack
 - 🔧 AirDox_ for cables visual
+
+## ⭐ Star History
+
+<a href="https://star-history.com/#Stoupy51/SimplEnergy&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Stoupy51/SimplEnergy&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Stoupy51/SimplEnergy&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Stoupy51/SimplEnergy&type=Date" />
+ </picture>
+</a>

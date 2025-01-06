@@ -22,28 +22,34 @@ execute unless entity @s[tag={namespace}.custom_block] run return 0
 """
 
 	# Setup parent cable model
-	parent_model: dict = {"parent":"block/block","display":{"head":{"rotation":[0,0,0],"translation":[0,-30.42,0],"scale":[1.605,1.605,1.605]},"fixed":{"rotation":[90,0,0],"translation":[0,0,-8],"scale":[2.02,2.02,2.02]}}}
+	parent_model: dict = {"parent":"block/block","display":{"fixed":{"rotation":[180,0,0],"translation":[0,-4,0],"scale":[1.005,1.005,1.005]}}}
 	path: str = f"{build_resource_pack}/assets/{namespace}/models/block/cable_base.json"
 	write_to_file(path, super_json_dump(parent_model))
 
 	# Setup cables models
 	cables: list[str] = [item for item in database if "cable" in item]
-	for i, cable in enumerate(cables):
+	for cable in cables:
 		# Setup vanilla model for this cable
-		base_model: str = f"{build_resource_pack}/assets/{namespace}/models/item/{cable}.json"
-		content: dict = {"parent": "block/block", "overrides": []}
+		base_model: str = f"{build_resource_pack}/assets/{namespace}/items/{cable}.json"
+		content: dict = {"model": {"type": "minecraft:range_dispatch","property": "minecraft:custom_model_data","entries": []}}
 
 		# Create all the cables variants models
 		for root, _, files in os.walk(CABLE_MODELS_FOLDER):
 			for file in files:
 				if file.endswith(".json"):
 					path: str = f"{root}/{file}"
+
+					# Load the json file
 					json_file: dict = super_json_load(path)
+
+					# Create the new json
 					new_json: dict = {
 						"parent": f"{namespace}:block/cable_base",
 						"textures": {"0": f"{namespace}:block/{cable}"}
 					}
 					new_json.update(json_file)
+
+					# Write the new json
 					dest: str = f"{build_resource_pack}/assets/{namespace}/models/block/{cable}/{file}"
 					write_to_file(dest, super_json_dump(new_json, max_level = 3))
 
@@ -61,11 +67,10 @@ execute unless entity @s[tag={namespace}.custom_block] run return 0
 				model_path = model_path[:-1]
 			
 			# Add override
-			content["overrides"].append({"predicate": {"custom_model_data": i}, "model": model_path})
-		
+			content["model"]["entries"].append({"threshold": i, "model":{"type": "minecraft:model", "model": model_path}})
+
 		# Write the vanilla model for this cable
-		sort_override_model(content)
-		write_to_file(base_model, super_json_dump(content))
+		write_to_file(base_model, super_json_dump(content, max_level=3))
 		
 		# Copy texture
 		dest = f"{build_resource_pack}/assets/{namespace}/textures/block/{cable}.png"
@@ -78,8 +83,7 @@ execute unless entity @s[tag={namespace}.custom_block] run return 0
 		on_placement: str = f"{build_datapack}/data/{namespace}/function/custom_blocks/{cable}/place_secondary.mcfunction"
 		write_to_file(on_placement, f"""
 # Cable rotation for models
-data modify entity @s Rotation set value [0.0f, 180.0f]
-data modify entity @s transformation.translation[1] set value 0.25f
+data modify entity @s item_display set value "fixed"
 """)
 	
 	# Update_cable_model function
@@ -90,7 +94,10 @@ execute if entity @s[tag={namespace}.advanced_cable] run item replace entity @s 
 execute if entity @s[tag={namespace}.elite_cable] run item replace entity @s container.0 with {GUI_VANILLA_ITEM}[item_model="{namespace}:elite_cable"]
 
 # Get the right model
-execute store result entity @s item.components."minecraft:custom_model_data" int 1 run scoreboard players get @s energy.data
+data modify storage {namespace}:main model_data set value {{"floats":[0.0f]}}
+execute store result storage {namespace}:main model_data.floats[0] float 1 run scoreboard players get @s energy.data
+data modify entity @s item.components."minecraft:custom_model_data" set from storage {namespace}:main model_data
+data remove storage {namespace}:main model_data
 """
 	write_to_file(f"{build_datapack}/data/{namespace}/function/calls/cable_update.mcfunction", cable_update_content)
 

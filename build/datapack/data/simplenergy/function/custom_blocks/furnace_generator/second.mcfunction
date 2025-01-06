@@ -5,7 +5,7 @@
 #
 
 # Update the gui to default
-execute store result score #burn_time simplenergy.data run data get block ~ ~ ~ BurnTime
+execute store result score #burn_time simplenergy.data run data get block ~ ~ ~ lit_time_remaining
 execute if score #burn_time simplenergy.data matches 0 run item replace block ~ ~ ~ container.0 with cobblestone[item_model="simplenergy:gui/furnace_generator",hide_tooltip={},custom_data={"common_signals":{"temp":true}}]
 execute if score #burn_time simplenergy.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:furnace_generator"
 execute if score #burn_time simplenergy.data matches 1.. run item replace block ~ ~ ~ container.0 with cobblestone[item_model="simplenergy:gui/furnace_generator_on",hide_tooltip={},custom_data={"common_signals":{"temp":true}}]
@@ -17,6 +17,6 @@ execute if score #burn_time simplenergy.data matches 1.. run playsound simplener
 execute if score @s energy.storage > @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 
 # Prevent the furnace from really cooking
-data modify block ~ ~ ~ CookTimeTotal set value -200s
-data modify block ~ ~ ~ CookTime set value 0s
+data modify block ~ ~ ~ cooking_total_time set value -200s
+data modify block ~ ~ ~ cooking_time_spent set value 0s
 
