@@ -14,8 +14,8 @@
 									"show_in_tooltip": false
 								},
 								"minecraft:lore": [
-									"{\"translate\":\"simplenergy.provides_you_the_ability_to_instantly\",\"italic\":false,\"color\":\"gray\"}",
-									"{\"translate\":\"simplenergy.break_cables_and_rotates_machines_while_sneaking\",\"italic\":false,\"color\":\"gray\"}",
+									{"translate":"simplenergy.provides_you_the_ability_to_instantly","italic": false,"color": "gray"},
+									{"translate":"simplenergy.break_cables_and_rotates_machines_while_sneaking","italic": false,"color": "gray"},
 									["",{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate":"simplenergy","italic": true,"color": "blue"}]
 								],
 								"minecraft:item_model": "simplenergy:wrench",

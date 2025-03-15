@@ -28,7 +28,11 @@
 				}
 			},
 			"minecraft:lore": [
-				"{\"translate\":\"simplenergy.energy_storage_10_mj\",\"italic\":false,\"color\":\"gray\"}",
+				{
+					"translate":"simplenergy.energy_storage_10_mj",
+					"italic": false,
+					"color": "gray"
+				},
 				[
 					"",
 					{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},

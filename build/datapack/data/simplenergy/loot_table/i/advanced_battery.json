@@ -16,7 +16,7 @@
 									"smithed": {"ignore": {"functionality": true,"crafting": true}}
 								},
 								"minecraft:lore": [
-									"{\"translate\":\"simplenergy.energy_storage_25_mj\",\"italic\":false,\"color\":\"gray\"}",
+									{"translate":"simplenergy.energy_storage_25_mj","italic": false,"color": "gray"},
 									["",{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate":"simplenergy","italic": true,"color": "blue"}]
 								],
 								"minecraft:item_model": "simplenergy:advanced_battery",

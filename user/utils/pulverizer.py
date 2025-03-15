@@ -85,7 +85,7 @@ $data modify storage {namespace}:temp intruder set from storage {namespace}:temp
 $execute unless data storage {namespace}:temp intruder.components."minecraft:custom_data".common_signals.temp run function {namespace}:custom_blocks/pulverizer/handle_item_on_gui {{"index":$(index),"slot":$(slot)}}
 
 # Set item gui (blocked if not unlocked, progression otherwise)
-$execute if data storage {namespace}:temp slot.blocked run item replace block ~ ~ ~ container.$(slot) with {GUI_VANILLA_ITEM}[item_model="{blocked_model}",{GUI_DATA_TOOLTIP},item_name='{{"text":"Blocked","italic":false}}',lore=['{{"text":"Place a Slot Unlocker to unlock","color":"gray","italic":false}}']]
+$execute if data storage {namespace}:temp slot.blocked run item replace block ~ ~ ~ container.$(slot) with {GUI_VANILLA_ITEM}[item_model="{blocked_model}",{GUI_DATA_TOOLTIP},item_name={{"text":"Blocked","italic":false}},lore=[{{"text":"Place a Slot Unlocker to unlock","color":"gray","italic":false}}]]
 $execute unless data storage {namespace}:temp slot.blocked run function {namespace}:custom_blocks/pulverizer/gui_progression {{"index":$(index),"slot":$(slot)}}
 """)
 	
@@ -237,7 +237,7 @@ data modify storage {namespace}:temp slots set from entity @s item.components."m
 	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/replace_item.mcfunction", f"""
 # Save slots to the item components
 execute if data storage {namespace}:temp slots run data modify entity @s Item.components."minecraft:custom_data".{namespace}.pulverizer_slots set from storage {namespace}:temp slots
-execute if data storage {namespace}:temp slots run data modify entity @s Item.components."minecraft:lore" prepend value '{{"text":"Unlocked slots saved.","color":"dark_gray","italic":false}}'
+execute if data storage {namespace}:temp slots run data modify entity @s Item.components."minecraft:lore" prepend value {{"text":"Unlocked slots saved.","color":"dark_gray","italic":false}}
 """)
 	write_to_file(f"{CUSTOM_BLOCKS}/pulverizer/place_secondary.mcfunction", f"""
 # Copy slots to the item components
