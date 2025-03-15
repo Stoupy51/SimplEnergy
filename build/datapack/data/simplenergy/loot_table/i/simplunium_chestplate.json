@@ -23,9 +23,13 @@
 									{"type": "armor","amount": 6.5,"operation": "add_value","slot": "chest","id": "simplenergy:armor.chest"}
 								],
 								"minecraft:item_model": "simplenergy:simplunium_chestplate",
-								"minecraft:item_name": "{\"translate\":\"simplenergy.simplunium_chestplate\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"translate":"simplenergy.simplunium_chestplate",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:lore": [
-									"[\"\", {\"text\":\"I\", \"color\": \"white\", \"italic\": false, \"font\": \"simplenergy:icons\"}, {\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate":"simplenergy","italic": true,"color": "blue"}]
 								]
 							}
 						}

@@ -1,6 +1,5 @@
 
 # Imports
-from python_datapack.utils.print import *
 from python_datapack.utils.io import *
 from user.utils.gui import GUI_VANILLA_ITEM
 from user.utils.pulverizer import pulverizer
@@ -11,7 +10,7 @@ def setup_machines(config: dict, gui: dict[str, str]) -> None:
 	namespace: str = config['namespace']
 	build_datapack: str = config['build_datapack']
 	CUSTOM_BLOCKS = f"{build_datapack}/data/{namespace}/function/custom_blocks"
-	GUI_DATA = 'hide_tooltip={},custom_data={"common_signals":{"temp":true}}'
+	GUI_DATA = 'tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}'
 
 	# Solar panel
 	energy = database["solar_panel"]["custom_data"]["energy"]

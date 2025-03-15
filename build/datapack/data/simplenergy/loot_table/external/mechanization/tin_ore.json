@@ -14,9 +14,13 @@
 									"smithed": {"dict": {"ore": {"tin": true}}},
 									"mechanization": {"id": "tin_ore"}
 								},
-								"minecraft:item_name": "{\"translate\":\"simplenergy.tin_ore\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"translate":"simplenergy.tin_ore",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:lore": [
-									"['', {'text':'I', 'color': 'white', 'italic': false, 'font': 'simplenergy:icons'}, {'translate':'simplenergy.mechanization', 'italic': true, 'color': 'blue'}]"
+									["",{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate":"simplenergy.mechanization","italic": true,"color": "blue"}]
 								]
 							}
 						}

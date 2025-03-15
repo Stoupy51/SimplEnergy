@@ -8,7 +8,7 @@
 						"condition": "minecraft:location_check",
 						"predicate": {
 							"block": {
-								"nbt": "{\"components\": {\"minecraft:custom_data\": {\"energy\": {\"transfer\": 240}, \"simplenergy\": {\"elite_cable\": true}, \"smithed\": {\"ignore\": {\"functionality\": true, \"crafting\": true}}}}}"
+								"nbt": "{\"components\": {\"minecraft:custom_data\": {\"energy\": {\"transfer\": 240},\"simplenergy\": {\"elite_cable\": true},\"smithed\": {\"ignore\": {\"functionality\": true,\"crafting\": true}}}}}\n"
 							}
 						}
 					}

@@ -13,6 +13,10 @@ tag @s add simplenergy.custom_block
 tag @s add simplenergy.solar_panel
 tag @s add simplenergy.vanilla.minecraft_daylight_detector
 
+# Add a custom name
+data merge entity @s {"CustomName": {"translate":"simplenergy.solar_panel","italic": false,"color": "white"}}
+
+
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="simplenergy:solar_panel"]
 data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]

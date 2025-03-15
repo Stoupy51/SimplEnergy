@@ -1,6 +1,6 @@
 
 # Imports
-from python_datapack.utils.print import *
+import stouputils as stp
 from python_datapack.utils.io import *
 
 # Add visible advancements to the datapack
@@ -77,7 +77,7 @@ def add_visible_advancements(config: dict) -> None:
 
 		# Set the advancement
 		advancement = super_merge_dict(advancement, adv)
-		write_to_file(f"{destination_folder}/{item}.json", super_json_dump(advancement, max_level = -1))
+		write_to_file(f"{destination_folder}/{item}.json", stp.super_json_dump(advancement, max_level = -1))
 
 	return
 

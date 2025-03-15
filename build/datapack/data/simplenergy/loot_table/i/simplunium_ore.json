@@ -15,13 +15,20 @@
 									"simplenergy": {"simplunium_ore": true}
 								},
 								"minecraft:item_model": "simplenergy:simplunium_ore",
-								"minecraft:item_name": "{\"translate\":\"simplenergy.simplunium_ore\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"translate":"simplenergy.simplunium_ore",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:lore": [
-									"[\"\", {\"text\":\"I\", \"color\": \"white\", \"italic\": false, \"font\": \"simplenergy:icons\"}, {\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate":"simplenergy","italic": true,"color": "blue"}]
 								],
 								"minecraft:container": [
 									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:simplunium_ore","from": "simplenergy"}}}}}}
-								]
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": ["minecraft:container"]
+								}
 							}
 						}
 					]

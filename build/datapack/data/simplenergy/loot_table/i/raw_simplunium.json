@@ -15,9 +15,13 @@
 									"simplenergy": {"raw_simplunium": true}
 								},
 								"minecraft:item_model": "simplenergy:raw_simplunium",
-								"minecraft:item_name": "{\"translate\":\"simplenergy.raw_simplunium\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"translate":"simplenergy.raw_simplunium",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:lore": [
-									"[\"\", {\"text\":\"I\", \"color\": \"white\", \"italic\": false, \"font\": \"simplenergy:icons\"}, {\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate":"simplenergy","italic": true,"color": "blue"}]
 								]
 							}
 						}

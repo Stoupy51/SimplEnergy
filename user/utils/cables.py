@@ -1,6 +1,6 @@
 
 # Imports
-from python_datapack.utils.print import *
+import stouputils as stp
 from python_datapack.utils.io import *
 from user.utils.gui import GUI_VANILLA_ITEM
 
@@ -24,7 +24,7 @@ execute unless entity @s[tag={namespace}.custom_block] run return 0
 	# Setup parent cable model
 	parent_model: dict = {"parent":"block/block","display":{"fixed":{"rotation":[180,0,0],"translation":[0,-4,0],"scale":[1.005,1.005,1.005]}}}
 	path: str = f"{build_resource_pack}/assets/{namespace}/models/block/cable_base.json"
-	write_to_file(path, super_json_dump(parent_model))
+	write_to_file(path, stp.super_json_dump(parent_model))
 
 	# Setup cables models
 	cables: list[str] = [item for item in database if "cable" in item]
@@ -40,7 +40,7 @@ execute unless entity @s[tag={namespace}.custom_block] run return 0
 					path: str = f"{root}/{file}"
 
 					# Load the json file
-					json_file: dict = super_json_load(path)
+					json_file: dict = stp.super_json_load(path)
 
 					# Create the new json
 					new_json: dict = {
@@ -51,7 +51,7 @@ execute unless entity @s[tag={namespace}.custom_block] run return 0
 
 					# Write the new json
 					dest: str = f"{build_resource_pack}/assets/{namespace}/models/block/{cable}/{file}"
-					write_to_file(dest, super_json_dump(new_json, max_level = 3))
+					write_to_file(dest, stp.super_json_dump(new_json, max_level = 3))
 
 		# Link vanilla model
 		for i in range(64):
@@ -70,7 +70,7 @@ execute unless entity @s[tag={namespace}.custom_block] run return 0
 			content["model"]["entries"].append({"threshold": i, "model":{"type": "minecraft:model", "model": model_path}})
 
 		# Write the vanilla model for this cable
-		write_to_file(base_model, super_json_dump(content, max_level=3))
+		write_to_file(base_model, stp.super_json_dump(content, max_level=3))
 		
 		# Copy texture
 		dest = f"{build_resource_pack}/assets/{namespace}/textures/block/{cable}.png"
@@ -102,7 +102,7 @@ data remove storage {namespace}:main model_data
 	write_to_file(f"{build_datapack}/data/{namespace}/function/calls/cable_update.mcfunction", cable_update_content)
 
 	# Add the function to the cable_update function tag
-	write_to_file(f"{build_datapack}/data/energy/tags/function/v1/cable_update.json", super_json_dump({"values": [f"{namespace}:calls/cable_update"]}))
+	write_to_file(f"{build_datapack}/data/energy/tags/function/v1/cable_update.json", stp.super_json_dump({"values": [f"{namespace}:calls/cable_update"]}))
 
 	return
 

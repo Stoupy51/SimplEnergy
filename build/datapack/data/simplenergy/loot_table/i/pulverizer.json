@@ -18,13 +18,20 @@
 								"minecraft:lore": [
 									"{\"translate\":\"simplenergy.power_usage_120_kw\",\"italic\":false,\"color\":\"gray\"}",
 									"{\"translate\":\"simplenergy.energy_buffer_6400_kj\",\"italic\":false,\"color\":\"gray\"}",
-									"[\"\", {\"text\":\"I\", \"color\": \"white\", \"italic\": false, \"font\": \"simplenergy:icons\"}, {\"translate\":\"simplenergy\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate":"simplenergy","italic": true,"color": "blue"}]
 								],
 								"minecraft:item_model": "simplenergy:pulverizer",
-								"minecraft:item_name": "{\"translate\":\"simplenergy.pulverizer\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"translate":"simplenergy.pulverizer",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:container": [
 									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:pulverizer","from": "simplenergy"}}}}}}
-								]
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": ["minecraft:container"]
+								}
 							}
 						}
 					]

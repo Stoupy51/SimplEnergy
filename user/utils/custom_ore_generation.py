@@ -1,5 +1,6 @@
 
 # Imports
+import stouputils as stp
 from python_datapack.utils.database_helper import *
 
 # Main function
@@ -25,5 +26,5 @@ def setup_custom_ore_generation(config: dict):
 			)
 		],
 	})
-	info("All customs ores now generates in the world!")
+	stp.info("All customs ores now generates in the world!")
 

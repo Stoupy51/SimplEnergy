@@ -1,5 +1,6 @@
 
 # Imports
+import stouputils as stp
 from python_datapack.utils.database_helper import *
 from config import NAMESPACE
 
@@ -133,6 +134,6 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 			database[k].update(v)
 		else:
 			database[k] = v
-	info("Database additions loaded")
+	stp.info("Database additions loaded")
 	return database
 
