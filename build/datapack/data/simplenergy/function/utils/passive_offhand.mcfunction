@@ -5,7 +5,7 @@
 #
 
 # Copy offhand
-data modify storage simplenergy:main OffhandTag set from entity @s Inventory[{Slot:-106b}].components."minecraft:custom_data"
+data modify storage simplenergy:main OffhandTag set from entity @s equipment.offhand.components."minecraft:custom_data"
 
 # Switch case
 execute if data storage simplenergy:main OffhandTag.simplenergy.multimeter anchored eyes positioned ^ ^ ^.2 run function simplenergy:utils/multimeter/passive/main

@@ -78,12 +78,11 @@ advancement revoke @s only {namespace}:right_click
 
 # Copy SelectedItem tag to storage and offhand
 data modify storage {namespace}:main SelectedItemTag set from entity @s SelectedItem.components."minecraft:custom_data"
-data modify storage {namespace}:main OffhandTag set from entity @s Inventory[{{Slot:-106b}}].components."minecraft:custom_data"
+data modify storage {namespace}:main OffhandTag set from entity @s equipment.offhand.components."minecraft:custom_data"
 
 # Switch on SelectedItem tag to run the right click function
 execute if data storage {namespace}:main SelectedItemTag.{namespace}.multimeter run function {namespace}:utils/multimeter/right_click/main
 execute if data storage {namespace}:main SelectedItemTag.{namespace}.wrench run function {namespace}:utils/wrench/right_click
-execute if data storage {namespace}:main SelectedItemTag.{namespace}.battery_switcher run function {namespace}:utils/battery_switcher/right_click/main
 
 # Switch on OffhandTag tag
 execute if data storage {namespace}:main OffhandTag.{namespace}.multimeter run function {namespace}:utils/multimeter/right_click/main
