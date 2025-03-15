@@ -16,7 +16,7 @@ def add_visible_advancements(config: dict) -> None:
 	super_copy(source, destination)
 
 	# Advancements list
-	background: str = f"{namespace}:textures/block/gui/advancement_background.png"
+	background: str = f"{namespace}:block/gui/advancement_background"
 	advancements: dict[str, dict] = {
 		"simplunium_ingot": {'display': {'title': {'text': 'SimplEnergy', 'color': 'gray'}, 'description': {'text': 'Obtain a Simplunium Ingot', 'color': 'green'}, 'background': background, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': False}},
 		"advanced_battery": {'display': {'title': {'text': 'More Energy Storage!', 'color': 'gray'}, 'description': {'text': 'Upgrade a Simple Battery', 'color': 'green'}, 'frame': 'task', 'show_toast': True, 'announce_to_chat': True, 'hidden': False}, 'parent': 'simplenergy:visible/simple_battery'},
