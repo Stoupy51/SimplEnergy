@@ -6,6 +6,6 @@
 
 # Tellraw Energy Display
 tag @s add simplenergy.temp
-execute as @e[scores={energy.max_storage=1..},limit=1,sort=nearest,distance=..1.5] run tellraw @a[tag=simplenergy.temp] [{"translate":"simplenergy.energy_stored","italic":false,"color":"aqua"},{"score":{"name":"@s","objective":"energy.storage"},"italic":false,"color":"yellow"},{"text":"/"},{"score":{"name":"@s","objective":"energy.max_storage"},"italic":false,"color":"yellow"},{"translate":"simplenergy.kjchange_rate"},{"score":{"name":"@s","objective":"energy.change_rate"},"italic":false,"color":"yellow"},{"text":" kW"}]
+execute as @n[scores={energy.max_storage=1..},distance=..1.5] run tellraw @a[tag=simplenergy.temp] [{"translate":"simplenergy.energy_stored","italic":false,"color":"aqua"},{"score":{"name":"@s","objective":"energy.storage"},"italic":false,"color":"yellow"},{"text":"/"},{"score":{"name":"@s","objective":"energy.max_storage"},"italic":false,"color":"yellow"},{"translate":"simplenergy.kjchange_rate"},{"score":{"name":"@s","objective":"energy.change_rate"},"italic":false,"color":"yellow"},{"text":" kW"}]
 tag @s remove simplenergy.temp
 

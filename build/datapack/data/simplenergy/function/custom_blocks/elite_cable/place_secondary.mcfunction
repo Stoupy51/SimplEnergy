@@ -25,6 +25,7 @@ tag @s add energy.cable
 scoreboard players set @s energy.transfer_rate 240
 function energy:v1/api/init_cable
 
-# Cable rotation for models
+# Cable rotation for models, and common cable tag
 data modify entity @s item_display set value "fixed"
+tag @s add simplenergy.cable
 

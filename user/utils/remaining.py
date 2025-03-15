@@ -66,7 +66,7 @@ tellraw @s ["",{{"text":"Markers on furnaces: ","color":"gray"}},{{"score":{{"na
 	# Setup block tags
 	json_content: dict = {"replace":False,"values":["minecraft:air","minecraft:cave_air","minecraft:void_air","minecraft:structure_void"]}
 	write_to_file(f"{build_datapack}/data/{namespace}/tags/block/air.json", stp.super_json_dump(json_content, max_level = -1))
-	json_content: dict = {"replace":False,"values":[f"#{namespace}:air","#minecraft:replaceable","#minecraft:wool_carpets","#minecraft:standing_signs","#minecraft:wall_signs","#minecraft:saplings","#minecraft:leaves","#minecraft:signs","minecraft:moss_carpet","minecraft:player_head","minecraft:player_wall_head","minecraft:peony","minecraft:rose_bush","minecraft:lilac","minecraft:sunflower","minecraft:lily_pad","minecraft:vine","minecraft:red_mushroom","minecraft:brown_mushroom","minecraft:cobweb","minecraft:water","minecraft:kelp_plant","minecraft:seagrass","minecraft:ladder","minecraft:snow","minecraft:powder_snow","minecraft:moving_piston","minecraft:oak_sapling","minecraft:spruce_sapling","minecraft:birch_sapling","minecraft:jungle_sapling","minecraft:acacia_sapling","minecraft:dark_oak_sapling","minecraft:mangrove_propagule","#minecraft:flowers","minecraft:mangrove_propagule","minecraft:cobweb","minecraft:torch","minecraft:wall_torch","minecraft:soul_torch","minecraft:soul_wall_torch","minecraft:spore_blossom","minecraft:brown_mushroom","minecraft:red_mushroom","minecraft:crimson_fungus","minecraft:warped_fungus","minecraft:crimson_roots","minecraft:warped_roots","minecraft:nether_sprouts","minecraft:weeping_vines","minecraft:twisting_vines","minecraft:water","minecraft:sugar_cane","minecraft:kelp","minecraft:hanging_roots","minecraft:small_dripleaf","minecraft:bamboo","minecraft:end_rod","minecraft:vine","#minecraft:corals","minecraft:dead_tube_coral","minecraft:dead_brain_coral","minecraft:dead_bubble_coral","minecraft:dead_fire_coral","minecraft:dead_horn_coral","minecraft:dead_tube_coral_fan","minecraft:dead_brain_coral_fan","minecraft:dead_bubble_coral_fan","minecraft:dead_fire_coral_fan","minecraft:dead_horn_coral_fan","minecraft:scaffolding","#minecraft:flower_pots","#minecraft:banners","minecraft:lantern","minecraft:soul_lantern","minecraft:candle","minecraft:small_amethyst_bud","minecraft:medium_amethyst_bud","minecraft:large_amethyst_bud","minecraft:amethyst_cluster","minecraft:redstone_wire","minecraft:repeater","minecraft:comparator","minecraft:lever","minecraft:tripwire_hook","#minecraft:buttons","#minecraft:pressure_plates","#minecraft:rails","minecraft:conduit"]}
+	json_content: dict = {"replace":False,"values":[f"#{namespace}:air","#minecraft:replaceable","#minecraft:wool_carpets","#minecraft:standing_signs","#minecraft:wall_signs","#minecraft:saplings","#minecraft:leaves","#minecraft:signs","minecraft:moss_carpet","minecraft:peony","minecraft:rose_bush","minecraft:lilac","minecraft:sunflower","minecraft:lily_pad","minecraft:vine","minecraft:red_mushroom","minecraft:brown_mushroom","minecraft:cobweb","minecraft:water","minecraft:kelp_plant","minecraft:seagrass","minecraft:ladder","minecraft:snow","minecraft:powder_snow","minecraft:moving_piston","minecraft:oak_sapling","minecraft:spruce_sapling","minecraft:birch_sapling","minecraft:jungle_sapling","minecraft:acacia_sapling","minecraft:dark_oak_sapling","minecraft:mangrove_propagule","#minecraft:flowers","minecraft:mangrove_propagule","minecraft:cobweb","minecraft:torch","minecraft:wall_torch","minecraft:soul_torch","minecraft:soul_wall_torch","minecraft:spore_blossom","minecraft:brown_mushroom","minecraft:red_mushroom","minecraft:crimson_fungus","minecraft:warped_fungus","minecraft:crimson_roots","minecraft:warped_roots","minecraft:nether_sprouts","minecraft:weeping_vines","minecraft:twisting_vines","minecraft:water","minecraft:sugar_cane","minecraft:kelp","minecraft:hanging_roots","minecraft:small_dripleaf","minecraft:bamboo","minecraft:end_rod","minecraft:vine","#minecraft:corals","minecraft:dead_tube_coral","minecraft:dead_brain_coral","minecraft:dead_bubble_coral","minecraft:dead_fire_coral","minecraft:dead_horn_coral","minecraft:dead_tube_coral_fan","minecraft:dead_brain_coral_fan","minecraft:dead_bubble_coral_fan","minecraft:dead_fire_coral_fan","minecraft:dead_horn_coral_fan","minecraft:scaffolding","#minecraft:flower_pots","#minecraft:banners","minecraft:lantern","minecraft:soul_lantern","minecraft:candle","minecraft:small_amethyst_bud","minecraft:medium_amethyst_bud","minecraft:large_amethyst_bud","minecraft:amethyst_cluster","minecraft:redstone_wire","minecraft:repeater","minecraft:comparator","minecraft:lever","minecraft:tripwire_hook","#minecraft:buttons","#minecraft:pressure_plates","#minecraft:rails","minecraft:conduit"]}
 	write_to_file(f"{build_datapack}/data/{namespace}/tags/block/non_solid.json", stp.super_json_dump(json_content, max_level = -1))
 
 
@@ -120,10 +120,10 @@ execute if score #raycast {namespace}.data matches 0 if entity @s[distance=..5] 
 scoreboard players set #raycast {namespace}.data 1
 scoreboard players set #success {namespace}.data 0
 
-execute as @e[tag={namespace}.rotatable,limit=1,sort=nearest,dx=0,dy=0,dz=0] at @s run function {namespace}:utils/wrench/rotate
-execute if score #success {namespace}.data matches 0 store result score #success {namespace}.data as @e[tag=mechanization.rotatable,limit=1,sort=nearest,dx=0,dy=0,dz=0] at @s run function mechanization:base/player/wrench/rotate_machine
-execute if score #success {namespace}.data matches 0 store result score #success {namespace}.data as @e[tag=mechanization.cable,limit=1,sort=nearest,dx=0,dy=0,dz=0] at @s run function #mechanization:wrench_break
-execute if score #success {namespace}.data matches 0 store result score #success {namespace}.data at @e[tag={namespace}.cable,limit=1,sort=nearest,dx=0,dy=0,dz=0] run setblock ~ ~ ~ air destroy
+execute as @n[tag={namespace}.rotatable,dx=0,dy=0,dz=0] at @s run function {namespace}:utils/wrench/rotate
+execute if score #success {namespace}.data matches 0 store result score #success {namespace}.data as @n[tag=mechanization.rotatable,dx=0,dy=0,dz=0] at @s run function mechanization:base/player/wrench/rotate_machine
+execute if score #success {namespace}.data matches 0 store result score #success {namespace}.data as @n[tag=mechanization.cable,dx=0,dy=0,dz=0] at @s run function #mechanization:wrench_break
+execute if score #success {namespace}.data matches 0 store result score #success {namespace}.data at @n[tag={namespace}.cable,dx=0,dy=0,dz=0] run setblock ~ ~ ~ air destroy
 
 # Playsound if block was rotated or cable was broken
 execute if score #success {namespace}.data matches 1 run playsound block.stone.break block @s
@@ -177,7 +177,7 @@ execute if entity @s[distance=..5] if block ~ ~ ~ #{namespace}:non_solid positio
 	write_to_file(f"{functions}/utils/multimeter/right_click/stop_case.mcfunction", f"""
 # Tellraw Energy Display
 tag @s add {namespace}.temp
-execute as @e[scores={{energy.max_storage=1..}},limit=1,sort=nearest,distance=..1.5] run tellraw @a[tag={namespace}.temp] [{{"text":"Energy stored: ","italic":false,"color":"aqua"}},{{"score":{{"name":"@s","objective":"energy.storage"}},"italic":false,"color":"yellow"}},{{"text":"/"}},{{"score":{{"name":"@s","objective":"energy.max_storage"}},"italic":false,"color":"yellow"}},{{"text":" kJ\nChange Rate: "}},{{"score":{{"name":"@s","objective":"energy.change_rate"}},"italic":false,"color":"yellow"}},{{"text":" kW"}}]
+execute as @n[scores={{energy.max_storage=1..}},distance=..1.5] run tellraw @a[tag={namespace}.temp] [{{"text":"Energy stored: ","italic":false,"color":"aqua"}},{{"score":{{"name":"@s","objective":"energy.storage"}},"italic":false,"color":"yellow"}},{{"text":"/"}},{{"score":{{"name":"@s","objective":"energy.max_storage"}},"italic":false,"color":"yellow"}},{{"text":" kJ\nChange Rate: "}},{{"score":{{"name":"@s","objective":"energy.change_rate"}},"italic":false,"color":"yellow"}},{{"text":" kW"}}]
 tag @s remove {namespace}.temp
 """)
 	
@@ -192,7 +192,7 @@ execute if entity @s[distance=..5] if block ~ ~ ~ #{namespace}:non_solid positio
 	write_to_file(f"{functions}/utils/multimeter/passive/stop_case.mcfunction", f"""
 # Execute at the block found the function
 tag @s add {namespace}.temp
-execute as @e[scores={{energy.max_storage=1..}},limit=1,sort=nearest,distance=..1.5] at @s align xyz run function {namespace}:utils/multimeter/passive/found_entity
+execute as @n[scores={{energy.max_storage=1..}},distance=..1.5] at @s align xyz run function {namespace}:utils/multimeter/passive/found_entity
 tag @s remove {namespace}.temp
 """)
 	write_to_file(f"{functions}/utils/multimeter/passive/found_entity.mcfunction", f"""
@@ -254,7 +254,7 @@ execute if entity @s[distance=..5] if block ~ ~ ~ #{namespace}:non_solid positio
 """)
 	write_to_file(f"{functions}/utils/battery_switcher/right_click/stop_case.mcfunction", f"""
 tag @s add {namespace}.temp
-execute as @e[tag={namespace}.battery_switcher,scores={{energy.max_storage=1..}},limit=1,sort=nearest,distance=..1.5] run function {namespace}:utils/battery_switcher/right_click/found_entity
+execute as @n[tag={namespace}.battery_switcher,scores={{energy.max_storage=1..}},distance=..1.5] run function {namespace}:utils/battery_switcher/right_click/found_entity
 tag @s remove {namespace}.temp
 """)
 	write_to_file(f"{functions}/utils/battery_switcher/right_click/found_entity.mcfunction", f"""
@@ -280,7 +280,7 @@ execute if entity @s[distance=..5] if block ~ ~ ~ #{namespace}:non_solid positio
 	write_to_file(f"{functions}/utils/battery_switcher/passive/stop_case.mcfunction", f"""
 # Execute at the block found the function
 tag @s add {namespace}.temp
-execute as @e[tag={namespace}.battery_switcher,scores={{energy.max_storage=1..}},limit=1,sort=nearest,distance=..1.5] at @s align xyz positioned ~.5 ~.3 ~.5 run function {namespace}:utils/battery_switcher/passive/found_entity
+execute as @n[tag={namespace}.battery_switcher,scores={{energy.max_storage=1..}},distance=..1.5] at @s align xyz positioned ~.5 ~.3 ~.5 run function {namespace}:utils/battery_switcher/passive/found_entity
 tag @s remove {namespace}.temp
 """)
 	

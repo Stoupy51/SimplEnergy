@@ -82,8 +82,9 @@ execute unless entity @s[tag={namespace}.custom_block] run return 0
 		# On placement, rotate
 		on_placement: str = f"{build_datapack}/data/{namespace}/function/custom_blocks/{cable}/place_secondary.mcfunction"
 		write_to_file(on_placement, f"""
-# Cable rotation for models
+# Cable rotation for models, and common cable tag
 data modify entity @s item_display set value "fixed"
+tag @s add {namespace}.cable
 """)
 	
 	# Update_cable_model function

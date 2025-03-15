@@ -5,6 +5,6 @@
 #
 
 tag @s add simplenergy.temp
-execute as @e[tag=simplenergy.battery_switcher,scores={energy.max_storage=1..},limit=1,sort=nearest,distance=..1.5] run function simplenergy:utils/battery_switcher/right_click/found_entity
+execute as @n[tag=simplenergy.battery_switcher,scores={energy.max_storage=1..},distance=..1.5] run function simplenergy:utils/battery_switcher/right_click/found_entity
 tag @s remove simplenergy.temp
 
