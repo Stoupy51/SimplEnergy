@@ -20,7 +20,7 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate":"simplenergy.mechanization","italic": true,"color": "blue"}]
+									{"translate":"simplenergy.mechanization","italic": true,"color": "blue"}
 								]
 							}
 						}
