@@ -1,6 +1,6 @@
 
 # Imports
-from python_datapack.utils.print import *
+import stouputils as stp
 from python_datapack.utils.io import *
 from python_datapack.manual.main import deepcopy
 GUI_VANILLA_ITEM = "cobblestone"
@@ -52,7 +52,7 @@ def setup_gui_in_resource_packs(config: dict) -> dict[str, str]:
 			content.pop("elements")
 			content["parent"] = "item/generated"
 		
-		write_to_file(path, super_json_dump(content, max_level = 3))
+		write_to_file(path, stp.super_json_dump(content, max_level = 3))
 
 		# Copy the texture
 		source = f"{config['assets_folder']}/textures/{gui}"
@@ -63,7 +63,7 @@ def setup_gui_in_resource_packs(config: dict) -> dict[str, str]:
 		
 		# Write the file in items/
 		path = f"{config['build_resource_pack']}/assets/{config['namespace']}/items/{gui.replace('.png', '')}.json"
-		write_to_file(path, super_json_dump({
+		write_to_file(path, stp.super_json_dump({
 			"model": {
 				"type": "minecraft:model",
 				"model": f"{config['namespace']}:item/{gui.replace('.png', '')}"

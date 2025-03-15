@@ -1,6 +1,5 @@
 
 # Imports
-from python_datapack.utils.print import *
 from python_datapack.utils.io import *
 from user.utils.gui import GUI_VANILLA_ITEM
 
@@ -10,7 +9,7 @@ def pulverizer(config: dict, gui: dict[str, int]) -> None:
 	namespace: str = config['namespace']
 	build_datapack: str = config['build_datapack']
 	CUSTOM_BLOCKS = f"{build_datapack}/data/{namespace}/function/custom_blocks"
-	GUI_DATA = 'hide_tooltip={},custom_data={"common_signals":{"temp":true}}'
+	GUI_DATA = 'tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}'
 	GUI_DATA_TOOLTIP = 'custom_data={"common_signals":{"temp":true}}'
 	PULVERIZER_SLOTS = 8
 	PULVERIZER_TIME: int = 200

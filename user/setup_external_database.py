@@ -1,5 +1,6 @@
 
 # Imports
+import stouputils as stp
 from python_datapack.utils.database_helper import *
 
 # Main function should return a database
@@ -25,7 +26,7 @@ def main(config: dict) -> dict[str, dict]:
 	path: str = config["database_debug"]
 	path: list[str] = path.split("/")[:-1]
 	path: str = "/".join(path) + "/external_database.json"
-	with super_open(path, "w") as f:
-		super_json_dump(external_database, f)
+	with stp.super_open(path, "w") as f:
+		stp.super_json_dump(external_database, f)
 	return external_database
 

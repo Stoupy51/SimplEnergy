@@ -1,7 +1,6 @@
 
 # Imports
 from python_datapack.constants import *
-from python_datapack.utils.print import *
 from python_datapack.utils.io import *
 from user.utils.custom_ore_generation import setup_custom_ore_generation
 from user.utils.advancements import add_visible_advancements

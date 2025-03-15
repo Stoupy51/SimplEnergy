@@ -1,6 +1,6 @@
 
 # Imports
-from python_datapack.utils.print import *
+import stouputils as stp
 from python_datapack.utils.io import *
 
 # Setup energy balancing
@@ -11,7 +11,7 @@ def setup_remaining(config: dict) -> None:
 	database: dict[str, dict] = config['database']
 
 	# Passive multimeter & battery switcher working every 2 ticks
-	write_to_versioned_file(config, "tick_2", f"""
+	write_to_versioned_function(config, "tick_2", f"""
 # Passive offhand loop
 execute as @a[tag=!global.ignore.gui,tag={namespace}.offhand] at @s run function {namespace}:utils/passive_offhand
 """)
@@ -60,18 +60,18 @@ tellraw @s ["",{{"text":"Markers on furnaces: ","color":"gray"}},{{"score":{{"na
 
 	# Check daylight power predicate
 	json_content: dict = {"condition":"minecraft:any_of","terms":[{"condition":"minecraft:location_check","predicate":{"block":{"state":{"inverted":"false","power":{"min":"10","max":"15"}}}}},{"condition":"minecraft:location_check","predicate":{"block":{"state":{"inverted":"true","power":{"min":"0","max":"5"}}}}}]}
-	write_to_file(f"{build_datapack}/data/{namespace}/predicate/check_daylight_power.json", super_json_dump(json_content, max_level = -1))
+	write_to_file(f"{build_datapack}/data/{namespace}/predicate/check_daylight_power.json", stp.super_json_dump(json_content, max_level = -1))
 
 
 	# Setup block tags
 	json_content: dict = {"replace":False,"values":["minecraft:air","minecraft:cave_air","minecraft:void_air","minecraft:structure_void"]}
-	write_to_file(f"{build_datapack}/data/{namespace}/tags/block/air.json", super_json_dump(json_content, max_level = -1))
+	write_to_file(f"{build_datapack}/data/{namespace}/tags/block/air.json", stp.super_json_dump(json_content, max_level = -1))
 	json_content: dict = {"replace":False,"values":[f"#{namespace}:air","#minecraft:replaceable","#minecraft:wool_carpets","#minecraft:standing_signs","#minecraft:wall_signs","#minecraft:saplings","#minecraft:leaves","#minecraft:signs","minecraft:moss_carpet","minecraft:player_head","minecraft:player_wall_head","minecraft:peony","minecraft:rose_bush","minecraft:lilac","minecraft:sunflower","minecraft:lily_pad","minecraft:vine","minecraft:red_mushroom","minecraft:brown_mushroom","minecraft:cobweb","minecraft:water","minecraft:kelp_plant","minecraft:seagrass","minecraft:ladder","minecraft:snow","minecraft:powder_snow","minecraft:moving_piston","minecraft:oak_sapling","minecraft:spruce_sapling","minecraft:birch_sapling","minecraft:jungle_sapling","minecraft:acacia_sapling","minecraft:dark_oak_sapling","minecraft:mangrove_propagule","#minecraft:flowers","minecraft:mangrove_propagule","minecraft:cobweb","minecraft:torch","minecraft:wall_torch","minecraft:soul_torch","minecraft:soul_wall_torch","minecraft:spore_blossom","minecraft:brown_mushroom","minecraft:red_mushroom","minecraft:crimson_fungus","minecraft:warped_fungus","minecraft:crimson_roots","minecraft:warped_roots","minecraft:nether_sprouts","minecraft:weeping_vines","minecraft:twisting_vines","minecraft:water","minecraft:sugar_cane","minecraft:kelp","minecraft:hanging_roots","minecraft:small_dripleaf","minecraft:bamboo","minecraft:end_rod","minecraft:vine","#minecraft:corals","minecraft:dead_tube_coral","minecraft:dead_brain_coral","minecraft:dead_bubble_coral","minecraft:dead_fire_coral","minecraft:dead_horn_coral","minecraft:dead_tube_coral_fan","minecraft:dead_brain_coral_fan","minecraft:dead_bubble_coral_fan","minecraft:dead_fire_coral_fan","minecraft:dead_horn_coral_fan","minecraft:scaffolding","#minecraft:flower_pots","#minecraft:banners","minecraft:lantern","minecraft:soul_lantern","minecraft:candle","minecraft:small_amethyst_bud","minecraft:medium_amethyst_bud","minecraft:large_amethyst_bud","minecraft:amethyst_cluster","minecraft:redstone_wire","minecraft:repeater","minecraft:comparator","minecraft:lever","minecraft:tripwire_hook","#minecraft:buttons","#minecraft:pressure_plates","#minecraft:rails","minecraft:conduit"]}
-	write_to_file(f"{build_datapack}/data/{namespace}/tags/block/non_solid.json", super_json_dump(json_content, max_level = -1))
+	write_to_file(f"{build_datapack}/data/{namespace}/tags/block/non_solid.json", stp.super_json_dump(json_content, max_level = -1))
 
 
 	## Right click detection
-	write_to_versioned_file(config, "load/confirm_load", f"scoreboard objectives add {namespace}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick\n", prepend = True)
+	write_to_versioned_function(config, "load/confirm_load", f"scoreboard objectives add {namespace}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick\n")
 	write_to_file(f"{functions}/utils/on_right_click.mcfunction", f"""
 # Advancement revoke
 advancement revoke @s only {namespace}:right_click
@@ -97,12 +97,12 @@ data remove storage {namespace}:main SelectedItemTag
 scoreboard players reset @s {namespace}.right_click
 """)
 	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":[{"condition":"minecraft:entity_scores","entity":"this","scores":{f"{namespace}.right_click":{"min":1}}}]}}},"requirements":[["requirement"]],"rewards":{"function":f"{namespace}:utils/on_right_click"}}
-	write_to_file(f"{build_datapack}/data/{namespace}/advancement/right_click.json", super_json_dump(json_content, max_level = -1))
+	write_to_file(f"{build_datapack}/data/{namespace}/advancement/right_click.json", stp.super_json_dump(json_content, max_level = -1))
 
 
 	# Setup wrench stuff
 	json_content: dict = {"values": [f"{namespace}:utils/wrench/rotate/furnace"]}
-	write_to_file(f"{build_datapack}/data/{namespace}/tags/function/calls/wrench_rotate.json", super_json_dump(json_content, max_level = -1))
+	write_to_file(f"{build_datapack}/data/{namespace}/tags/function/calls/wrench_rotate.json", stp.super_json_dump(json_content, max_level = -1))
 	write_to_file(f"{functions}/utils/wrench/right_click.mcfunction", f"""
 # Look at where player is looking at and stop when found a block
 scoreboard players set #raycast {namespace}.data 0
@@ -327,15 +327,15 @@ execute if score #success {namespace}.data matches 1 run schedule function {name
 	input_model: str = database["battery_switcher_input"]["item_model"]
 	output_model: str = database["battery_switcher_output"]["item_model"]
 	item_modifier_path: str = f"{build_datapack}/data/{namespace}/item_modifier/battery_switcher"
-	write_to_file(f"{item_modifier_path}/default.json", super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":default_model}}))
-	write_to_file(f"{item_modifier_path}/both.json", super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":both_model}}))
-	write_to_file(f"{item_modifier_path}/input.json", super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":input_model}}))
-	write_to_file(f"{item_modifier_path}/output.json", super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":output_model}}))
+	write_to_file(f"{item_modifier_path}/default.json", stp.super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":default_model}}))
+	write_to_file(f"{item_modifier_path}/both.json", stp.super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":both_model}}))
+	write_to_file(f"{item_modifier_path}/input.json", stp.super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":input_model}}))
+	write_to_file(f"{item_modifier_path}/output.json", stp.super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":output_model}}))
 
 
 	# Setup first_join advancement
 	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:tick"}},"requirements":[["requirement"]],"rewards":{"function":f"{namespace}:advancements/first_join"}}
-	write_to_file(f"{build_datapack}/data/{namespace}/advancement/first_join.json", super_json_dump(json_content, max_level = -1))
+	write_to_file(f"{build_datapack}/data/{namespace}/advancement/first_join.json", stp.super_json_dump(json_content, max_level = -1))
 	write_to_file(f"{functions}/advancements/first_join.mcfunction", f"""
 execute unless score #{namespace}.loaded load.status matches 1 run advancement revoke @s only {namespace}:first_join
 execute if score #{namespace}.loaded load.status matches 1 run loot give @s loot {namespace}:i/manual
@@ -344,7 +344,7 @@ execute if score #{namespace}.loaded load.status matches 1 run loot give @s loot
 
 	# Setup inventory_changed advancement
 	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:inventory_changed"}},"requirements":[["requirement"]],"rewards":{"function":f"{namespace}:advancements/inventory_changed"}}
-	write_to_file(f"{build_datapack}/data/{namespace}/advancement/inventory_changed.json", super_json_dump(json_content, max_level = -1))
+	write_to_file(f"{build_datapack}/data/{namespace}/advancement/inventory_changed.json", stp.super_json_dump(json_content, max_level = -1))
 	write_to_file(f"{functions}/advancements/inventory_changed.mcfunction", f"""
 # Revoke advancement
 advancement revoke @s only {namespace}:inventory_changed
@@ -378,7 +378,7 @@ execute if data storage {namespace}:main Inventory[0] run function {namespace}:a
 
 
 	# Private score
-	write_to_versioned_file(config, "load/confirm_load", f"""
+	write_to_versioned_function(config, "load/confirm_load", f"""
 scoreboard objectives add {namespace}.private dummy
 team add {namespace}.green
 team add {namespace}.gold

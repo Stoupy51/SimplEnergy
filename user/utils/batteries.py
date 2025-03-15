@@ -1,6 +1,6 @@
 
 # Imports
-from python_datapack.utils.print import *
+import stouputils as stp
 from python_datapack.utils.io import *
 
 # Setup functions for keeping energy for batteries
@@ -91,7 +91,7 @@ data modify storage energy:temp list[0].components."minecraft:custom_data".energ
 	
 	# Write the function and add it to the energy function tag
 	write_to_file(f"{build_datapack}/data/{namespace}/function/calls/update_energy_lore/main.mcfunction", content)
-	write_to_file(f"{build_datapack}/data/energy/tags/function/v1/update_energy_item.json", super_json_dump({"values": [f"{namespace}:calls/update_energy_lore/main"]}))
+	write_to_file(f"{build_datapack}/data/energy/tags/function/v1/update_energy_item.json", stp.super_json_dump({"values": [f"{namespace}:calls/update_energy_lore/main"]}))
 
 	# Write macro function
 	write_to_file(f"{build_datapack}/data/{namespace}/function/calls/update_energy_lore/macro.mcfunction", f"""

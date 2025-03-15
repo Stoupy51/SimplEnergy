@@ -1,6 +1,6 @@
 
 # Imports
-from python_datapack.utils.print import *
+import stouputils as stp
 from python_datapack.utils.io import *
 
 # Setup rotatables tags
@@ -21,9 +21,9 @@ def setup_rotatable_tags(config: dict, rotatables: list[str]) -> None:
 
 	# Link function tags
 	json_content: dict = {"required":False,"values":[f"{namespace}:calls/mechanization/wrench_break"]}
-	write_to_file(f"{MECH_FUNCTION_TAG}/wrench_break.json", super_json_dump(json_content))
+	write_to_file(f"{MECH_FUNCTION_TAG}/wrench_break.json", stp.super_json_dump(json_content))
 	json_content = {"required":False,"values":[f"{namespace}:calls/mechanization/wrench_modify"]}
-	write_to_file(f"{MECH_FUNCTION_TAG}/wrench_modify.json", super_json_dump(json_content))
+	write_to_file(f"{MECH_FUNCTION_TAG}/wrench_modify.json", stp.super_json_dump(json_content))
 
 	# Write slots functions
 	write_to_file(f"{MECH_CALLS}/wrench_break.mcfunction", f"""
