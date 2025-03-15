@@ -348,8 +348,8 @@
 		"category": "energy",
 		"custom_data": {"energy": {"storage": 0,"max_storage": 10000},"simplenergy": {"simple_battery": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["CCC","CRC","III"],"ingredients": {"C": {"item": "minecraft:copper_block"},"R": {"item": "minecraft:redstone"},"I": {"item": "minecraft:iron_ingot"}}}],
-		"lore": [{"text": "[Energy Storage: 10 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"vanilla_block": {"id": "minecraft:copper_block","apply_facing": false},
+		"lore": [{"text": "[Energy Storage: 10 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:simple_battery",
 		"item_name": {"text": "Simple Battery","italic": false,"color": "white"}
 	},
@@ -358,8 +358,8 @@
 		"category": "energy",
 		"custom_data": {"energy": {"storage": 0,"max_storage": 25000},"simplenergy": {"advanced_battery": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["GGG","GXG","SSS"],"ingredients": {"G": {"item": "minecraft:gold_block"},"X": {"components": {"minecraft:custom_data": {"simplenergy": {"simple_battery": true}}}},"S": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}}}}],
-		"lore": [{"text": "[Energy Storage: 25 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"vanilla_block": {"id": "minecraft:gold_block","apply_facing": false},
+		"lore": [{"text": "[Energy Storage: 25 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:advanced_battery",
 		"item_name": {"text": "Advanced Battery","italic": false,"color": "white"}
 	},
@@ -368,16 +368,16 @@
 		"category": "energy",
 		"custom_data": {"energy": {"storage": 0,"max_storage": 50000},"simplenergy": {"elite_battery": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["RRR","RXR","SSS"],"ingredients": {"R": {"item": "minecraft:redstone_block"},"X": {"components": {"minecraft:custom_data": {"simplenergy": {"advanced_battery": true}}}},"S": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_block": true}}}}}}],
-		"lore": [{"text": "[Energy Storage: 50 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"vanilla_block": {"id": "minecraft:iron_block","apply_facing": false},
+		"lore": [{"text": "[Energy Storage: 50 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:elite_battery",
 		"item_name": {"text": "Elite Battery","italic": false,"color": "white"}
 	},
 	"creative_battery": {
 		"id": "minecraft:furnace",
 		"custom_data": {"energy": {"storage": 2000000000,"max_storage": 2147483647},"simplenergy": {"creative_battery": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
-		"lore": [{"text": "[Energy Storage: 2147 GJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"vanilla_block": {"id": "minecraft:iron_block","apply_facing": false},
+		"lore": [{"text": "[Energy Storage: 2147 GJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:creative_battery",
 		"item_name": {"text": "Creative Battery","italic": false,"color": "white"}
 	},
@@ -386,9 +386,9 @@
 		"category": "energy",
 		"custom_data": {"energy": {"generation": 5,"max_storage": 500},"simplenergy": {"cauldron_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["I I","IRI","III"],"ingredients": {"I": {"item": "minecraft:iron_ingot"},"R": {"item": "minecraft:redstone"}}}],
-		"lore": [{"text": "[Energy Generation: 5 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 500 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"override_model": {"parent": "block/cauldron","textures": {"side": "simplenergy:item/cauldron_generator_side","top": "simplenergy:item/cauldron_generator_top","bottom": "simplenergy:item/cauldron_generator_bottom"},"display": {"gui": {"rotation": [30,225,0],"translation": [0,0,0],"scale": [0.625,0.625,0.625]},"ground": {"rotation": [0,0,0],"translation": [0,3,0],"scale": [0.25,0.25,0.25]},"fixed": {"rotation": [0,0,0],"translation": [0,0,0],"scale": [0.5,0.5,0.5]},"thirdperson_righthand": {"rotation": [75,45,0],"translation": [0,2.5,0],"scale": [0.375,0.375,0.375]},"firstperson_righthand": {"rotation": [0,45,0],"translation": [0,0,0],"scale": [0.4,0.4,0.4]},"firstperson_lefthand": {"rotation": [0,225,0],"translation": [0,0,0],"scale": [0.4,0.4,0.4]}}},
 		"vanilla_block": {"id": "minecraft:cauldron","apply_facing": false},
+		"lore": [{"text": "[Energy Generation: 5 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 500 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:cauldron_generator",
 		"item_name": {"text": "Cauldron Generator","italic": false,"color": "white"}
 	},
@@ -397,19 +397,19 @@
 		"category": "energy",
 		"custom_data": {"energy": {"generation": 10,"max_storage": 800},"simplenergy": {"furnace_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["III","RFR","SSS"],"ingredients": {"I": {"item": "minecraft:iron_block"},"R": {"item": "minecraft:redstone"},"F": {"item": "minecraft:furnace"},"S": {"item": "minecraft:stone"}}}],
-		"lore": [{"text": "[Energy Generation: 10 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 800 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"vanilla_block": {"id": "minecraft:furnace","apply_facing": true},
+		"lore": [{"text": "[Energy Generation: 10 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 800 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:furnace_generator",
 		"item_name": {"text": "Furnace Generator","italic": false,"color": "white"}
 	},
 	"solar_panel": {
 		"id": "minecraft:furnace",
 		"category": "energy",
-		"custom_data": {"energy": {"generation": 4,"max_storage": 120},"simplenergy": {"solar_panel": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"energy": {"generation": 4,"max_storage": 600},"simplenergy": {"solar_panel": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["LLL","LDL","III"],"ingredients": {"L": {"item": "minecraft:lapis_lazuli"},"D": {"item": "minecraft:daylight_detector"},"I": {"item": "minecraft:iron_block"}}}],
-		"lore": [{"text": "[Energy Generation: 4 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 600 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"override_model": {"parent": "block/daylight_detector","textures": {"side": "simplenergy:item/solar_panel_side","top": "simplenergy:item/solar_panel_top"}},
 		"vanilla_block": {"id": "minecraft:daylight_detector","apply_facing": false},
+		"lore": [{"text": "[Energy Generation: 4 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 600 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:solar_panel",
 		"item_name": {"text": "Solar Panel","italic": false,"color": "white"}
 	},
@@ -418,8 +418,8 @@
 		"category": "energy",
 		"custom_data": {"energy": {"usage": 20,"max_storage": 1600},"simplenergy": {"electric_furnace": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["LLL","LFL","III"],"ingredients": {"L": {"item": "minecraft:lapis_lazuli"},"F": {"item": "minecraft:furnace"},"I": {"item": "minecraft:iron_block"}}}],
-		"lore": [{"text": "[Power Usage: 20 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1600 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"vanilla_block": {"id": "minecraft:furnace","apply_facing": true},
+		"lore": [{"text": "[Power Usage: 20 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1600 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:electric_furnace",
 		"item_name": {"text": "Electric Furnace","italic": false,"color": "white"}
 	},
@@ -428,8 +428,8 @@
 		"category": "energy",
 		"custom_data": {"energy": {"usage": 100,"max_storage": 8000},"simplenergy": {"electric_smelter": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["III","IFI","BBB"],"ingredients": {"I": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}},"F": {"components": {"minecraft:custom_data": {"simplenergy": {"electric_furnace": true}}}},"B": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_block": true}}}}}}],
-		"lore": [{"text": "[Power Usage: 100 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 8000 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"vanilla_block": {"id": "minecraft:furnace","apply_facing": true},
+		"lore": [{"text": "[Power Usage: 100 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 8000 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:electric_smelter",
 		"item_name": {"text": "Electric Smelter","italic": false,"color": "white"}
 	},
@@ -438,9 +438,9 @@
 		"category": "energy",
 		"custom_data": {"energy": {"usage": 40,"max_storage": 2400},"simplenergy": {"electric_brewing_stand": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["III","IBI","LLL"],"ingredients": {"I": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}},"B": {"item": "minecraft:brewing_stand"},"L": {"item": "minecraft:lapis_block"}}}],
-		"lore": [{"text": "[Power Usage: 40 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 2400 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"override_model": {"parent": "block/brewing_stand","textures": {"base": "simplenergy:item/electric_brewing_stand_base","stand": "simplenergy:item/electric_brewing_stand"},"display": {"gui": {"rotation": [30,225,0],"translation": [0,0,0],"scale": [0.625,0.625,0.625]},"ground": {"rotation": [0,0,0],"translation": [0,3,0],"scale": [0.25,0.25,0.25]},"fixed": {"rotation": [0,0,0],"translation": [0,0,0],"scale": [0.5,0.5,0.5]},"thirdperson_righthand": {"rotation": [75,45,0],"translation": [0,2.5,0],"scale": [0.375,0.375,0.375]},"firstperson_righthand": {"rotation": [0,45,0],"translation": [0,0,0],"scale": [0.4,0.4,0.4]},"firstperson_lefthand": {"rotation": [0,225,0],"translation": [0,0,0],"scale": [0.4,0.4,0.4]}}},
 		"vanilla_block": {"id": "minecraft:brewing_stand","apply_facing": false},
+		"lore": [{"text": "[Power Usage: 40 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 2400 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:electric_brewing_stand",
 		"item_name": {"text": "Electric Brewing Stand","italic": false,"color": "white"}
 	},
@@ -449,8 +449,8 @@
 		"category": "energy",
 		"custom_data": {"energy": {"usage": 120,"max_storage": 6400},"simplenergy": {"pulverizer": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["DDD","IFI","CCC"],"ingredients": {"D": {"item": "minecraft:diamond"},"I": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}},"F": {"components": {"minecraft:custom_data": {"simplenergy": {"electric_furnace": true}}}},"C": {"item": "minecraft:copper_block"}}}],
-		"lore": [{"text": "[Power Usage: 120 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 6400 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"vanilla_block": {"id": "minecraft:barrel","apply_facing": true},
+		"lore": [{"text": "[Power Usage: 120 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 6400 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:pulverizer",
 		"item_name": {"text": "Pulverizer","italic": false,"color": "white"}
 	},
@@ -458,30 +458,30 @@
 		"id": "minecraft:player_head",
 		"category": "energy",
 		"custom_data": {"energy": {"transfer": 40},"simplenergy": {"simple_cable": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
-		"lore": [{"text": "[Transfer Speed: 40 kW]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "simple_cable","shape": ["ICI","IOI","ICI"],"ingredients": {"I": {"item": "minecraft:iron_ingot"},"C": {"item": "minecraft:copper_ingot"},"O": {"item": "minecraft:coal"}}},{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "simple_cable","shape": ["ICI","IOI","ICI"],"ingredients": {"I": {"item": "minecraft:iron_ingot"},"C": {"item": "minecraft:copper_ingot"},"O": {"item": "minecraft:charcoal"}}},{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "simple_cable","shape": ["III","COC","III"],"ingredients": {"I": {"item": "minecraft:iron_ingot"},"C": {"item": "minecraft:copper_ingot"},"O": {"item": "minecraft:coal"}}},{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "simple_cable","shape": ["III","COC","III"],"ingredients": {"I": {"item": "minecraft:iron_ingot"},"C": {"item": "minecraft:copper_ingot"},"O": {"item": "minecraft:charcoal"}}}],
 		"profile": {"id": [-709098200,1001541428,-2043264882,-430220135],"properties": [{"name": "textures","value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTE2MTcxZjY3ZGUxNzQxMzA4ZTUxYzNmNTBkODE1M2YzMmIzNDljNDYwODgxYzZjODM5ZTYwMTk1NDM1ODliMSJ9fX0="}]},
 		"vanilla_block": {"apply_facing": false,"id": "minecraft:player_head{profile:{'id': [-709098200, 1001541428, -2043264882, -430220135], 'properties': [{'name': 'textures', 'value': 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTE2MTcxZjY3ZGUxNzQxMzA4ZTUxYzNmNTBkODE1M2YzMmIzNDljNDYwODgxYzZjODM5ZTYwMTk1NDM1ODliMSJ9fX0='}]}}"},
+		"lore": [{"text": "[Transfer Speed: 40 kW]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_name": {"text": "Simple Cable","italic": false,"color": "white"}
 	},
 	"advanced_cable": {
 		"id": "minecraft:player_head",
 		"category": "energy",
 		"custom_data": {"energy": {"transfer": 120},"simplenergy": {"advanced_cable": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
-		"lore": [{"text": "[Transfer Speed: 120 kW]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"simplenergy": {"simple_cable": true}}}},{"item": "minecraft:lapis_lazuli"},{"item": "minecraft:lapis_lazuli"},{"item": "minecraft:lapis_lazuli"},{"item": "minecraft:lapis_lazuli"},{"item": "minecraft:lapis_lazuli"},{"item": "minecraft:lapis_lazuli"},{"item": "minecraft:lapis_lazuli"},{"item": "minecraft:lapis_lazuli"}]}],
 		"profile": {"id": [-709098200,1001541428,-2043264882,-430220135],"properties": [{"name": "textures","value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzlmNjNlZGIwMDA4NWM1Mzk0Y2FmZjg2Yzk3ZmU4NGQxYmUwMGEwMDcxMDE4Y2YwOTAwZTdiNjMwYTY2Y2VlZSJ9fX0="}]},
 		"vanilla_block": {"apply_facing": false,"id": "minecraft:player_head{profile:{'id': [-709098200, 1001541428, -2043264882, -430220135], 'properties': [{'name': 'textures', 'value': 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzlmNjNlZGIwMDA4NWM1Mzk0Y2FmZjg2Yzk3ZmU4NGQxYmUwMGEwMDcxMDE4Y2YwOTAwZTdiNjMwYTY2Y2VlZSJ9fX0='}]}}"},
+		"lore": [{"text": "[Transfer Speed: 120 kW]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_name": {"text": "Advanced Cable","italic": false,"color": "white"}
 	},
 	"elite_cable": {
 		"id": "minecraft:player_head",
 		"category": "energy",
 		"custom_data": {"energy": {"transfer": 240},"simplenergy": {"elite_cable": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
-		"lore": [{"text": "[Transfer Speed: 240 kW]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"simplenergy": {"advanced_cable": true}}}},{"item": "minecraft:redstone_block"},{"item": "minecraft:redstone_block"},{"item": "minecraft:redstone_block"},{"item": "minecraft:redstone_block"}]}],
 		"profile": {"id": [-709098200,1001541428,-2043264882,-430220135],"properties": [{"name": "textures","value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjlmMzJjOWNkNTU2MzJmNjEzZjRhMDU2ZGEyYzJhYTkzZjMwOTk2ZGY2NzMxZTcyYmM1NDA4NzA4ZGE5MWYzOCJ9fX0="}]},
 		"vanilla_block": {"apply_facing": false,"id": "minecraft:player_head{profile:{'id': [-709098200, 1001541428, -2043264882, -430220135], 'properties': [{'name': 'textures', 'value': 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjlmMzJjOWNkNTU2MzJmNjEzZjRhMDU2ZGEyYzJhYTkzZjMwOTk2ZGY2NzMxZTcyYmM1NDA4NzA4ZGE5MWYzOCJ9fX0='}]}}"},
+		"lore": [{"text": "[Transfer Speed: 240 kW]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_name": {"text": "Elite Cable","italic": false,"color": "white"}
 	},
 	"manual": {
