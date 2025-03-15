@@ -17,7 +17,7 @@ execute as @a[tag=!global.ignore.gui,tag={namespace}.offhand] at @s run function
 """)
 	write_to_file(f"{functions}/utils/passive_offhand.mcfunction", f"""
 # Copy offhand
-data modify storage {namespace}:main OffhandTag set from entity @s Inventory[{{Slot:-106b}}].components."minecraft:custom_data"
+data modify storage {namespace}:main OffhandTag set from entity @s equipment.offhand.components."minecraft:custom_data"
 
 # Switch case
 execute if data storage {namespace}:main OffhandTag.{namespace}.multimeter anchored eyes positioned ^ ^ ^.2 run function {namespace}:utils/multimeter/passive/main
