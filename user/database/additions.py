@@ -4,6 +4,55 @@ import stouputils as stp
 from python_datapack.utils.database_helper import *
 from config import NAMESPACE
 
+def format_number(number: int) -> str:
+	""" Formats a number into a string with appropriate unit suffix (k, M, G, T).
+
+	Args:
+		number (int): The number to format
+	Returns:
+		str: Formatted string with unit suffix, ex: 12000 -> "12 M", 1200 -> "1200 k"
+	"""
+	if number < 9999:
+		return f"{number} k"
+	elif number < 9999999:
+		return f"{number/1000:.0f} M" 
+	elif number < 9999999999:
+		return f"{number/1000000:.0f} G"
+	else:
+		return f"{number/1000000000:.0f} T"
+
+def create_energy_lore(energy_data: dict) -> list[dict]:
+	""" Creates lore entries for energy-related blocks based on their energy data.
+	
+	Args:
+		energy_data (dict): Dictionary containing energy configuration values
+	Returns:
+		list[dict]: List of lore entries
+	"""
+	# Determine if this is a battery (no usage/generation) or a cable (only transfer)
+	is_battery: bool = "max_storage" in energy_data and "usage" not in energy_data and "generation" not in energy_data
+	is_cable: bool = "transfer" in energy_data and "max_storage" not in energy_data
+
+	# Create the lore config
+	lore_config: dict[str, tuple[str, str]] = {
+		"generation": ("Energy Generation", "W"),
+		"usage": ("Power Usage", "W"), 
+		"max_storage": ("Energy Storage" if is_battery else "Energy Buffer", "J"),
+		"transfer": ("Transfer Speed" if is_cable else "Energy Transfer", "W")
+	}
+
+	# Create the lore entries
+	lore: list[dict] = []
+	for key, (label, unit) in lore_config.items():
+		if key in energy_data:
+			lore.append({
+				"text": f"[{label}: {format_number(energy_data[key])}{unit}]",
+				"italic": False,
+				"color": "gray"
+			})
+
+	return lore
+
 def main(database: dict[str, dict]) -> dict[str, dict]:
 
 	# Give Additional data for every item
@@ -27,13 +76,13 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 		"battery_switcher_output": {"id": "minecraft:warped_fungus_on_a_stick", OVERRIDE_MODEL: {"parent":"item/handheld"}, "custom_data": {NAMESPACE: {"battery_switcher": True}}},
 		"battery_switcher_input": {"id": "minecraft:warped_fungus_on_a_stick", OVERRIDE_MODEL: {"parent":"item/handheld"}, "custom_data": {NAMESPACE: {"battery_switcher": True}}},
 
-		"simple_battery": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 10000}},			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","CRC","III"],"ingredients":{"C":ingr_repr("minecraft:copper_block"),"R":ingr_repr("minecraft:redstone"),"I":ingr_repr("minecraft:iron_ingot")}}],								"lore": [{"text":"[Energy Storage: 10 MJ]","italic":False,"color":"gray"}]},
-		"advanced_battery": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 25000}},		RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["GGG","GXG","SSS"],"ingredients":{"G":ingr_repr("minecraft:gold_block"),"X":ingr_repr("simple_battery", NAMESPACE),"S":ingr_repr("simplunium_ingot", NAMESPACE)}}],					"lore": [{"text":"[Energy Storage: 25 MJ]","italic":False,"color":"gray"}]},
-		"elite_battery": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 50000}},			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RRR","RXR","SSS"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"X":ingr_repr("advanced_battery", NAMESPACE),"S":ingr_repr("simplunium_block", NAMESPACE)}}],				"lore": [{"text":"[Energy Storage: 50 MJ]","italic":False,"color":"gray"}]},
-		"creative_battery": {"id": CUSTOM_BLOCK_VANILLA, "custom_data": {"energy": {"storage":2000000000, "max_storage": 2147483647}}, "lore": [{"text":"[Energy Storage: 2147 GJ]","italic":False,"color":"gray"}]},
+		"simple_battery": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 10000}},			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","CRC","III"],"ingredients":{"C":ingr_repr("minecraft:copper_block"),"R":ingr_repr("minecraft:redstone"),"I":ingr_repr("minecraft:iron_ingot")}}]},
+		"advanced_battery": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 25000}},		RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["GGG","GXG","SSS"],"ingredients":{"G":ingr_repr("minecraft:gold_block"),"X":ingr_repr("simple_battery", NAMESPACE),"S":ingr_repr("simplunium_ingot", NAMESPACE)}}]},
+		"elite_battery": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 50000}},			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RRR","RXR","SSS"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"X":ingr_repr("advanced_battery", NAMESPACE),"S":ingr_repr("simplunium_block", NAMESPACE)}}]},
+		"creative_battery": {"id": CUSTOM_BLOCK_VANILLA, "custom_data": {"energy": {"storage":2000000000, "max_storage": 2147483647}}},
 
 		"cauldron_generator": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":5, "max_storage": 500}},						RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["I I","IRI","III"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"R":ingr_repr("minecraft:redstone")}}],																		"lore": [{"text":"[Energy Generation: 5 kW]","italic":False,"color":"gray"},{"text":"[Energy Buffer: 500 kJ]","italic":False,"color":"gray"}],
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":5, "max_storage": 500}},						RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["I I","IRI","III"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"R":ingr_repr("minecraft:redstone")}}],
 			OVERRIDE_MODEL: {"parent":"block/cauldron", "textures": {"side": f"{NAMESPACE}:item/cauldron_generator_side", "top": f"{NAMESPACE}:item/cauldron_generator_top", "bottom": f"{NAMESPACE}:item/cauldron_generator_bottom"},
 			"display":{
 				"gui":{"rotation":[30,225,0],"translation":[0,0,0],"scale":[0.625,0.625,0.625]},
@@ -43,16 +92,16 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 				"firstperson_righthand":{"rotation":[0,45,0],"translation":[0,0,0],"scale":[0.40,0.40,0.40]},
 				"firstperson_lefthand":{"rotation":[0,225,0],"translation":[0,0,0],"scale":[0.40,0.40,0.40]}
 		}}},
-		"furnace_generator": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":10, "max_storage": 800}},		RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","RFR","SSS"],"ingredients":{"I":ingr_repr("minecraft:iron_block"),"R":ingr_repr("minecraft:redstone"),"F":ingr_repr("minecraft:furnace"),"S":ingr_repr("minecraft:stone")}}],	"lore": [{"text":"[Energy Generation: 10 kW]","italic":False,"color":"gray"},{"text":"[Energy Buffer: 800 kJ]","italic":False,"color":"gray"}]},
+		"furnace_generator": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":10, "max_storage": 800}},		RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","RFR","SSS"],"ingredients":{"I":ingr_repr("minecraft:iron_block"),"R":ingr_repr("minecraft:redstone"),"F":ingr_repr("minecraft:furnace"),"S":ingr_repr("minecraft:stone")}}]},
 		"solar_panel": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":4, "max_storage": 120}},						RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LDL","III"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"D":ingr_repr("minecraft:daylight_detector"),"I":ingr_repr("minecraft:iron_block")}}],										"lore": [{"text":"[Energy Generation: 4 kW]","italic":False,"color":"gray"},{"text":"[Energy Buffer: 600 kJ]","italic":False,"color":"gray"}],
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":4, "max_storage": 600}},						RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LDL","III"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"D":ingr_repr("minecraft:daylight_detector"),"I":ingr_repr("minecraft:iron_block")}}],
 			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{NAMESPACE}:item/solar_panel_side", "top": f"{NAMESPACE}:item/solar_panel_top"}},
 		},
 
-		"electric_furnace": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":20, "max_storage": 1600}},				RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LFL","III"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"F":ingr_repr("minecraft:furnace"),"I":ingr_repr("minecraft:iron_block")}}],							"lore": [{"text":"[Power Usage: 20 kW]","italic":False,"color":"gray"},{"text":"[Energy Buffer: 1600 kJ]","italic":False,"color":"gray"}]},
-		"electric_smelter": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":100, "max_storage": 8000}},				RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","IFI","BBB"],"ingredients":{"I":ingr_repr("simplunium_ingot", NAMESPACE),"F":ingr_repr("electric_furnace", NAMESPACE),"B":ingr_repr("simplunium_block", NAMESPACE)}}],		"lore": [{"text":"[Power Usage: 100 kW]","italic":False,"color":"gray"},{"text":"[Energy Buffer: 8000 kJ]","italic":False,"color":"gray"}]},
+		"electric_furnace": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":20, "max_storage": 1600}},				RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LFL","III"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"F":ingr_repr("minecraft:furnace"),"I":ingr_repr("minecraft:iron_block")}}]},
+		"electric_smelter": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":100, "max_storage": 8000}},				RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","IFI","BBB"],"ingredients":{"I":ingr_repr("simplunium_ingot", NAMESPACE),"F":ingr_repr("electric_furnace", NAMESPACE),"B":ingr_repr("simplunium_block", NAMESPACE)}}]},
 		"electric_brewing_stand": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":40, "max_storage": 2400}},	RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","IBI","LLL"],"ingredients":{"I":ingr_repr("simplunium_ingot", NAMESPACE),"B":ingr_repr("minecraft:brewing_stand"),"L":ingr_repr("minecraft:lapis_block")}}],											"lore": [{"text":"[Power Usage: 40 kW]","italic":False,"color":"gray"},{"text":"[Energy Buffer: 2400 kJ]","italic":False,"color":"gray"}],
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":40, "max_storage": 2400}},	RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","IBI","LLL"],"ingredients":{"I":ingr_repr("simplunium_ingot", NAMESPACE),"B":ingr_repr("minecraft:brewing_stand"),"L":ingr_repr("minecraft:lapis_block")}}],
 			OVERRIDE_MODEL: {"parent":"block/brewing_stand","textures":{"base":f"{NAMESPACE}:item/electric_brewing_stand_base","stand":f"{NAMESPACE}:item/electric_brewing_stand"},
 			"display":{
 				"gui":{"rotation":[30,225,0],"translation":[0,0,0],"scale":[0.625,0.625,0.625]},
@@ -62,10 +111,10 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 				"firstperson_righthand":{"rotation":[0,45,0],"translation":[0,0,0],"scale":[0.40,0.40,0.40]},
 				"firstperson_lefthand":{"rotation":[0,225,0],"translation":[0,0,0],"scale":[0.40,0.40,0.40]}
 		}}},
-		"pulverizer": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":120, "max_storage": 6400}},					RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DDD","IFI","CCC"],"ingredients":{"D":ingr_repr("minecraft:diamond"),"I":ingr_repr("simplunium_ingot", NAMESPACE),"F":ingr_repr("electric_furnace", NAMESPACE),"C":ingr_repr("minecraft:copper_block")}}],	"lore": [{"text":"[Power Usage: 120 kW]","italic":False,"color":"gray"},{"text":"[Energy Buffer: 6400 kJ]","italic":False,"color":"gray"}]},
+		"pulverizer": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":120, "max_storage": 6400}},					RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DDD","IFI","CCC"],"ingredients":{"D":ingr_repr("minecraft:diamond"),"I":ingr_repr("simplunium_ingot", NAMESPACE),"F":ingr_repr("electric_furnace", NAMESPACE),"C":ingr_repr("minecraft:copper_block")}}]},
 
 		"simple_cable": {
-			"id": CUSTOM_BLOCK_HEAD, CATEGORY: "energy", "custom_data": {"energy": {"transfer":40}}, "lore": [{"text":"[Transfer Speed: 40 kW]","italic":False,"color":"gray"}],
+			"id": CUSTOM_BLOCK_HEAD, CATEGORY: "energy", "custom_data": {"energy": {"transfer":40}},
 			RESULT_OF_CRAFTING:[
 				{"type":"crafting_shaped","result_count":1,"category":"misc","group":"simple_cable","shape":["ICI","IOI","ICI"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:coal")}},
 				{"type":"crafting_shaped","result_count":1,"category":"misc","group":"simple_cable","shape":["ICI","IOI","ICI"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:charcoal")}},
@@ -78,7 +127,7 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 			},
 		},
 		"advanced_cable": {
-			"id": CUSTOM_BLOCK_HEAD, CATEGORY: "energy", "custom_data": {"energy": {"transfer":120}}, "lore": [{"text":"[Transfer Speed: 120 kW]","italic":False,"color":"gray"}],
+			"id": CUSTOM_BLOCK_HEAD, CATEGORY: "energy", "custom_data": {"energy": {"transfer":120}},
 			RESULT_OF_CRAFTING:[
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("simple_cable", NAMESPACE)] + 8*[ingr_repr("minecraft:lapis_lazuli")]},
 			],
@@ -88,7 +137,7 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 			},
 		},
 		"elite_cable": {
-			"id": CUSTOM_BLOCK_HEAD, CATEGORY: "energy", "custom_data": {"energy": {"transfer":240}}, "lore": [{"text":"[Transfer Speed: 240 kW]","italic":False,"color":"gray"}],
+			"id": CUSTOM_BLOCK_HEAD, CATEGORY: "energy", "custom_data": {"energy": {"transfer":240}},
 			RESULT_OF_CRAFTING:[
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("advanced_cable", NAMESPACE)] + 4*[ingr_repr("minecraft:redstone_block")]},
 			],
@@ -127,6 +176,11 @@ def main(database: dict[str, dict]) -> dict[str, dict]:
 			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients": [ingr_repr("manual", NAMESPACE)]},
 		],
 	}
+
+	# Add lore to energy-related blocks
+	for item_data in database_additions.values():
+		if "energy" in item_data.get("custom_data", {}):
+			item_data["lore"] = item_data.get("lore", []) + create_energy_lore(item_data["custom_data"]["energy"])
 
 	# Update the database with new data
 	for k, v in database_additions.items():
