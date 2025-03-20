@@ -2,7 +2,7 @@
 # Imports
 from typing import Any
 import stouputils as stp
-from python_datapack.utils.io import super_copy, super_merge_dict, write_to_advancement
+from python_datapack.utils.io import super_copy, super_merge_dict, write_advancement
 
 # Add visible advancements to the datapack
 def add_visible_advancements(config: dict) -> None:
@@ -84,7 +84,7 @@ def add_visible_advancements(config: dict) -> None:
 
 		# Set the advancement
 		advancement = super_merge_dict(advancement, adv)
-		write_to_advancement(config, f"{ns}:visible/{item}", stp.super_json_dump(advancement, max_level = 7))
+		write_advancement(config, f"{ns}:visible/{item}", stp.super_json_dump(advancement, max_level = 7))
 
 	return
 

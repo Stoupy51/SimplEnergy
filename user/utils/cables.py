@@ -23,7 +23,7 @@ execute unless entity @s[tag={ns}.custom_block] run return 0
 	# Setup parent cable model
 	parent_model: dict = {"parent":"block/block","display":{"fixed":{"rotation":[180,0,0],"translation":[0,-4,0],"scale":[1.005,1.005,1.005]}}}
 	path: str = f"{build_resource_pack}/assets/{ns}/models/block/cable_base.json"
-	write_to_file(path, stp.super_json_dump(parent_model))
+	write_file(path, stp.super_json_dump(parent_model))
 
 	# Setup cables models
 	cables: list[str] = [item for item in database if "cable" in item]
@@ -50,7 +50,7 @@ execute unless entity @s[tag={ns}.custom_block] run return 0
 
 					# Write the new json
 					dest: str = f"{build_resource_pack}/assets/{ns}/models/block/{cable}/{file}"
-					write_to_file(dest, stp.super_json_dump(new_json, max_level = 3))
+					write_file(dest, stp.super_json_dump(new_json, max_level = 3))
 
 		# Link vanilla model
 		for i in range(64):
@@ -69,7 +69,7 @@ execute unless entity @s[tag={ns}.custom_block] run return 0
 			content["model"]["entries"].append({"threshold": i, "model":{"type": "minecraft:model", "model": model_path}})
 
 		# Write the vanilla model for this cable
-		write_to_file(base_model, stp.super_json_dump(content, max_level=3))
+		write_file(base_model, stp.super_json_dump(content, max_level=3))
 		
 		# Copy texture
 		dest: str = f"{build_resource_pack}/assets/{ns}/textures/block/{cable}.png"
@@ -79,7 +79,7 @@ execute unless entity @s[tag={ns}.custom_block] run return 0
 			super_copy(src + ".mcmeta", dest + ".mcmeta")
 		
 		# On placement, rotate
-		write_to_function(config, f"{ns}:custom_blocks/{cable}/place_secondary", f"""
+		write_function(config, f"{ns}:custom_blocks/{cable}/place_secondary", f"""
 # Cable rotation for models, and common cable tag
 data modify entity @s item_display set value "fixed"
 tag @s add {ns}.cable
@@ -98,10 +98,10 @@ execute store result storage {ns}:main model_data.floats[0] float 1 run scoreboa
 data modify entity @s item.components."minecraft:custom_model_data" set from storage {ns}:main model_data
 data remove storage {ns}:main model_data
 """
-	write_to_function(config, f"{ns}:calls/cable_update", cable_update_content)
+	write_function(config, f"{ns}:calls/cable_update", cable_update_content)
 
 	# Add the function to the cable_update function tag
-	write_to_tags(config, "energy:function/v1/cable_update", stp.super_json_dump({"values": [f"{ns}:calls/cable_update"]}))
+	write_tags(config, "energy:function/v1/cable_update", stp.super_json_dump({"values": [f"{ns}:calls/cable_update"]}))
 
 	return
 
