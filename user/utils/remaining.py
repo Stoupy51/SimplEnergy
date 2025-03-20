@@ -5,319 +5,317 @@ from python_datapack.utils.io import *
 
 # Setup energy balancing
 def setup_remaining(config: dict) -> None:
-	namespace: str = config['namespace']
-	build_datapack: str = config['build_datapack']
-	functions: str = f"{build_datapack}/data/{namespace}/function"
-	database: dict[str, dict] = config['database']
+	ns: str = config["namespace"]
+	database: dict[str, dict] = config["database"]
 
 	# Passive multimeter & battery switcher working every 2 ticks
 	write_to_versioned_function(config, "tick_2", f"""
 # Passive offhand loop
-execute as @a[tag=!global.ignore.gui,tag={namespace}.offhand] at @s run function {namespace}:utils/passive_offhand
+execute as @a[tag=!global.ignore.gui,tag={ns}.offhand] at @s run function {ns}:utils/passive_offhand
 """)
-	write_to_file(f"{functions}/utils/passive_offhand.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/passive_offhand", f"""
 # Copy offhand
-data modify storage {namespace}:main OffhandTag set from entity @s equipment.offhand.components."minecraft:custom_data"
+data modify storage {ns}:main OffhandTag set from entity @s equipment.offhand.components."minecraft:custom_data"
 
 # Switch case
-execute if data storage {namespace}:main OffhandTag.{namespace}.multimeter anchored eyes positioned ^ ^ ^.2 run function {namespace}:utils/multimeter/passive/main
-execute if data storage {namespace}:main OffhandTag.{namespace}.battery_switcher anchored eyes positioned ^ ^ ^.2 run function {namespace}:utils/battery_switcher/passive/pre_raycast
+execute if data storage {ns}:main OffhandTag.{ns}.multimeter anchored eyes positioned ^ ^ ^.2 run function {ns}:utils/multimeter/passive/main
+execute if data storage {ns}:main OffhandTag.{ns}.battery_switcher anchored eyes positioned ^ ^ ^.2 run function {ns}:utils/battery_switcher/passive/pre_raycast
 
 # Memory clean up
-data remove storage {namespace}:main OffhandTag
+data remove storage {ns}:main OffhandTag
 """)
 	
 
 	# Setup stats function
-	write_to_file(f"{functions}/_stats.mcfunction", f"""
+	write_to_function(config, f"{ns}:_stats", f"""
 # Get numbers
-execute store result score #entities {namespace}.data if entity @e[scores={{energy.transfer_rate=1..}}]
-execute store result score #cables {namespace}.data if entity @e[scores={{energy.transfer_rate=1..}},tag=energy.cable]
-execute store result score #devices {namespace}.data if entity @e[scores={{energy.transfer_rate=1..}},tag=!energy.cable]
-execute store result score #senders {namespace}.data if entity @e[scores={{energy.transfer_rate=1..}},tag=energy.send,tag=!energy.receive]
-execute store result score #receivers {namespace}.data if entity @e[scores={{energy.transfer_rate=1..}},tag=!energy.send,tag=energy.receive]
-execute store result score #batteries {namespace}.data if entity @e[scores={{energy.transfer_rate=1..}},tag=energy.send,tag=energy.receive]
+execute store result score #entities {ns}.data if entity @e[scores={{energy.transfer_rate=1..}}]
+execute store result score #cables {ns}.data if entity @e[scores={{energy.transfer_rate=1..}},tag=energy.cable]
+execute store result score #devices {ns}.data if entity @e[scores={{energy.transfer_rate=1..}},tag=!energy.cable]
+execute store result score #senders {ns}.data if entity @e[scores={{energy.transfer_rate=1..}},tag=energy.send,tag=!energy.receive]
+execute store result score #receivers {ns}.data if entity @e[scores={{energy.transfer_rate=1..}},tag=!energy.send,tag=energy.receive]
+execute store result score #batteries {ns}.data if entity @e[scores={{energy.transfer_rate=1..}},tag=energy.send,tag=energy.receive]
 
-execute store result score #custom_blocks {namespace}.data if entity @e[tag={namespace}.custom_block]
-execute store result score #custom_ores {namespace}.data if entity @e[tag={namespace}.vanilla.minecraft_polished_deepslate]
-execute store result score #markers {namespace}.data if entity @e[tag=furnace_nbt_recipes.furnace]
+execute store result score #custom_blocks {ns}.data if entity @e[tag={ns}.custom_block]
+execute store result score #custom_ores {ns}.data if entity @e[tag={ns}.vanilla.minecraft_polished_deepslate]
+execute store result score #markers {ns}.data if entity @e[tag=furnace_nbt_recipes.furnace]
 
 # Display numbers
 tellraw @s [{{"text":"\n[Datapack Energy Stats]","color":"yellow"}}]
-tellraw @s ["",{{"text":"Entities: ","color":"gray"}},{{"score":{{"name":"#entities","objective":"{namespace}.data"}},"color":"gold"}}]
-tellraw @s ["",{{"text":"Cables: ","color":"gray"}},{{"score":{{"name":"#cables","objective":"{namespace}.data"}},"color":"gold"}}]
-tellraw @s ["",{{"text":"Devices: ","color":"gray"}},{{"score":{{"name":"#devices","objective":"{namespace}.data"}},"color":"gold"}}]
-tellraw @s ["",{{"text":"Only energy.send: ","color":"gray"}},{{"score":{{"name":"#senders","objective":"{namespace}.data"}},"color":"gold"}}]
-tellraw @s ["",{{"text":"Only energy.receive: ","color":"gray"}},{{"score":{{"name":"#receivers","objective":"{namespace}.data"}},"color":"gold"}}]
-tellraw @s ["",{{"text":"Send & Receive: ","color":"gray"}},{{"score":{{"name":"#batteries","objective":"{namespace}.data"}},"color":"gold"}}]
+tellraw @s ["",{{"text":"Entities: ","color":"gray"}},{{"score":{{"name":"#entities","objective":"{ns}.data"}},"color":"gold"}}]
+tellraw @s ["",{{"text":"Cables: ","color":"gray"}},{{"score":{{"name":"#cables","objective":"{ns}.data"}},"color":"gold"}}]
+tellraw @s ["",{{"text":"Devices: ","color":"gray"}},{{"score":{{"name":"#devices","objective":"{ns}.data"}},"color":"gold"}}]
+tellraw @s ["",{{"text":"Only energy.send: ","color":"gray"}},{{"score":{{"name":"#senders","objective":"{ns}.data"}},"color":"gold"}}]
+tellraw @s ["",{{"text":"Only energy.receive: ","color":"gray"}},{{"score":{{"name":"#receivers","objective":"{ns}.data"}},"color":"gold"}}]
+tellraw @s ["",{{"text":"Send & Receive: ","color":"gray"}},{{"score":{{"name":"#batteries","objective":"{ns}.data"}},"color":"gold"}}]
 
 tellraw @s [{{"text":"\n[SimplEnergy Stats]","color":"green"}}]
-tellraw @s ["",{{"text":"Custom blocks loaded: ","color":"gray"}},{{"score":{{"name":"#custom_blocks","objective":"{namespace}.data"}},"color":"gold"}}]
-tellraw @s ["",{{"text":"Custom ores: ","color":"gray"}},{{"score":{{"name":"#custom_ores","objective":"{namespace}.data"}},"color":"gold"}}]
-tellraw @s ["",{{"text":"Markers on furnaces: ","color":"gray"}},{{"score":{{"name":"#markers","objective":"{namespace}.data"}},"color":"gold"}}]
+tellraw @s ["",{{"text":"Custom blocks loaded: ","color":"gray"}},{{"score":{{"name":"#custom_blocks","objective":"{ns}.data"}},"color":"gold"}}]
+tellraw @s ["",{{"text":"Custom ores: ","color":"gray"}},{{"score":{{"name":"#custom_ores","objective":"{ns}.data"}},"color":"gold"}}]
+tellraw @s ["",{{"text":"Markers on furnaces: ","color":"gray"}},{{"score":{{"name":"#markers","objective":"{ns}.data"}},"color":"gold"}}]
 """)
 	
 
 	# Check daylight power predicate
 	json_content: dict = {"condition":"minecraft:any_of","terms":[{"condition":"minecraft:location_check","predicate":{"block":{"state":{"inverted":"false","power":{"min":"10","max":"15"}}}}},{"condition":"minecraft:location_check","predicate":{"block":{"state":{"inverted":"true","power":{"min":"0","max":"5"}}}}}]}
-	write_to_file(f"{build_datapack}/data/{namespace}/predicate/check_daylight_power.json", stp.super_json_dump(json_content, max_level = -1))
+	write_to_predicate(config, f"{ns}:check_daylight_power", stp.super_json_dump(json_content, max_level = -1))
 
 
 	# Setup block tags
 	json_content: dict = {"replace":False,"values":["minecraft:air","minecraft:cave_air","minecraft:void_air","minecraft:structure_void"]}
-	write_to_file(f"{build_datapack}/data/{namespace}/tags/block/air.json", stp.super_json_dump(json_content, max_level = -1))
-	json_content: dict = {"replace":False,"values":[f"#{namespace}:air","#minecraft:replaceable","#minecraft:wool_carpets","#minecraft:standing_signs","#minecraft:wall_signs","#minecraft:saplings","#minecraft:leaves","#minecraft:signs","minecraft:moss_carpet","minecraft:peony","minecraft:rose_bush","minecraft:lilac","minecraft:sunflower","minecraft:lily_pad","minecraft:vine","minecraft:red_mushroom","minecraft:brown_mushroom","minecraft:cobweb","minecraft:water","minecraft:kelp_plant","minecraft:seagrass","minecraft:ladder","minecraft:snow","minecraft:powder_snow","minecraft:moving_piston","minecraft:oak_sapling","minecraft:spruce_sapling","minecraft:birch_sapling","minecraft:jungle_sapling","minecraft:acacia_sapling","minecraft:dark_oak_sapling","minecraft:mangrove_propagule","#minecraft:flowers","minecraft:mangrove_propagule","minecraft:cobweb","minecraft:torch","minecraft:wall_torch","minecraft:soul_torch","minecraft:soul_wall_torch","minecraft:spore_blossom","minecraft:brown_mushroom","minecraft:red_mushroom","minecraft:crimson_fungus","minecraft:warped_fungus","minecraft:crimson_roots","minecraft:warped_roots","minecraft:nether_sprouts","minecraft:weeping_vines","minecraft:twisting_vines","minecraft:water","minecraft:sugar_cane","minecraft:kelp","minecraft:hanging_roots","minecraft:small_dripleaf","minecraft:bamboo","minecraft:end_rod","minecraft:vine","#minecraft:corals","minecraft:dead_tube_coral","minecraft:dead_brain_coral","minecraft:dead_bubble_coral","minecraft:dead_fire_coral","minecraft:dead_horn_coral","minecraft:dead_tube_coral_fan","minecraft:dead_brain_coral_fan","minecraft:dead_bubble_coral_fan","minecraft:dead_fire_coral_fan","minecraft:dead_horn_coral_fan","minecraft:scaffolding","#minecraft:flower_pots","#minecraft:banners","minecraft:lantern","minecraft:soul_lantern","minecraft:candle","minecraft:small_amethyst_bud","minecraft:medium_amethyst_bud","minecraft:large_amethyst_bud","minecraft:amethyst_cluster","minecraft:redstone_wire","minecraft:repeater","minecraft:comparator","minecraft:lever","minecraft:tripwire_hook","#minecraft:buttons","#minecraft:pressure_plates","#minecraft:rails","minecraft:conduit"]}
-	write_to_file(f"{build_datapack}/data/{namespace}/tags/block/non_solid.json", stp.super_json_dump(json_content, max_level = -1))
+	write_to_tags(config, f"{ns}:block/air", stp.super_json_dump(json_content, max_level = -1))
+	json_content: dict = {"replace":False,"values":[f"#{ns}:air","#minecraft:replaceable","#minecraft:wool_carpets","#minecraft:standing_signs","#minecraft:wall_signs","#minecraft:saplings","#minecraft:leaves","#minecraft:signs","minecraft:moss_carpet","minecraft:peony","minecraft:rose_bush","minecraft:lilac","minecraft:sunflower","minecraft:lily_pad","minecraft:vine","minecraft:red_mushroom","minecraft:brown_mushroom","minecraft:cobweb","minecraft:water","minecraft:kelp_plant","minecraft:seagrass","minecraft:ladder","minecraft:snow","minecraft:powder_snow","minecraft:moving_piston","minecraft:oak_sapling","minecraft:spruce_sapling","minecraft:birch_sapling","minecraft:jungle_sapling","minecraft:acacia_sapling","minecraft:dark_oak_sapling","minecraft:mangrove_propagule","#minecraft:flowers","minecraft:mangrove_propagule","minecraft:cobweb","minecraft:torch","minecraft:wall_torch","minecraft:soul_torch","minecraft:soul_wall_torch","minecraft:spore_blossom","minecraft:brown_mushroom","minecraft:red_mushroom","minecraft:crimson_fungus","minecraft:warped_fungus","minecraft:crimson_roots","minecraft:warped_roots","minecraft:nether_sprouts","minecraft:weeping_vines","minecraft:twisting_vines","minecraft:water","minecraft:sugar_cane","minecraft:kelp","minecraft:hanging_roots","minecraft:small_dripleaf","minecraft:bamboo","minecraft:end_rod","minecraft:vine","#minecraft:corals","minecraft:dead_tube_coral","minecraft:dead_brain_coral","minecraft:dead_bubble_coral","minecraft:dead_fire_coral","minecraft:dead_horn_coral","minecraft:dead_tube_coral_fan","minecraft:dead_brain_coral_fan","minecraft:dead_bubble_coral_fan","minecraft:dead_fire_coral_fan","minecraft:dead_horn_coral_fan","minecraft:scaffolding","#minecraft:flower_pots","#minecraft:banners","minecraft:lantern","minecraft:soul_lantern","minecraft:candle","minecraft:small_amethyst_bud","minecraft:medium_amethyst_bud","minecraft:large_amethyst_bud","minecraft:amethyst_cluster","minecraft:redstone_wire","minecraft:repeater","minecraft:comparator","minecraft:lever","minecraft:tripwire_hook","#minecraft:buttons","#minecraft:pressure_plates","#minecraft:rails","minecraft:conduit"]}
+	write_to_tags(config, f"{ns}:block/non_solid", stp.super_json_dump(json_content, max_level = -1))
 
 
 	## Right click detection
-	write_to_versioned_function(config, "load/confirm_load", f"scoreboard objectives add {namespace}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick\n")
-	write_to_file(f"{functions}/utils/on_right_click.mcfunction", f"""
+	write_to_versioned_function(config, "load/confirm_load", f"scoreboard objectives add {ns}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick\n")
+	write_to_function(config, f"{ns}:utils/on_right_click", f"""
 # Advancement revoke
-advancement revoke @s only {namespace}:right_click
+advancement revoke @s only {ns}:right_click
 
 # Copy SelectedItem tag to storage and offhand
-data modify storage {namespace}:main SelectedItemTag set from entity @s SelectedItem.components."minecraft:custom_data"
-data modify storage {namespace}:main OffhandTag set from entity @s equipment.offhand.components."minecraft:custom_data"
+data modify storage {ns}:main SelectedItemTag set from entity @s SelectedItem.components."minecraft:custom_data"
+data modify storage {ns}:main OffhandTag set from entity @s equipment.offhand.components."minecraft:custom_data"
 
 # Switch on SelectedItem tag to run the right click function
-execute if data storage {namespace}:main SelectedItemTag.{namespace}.multimeter run function {namespace}:utils/multimeter/right_click/main
-execute if data storage {namespace}:main SelectedItemTag.{namespace}.wrench run function {namespace}:utils/wrench/right_click
+execute if data storage {ns}:main SelectedItemTag.{ns}.multimeter run function {ns}:utils/multimeter/right_click/main
+execute if data storage {ns}:main SelectedItemTag.{ns}.wrench run function {ns}:utils/wrench/right_click
 
 # Switch on OffhandTag tag
-execute if data storage {namespace}:main OffhandTag.{namespace}.multimeter run function {namespace}:utils/multimeter/right_click/main
-execute if data storage {namespace}:main OffhandTag.{namespace}.wrench run function {namespace}:utils/wrench/right_click
-execute if data storage {namespace}:main OffhandTag.{namespace}.battery_switcher run function {namespace}:utils/battery_switcher/right_click/main
+execute if data storage {ns}:main OffhandTag.{ns}.multimeter run function {ns}:utils/multimeter/right_click/main
+execute if data storage {ns}:main OffhandTag.{ns}.wrench run function {ns}:utils/wrench/right_click
+execute if data storage {ns}:main OffhandTag.{ns}.battery_switcher run function {ns}:utils/battery_switcher/right_click/main
 
 
 # Memory clean up
-data remove storage {namespace}:main OffhandTag
-data remove storage {namespace}:main SelectedItemTag
-scoreboard players reset @s {namespace}.right_click
+data remove storage {ns}:main OffhandTag
+data remove storage {ns}:main SelectedItemTag
+scoreboard players reset @s {ns}.right_click
 """)
-	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":[{"condition":"minecraft:entity_scores","entity":"this","scores":{f"{namespace}.right_click":{"min":1}}}]}}},"requirements":[["requirement"]],"rewards":{"function":f"{namespace}:utils/on_right_click"}}
-	write_to_file(f"{build_datapack}/data/{namespace}/advancement/right_click.json", stp.super_json_dump(json_content, max_level = -1))
+	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":[{"condition":"minecraft:entity_scores","entity":"this","scores":{f"{ns}.right_click":{"min":1}}}]}}},"requirements":[["requirement"]],"rewards":{"function":f"{ns}:utils/on_right_click"}}
+	write_to_advancement(config, f"{ns}:right_click", stp.super_json_dump(json_content, max_level = -1))
 
 
 	# Setup wrench stuff
-	json_content: dict = {"values": [f"{namespace}:utils/wrench/rotate/furnace"]}
-	write_to_file(f"{build_datapack}/data/{namespace}/tags/function/calls/wrench_rotate.json", stp.super_json_dump(json_content, max_level = -1))
-	write_to_file(f"{functions}/utils/wrench/right_click.mcfunction", f"""
+	json_content: dict = {"values": [f"{ns}:utils/wrench/rotate/furnace"]}
+	write_to_tags(config, f"{ns}:function/calls/wrench_rotate", stp.super_json_dump(json_content, max_level = -1))
+	write_to_function(config, f"{ns}:utils/wrench/right_click", f"""
 # Look at where player is looking at and stop when found a block
-scoreboard players set #raycast {namespace}.data 0
-execute anchored eyes positioned ^ ^ ^.2 run function {namespace}:utils/wrench/raycast
-scoreboard players reset #raycast {namespace}.data
+scoreboard players set #raycast {ns}.data 0
+execute anchored eyes positioned ^ ^ ^.2 run function {ns}:utils/wrench/raycast
+scoreboard players reset #raycast {ns}.data
 """)
-	write_to_file(f"{functions}/utils/wrench/raycast.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/wrench/raycast", f"""
 # Stop case when raycast hits a block that is from wrench_raycast tag
-execute unless block ~ ~ ~ #{namespace}:non_solid align xyz run function {namespace}:utils/wrench/stop_case
+execute unless block ~ ~ ~ #{ns}:non_solid align xyz run function {ns}:utils/wrench/stop_case
 
 # Continue raycast until it hits a block that is solid or the max distance is reached
-execute if score #raycast {namespace}.data matches 0 if entity @s[distance=..5] if block ~ ~ ~ #{namespace}:non_solid positioned ^ ^ ^.2 run function {namespace}:utils/wrench/raycast
+execute if score #raycast {ns}.data matches 0 if entity @s[distance=..5] if block ~ ~ ~ #{ns}:non_solid positioned ^ ^ ^.2 run function {ns}:utils/wrench/raycast
 """)
-	write_to_file(f"{functions}/utils/wrench/stop_case.mcfunction", f"""
-# Try to rotation block from {namespace} or mechanization or break cable
-scoreboard players set #raycast {namespace}.data 1
-scoreboard players set #success {namespace}.data 0
+	write_to_function(config, f"{ns}:utils/wrench/stop_case", f"""
+# Try to rotation block from {ns} or mechanization or break cable
+scoreboard players set #raycast {ns}.data 1
+scoreboard players set #success {ns}.data 0
 
-execute as @n[tag={namespace}.rotatable,dx=0,dy=0,dz=0] at @s run function {namespace}:utils/wrench/rotate
-execute if score #success {namespace}.data matches 0 store result score #success {namespace}.data as @n[tag=mechanization.rotatable,dx=0,dy=0,dz=0] at @s run function mechanization:base/player/wrench/rotate_machine
-execute if score #success {namespace}.data matches 0 store result score #success {namespace}.data as @n[tag=mechanization.cable,dx=0,dy=0,dz=0] at @s run function #mechanization:wrench_break
-execute if score #success {namespace}.data matches 0 store result score #success {namespace}.data at @n[tag={namespace}.cable,dx=0,dy=0,dz=0] run setblock ~ ~ ~ air destroy
+execute as @n[tag={ns}.rotatable,dx=0,dy=0,dz=0] at @s run function {ns}:utils/wrench/rotate
+execute if score #success {ns}.data matches 0 store result score #success {ns}.data as @n[tag=mechanization.rotatable,dx=0,dy=0,dz=0] at @s run function mechanization:base/player/wrench/rotate_machine
+execute if score #success {ns}.data matches 0 store result score #success {ns}.data as @n[tag=mechanization.cable,dx=0,dy=0,dz=0] at @s run function #mechanization:wrench_break
+execute if score #success {ns}.data matches 0 store result score #success {ns}.data at @n[tag={ns}.cable,dx=0,dy=0,dz=0] run setblock ~ ~ ~ air destroy
 
 # Playsound if block was rotated or cable was broken
-execute if score #success {namespace}.data matches 1 run playsound block.stone.break block @s
+execute if score #success {ns}.data matches 1 run playsound block.stone.break block @s
 """)
-	write_to_file(f"{functions}/utils/wrench/rotate.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/wrench/rotate", f"""
 # Copy block data
-scoreboard players set #success {namespace}.data 1
-data modify storage {namespace}:main Block set from block ~ ~ ~
+scoreboard players set #success {ns}.data 1
+data modify storage {ns}:main Block set from block ~ ~ ~
 
 # Rotate custom block
-execute store result score #rotation {namespace}.data run data get entity @s Rotation[0]
-scoreboard players add #rotation {namespace}.data 90
-scoreboard players set #360 {namespace}.data 360
-scoreboard players operation #rotation {namespace}.data %= #360 {namespace}.data
-execute store result entity @s Rotation[0] float 1 run scoreboard players get #rotation {namespace}.data
+execute store result score #rotation {ns}.data run data get entity @s Rotation[0]
+scoreboard players add #rotation {ns}.data 90
+scoreboard players set #360 {ns}.data 360
+scoreboard players operation #rotation {ns}.data %= #360 {ns}.data
+execute store result entity @s Rotation[0] float 1 run scoreboard players get #rotation {ns}.data
 
 # Rotate base block
-function #{namespace}:calls/wrench_rotate
+function #{ns}:calls/wrench_rotate
 
 # Memory clean up and particle effect
-data remove storage {namespace}:main Block
+data remove storage {ns}:main Block
 particle block{{block_state:"minecraft:furnace"}} ~ ~ ~ .5 .5 .5 0.1 10
 """)
-	write_to_file(f"{functions}/utils/wrench/rotate/furnace.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/wrench/rotate/furnace", f"""
 # Check for furnace rotation
-scoreboard players set #is_furnace {namespace}.data 0
-execute store success score #is_furnace {namespace}.data if block ~ ~ ~ furnace
-execute if score #is_furnace {namespace}.data matches 1 if score #rotation {namespace}.data matches 0 run setblock ~ ~ ~ furnace[facing=north] replace
-execute if score #is_furnace {namespace}.data matches 1 if score #rotation {namespace}.data matches 90 run setblock ~ ~ ~ furnace[facing=east] replace
-execute if score #is_furnace {namespace}.data matches 1 if score #rotation {namespace}.data matches 180 run setblock ~ ~ ~ furnace[facing=south] replace
-execute if score #is_furnace {namespace}.data matches 1 if score #rotation {namespace}.data matches 270 run setblock ~ ~ ~ furnace[facing=west] replace
+scoreboard players set #is_furnace {ns}.data 0
+execute store success score #is_furnace {ns}.data if block ~ ~ ~ furnace
+execute if score #is_furnace {ns}.data matches 1 if score #rotation {ns}.data matches 0 run setblock ~ ~ ~ furnace[facing=north] replace
+execute if score #is_furnace {ns}.data matches 1 if score #rotation {ns}.data matches 90 run setblock ~ ~ ~ furnace[facing=east] replace
+execute if score #is_furnace {ns}.data matches 1 if score #rotation {ns}.data matches 180 run setblock ~ ~ ~ furnace[facing=south] replace
+execute if score #is_furnace {ns}.data matches 1 if score #rotation {ns}.data matches 270 run setblock ~ ~ ~ furnace[facing=west] replace
 
 # Apply data back to furnace
-execute if score #is_furnace {namespace}.data matches 1 run data modify block ~ ~ ~ {{}} merge from storage {namespace}:main Block
+execute if score #is_furnace {ns}.data matches 1 run data modify block ~ ~ ~ {{}} merge from storage {ns}:main Block
 """)
 	
 
 	## Setup multimeter stuff
 	# Right click
-	write_to_file(f"{functions}/utils/multimeter/right_click/main.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/multimeter/right_click/main", f"""
 # Look at where player is looking at and stop when found a block
-execute anchored eyes positioned ^ ^ ^.2 run function {namespace}:utils/multimeter/right_click/raycast
+execute anchored eyes positioned ^ ^ ^.2 run function {ns}:utils/multimeter/right_click/raycast
 """)
-	write_to_file(f"{functions}/utils/multimeter/right_click/raycast.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/multimeter/right_click/raycast", f"""
 # Stop case when raycast hits a block that is solid
-execute unless block ~ ~ ~ #{namespace}:non_solid run function {namespace}:utils/multimeter/right_click/stop_case
+execute unless block ~ ~ ~ #{ns}:non_solid run function {ns}:utils/multimeter/right_click/stop_case
 
 # Continue raycast until it hits a block that is solid or the max distance is reached
-execute if entity @s[distance=..5] if block ~ ~ ~ #{namespace}:non_solid positioned ^ ^ ^.2 run function {namespace}:utils/multimeter/right_click/raycast
+execute if entity @s[distance=..5] if block ~ ~ ~ #{ns}:non_solid positioned ^ ^ ^.2 run function {ns}:utils/multimeter/right_click/raycast
 """)
-	write_to_file(f"{functions}/utils/multimeter/right_click/stop_case.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/multimeter/right_click/stop_case", f"""
 # Tellraw Energy Display
-tag @s add {namespace}.temp
-execute as @n[scores={{energy.max_storage=1..}},distance=..1.5] run tellraw @a[tag={namespace}.temp] [{{"text":"Energy stored: ","italic":false,"color":"aqua"}},{{"score":{{"name":"@s","objective":"energy.storage"}},"italic":false,"color":"yellow"}},{{"text":"/"}},{{"score":{{"name":"@s","objective":"energy.max_storage"}},"italic":false,"color":"yellow"}},{{"text":" kJ\nChange Rate: "}},{{"score":{{"name":"@s","objective":"energy.change_rate"}},"italic":false,"color":"yellow"}},{{"text":" kW"}}]
-tag @s remove {namespace}.temp
+tag @s add {ns}.temp
+execute as @n[scores={{energy.max_storage=1..}},distance=..1.5] run tellraw @a[tag={ns}.temp] [{{"text":"Energy stored: ","italic":false,"color":"aqua"}},{{"score":{{"name":"@s","objective":"energy.storage"}},"italic":false,"color":"yellow"}},{{"text":"/"}},{{"score":{{"name":"@s","objective":"energy.max_storage"}},"italic":false,"color":"yellow"}},{{"text":" kJ\nChange Rate: "}},{{"score":{{"name":"@s","objective":"energy.change_rate"}},"italic":false,"color":"yellow"}},{{"text":" kW"}}]
+tag @s remove {ns}.temp
 """)
 	
 	# Passive
-	write_to_file(f"{functions}/utils/multimeter/passive/main.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/multimeter/passive/main", f"""
 # Stop case when raycast hits a block that is solid
-execute unless block ~ ~ ~ #{namespace}:non_solid run function {namespace}:utils/multimeter/passive/stop_case
+execute unless block ~ ~ ~ #{ns}:non_solid run function {ns}:utils/multimeter/passive/stop_case
 
 # Continue raycast until it hits a block that is solid or the max distance is reached
-execute if entity @s[distance=..5] if block ~ ~ ~ #{namespace}:non_solid positioned ^ ^ ^.5 run function {namespace}:utils/multimeter/passive/main
+execute if entity @s[distance=..5] if block ~ ~ ~ #{ns}:non_solid positioned ^ ^ ^.5 run function {ns}:utils/multimeter/passive/main
 """)
-	write_to_file(f"{functions}/utils/multimeter/passive/stop_case.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/multimeter/passive/stop_case", f"""
 # Execute at the block found the function
-tag @s add {namespace}.temp
-execute as @n[scores={{energy.max_storage=1..}},distance=..1.5] at @s align xyz run function {namespace}:utils/multimeter/passive/found_entity
-tag @s remove {namespace}.temp
+tag @s add {ns}.temp
+execute as @n[scores={{energy.max_storage=1..}},distance=..1.5] at @s align xyz run function {ns}:utils/multimeter/passive/found_entity
+tag @s remove {ns}.temp
 """)
-	write_to_file(f"{functions}/utils/multimeter/passive/found_entity.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/multimeter/passive/found_entity", f"""
 # Summon glowing snowball on block
-execute unless block ~ ~ ~ #{namespace}:non_solid run summon snowball ~.5 ~.3 ~.5 {{NoGravity:1b,Silent:1b,Glowing:1b,Tags:["{namespace}.multimeter_marker"]}}
+execute unless block ~ ~ ~ #{ns}:non_solid run summon snowball ~.5 ~.3 ~.5 {{NoGravity:1b,Silent:1b,Glowing:1b,Tags:["{ns}.multimeter_marker"]}}
 
 # Title to the player
-title @a[tag={namespace}.temp] actionbar [{{"text":"Energy stored: ","italic":false,"color":"aqua"}},{{"score":{{"name":"@s","objective":"energy.storage"}},"italic":false,"color":"yellow"}},{{"text":"/"}},{{"score":{{"name":"@s","objective":"energy.max_storage"}},"italic":false,"color":"yellow"}},{{"text":" kJ"}},{{"text":"  |  ","color":"yellow"}},{{"text":"Change Rate: "}},{{"score":{{"name":"@s","objective":"energy.change_rate"}},"italic":false,"color":"yellow"}},{{"text":" kW"}}]
+title @a[tag={ns}.temp] actionbar [{{"text":"Energy stored: ","italic":false,"color":"aqua"}},{{"score":{{"name":"@s","objective":"energy.storage"}},"italic":false,"color":"yellow"}},{{"text":"/"}},{{"score":{{"name":"@s","objective":"energy.max_storage"}},"italic":false,"color":"yellow"}},{{"text":" kJ"}},{{"text":"  |  ","color":"yellow"}},{{"text":"Change Rate: "}},{{"score":{{"name":"@s","objective":"energy.change_rate"}},"italic":false,"color":"yellow"}},{{"text":" kW"}}]
 
 # Remove the snowball by schedule function
-schedule function {namespace}:utils/multimeter/passive/remove_markers 1t replace
+schedule function {ns}:utils/multimeter/passive/remove_markers 1t replace
 """)
-	write_to_file(f"{functions}/utils/multimeter/passive/remove_markers.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/multimeter/passive/remove_markers", f"""
 # Score initialization and kill snowball entities alive for more than 5 ticks
-scoreboard players set #success {namespace}.data 0
-kill @e[type=snowball,tag={namespace}.multimeter_marker,scores={{{namespace}.private=5..}}]
+scoreboard players set #success {ns}.data 0
+kill @e[type=snowball,tag={ns}.multimeter_marker,scores={{{ns}.private=5..}}]
 
 # Increase private score by 1
-execute store success score #success {namespace}.data run scoreboard players add @e[type=snowball,tag={namespace}.multimeter_marker] {namespace}.private 1
+execute store success score #success {ns}.data run scoreboard players add @e[type=snowball,tag={ns}.multimeter_marker] {ns}.private 1
 
 # Run again schedule if there are remaining snowballs
-execute if score #success {namespace}.data matches 1 run schedule function {namespace}:utils/multimeter/passive/remove_markers 1t replace
+execute if score #success {ns}.data matches 1 run schedule function {ns}:utils/multimeter/passive/remove_markers 1t replace
 """)
 	
 
 	## Setup battery switcher stuff
 	# State functions
-	write_to_file(f"{functions}/utils/battery_switcher/get_state.mcfunction", f"""
-scoreboard players set #state {namespace}.data 0
-execute if score #state {namespace}.data matches 0 if entity @s[tag=energy.send,tag=energy.receive] run scoreboard players set #state {namespace}.data 1
-execute if score #state {namespace}.data matches 0 if entity @s[tag=energy.send] run scoreboard players set #state {namespace}.data 2
-execute if score #state {namespace}.data matches 0 if entity @s[tag=energy.receive] run scoreboard players set #state {namespace}.data 3
+	write_to_function(config, f"{ns}:utils/battery_switcher/get_state", f"""
+scoreboard players set #state {ns}.data 0
+execute if score #state {ns}.data matches 0 if entity @s[tag=energy.send,tag=energy.receive] run scoreboard players set #state {ns}.data 1
+execute if score #state {ns}.data matches 0 if entity @s[tag=energy.send] run scoreboard players set #state {ns}.data 2
+execute if score #state {ns}.data matches 0 if entity @s[tag=energy.receive] run scoreboard players set #state {ns}.data 3
 """)
-	write_to_file(f"{functions}/utils/battery_switcher/next_state.mcfunction", f"""
-scoreboard players add #state {namespace}.data 1
-execute if score #state {namespace}.data matches 4 run scoreboard players set #state {namespace}.data 1
+	write_to_function(config, f"{ns}:utils/battery_switcher/next_state", f"""
+scoreboard players add #state {ns}.data 1
+execute if score #state {ns}.data matches 4 run scoreboard players set #state {ns}.data 1
 
-execute if score #state {namespace}.data matches 1 run tag @s add energy.send
-execute if score #state {namespace}.data matches 1 run tag @s add energy.receive
+execute if score #state {ns}.data matches 1 run tag @s add energy.send
+execute if score #state {ns}.data matches 1 run tag @s add energy.receive
 
-execute if score #state {namespace}.data matches 2 run tag @s remove energy.receive
-execute if score #state {namespace}.data matches 2 run tag @s add energy.send
+execute if score #state {ns}.data matches 2 run tag @s remove energy.receive
+execute if score #state {ns}.data matches 2 run tag @s add energy.send
 
-execute if score #state {namespace}.data matches 3 run tag @s add energy.receive
-execute if score #state {namespace}.data matches 3 run tag @s remove energy.send
+execute if score #state {ns}.data matches 3 run tag @s add energy.receive
+execute if score #state {ns}.data matches 3 run tag @s remove energy.send
 """)
 	
 	# Right click
-	write_to_file(f"{functions}/utils/battery_switcher/right_click/main.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/battery_switcher/right_click/main", f"""
 # Look at where player is looking at and stop when found a block
-execute anchored eyes positioned ^ ^ ^.2 run function {namespace}:utils/battery_switcher/right_click/raycast
+execute anchored eyes positioned ^ ^ ^.2 run function {ns}:utils/battery_switcher/right_click/raycast
 """)
-	write_to_file(f"{functions}/utils/battery_switcher/right_click/raycast.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/battery_switcher/right_click/raycast", f"""
 # Stop case when raycast hits a block that is solid
-execute unless block ~ ~ ~ #{namespace}:non_solid run function {namespace}:utils/battery_switcher/right_click/stop_case
+execute unless block ~ ~ ~ #{ns}:non_solid run function {ns}:utils/battery_switcher/right_click/stop_case
 
 # Continue raycast until it hits a block that is solid or the max distance is reached
-execute if entity @s[distance=..5] if block ~ ~ ~ #{namespace}:non_solid positioned ^ ^ ^.2 run function {namespace}:utils/battery_switcher/right_click/raycast
+execute if entity @s[distance=..5] if block ~ ~ ~ #{ns}:non_solid positioned ^ ^ ^.2 run function {ns}:utils/battery_switcher/right_click/raycast
 """)
-	write_to_file(f"{functions}/utils/battery_switcher/right_click/stop_case.mcfunction", f"""
-tag @s add {namespace}.temp
-execute as @n[tag={namespace}.battery_switcher,scores={{energy.max_storage=1..}},distance=..1.5] run function {namespace}:utils/battery_switcher/right_click/found_entity
-tag @s remove {namespace}.temp
+	write_to_function(config, f"{ns}:utils/battery_switcher/right_click/stop_case", f"""
+tag @s add {ns}.temp
+execute as @n[tag={ns}.battery_switcher,scores={{energy.max_storage=1..}},distance=..1.5] run function {ns}:utils/battery_switcher/right_click/found_entity
+tag @s remove {ns}.temp
 """)
-	write_to_file(f"{functions}/utils/battery_switcher/right_click/found_entity.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/battery_switcher/right_click/found_entity", f"""
 # Get current state and go next state
-function {namespace}:utils/battery_switcher/get_state
-function {namespace}:utils/battery_switcher/next_state
+function {ns}:utils/battery_switcher/get_state
+function {ns}:utils/battery_switcher/next_state
 """)
 	
 	# Passive
-	write_to_file(f"{functions}/utils/battery_switcher/passive/pre_raycast.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/battery_switcher/passive/pre_raycast", f"""
 # If no battery found (no state), set custom model data to default
-scoreboard players set #state {namespace}.data 0
-function {namespace}:utils/battery_switcher/passive/main
-execute if score #state {namespace}.data matches 0 run item modify entity @s weapon.offhand {namespace}:battery_switcher/default
+scoreboard players set #state {ns}.data 0
+function {ns}:utils/battery_switcher/passive/main
+execute if score #state {ns}.data matches 0 run item modify entity @s weapon.offhand {ns}:battery_switcher/default
 """)
-	write_to_file(f"{functions}/utils/battery_switcher/passive/main.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/battery_switcher/passive/main", f"""
 # Stop case when raycast hits a block that is solid
-execute unless block ~ ~ ~ #{namespace}:non_solid run function {namespace}:utils/battery_switcher/passive/stop_case
+execute unless block ~ ~ ~ #{ns}:non_solid run function {ns}:utils/battery_switcher/passive/stop_case
 
 # Continue raycast until it hits a block that is solid or the max distance is reached
-execute if entity @s[distance=..5] if block ~ ~ ~ #{namespace}:non_solid positioned ^ ^ ^.5 run function {namespace}:utils/battery_switcher/passive/main
+execute if entity @s[distance=..5] if block ~ ~ ~ #{ns}:non_solid positioned ^ ^ ^.5 run function {ns}:utils/battery_switcher/passive/main
 """)
-	write_to_file(f"{functions}/utils/battery_switcher/passive/stop_case.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/battery_switcher/passive/stop_case", f"""
 # Execute at the block found the function
-tag @s add {namespace}.temp
-execute as @n[tag={namespace}.battery_switcher,scores={{energy.max_storage=1..}},distance=..1.5] at @s align xyz positioned ~.5 ~.3 ~.5 run function {namespace}:utils/battery_switcher/passive/found_entity
-tag @s remove {namespace}.temp
+tag @s add {ns}.temp
+execute as @n[tag={ns}.battery_switcher,scores={{energy.max_storage=1..}},distance=..1.5] at @s align xyz positioned ~.5 ~.3 ~.5 run function {ns}:utils/battery_switcher/passive/found_entity
+tag @s remove {ns}.temp
 """)
 	
-	write_to_file(f"{functions}/utils/battery_switcher/passive/found_entity.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/battery_switcher/passive/found_entity", f"""
 # Get current state
-function {namespace}:utils/battery_switcher/get_state
+function {ns}:utils/battery_switcher/get_state
 
 # Summon glowing egg on block depending on the state
-execute unless block ~ ~ ~ #{namespace}:non_solid run summon egg ~ ~ ~ {{NoGravity:1b,Silent:1b,Glowing:1b,Tags:["{namespace}.battery_switcher_marker"]}}
-execute if score #state {namespace}.data matches 1 run team join {namespace}.green @e[type=egg,tag={namespace}.battery_switcher_marker,distance=..0.5]
-execute if score #state {namespace}.data matches 2 run team join {namespace}.aqua @e[type=egg,tag={namespace}.battery_switcher_marker,distance=..0.5]
-execute if score #state {namespace}.data matches 3 run team join {namespace}.gold @e[type=egg,tag={namespace}.battery_switcher_marker,distance=..0.5]
+execute unless block ~ ~ ~ #{ns}:non_solid run summon egg ~ ~ ~ {{NoGravity:1b,Silent:1b,Glowing:1b,Tags:["{ns}.battery_switcher_marker"]}}
+execute if score #state {ns}.data matches 1 run team join {ns}.green @e[type=egg,tag={ns}.battery_switcher_marker,distance=..0.5]
+execute if score #state {ns}.data matches 2 run team join {ns}.aqua @e[type=egg,tag={ns}.battery_switcher_marker,distance=..0.5]
+execute if score #state {ns}.data matches 3 run team join {ns}.gold @e[type=egg,tag={ns}.battery_switcher_marker,distance=..0.5]
 
 # Title to the player
-execute if score #state {namespace}.data matches 1 run title @a[tag={namespace}.temp] actionbar [{{"text":"Current state: ","color":"gray"}},{{"text":"[Input & Output]","color":"green"}}]
-execute if score #state {namespace}.data matches 2 run title @a[tag={namespace}.temp] actionbar [{{"text":"Current state: ","color":"gray"}},{{"text":"[Output]","color":"aqua"}}]
-execute if score #state {namespace}.data matches 3 run title @a[tag={namespace}.temp] actionbar [{{"text":"Current state: ","color":"gray"}},{{"text":"[Input]","color":"gold"}}]
+execute if score #state {ns}.data matches 1 run title @a[tag={ns}.temp] actionbar [{{"text":"Current state: ","color":"gray"}},{{"text":"[Input & Output]","color":"green"}}]
+execute if score #state {ns}.data matches 2 run title @a[tag={ns}.temp] actionbar [{{"text":"Current state: ","color":"gray"}},{{"text":"[Output]","color":"aqua"}}]
+execute if score #state {ns}.data matches 3 run title @a[tag={ns}.temp] actionbar [{{"text":"Current state: ","color":"gray"}},{{"text":"[Input]","color":"gold"}}]
 
 # Modify player's offhand custom model data
-execute if score #state {namespace}.data matches 1 run item modify entity @a[tag={namespace}.temp] weapon.offhand {namespace}:battery_switcher/both
-execute if score #state {namespace}.data matches 2 run item modify entity @a[tag={namespace}.temp] weapon.offhand {namespace}:battery_switcher/output
-execute if score #state {namespace}.data matches 3 run item modify entity @a[tag={namespace}.temp] weapon.offhand {namespace}:battery_switcher/input
+execute if score #state {ns}.data matches 1 run item modify entity @a[tag={ns}.temp] weapon.offhand {ns}:battery_switcher/both
+execute if score #state {ns}.data matches 2 run item modify entity @a[tag={ns}.temp] weapon.offhand {ns}:battery_switcher/output
+execute if score #state {ns}.data matches 3 run item modify entity @a[tag={ns}.temp] weapon.offhand {ns}:battery_switcher/input
 
 
 # Remove the egg by schedule function
-schedule function {namespace}:utils/battery_switcher/passive/remove_markers 1t replace
+schedule function {ns}:utils/battery_switcher/passive/remove_markers 1t replace
 """)
-	write_to_file(f"{functions}/utils/battery_switcher/passive/remove_markers.mcfunction", f"""
+	write_to_function(config, f"{ns}:utils/battery_switcher/passive/remove_markers", f"""
 # Score initialization and kill egg entities alive for more than 5 ticks
-scoreboard players set #success {namespace}.data 0
-kill @e[type=egg,tag={namespace}.battery_switcher_marker,scores={{{namespace}.private=5..}}]
+scoreboard players set #success {ns}.data 0
+kill @e[type=egg,tag={ns}.battery_switcher_marker,scores={{{ns}.private=5..}}]
 
 # Increase private score by 1
-execute store success score #success {namespace}.data run scoreboard players add @e[type=egg,tag={namespace}.battery_switcher_marker] {namespace}.private 1
+execute store success score #success {ns}.data run scoreboard players add @e[type=egg,tag={ns}.battery_switcher_marker] {ns}.private 1
 
 # Run again schedule if there are remaining eggs
-execute if score #success {namespace}.data matches 1 run schedule function {namespace}:utils/battery_switcher/passive/remove_markers 1t replace
+execute if score #success {ns}.data matches 1 run schedule function {ns}:utils/battery_switcher/passive/remove_markers 1t replace
 """)
 	
 	# Write item modifiers
@@ -325,66 +323,66 @@ execute if score #success {namespace}.data matches 1 run schedule function {name
 	both_model: str = database["battery_switcher_both"]["item_model"]
 	input_model: str = database["battery_switcher_input"]["item_model"]
 	output_model: str = database["battery_switcher_output"]["item_model"]
-	item_modifier_path: str = f"{build_datapack}/data/{namespace}/item_modifier/battery_switcher"
-	write_to_file(f"{item_modifier_path}/default.json", stp.super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":default_model}}))
-	write_to_file(f"{item_modifier_path}/both.json", stp.super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":both_model}}))
-	write_to_file(f"{item_modifier_path}/input.json", stp.super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":input_model}}))
-	write_to_file(f"{item_modifier_path}/output.json", stp.super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":output_model}}))
+	dumped_template: str = stp.super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":"TO_REPLACE"}})
+	write_to_item_modifier(config, f"{ns}:battery_switcher/default", dumped_template.replace("TO_REPLACE", default_model))
+	write_to_item_modifier(config, f"{ns}:battery_switcher/both", dumped_template.replace("TO_REPLACE", both_model))
+	write_to_item_modifier(config, f"{ns}:battery_switcher/input", dumped_template.replace("TO_REPLACE", input_model))
+	write_to_item_modifier(config, f"{ns}:battery_switcher/output", dumped_template.replace("TO_REPLACE", output_model))
 
 
 	# Setup first_join advancement
-	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:tick"}},"requirements":[["requirement"]],"rewards":{"function":f"{namespace}:advancements/first_join"}}
-	write_to_file(f"{build_datapack}/data/{namespace}/advancement/first_join.json", stp.super_json_dump(json_content, max_level = -1))
-	write_to_file(f"{functions}/advancements/first_join.mcfunction", f"""
-execute unless score #{namespace}.loaded load.status matches 1 run advancement revoke @s only {namespace}:first_join
-execute if score #{namespace}.loaded load.status matches 1 run loot give @s loot {namespace}:i/manual
+	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:tick"}},"requirements":[["requirement"]],"rewards":{"function":f"{ns}:advancements/first_join"}}
+	write_to_advancement(config, f"{ns}:first_join", stp.super_json_dump(json_content, max_level = -1))
+	write_to_function(config, f"{ns}:advancements/first_join", f"""
+execute unless score #{ns}.loaded load.status matches 1 run advancement revoke @s only {ns}:first_join
+execute if score #{ns}.loaded load.status matches 1 run loot give @s loot {ns}:i/manual
 """)
 	
 
 	# Setup inventory_changed advancement
-	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:inventory_changed"}},"requirements":[["requirement"]],"rewards":{"function":f"{namespace}:advancements/inventory_changed"}}
-	write_to_file(f"{build_datapack}/data/{namespace}/advancement/inventory_changed.json", stp.super_json_dump(json_content, max_level = -1))
-	write_to_file(f"{functions}/advancements/inventory_changed.mcfunction", f"""
+	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:inventory_changed"}},"requirements":[["requirement"]],"rewards":{"function":f"{ns}:advancements/inventory_changed"}}
+	write_to_advancement(config, f"{ns}:inventory_changed", stp.super_json_dump(json_content, max_level = -1))
+	write_to_function(config, f"{ns}:advancements/inventory_changed", f"""
 # Revoke advancement
-advancement revoke @s only {namespace}:inventory_changed
-tag @s remove {namespace}.offhand
+advancement revoke @s only {ns}:inventory_changed
+tag @s remove {ns}.offhand
 
 # Get offhand tag if holding multimeter in offhand
-execute if items entity @s weapon.offhand *[custom_data~{{"{namespace}":{{"multimeter":true}}}}] run tag @s add {namespace}.offhand
+execute if items entity @s weapon.offhand *[custom_data~{{"{ns}":{{"multimeter":true}}}}] run tag @s add {ns}.offhand
 
 # Get offhand tag if holding battery switcher in offhand
-execute if items entity @s weapon.offhand *[custom_data~{{"{namespace}":{{"battery_switcher":true}}}}] run tag @s add {namespace}.offhand
+execute if items entity @s weapon.offhand *[custom_data~{{"{ns}":{{"battery_switcher":true}}}}] run tag @s add {ns}.offhand
 
 # For loop for each item in inventory
-data modify storage {namespace}:main Inventory set from entity @s Inventory
-function {namespace}:advancements/inventory_changed_loop with storage {namespace}:main Inventory[0]
+data modify storage {ns}:main Inventory set from entity @s Inventory
+function {ns}:advancements/inventory_changed_loop with storage {ns}:main Inventory[0]
 """)
 	
 	# Inventory loop
-	write_to_file(f"{functions}/advancements/inventory_changed_loop.mcfunction", f"""
+	write_to_function(config, f"{ns}:advancements/inventory_changed_loop", f"""
 # Get item in inventory and slot
-data modify storage {namespace}:main Item set from storage {namespace}:main Inventory[0]
-execute store result score #slot {namespace}.data run data get storage {namespace}:main Item.Slot
+data modify storage {ns}:main Item set from storage {ns}:main Inventory[0]
+execute store result score #slot {ns}.data run data get storage {ns}:main Item.Slot
 
 # If item is a battery switcher and not in offhand, set custom model data to default
-$execute if score #slot {namespace}.data matches 0.. if data storage {namespace}:main Item.components."minecraft:custom_data".{namespace}.battery_switcher run item modify entity @s container.$(Slot) {namespace}:battery_switcher/default
+$execute if score #slot {ns}.data matches 0.. if data storage {ns}:main Item.components."minecraft:custom_data".{ns}.battery_switcher run item modify entity @s container.$(Slot) {ns}:battery_switcher/default
 
 # Remove element and go next
-data remove storage {namespace}:main Inventory[0]
-execute if data storage {namespace}:main Inventory[0] run function {namespace}:advancements/inventory_changed_loop with storage {namespace}:main Inventory[0]
+data remove storage {ns}:main Inventory[0]
+execute if data storage {ns}:main Inventory[0] run function {ns}:advancements/inventory_changed_loop with storage {ns}:main Inventory[0]
 """)
 
 
 
 	# Private score
 	write_to_versioned_function(config, "load/confirm_load", f"""
-scoreboard objectives add {namespace}.private dummy
-team add {namespace}.green
-team add {namespace}.gold
-team add {namespace}.aqua
-team modify {namespace}.green color green
-team modify {namespace}.gold color gold
-team modify {namespace}.aqua color aqua
+scoreboard objectives add {ns}.private dummy
+team add {ns}.green
+team add {ns}.gold
+team add {ns}.aqua
+team modify {ns}.green color green
+team modify {ns}.gold color gold
+team modify {ns}.aqua color aqua
 """, prepend = True)
 
 
