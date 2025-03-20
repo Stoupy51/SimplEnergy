@@ -3,16 +3,16 @@
 import stouputils as stp
 from python_datapack.utils.io import *
 from python_datapack.manual.main import deepcopy
-GUI_VANILLA_ITEM = "cobblestone"
+GUI_VANILLA_ITEM: str = "cobblestone"
 
 # Setup GUI in resource packs
 def setup_gui_in_resource_packs(config: dict) -> dict[str, str]:
-	namespace: str = config['namespace']
-	gui_textures: list[str] = [x for x in config['textures_files'] if x.startswith('gui/')]
+	namespace: str = config["namespace"]
+	gui_textures: list[str] = [x for x in config["textures_files"] if x.startswith("gui/")]
 	gui_models: dict[str, str] = {x: f"{namespace}:{x.replace('.png', '')}" for x in gui_textures}
 
 	# Write custom models
-	base = {
+	base: dict = {
 		"textures" : {},
 		"elements": [ 
 			{
@@ -32,9 +32,9 @@ def setup_gui_in_resource_packs(config: dict) -> dict[str, str]:
 		"gui_light":"front"
 	}
 	for gui, model in gui_models.items():
-		content = deepcopy(base)
-		content["textures"]["layer0"] = model.replace(':', ':item/')
-		path: str = model.replace(':', '/models/item/')
+		content: dict = deepcopy(base)
+		content["textures"]["layer0"] = model.replace(":", ":item/")
+		path: str = model.replace(":", "/models/item/")
 		path = f"{config['build_resource_pack']}/assets/{path}.json"
 
 		if "electric_brewing_stand" in gui:
@@ -55,8 +55,8 @@ def setup_gui_in_resource_packs(config: dict) -> dict[str, str]:
 		write_to_file(path, stp.super_json_dump(content, max_level = 3))
 
 		# Copy the texture
-		source = f"{config['assets_folder']}/textures/{gui}"
-		destination = f"{config['build_resource_pack']}/assets/{config['namespace']}/textures/item/{gui}"
+		source: str = f"{config['assets_folder']}/textures/{gui}"
+		destination: str = f"{config['build_resource_pack']}/assets/{config['namespace']}/textures/item/{gui}"
 		super_copy(source, destination)
 		if os.path.exists(source + ".mcmeta"):
 			super_copy(source + ".mcmeta", destination + ".mcmeta")
