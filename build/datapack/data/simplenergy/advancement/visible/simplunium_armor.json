@@ -11,13 +11,13 @@
 			"color": "gray"
 		},
 		"description": {
-			"translate":"simplenergy.better_than_diamond_armor",
+			"translate":"simplenergy.better_than_iron_armor",
 			"color": "green"
 		},
+		"hidden": true,
 		"frame": "task",
 		"show_toast": true,
-		"announce_to_chat": true,
-		"hidden": true
+		"announce_to_chat": true
 	},
 	"criteria": {
 		"requirement": {
@@ -26,7 +26,7 @@
 				"items": [
 					{
 						"predicates": {
-							"minecraft:custom_data": "{\"smithed\": {\"dict\": {\"armor\": {\"simplunium\": true}}}}"
+							"minecraft:custom_data": {"smithed": {"dict": {"armor": {"simplunium": true}}}}
 						}
 					}
 				]

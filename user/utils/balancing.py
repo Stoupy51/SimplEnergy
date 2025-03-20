@@ -10,7 +10,7 @@ def setup_energy_balancing(config: dict, can_balance: list[str]) -> None:
 	adjacent_tag: str = f"{ns}.adjacent"
 
 	# Write in second_5.mcfunction a call to balancing function
-	write_to_versioned_function(config, "second_5", f"""
+	write_versioned_function(config, "second_5", f"""
 # Energy Balancing system (balance every device having at least 20 kJ)
 execute as @e[tag={can_balance_tag},scores={{energy.storage=20..}}] at @s[tag=!{balanced_tag}] run function {ns}:balancing/main
 tag @e[tag={balanced_tag}] remove {balanced_tag}
@@ -32,7 +32,7 @@ scoreboard players operation #max_storage {ns}.data = @s energy.max_storage
 # Remove adjacent tags
 tag @e[tag={adjacent_tag}] remove {adjacent_tag}
 """
-	write_to_function(config, f"{ns}:balancing/main", balancing_content)
+	write_function(config, f"{ns}:balancing/main", balancing_content)
 
 	# For each balancing device, write the balancing functions
 	for device in can_balance:
@@ -40,7 +40,7 @@ tag @e[tag={adjacent_tag}] remove {adjacent_tag}
 		# Write balancing/device/found.mcfunction
 		selector: str = f"@e[tag={ns}.{device},tag={can_balance_tag},tag=!{adjacent_tag},dx=0,dy=0,dz=0]"
 		condition_run: str = f"if score @s energy.max_storage = #max_storage {ns}.data at @s run function {ns}:balancing/{device}/found"
-		write_to_function(config, f"{ns}:balancing/{device}/found", f"""
+		write_function(config, f"{ns}:balancing/{device}/found", f"""
 # Add tags and scores
 tag @s add {adjacent_tag}
 tag @s add {balanced_tag}
@@ -56,7 +56,7 @@ execute align xyz positioned ~1 ~ ~ as {selector} {condition_run}
 execute align xyz positioned ~-1 ~ ~ as {selector} {condition_run}
 """)		
 		# Write balancing/device/main.mcfunction
-		write_to_function(config, f"{ns}:balancing/{device}/main", f"""
+		write_function(config, f"{ns}:balancing/{device}/main", f"""
 # Collect energy from nearby blocks recursively
 scoreboard players set #count {ns}.data 0
 scoreboard players set #total_energy {ns}.data 0
@@ -83,7 +83,7 @@ execute if score @s energy.storage > @s energy.max_storage run scoreboard player
 
 	# Add in the placement function the balancing tag
 	for device in can_balance:
-		write_to_function(config, f"{ns}:custom_blocks/{device}/place_secondary", f"\n# Add balancing tag\ntag @s add {can_balance_tag}")
+		write_function(config, f"{ns}:custom_blocks/{device}/place_secondary", f"\n# Add balancing tag\ntag @s add {can_balance_tag}")
 
 	return
 

@@ -14,10 +14,10 @@
 			"translate":"simplenergy.craft_a_wrench_to_rotate_machines_and_break_cables",
 			"color": "green"
 		},
+		"hidden": true,
 		"frame": "task",
 		"show_toast": true,
-		"announce_to_chat": true,
-		"hidden": true
+		"announce_to_chat": true
 	},
 	"criteria": {
 		"requirement": {
@@ -26,7 +26,7 @@
 				"items": [
 					{
 						"predicates": {
-							"minecraft:custom_data": "{\"simplenergy\": {\"wrench\": true}}"
+							"minecraft:custom_data": {"simplenergy": {"wrench": true}}
 						}
 					}
 				]

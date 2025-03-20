@@ -5,9 +5,9 @@ from python_datapack.utils.io import *
 
 def insert_lib_call(path: str, is_machine: bool) -> None:
 	if is_machine:
-		write_to_file(path, "# Datapack Energy\nfunction energy:v1/api/break_machine\n", prepend = True)
+		write_file(path, "# Datapack Energy\nfunction energy:v1/api/break_machine\n", prepend = True)
 	else:
-		write_to_file(path, "# Datapack Energy\nfunction energy:v1/api/break_cable\n", prepend = True)
+		write_file(path, "# Datapack Energy\nfunction energy:v1/api/break_cable\n", prepend = True)
 
 # Add commands to place and destroy functions for energy items
 def complete_place_and_destroy(config: dict) -> None:
@@ -25,7 +25,7 @@ def complete_place_and_destroy(config: dict) -> None:
 			# If the item is a cable
 			if "transfer" in energy:
 				insert_lib_call(destroy, is_machine = False)
-				write_to_function(config, f"{ns}:custom_blocks/{item}/place_secondary", f"""
+				write_function(config, f"{ns}:custom_blocks/{item}/place_secondary", f"""
 tag @s add energy.cable
 scoreboard players set @s energy.transfer_rate {energy["transfer"]}
 function energy:v1/api/init_cable
@@ -34,7 +34,7 @@ function energy:v1/api/init_cable
 				# Else, if if's a machine
 				insert_lib_call(destroy, is_machine = True)
 				if "usage" in energy or "generation" in energy:
-					write_to_function(config, f"{ns}:custom_blocks/{item}/place_secondary", f"""
+					write_function(config, f"{ns}:custom_blocks/{item}/place_secondary", f"""
 # Energy part
 tag @s add energy.{"send" if "generation" in energy else "receive"}
 scoreboard players set @s energy.max_storage {energy["max_storage"]}
@@ -45,7 +45,7 @@ function energy:v1/api/init_machine
 """)
 				else:
 					# Else, it's a battery.
-					write_to_function(config, f"{ns}:custom_blocks/{item}/place_secondary", f"""
+					write_function(config, f"{ns}:custom_blocks/{item}/place_secondary", f"""
 # Energy part
 tag @s add {ns}.battery_switcher
 tag @s add energy.receive

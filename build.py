@@ -6,7 +6,8 @@ required = ["python_datapack"]
 for package in required:
 	try:
 		__import__(package)
-	except ImportError:
+	except ImportError as e:
+		print(f"Error: {e}")
 		os.system(f"{sys.executable} -m pip install {package}")
 
 # Setup config

@@ -27,7 +27,7 @@
 				"items": [
 					{
 						"predicates": {
-							"minecraft:custom_data": "{\"simplenergy\": {\"simplunium_ingot\": true}}"
+							"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}
 						}
 					}
 				]

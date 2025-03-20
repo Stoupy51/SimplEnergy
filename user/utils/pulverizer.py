@@ -60,11 +60,11 @@ execute if score #working {ns}.data matches 1.. if score #second {ns}.data match
 data modify entity @s item.components."minecraft:custom_data".{ns}.pulverizer_slots set from storage {ns}:temp slots
 
 """
-	write_to_function(config, f"{ns}:custom_blocks/pulverizer/tick", content)
+	write_function(config, f"{ns}:custom_blocks/pulverizer/tick", content)
 
 	# Gui for each slot
 	slots: str = "\n".join(f"function {ns}:custom_blocks/pulverizer/gui_passive_slot {{\"index\":{i},\"slot\":{i+9}}}" for i in range(PULVERIZER_SLOTS))
-	write_to_function(config, f"{ns}:custom_blocks/pulverizer/gui_for_each_slot", f"""
+	write_function(config, f"{ns}:custom_blocks/pulverizer/gui_for_each_slot", f"""
 # For each slot, execute function to update gui
 {slots}
 """)
@@ -72,7 +72,7 @@ data modify entity @s item.components."minecraft:custom_data".{ns}.pulverizer_sl
 	# Set the item gui (blocked if not unlocked, progression otherwise)
 	blocked_model: str = gui["gui/progress_blocked.png"]
 	progressions_cmd: list[str] = [x for x in gui if "progress_unblocked_" in x]
-	write_to_function(config, f"{ns}:custom_blocks/pulverizer/gui_passive_slot", f"""
+	write_function(config, f"{ns}:custom_blocks/pulverizer/gui_passive_slot", f"""
 # Get slot and progression, and the item
 scoreboard players set #progression {ns}.data 0
 $data modify storage {ns}:temp slot set from storage {ns}:temp slots[$(index)]
@@ -101,11 +101,11 @@ $execute unless data storage {ns}:temp slot.blocked run function {ns}:custom_blo
 			gui_min: int = previous_max + 1
 			previous_max = (i * PULVERIZER_TIME // nb_gui_2) - 1
 			progressions_gui.append(f"$execute if score #progression {ns}.data matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.$(slot) with {GUI_VANILLA_ITEM}[item_model=\"{gui[progression]}\",{GUI_DATA}]")
-	write_to_function(config, f"{ns}:custom_blocks/pulverizer/gui_progression", "\n".join(progressions_gui))
+	write_function(config, f"{ns}:custom_blocks/pulverizer/gui_progression", "\n".join(progressions_gui))
 
 
 	# Handle intruder item on gui
-	write_to_function(config, f"{ns}:custom_blocks/pulverizer/handle_item_on_gui", f"""
+	write_function(config, f"{ns}:custom_blocks/pulverizer/handle_item_on_gui", f"""
 # If slot is locked and it's not a Slot Unlocker, drop the item
 scoreboard players set #drop_item {ns}.data 0
 execute unless data storage {ns}:temp slot.blocked run scoreboard players set #drop_item {ns}.data 1
@@ -128,7 +128,7 @@ execute if score #drop_item {ns}.data matches 0 if data storage {ns}:temp slot.b
 	## Work parts
 	# Work function
 	for_each_slots: str = "\n".join(f"execute unless data storage {ns}:temp slots[{i}].blocked run function {ns}:custom_blocks/pulverizer/gui_active_slot {{\"index\":{i},\"slot\":{i+9},\"result\":{i+9*2}}}" for i in range(PULVERIZER_SLOTS))
-	write_to_function(config, f"{ns}:custom_blocks/pulverizer/work", f"""
+	write_function(config, f"{ns}:custom_blocks/pulverizer/work", f"""
 # Monitor if any slot is working
 {for_each_slots}
 
@@ -137,7 +137,7 @@ execute if score #working {ns}.data matches 1.. run scoreboard players remove @s
 """)
 	
 	# Reset progress function
-	write_to_function(config, f"{ns}:custom_blocks/pulverizer/reset_progress", f"""
+	write_function(config, f"{ns}:custom_blocks/pulverizer/reset_progress", f"""
 scoreboard players set #progression {ns}.data 0
 $data modify storage {ns}:temp slots[$(index)].progression set value 0
 $function {ns}:custom_blocks/pulverizer/gui_progression {{"index":$(index),"slot":$(slot)}}
@@ -145,7 +145,7 @@ return fail
 """)
 	
 	# Gui for each active slot
-	write_to_function(config, f"{ns}:custom_blocks/pulverizer/gui_active_slot", f"""
+	write_function(config, f"{ns}:custom_blocks/pulverizer/gui_active_slot", f"""
 # Get progression
 scoreboard players set #progression {ns}.data 0
 $execute store result score #progression {ns}.data run data get storage {ns}:temp slots[$(index)].progression
@@ -197,7 +197,7 @@ $execute if score #count {ns}.data matches 0 run data remove block ~ ~ ~ Items[{
 """)
 	
 	# Get pulverizer recipe function
-	write_to_function(config, f"{ns}:custom_blocks/pulverizer/get_pulverizer_recipe", f"""
+	write_function(config, f"{ns}:custom_blocks/pulverizer/get_pulverizer_recipe", f"""
 # Get the recipe
 function #{ns}:calls/pulverizer_recipes
 
@@ -214,30 +214,30 @@ kill @s
 	numbers += [i for i in range(1, 100) if i not in numbers]
 	for i in numbers:
 		content += f"execute if items entity @s contents *[minecraft:max_stack_size={i}] run return {i}\n"
-	write_to_function(config, f"{ns}:custom_blocks/pulverizer/get_max_stack_size", f"""
+	write_function(config, f"{ns}:custom_blocks/pulverizer/get_max_stack_size", f"""
 # Copy item
 data modify entity @s item set from storage {ns}:temp copy
 
 # Get max stack size
 {content}
 """)
-	write_to_function(config, f"{ns}:custom_blocks/pulverizer/entity_get_max_stack_size", f"""
+	write_function(config, f"{ns}:custom_blocks/pulverizer/entity_get_max_stack_size", f"""
 # Get max stack size and kill
 execute store result score #max_stack_size {ns}.data run function {ns}:custom_blocks/pulverizer/get_max_stack_size
 kill @s
 """)
 
 	# Keep track of unlocked slots when destroying and placing
-	write_to_function(config, f"{ns}:custom_blocks/pulverizer/destroy", f"""# Copy slots to storage
+	write_function(config, f"{ns}:custom_blocks/pulverizer/destroy", f"""# Copy slots to storage
 data remove storage {ns}:temp slots
 data modify storage {ns}:temp slots set from entity @s item.components."minecraft:custom_data".{ns}.pulverizer_slots
 \n""", prepend = True)
-	write_to_function(config, f"{ns}:custom_blocks/pulverizer/replace_item", f"""
+	write_function(config, f"{ns}:custom_blocks/pulverizer/replace_item", f"""
 # Save slots to the item components
 execute if data storage {ns}:temp slots run data modify entity @s Item.components."minecraft:custom_data".{ns}.pulverizer_slots set from storage {ns}:temp slots
 execute if data storage {ns}:temp slots run data modify entity @s Item.components."minecraft:lore" prepend value {{"text":"Unlocked slots saved.","color":"dark_gray","italic":false}}
 """)
-	write_to_function(config, f"{ns}:custom_blocks/pulverizer/place_secondary", f"""
+	write_function(config, f"{ns}:custom_blocks/pulverizer/place_secondary", f"""
 # Copy slots to the item components
 data modify entity @s item.components."minecraft:custom_data".{ns}.pulverizer_slots set from entity @p[tag={ns}.placer] SelectedItem.components."minecraft:custom_data".{ns}.pulverizer_slots
 """)
@@ -256,8 +256,8 @@ tag @s add itemio.container.hopper
 	for i in range(PULVERIZER_SLOTS):
 		content += f'{base} append value {{"Slot":{i+2*9},"mode":"output","allowed_side":{{"bottom":true}}}}\n'
 	content += "function #itemio:calls/container/init\n"
-	write_to_function(config, f"{ns}:custom_blocks/pulverizer/place_secondary", content)
-	write_to_function(config, f"{ns}:custom_blocks/pulverizer/destroy", "# ItemIO compatibility\nfunction #itemio:calls/container/destroy\n\n", prepend = True)
+	write_function(config, f"{ns}:custom_blocks/pulverizer/place_secondary", content)
+	write_function(config, f"{ns}:custom_blocks/pulverizer/destroy", "# ItemIO compatibility\nfunction #itemio:calls/container/destroy\n\n", prepend = True)
 
 	return
 

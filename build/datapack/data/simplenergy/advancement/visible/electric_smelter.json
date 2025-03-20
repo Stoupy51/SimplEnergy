@@ -26,7 +26,7 @@
 				"items": [
 					{
 						"predicates": {
-							"minecraft:custom_data": "{\"simplenergy\": {\"electric_smelter\": true}}"
+							"minecraft:custom_data": {"simplenergy": {"electric_smelter": true}}
 						}
 					}
 				]

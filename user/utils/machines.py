@@ -16,8 +16,8 @@ def setup_machines(config: dict, gui: dict[str, str]) -> None:
 execute if predicate {ns}:check_daylight_power run scoreboard players add @s energy.storage {energy["generation"]}
 execute if score @s energy.storage > @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 """
-	write_to_function(config, f"{ns}:custom_blocks/solar_panel/second", content)
-	write_to_function(config, f"{ns}:custom_blocks/solar_panel/place_secondary", """
+	write_function(config, f"{ns}:custom_blocks/solar_panel/second", content)
+	write_function(config, f"{ns}:custom_blocks/solar_panel/place_secondary", """
 # Fix scale
 data modify entity @s transformation.scale[1] set value 1.005f
 data modify entity @s transformation.translation[1] set value 0.002f
@@ -46,7 +46,7 @@ execute if score @s energy.storage > @s energy.max_storage run scoreboard player
 data modify block ~ ~ ~ cooking_total_time set value -200s
 data modify block ~ ~ ~ cooking_time_spent set value 0s
 """
-	write_to_function(config, f"{ns}:custom_blocks/furnace_generator/second", content)
+	write_function(config, f"{ns}:custom_blocks/furnace_generator/second", content)
 
 	# Electric Smelter & Electric Furnace & Electric Brewing Stand
 	for machine in ["electric_smelter", "electric_furnace", "electric_brewing_stand"]:
@@ -100,7 +100,7 @@ execute if score #cook_time {ns}.data matches 0 run tag @s add {ns}.update_visua
 execute if score #cook_time {ns}.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
 execute if score #cook_time {ns}.data matches 1.. if score #second {ns}.data matches 0 run playsound {ns}:{machine} block @a[distance=..12] ~ ~ ~ {0.25 if machine != "electric_brewing_stand" else 1.0}
 """
-		write_to_function(config, f"{ns}:custom_blocks/{machine}/tick", content)
+		write_function(config, f"{ns}:custom_blocks/{machine}/tick", content)
 		content: str = f"""
 # Change {cook} value and use energy
 execute if score #cook_time {ns}.data matches 1.. run scoreboard players remove @s energy.storage {energy["usage"] // 20}
@@ -113,7 +113,7 @@ scoreboard players add #burn_time {ns}.data 21
 execute if score #burn_time {ns}.data matches 21.. run scoreboard players set #burn_time {ns}.data 20
 execute if score #old_burn_time {ns}.data matches ..200 store result block ~ ~ ~ {burn} {burn_type} 1 run scoreboard players get #burn_time {ns}.data
 """
-		write_to_function(config, f"{ns}:custom_blocks/{machine}/work", content)
+		write_function(config, f"{ns}:custom_blocks/{machine}/work", content)
 
 	# Cauldron Generator
 	energy: dict = database["cauldron_generator"]["custom_data"]["energy"]
@@ -143,7 +143,7 @@ scoreboard players add @s energy.storage {energy["generation"]}
 execute if score @s energy.storage matches {energy["max_storage"]}.. run scoreboard players set @s energy.storage {energy["max_storage"]}
 playsound {ns}:cauldron_generator block @a[distance=..12] ~ ~ ~ 0.25
 """
-	write_to_function(config, f"{ns}:custom_blocks/cauldron_generator/second", content)
+	write_function(config, f"{ns}:custom_blocks/cauldron_generator/second", content)
 
 	# Commands on Electric Brewing Stand placement
 	to_add: str = """
@@ -152,7 +152,7 @@ data modify entity @s Rotation[0] set value 180.0f
 data modify entity @s transformation.scale[1] set value 1.025f
 data modify entity @s transformation.translation[1] set value 0.01f
 """
-	write_to_function(config, f"{ns}:custom_blocks/electric_brewing_stand/place_secondary", to_add)
+	write_function(config, f"{ns}:custom_blocks/electric_brewing_stand/place_secondary", to_add)
 
 	# Pulverizer
 	pulverizer(config, gui)

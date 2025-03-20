@@ -39,7 +39,7 @@
 				"items": [
 					{
 						"predicates": {
-							"minecraft:custom_data": "{\"simplenergy\": {\"advanced_cable\": true}}"
+							"minecraft:custom_data": {"simplenergy": {"advanced_cable": true}}
 						}
 					}
 				]
