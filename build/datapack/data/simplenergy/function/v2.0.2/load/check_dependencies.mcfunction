@@ -20,6 +20,4 @@ execute if score #dependency_error simplenergy.data matches 0 if score #smart_or
 execute if score #dependency_error simplenergy.data matches 0 unless score #itemio.major load.status matches 1.. run scoreboard players set #dependency_error simplenergy.data 1
 execute if score #dependency_error simplenergy.data matches 0 if score #itemio.major load.status matches 1 unless score #itemio.minor load.status matches 3.. run scoreboard players set #dependency_error simplenergy.data 1
 execute if score #dependency_error simplenergy.data matches 0 if score #itemio.major load.status matches 1 if score #itemio.minor load.status matches 3 unless score #itemio.patch load.status matches 3.. run scoreboard players set #dependency_error simplenergy.data 1
-execute if score #dependency_error simplenergy.data matches 0 unless score #energy.major load.status matches 1.. run scoreboard players set #dependency_error simplenergy.data 1
-execute if score #dependency_error simplenergy.data matches 0 if score #energy.major load.status matches 1 unless score #energy.minor load.status matches 8.. run scoreboard players set #dependency_error simplenergy.data 1
 

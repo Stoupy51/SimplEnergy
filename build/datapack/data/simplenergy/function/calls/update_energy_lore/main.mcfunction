@@ -1,7 +1,7 @@
 
 #> simplenergy:calls/update_energy_lore/main
 #
-# @within	#energy:v1/update_energy_item
+# @within	#energy:v1/update_energy_lore/main
 #			simplenergy:utils/keep_energy
 #
 

@@ -11,12 +11,12 @@ execute store result score #burn_time simplenergy.data run data get storage simp
 execute if score @s energy.storage matches 20.. if data storage simplenergy:temp all.Items[{Slot:0b}] run function simplenergy:custom_blocks/electric_furnace/work
 
 # Update gui depending on energy storage
-execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.1 with cobblestone[item_model="simplenergy:gui/electric_furnace_0",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
-execute if score @s energy.storage matches 1..399 run item replace block ~ ~ ~ container.1 with cobblestone[item_model="simplenergy:gui/electric_furnace_1",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
-execute if score @s energy.storage matches 400..799 run item replace block ~ ~ ~ container.1 with cobblestone[item_model="simplenergy:gui/electric_furnace_2",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
-execute if score @s energy.storage matches 800..1199 run item replace block ~ ~ ~ container.1 with cobblestone[item_model="simplenergy:gui/electric_furnace_3",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
-execute if score @s energy.storage matches 1200..1599 run item replace block ~ ~ ~ container.1 with cobblestone[item_model="simplenergy:gui/electric_furnace_4",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
-execute if score @s energy.storage matches 1600.. run item replace block ~ ~ ~ container.1 with cobblestone[item_model="simplenergy:gui/electric_furnace_5",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.1 with cobblestone[item_model="simplenergy:electric_furnace_0",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches 1..399 run item replace block ~ ~ ~ container.1 with cobblestone[item_model="simplenergy:electric_furnace_1",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches 400..799 run item replace block ~ ~ ~ container.1 with cobblestone[item_model="simplenergy:electric_furnace_2",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches 800..1199 run item replace block ~ ~ ~ container.1 with cobblestone[item_model="simplenergy:electric_furnace_3",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches 1200..1599 run item replace block ~ ~ ~ container.1 with cobblestone[item_model="simplenergy:electric_furnace_4",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches 1600.. run item replace block ~ ~ ~ container.1 with cobblestone[item_model="simplenergy:electric_furnace_5",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
 
 # Update block visual depends on cook time, and playsound every second
 execute if score #cook_time simplenergy.data matches 0 run data modify entity @s[tag=simplenergy.update_visual] item.components."minecraft:item_model" set value "simplenergy:electric_furnace"

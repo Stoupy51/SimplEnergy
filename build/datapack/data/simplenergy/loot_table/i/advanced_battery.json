@@ -11,25 +11,45 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"energy": {"storage": 0,"max_storage": 25000},
-									"simplenergy": {"advanced_battery": true},
-									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+									"energy": {
+										"storage": 0,
+										"max_storage": 25000
+									},
+									"simplenergy": {
+										"advanced_battery": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
 								},
 								"minecraft:lore": [
-									{"translate":"simplenergy.energy_storage_25_mj","italic": false,"color": "gray"},
-									["",{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate":"simplenergy","italic": true,"color": "blue"}]
+									{
+										"translate": "simplenergy.energy_storage_25_mj",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},
+										{"translate": "simplenergy","italic": true,"color": "blue"}
+									]
 								],
 								"minecraft:item_model": "simplenergy:advanced_battery",
 								"minecraft:item_name": {
-									"translate":"simplenergy.advanced_battery",
+									"translate": "simplenergy.advanced_battery",
 									"italic": false,
 									"color": "white"
 								},
 								"minecraft:container": [
-									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:advanced_battery","from": "simplenergy"}}}}}}
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:advanced_battery","from": "simplenergy"}}}}}
+									}
 								],
 								"minecraft:tooltip_display": {
-									"hidden_components": ["minecraft:container"]
+									"hidden_components": [
+										"minecraft:container"
+									]
 								}
 							}
 						}
@@ -39,4 +59,3 @@
 		}
 	]
 }
-

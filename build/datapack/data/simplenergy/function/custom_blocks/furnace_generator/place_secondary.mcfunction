@@ -14,8 +14,7 @@ tag @s add simplenergy.furnace_generator
 tag @s add simplenergy.vanilla.minecraft_furnace
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate":"simplenergy.furnace_generator","italic": false,"color": "white"}}
-
+data merge entity @s {"CustomName": {"translate": "simplenergy.furnace_generator","italic": false,"color": "white"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="simplenergy:furnace_generator"]
@@ -27,17 +26,6 @@ execute if score #rotation simplenergy.data matches 1 run data modify entity @s 
 execute if score #rotation simplenergy.data matches 2 run data modify entity @s Rotation[0] set value 270.0f
 execute if score #rotation simplenergy.data matches 3 run data modify entity @s Rotation[0] set value 0.0f
 execute if score #rotation simplenergy.data matches 4 run data modify entity @s Rotation[0] set value 90.0f
-
-# Furnace NBT Recipes
-execute align xyz positioned ~.5 ~ ~.5 unless entity @e[type=marker,dx=-1,dy=-1,dz=-1,tag=furnace_nbt_recipes.furnace] run summon marker ~ ~ ~ {Tags:["furnace_nbt_recipes.furnace"]}
-
-# Energy part
-tag @s add energy.send
-scoreboard players set @s energy.max_storage 800
-scoreboard players operation @s energy.transfer_rate = @s energy.max_storage
-scoreboard players add @s energy.storage 0
-scoreboard players add @s energy.change_rate 0
-function energy:v1/api/init_machine
 
 # Make the block rotatable by wrench
 tag @s add simplenergy.rotatable

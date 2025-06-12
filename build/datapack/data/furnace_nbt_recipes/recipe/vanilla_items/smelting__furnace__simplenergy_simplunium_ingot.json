@@ -23,7 +23,7 @@
 			},
 			"minecraft:item_model": "simplenergy:simplunium_ingot",
 			"minecraft:item_name": {
-				"translate":"simplenergy.simplunium_ingot",
+				"text": "Simplunium Ingot",
 				"italic": false,
 				"color": "white"
 			},
@@ -31,13 +31,13 @@
 				[
 					"",
 					{
-						"text":"I",
+						"text": "I",
 						"color": "white",
 						"italic": false,
 						"font": "simplenergy:icons"
 					},
 					{
-						"translate":"simplenergy",
+						"text": " SimplEnergy",
 						"italic": true,
 						"color": "blue"
 					}
@@ -48,4 +48,3 @@
 	"experience": 0.8,
 	"cookingtime": 200
 }
-

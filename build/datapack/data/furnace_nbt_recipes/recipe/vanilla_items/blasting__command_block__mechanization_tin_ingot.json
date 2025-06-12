@@ -18,13 +18,13 @@
 				}
 			},
 			"minecraft:item_name": {
-				"translate":"simplenergy.tin_ingot",
+				"text": "Tin Ingot",
 				"italic": false,
 				"color": "white"
 			},
 			"minecraft:lore": [
 				{
-					"translate":"simplenergy.mechanization",
+					"text": "Mechanization",
 					"italic": true,
 					"color": "blue"
 				}
@@ -34,4 +34,3 @@
 	"experience": 0.8,
 	"cookingtime": 100
 }
-

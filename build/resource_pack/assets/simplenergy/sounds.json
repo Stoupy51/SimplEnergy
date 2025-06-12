@@ -1,27 +1,26 @@
 {
 	"cauldron_generator": {
-		"subtitle": "Cauldron Generator",
-		"sounds": ["simplenergy:cauldron_generator"]
+		"subtitle": "cauldron_generator",
+		"sounds": ["simplenergy:Cauldron Generator"]
 	},
 	"electric_brewing_stand": {
-		"subtitle": "Electric Brewing Stand",
-		"sounds": ["simplenergy:electric_brewing_stand"]
+		"subtitle": "electric_brewing_stand",
+		"sounds": ["simplenergy:Electric Brewing Stand"]
 	},
 	"electric_furnace": {
-		"subtitle": "Electric Furnace",
-		"sounds": ["simplenergy:electric_furnace"]
+		"subtitle": "electric_furnace",
+		"sounds": ["simplenergy:Electric Furnace"]
 	},
 	"electric_smelter": {
-		"subtitle": "Electric Smelter",
-		"sounds": ["simplenergy:electric_smelter"]
+		"subtitle": "electric_smelter",
+		"sounds": ["simplenergy:Electric Smelter"]
 	},
 	"furnace_generator": {
-		"subtitle": "Furnace Generator",
-		"sounds": ["simplenergy:furnace_generator"]
+		"subtitle": "furnace_generator",
+		"sounds": ["simplenergy:Furnace Generator"]
 	},
 	"pulverizer": {
-		"subtitle": "Pulverizer",
-		"sounds": ["simplenergy:pulverizer"]
+		"subtitle": "pulverizer",
+		"sounds": ["simplenergy:Pulverizer"]
 	}
 }
-

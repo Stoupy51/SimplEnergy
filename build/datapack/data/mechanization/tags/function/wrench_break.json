@@ -1,7 +1,6 @@
 {
-	"required": false,
-	"values": [
-		"simplenergy:calls/mechanization/wrench_break"
-	]
+  "required": false,
+  "values": [
+    "simplenergy:calls/mechanization/wrench_break"
+  ]
 }
-

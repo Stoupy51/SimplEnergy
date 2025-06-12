@@ -12,16 +12,24 @@
 							"components": {
 								"minecraft:item_model": "simplenergy:diamond_dust",
 								"minecraft:item_name": {
-									"translate":"simplenergy.diamond_dust",
+									"translate": "simplenergy.diamond_dust",
 									"italic": false,
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate":"simplenergy","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},
+										{"translate": "simplenergy","italic": true,"color": "blue"}
+									]
 								],
 								"minecraft:custom_data": {
-									"simplenergy": {"diamond_dust": true},
-									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+									"simplenergy": {
+										"diamond_dust": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
 								}
 							}
 						}
@@ -31,4 +39,3 @@
 		}
 	]
 }
-

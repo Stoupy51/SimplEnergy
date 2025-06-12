@@ -14,4 +14,3 @@
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_raw_iron_block\"]}","location": {"block": {"blocks": "minecraft:raw_iron_block"}}}}
 	]
 }
-

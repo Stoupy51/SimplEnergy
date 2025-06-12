@@ -1,28 +1,27 @@
 {
-	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:placed_block",
-			"conditions": {
-				"location": [
-					{
-						"condition": "minecraft:location_check",
-						"predicate": {
-							"block": {
-								"nbt": "{\"components\": {\"minecraft:custom_data\": {\"energy\": {\"transfer\": 240},\"simplenergy\": {\"elite_cable\": true},\"smithed\": {\"ignore\": {\"functionality\": true,\"crafting\": true}}}}}\n"
-							}
-						}
-					}
-				]
-			}
-		}
-	},
-	"requirements": [
-		[
-			"requirement"
-		]
-	],
-	"rewards": {
-		"function": "simplenergy:custom_blocks/_player_head/search_elite_cable"
-	}
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "nbt": "{\"components\": {\"minecraft:custom_data\": {\"energy\": {\"transfer\": 240},\"simplenergy\": {\"elite_cable\": true},\"smithed\": {\"ignore\": {\"functionality\": true,\"crafting\": true}}}}}\n"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ],
+  "rewards": {
+    "function": "simplenergy:custom_blocks/_player_head/search_elite_cable"
+  }
 }
-

@@ -11,16 +11,24 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"ore": {"tin": true}}},
-									"mechanization": {"id": "tin_ore"}
+									"smithed": {
+										"dict": {"ore": {"tin": true}}
+									},
+									"mechanization": {
+										"id": "tin_ore"
+									}
 								},
 								"minecraft:item_name": {
-									"translate":"simplenergy.tin_ore",
+									"translate": "simplenergy.tin_ore",
 									"italic": false,
 									"color": "white"
 								},
 								"minecraft:lore": [
-									{"translate":"simplenergy.mechanization","italic": true,"color": "blue"}
+									{
+										"translate": "simplenergy.mechanization",
+										"italic": true,
+										"color": "blue"
+									}
 								]
 							}
 						}
@@ -30,4 +38,3 @@
 		}
 	]
 }
-

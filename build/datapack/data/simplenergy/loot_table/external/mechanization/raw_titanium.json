@@ -11,16 +11,24 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"raw": {"titanium": true}}},
-									"mechanization": {"id": "raw_titanium"}
+									"smithed": {
+										"dict": {"raw": {"titanium": true}}
+									},
+									"mechanization": {
+										"id": "raw_titanium"
+									}
 								},
 								"minecraft:item_name": {
-									"translate":"simplenergy.raw_titanium",
+									"translate": "simplenergy.raw_titanium",
 									"italic": false,
 									"color": "white"
 								},
 								"minecraft:lore": [
-									{"translate":"simplenergy.mechanization","italic": true,"color": "blue"}
+									{
+										"translate": "simplenergy.mechanization",
+										"italic": true,
+										"color": "blue"
+									}
 								]
 							}
 						}
@@ -30,4 +38,3 @@
 		}
 	]
 }
-

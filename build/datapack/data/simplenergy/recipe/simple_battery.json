@@ -24,39 +24,39 @@
 					"simple_battery": true
 				},
 				"smithed": {
-					"ignore": {"functionality": true,"crafting": true}
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
 				}
 			},
 			"minecraft:lore": [
 				{
-					"translate":"simplenergy.energy_storage_10_mj",
+					"text": "[Energy Storage: 10 MJ]",
 					"italic": false,
 					"color": "gray"
 				},
 				[
 					"",
-					{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},
-					{"translate":"simplenergy","italic": true,"color": "blue"}
+					{
+						"text": "I",
+						"color": "white",
+						"italic": false,
+						"font": "simplenergy:icons"
+					},
+					{
+						"text": " SimplEnergy",
+						"italic": true,
+						"color": "blue"
+					}
 				]
 			],
 			"minecraft:item_model": "simplenergy:simple_battery",
 			"minecraft:item_name": {
-				"translate":"simplenergy.simple_battery",
+				"text": "Simple Battery",
 				"italic": false,
 				"color": "white"
-			},
-			"minecraft:container": [
-				{
-					"slot": 0,
-					"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:simple_battery","from": "simplenergy"}}}}}
-				}
-			],
-			"minecraft:tooltip_display": {
-				"hidden_components": [
-					"minecraft:container"
-				]
 			}
 		}
 	}
 }
-

@@ -1,7 +1,7 @@
 
-#> simplenergy:_private/init
+#> load:_private/init
 #
-# @within	???
+# @within	#load:_private/init
 #
 
 # Reset scoreboards so packs can set values accurate for current load.

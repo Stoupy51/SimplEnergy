@@ -11,8 +11,13 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"armor": {"simplunium": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},
-									"simplenergy": {"simplunium_chestplate": true}
+									"smithed": {
+										"dict": {"armor": {"simplunium": true,"chestplate": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"simplenergy": {
+										"simplunium_chestplate": true
+									}
 								},
 								"minecraft:max_damage": 720,
 								"minecraft:equippable": {
@@ -20,16 +25,26 @@
 									"asset_id": "simplenergy:simplunium"
 								},
 								"minecraft:attribute_modifiers": [
-									{"type": "armor","amount": 6.5,"operation": "add_value","slot": "chest","id": "simplenergy:armor.chest"}
+									{
+										"type": "armor",
+										"amount": 6.5,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "simplenergy:armor.chest"
+									}
 								],
 								"minecraft:item_model": "simplenergy:simplunium_chestplate",
 								"minecraft:item_name": {
-									"translate":"simplenergy.simplunium_chestplate",
+									"translate": "simplenergy.simplunium_chestplate",
 									"italic": false,
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate":"simplenergy","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},
+										{"translate": "simplenergy","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -39,4 +54,3 @@
 		}
 	]
 }
-

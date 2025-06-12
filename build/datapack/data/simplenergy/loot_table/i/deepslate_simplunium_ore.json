@@ -11,23 +11,37 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"block": {"simplunium": true},"ore": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},
-									"simplenergy": {"deepslate_simplunium_ore": true}
+									"smithed": {
+										"dict": {"block": {"simplunium": true},"ore": {"simplunium": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"simplenergy": {
+										"deepslate_simplunium_ore": true
+									}
 								},
 								"minecraft:item_model": "simplenergy:deepslate_simplunium_ore",
 								"minecraft:item_name": {
-									"translate":"simplenergy.deepslate_simplunium_ore",
+									"translate": "simplenergy.deepslate_simplunium_ore",
 									"italic": false,
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate":"simplenergy","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},
+										{"translate": "simplenergy","italic": true,"color": "blue"}
+									]
 								],
 								"minecraft:container": [
-									{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:deepslate_simplunium_ore","from": "simplenergy"}}}}}}
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:deepslate_simplunium_ore","from": "simplenergy"}}}}}
+									}
 								],
 								"minecraft:tooltip_display": {
-									"hidden_components": ["minecraft:container"]
+									"hidden_components": [
+										"minecraft:container"
+									]
 								}
 							}
 						}
@@ -37,4 +51,3 @@
 		}
 	]
 }
-

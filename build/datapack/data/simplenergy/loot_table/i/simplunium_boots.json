@@ -11,8 +11,13 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"armor": {"simplunium": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},
-									"simplenergy": {"simplunium_boots": true}
+									"smithed": {
+										"dict": {"armor": {"simplunium": true,"boots": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"simplenergy": {
+										"simplunium_boots": true
+									}
 								},
 								"minecraft:max_damage": 585,
 								"minecraft:equippable": {
@@ -20,16 +25,26 @@
 									"asset_id": "simplenergy:simplunium"
 								},
 								"minecraft:attribute_modifiers": [
-									{"type": "armor","amount": 2.5,"operation": "add_value","slot": "feet","id": "simplenergy:armor.feet"}
+									{
+										"type": "armor",
+										"amount": 2.5,
+										"operation": "add_value",
+										"slot": "feet",
+										"id": "simplenergy:armor.feet"
+									}
 								],
 								"minecraft:item_model": "simplenergy:simplunium_boots",
 								"minecraft:item_name": {
-									"translate":"simplenergy.simplunium_boots",
+									"translate": "simplenergy.simplunium_boots",
 									"italic": false,
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate":"simplenergy","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},
+										{"translate": "simplenergy","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -39,4 +54,3 @@
 		}
 	]
 }
-

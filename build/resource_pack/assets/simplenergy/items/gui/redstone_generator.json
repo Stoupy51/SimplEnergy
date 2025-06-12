@@ -1,7 +1,19 @@
 {
-	"model": {
-		"type": "minecraft:model",
-		"model": "simplenergy:item/gui/redstone_generator"
-	}
+	"textures": {
+		"layer0": "simplenergy:item/redstone_generator"
+	},
+	"display": {
+		"firstperson_lefthand": {
+			"rotation": [0,0,0],
+			"translation": [0,0,0],
+			"scale": [0,0,0]
+		},
+		"ground": {
+			"rotation": [0,0,0],
+			"translation": [0,0,0],
+			"scale": [0,0,0]
+		}
+	},
+	"gui_light": "front",
+	"parent": "item/generated"
 }
-

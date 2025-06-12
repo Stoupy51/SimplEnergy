@@ -20,7 +20,6 @@ execute if data storage simplenergy:main OffhandTag.simplenergy.multimeter run f
 execute if data storage simplenergy:main OffhandTag.simplenergy.wrench run function simplenergy:utils/wrench/right_click
 execute if data storage simplenergy:main OffhandTag.simplenergy.battery_switcher run function simplenergy:utils/battery_switcher/right_click/main
 
-
 # Memory clean up
 data remove storage simplenergy:main OffhandTag
 data remove storage simplenergy:main SelectedItemTag

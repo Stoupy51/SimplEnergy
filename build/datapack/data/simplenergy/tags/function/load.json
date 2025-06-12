@@ -1,11 +1,6 @@
 {
 	"values": [
-		{
-			"id": "#simplenergy:dependencies",
-			"required": false
-		},
 		"#simplenergy:enumerate",
 		"#simplenergy:resolve"
 	]
 }
-

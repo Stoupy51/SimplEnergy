@@ -11,17 +11,26 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"smithed": {"dict": {"raw": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},
-									"simplenergy": {"raw_simplunium": true}
+									"smithed": {
+										"dict": {"raw": {"simplunium": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"simplenergy": {
+										"raw_simplunium": true
+									}
 								},
 								"minecraft:item_model": "simplenergy:raw_simplunium",
 								"minecraft:item_name": {
-									"translate":"simplenergy.raw_simplunium",
+									"translate": "simplenergy.raw_simplunium",
 									"italic": false,
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate":"simplenergy","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},
+										{"translate": "simplenergy","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -31,4 +40,3 @@
 		}
 	]
 }
-

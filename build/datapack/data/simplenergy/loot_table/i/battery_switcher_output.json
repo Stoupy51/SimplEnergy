@@ -11,17 +11,26 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"simplenergy": {"battery_switcher": true,"battery_switcher_output": true},
-									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+									"simplenergy": {
+										"battery_switcher": true,
+										"battery_switcher_output": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
 								},
 								"minecraft:item_model": "simplenergy:battery_switcher_output",
 								"minecraft:item_name": {
-									"translate":"simplenergy.battery_switcher_output",
+									"translate": "simplenergy.battery_switcher_output",
 									"italic": false,
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text":"I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate":"simplenergy","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},
+										{"translate": "simplenergy","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -31,4 +40,3 @@
 		}
 	]
 }
-
