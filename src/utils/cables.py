@@ -1,18 +1,20 @@
 
+# ruff: noqa: E501
 # Imports
-import stouputils as stp
-from python_datapack.utils.io import *
-from user.utils.gui import GUI_VANILLA_ITEM
+from beet import ItemModel, Model, Texture
+from stewbeet.core import *
+from stewbeet.core.utils.io import write_function
+from stouputils.io import super_json_load
+
+from .gui import GUI_VANILLA_ITEM
 
 # Constants
 CABLE_MODELS_FOLDER: str = os.path.dirname(os.path.abspath(__file__)) + "/cable_models"
 
 # Setup machines work and visuals
-def setup_cables_models(config: dict) -> None:
-	database: dict[str, dict] = config["database"]
-	ns: str = config["namespace"]
-	build_resource_pack: str = config["build_resource_pack"]
-	textures_folder: str = config["assets_folder"] + "/textures"
+def setup_cables_models() -> None:
+	ns: str = Mem.ctx.project_id
+	textures_folder: str = Mem.ctx.meta.stewbeet.textures_folder
 	cable_update_content: str = f"""
 # Stop if not {ns} cable
 execute unless entity @s[tag={ns}.custom_block] run return 0
@@ -22,14 +24,12 @@ execute unless entity @s[tag={ns}.custom_block] run return 0
 
 	# Setup parent cable model
 	parent_model: dict = {"parent":"block/block","display":{"fixed":{"rotation":[180,0,0],"translation":[0,-4,0],"scale":[1.005,1.005,1.005]}}}
-	path: str = f"{build_resource_pack}/assets/{ns}/models/block/cable_base.json"
-	write_file(path, stp.super_json_dump(parent_model))
+	Mem.ctx.assets[ns].models["block/cable_base"] = Model(super_json_dump(parent_model))
 
 	# Setup cables models
-	cables: list[str] = [item for item in database if "cable" in item]
+	cables: list[str] = [item for item in Mem.definitions if "cable" in item]
 	for cable in cables:
 		# Setup vanilla model for this cable
-		base_model: str = f"{build_resource_pack}/assets/{ns}/items/{cable}.json"
 		content: dict = {"model": {"type": "minecraft:range_dispatch","property": "minecraft:custom_model_data","entries": []}}
 
 		# Create all the cables variants models
@@ -39,7 +39,7 @@ execute unless entity @s[tag={ns}.custom_block] run return 0
 					path: str = f"{root}/{file}"
 
 					# Load the json file
-					json_file: dict = stp.super_json_load(path)
+					json_file: dict = super_json_load(path)
 
 					# Create the new json
 					new_json: dict = {
@@ -49,8 +49,7 @@ execute unless entity @s[tag={ns}.custom_block] run return 0
 					new_json.update(json_file)
 
 					# Write the new json
-					dest: str = f"{build_resource_pack}/assets/{ns}/models/block/{cable}/{file}"
-					write_file(dest, stp.super_json_dump(new_json, max_level = 3))
+					Mem.ctx.assets[ns].models[f"block/{cable}/{file}"] = Model(super_json_dump(new_json, max_level=3))
 
 		# Link vanilla model
 		for i in range(64):
@@ -64,27 +63,25 @@ execute unless entity @s[tag={ns}.custom_block] run return 0
 			model_path: str = f"{ns}:block/{cable}/variant_{up}{down}{north}{south}{east}{west}"
 			if model_path.endswith("_"):
 				model_path = model_path[:-1]
-			
+
 			# Add override
 			content["model"]["entries"].append({"threshold": i, "model":{"type": "minecraft:model", "model": model_path}})
 
 		# Write the vanilla model for this cable
-		write_file(base_model, stp.super_json_dump(content, max_level=3))
-		
+		Mem.ctx.assets[ns].item_models[cable] = ItemModel(super_json_dump(content, max_level=3))
+
 		# Copy texture
-		dest: str = f"{build_resource_pack}/assets/{ns}/textures/block/{cable}.png"
 		src: str = f"{textures_folder}/{cable}.png"
-		super_copy(src, dest)
-		if os.path.exists(src + ".mcmeta"):
-			super_copy(src + ".mcmeta", dest + ".mcmeta")
-		
+		mcmeta: JsonDict | None = None if not os.path.exists(src + ".mcmeta") else super_json_load(f"{src}.mcmeta")
+		Mem.ctx.assets[ns].textures[f"block/{cable}"] = Texture(source_path=src, mcmeta=mcmeta)
+
 		# On placement, rotate
-		write_function(config, f"{ns}:custom_blocks/{cable}/place_secondary", f"""
+		write_function(f"{ns}:custom_blocks/{cable}/place_secondary", f"""
 # Cable rotation for models, and common cable tag
 data modify entity @s item_display set value "fixed"
 tag @s add {ns}.cable
 """)
-	
+
 	# Update_cable_model function
 	cable_update_content += f"""
 # Apply the model
@@ -98,10 +95,7 @@ execute store result storage {ns}:main model_data.floats[0] float 1 run scoreboa
 data modify entity @s item.components."minecraft:custom_model_data" set from storage {ns}:main model_data
 data remove storage {ns}:main model_data
 """
-	write_function(config, f"{ns}:calls/cable_update", cable_update_content)
-
-	# Add the function to the cable_update function tag
-	write_tags(config, "energy:function/v1/cable_update", stp.super_json_dump({"values": [f"{ns}:calls/cable_update"]}))
+	write_function(f"{ns}:calls/cable_update", cable_update_content, tags=["energy:v1/cable_update"])
 
 	return
 

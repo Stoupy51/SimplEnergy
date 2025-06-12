@@ -1,31 +1,32 @@
 
+# ruff: noqa: E501
 # Imports
-import stouputils as stp
-from python_datapack.utils.io import *
+from stewbeet.core import *
+from stewbeet.core.utils.io import write_function
+
 
 # Setup functions for keeping energy for batteries
-def keep_energy_for_batteries(config: dict) -> None:
-	ns: str = config["namespace"]
-	build_datapack: str = config["build_datapack"]
+def keep_energy_for_batteries() -> None:
+	ns: str = Mem.ctx.project_id
 
 	# For each battery,
 	batteries: list[str] = ["simple_battery", "advanced_battery", "elite_battery", "creative_battery"]
 	for battery in batteries:
-		
+
 		# Copy current energy storage before destroying the block
-		write_function(config, f"{ns}:custom_blocks/{battery}/destroy", f"""
+		write_function(f"{ns}:custom_blocks/{battery}/destroy", f"""
 # Keep energy when destroying the block
 scoreboard players operation #storage {ns}.data = @s energy.storage
 
 """, prepend = True)
-		
+
 		# Keep energy when replacing the item
-		write_function(config, f"{ns}:custom_blocks/{battery}/replace_item", f"""
+		write_function(f"{ns}:custom_blocks/{battery}/replace_item", f"""
 # Keep energy
 function {ns}:utils/keep_energy
 
 """)
-	
+
 	# Write keep_energy
 	content: str = f"""
 # Prepare input for the update_energy_lore function
@@ -43,8 +44,8 @@ scoreboard players add #stack {ns}.data 1
 # Update the item
 data modify entity @s Item set from storage energy:temp list[0]
 """
-	write_function(config, f"{ns}:utils/keep_energy", content)
-	
+	write_function(f"{ns}:utils/keep_energy", content)
+
 
 	## Setup energy lore functions
 	content: str = f"""
@@ -85,16 +86,15 @@ function {ns}:calls/update_energy_lore/macro with storage {ns}:temp macro
 # Indicate that the item lore was updated
 data modify storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore set value 1b
 #data remove storage {ns}:temp macro
-"""	
-	
+"""
+
 	# Write the function and add it to the energy function tag
-	write_function(config, f"{ns}:calls/update_energy_lore/main", content)
-	write_tags(config, "energy:function/v1/update_energy_item", stp.super_json_dump({"values": [f"{ns}:calls/update_energy_lore/main"]}))
+	write_function(f"{ns}:calls/update_energy_lore/main", content, tags=["energy:v1/update_energy_lore/main"])
 
 	# Write macro function
-	write_function(config, f"{ns}:calls/update_energy_lore/macro", f"""
-$execute unless data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore" insert -2 value '[{{"text":"[Charge: ","color":"gray","italic":false}},"$(part_1).$(part_2)$(scale)"]'
-$execute if data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore"[-2] set value '[{{"text":"[Charge: ","color":"gray","italic":false}},"$(part_1).$(part_2)$(scale)"]'
+	write_function(f"{ns}:calls/update_energy_lore/macro", """
+$execute unless data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore" insert -2 value '[{"text":"[Charge: ","color":"gray","italic":false},"$(part_1).$(part_2)$(scale)"]'
+$execute if data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore"[-2] set value '[{"text":"[Charge: ","color":"gray","italic":false},"$(part_1).$(part_2)$(scale)"]'
 """)
 
 	return

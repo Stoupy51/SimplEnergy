@@ -1,13 +1,20 @@
 
 # Imports
 import stouputils as stp
-from python_datapack.utils.database_helper import *
+from stewbeet.core import *
 
-# Main function should return a database
-def main(config: dict) -> dict[str, dict]:
+
+# Make all the external item definitions
+def beet_default(ctx: Context) -> None:
+	if Mem.ctx is None:
+		Mem.ctx = ctx
+
+	# Replace temporarily the main definitions with the external definitions (for utility functions)
+	main_definitions: JsonDict = Mem.definitions
+	Mem.definitions = Mem.external_definitions
 
 	## TODO: complete item definition (and dynamic)
-	external_database: dict[str, dict] = {
+	Mem.definitions.update({
 		"mechanization:raw_tin": {"id":"minecraft:structure_block",					"custom_data": {"smithed": {"dict": {"raw": {"tin": True}}},			"mechanization": {"id": "raw_tin"}}},
 		"mechanization:tin_ore": {"id":"minecraft:blast_furnace",					"custom_data": {"smithed": {"dict": {"ore": {"tin": True}}},			"mechanization": {"id": "tin_ore"}}},
 		"mechanization:deepslate_tin_ore": {"id":"minecraft:blast_furnace",			"custom_data": {"smithed": {"dict": {"ore": {"tin": True}}},			"mechanization": {"id": "tin_ore"}}},
@@ -17,16 +24,16 @@ def main(config: dict) -> dict[str, dict]:
 		"mechanization:titanium_ore": {"id":"minecraft:blast_furnace",				"custom_data": {"smithed": {"dict": {"ore": {"titanium": True}}},		"mechanization": {"id": "titanium_ore"}}},
 		"mechanization:deepslate_titanium_ore": {"id":"minecraft:blast_furnace",	"custom_data": {"smithed": {"dict": {"ore": {"titanium": True}}},		"mechanization": {"id": "titanium_ore"}}},
 		"mechanization:titanium_ingot": {"id":"minecraft:structure_block",			"custom_data": {"smithed": {"dict": {"ingot": {"titanium": True}}},		"mechanization": {"id": "titanium_ingot"}}},
-	}
+	})
 
 	# Mechanization config
-	add_item_name_and_lore_if_missing(config, external_database, is_external = True)
+	add_item_name_and_lore_if_missing(is_external = True)
 
-	# Debug external database and return it
-	path: str = config["database_debug"]
-	path: list[str] = path.split("/")[:-1]
-	path: str = "/".join(path) + "/external_database.json"
-	with stp.super_open(path, "w") as f:
-		stp.super_json_dump(external_database, f)
-	return external_database
+	# Debug external definitions
+	with stp.super_open("./external_definitions.json", "w") as f:
+		stp.super_json_dump(Mem.definitions, f)
+
+	# Restore the main definitions
+	Mem.external_definitions = Mem.definitions
+	Mem.definitions = main_definitions
 

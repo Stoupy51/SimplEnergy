@@ -1,15 +1,16 @@
 
-# Import database helper
-from python_datapack.utils.database_helper import *
-
 # Imports
-from .database.additions import main as additions_main
-from .database.manual_assets import main as manual_assets_main
+from stewbeet.core import *
+
+from .additions import main_additions
+from .manual_assets import manual_assets_main
 
 # Constants
-simplunium_durability = 3 * VanillaEquipments.PICKAXE.value[DEFAULT_ORE.IRON]["durability"]
+simplunium_durability = 3 * VanillaEquipments.PICKAXE.value[DefaultOre.IRON]["durability"]
 ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
-	"simplunium_ingot":	EquipmentsConfig(DEFAULT_ORE.IRON, simplunium_durability, {"attack_damage": 1, "armor": 0.5, "mining_efficiency": 0.2}),
+	"simplunium_ingot":	EquipmentsConfig(
+		DefaultOre.IRON, simplunium_durability, {"attack_damage": 1, "armor": 0.5, "mining_efficiency": 0.2}
+	),
 }
 DUSTS_CONFIGS: dict[str, tuple[list[str|dict], dict]] = {
 	"copper":	(["raw_copper","copper_ore","deepslate_copper_ore"],												ingr_repr("minecraft:copper_ingot")),
@@ -24,29 +25,26 @@ DUSTS_CONFIGS: dict[str, tuple[list[str|dict], dict]] = {
 	"titanium":	([ingr_repr(x, "mechanization") for x in ["raw_titanium","titanium_ore","deepslate_titanium_ore"]],	ingr_repr("titanium_ingot", "mechanization")),
 }
 
-# Main function should return a database
-def main(config: dict) -> dict[str, dict]:
-	database = {}
+# Make all the item definitions
+def beet_default(ctx: Context) -> None:
+	if Mem.ctx is None:
+		Mem.ctx = ctx
 
 	# Generate ores in database
-	generate_everything_about_these_materials(config, database, ORES_CONFIGS)
+	generate_everything_about_these_materials(ORES_CONFIGS)
 
 	# Generate dusts in database
-	add_recipes_for_all_dusts(config, database, DUSTS_CONFIGS)
+	add_recipes_for_all_dusts(DUSTS_CONFIGS)
 
 	# Apply database additions
-	database = additions_main(database)
+	main_additions()
 
 	# Final adjustments
-	add_item_model_component(config, database, black_list = ["simple_cable", "advanced_cable", "elite_cable"])
-	add_item_name_and_lore_if_missing(config, database)
-	add_private_custom_data_for_namespace(config, database)
-	add_smithed_ignore_vanilla_behaviours_convention(database)
-	print()
+	add_item_model_component(black_list = ["simple_cable", "advanced_cable", "elite_cable"])
+	add_item_name_and_lore_if_missing()
+	add_private_custom_data_for_namespace()
+	add_smithed_ignore_vanilla_behaviours_convention()
 
 	# Copy manual assets that can't be generated
-	manual_assets_main(config)
-
-	# Return database
-	return database
+	manual_assets_main()
 

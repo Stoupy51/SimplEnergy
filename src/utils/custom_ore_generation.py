@@ -1,13 +1,14 @@
 
 # Imports
-import stouputils as stp
-from python_datapack.utils.database_helper import *
+from stewbeet.core import *
+from stouputils.print import info
+
 
 # Main function
-def setup_custom_ore_generation(config: dict):
+def setup_custom_ore_generation():
 
 	# Custom Ore generation
-	CustomOreGeneration.all_with_config(config, ore_configs = {
+	CustomOreGeneration.all_with_config(ore_configs = {
 		"simplunium_ore": [
 			CustomOreGeneration(
 				dimensions = ["minecraft:overworld"],
@@ -26,5 +27,5 @@ def setup_custom_ore_generation(config: dict):
 			)
 		],
 	})
-	stp.info("All customs ores now generates in the world!")
+	info("All customs ores now generates in the world!")
 

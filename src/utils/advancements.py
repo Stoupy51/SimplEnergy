@@ -1,20 +1,22 @@
 
+# ruff: noqa: E501
 # Imports
 from typing import Any
+
 import stouputils as stp
-from python_datapack.utils.io import super_copy, super_merge_dict, write_advancement
+from beet import Advancement, Texture
+from stewbeet.core import *
+from stewbeet.core.utils.io import super_merge_dict
+
 
 # Add visible advancements to the datapack
-def add_visible_advancements(config: dict) -> None:
-	database: dict = config["database"]
-	assets_folder: str = config["assets_folder"]
-	build_resource_pack: str = config["build_resource_pack"]
-	ns: str = config["namespace"]
+def add_visible_advancements() -> None:
+	ns: str = Mem.ctx.project_id
+	textures_folder: str = Mem.ctx.meta.stewbeet.textures_folder
 
 	# Copy advancement texture
-	source: str = f"{assets_folder}/textures/advancement_background.png"
-	destination: str = f"{build_resource_pack}/assets/{ns}/textures/block/gui/advancement_background.png"
-	super_copy(source, destination)
+	source: str = f"{textures_folder}/advancement_background.png"
+	Mem.ctx.assets[ns].textures["block/gui/advancement_background"] = Texture(source_path=source)
 
 	# Advancements list
 	background: str = f"{ns}:block/gui/advancement_background"
@@ -38,8 +40,8 @@ def add_visible_advancements(config: dict) -> None:
 		"wrench": {"display": {"title": {"text": "Having the control!", "color": "gray"}, "description": {"text": "Craft a wrench to rotate machines and break cables", "color": "green"}, "hidden": True}, "parent": f"{ns}:visible/simplunium_armor"},
 
 		"simplunium_armor": {
-			"display": { "icon": {"id": database["simplunium_chestplate"]["id"],"components": {
-					"minecraft:item_model": database["simplunium_chestplate"]["item_model"],
+			"display": { "icon": {"id": Mem.definitions["simplunium_chestplate"]["id"],"components": {
+					"minecraft:item_model": Mem.definitions["simplunium_chestplate"]["item_model"],
 				}},
 				"title": {"text": "Cover Me with Simplunium", "color": "gray"},
 				"description": {"text": "Better than iron armor", "color": "green"},
@@ -62,7 +64,7 @@ def add_visible_advancements(config: dict) -> None:
 
 	# For each advancement,
 	for item, adv in advancements.items():
-		data: dict = database.get(item, {})
+		data: dict = Mem.definitions.get(item, {})
 		advancement: dict[str, Any] = {"display":{}, "criteria": {}, "requirements": [["requirement"]]}
 
 		# Set icon
@@ -75,7 +77,7 @@ def add_visible_advancements(config: dict) -> None:
 						icon["components"] = {}
 					icon["components"][f"minecraft:{component}"] = data[component]
 			advancement["display"]["icon"] = icon
-		
+
 		# Set the criteria, if not already set
 		if not adv.get("criteria"):
 			criteria: dict[str, Any] = {"requirement": {"trigger": "minecraft:inventory_changed","conditions": {"items": [{"predicates": {}}]}}}
@@ -84,7 +86,7 @@ def add_visible_advancements(config: dict) -> None:
 
 		# Set the advancement
 		advancement = super_merge_dict(advancement, adv)
-		write_advancement(config, f"{ns}:visible/{item}", stp.super_json_dump(advancement, max_level = 7))
+		Mem.ctx.data[ns].advancements[f"visible/{item}"] = Advancement(stp.super_json_dump(advancement, max_level = 7))
 
 	return
 

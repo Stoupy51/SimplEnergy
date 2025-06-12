@@ -1,23 +1,25 @@
 
+# ruff: noqa: E501
 # Imports
-from python_datapack.utils.io import *
-from user.utils.gui import GUI_VANILLA_ITEM
-from user.utils.pulverizer import pulverizer
+from stewbeet.core import *
+
+from .gui import GUI_VANILLA_ITEM
+from .pulverizer import pulverizer
+
 
 # Setup machines work and visuals
-def setup_machines(config: dict, gui: dict[str, str]) -> None:
-	database: dict[str, dict] = config["database"]
-	ns: str = config["namespace"]
+def setup_machines(gui: dict[str, str]) -> None:
+	ns: str = Mem.ctx.project_id
 	GUI_DATA: str = 'tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}'
 
 	# Solar panel
-	energy: dict = database["solar_panel"]["custom_data"]["energy"]
+	energy: dict = Mem.definitions["solar_panel"]["custom_data"]["energy"]
 	content: str = f"""# Produce Energy depending on the power of daylight sensor
 execute if predicate {ns}:check_daylight_power run scoreboard players add @s energy.storage {energy["generation"]}
 execute if score @s energy.storage > @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 """
-	write_function(config, f"{ns}:custom_blocks/solar_panel/second", content)
-	write_function(config, f"{ns}:custom_blocks/solar_panel/place_secondary", """
+	write_function(f"{ns}:custom_blocks/solar_panel/second", content)
+	write_function(f"{ns}:custom_blocks/solar_panel/place_secondary", """
 # Fix scale
 data modify entity @s transformation.scale[1] set value 1.005f
 data modify entity @s transformation.translation[1] set value 0.002f
@@ -25,10 +27,10 @@ data modify entity @s transformation.translation[1] set value 0.002f
 
 
 	# Furnace Generator
-	energy: dict = database["furnace_generator"]["custom_data"]["energy"]
+	energy: dict = Mem.definitions["furnace_generator"]["custom_data"]["energy"]
 	default_gui: str = gui["gui/furnace_generator.png"]
 	working_gui: str = gui["gui/furnace_generator_on.png"]
-	default_model: str = database["furnace_generator"]["item_model"]
+	default_model: str = Mem.definitions["furnace_generator"]["item_model"]
 	working_model: str = default_model + "_on"
 	content: str = f"""# Update the gui to default
 execute store result score #burn_time {ns}.data run data get block ~ ~ ~ lit_time_remaining
@@ -46,11 +48,11 @@ execute if score @s energy.storage > @s energy.max_storage run scoreboard player
 data modify block ~ ~ ~ cooking_total_time set value -200s
 data modify block ~ ~ ~ cooking_time_spent set value 0s
 """
-	write_function(config, f"{ns}:custom_blocks/furnace_generator/second", content)
+	write_function(f"{ns}:custom_blocks/furnace_generator/second", content)
 
 	# Electric Smelter & Electric Furnace & Electric Brewing Stand
 	for machine in ["electric_smelter", "electric_furnace", "electric_brewing_stand"]:
-		energy: dict = database[machine]["custom_data"]["energy"]
+		energy: dict = Mem.definitions[machine]["custom_data"]["energy"]
 		cook: str = "cooking_time_spent" if machine != "electric_brewing_stand" else "BrewTime"
 		burn: str = "lit_time_remaining" if machine != "electric_brewing_stand" else "Fuel"
 		burn_type: str = "short" if machine != "electric_brewing_stand" else "byte"
@@ -81,7 +83,7 @@ data modify block ~ ~ ~ cooking_time_spent set value 0s
 				machine_gui.append(f'execute if score @s energy.storage matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[item_model="{gui[gui_name]}",{GUI_DATA}]')
 		machine_gui_str: str = "\n".join(machine_gui)
 
-		default_model: str = database[machine]["item_model"]
+		default_model: str = Mem.definitions[machine]["item_model"]
 		working_model: str = default_model + "_on"
 		content: str = f"""
 # Store values for efficient look up
@@ -100,7 +102,7 @@ execute if score #cook_time {ns}.data matches 0 run tag @s add {ns}.update_visua
 execute if score #cook_time {ns}.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
 execute if score #cook_time {ns}.data matches 1.. if score #second {ns}.data matches 0 run playsound {ns}:{machine} block @a[distance=..12] ~ ~ ~ {0.25 if machine != "electric_brewing_stand" else 1.0}
 """
-		write_function(config, f"{ns}:custom_blocks/{machine}/tick", content)
+		write_function(f"{ns}:custom_blocks/{machine}/tick", content)
 		content: str = f"""
 # Change {cook} value and use energy
 execute if score #cook_time {ns}.data matches 1.. run scoreboard players remove @s energy.storage {energy["usage"] // 20}
@@ -113,11 +115,11 @@ scoreboard players add #burn_time {ns}.data 21
 execute if score #burn_time {ns}.data matches 21.. run scoreboard players set #burn_time {ns}.data 20
 execute if score #old_burn_time {ns}.data matches ..200 store result block ~ ~ ~ {burn} {burn_type} 1 run scoreboard players get #burn_time {ns}.data
 """
-		write_function(config, f"{ns}:custom_blocks/{machine}/work", content)
+		write_function(f"{ns}:custom_blocks/{machine}/work", content)
 
 	# Cauldron Generator
-	energy: dict = database["cauldron_generator"]["custom_data"]["energy"]
-	default_model: str = database["cauldron_generator"]["item_model"]
+	energy: dict = Mem.definitions["cauldron_generator"]["custom_data"]["energy"]
+	default_model: str = Mem.definitions["cauldron_generator"]["item_model"]
 	working_model: str = default_model + "_on"
 	content: str = f"""
 # Stop function if no water or full
@@ -143,7 +145,7 @@ scoreboard players add @s energy.storage {energy["generation"]}
 execute if score @s energy.storage matches {energy["max_storage"]}.. run scoreboard players set @s energy.storage {energy["max_storage"]}
 playsound {ns}:cauldron_generator block @a[distance=..12] ~ ~ ~ 0.25
 """
-	write_function(config, f"{ns}:custom_blocks/cauldron_generator/second", content)
+	write_function(f"{ns}:custom_blocks/cauldron_generator/second", content)
 
 	# Commands on Electric Brewing Stand placement
 	to_add: str = """
@@ -152,10 +154,10 @@ data modify entity @s Rotation[0] set value 180.0f
 data modify entity @s transformation.scale[1] set value 1.025f
 data modify entity @s transformation.translation[1] set value 0.01f
 """
-	write_function(config, f"{ns}:custom_blocks/electric_brewing_stand/place_secondary", to_add)
+	write_function(f"{ns}:custom_blocks/electric_brewing_stand/place_secondary", to_add)
 
 	# Pulverizer
-	pulverizer(config, gui)
+	pulverizer(gui)
 
 
 	return
