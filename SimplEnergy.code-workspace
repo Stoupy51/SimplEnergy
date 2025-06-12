@@ -4,10 +4,7 @@
 			"path": "."
 		},
 		{
-			"path": "../python_datapack"
-		},
-		{
-			"path": "../PythonDatapackTemplate"
+			"path": "../StewBeet"
 		}
 	],
 	"settings": {}
