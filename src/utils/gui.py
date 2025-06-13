@@ -3,7 +3,7 @@
 import json
 import os
 
-from beet import ItemModel, Texture
+from beet import ItemModel, Model, Texture
 from stewbeet.core import Mem
 from stewbeet.core.utils.io import super_json_dump
 from stouputils.io import super_json_load
@@ -62,16 +62,28 @@ def setup_gui_in_resource_packs() -> dict[str, str]:
 			content.pop("elements")
 			content["parent"] = "item/generated"
 
-		# Register GUI item model and texture via stewbeet assets
+		# Write the model in models/item/
 		model_name = gui.replace('.png', '')
-		Mem.ctx.assets[namespace].item_models[model_name] = ItemModel(
+		Mem.ctx.assets[namespace].models[f"item/{model_name}"] = Model(
 			super_json_dump(content, max_level=3)
 		)
+
+		# Copy the textures
 		src = f"{textures_folder}/{gui}"
 		mcmeta = None if not os.path.exists(src + ".mcmeta") else super_json_load(src + ".mcmeta")
 		Mem.ctx.assets[namespace].textures[f"item/{model_name}"] = Texture(
 			source_path=src,
 			mcmeta=mcmeta
+		)
+
+		# Write the file in items/
+		Mem.ctx.assets[namespace].item_models[model_name] = ItemModel(
+			super_json_dump({
+				"model": {
+					"type": "minecraft:model",
+					"model": f"{namespace}:item/{model_name}"
+				}
+			}, max_level=3)
 		)
 
 	return gui_models
