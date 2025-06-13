@@ -49,7 +49,8 @@ execute unless entity @s[tag={ns}.custom_block] run return 0
 					new_json.update(json_file)
 
 					# Write the new json
-					Mem.ctx.assets[ns].models[f"block/{cable}/{file}"] = Model(super_json_dump(new_json, max_level=3))
+					no_ext: str = os.path.splitext(file)[0]
+					Mem.ctx.assets[ns].models[f"block/{cable}/{no_ext}"] = Model(super_json_dump(new_json, max_level=3))
 
 		# Link vanilla model
 		for i in range(64):
