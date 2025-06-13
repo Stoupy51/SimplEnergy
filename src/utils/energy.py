@@ -19,7 +19,7 @@ def complete_place_and_destroy() -> None:
 		if len(energy) > 0:
 			placement: str = f"{ns}:custom_blocks/{item}/place_secondary"
 			destroy: str = f"{ns}:custom_blocks/{item}/destroy"
-			if Mem.ctx.data.functions.get(placement): # Skip if no custom block
+			if not Mem.ctx.data.functions.get(placement): # Skip if no custom block
 				continue
 
 			# If the item is a cable
