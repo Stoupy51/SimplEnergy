@@ -62,6 +62,30 @@
 				"text": "Furnace Generator",
 				"italic": false,
 				"color": "white"
+			},
+			"minecraft:container": [
+				{
+					"slot": 0,
+					"item": {
+						"id": "minecraft:stone",
+						"count": 1,
+						"components": {
+							"minecraft:custom_data": {
+								"smithed": {
+									"block": {
+										"id": "simplenergy:furnace_generator",
+										"from": "simplenergy"
+									}
+								}
+							}
+						}
+					}
+				}
+			],
+			"minecraft:tooltip_display": {
+				"hidden_components": [
+					"minecraft:container"
+				]
 			}
 		}
 	}

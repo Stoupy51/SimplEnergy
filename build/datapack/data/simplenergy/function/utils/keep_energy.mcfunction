@@ -20,5 +20,5 @@ execute store result storage energy:temp list[0].components."minecraft:custom_da
 scoreboard players add #stack simplenergy.data 1
 
 # Update the item
-data modify entity @s Item set from storage energy:temp list[0]
+data modify entity @s Item.components set from storage energy:temp list[0].components
 

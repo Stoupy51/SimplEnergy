@@ -61,6 +61,30 @@
 				"text": "Solar Panel",
 				"italic": false,
 				"color": "white"
+			},
+			"minecraft:container": [
+				{
+					"slot": 0,
+					"item": {
+						"id": "minecraft:stone",
+						"count": 1,
+						"components": {
+							"minecraft:custom_data": {
+								"smithed": {
+									"block": {
+										"id": "simplenergy:solar_panel",
+										"from": "simplenergy"
+									}
+								}
+							}
+						}
+					}
+				}
+			],
+			"minecraft:tooltip_display": {
+				"hidden_components": [
+					"minecraft:container"
+				]
 			}
 		}
 	}
