@@ -24,7 +24,6 @@ scoreboard players operation #storage {ns}.data = @s energy.storage
 		write_function(f"{ns}:custom_blocks/{battery}/replace_item", f"""
 # Keep energy
 function {ns}:utils/keep_energy
-
 """)
 
 	# Write keep_energy
@@ -42,7 +41,7 @@ execute store result storage energy:temp list[0].components."minecraft:custom_da
 scoreboard players add #stack {ns}.data 1
 
 # Update the item
-data modify entity @s Item set from storage energy:temp list[0]
+data modify entity @s Item.components set from storage energy:temp list[0].components
 """
 	write_function(f"{ns}:utils/keep_energy", content)
 
@@ -93,8 +92,8 @@ data modify storage energy:temp list[0].components."minecraft:custom_data".energ
 
 	# Write macro function
 	write_function(f"{ns}:calls/update_energy_lore/macro", """
-$execute unless data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore" insert -2 value '[{"text":"[Charge: ","color":"gray","italic":false},"$(part_1).$(part_2)$(scale)"]'
-$execute if data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore"[-2] set value '[{"text":"[Charge: ","color":"gray","italic":false},"$(part_1).$(part_2)$(scale)"]'
+$execute unless data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore" insert -2 value [{"text":"[Charge: ","color":"gray","italic":false},"$(part_1).$(part_2)$(scale)"]
+$execute if data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore"[-2] set value [{"text":"[Charge: ","color":"gray","italic":false},"$(part_1).$(part_2)$(scale)"]
 """)
 
 	return
