@@ -1,6 +1,12 @@
 
-# Configuration for Modrinth
-from config import *
+# Imports
+import os
+
+from beet import ProjectConfig
+from stewbeet.utils import get_project_config
+
+# Try to find and load the beet configuration file
+cfg: ProjectConfig | None = get_project_config()
 
 # Constants
 SUMMARY: str = """
@@ -9,8 +15,8 @@ Also, it has been made to help the development of energy data packs by using an 
 """
 
 DESCRIPTION_MARKDOWN: str = ""
-if os.path.exists(f"{ROOT}/README.md"):
-	with open(f"{ROOT}/README.md", "r", encoding="utf-8") as file:
+if os.path.exists(f"{cfg.directory}/README.md"):
+	with open(f"{cfg.directory}/README.md", encoding="utf-8") as file:
 		DESCRIPTION_MARKDOWN = file.read()
 else:
 	print("README.md not found, description_markdown will be empty")
@@ -25,13 +31,13 @@ VERSION_TYPE: str = "alpha"
 
 # Configuration
 modrinth_config: dict = {
-	"slug": NAMESPACE,
-	"project_name": PROJECT_NAME,
-	"version": VERSION,
+	"slug": cfg.id,
+	"project_name": cfg.name,
+	"version": cfg.version,
 	"summary": SUMMARY,
 	"description_markdown": DESCRIPTION_MARKDOWN,
 	"dependencies": DEPENDENCIES,
 	"version_type": VERSION_TYPE,
-	"build_folder": BUILD_FOLDER,
+	"build_folder": cfg.output,
 }
 
