@@ -1,6 +1,6 @@
 {
 	"textures": {
-		"layer0": "simplenergy:item/redstone_generator"
+		"layer0": "simplenergy:item/gui/redstone_generator"
 	},
 	"display": {
 		"firstperson_lefthand": {
