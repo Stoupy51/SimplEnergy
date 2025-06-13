@@ -82,7 +82,8 @@ def setup_gui_in_resource_packs() -> dict[str, str]:
 				"model": {
 					"type": "minecraft:model",
 					"model": f"{namespace}:item/{model_name}"
-				}
+				},
+				"oversized_in_gui": True
 			}, max_level=3)
 		)
 

@@ -2,5 +2,6 @@
 	"model": {
 		"type": "minecraft:model",
 		"model": "simplenergy:item/gui/furnace_generator"
-	}
+	},
+	"oversized_in_gui": true
 }

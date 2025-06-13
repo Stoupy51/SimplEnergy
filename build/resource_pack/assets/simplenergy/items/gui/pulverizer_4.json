@@ -2,5 +2,6 @@
 	"model": {
 		"type": "minecraft:model",
 		"model": "simplenergy:item/gui/pulverizer_4"
-	}
+	},
+	"oversized_in_gui": true
 }

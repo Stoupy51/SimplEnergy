@@ -2,5 +2,6 @@
 	"model": {
 		"type": "minecraft:model",
 		"model": "simplenergy:item/gui/electric_furnace_0"
-	}
+	},
+	"oversized_in_gui": true
 }
