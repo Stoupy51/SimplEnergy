@@ -10,8 +10,11 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:unbreakable": {
-									"show_in_tooltip": false
+								"minecraft:tooltip_display": {
+									"hide_tooltip": true,
+									"hidden_components": [
+										"minecraft:unbreakable"
+									]
 								},
 								"minecraft:lore": [
 									{

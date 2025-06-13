@@ -4,6 +4,9 @@
 # @within	simplenergy:custom_blocks/_groups/minecraft_cauldron
 #
 
+# Datapack Energy
+function energy:v1/api/break_machine
+
 # Replace the item with the custom one
 execute as @n[type=item,nbt={Item:{id:"minecraft:cauldron"}},distance=..1] run function simplenergy:custom_blocks/cauldron_generator/replace_item
 

@@ -4,6 +4,9 @@
 # @within	simplenergy:custom_blocks/_groups/minecraft_daylight_detector
 #
 
+# Datapack Energy
+function energy:v1/api/break_machine
+
 # Replace the item with the custom one
 execute as @n[type=item,nbt={Item:{id:"minecraft:daylight_detector"}},distance=..1] run function simplenergy:custom_blocks/solar_panel/replace_item
 

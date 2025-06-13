@@ -4,12 +4,12 @@
 from beet import ItemModel, Model, Texture
 from stewbeet.core import *
 from stewbeet.core.utils.io import write_function
-from stouputils.io import super_json_load
+from stouputils.io import get_root_path, super_json_load
 
 from .gui import GUI_VANILLA_ITEM
 
 # Constants
-CABLE_MODELS_FOLDER: str = os.path.dirname(os.path.abspath(__file__)) + "/cable_models"
+CABLE_MODELS_FOLDER: str = get_root_path(__file__) + "/cable_models"
 
 # Setup machines work and visuals
 def setup_cables_models() -> None:

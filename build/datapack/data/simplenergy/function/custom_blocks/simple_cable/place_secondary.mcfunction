@@ -20,6 +20,10 @@ data merge entity @s {"CustomName": {"translate": "simplenergy.simple_cable","it
 data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 data modify entity @s brightness set value {block:15,sky:15}
 
+tag @s add energy.cable
+scoreboard players set @s energy.transfer_rate 40
+function energy:v1/api/init_cable
+
 # Cable rotation for models, and common cable tag
 data modify entity @s item_display set value "fixed"
 tag @s add simplenergy.cable

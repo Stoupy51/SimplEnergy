@@ -27,6 +27,14 @@ execute if score #rotation simplenergy.data matches 2 run data modify entity @s 
 execute if score #rotation simplenergy.data matches 3 run data modify entity @s Rotation[0] set value 0.0f
 execute if score #rotation simplenergy.data matches 4 run data modify entity @s Rotation[0] set value 90.0f
 
+# Energy part
+tag @s add energy.receive
+scoreboard players set @s energy.max_storage 6400
+scoreboard players operation @s energy.transfer_rate = @s energy.max_storage
+scoreboard players add @s energy.storage 0
+scoreboard players add @s energy.change_rate 0
+function energy:v1/api/init_machine
+
 # Copy slots to the item components
 data modify entity @s item.components."minecraft:custom_data".simplenergy.pulverizer_slots set from entity @p[tag=simplenergy.placer] SelectedItem.components."minecraft:custom_data".simplenergy.pulverizer_slots
 

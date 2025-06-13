@@ -11,6 +11,8 @@ function #itemio:calls/container/destroy
 data remove storage simplenergy:temp slots
 data modify storage simplenergy:temp slots set from entity @s item.components."minecraft:custom_data".simplenergy.pulverizer_slots
 
+# Datapack Energy
+function energy:v1/api/break_machine
 
 # Replace the item with the custom one
 execute as @n[type=item,nbt={Item:{id:"minecraft:barrel"}},distance=..1] run function simplenergy:custom_blocks/pulverizer/replace_item

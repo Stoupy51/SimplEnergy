@@ -4,6 +4,9 @@
 # @within	simplenergy:custom_blocks/_groups/minecraft_brewing_stand
 #
 
+# Datapack Energy
+function energy:v1/api/break_machine
+
 # Replace the item with the custom one
 execute as @n[type=item,nbt={Item:{id:"minecraft:brewing_stand"}},distance=..1] run function simplenergy:custom_blocks/electric_brewing_stand/replace_item
 
