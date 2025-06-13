@@ -181,7 +181,7 @@ scoreboard players add #working {ns}.data 1
 execute store result score #count {ns}.data run data get storage {ns}:temp copy.count
 execute store result score #to_add {ns}.data run data get storage {ns}:main pulverizer.output.count
 scoreboard players operation #count {ns}.data += #to_add {ns}.data
-execute if score #output_occupied {ns}.data matches 1 summon item_display run function {ns}:custom_blocks/pulverizer/entity_get_max_stack_size
+$execute if score #output_occupied {ns}.data matches 1 run function {ns}:custom_blocks/pulverizer/get_max_stack_size {{"result":$(result)}}
 $execute if score #output_occupied {ns}.data matches 1 if score #count {ns}.data > #max_stack_size {ns}.data run return run function simplenergy:custom_blocks/pulverizer/reset_progress {{"index":$(index),"slot":$(slot)}}
 
 # Add the item to the result slot if progression is done
@@ -215,19 +215,8 @@ kill @s
 	numbers: list[int] = [64, 16, 1, 99]
 	numbers += [i for i in range(1, 100) if i not in numbers]
 	for i in numbers:
-		content += f"execute if items entity @s contents *[minecraft:max_stack_size={i}] run return {i}\n"
-	write_function(f"{ns}:custom_blocks/pulverizer/get_max_stack_size", f"""
-# Copy item
-data modify entity @s item set from storage {ns}:temp copy
-
-# Get max stack size
-{content}
-""")
-	write_function(f"{ns}:custom_blocks/pulverizer/entity_get_max_stack_size", f"""
-# Get max stack size and kill
-execute store result score #max_stack_size {ns}.data run function {ns}:custom_blocks/pulverizer/get_max_stack_size
-kill @s
-""")
+		content += f"$execute if items entity @s container.$(result) *[minecraft:max_stack_size={i}] run return {i}\n"
+	write_function(f"{ns}:custom_blocks/pulverizer/get_max_stack_size", content)
 
 	# Keep track of unlocked slots when destroying and placing
 	write_function(f"{ns}:custom_blocks/pulverizer/destroy", f"""# Copy slots to storage

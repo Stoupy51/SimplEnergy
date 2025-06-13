@@ -44,7 +44,7 @@ scoreboard players add #working simplenergy.data 1
 execute store result score #count simplenergy.data run data get storage simplenergy:temp copy.count
 execute store result score #to_add simplenergy.data run data get storage simplenergy:main pulverizer.output.count
 scoreboard players operation #count simplenergy.data += #to_add simplenergy.data
-execute if score #output_occupied simplenergy.data matches 1 summon item_display run function simplenergy:custom_blocks/pulverizer/entity_get_max_stack_size
+$execute if score #output_occupied simplenergy.data matches 1 run function simplenergy:custom_blocks/pulverizer/get_max_stack_size {"result":$(result)}
 $execute if score #output_occupied simplenergy.data matches 1 if score #count simplenergy.data > #max_stack_size simplenergy.data run return run function simplenergy:custom_blocks/pulverizer/reset_progress {"index":$(index),"slot":$(slot)}
 
 # Add the item to the result slot if progression is done

@@ -123,7 +123,7 @@ meta:
             # Enables caching of Minecraft assets and item renders
             cache_assets: true
             # Enables caching of manual content and images
-            cache_pages: false
+            cache_pages: true
             # Path for manual debug dump
             json_dump_path: "manual_cache/content.json"
             # Manual title used in book and first page. Defaults to "{name} Manual"
