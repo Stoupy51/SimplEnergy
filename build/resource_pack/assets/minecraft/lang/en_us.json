@@ -199,7 +199,7 @@
 	"simplenergy.current_state": "Current state: ",
 	"simplenergy.output": "[Output]",
 	"simplenergy.input_output": "[Input & Output]",
-	"simplenergy.itemio_v1_3_3": "- [ItemIO (v1.3.3+)]",
+	"simplenergy.itemio_v1_4_0": "- [ItemIO (v1.4.0+)]",
 	"simplenergy.smartoregeneration_v1_7_1": "- [SmartOreGeneration (v1.7.1+)]",
 	"simplenergy.furnace_nbt_recipes_v1_9_0": "- [Furnace NBT Recipes (v1.9.0+)]",
 	"simplenergy.smithed_crafter_v0_7_0": "- [Smithed Crafter (v0.7.0+)]",

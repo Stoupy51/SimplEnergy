@@ -62,14 +62,14 @@ def main_additions() -> None:
 	additions = {
 		"multimeter": {
 			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: MISC,
-			"tooltip_display": {"hide_tooltip": True, "hidden_components": ["minecraft:unbreakable"]},
+			"tooltip_display": {"hidden_components": ["minecraft:unbreakable"]},
 			"lore": [{"text":"Allows you to analyse machines","italic":False,"color":"gray"},{"text":"to get their energy information","italic":False,"color":"gray"},{"text":"[Hold in offhand for passive use]","italic":False,"color":"white"}],
 			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["II","CC","CC"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot")}}],
 			OVERRIDE_MODEL: {"parent":"item/handheld"},
 		},
 		"wrench": {
 			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: MISC,
-			"tooltip_display": {"hide_tooltip": True, "hidden_components": ["minecraft:unbreakable"]},
+			"tooltip_display": {"hidden_components": ["minecraft:unbreakable"]},
 			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":[" I "," II", "I  "],"ingredients":{"I":ingr_repr("simplunium_ingot", ns)}}], "lore": [{"text":"Provides you the ability to instantly","italic":False,"color":"gray"},{"text":"break cables and rotates machines while sneaking","italic":False,"color":"gray"}]
 		},
 		"slot_unlocker": {
@@ -78,7 +78,7 @@ def main_additions() -> None:
 		},
 		"battery_switcher": {
 			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: MISC,
-			"tooltip_display": {"hide_tooltip": True, "hidden_components": ["minecraft:unbreakable"]},
+			"tooltip_display": {"hidden_components": ["minecraft:unbreakable"]},
 			"lore": [{"text":"Allows you to switch batteries states","italic":False,"color":"gray"},{"text":"[Input / Output / Both]","italic":False,"color":"gray"},{"text":"[Hold in offhand for passive use]","italic":False,"color":"white"},{"text":"[Right click on a battery to switch]","italic":False,"color":"white"}],
 			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":[" RS"," SB","S  "],"ingredients":{"R":ingr_repr("minecraft:redstone"),"S":ingr_repr("simplunium_ingot", ns),"B":ingr_repr("minecraft:stone_button")}}],
 			OVERRIDE_MODEL: {"parent":"item/handheld"},

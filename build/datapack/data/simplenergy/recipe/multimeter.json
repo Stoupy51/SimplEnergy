@@ -15,7 +15,6 @@
 		"count": 1,
 		"components": {
 			"minecraft:tooltip_display": {
-				"hide_tooltip": true,
 				"hidden_components": [
 					"minecraft:unbreakable"
 				]

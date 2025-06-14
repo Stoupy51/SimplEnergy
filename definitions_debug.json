@@ -281,7 +281,7 @@
 	"multimeter": {
 		"id": "minecraft:warped_fungus_on_a_stick",
 		"category": "miscellaneous",
-		"tooltip_display": {"hide_tooltip": true,"hidden_components": ["minecraft:unbreakable"]},
+		"tooltip_display": {"hidden_components": ["minecraft:unbreakable"]},
 		"lore": [{"text": "Allows you to analyse machines","italic": false,"color": "gray"},{"text": "to get their energy information","italic": false,"color": "gray"},{"text": "[Hold in offhand for passive use]","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["II","CC","CC"],"ingredients": {"I": {"item": "minecraft:iron_ingot"},"C": {"item": "minecraft:copper_ingot"}}}],
 		"item_model": "simplenergy:multimeter",
@@ -291,7 +291,7 @@
 	"wrench": {
 		"id": "minecraft:warped_fungus_on_a_stick",
 		"category": "miscellaneous",
-		"tooltip_display": {"hide_tooltip": true,"hidden_components": ["minecraft:unbreakable"]},
+		"tooltip_display": {"hidden_components": ["minecraft:unbreakable"]},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": [" I "," II","I  "],"ingredients": {"I": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}}}}],
 		"lore": [{"text": "Provides you the ability to instantly","italic": false,"color": "gray"},{"text": "break cables and rotates machines while sneaking","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:wrench",
@@ -310,7 +310,7 @@
 	"battery_switcher": {
 		"id": "minecraft:warped_fungus_on_a_stick",
 		"category": "miscellaneous",
-		"tooltip_display": {"hide_tooltip": true,"hidden_components": ["minecraft:unbreakable"]},
+		"tooltip_display": {"hidden_components": ["minecraft:unbreakable"]},
 		"lore": [{"text": "Allows you to switch batteries states","italic": false,"color": "gray"},{"text": "[Input / Output / Both]","italic": false,"color": "gray"},{"text": "[Hold in offhand for passive use]","italic": false,"color": "white"},{"text": "[Right click on a battery to switch]","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": [" RS"," SB","S  "],"ingredients": {"R": {"item": "minecraft:redstone"},"S": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}},"B": {"item": "minecraft:stone_button"}}}],
 		"item_model": "simplenergy:battery_switcher",
