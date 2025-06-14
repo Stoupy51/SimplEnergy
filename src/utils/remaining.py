@@ -44,7 +44,7 @@ execute store result score #custom_ores {ns}.data if entity @e[tag={ns}.vanilla.
 execute store result score #markers {ns}.data if entity @e[tag=furnace_nbt_recipes.furnace]
 
 # Display numbers
-tellraw @s [{{"text":"\n[Datapack Energy Stats]","color":"yellow"}}]
+tellraw @s [{{"text":"\\n[Datapack Energy Stats]","color":"yellow"}}]
 tellraw @s ["",{{"text":"Entities: ","color":"gray"}},{{"score":{{"name":"#entities","objective":"{ns}.data"}},"color":"gold"}}]
 tellraw @s ["",{{"text":"Cables: ","color":"gray"}},{{"score":{{"name":"#cables","objective":"{ns}.data"}},"color":"gold"}}]
 tellraw @s ["",{{"text":"Devices: ","color":"gray"}},{{"score":{{"name":"#devices","objective":"{ns}.data"}},"color":"gold"}}]
@@ -52,7 +52,7 @@ tellraw @s ["",{{"text":"Only energy.send: ","color":"gray"}},{{"score":{{"name"
 tellraw @s ["",{{"text":"Only energy.receive: ","color":"gray"}},{{"score":{{"name":"#receivers","objective":"{ns}.data"}},"color":"gold"}}]
 tellraw @s ["",{{"text":"Send & Receive: ","color":"gray"}},{{"score":{{"name":"#batteries","objective":"{ns}.data"}},"color":"gold"}}]
 
-tellraw @s [{{"text":"\n[SimplEnergy Stats]","color":"green"}}]
+tellraw @s [{{"text":"\\n[SimplEnergy Stats]","color":"green"}}]
 tellraw @s ["",{{"text":"Custom blocks loaded: ","color":"gray"}},{{"score":{{"name":"#custom_blocks","objective":"{ns}.data"}},"color":"gold"}}]
 tellraw @s ["",{{"text":"Custom ores: ","color":"gray"}},{{"score":{{"name":"#custom_ores","objective":"{ns}.data"}},"color":"gold"}}]
 tellraw @s ["",{{"text":"Markers on furnaces: ","color":"gray"}},{{"score":{{"name":"#markers","objective":"{ns}.data"}},"color":"gold"}}]
@@ -178,7 +178,7 @@ execute if entity @s[distance=..5] if block ~ ~ ~ #{ns}:non_solid positioned ^ ^
 	write_function(f"{ns}:utils/multimeter/right_click/stop_case", f"""
 # Tellraw Energy Display
 tag @s add {ns}.temp
-execute as @n[scores={{energy.max_storage=1..}},distance=..1.5] run tellraw @a[tag={ns}.temp] [{{"text":"Energy stored: ","italic":false,"color":"aqua"}},{{"score":{{"name":"@s","objective":"energy.storage"}},"italic":false,"color":"yellow"}},{{"text":"/"}},{{"score":{{"name":"@s","objective":"energy.max_storage"}},"italic":false,"color":"yellow"}},{{"text":" kJ\nChange Rate: "}},{{"score":{{"name":"@s","objective":"energy.change_rate"}},"italic":false,"color":"yellow"}},{{"text":" kW"}}]
+execute as @n[scores={{energy.max_storage=1..}},distance=..1.5] run tellraw @a[tag={ns}.temp] [{{"text":"Energy stored: ","italic":false,"color":"aqua"}},{{"score":{{"name":"@s","objective":"energy.storage"}},"italic":false,"color":"yellow"}},{{"text":"/"}},{{"score":{{"name":"@s","objective":"energy.max_storage"}},"italic":false,"color":"yellow"}},{{"text":" kJ\\nChange Rate: "}},{{"score":{{"name":"@s","objective":"energy.change_rate"}},"italic":false,"color":"yellow"}},{{"text":" kW"}}]
 tag @s remove {ns}.temp
 """)
 

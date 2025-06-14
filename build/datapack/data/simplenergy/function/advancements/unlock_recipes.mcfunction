@@ -103,15 +103,15 @@ execute if score #success simplenergy.data matches 1 run recipe give @s simplene
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:simple_cable_4
 
 ## Add result items
-execute if items entity @s container.* *[custom_data~{"simplenergy": {"multimeter":true} }] run recipe give @s simplenergy:multimeter
-execute if items entity @s container.* *[custom_data~{"simplenergy": {"slot_unlocker":true} }] run recipe give @s simplenergy:slot_unlocker
-execute if items entity @s container.* *[custom_data~{"simplenergy": {"simple_battery":true} }] run recipe give @s simplenergy:simple_battery
-execute if items entity @s container.* *[custom_data~{"simplenergy": {"cauldron_generator":true} }] run recipe give @s simplenergy:cauldron_generator
-execute if items entity @s container.* *[custom_data~{"simplenergy": {"furnace_generator":true} }] run recipe give @s simplenergy:furnace_generator
-execute if items entity @s container.* *[custom_data~{"simplenergy": {"solar_panel":true} }] run recipe give @s simplenergy:solar_panel
-execute if items entity @s container.* *[custom_data~{"simplenergy": {"electric_furnace":true} }] run recipe give @s simplenergy:electric_furnace
-execute if items entity @s container.* *[custom_data~{"simplenergy": {"simple_cable":true} }] run recipe give @s simplenergy:simple_cable
-execute if items entity @s container.* *[custom_data~{"simplenergy": {"simple_cable":true} }] run recipe give @s simplenergy:simple_cable_2
-execute if items entity @s container.* *[custom_data~{"simplenergy": {"simple_cable":true} }] run recipe give @s simplenergy:simple_cable_3
-execute if items entity @s container.* *[custom_data~{"simplenergy": {"simple_cable":true} }] run recipe give @s simplenergy:simple_cable_4
+execute if items entity @s container.* *[custom_data~{simplenergy:{multimeter:true}}] run recipe give @s simplenergy:multimeter
+execute if items entity @s container.* *[custom_data~{simplenergy:{slot_unlocker:true}}] run recipe give @s simplenergy:slot_unlocker
+execute if items entity @s container.* *[custom_data~{simplenergy:{simple_battery:true}}] run recipe give @s simplenergy:simple_battery
+execute if items entity @s container.* *[custom_data~{simplenergy:{cauldron_generator:true}}] run recipe give @s simplenergy:cauldron_generator
+execute if items entity @s container.* *[custom_data~{simplenergy:{furnace_generator:true}}] run recipe give @s simplenergy:furnace_generator
+execute if items entity @s container.* *[custom_data~{simplenergy:{solar_panel:true}}] run recipe give @s simplenergy:solar_panel
+execute if items entity @s container.* *[custom_data~{simplenergy:{electric_furnace:true}}] run recipe give @s simplenergy:electric_furnace
+execute if items entity @s container.* *[custom_data~{simplenergy:{simple_cable:true}}] run recipe give @s simplenergy:simple_cable
+execute if items entity @s container.* *[custom_data~{simplenergy:{simple_cable:true}}] run recipe give @s simplenergy:simple_cable_2
+execute if items entity @s container.* *[custom_data~{simplenergy:{simple_cable:true}}] run recipe give @s simplenergy:simple_cable_3
+execute if items entity @s container.* *[custom_data~{simplenergy:{simple_cable:true}}] run recipe give @s simplenergy:simple_cable_4
 

@@ -21,5 +21,5 @@ function #simplenergy:calls/wrench_rotate
 
 # Memory clean up and particle effect
 data remove storage simplenergy:main Block
-particle block{block_state:"minecraft:furnace"} ~ ~ ~ .5 .5 .5 0.1 10
+particle block{block_state:"minecraft:furnace"} ~ ~ ~ 0.5 0.5 0.5 0.1 10
 

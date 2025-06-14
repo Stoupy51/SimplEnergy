@@ -1,14 +1,14 @@
 
 #> simplenergy:custom_blocks/pulverizer/gui_passive_slot
 #
-# @within	simplenergy:custom_blocks/pulverizer/gui_for_each_slot {"index":0,"slot":9}
-#			simplenergy:custom_blocks/pulverizer/gui_for_each_slot {"index":1,"slot":10}
-#			simplenergy:custom_blocks/pulverizer/gui_for_each_slot {"index":2,"slot":11}
-#			simplenergy:custom_blocks/pulverizer/gui_for_each_slot {"index":3,"slot":12}
-#			simplenergy:custom_blocks/pulverizer/gui_for_each_slot {"index":4,"slot":13}
-#			simplenergy:custom_blocks/pulverizer/gui_for_each_slot {"index":5,"slot":14}
-#			simplenergy:custom_blocks/pulverizer/gui_for_each_slot {"index":6,"slot":15}
-#			simplenergy:custom_blocks/pulverizer/gui_for_each_slot {"index":7,"slot":16}
+# @within	simplenergy:custom_blocks/pulverizer/gui_for_each_slot {index:0,slot:9}
+#			simplenergy:custom_blocks/pulverizer/gui_for_each_slot {index:1,slot:10}
+#			simplenergy:custom_blocks/pulverizer/gui_for_each_slot {index:2,slot:11}
+#			simplenergy:custom_blocks/pulverizer/gui_for_each_slot {index:3,slot:12}
+#			simplenergy:custom_blocks/pulverizer/gui_for_each_slot {index:4,slot:13}
+#			simplenergy:custom_blocks/pulverizer/gui_for_each_slot {index:5,slot:14}
+#			simplenergy:custom_blocks/pulverizer/gui_for_each_slot {index:6,slot:15}
+#			simplenergy:custom_blocks/pulverizer/gui_for_each_slot {index:7,slot:16}
 #
 
 # Get slot and progression, and the item

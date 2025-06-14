@@ -1,14 +1,14 @@
 
 #> simplenergy:custom_blocks/pulverizer/gui_active_slot
 #
-# @within	simplenergy:custom_blocks/pulverizer/work {"index":0,"slot":9,"result":18}
-#			simplenergy:custom_blocks/pulverizer/work {"index":1,"slot":10,"result":19}
-#			simplenergy:custom_blocks/pulverizer/work {"index":2,"slot":11,"result":20}
-#			simplenergy:custom_blocks/pulverizer/work {"index":3,"slot":12,"result":21}
-#			simplenergy:custom_blocks/pulverizer/work {"index":4,"slot":13,"result":22}
-#			simplenergy:custom_blocks/pulverizer/work {"index":5,"slot":14,"result":23}
-#			simplenergy:custom_blocks/pulverizer/work {"index":6,"slot":15,"result":24}
-#			simplenergy:custom_blocks/pulverizer/work {"index":7,"slot":16,"result":25}
+# @within	simplenergy:custom_blocks/pulverizer/work {index:0,slot:9,result:18}
+#			simplenergy:custom_blocks/pulverizer/work {index:1,slot:10,result:19}
+#			simplenergy:custom_blocks/pulverizer/work {index:2,slot:11,result:20}
+#			simplenergy:custom_blocks/pulverizer/work {index:3,slot:12,result:21}
+#			simplenergy:custom_blocks/pulverizer/work {index:4,slot:13,result:22}
+#			simplenergy:custom_blocks/pulverizer/work {index:5,slot:14,result:23}
+#			simplenergy:custom_blocks/pulverizer/work {index:6,slot:15,result:24}
+#			simplenergy:custom_blocks/pulverizer/work {index:7,slot:16,result:25}
 #
 
 # Get progression
