@@ -20,10 +20,10 @@ output: "build"
 ignore: []
 
 # A list of importable plugin strings
-require:
-    - "bolt"
-    - "mecha.contrib.relative_location"
-    - "mecha.contrib.nested_location"
+# require:
+#     - "bolt"
+#     - "mecha.contrib.relative_location"
+#     - "mecha.contrib.nested_location"
 
 # Takes a nested pack config, see PackConfig() documentation
 data_pack:
@@ -75,10 +75,17 @@ meta:
         use_cache: true
 
     # Mecha configuration for multiline support and pattern matching
-    mecha:
-        multiline: true
-        match: ["simplenergy:**"]
-        formatting: preserve
+    # mecha:
+    #     multiline: true
+    #     match: ["simplenergy:**"]
+    #     formatting:
+    #         layout: "preserve"
+    #         cmd_compact: true
+    #         nbt_compact: true
+    #         json_compact: true
+    #         json_ensure_ascii: true
+    #         json_allow_nan: true
+    #         json_sort_keys: true
 
     # Python datapack specific configuration
     stewbeet:
