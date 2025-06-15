@@ -23,7 +23,7 @@
 			},
 			"minecraft:item_model": "simplenergy:simplunium_nugget",
 			"minecraft:item_name": {
-				"text": "Simplunium Nugget",
+				"translate": "simplenergy.simplunium_nugget",
 				"italic": false,
 				"color": "white"
 			},
@@ -37,7 +37,7 @@
 						"font": "simplenergy:icons"
 					},
 					{
-						"text": " SimplEnergy",
+						"translate": "simplenergy",
 						"italic": true,
 						"color": "blue"
 					}

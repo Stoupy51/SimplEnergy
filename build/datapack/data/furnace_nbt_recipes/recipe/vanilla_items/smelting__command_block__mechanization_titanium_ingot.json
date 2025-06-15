@@ -18,13 +18,13 @@
 				}
 			},
 			"minecraft:item_name": {
-				"text": "Titanium Ingot",
+				"translate": "simplenergy.titanium_ingot",
 				"italic": false,
 				"color": "white"
 			},
 			"minecraft:lore": [
 				{
-					"text": "Mechanization",
+					"translate": "simplenergy.mechanization",
 					"italic": true,
 					"color": "blue"
 				}

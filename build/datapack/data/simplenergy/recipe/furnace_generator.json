@@ -33,12 +33,12 @@
 			},
 			"minecraft:lore": [
 				{
-					"text": "[Energy Generation: 10 kW]",
+					"translate": "simplenergy.energy_generation_10_kw",
 					"italic": false,
 					"color": "gray"
 				},
 				{
-					"text": "[Energy Buffer: 800 kJ]",
+					"translate": "simplenergy.energy_buffer_800_kj",
 					"italic": false,
 					"color": "gray"
 				},
@@ -51,7 +51,7 @@
 						"font": "simplenergy:icons"
 					},
 					{
-						"text": " SimplEnergy",
+						"translate": "simplenergy",
 						"italic": true,
 						"color": "blue"
 					}
@@ -59,7 +59,7 @@
 			],
 			"minecraft:item_model": "simplenergy:furnace_generator",
 			"minecraft:item_name": {
-				"text": "Furnace Generator",
+				"translate": "simplenergy.furnace_generator",
 				"italic": false,
 				"color": "white"
 			},

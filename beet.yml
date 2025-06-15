@@ -85,7 +85,7 @@ meta:
             json_allow_nan: true
             json_sort_keys: true
 
-    # Python datapack specific configuration
+    # StewBeet specific configuration
     stewbeet:
         # Directory containing all project textures
         textures_folder: "assets/textures"
@@ -137,8 +137,6 @@ meta:
             max_items_per_row: 5
             # Maximum number of rows displayed per page in manual (max: 6)
             max_rows_per_page: 5
-            # Resolution for OpenGL renders in manual (recommended: 256x256)
-            opengl_resolution: 256
             # Text component used for the manual's first page
             first_page_text: [{"text":"The following manual will guide you through recipes and energy statistics about devices.", "color": "#505050"}]
 

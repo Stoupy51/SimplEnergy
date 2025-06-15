@@ -19,7 +19,7 @@
 		"components": {
 			"minecraft:lore": [
 				{
-					"text": "Unlocks a blocked slot in a machine",
+					"translate": "simplenergy.unlocks_a_blocked_slot_in_a_machine",
 					"italic": false,
 					"color": "gray"
 				},
@@ -32,7 +32,7 @@
 						"font": "simplenergy:icons"
 					},
 					{
-						"text": " SimplEnergy",
+						"translate": "simplenergy",
 						"italic": true,
 						"color": "blue"
 					}
@@ -40,7 +40,7 @@
 			],
 			"minecraft:item_model": "simplenergy:slot_unlocker",
 			"minecraft:item_name": {
-				"text": "Slot Unlocker",
+				"translate": "simplenergy.slot_unlocker",
 				"italic": false,
 				"color": "white"
 			},

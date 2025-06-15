@@ -32,7 +32,7 @@
 			},
 			"minecraft:lore": [
 				{
-					"text": "[Energy Storage: 10 MJ]",
+					"translate": "simplenergy.energy_storage_10_mj",
 					"italic": false,
 					"color": "gray"
 				},
@@ -45,7 +45,7 @@
 						"font": "simplenergy:icons"
 					},
 					{
-						"text": " SimplEnergy",
+						"translate": "simplenergy",
 						"italic": true,
 						"color": "blue"
 					}
@@ -53,7 +53,7 @@
 			],
 			"minecraft:item_model": "simplenergy:simple_battery",
 			"minecraft:item_name": {
-				"text": "Simple Battery",
+				"translate": "simplenergy.simple_battery",
 				"italic": false,
 				"color": "white"
 			},
