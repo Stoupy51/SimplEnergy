@@ -1,7 +1,7 @@
 
 #> simplenergy:custom_blocks/elite_cable/place_main
 #
-# @within	simplenergy:custom_blocks/_player_head/search_elite_cable
+# @within	simplenergy:custom_blocks/_player_head/search_elite_cable_z
 #
 
 tag @s add simplenergy.placer
