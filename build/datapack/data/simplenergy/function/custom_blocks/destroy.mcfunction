@@ -1,9 +1,9 @@
 
 #> simplenergy:custom_blocks/destroy
 #
-# @within	simplenergy:v2.0.2/tick_2
-#			simplenergy:v2.0.2/second
-#			simplenergy:v2.0.2/second_5
+# @within	simplenergy:v2.0.3/tick_2
+#			simplenergy:v2.0.3/second
+#			simplenergy:v2.0.3/second_5
 #			simplenergy:calls/common_signals/on_ore_destroyed
 #			simplenergy:calls/mechanization/wrench_break
 #

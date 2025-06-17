@@ -11,5 +11,6 @@ github_config: dict = {
 	"project_name": cfg.name,
 	"version": cfg.version,
 	"build_folder": cfg.output,
+	"endswith": [".zip"]
 }
 
