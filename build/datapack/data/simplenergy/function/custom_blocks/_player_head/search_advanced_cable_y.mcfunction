@@ -13,7 +13,7 @@ execute positioned ~ ~-4 ~ run function simplenergy:custom_blocks/_player_head/s
 execute positioned ~ ~-3 ~ run function simplenergy:custom_blocks/_player_head/search_advanced_cable_z
 execute positioned ~ ~-2 ~ run function simplenergy:custom_blocks/_player_head/search_advanced_cable_z
 execute positioned ~ ~-1 ~ run function simplenergy:custom_blocks/_player_head/search_advanced_cable_z
-execute positioned ~ ~ ~ run function simplenergy:custom_blocks/_player_head/search_advanced_cable_z
+execute positioned ~ ~0 ~ run function simplenergy:custom_blocks/_player_head/search_advanced_cable_z
 execute positioned ~ ~1 ~ run function simplenergy:custom_blocks/_player_head/search_advanced_cable_z
 execute positioned ~ ~2 ~ run function simplenergy:custom_blocks/_player_head/search_advanced_cable_z
 execute positioned ~ ~3 ~ run function simplenergy:custom_blocks/_player_head/search_advanced_cable_z

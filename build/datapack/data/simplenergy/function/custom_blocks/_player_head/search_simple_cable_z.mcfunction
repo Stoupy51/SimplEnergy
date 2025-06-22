@@ -13,7 +13,7 @@ execute positioned ~ ~ ~-4 if data block ~ ~ ~ components."minecraft:custom_data
 execute positioned ~ ~ ~-3 if data block ~ ~ ~ components."minecraft:custom_data".simplenergy.simple_cable run function simplenergy:custom_blocks/simple_cable/place_main
 execute positioned ~ ~ ~-2 if data block ~ ~ ~ components."minecraft:custom_data".simplenergy.simple_cable run function simplenergy:custom_blocks/simple_cable/place_main
 execute positioned ~ ~ ~-1 if data block ~ ~ ~ components."minecraft:custom_data".simplenergy.simple_cable run function simplenergy:custom_blocks/simple_cable/place_main
-execute positioned ~ ~ ~ if data block ~ ~ ~ components."minecraft:custom_data".simplenergy.simple_cable run function simplenergy:custom_blocks/simple_cable/place_main
+execute positioned ~ ~ ~0 if data block ~ ~ ~ components."minecraft:custom_data".simplenergy.simple_cable run function simplenergy:custom_blocks/simple_cable/place_main
 execute positioned ~ ~ ~1 if data block ~ ~ ~ components."minecraft:custom_data".simplenergy.simple_cable run function simplenergy:custom_blocks/simple_cable/place_main
 execute positioned ~ ~ ~2 if data block ~ ~ ~ components."minecraft:custom_data".simplenergy.simple_cable run function simplenergy:custom_blocks/simple_cable/place_main
 execute positioned ~ ~ ~3 if data block ~ ~ ~ components."minecraft:custom_data".simplenergy.simple_cable run function simplenergy:custom_blocks/simple_cable/place_main

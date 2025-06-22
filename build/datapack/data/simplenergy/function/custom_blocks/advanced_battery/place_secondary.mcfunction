@@ -14,7 +14,7 @@ tag @s add simplenergy.advanced_battery
 tag @s add simplenergy.vanilla.minecraft_gold_block
 
 # Add a custom name
-data merge entity @s {CustomName:{"translate": "simplenergy.advanced_battery",italic:false,color:"white"}}
+data merge entity @s {"CustomName": {"translate": "simplenergy.advanced_battery","italic": false,"color": "white"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="simplenergy:advanced_battery"]

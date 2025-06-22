@@ -14,7 +14,7 @@ tag @s add simplenergy.simplunium_block
 tag @s add simplenergy.vanilla.minecraft_iron_block
 
 # Add a custom name
-data merge entity @s {CustomName:{"translate": "simplenergy.simplunium_block",italic:false,color:"white"}}
+data merge entity @s {"CustomName": {"translate": "simplenergy.simplunium_block","italic": false,"color": "white"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="simplenergy:simplunium_block"]

@@ -13,7 +13,7 @@ scoreboard players set #energy simplenergy.data 0
 execute store result score #energy simplenergy.data run data get storage energy:temp list[0].components."minecraft:custom_data".energy.storage
 scoreboard players operation #part_1 simplenergy.data = #energy simplenergy.data
 scoreboard players operation #part_2 simplenergy.data = #energy simplenergy.data
-data modify storage simplenergy:temp macro set value {part_1:0,part_2:0,scale:""}
+data modify storage simplenergy:temp macro set value {part_1:0, part_2:0, scale:""}
 
 ## kJ, MJ, GJ, TJ cases
 execute if score #energy simplenergy.data matches ..999 run data modify storage simplenergy:temp macro.scale set value " kJ]"
