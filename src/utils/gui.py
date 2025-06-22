@@ -5,8 +5,7 @@ import os
 
 from beet import ItemModel, Model, Texture
 from stewbeet.core import Mem
-from stewbeet.core.utils.io import super_json_dump
-from stouputils.io import super_json_load
+from stouputils.io import super_json_dump, super_json_load
 
 # Constants
 GUI_VANILLA_ITEM: str = "cobblestone"
