@@ -118,7 +118,7 @@
 	"simplenergy.lapis_dust": "Lapis Dust",
 	"simplenergy.lapis_lazuli": "Lapis Lazuli",
 	"simplenergy.lapis_ore": "Lapis Ore",
-	"simplenergy.loaded_simplenergy_v2_0_3": "[Loaded SimplEnergy v2.0.3]",
+	"simplenergy.loaded_simplenergy_v2_0_4": "[Loaded SimplEnergy v2.0.4]",
 	"simplenergy.manual": "Manual",
 	"simplenergy.markers_on_furnaces": "Markers on furnaces: ",
 	"simplenergy.material": "Material\n",
@@ -240,7 +240,7 @@
 	"simplenergy.vanilla_minecraft_raw_iron_block": "- Vanilla 'minecraft:raw_iron_block': ",
 	"simplenergy.wrench": "Wrench",
 	"simplenergy_error_libraries_are_missingplease_download_the_right": "SimplEnergy Error: Libraries are missing\nplease download the right SimplEnergy datapack\nor download each of these libraries one by one:",
-	"simplenergy_error_this_version_is_made_for_minecraft_1_21_6": "SimplEnergy Error: This version is made for Minecraft 1.21.6+.",
+	"simplenergy_error_this_version_is_made_for_minecraft_1_21_7": "SimplEnergy Error: This version is made for Minecraft 1.21.7+.",
 	"simplenergy_manual": "SimplEnergy Manual\n",
 	"simplenergy_stats": "\n[SimplEnergy Stats]"
 }
