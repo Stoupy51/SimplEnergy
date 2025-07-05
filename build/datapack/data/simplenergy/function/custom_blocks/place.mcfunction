@@ -15,6 +15,9 @@ execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:elite
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:creative_battery"} run function simplenergy:custom_blocks/creative_battery/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:cauldron_generator"} run function simplenergy:custom_blocks/cauldron_generator/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:furnace_generator"} run function simplenergy:custom_blocks/furnace_generator/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:redstone_generator"} run function simplenergy:custom_blocks/redstone_generator/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:heat_generator"} run function simplenergy:custom_blocks/heat_generator/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:wind_turbine"} run function simplenergy:custom_blocks/wind_turbine/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:solar_panel"} run function simplenergy:custom_blocks/solar_panel/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:electric_furnace"} run function simplenergy:custom_blocks/electric_furnace/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:electric_smelter"} run function simplenergy:custom_blocks/electric_smelter/place_main

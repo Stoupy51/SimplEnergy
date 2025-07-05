@@ -18,6 +18,7 @@ scoreboard players add #total_vanilla_copper_block simplenergy.data 0
 scoreboard players add #total_vanilla_cauldron simplenergy.data 0
 scoreboard players add #total_vanilla_brewing_stand simplenergy.data 0
 scoreboard players add #total_vanilla_barrel simplenergy.data 0
+scoreboard players add #total_vanilla_iron_trapdoor simplenergy.data 0
 scoreboard players add #total_elite_cable simplenergy.data 0
 scoreboard players add #total_advanced_cable simplenergy.data 0
 scoreboard players add #total_simple_cable simplenergy.data 0
@@ -26,6 +27,9 @@ scoreboard players add #total_electric_brewing_stand simplenergy.data 0
 scoreboard players add #total_electric_smelter simplenergy.data 0
 scoreboard players add #total_electric_furnace simplenergy.data 0
 scoreboard players add #total_solar_panel simplenergy.data 0
+scoreboard players add #total_wind_turbine simplenergy.data 0
+scoreboard players add #total_heat_generator simplenergy.data 0
+scoreboard players add #total_redstone_generator simplenergy.data 0
 scoreboard players add #total_furnace_generator simplenergy.data 0
 scoreboard players add #total_cauldron_generator simplenergy.data 0
 scoreboard players add #total_creative_battery simplenergy.data 0
@@ -46,6 +50,9 @@ tellraw @s [{"translate": "simplenergy.total_elite_battery","color":"gold"},{"sc
 tellraw @s [{"translate": "simplenergy.total_creative_battery","color":"gold"},{"score":{"name":"#total_creative_battery","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_cauldron_generator","color":"gold"},{"score":{"name":"#total_cauldron_generator","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_furnace_generator","color":"gold"},{"score":{"name":"#total_furnace_generator","objective":"simplenergy.data"},"color":"yellow"}]
+tellraw @s [{"translate": "simplenergy.total_redstone_generator","color":"gold"},{"score":{"name":"#total_redstone_generator","objective":"simplenergy.data"},"color":"yellow"}]
+tellraw @s [{"translate": "simplenergy.total_heat_generator","color":"gold"},{"score":{"name":"#total_heat_generator","objective":"simplenergy.data"},"color":"yellow"}]
+tellraw @s [{"translate": "simplenergy.total_wind_turbine","color":"gold"},{"score":{"name":"#total_wind_turbine","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_solar_panel","color":"gold"},{"score":{"name":"#total_solar_panel","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_electric_furnace","color":"gold"},{"score":{"name":"#total_electric_furnace","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_electric_smelter","color":"gold"},{"score":{"name":"#total_electric_smelter","objective":"simplenergy.data"},"color":"yellow"}]
@@ -54,6 +61,7 @@ tellraw @s [{"translate": "simplenergy.total_pulverizer","color":"gold"},{"score
 tellraw @s [{"translate": "simplenergy.total_simple_cable","color":"gold"},{"score":{"name":"#total_simple_cable","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_advanced_cable","color":"gold"},{"score":{"name":"#total_advanced_cable","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_elite_cable","color":"gold"},{"score":{"name":"#total_elite_cable","objective":"simplenergy.data"},"color":"yellow"}]
+tellraw @s [{"translate": "simplenergy.vanilla_iron_trapdoor","color":"gray"},{"score":{"name":"#total_vanilla_iron_trapdoor","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_barrel","color":"gray"},{"score":{"name":"#total_vanilla_barrel","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_brewing_stand","color":"gray"},{"score":{"name":"#total_vanilla_brewing_stand","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_cauldron","color":"gray"},{"score":{"name":"#total_vanilla_cauldron","objective":"simplenergy.data"},"color":"white"}]

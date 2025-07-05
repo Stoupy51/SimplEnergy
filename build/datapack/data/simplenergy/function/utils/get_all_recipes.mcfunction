@@ -10,6 +10,8 @@ recipe give @s simplenergy:slot_unlocker
 recipe give @s simplenergy:simple_battery
 recipe give @s simplenergy:cauldron_generator
 recipe give @s simplenergy:furnace_generator
+recipe give @s simplenergy:heat_generator
+recipe give @s simplenergy:wind_turbine
 recipe give @s simplenergy:solar_panel
 recipe give @s simplenergy:electric_furnace
 recipe give @s simplenergy:simple_cable

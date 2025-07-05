@@ -15,6 +15,10 @@
 		"subtitle": "Electric Smelter",
 		"sounds": ["simplenergy:electric_smelter"]
 	},
+	"elevator": {
+		"subtitle": "Elevator",
+		"sounds": ["simplenergy:elevator"]
+	},
 	"furnace_generator": {
 		"subtitle": "Furnace Generator",
 		"sounds": ["simplenergy:furnace_generator"]
@@ -22,5 +26,9 @@
 	"pulverizer": {
 		"subtitle": "Pulverizer",
 		"sounds": ["simplenergy:pulverizer"]
+	},
+	"redstone_generator": {
+		"subtitle": "Redstone Generator",
+		"sounds": ["simplenergy:redstone_generator"]
 	}
 }

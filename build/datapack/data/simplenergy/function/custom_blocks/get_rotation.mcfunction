@@ -2,6 +2,8 @@
 #> simplenergy:custom_blocks/get_rotation
 #
 # @within	simplenergy:custom_blocks/furnace_generator/place_main
+#			simplenergy:custom_blocks/redstone_generator/place_main
+#			simplenergy:custom_blocks/wind_turbine/place_main
 #			simplenergy:custom_blocks/electric_furnace/place_main
 #			simplenergy:custom_blocks/electric_smelter/place_main
 #			simplenergy:custom_blocks/pulverizer/place_main
