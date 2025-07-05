@@ -36,6 +36,7 @@ def beet_default(ctx: Context) -> None:
 			"electric_furnace": GuiTranslation.furnace_bottom,
 			"electric_smelter": GuiTranslation.furnace_bottom,
 			"furnace_generator": GuiTranslation.furnace_top,
+			"redstone_generator": GuiTranslation.furnace_bottom,
 			"pulverizer": GuiTranslation.barrel_bottom_right,
 		}
 	)
