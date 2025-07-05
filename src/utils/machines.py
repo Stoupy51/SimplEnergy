@@ -25,29 +25,50 @@ data modify entity @s transformation.translation[1] set value 0.002f
 """)
 
 
-	# Furnace Generator
-	energy: dict = Mem.definitions["furnace_generator"]["custom_data"]["energy"]
-	default_gui: str = gui["gui/furnace_generator.png"]
-	working_gui: str = gui["gui/furnace_generator_on.png"]
-	default_model: str = Mem.definitions["furnace_generator"]["item_model"]
-	working_model: str = default_model + "_on"
-	content: str = f"""# Update the gui to default
-execute store result score #burn_time {ns}.data run data get block ~ ~ ~ lit_time_remaining
-execute if score #burn_time {ns}.data matches 0 run item replace block ~ ~ ~ container.0 with {CUSTOM_ITEM_VANILLA}[item_model="{default_gui}",{GUI_DATA}]
-execute if score #burn_time {ns}.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
-execute if score #burn_time {ns}.data matches 1.. run item replace block ~ ~ ~ container.0 with {CUSTOM_ITEM_VANILLA}[item_model="{working_gui}",{GUI_DATA}]
-execute if score #burn_time {ns}.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
+	# Furnace Generator & Redstone Generator
+	for gen in ["furnace_generator", "redstone_generator"]:
+		energy: dict = Mem.definitions[gen]["custom_data"]["energy"]
+		default_gui: str = gui[f"gui/{gen}.png"]
+		working_gui: str = gui[f"gui/{gen}_on.png"]
+		default_model: str = Mem.definitions[gen]["item_model"]
+		working_model: str = default_model + "_on"
+		gui_slot: int = 0 if gen == "furnace_generator" else 1
 
+		# If redstone generator, add logic to consume redstone for fuel
+		redstone_generator: str = ""
+		if gen == "redstone_generator":
+			redstone_generator = f"""
+# Consume redstone dust for fuel
+execute if data block ~ ~ ~ {{Items:[{{Slot:0b,id:"minecraft:redstone"}}],lit_time_remaining:0s}} run function {ns}:custom_blocks/{gen}/consume_redstone_dust
+execute if data block ~ ~ ~ {{Items:[{{Slot:0b,id:"minecraft:redstone_block"}}],lit_time_remaining:0s}} run function {ns}:custom_blocks/{gen}/consume_redstone_block
+"""
+
+		content: str = f"""# Update the gui to default
+execute store result score #burn_time {ns}.data run data get block ~ ~ ~ lit_time_remaining
+execute if score #burn_time {ns}.data matches 0 run item replace block ~ ~ ~ container.{gui_slot} with paper[item_model="{default_gui}",{GUI_DATA}]
+execute if score #burn_time {ns}.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
+execute if score #burn_time {ns}.data matches 1.. run item replace block ~ ~ ~ container.{gui_slot} with paper[item_model="{working_gui}",{GUI_DATA}]
+execute if score #burn_time {ns}.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
+{redstone_generator}
 # Update the gui & produce Energy while working
 execute if score #burn_time {ns}.data matches 1.. run scoreboard players add @s energy.storage {energy["generation"]}
-execute if score #burn_time {ns}.data matches 1.. run playsound {ns}:furnace_generator block @a[distance=..12] ~ ~ ~ 0.25
+execute if score #burn_time {ns}.data matches 1.. run playsound {ns}:{gen} block @a[distance=..12] ~ ~ ~ 0.25
 execute if score @s energy.storage > @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 
 # Prevent the furnace from really cooking
 data modify block ~ ~ ~ cooking_total_time set value -200s
 data modify block ~ ~ ~ cooking_time_spent set value 0s
 """
-	write_function(f"{ns}:custom_blocks/furnace_generator/second", content)
+		write_function(f"{ns}:custom_blocks/{gen}/second", content)
+
+		if gen == "redstone_generator":
+			for item, fuel in (("redstone_dust", 280), ("redstone_block", 280 * 9)):
+				write_function(f"{ns}:custom_blocks/{gen}/consume_{item}", f"""
+data modify block ~ ~ ~ lit_time_remaining set value {fuel}s
+execute store result score #count {ns}.data run data get block ~ ~ ~ Items[{{Slot:0b}}].count
+scoreboard players remove #count {ns}.data 1
+execute store result block ~ ~ ~ Items[{{Slot:0b}}].count int 1 run scoreboard players get #count {ns}.data
+""")
 
 	# Electric Smelter & Electric Furnace & Electric Brewing Stand
 	for machine in ["electric_smelter", "electric_furnace", "electric_brewing_stand"]:
