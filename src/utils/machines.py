@@ -3,7 +3,6 @@
 # Imports
 from stewbeet.core import *
 
-from .gui import GUI_VANILLA_ITEM
 from .pulverizer import pulverizer
 
 
@@ -34,9 +33,9 @@ data modify entity @s transformation.translation[1] set value 0.002f
 	working_model: str = default_model + "_on"
 	content: str = f"""# Update the gui to default
 execute store result score #burn_time {ns}.data run data get block ~ ~ ~ lit_time_remaining
-execute if score #burn_time {ns}.data matches 0 run item replace block ~ ~ ~ container.0 with {GUI_VANILLA_ITEM}[item_model="{default_gui}",{GUI_DATA}]
+execute if score #burn_time {ns}.data matches 0 run item replace block ~ ~ ~ container.0 with {CUSTOM_ITEM_VANILLA}[item_model="{default_gui}",{GUI_DATA}]
 execute if score #burn_time {ns}.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
-execute if score #burn_time {ns}.data matches 1.. run item replace block ~ ~ ~ container.0 with {GUI_VANILLA_ITEM}[item_model="{working_gui}",{GUI_DATA}]
+execute if score #burn_time {ns}.data matches 1.. run item replace block ~ ~ ~ container.0 with {CUSTOM_ITEM_VANILLA}[item_model="{working_gui}",{GUI_DATA}]
 execute if score #burn_time {ns}.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
 
 # Update the gui & produce Energy while working
@@ -74,13 +73,13 @@ data modify block ~ ~ ~ cooking_time_spent set value 0s
 		previous_max: int = 0
 		for i, gui_name in enumerate(all_gui):
 			if i == 0:
-				machine_gui.append(f'execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[item_model="{gui[gui_name]}",{GUI_DATA}]')
+				machine_gui.append(f'execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{gui[gui_name]}",{GUI_DATA}]')
 			elif i == (nb_gui - 1):
-				machine_gui.append(f'execute if score @s energy.storage matches {previous_max + 1}.. run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[item_model="{gui[gui_name]}",{GUI_DATA}]')
+				machine_gui.append(f'execute if score @s energy.storage matches {previous_max + 1}.. run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{gui[gui_name]}",{GUI_DATA}]')
 			else:
 				gui_min: int = previous_max + 1
 				previous_max = (i * energy["max_storage"] // nb_gui_2) - 1
-				machine_gui.append(f'execute if score @s energy.storage matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.{gui_slot} with {GUI_VANILLA_ITEM}[item_model="{gui[gui_name]}",{GUI_DATA}]')
+				machine_gui.append(f'execute if score @s energy.storage matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{gui[gui_name]}",{GUI_DATA}]')
 		machine_gui_str: str = "\n".join(machine_gui)
 
 		default_model: str = Mem.definitions[machine]["item_model"]
