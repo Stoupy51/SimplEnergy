@@ -67,7 +67,8 @@ data modify block ~ ~ ~ cooking_time_spent set value 0s
 data modify block ~ ~ ~ lit_time_remaining set value {fuel}s
 execute store result score #count {ns}.data run data get block ~ ~ ~ Items[{{Slot:0b}}].count
 scoreboard players remove #count {ns}.data 1
-execute store result block ~ ~ ~ Items[{{Slot:0b}}].count int 1 run scoreboard players get #count {ns}.data
+execute if score #count {ns}.data matches 1.. store result block ~ ~ ~ Items[{{Slot:0b}}].count int 1 run scoreboard players get #count {ns}.data
+execute if score #count {ns}.data matches 0 run data remove block ~ ~ ~ Items[{{Slot:0b}}]
 """)
 
 	# Electric Smelter & Electric Furnace & Electric Brewing Stand
