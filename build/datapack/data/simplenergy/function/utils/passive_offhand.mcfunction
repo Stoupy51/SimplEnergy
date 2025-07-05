@@ -1,7 +1,7 @@
 
 #> simplenergy:utils/passive_offhand
 #
-# @within	simplenergy:v2.0.4/tick_2
+# @within	simplenergy:v2.0.5/tick_2
 #
 
 # Copy offhand

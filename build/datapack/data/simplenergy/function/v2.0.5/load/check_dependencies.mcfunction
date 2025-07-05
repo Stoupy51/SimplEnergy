@@ -1,7 +1,7 @@
 
-#> simplenergy:v2.0.4/load/check_dependencies
+#> simplenergy:v2.0.5/load/check_dependencies
 #
-# @within	simplenergy:v2.0.4/load/secondary
+# @within	simplenergy:v2.0.5/load/secondary
 #
 
 ## Check if SimplEnergy is loadable (dependencies)
