@@ -42,14 +42,17 @@ data modify entity @s transformation.translation[1] set value 0.002f
 execute if data block ~ ~ ~ {{Items:[{{Slot:0b,id:"minecraft:redstone"}}],lit_time_remaining:0s}} run function {ns}:custom_blocks/{gen}/consume_redstone_dust
 execute if data block ~ ~ ~ {{Items:[{{Slot:0b,id:"minecraft:redstone_block"}}],lit_time_remaining:0s}} run function {ns}:custom_blocks/{gen}/consume_redstone_block
 """
+		# Write the second function for the generator
+		content: str = f"""
+{redstone_generator}
 
-		content: str = f"""# Update the gui to default
+# Update the gui to default
 execute store result score #burn_time {ns}.data run data get block ~ ~ ~ lit_time_remaining
 execute if score #burn_time {ns}.data matches 0 run item replace block ~ ~ ~ container.{gui_slot} with paper[item_model="{default_gui}",{GUI_DATA}]
 execute if score #burn_time {ns}.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
 execute if score #burn_time {ns}.data matches 1.. run item replace block ~ ~ ~ container.{gui_slot} with paper[item_model="{working_gui}",{GUI_DATA}]
 execute if score #burn_time {ns}.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
-{redstone_generator}
+
 # Update the gui & produce Energy while working
 execute if score #burn_time {ns}.data matches 1.. run scoreboard players add @s energy.storage {energy["generation"]}
 execute if score #burn_time {ns}.data matches 1.. run playsound {ns}:{gen} block @a[distance=..12] ~ ~ ~ 0.25
@@ -145,7 +148,7 @@ execute if score #old_burn_time {ns}.data matches ..200 store result block ~ ~ ~
 	content: str = f"""
 # Stop function if no water or full
 scoreboard players set #working {ns}.data 1
-execute if score #working {ns}.data matches 1 if score @s energy.storage matches {energy["max_storage"]}.. run scoreboard players set #working {ns}.data 0
+execute if score #working {ns}.data matches 1 if score @s energy.storage >= @s energy.max_storage run scoreboard players set #working {ns}.data 0
 execute if score #working {ns}.data matches 1 if block ~ ~ ~ cauldron run scoreboard players set #working {ns}.data 0
 # execute if score #working {ns}.data matches 1 run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
 # execute if score #working {ns}.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
@@ -163,7 +166,7 @@ execute if score @s {ns}.private matches 1.. if block ~ ~ ~ water_cauldron[level
 
 # Generate energy & Playsound
 scoreboard players add @s energy.storage {energy["generation"]}
-execute if score @s energy.storage matches {energy["max_storage"]}.. run scoreboard players set @s energy.storage {energy["max_storage"]}
+execute if score @s energy.storage >= @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 playsound {ns}:cauldron_generator block @a[distance=..12] ~ ~ ~ 0.25
 """
 	write_function(f"{ns}:custom_blocks/cauldron_generator/second", content)
@@ -176,6 +179,33 @@ data modify entity @s transformation.scale[1] set value 1.025f
 data modify entity @s transformation.translation[1] set value 0.01f
 """
 	write_function(f"{ns}:custom_blocks/electric_brewing_stand/place_secondary", to_add)
+
+	# Heat generator
+	energy: dict = Mem.definitions["heat_generator"]["custom_data"]["energy"]
+	default_model: str = Mem.definitions["heat_generator"]["item_model"]
+	working_model: str = default_model + "_on"
+	write_function(f"{ns}:custom_blocks/heat_generator/second", f"""
+# Prepare working state
+scoreboard players set #working {ns}.data 0
+execute if score @s energy.storage = @s energy.max_storage run scoreboard players set #working {ns}.data -1
+
+# Check if lava is around
+execute if score #working {ns}.data matches 0 if block ~1 ~ ~ lava run scoreboard players set #working {ns}.data 1
+execute if score #working {ns}.data matches 0 if block ~-1 ~ ~ lava run scoreboard players set #working {ns}.data 1
+execute if score #working {ns}.data matches 0 if block ~ ~ ~1 lava run scoreboard players set #working {ns}.data 1
+execute if score #working {ns}.data matches 0 if block ~ ~ ~-1 lava run scoreboard players set #working {ns}.data 1
+execute if score #working {ns}.data matches 0 if block ~ ~1 ~ lava run scoreboard players set #working {ns}.data 1
+execute if score #working {ns}.data matches 0 if block ~ ~-1 ~ lava run scoreboard players set #working {ns}.data 1
+
+# Update the model and stop if not working
+execute if score #working {ns}.data matches 1 run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
+execute if score #working {ns}.data matches ..0 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
+execute if score #working {ns}.data matches ..0 run return 0
+
+# Generate energy and playsound
+scoreboard players add @s energy.storage {energy["generation"]}
+execute if score @s energy.storage >= @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
+""")
 
 	# Pulverizer
 	pulverizer(gui)
