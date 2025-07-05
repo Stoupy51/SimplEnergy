@@ -9,7 +9,7 @@
 	"key": {
 		"I": "minecraft:iron_block",
 		"G": "minecraft:glass",
-		"A": "minecraft:ancient_debris"
+		"A": "minecraft:netherite_scrap"
 	},
 	"result": {
 		"id": "minecraft:furnace",

@@ -89,9 +89,9 @@ scoreboard players set #success simplenergy.data 0
 execute store success score #success simplenergy.data if items entity @s container.* minecraft:glass
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:heat_generator
 
-# minecraft:ancient_debris
+# minecraft:netherite_scrap
 scoreboard players set #success simplenergy.data 0
-execute store success score #success simplenergy.data if items entity @s container.* minecraft:ancient_debris
+execute store success score #success simplenergy.data if items entity @s container.* minecraft:netherite_scrap
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:heat_generator
 
 # minecraft:lapis_lazuli
