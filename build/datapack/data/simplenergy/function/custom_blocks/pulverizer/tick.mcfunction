@@ -14,12 +14,12 @@ scoreboard players set #working simplenergy.data 0
 execute if score @s energy.storage matches 120.. run function simplenergy:custom_blocks/pulverizer/work
 
 # Update gui depending on energy storage
-execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.26 with cobblestone[item_model="simplenergy:gui/pulverizer_0",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
-execute if score @s energy.storage matches 1..1599 run item replace block ~ ~ ~ container.26 with cobblestone[item_model="simplenergy:gui/pulverizer_1",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
-execute if score @s energy.storage matches 1600..3199 run item replace block ~ ~ ~ container.26 with cobblestone[item_model="simplenergy:gui/pulverizer_2",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
-execute if score @s energy.storage matches 3200..4799 run item replace block ~ ~ ~ container.26 with cobblestone[item_model="simplenergy:gui/pulverizer_3",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
-execute if score @s energy.storage matches 4800..6399 run item replace block ~ ~ ~ container.26 with cobblestone[item_model="simplenergy:gui/pulverizer_4",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
-execute if score @s energy.storage matches 6400.. run item replace block ~ ~ ~ container.26 with cobblestone[item_model="simplenergy:gui/pulverizer_5",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_0",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches 1..1599 run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_1",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches 1600..3199 run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_2",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches 3200..4799 run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_3",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches 4800..6399 run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_4",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches 6400.. run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_5",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
 
 # Update gui for each slot
 function simplenergy:custom_blocks/pulverizer/gui_for_each_slot

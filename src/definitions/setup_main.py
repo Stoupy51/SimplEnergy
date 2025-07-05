@@ -40,6 +40,7 @@ def beet_default(ctx: Context) -> None:
 	main_additions()
 
 	# Final adjustments
+	add_energy_lore_to_definitions()
 	add_item_model_component(black_list = ["simple_cable", "advanced_cable", "elite_cable"])
 	add_item_name_and_lore_if_missing()
 	add_private_custom_data_for_namespace()

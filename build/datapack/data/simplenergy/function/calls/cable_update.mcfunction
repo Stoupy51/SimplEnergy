@@ -5,14 +5,12 @@
 #
 
 # Stop if not simplenergy cable
-execute unless entity @s[tag=simplenergy.custom_block] run return 0
-
-# Get the base model
+execute unless entity @s[tag=simplenergy.custom_block,tag=energy.cable] run return fail
 
 # Apply the model
-execute if entity @s[tag=simplenergy.simple_cable] run item replace entity @s container.0 with cobblestone[item_model="simplenergy:simple_cable"]
-execute if entity @s[tag=simplenergy.advanced_cable] run item replace entity @s container.0 with cobblestone[item_model="simplenergy:advanced_cable"]
-execute if entity @s[tag=simplenergy.elite_cable] run item replace entity @s container.0 with cobblestone[item_model="simplenergy:elite_cable"]
+execute if entity @s[tag=simplenergy.simple_cable] run item replace entity @s container.0 with minecraft:command_block[item_model="simplenergy:simple_cable"]
+execute if entity @s[tag=simplenergy.advanced_cable] run item replace entity @s container.0 with minecraft:command_block[item_model="simplenergy:advanced_cable"]
+execute if entity @s[tag=simplenergy.elite_cable] run item replace entity @s container.0 with minecraft:command_block[item_model="simplenergy:elite_cable"]
 
 # Get the right model
 data modify storage simplenergy:main model_data set value {"floats":[0.0f]}
