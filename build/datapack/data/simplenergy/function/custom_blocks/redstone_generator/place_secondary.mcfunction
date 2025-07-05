@@ -14,7 +14,7 @@ tag @s add simplenergy.redstone_generator
 tag @s add simplenergy.vanilla.minecraft_furnace
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "simplenergy.redstone_generator","italic": false,"color": "white"}}
+data merge entity @s {"CustomName": "Redstone Generator"}
 
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="simplenergy:redstone_generator"]
@@ -34,4 +34,8 @@ scoreboard players operation @s energy.transfer_rate = @s energy.max_storage
 scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
+
+# Add tag for loop every second
+tag @s add simplenergy.second
+scoreboard players add #second_entities simplenergy.data 1
 

@@ -18,3 +18,6 @@ scoreboard players remove #total_redstone_generator simplenergy.data 1
 # Kill the custom block entity
 kill @s
 
+# Decrease the number of entities with second tag
+scoreboard players remove #second_entities simplenergy.data 1
+
