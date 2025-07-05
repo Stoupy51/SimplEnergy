@@ -7,11 +7,7 @@
 tag @s add simplenergy.placer
 function simplenergy:custom_blocks/get_rotation
 setblock ~ ~ ~ air
-execute if score #rotation simplenergy.data matches 1 run setblock ~ ~ ~ iron_trapdoor[facing=north]
-execute if score #rotation simplenergy.data matches 2 run setblock ~ ~ ~ iron_trapdoor[facing=east]
-execute if score #rotation simplenergy.data matches 3 run setblock ~ ~ ~ iron_trapdoor[facing=south]
-execute if score #rotation simplenergy.data matches 4 run setblock ~ ~ ~ iron_trapdoor[facing=west]
-execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function simplenergy:custom_blocks/wind_turbine/place_secondary
+execute if score #rotation simplenergy.data matches 1 run setblock ~ ~ ~ iron_trapdoor[facing=north]execute if score #rotation simplenergy.data matches 2 run setblock ~ ~ ~ iron_trapdoor[facing=east]execute if score #rotation simplenergy.data matches 3 run setblock ~ ~ ~ iron_trapdoor[facing=south]execute if score #rotation simplenergy.data matches 4 run setblock ~ ~ ~ iron_trapdoor[facing=west]execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function simplenergy:custom_blocks/wind_turbine/place_secondary
 tag @s remove simplenergy.placer
 
 # Increment count scores

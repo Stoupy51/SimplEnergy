@@ -6,7 +6,7 @@
 
 # Stop function if no water or full
 scoreboard players set #working simplenergy.data 1
-execute if score #working simplenergy.data matches 1 if score @s energy.storage matches 500.. run scoreboard players set #working simplenergy.data 0
+execute if score #working simplenergy.data matches 1 if score @s energy.storage >= @s energy.max_storage run scoreboard players set #working simplenergy.data 0
 execute if score #working simplenergy.data matches 1 if block ~ ~ ~ cauldron run scoreboard players set #working simplenergy.data 0
 # execute if score #working simplenergy.data matches 1 run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:cauldron_generator_on"
 # execute if score #working simplenergy.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:cauldron_generator"
@@ -24,6 +24,6 @@ execute if score @s simplenergy.private matches 1.. if block ~ ~ ~ water_cauldro
 
 # Generate energy & Playsound
 scoreboard players add @s energy.storage 5
-execute if score @s energy.storage matches 500.. run scoreboard players set @s energy.storage 500
+execute if score @s energy.storage >= @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 playsound simplenergy:cauldron_generator block @a[distance=..12] ~ ~ ~ 0.25
 

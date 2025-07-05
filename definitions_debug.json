@@ -418,7 +418,7 @@
 		"category": "energy",
 		"custom_data": {"energy": {"generation": 20,"max_storage": 1600},"simplenergy": {"heat_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["IGI","GAG","IGI"],"ingredients": {"I": {"item": "minecraft:iron_block"},"G": {"item": "minecraft:glass"},"A": {"item": "minecraft:ancient_debris"}}}],
-		"wiki_components": [{"text": "Heat-powered energy generator.","color": "yellow"},{"text": "\nGeneration: 20 kW","color": "green"},{"text": "\nRequires to be placed next to lava to operate","color": "gray"}],
+		"wiki_components": [{"text": "Heat-powered energy generator.","color": "yellow"},{"text": "\nGeneration: 20 kW","color": "green"},{"text": "\nRequires to be placed directly next to lava to operate","color": "gray"}],
 		"vanilla_block": {"id": "minecraft:iron_block","apply_facing": false},
 		"lore": [{"text": "[Energy Generation: 20 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1600 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:heat_generator",

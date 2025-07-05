@@ -106,7 +106,7 @@ def main_additions() -> None:
 			WIKI_COMPONENT: [
 				{"text":"Heat-powered energy generator.","color":"yellow"},
 				{"text":"\nGeneration: 20 kW","color":"green"},
-				{"text":"\nRequires to be placed next to lava to operate","color":"gray"}
+				{"text":"\nRequires to be placed directly next to lava to operate","color":"gray"}
 			],
 		},
 		"wind_turbine": {
