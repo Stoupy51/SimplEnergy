@@ -429,7 +429,7 @@
 		"category": "energy",
 		"custom_data": {"energy": {"generation": 20,"max_storage": 800},"simplenergy": {"wind_turbine": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": [" I ","ICI","BBB"],"ingredients": {"I": {"item": "minecraft:iron_ingot"},"C": {"item": "minecraft:copper_block"},"B": {"item": "minecraft:iron_block"}}}],
-		"wiki_components": [{"text": "Altitude-dependent wind generator.","color": "yellow"},{"text": "\nGeneration: 0-20 kW","color": "green"},{"text": "\nHigher altitude = more energy generation","color": "aqua"},{"text": "\n(0 kW at y=50, 20 kW at y=150)","color": "gray"}],
+		"wiki_components": [{"text": "Altitude-dependent wind generator.","color": "yellow"},{"text": "\nGeneration: 0-20 kW","color": "green"},{"text": "\nHigher altitude = more energy generation","color": "aqua"},{"text": "\n(0 kW at y=50, 2 kW at y=60, ..., 20 kW at y=150)","color": "gray"}],
 		"vanilla_block": {"id": "iron_trapdoor","apply_facing": true},
 		"lore": [{"text": "[Energy Generation: 20 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 800 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:wind_turbine",

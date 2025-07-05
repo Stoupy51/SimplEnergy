@@ -207,6 +207,33 @@ scoreboard players add @s energy.storage {energy["generation"]}
 execute if score @s energy.storage >= @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 """)
 
+	# Wind turbine
+	energy: dict = Mem.definitions["wind_turbine"]["custom_data"]["energy"]
+	default_model: str = Mem.definitions["wind_turbine"]["item_model"]
+	working_model: str = default_model + "_on"
+	write_function(f"{ns}:custom_blocks/wind_turbine/second", f"""
+# Get height of the wind turbine
+execute store result score #height {ns}.data run data get entity @s Pos[1]
+
+# Update the model and stop if not working
+execute if score #height {ns}.data matches 60.. run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
+execute if score #height {ns}.data matches ..59 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
+execute if score #height {ns}.data matches ..59 run return 0
+
+# Generate energy
+execute if score #height {ns}.data matches 60..69 run scoreboard players add @s energy.storage {energy["generation"] * 1 // 10}
+execute if score #height {ns}.data matches 70..79 run scoreboard players add @s energy.storage {energy["generation"] * 2 // 10}
+execute if score #height {ns}.data matches 80..89 run scoreboard players add @s energy.storage {energy["generation"] * 3 // 10}
+execute if score #height {ns}.data matches 90..99 run scoreboard players add @s energy.storage {energy["generation"] * 4 // 10}
+execute if score #height {ns}.data matches 100..109 run scoreboard players add @s energy.storage {energy["generation"] * 5 // 10}
+execute if score #height {ns}.data matches 110..119 run scoreboard players add @s energy.storage {energy["generation"] * 6 // 10}
+execute if score #height {ns}.data matches 120..129 run scoreboard players add @s energy.storage {energy["generation"] * 7 // 10}
+execute if score #height {ns}.data matches 130..139 run scoreboard players add @s energy.storage {energy["generation"] * 8 // 10}
+execute if score #height {ns}.data matches 140..149 run scoreboard players add @s energy.storage {energy["generation"] * 9 // 10}
+execute if score #height {ns}.data matches 150.. run scoreboard players add @s energy.storage {energy["generation"]}
+execute if score @s energy.storage >= @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
+""")
+
 	# Pulverizer
 	pulverizer(gui)
 

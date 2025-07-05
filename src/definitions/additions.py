@@ -117,7 +117,7 @@ def main_additions() -> None:
 				{"text":"Altitude-dependent wind generator.","color":"yellow"},
 				{"text":"\nGeneration: 0-20 kW","color":"green"},
 				{"text":"\nHigher altitude = more energy generation","color":"aqua"},
-				{"text":"\n(0 kW at y=50, 20 kW at y=150)","color":"gray"}
+				{"text":"\n(0 kW at y=50, 2 kW at y=60, ..., 20 kW at y=150)","color":"gray"}
 			],
 		},
 		"solar_panel": {
