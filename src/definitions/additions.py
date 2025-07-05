@@ -4,6 +4,15 @@
 from stewbeet.core import *
 from stouputils.print import info
 
+# Constants
+ORE_WIKI: TextComponent = [
+	{"text":"Primary ore for energy system components.","color":"yellow"},
+	{"text":"\nFound in the Overworld between Y=0 and Y=50","color":"gray"},
+	{"text":"\nDeepslate variant generates below Y=0","color":"gray"},
+	{"text":"\nSmelt into Simplunium Ingots for crafting","color":"gray"},
+	{"text":"\nUsed to create: Batteries, Generators, Machines, Tools","color":"gray"}
+]
+
 
 def main_additions() -> None:
 	MISC: str = "miscellaneous"
@@ -75,11 +84,10 @@ def main_additions() -> None:
 				"thirdperson_righthand":{"rotation":[75,45,0],"translation":[0,2.5,0],"scale":[0.375,0.375,0.375]},
 				"firstperson_righthand":{"rotation":[0,45,0],"translation":[0,0,0],"scale":[0.40,0.40,0.40]},
 				"firstperson_lefthand":{"rotation":[0,225,0],"translation":[0,0,0],"scale":[0.40,0.40,0.40]}
-		}},
+			}},
 			WIKI_COMPONENT: [
 				{"text":"Basic water-powered generator.","color":"yellow"},
-				{"text":"\nGeneration: 5 kW","color":"green"},
-				{"text":"\nRequires water to operate - fill cauldron with water","color":"gray"}
+				{"text":"\nRequires water to operate - fill the cauldron with water","color":"gray"}
 			],
 		},
 		"furnace_generator": {
@@ -87,8 +95,7 @@ def main_additions() -> None:
 			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","RFR","SSS"],"ingredients":{"I":ingr_repr("minecraft:iron_block"),"R":ingr_repr("minecraft:redstone"),"F":ingr_repr("minecraft:furnace"),"S":ingr_repr("minecraft:stone")}}],
 			WIKI_COMPONENT: [
 				{"text":"Fuel-burning energy generator.","color":"yellow"},
-				{"text":"\nGeneration: 10 kW","color":"green"},
-				{"text":"\nBurns any furnace fuel to generate energy","color":"gray"}
+				{"text":"\nConsumes any furnace fuel to generate energy","color":"gray"}
 			],
 		},
 		"redstone_generator": {
@@ -96,17 +103,15 @@ def main_additions() -> None:
 			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RRR","RFR","SSS"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"F":ingr_repr("furnace_generator", ns),"S":ingr_repr("simplunium_block", ns)}}],
 			WIKI_COMPONENT: [
 				{"text":"High-output redstone generator.","color":"yellow"},
-				{"text":"\nGeneration: 80 kW","color":"green"},
-				{"text":"\nAdvanced generator using redstone dust/blocks","color":"gray"}
+				{"text":"\nAdvanced generator powered by redstone dust and blocks","color":"gray"}
 			],
 		},
 		"heat_generator": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":20, "max_storage": 1600}},
-			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IGI","GAG","IGI"],"ingredients":{"I":ingr_repr("minecraft:iron_block"),"G":ingr_repr("minecraft:glass"),"A":ingr_repr("minecraft:ancient_debris")}}],
+			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IGI","GAG","IGI"],"ingredients":{"I":ingr_repr("minecraft:iron_block"),"G":ingr_repr("minecraft:glass"),"A":ingr_repr("minecraft:netherite_scrap")}}],
 			WIKI_COMPONENT: [
 				{"text":"Heat-powered energy generator.","color":"yellow"},
-				{"text":"\nGeneration: 20 kW","color":"green"},
-				{"text":"\nRequires to be placed directly next to lava to operate","color":"gray"}
+				{"text":"\nMust be placed directly adjacent to lava to operate","color":"gray"}
 			],
 		},
 		"wind_turbine": {
@@ -115,8 +120,7 @@ def main_additions() -> None:
 			OVERRIDE_MODEL: {"parent":"block/cube_all","textures":{"0":f"{ns}:item/wind_turbine_blades","1":"minecraft:block/iron_block","2":f"{ns}:item/wind_turbine_side","particle":f"{ns}:item/wind_turbine_blades"},"elements":[{"name":"blades","from":[1,4,7.5],"to":[15,18,7.5],"faces":{"north":{"uv":[0,0,16,16],"texture":"#0","cullface":"north"},"south":{"uv":[16,0,0,16],"texture":"#0","cullface":"south"}}},{"from":[0,0,0],"to":[16,3.025,16],"faces":{"north":{"uv":[0,13,16,16],"texture":"#2","cullface":"north"},"east":{"uv":[0,13,16,16],"texture":"#2","cullface":"north"},"south":{"uv":[0,13,16,16],"texture":"#2","cullface":"north"},"west":{"uv":[0,13,16,16],"texture":"#2","cullface":"north"},"up":{"uv":[0,0,16,16],"texture":"#1","cullface":"north"},"down":{"uv":[0,0,16,16],"texture":"#1","cullface":"north"}}},{"from":[7,3,7.51],"to":[9,13,8.51],"faces":{"north":{"uv":[0,3,16,13],"texture":"#1","cullface":"north"},"east":{"uv":[0,3,16,13],"texture":"#1","cullface":"north"},"south":{"uv":[0,3,16,13],"texture":"#1","cullface":"north"},"west":{"uv":[0,3,16,13],"texture":"#1","cullface":"north"},"up":{"uv":[12,14,15,15],"texture":"#1","cullface":"north"},"down":{"uv":[12,14,15,15],"texture":"#1","cullface":"north"}}}],"display":{"head":{"translation":[0,-30.42,0],"scale":[1.605,1.605,1.605]},"fixed":{"rotation":[-90,0,0],"translation":[0,0,-16.05],"scale":[2.0075,2.0075,2.0075]}}},
 			WIKI_COMPONENT: [
 				{"text":"Altitude-dependent wind generator.","color":"yellow"},
-				{"text":"\nGeneration: 0-20 kW","color":"green"},
-				{"text":"\nHigher altitude = more energy generation","color":"aqua"},
+				{"text":"\nHigher altitude increases energy generation","color":"gray"},
 				{"text":"\n(0 kW at y=50, 2 kW at y=60, ..., 20 kW at y=150)","color":"gray"}
 			],
 		},
@@ -126,7 +130,6 @@ def main_additions() -> None:
 			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/solar_panel_side", "top": f"{ns}:item/solar_panel_top"}},
 			WIKI_COMPONENT: [
 				{"text":"Daylight-powered generator.","color":"yellow"},
-				{"text":"\nGeneration: 4 kW (day only)","color":"green"},
 				{"text":"\nRequires direct sunlight to operate","color":"gray"}
 			],
 		},
@@ -137,8 +140,7 @@ def main_additions() -> None:
 			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LFL","III"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"F":ingr_repr("minecraft:furnace"),"I":ingr_repr("minecraft:iron_block")}}],
 			WIKI_COMPONENT: [
 				{"text":"Electric-powered smelting machine.","color":"yellow"},
-				{"text":"\nEnergy Usage: 20 kW","color":"red"},
-				{"text":"\nSmelts items using electricity instead of fuel (x1.5 times faster)","color":"gray"}
+				{"text":"\nSmelts items using electricity instead of fuel (1.5x faster)","color":"gray"}
 			],
 		},
 		"electric_smelter": {
@@ -146,8 +148,7 @@ def main_additions() -> None:
 			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","IFI","BBB"],"ingredients":{"I":ingr_repr("simplunium_ingot", ns),"F":ingr_repr("electric_furnace", ns),"B":ingr_repr("simplunium_block", ns)}}],
 			WIKI_COMPONENT: [
 				{"text":"Advanced electric smelting station.","color":"yellow"},
-				{"text":"\nEnergy Usage: 100 kW","color":"red"},
-				{"text":"\nFaster and more efficient than electric furnace (x8 times faster)","color":"gray"}
+				{"text":"\nFaster and more efficient than electric furnace (8x faster)","color":"gray"}
 			],
 		},
 		"electric_brewing_stand": {
@@ -164,8 +165,7 @@ def main_additions() -> None:
 		}},
 			WIKI_COMPONENT: [
 				{"text":"Electric-powered brewing station.","color":"yellow"},
-				{"text":"\nEnergy Usage: 40 kW","color":"red"},
-				{"text":"\nBrews potions using electricity (8x times faster)","color":"gray"}
+				{"text":"\nBrews potions using electricity (8x faster)","color":"gray"}
 			],
 		},
 		"pulverizer": {
@@ -173,8 +173,7 @@ def main_additions() -> None:
 			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DDD","IFI","CCC"],"ingredients":{"D":ingr_repr("minecraft:diamond"),"I":ingr_repr("simplunium_ingot", ns),"F":ingr_repr("electric_furnace", ns),"C":ingr_repr("minecraft:copper_block")}}],
 			WIKI_COMPONENT: [
 				{"text":"Ore processing and grinding machine.","color":"yellow"},
-				{"text":"\nEnergy Usage: 120 kW","color":"red"},
-				{"text":"\nPulverizes ores into dusts for better yields","color":"gray"}
+				{"text":"\nGrinds ores into dusts for increased yields","color":"gray"}
 			],
 		},
 		"elevator": {
@@ -203,7 +202,6 @@ def main_additions() -> None:
 			},
 			WIKI_COMPONENT: [
 				{"text":"Basic energy transmission cable.","color":"yellow"},
-				{"text":"\nTransfer Rate: 40 kW","color":"aqua"},
 				{"text":"\nConnects energy generators to machines and batteries","color":"gray"}
 			],
 		},
@@ -218,7 +216,6 @@ def main_additions() -> None:
 			},
 			WIKI_COMPONENT: [
 				{"text":"Improved energy transmission cable.","color":"yellow"},
-				{"text":"\nTransfer Rate: 120 kW","color":"aqua"},
 				{"text":"\nUpgraded cable for higher energy throughput","color":"gray"}
 			],
 		},
@@ -233,13 +230,14 @@ def main_additions() -> None:
 			},
 			WIKI_COMPONENT: [
 				{"text":"High-capacity energy transmission cable.","color":"yellow"},
-				{"text":"\nTransfer Rate: 240 kW","color":"aqua"},
 				{"text":"\nTop-tier cable for maximum energy transfer","color":"gray"}
 			],
 		},
 	}
 
 	# Custom blocks
+	additions["simplunium_ore"] = {WIKI_COMPONENT: ORE_WIKI}
+	additions["deepslate_simplunium_ore"] = {WIKI_COMPONENT: ORE_WIKI}
 	additions["simplunium_block"] = {VANILLA_BLOCK: {"id": "minecraft:iron_block", "apply_facing": False}}
 	additions["raw_simplunium_block"] = {VANILLA_BLOCK: {"id": "minecraft:raw_iron_block", "apply_facing": False}}
 	additions["simple_battery"][VANILLA_BLOCK] = {"id": "minecraft:copper_block", "apply_facing": False}
