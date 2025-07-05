@@ -57,11 +57,7 @@
 				]
 			],
 			"minecraft:item_model": "simplenergy:wind_turbine",
-			"minecraft:item_name": {
-				"translate": "simplenergy.wind_turbine",
-				"italic": false,
-				"color": "white"
-			},
+			"minecraft:item_name": "Wind Turbine",
 			"minecraft:container": [
 				{
 					"slot": 0,

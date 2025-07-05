@@ -44,11 +44,7 @@
 										{"translate": "simplenergy","italic": true,"color": "blue"}
 									]
 								],
-								"minecraft:item_name": {
-									"translate": "simplenergy.elite_cable",
-									"italic": false,
-									"color": "white"
-								}
+								"minecraft:item_name": "Elite Cable"
 							}
 						}
 					]

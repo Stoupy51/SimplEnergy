@@ -11,11 +11,7 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "simplenergy:netherite_dust",
-								"minecraft:item_name": {
-									"translate": "simplenergy.netherite_dust",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Netherite Dust",
 								"minecraft:lore": [
 									[
 										"",

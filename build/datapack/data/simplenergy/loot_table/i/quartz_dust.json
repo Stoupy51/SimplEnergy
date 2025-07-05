@@ -11,11 +11,7 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "simplenergy:quartz_dust",
-								"minecraft:item_name": {
-									"translate": "simplenergy.quartz_dust",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Quartz Dust",
 								"minecraft:lore": [
 									[
 										"",

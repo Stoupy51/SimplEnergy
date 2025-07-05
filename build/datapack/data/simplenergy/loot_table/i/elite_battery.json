@@ -35,11 +35,7 @@
 									]
 								],
 								"minecraft:item_model": "simplenergy:elite_battery",
-								"minecraft:item_name": {
-									"translate": "simplenergy.elite_battery",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Elite Battery",
 								"minecraft:container": [
 									{
 										"slot": 0,

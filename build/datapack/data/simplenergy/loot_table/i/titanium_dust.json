@@ -11,11 +11,7 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "simplenergy:titanium_dust",
-								"minecraft:item_name": {
-									"translate": "simplenergy.titanium_dust",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Titanium Dust",
 								"minecraft:lore": [
 									[
 										"",

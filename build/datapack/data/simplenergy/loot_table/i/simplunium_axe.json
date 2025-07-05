@@ -44,11 +44,7 @@
 									}
 								],
 								"minecraft:item_model": "simplenergy:simplunium_axe",
-								"minecraft:item_name": {
-									"translate": "simplenergy.simplunium_axe",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Simplunium Axe",
 								"minecraft:lore": [
 									[
 										"",

@@ -18,11 +18,7 @@
 										"id": "titanium_ore"
 									}
 								},
-								"minecraft:item_name": {
-									"translate": "simplenergy.deepslate_titanium_ore",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Deepslate Titanium Ore",
 								"minecraft:lore": [
 									{
 										"translate": "simplenergy.mechanization",

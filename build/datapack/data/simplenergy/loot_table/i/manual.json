@@ -69,11 +69,7 @@
 									]
 								},
 								"minecraft:item_model": "simplenergy:manual",
-								"minecraft:item_name": {
-									"translate": "simplenergy.manual",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Manual",
 								"minecraft:enchantment_glint_override": false,
 								"minecraft:max_stack_size": 1,
 								"minecraft:lore": [

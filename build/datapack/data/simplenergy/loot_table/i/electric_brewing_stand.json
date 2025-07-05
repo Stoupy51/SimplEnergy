@@ -40,11 +40,7 @@
 									]
 								],
 								"minecraft:item_model": "simplenergy:electric_brewing_stand",
-								"minecraft:item_name": {
-									"translate": "simplenergy.electric_brewing_stand",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Electric Brewing Stand",
 								"minecraft:container": [
 									{
 										"slot": 0,

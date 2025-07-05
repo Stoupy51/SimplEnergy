@@ -40,11 +40,7 @@
 									]
 								],
 								"minecraft:item_model": "simplenergy:pulverizer",
-								"minecraft:item_name": {
-									"translate": "simplenergy.pulverizer",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Pulverizer",
 								"minecraft:container": [
 									{
 										"slot": 0,

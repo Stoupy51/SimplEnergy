@@ -11,11 +11,7 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "simplenergy:gold_dust",
-								"minecraft:item_name": {
-									"translate": "simplenergy.gold_dust",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Gold Dust",
 								"minecraft:lore": [
 									[
 										"",

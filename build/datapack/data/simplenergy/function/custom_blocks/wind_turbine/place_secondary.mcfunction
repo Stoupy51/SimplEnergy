@@ -14,7 +14,7 @@ tag @s add simplenergy.wind_turbine
 tag @s add simplenergy.vanilla.iron_trapdoor
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "simplenergy.wind_turbine","italic": false,"color": "white"}}
+data merge entity @s {"CustomName": "Wind Turbine"}
 
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="simplenergy:wind_turbine"]

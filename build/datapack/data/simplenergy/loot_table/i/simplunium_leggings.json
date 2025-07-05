@@ -34,11 +34,7 @@
 									}
 								],
 								"minecraft:item_model": "simplenergy:simplunium_leggings",
-								"minecraft:item_name": {
-									"translate": "simplenergy.simplunium_leggings",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Simplunium Leggings",
 								"minecraft:lore": [
 									[
 										"",

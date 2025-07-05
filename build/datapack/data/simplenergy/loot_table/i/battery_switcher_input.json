@@ -20,11 +20,7 @@
 									}
 								},
 								"minecraft:item_model": "simplenergy:battery_switcher_input",
-								"minecraft:item_name": {
-									"translate": "simplenergy.battery_switcher_input",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Battery Switcher Input",
 								"minecraft:lore": [
 									[
 										"",

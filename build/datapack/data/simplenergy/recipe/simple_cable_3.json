@@ -65,11 +65,7 @@
 					}
 				]
 			],
-			"minecraft:item_name": {
-				"translate": "simplenergy.simple_cable",
-				"italic": false,
-				"color": "white"
-			}
+			"minecraft:item_name": "Simple Cable"
 		}
 	}
 }

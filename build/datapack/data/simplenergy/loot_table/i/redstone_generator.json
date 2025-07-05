@@ -40,11 +40,7 @@
 									]
 								],
 								"minecraft:item_model": "simplenergy:redstone_generator",
-								"minecraft:item_name": {
-									"translate": "simplenergy.redstone_generator",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Redstone Generator",
 								"minecraft:container": [
 									{
 										"slot": 0,

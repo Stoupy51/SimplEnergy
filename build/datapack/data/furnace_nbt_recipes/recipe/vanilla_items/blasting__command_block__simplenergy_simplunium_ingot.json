@@ -22,11 +22,7 @@
 				}
 			},
 			"minecraft:item_model": "simplenergy:simplunium_ingot",
-			"minecraft:item_name": {
-				"translate": "simplenergy.simplunium_ingot",
-				"italic": false,
-				"color": "white"
-			},
+			"minecraft:item_name": "Simplunium Ingot",
 			"minecraft:lore": [
 				[
 					"",

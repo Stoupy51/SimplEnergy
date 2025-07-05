@@ -34,11 +34,7 @@
 									}
 								],
 								"minecraft:item_model": "simplenergy:simplunium_boots",
-								"minecraft:item_name": {
-									"translate": "simplenergy.simplunium_boots",
-									"italic": false,
-									"color": "white"
-								},
+								"minecraft:item_name": "Simplunium Boots",
 								"minecraft:lore": [
 									[
 										"",
