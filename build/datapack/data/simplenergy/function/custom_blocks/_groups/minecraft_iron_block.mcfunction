@@ -8,4 +8,5 @@ execute if score #total_simplunium_block simplenergy.data matches 1.. if entity 
 execute if score #total_elite_battery simplenergy.data matches 1.. if entity @s[tag=simplenergy.elite_battery] run function simplenergy:custom_blocks/elite_battery/destroy
 execute if score #total_creative_battery simplenergy.data matches 1.. if entity @s[tag=simplenergy.creative_battery] run function simplenergy:custom_blocks/creative_battery/destroy
 execute if score #total_heat_generator simplenergy.data matches 1.. if entity @s[tag=simplenergy.heat_generator] run function simplenergy:custom_blocks/heat_generator/destroy
+execute if score #total_elevator simplenergy.data matches 1.. if entity @s[tag=simplenergy.elevator] run function simplenergy:custom_blocks/elevator/destroy
 

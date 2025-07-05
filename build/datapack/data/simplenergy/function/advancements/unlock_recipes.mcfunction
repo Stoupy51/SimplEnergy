@@ -53,6 +53,7 @@ execute if score #success simplenergy.data matches 1 run recipe give @s simplene
 scoreboard players set #success simplenergy.data 0
 execute store success score #success simplenergy.data if items entity @s container.* minecraft:iron_block
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:electric_furnace
+execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:elevator
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:furnace_generator
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:heat_generator
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:slot_unlocker
@@ -104,6 +105,11 @@ scoreboard players set #success simplenergy.data 0
 execute store success score #success simplenergy.data if items entity @s container.* minecraft:daylight_detector
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:solar_panel
 
+# minecraft:redstone_lamp
+scoreboard players set #success simplenergy.data 0
+execute store success score #success simplenergy.data if items entity @s container.* minecraft:redstone_lamp
+execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:elevator
+
 # minecraft:coal
 scoreboard players set #success simplenergy.data 0
 execute store success score #success simplenergy.data if items entity @s container.* minecraft:coal
@@ -126,6 +132,7 @@ execute if items entity @s container.* *[custom_data~{"simplenergy": {"heat_gene
 execute if items entity @s container.* *[custom_data~{"simplenergy": {"wind_turbine":true} }] run recipe give @s simplenergy:wind_turbine
 execute if items entity @s container.* *[custom_data~{"simplenergy": {"solar_panel":true} }] run recipe give @s simplenergy:solar_panel
 execute if items entity @s container.* *[custom_data~{"simplenergy": {"electric_furnace":true} }] run recipe give @s simplenergy:electric_furnace
+execute if items entity @s container.* *[custom_data~{"simplenergy": {"elevator":true} }] run recipe give @s simplenergy:elevator
 execute if items entity @s container.* *[custom_data~{"simplenergy": {"simple_cable":true} }] run recipe give @s simplenergy:simple_cable
 execute if items entity @s container.* *[custom_data~{"simplenergy": {"simple_cable":true} }] run recipe give @s simplenergy:simple_cable_2
 execute if items entity @s container.* *[custom_data~{"simplenergy": {"simple_cable":true} }] run recipe give @s simplenergy:simple_cable_3

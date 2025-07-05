@@ -9,8 +9,7 @@ scoreboard players set #working simplenergy.data 1
 execute if score #working simplenergy.data matches 1 if score @s energy.storage >= @s energy.max_storage run scoreboard players set #working simplenergy.data 0
 execute if score #working simplenergy.data matches 1 if block ~ ~ ~ cauldron run scoreboard players set #working simplenergy.data 0
 # execute if score #working simplenergy.data matches 1 run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:cauldron_generator_on"
-# execute if score #working simplenergy.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:cauldron_generator"
-execute if score #working simplenergy.data matches 0 run return 0
+execute if score #working simplenergy.data matches 0 run return run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:cauldron_generator"
 
 # Increase timer data and setblock depending on timer data
 scoreboard players add @s simplenergy.private 1

@@ -9,8 +9,7 @@ execute store result score #height simplenergy.data run data get entity @s Pos[1
 
 # Update the model and stop if not working
 execute if score #height simplenergy.data matches 60.. run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:wind_turbine_on"
-execute if score #height simplenergy.data matches ..59 run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:wind_turbine"
-execute if score #height simplenergy.data matches ..59 run return 0
+execute if score #height simplenergy.data matches ..59 run return run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:wind_turbine"
 
 # Generate energy
 execute if score #height simplenergy.data matches 60..69 run scoreboard players add @s energy.storage 2

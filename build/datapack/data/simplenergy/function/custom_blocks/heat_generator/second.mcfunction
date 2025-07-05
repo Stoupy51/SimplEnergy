@@ -18,8 +18,7 @@ execute if score #working simplenergy.data matches 0 if block ~ ~-1 ~ lava run s
 
 # Update the model and stop if not working
 execute if score #working simplenergy.data matches 1 run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:heat_generator_on"
-execute if score #working simplenergy.data matches ..0 run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:heat_generator"
-execute if score #working simplenergy.data matches ..0 run return 0
+execute if score #working simplenergy.data matches ..0 run return run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:heat_generator"
 
 # Generate energy and playsound
 scoreboard players add @s energy.storage 20

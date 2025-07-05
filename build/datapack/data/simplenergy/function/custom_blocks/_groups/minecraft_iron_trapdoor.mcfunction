@@ -1,5 +1,5 @@
 
-#> simplenergy:custom_blocks/_groups/iron_trapdoor
+#> simplenergy:custom_blocks/_groups/minecraft_iron_trapdoor
 #
 # @within	simplenergy:custom_blocks/destroy
 #

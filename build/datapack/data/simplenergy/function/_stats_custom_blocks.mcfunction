@@ -10,6 +10,7 @@ scoreboard players add #total_custom_blocks simplenergy.data 0
 scoreboard players add #total_vanilla_raw_iron_block simplenergy.data 0
 scoreboard players add #total_vanilla_polished_deepslate simplenergy.data 0
 scoreboard players add #total_vanilla_player_head simplenergy.data 0
+scoreboard players add #total_vanilla_iron_trapdoor simplenergy.data 0
 scoreboard players add #total_vanilla_iron_block simplenergy.data 0
 scoreboard players add #total_vanilla_gold_block simplenergy.data 0
 scoreboard players add #total_vanilla_furnace simplenergy.data 0
@@ -18,10 +19,10 @@ scoreboard players add #total_vanilla_copper_block simplenergy.data 0
 scoreboard players add #total_vanilla_cauldron simplenergy.data 0
 scoreboard players add #total_vanilla_brewing_stand simplenergy.data 0
 scoreboard players add #total_vanilla_barrel simplenergy.data 0
-scoreboard players add #total_vanilla_iron_trapdoor simplenergy.data 0
 scoreboard players add #total_elite_cable simplenergy.data 0
 scoreboard players add #total_advanced_cable simplenergy.data 0
 scoreboard players add #total_simple_cable simplenergy.data 0
+scoreboard players add #total_elevator simplenergy.data 0
 scoreboard players add #total_pulverizer simplenergy.data 0
 scoreboard players add #total_electric_brewing_stand simplenergy.data 0
 scoreboard players add #total_electric_smelter simplenergy.data 0
@@ -58,10 +59,10 @@ tellraw @s [{"translate": "simplenergy.total_electric_furnace","color":"gold"},{
 tellraw @s [{"translate": "simplenergy.total_electric_smelter","color":"gold"},{"score":{"name":"#total_electric_smelter","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_electric_brewing_stand","color":"gold"},{"score":{"name":"#total_electric_brewing_stand","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_pulverizer","color":"gold"},{"score":{"name":"#total_pulverizer","objective":"simplenergy.data"},"color":"yellow"}]
+tellraw @s [{"translate": "simplenergy.total_elevator","color":"gold"},{"score":{"name":"#total_elevator","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_simple_cable","color":"gold"},{"score":{"name":"#total_simple_cable","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_advanced_cable","color":"gold"},{"score":{"name":"#total_advanced_cable","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_elite_cable","color":"gold"},{"score":{"name":"#total_elite_cable","objective":"simplenergy.data"},"color":"yellow"}]
-tellraw @s [{"translate": "simplenergy.vanilla_iron_trapdoor","color":"gray"},{"score":{"name":"#total_vanilla_iron_trapdoor","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_barrel","color":"gray"},{"score":{"name":"#total_vanilla_barrel","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_brewing_stand","color":"gray"},{"score":{"name":"#total_vanilla_brewing_stand","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_cauldron","color":"gray"},{"score":{"name":"#total_vanilla_cauldron","objective":"simplenergy.data"},"color":"white"}]
@@ -70,6 +71,7 @@ tellraw @s [{"translate": "simplenergy.vanilla_minecraft_daylight_detector","col
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_furnace","color":"gray"},{"score":{"name":"#total_vanilla_furnace","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_gold_block","color":"gray"},{"score":{"name":"#total_vanilla_gold_block","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_iron_block","color":"gray"},{"score":{"name":"#total_vanilla_iron_block","objective":"simplenergy.data"},"color":"white"}]
+tellraw @s [{"translate": "simplenergy.vanilla_minecraft_iron_trapdoor","color":"gray"},{"score":{"name":"#total_vanilla_iron_trapdoor","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_player_head","color":"gray"},{"score":{"name":"#total_vanilla_player_head","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_polished_deepslate","color":"gray"},{"score":{"name":"#total_vanilla_polished_deepslate","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_raw_iron_block","color":"gray"},{"score":{"name":"#total_vanilla_raw_iron_block","objective":"simplenergy.data"},"color":"white"}]

@@ -177,6 +177,16 @@ def main_additions() -> None:
 				{"text":"\nPulverizes ores into dusts for better yields","color":"gray"}
 			],
 		},
+		"elevator": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":20, "max_storage": 1200}},
+			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","IRI","III"],"ingredients":{"I":ingr_repr("minecraft:iron_block", ns),"R":ingr_repr("minecraft:redstone_lamp")}}],
+			WIKI_COMPONENT: [
+				{"text":"Vertical transport system for players.","color":"yellow"},
+				{"text":"\nSneak on top to teleport to an elevator placed below","color":"gray"},
+				{"text":"\nJump on top to teleport to an elevator placed above","color":"gray"},
+				{"text":"\nMaximum distance: 72 blocks","color":"gray"},
+			],
+		},
 
 		# Cables
 		"simple_cable": {
@@ -240,12 +250,13 @@ def main_additions() -> None:
 	additions["furnace_generator"][VANILLA_BLOCK] = {"id": "minecraft:furnace", "apply_facing": True}
 	additions["redstone_generator"][VANILLA_BLOCK] = {"id": "minecraft:furnace", "apply_facing": True}
 	additions["heat_generator"][VANILLA_BLOCK] = {"id": "minecraft:iron_block", "apply_facing": False}
-	additions["wind_turbine"][VANILLA_BLOCK] = {"id": "iron_trapdoor", "apply_facing": True}
+	additions["wind_turbine"][VANILLA_BLOCK] = {"id": "minecraft:iron_trapdoor", "apply_facing": True}
 	additions["solar_panel"][VANILLA_BLOCK] = {"id": "minecraft:daylight_detector", "apply_facing": False}
 	additions["electric_furnace"][VANILLA_BLOCK] = {"id": "minecraft:furnace", "apply_facing": True}
 	additions["electric_smelter"][VANILLA_BLOCK] = {"id": "minecraft:furnace", "apply_facing": True}
 	additions["electric_brewing_stand"][VANILLA_BLOCK] = {"id": "minecraft:brewing_stand", "apply_facing": False}
 	additions["pulverizer"][VANILLA_BLOCK] = {"id": "minecraft:barrel", "apply_facing": True}
+	additions["elevator"][VANILLA_BLOCK] = {"id": "minecraft:iron_block", "apply_facing": False}
 	additions["simple_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["simple_cable"]["profile"]) + "}"}
 	additions["advanced_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["advanced_cable"]["profile"]) + "}"}
 	additions["elite_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["elite_cable"]["profile"]) + "}"}

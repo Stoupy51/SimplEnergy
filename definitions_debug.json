@@ -430,7 +430,7 @@
 		"custom_data": {"energy": {"generation": 20,"max_storage": 800},"simplenergy": {"wind_turbine": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": [" I ","ICI","BBB"],"ingredients": {"I": {"item": "minecraft:iron_ingot"},"C": {"item": "minecraft:copper_block"},"B": {"item": "minecraft:iron_block"}}}],
 		"wiki_components": [{"text": "Altitude-dependent wind generator.","color": "yellow"},{"text": "\nGeneration: 0-20 kW","color": "green"},{"text": "\nHigher altitude = more energy generation","color": "aqua"},{"text": "\n(0 kW at y=50, 2 kW at y=60, ..., 20 kW at y=150)","color": "gray"}],
-		"vanilla_block": {"id": "iron_trapdoor","apply_facing": true},
+		"vanilla_block": {"id": "minecraft:iron_trapdoor","apply_facing": true},
 		"lore": [{"text": "[Energy Generation: 20 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 800 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:wind_turbine",
 		"item_name": "Wind Turbine"
@@ -489,6 +489,17 @@
 		"lore": [{"text": "[Power Usage: 120 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 6400 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:pulverizer",
 		"item_name": "Pulverizer"
+	},
+	"elevator": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"usage": 20,"max_storage": 1200},"simplenergy": {"elevator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["III","IRI","III"],"ingredients": {"I": {"item": "minecraft:iron_block"},"R": {"item": "minecraft:redstone_lamp"}}}],
+		"wiki_components": [{"text": "Vertical transport system for players.","color": "yellow"},{"text": "\nSneak on top to teleport to an elevator placed below","color": "gray"},{"text": "\nJump on top to teleport to an elevator placed above","color": "gray"},{"text": "\nMaximum distance: 72 blocks","color": "gray"}],
+		"vanilla_block": {"id": "minecraft:iron_block","apply_facing": false},
+		"lore": [{"text": "[Power Usage: 20 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1200 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
+		"item_model": "simplenergy:elevator",
+		"item_name": "Elevator"
 	},
 	"simple_cable": {
 		"id": "minecraft:player_head",

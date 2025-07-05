@@ -14,6 +14,7 @@ recipe give @s simplenergy:heat_generator
 recipe give @s simplenergy:wind_turbine
 recipe give @s simplenergy:solar_panel
 recipe give @s simplenergy:electric_furnace
+recipe give @s simplenergy:elevator
 recipe give @s simplenergy:simple_cable
 recipe give @s simplenergy:simple_cable_2
 recipe give @s simplenergy:simple_cable_3

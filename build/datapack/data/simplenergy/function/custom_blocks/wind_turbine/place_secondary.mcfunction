@@ -11,7 +11,7 @@ tag @s add smithed.entity
 tag @s add smithed.block
 tag @s add simplenergy.custom_block
 tag @s add simplenergy.wind_turbine
-tag @s add simplenergy.vanilla.iron_trapdoor
+tag @s add simplenergy.vanilla.minecraft_iron_trapdoor
 
 # Add a custom name
 data merge entity @s {"CustomName": "Wind Turbine"}

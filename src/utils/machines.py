@@ -1,6 +1,7 @@
 
 # ruff: noqa: E501
 # Imports
+from beet import Predicate
 from stewbeet.core import *
 
 from .pulverizer import pulverizer
@@ -151,8 +152,7 @@ scoreboard players set #working {ns}.data 1
 execute if score #working {ns}.data matches 1 if score @s energy.storage >= @s energy.max_storage run scoreboard players set #working {ns}.data 0
 execute if score #working {ns}.data matches 1 if block ~ ~ ~ cauldron run scoreboard players set #working {ns}.data 0
 # execute if score #working {ns}.data matches 1 run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
-# execute if score #working {ns}.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
-execute if score #working {ns}.data matches 0 run return 0
+execute if score #working {ns}.data matches 0 run return run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
 
 # Increase timer data and setblock depending on timer data
 scoreboard players add @s {ns}.private 1
@@ -199,8 +199,7 @@ execute if score #working {ns}.data matches 0 if block ~ ~-1 ~ lava run scoreboa
 
 # Update the model and stop if not working
 execute if score #working {ns}.data matches 1 run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
-execute if score #working {ns}.data matches ..0 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
-execute if score #working {ns}.data matches ..0 run return 0
+execute if score #working {ns}.data matches ..0 run return run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
 
 # Generate energy and playsound
 scoreboard players add @s energy.storage {energy["generation"]}
@@ -217,8 +216,7 @@ execute store result score #height {ns}.data run data get entity @s Pos[1]
 
 # Update the model and stop if not working
 execute if score #height {ns}.data matches 60.. run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
-execute if score #height {ns}.data matches ..59 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
-execute if score #height {ns}.data matches ..59 run return 0
+execute if score #height {ns}.data matches ..59 run return run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
 
 # Generate energy
 execute if score #height {ns}.data matches 60..69 run scoreboard players add @s energy.storage {energy["generation"] * 1 // 10}
@@ -234,6 +232,44 @@ execute if score #height {ns}.data matches 150.. run scoreboard players add @s e
 execute if score @s energy.storage >= @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 """)
 
+	# Elevator
+	energy: dict = Mem.definitions["elevator"]["custom_data"]["energy"]
+	default_model: str = Mem.definitions["elevator"]["item_model"]
+	working_model: str = default_model + "_on"
+	Mem.ctx.data[ns].predicates["is_on_ground"] = set_json_encoder(Predicate({"condition":"minecraft:entity_properties","entity":"this","predicate":{"movement":{"vertical_speed":{"max":0.1}}}}))
+	Mem.ctx.data[ns].predicates["is_sneaking"] = set_json_encoder(Predicate({"condition":"minecraft:entity_properties","entity":"this","predicate":{"flags":{"is_sneaking":True}}}))
+	write_function(f"{ns}:custom_blocks/elevator/tick", f"""
+# If not enough energy, update model and stop
+execute unless score @s energy.storage matches {energy["usage"]}.. run return run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
+data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
+
+# Consume energy ({energy["usage"]} per second)
+scoreboard players remove @s energy.storage {energy["usage"] // 20}
+
+# Check if a player is on top of the elevator (cooldown)
+execute positioned ~ ~1 ~ as @a[distance=..1,dx=0,dz=0] run function {ns}:custom_blocks/elevator/as_player
+""")
+	write_function(f"{ns}:custom_blocks/elevator/as_player", f"""
+# Compute the time difference between the player and the elevator, and stop if too high (5 ticks)
+scoreboard players operation #temp {ns}.data = @s {ns}.elevator_time
+scoreboard players operation #temp {ns}.data -= #elevator_time {ns}.data
+execute if score #temp {ns}.data matches -10.. run return 0
+scoreboard players set #success {ns}.data 0
+
+# If player is not on ground (vertical movement), find an elevator block above and teleport the player to it
+execute unless predicate {ns}:is_on_ground positioned ~ ~2 ~ run return run function {ns}:custom_blocks/elevator/go_up
+
+# If player is sneaking, find an elevator block below and teleport the player to it
+execute if predicate {ns}:is_sneaking positioned ~ ~-3 ~ run return run function {ns}:custom_blocks/elevator/go_down
+""")
+	for direction, y_offset in (("up", 1), ("down", -1)):
+		write_function(f"{ns}:custom_blocks/elevator/go_{direction}", f"""
+# Find an elevator block in the direction of the player
+execute at @e[tag={ns}.elevator,distance=..1,limit=1] store success score #success {ns}.data run tp @s ~ ~0.6 ~
+execute if score #success {ns}.data matches 1 run playsound {ns}:elevator block @s
+execute if score #success {ns}.data matches 1 run scoreboard players operation @s {ns}.elevator_time = #elevator_time {ns}.data
+execute if score #success {ns}.data matches 0 if entity @s[distance=..72] positioned ~ ~{y_offset} ~ run function {ns}:custom_blocks/elevator/go_{direction}
+""")
 	# Pulverizer
 	pulverizer(gui)
 

@@ -4,12 +4,28 @@
 import stouputils as stp
 from beet import Advancement, BlockTag, FunctionTag, ItemModifier, Predicate
 from stewbeet.core import *
-from stewbeet.core.utils.io import write_function, write_versioned_function
 
 
 # Setup energy balancing
 def setup_remaining() -> None:
 	ns: str = Mem.ctx.project_id
+
+	# Confirm load file
+	write_load_file(f"""
+scoreboard objectives add {ns}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
+scoreboard objectives add {ns}.elevator_time dummy
+scoreboard objectives add {ns}.private dummy
+team add {ns}.green
+team add {ns}.gold
+team add {ns}.aqua
+team modify {ns}.green color green
+team modify {ns}.gold color gold
+team modify {ns}.aqua color aqua
+""", prepend=True)
+	write_tick_file(f"""
+# Increase every tick the elevator time
+scoreboard players add #elevator_time {ns}.data 1
+""")
 
 	# Passive multimeter & battery switcher working every 2 ticks
 	write_versioned_function("tick_2", f"""
@@ -72,7 +88,6 @@ tellraw @s ["",{{"text":"Markers on furnaces: ","color":"gray"}},{{"score":{{"na
 
 
 	## Right click detection
-	write_versioned_function("load/confirm_load", f"scoreboard objectives add {ns}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick\n")
 	write_function(f"{ns}:utils/on_right_click", f"""
 # Advancement revoke
 advancement revoke @s only {ns}:right_click
@@ -372,20 +387,4 @@ $execute if score #slot {ns}.data matches 0.. if data storage {ns}:main Item.com
 data remove storage {ns}:main Inventory[0]
 execute if data storage {ns}:main Inventory[0] run function {ns}:advancements/inventory_changed_loop with storage {ns}:main Inventory[0]
 """)
-
-
-
-	# Private score
-	write_versioned_function("load/confirm_load", f"""
-scoreboard objectives add {ns}.private dummy
-team add {ns}.green
-team add {ns}.gold
-team add {ns}.aqua
-team modify {ns}.green color green
-team modify {ns}.gold color gold
-team modify {ns}.aqua color aqua
-""", prepend = True)
-
-
-	return
 
