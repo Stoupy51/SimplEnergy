@@ -35,6 +35,7 @@ data modify entity @s transformation.translation[1] set value 0.002f
 
 # Add balancing tag
 tag @s add simplenergy.can_balance
+
 # Add tag for loop every second
 tag @s add simplenergy.second
 scoreboard players add #second_entities simplenergy.data 1

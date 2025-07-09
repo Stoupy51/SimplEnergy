@@ -9,7 +9,7 @@
 [![Discord](https://img.shields.io/discord/1216400498488377467?label=Discord&logo=discord)](https://discord.gg/anxzu6rA9F)
 [![StewBeet](https://img.shields.io/github/v/release/Stoupy51/StewBeet?logo=github&label=StewBeet)](https://github.com/Stoupy51/StewBeet)
 
-![SimplEnergy Image](./assets/showcase/primary.png)
+![SimplEnergy Image](https://raw.githubusercontent.com/Stoupy51/SimplEnergy/refs/heads/main/assets/showcase/primary.png)
 
 # 📖 What is SimplEnergy
 
@@ -46,7 +46,7 @@ Join our active [Discord community](https://discord.gg/anxzu6rA9F) to:
 <br>
 
 ## 📚 Librairies/Modules used, conventions, guideline, tips followed
-- 🐍 [Python Datapack](https://github.com/Stoupy51/PythonDatapackTemplate) (datapack/resource pack generator)
+- 🍲 [StewBeet](https://github.com/Stoupy51/StewBeet) (datapack/resource pack framework)
 - ⚡ [DatapackEnergy](https://github.com/ICY105/DatapackEnergy) (energy library)
 - 🛠️ [Smithed Conventions](https://wiki.smithed.dev/conventions)
 - 📋 [Minecraft Datapacks Conventions](https://mc-datapacks.github.io/en/conventions/index.html)

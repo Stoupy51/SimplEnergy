@@ -29,6 +29,9 @@ scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
+# Add balancing tag
+tag @s add simplenergy.can_balance
+
 # Add tag for loop every second
 tag @s add simplenergy.second
 scoreboard players add #second_entities simplenergy.data 1

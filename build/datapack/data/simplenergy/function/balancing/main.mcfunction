@@ -13,6 +13,7 @@ scoreboard players operation #max_storage simplenergy.data = @s energy.max_stora
 # For each balancing device, run the main function
 execute if entity @s[tag=simplenergy.solar_panel] run function simplenergy:balancing/solar_panel/main
 execute if entity @s[tag=simplenergy.cauldron_generator] run function simplenergy:balancing/cauldron_generator/main
+execute if entity @s[tag=simplenergy.heat_generator] run function simplenergy:balancing/heat_generator/main
 execute if entity @s[tag=simplenergy.simple_battery] run function simplenergy:balancing/simple_battery/main
 execute if entity @s[tag=simplenergy.advanced_battery] run function simplenergy:balancing/advanced_battery/main
 execute if entity @s[tag=simplenergy.elite_battery] run function simplenergy:balancing/elite_battery/main
