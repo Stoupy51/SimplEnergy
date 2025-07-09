@@ -9,7 +9,7 @@
 [![Discord](https://img.shields.io/discord/1216400498488377467?label=Discord&logo=discord)](https://discord.gg/anxzu6rA9F)
 [![StewBeet](https://img.shields.io/github/v/release/Stoupy51/StewBeet?logo=github&label=StewBeet)](https://github.com/Stoupy51/StewBeet)
 
-![SimplEnergy Image](https://cdn.modrinth.com/data/IgpLbmaf/images/cc4f69ede52c7285652fc7fe109a83b822b4434a.jpeg)
+![SimplEnergy Image](./assets/showcase/primary.png)
 
 # 📖 What is SimplEnergy
 
