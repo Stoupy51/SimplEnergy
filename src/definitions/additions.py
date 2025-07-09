@@ -12,6 +12,10 @@ ORE_WIKI: TextComponent = [
 	{"text":"\nSmelt into Simplunium Ingots for crafting","color":"gray"},
 	{"text":"\nUsed to create: Batteries, Generators, Machines, Tools","color":"gray"}
 ]
+MECHANIZATION_COMPATIBILITY: TextComponent = [
+	{"text":"Mechanization Integration Item","color":"yellow"},
+	{"text":"\nRequires Mechanization datapack to be installed for recipes to function properly","color":"gray"}
+]
 
 
 def main_additions() -> None:
@@ -30,7 +34,7 @@ def main_additions() -> None:
 			OVERRIDE_MODEL: {"parent":"item/handheld"},
 			WIKI_COMPONENT: [
 				{"text":"A diagnostic tool for energy systems.","color":"yellow"},
-				{"text":"\nHold in your offhand to automatically scan machines when looking at them.","color":"gray"}
+				{"text":"\nHold in your offhand to automatically scan machines when looking at them.","color":"gray"},
 			],
 		},
 		"wrench": {
@@ -40,7 +44,7 @@ def main_additions() -> None:
 			WIKI_COMPONENT: [
 				{"text":"Essential tool for energy system maintenance.","color":"yellow"},
 				{"text":"\nSneak + Right Click: Rotate machines","color":"gray"},
-				{"text":"\nInstantly breaks cables for easy reconfiguration","color":"gray"}
+				{"text":"\nInstantly breaks cables for easy reconfiguration","color":"gray"},
 			],
 		},
 		"slot_unlocker": {
@@ -48,7 +52,7 @@ def main_additions() -> None:
 			RESULT_OF_CRAFTING: [{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["QBQ","NGN","NIN"],"ingredients":{"Q":ingr_repr("minecraft:quartz"),"B":ingr_repr("minecraft:breeze_rod"),"N":ingr_repr("minecraft:gold_nugget"),"G":ingr_repr("minecraft:raw_gold_block"),"I":ingr_repr("minecraft:iron_block")}}], "lore": [{"text":"Unlocks a blocked slot in a machine","italic":False,"color":"gray"}],
 			WIKI_COMPONENT: [
 				{"text":"Unlocks blocked machine inventory slots.","color":"yellow"},
-				{"text":"\nSome machines may have locked slots that require this tool to access (e.g. Pulverizer).","color":"gray"}
+				{"text":"\nSome machines may have locked slots that require this tool to access (e.g. Pulverizer).","color":"gray"},
 			],
 		},
 		"battery_switcher": {
@@ -60,7 +64,7 @@ def main_additions() -> None:
 			WIKI_COMPONENT: [
 				{"text":"Controls battery input/output modes.","color":"yellow"},
 				{"text":"\nModes: Input Only, Output Only, Both","color":"gray"},
-				{"text":"\nRight-click on batteries to cycle modes","color":"gray"}
+				{"text":"\nRight-click on batteries to cycle modes","color":"gray"},
 			],
 		},
 		"battery_switcher_both": {"id": "minecraft:warped_fungus_on_a_stick", OVERRIDE_MODEL: {"parent":"item/handheld"}, "custom_data": {ns: {"battery_switcher": True}}},
@@ -68,19 +72,47 @@ def main_additions() -> None:
 		"battery_switcher_input": {"id": "minecraft:warped_fungus_on_a_stick", OVERRIDE_MODEL: {"parent":"item/handheld"}, "custom_data": {ns: {"battery_switcher": True}}},
 		"machine_block": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy",
-			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","SCS","III"],"ingredients":{"S":ingr_repr("minecraft:stone"),"C":ingr_repr("minecraft:copper_block"),"I":ingr_repr("minecraft:iron_block")}}],
-			WIKI_COMPONENT: [{"text":"Basic machine block for energy systems.","color":"yellow"},{"text":"\nUsed as a base for most machines and generators","color":"gray"}]
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","SCS","III"],"ingredients":{"S":ingr_repr("minecraft:stone"),"C":ingr_repr("minecraft:copper_block"),"I":ingr_repr("minecraft:iron_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","SIS","CCC"],"ingredients":{"S":ingr_repr("minecraft:stone"),"C":ingr_repr("minecraft:copper_block"),"I":ingr_repr("minecraft:iron_block")}},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Basic machine block for energy systems.","color":"yellow"},
+				{"text":"\nUsed as a base for most machines and generators","color":"gray"},
+			],
 		},
 
 		# Batteries
-		"simple_battery": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 10000}},			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","CRC","III"],"ingredients":{"C":ingr_repr("minecraft:copper_block"),"R":ingr_repr("minecraft:redstone"),"I":ingr_repr("minecraft:iron_ingot")}}]},
-		"advanced_battery": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 25000}},		RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["GGG","GXG","SSS"],"ingredients":{"G":ingr_repr("minecraft:gold_block"),"X":ingr_repr("simple_battery", ns),"S":ingr_repr("simplunium_ingot", ns)}}]},
-		"elite_battery": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 50000}},			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RRR","RXR","SSS"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"X":ingr_repr("advanced_battery", ns),"S":ingr_repr("simplunium_block", ns)}}]},
+		"simple_battery": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 10000}},
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","CRC","III"],"ingredients":{"C":ingr_repr("minecraft:copper_block"),"R":ingr_repr("minecraft:redstone"),"I":ingr_repr("minecraft:iron_ingot")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","CIC","RRR"],"ingredients":{"C":ingr_repr("minecraft:copper_block"),"R":ingr_repr("minecraft:redstone_block"),"I":ingr_repr("minecraft:iron_ingot")}}
+			]
+		},
+		"advanced_battery": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 25000}},
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["GGG","GXG","CCC"],"ingredients":{"G":ingr_repr("minecraft:gold_block"),"X":ingr_repr("simple_battery", ns),"C":ingr_repr("minecraft:copper_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["GGG","GXG","III"],"ingredients":{"G":ingr_repr("minecraft:gold_block"),"X":ingr_repr("simple_battery", ns),"I":ingr_repr("minecraft:iron_block")}}
+			]
+		},
+		"elite_battery": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 50000}},
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RRR","RXR","SSS"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"X":ingr_repr("advanced_battery", ns),"S":ingr_repr("simplunium_block", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RRR","SXS","III"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"X":ingr_repr("advanced_battery", ns),"S":ingr_repr("simplunium_block", ns),"I":ingr_repr("minecraft:iron_block")}}
+			]
+		},
 		"creative_battery": {"id": CUSTOM_BLOCK_VANILLA, "custom_data": {"energy": {"storage":2000000000, "max_storage": 2147483647}}},
 
 		# Energy generators
 		"cauldron_generator": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":5, "max_storage": 500}},						RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["I I","IRI","III"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"R":ingr_repr("minecraft:redstone")}}],
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":5, "max_storage": 500}},
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["I I","IRI","III"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"R":ingr_repr("minecraft:redstone")}},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:cauldron"),ingr_repr("minecraft:redstone"),ingr_repr("minecraft:iron_ingot")]},
+			],
 			OVERRIDE_MODEL: {"parent":"block/cauldron", "textures": {"side": f"{ns}:item/cauldron_generator_side", "top": f"{ns}:item/cauldron_generator_top", "bottom": f"{ns}:item/cauldron_generator_bottom"},
 			"display":{
 				"gui":{"rotation":[30,225,0],"translation":[0,0,0],"scale":[0.625,0.625,0.625]},
@@ -92,73 +124,98 @@ def main_additions() -> None:
 			}},
 			WIKI_COMPONENT: [
 				{"text":"Basic water-powered generator.","color":"yellow"},
-				{"text":"\nRequires water to operate - fill the cauldron with water","color":"gray"}
+				{"text":"\nRequires water to operate - fill the cauldron with water","color":"gray"},
 			],
 		},
 		"furnace_generator": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":10, "max_storage": 800}},
-			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","RMR","SSS"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"R":ingr_repr("minecraft:redstone"),"M":ingr_repr("machine_block", ns),"S":ingr_repr("minecraft:stone")}}],
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","RMR","SSS"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"R":ingr_repr("minecraft:redstone"),"M":ingr_repr("machine_block", ns),"S":ingr_repr("minecraft:stone")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RRR","IMI","SSS"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"R":ingr_repr("minecraft:redstone"),"M":ingr_repr("machine_block", ns),"S":ingr_repr("minecraft:stone")}},
+			],
 			WIKI_COMPONENT: [
 				{"text":"Fuel-burning energy generator.","color":"yellow"},
-				{"text":"\nConsumes any furnace fuel to generate energy","color":"gray"}
+				{"text":"\nConsumes any furnace fuel to generate energy","color":"gray"},
 			],
 		},
 		"redstone_generator": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":80, "max_storage": 6400}},
-			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RRR","RFR","SSS"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"F":ingr_repr("furnace_generator", ns),"S":ingr_repr("simplunium_block", ns)}}],
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RRR","RFR","SSS"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"F":ingr_repr("furnace_generator", ns),"S":ingr_repr("simplunium_block", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RRR","SFS","III"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"F":ingr_repr("furnace_generator", ns),"S":ingr_repr("simplunium_block", ns),"I":ingr_repr("minecraft:iron_block")}},
+			],
 			WIKI_COMPONENT: [
 				{"text":"High-output redstone generator.","color":"yellow"},
-				{"text":"\nAdvanced generator powered by redstone dust and blocks","color":"gray"}
+				{"text":"\nAdvanced generator powered by redstone dust and blocks","color":"gray"},
 			],
 		},
 		"heat_generator": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":20, "max_storage": 1600}},
-			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IGI","GAG","IGI"],"ingredients":{"I":ingr_repr("minecraft:iron_block"),"G":ingr_repr("minecraft:glass"),"A":ingr_repr("minecraft:netherite_scrap")}}],
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IGI","GAG","IGI"],"ingredients":{"I":ingr_repr("minecraft:iron_block"),"G":ingr_repr("minecraft:glass"),"A":ingr_repr("minecraft:netherite_scrap")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["GIG","IAI","GIG"],"ingredients":{"I":ingr_repr("minecraft:iron_block"),"G":ingr_repr("minecraft:glass"),"A":ingr_repr("minecraft:netherite_scrap")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IGI","GAG","IGI"],"ingredients":{"I":ingr_repr("minecraft:iron_block"),"G":ingr_repr("minecraft:glass"),"A":ingr_repr("minecraft:ancient_debris")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["GIG","IAI","GIG"],"ingredients":{"I":ingr_repr("minecraft:iron_block"),"G":ingr_repr("minecraft:glass"),"A":ingr_repr("minecraft:ancient_debris")}},
+			],
 			WIKI_COMPONENT: [
 				{"text":"Heat-powered energy generator.","color":"yellow"},
-				{"text":"\nMust be placed directly adjacent to lava to operate","color":"gray"}
+				{"text":"\nMust be placed directly adjacent to lava to operate","color":"gray"},
 			],
 		},
 		"wind_turbine": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":20, "max_storage": 800}},
-			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":[" I ","ICI","BBB"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_block"),"B":ingr_repr("minecraft:iron_block")}}],
-			OVERRIDE_MODEL: {"parent":"block/cube_all","textures":{"0":f"{ns}:item/wind_turbine_blades","1":"minecraft:block/iron_block","2":f"{ns}:item/wind_turbine_side","particle":f"{ns}:item/wind_turbine_blades"},"elements":[{"name":"blades","from":[1,4,7.5],"to":[15,18,7.5],"faces":{"north":{"uv":[0,0,16,16],"texture":"#0","cullface":"north"},"south":{"uv":[16,0,0,16],"texture":"#0","cullface":"south"}}},{"from":[0,0,0],"to":[16,3.025,16],"faces":{"north":{"uv":[0,13,16,16],"texture":"#2","cullface":"north"},"east":{"uv":[0,13,16,16],"texture":"#2","cullface":"north"},"south":{"uv":[0,13,16,16],"texture":"#2","cullface":"north"},"west":{"uv":[0,13,16,16],"texture":"#2","cullface":"north"},"up":{"uv":[0,0,16,16],"texture":"#1","cullface":"north"},"down":{"uv":[0,0,16,16],"texture":"#1","cullface":"north"}}},{"from":[7,3,7.51],"to":[9,13,8.51],"faces":{"north":{"uv":[0,3,16,13],"texture":"#1","cullface":"north"},"east":{"uv":[0,3,16,13],"texture":"#1","cullface":"north"},"south":{"uv":[0,3,16,13],"texture":"#1","cullface":"north"},"west":{"uv":[0,3,16,13],"texture":"#1","cullface":"north"},"up":{"uv":[12,14,15,15],"texture":"#1","cullface":"north"},"down":{"uv":[12,14,15,15],"texture":"#1","cullface":"north"}}}],"display":{"head":{"translation":[0,-30.42,0],"scale":[1.605,1.605,1.605]},"fixed":{"rotation":[-90,0,0],"translation":[0,0,-16.05],"scale":[2.0075,2.0075,2.0075]}}},
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":[" I ","ICI","BBB"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_block"),"B":ingr_repr("minecraft:iron_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":[" I ","III","BBB"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"B":ingr_repr("minecraft:iron_block")}},
+			],
+			OVERRIDE_MODEL: {"parent":"block/cube_all","textures":{"all":f"{ns}:item/wind_turbine_side","0":f"{ns}:item/wind_turbine_blades","1":"minecraft:block/iron_block","2":f"{ns}:item/wind_turbine_side","particle":f"{ns}:item/wind_turbine_blades"},"elements":[{"name":"blades","from":[1,4,7.5],"to":[15,18,7.5],"faces":{"north":{"uv":[0,0,16,16],"texture":"#0","cullface":"north"},"south":{"uv":[16,0,0,16],"texture":"#0","cullface":"south"}}},{"from":[0,0,0],"to":[16,3.025,16],"faces":{"north":{"uv":[0,13,16,16],"texture":"#2","cullface":"north"},"east":{"uv":[0,13,16,16],"texture":"#2","cullface":"north"},"south":{"uv":[0,13,16,16],"texture":"#2","cullface":"north"},"west":{"uv":[0,13,16,16],"texture":"#2","cullface":"north"},"up":{"uv":[0,0,16,16],"texture":"#1","cullface":"north"},"down":{"uv":[0,0,16,16],"texture":"#1","cullface":"north"}}},{"from":[7,3,7.51],"to":[9,13,8.51],"faces":{"north":{"uv":[0,3,16,13],"texture":"#1","cullface":"north"},"east":{"uv":[0,3,16,13],"texture":"#1","cullface":"north"},"south":{"uv":[0,3,16,13],"texture":"#1","cullface":"north"},"west":{"uv":[0,3,16,13],"texture":"#1","cullface":"north"},"up":{"uv":[12,14,15,15],"texture":"#1","cullface":"north"},"down":{"uv":[12,14,15,15],"texture":"#1","cullface":"north"}}}],"display":{"head":{"translation":[0,-30.42,0],"scale":[1.605,1.605,1.605]},"fixed":{"rotation":[-90,0,0],"translation":[0,0,-16.05],"scale":[2.0075,2.0075,2.0075]}}},
 			WIKI_COMPONENT: [
 				{"text":"Altitude-dependent wind generator.","color":"yellow"},
 				{"text":"\nHigher altitude increases energy generation","color":"gray"},
-				{"text":"\n(0 kW at y=50, 2 kW at y=60, ..., 20 kW at y=150)","color":"gray"}
+				{"text":"\n(0 kW at y=50, 2 kW at y=60, ..., 20 kW at y=150)","color":"gray"},
 			],
 		},
 		"solar_panel": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":4, "max_storage": 600}},
-			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LDL","III"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"D":ingr_repr("minecraft:daylight_detector"),"I":ingr_repr("minecraft:iron_block")}}],
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LDL","III"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"D":ingr_repr("minecraft:daylight_detector"),"I":ingr_repr("minecraft:iron_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","GDG","III"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"G":ingr_repr("minecraft:glass"),"D":ingr_repr("minecraft:daylight_detector"),"I":ingr_repr("minecraft:iron_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LDL","III"],"ingredients":{"L":ingr_repr("minecraft:blue_stained_glass"),"D":ingr_repr("minecraft:daylight_detector"),"I":ingr_repr("minecraft:iron_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LDL","III"],"ingredients":{"L":ingr_repr("minecraft:blue_stained_glass_pane"),"D":ingr_repr("minecraft:daylight_detector"),"I":ingr_repr("minecraft:iron_block")}},
+			],
 			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/solar_panel_side", "top": f"{ns}:item/solar_panel_top"}},
 			WIKI_COMPONENT: [
 				{"text":"Daylight-powered generator.","color":"yellow"},
-				{"text":"\nRequires direct sunlight to operate","color":"gray"}
+				{"text":"\nRequires direct sunlight to operate","color":"gray"},
 			],
 		},
 
 		# Machines
 		"electric_furnace": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":20, "max_storage": 1600}},
-			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LML","CCC"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"M":ingr_repr("machine_block", ns),"C":ingr_repr("minecraft:copper_block")}}],
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LML","III"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"M":ingr_repr("machine_block", ns),"I":ingr_repr("minecraft:iron_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LML","CCC"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"M":ingr_repr("machine_block", ns),"C":ingr_repr("minecraft:copper_block")}}
+			],
 			WIKI_COMPONENT: [
 				{"text":"Electric-powered smelting machine.","color":"yellow"},
-				{"text":"\nSmelts items using electricity instead of fuel (1.5x faster)","color":"gray"}
+				{"text":"\nSmelts items using electricity instead of fuel (1.5x faster)","color":"gray"},
 			],
 		},
 		"electric_smelter": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":100, "max_storage": 8000}},
-			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","IFI","BBB"],"ingredients":{"I":ingr_repr("simplunium_ingot", ns),"F":ingr_repr("electric_furnace", ns),"B":ingr_repr("simplunium_block", ns)}}],
+			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","SFS","BBB"],"ingredients":{"S":ingr_repr("simplunium_ingot", ns),"F":ingr_repr("electric_furnace", ns),"B":ingr_repr("simplunium_block", ns)}}],
 			WIKI_COMPONENT: [
 				{"text":"Advanced electric smelting station.","color":"yellow"},
-				{"text":"\nFaster and more efficient than electric furnace (8x faster)","color":"gray"}
+				{"text":"\nFaster and more efficient than electric furnace (8x faster)","color":"gray"},
 			],
 		},
 		"electric_brewing_stand": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":40, "max_storage": 2400}},
-			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","IBI","LLL"],"ingredients":{"I":ingr_repr("simplunium_ingot", ns),"B":ingr_repr("minecraft:brewing_stand"),"L":ingr_repr("minecraft:lapis_block")}}],
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","SBS","LLL"],"ingredients":{"S":ingr_repr("simplunium_ingot", ns),"B":ingr_repr("minecraft:brewing_stand"),"L":ingr_repr("minecraft:lapis_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","DBD","LLL"],"ingredients":{"S":ingr_repr("simplunium_ingot", ns),"B":ingr_repr("minecraft:brewing_stand"),"L":ingr_repr("minecraft:lapis_block"),"D":ingr_repr("minecraft:diamond")}},
+			],
 			OVERRIDE_MODEL: {"parent":"block/brewing_stand","textures":{"base":f"{ns}:item/electric_brewing_stand_base","stand":f"{ns}:item/electric_brewing_stand"},
 			"display":{
 				"gui":{"rotation":[30,225,0],"translation":[0,0,0],"scale":[0.625,0.625,0.625]},
@@ -170,20 +227,26 @@ def main_additions() -> None:
 		}},
 			WIKI_COMPONENT: [
 				{"text":"Electric-powered brewing station.","color":"yellow"},
-				{"text":"\nBrews potions using electricity (8x faster)","color":"gray"}
+				{"text":"\nBrews potions using electricity (8x faster)","color":"gray"},
 			],
 		},
 		"pulverizer": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":120, "max_storage": 6400}},
-			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DDD","IMI","CCC"],"ingredients":{"D":ingr_repr("minecraft:diamond"),"I":ingr_repr("simplunium_ingot", ns),"M":ingr_repr("machine_block", ns),"C":ingr_repr("minecraft:copper_block")}}],
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DDD","SMS","III"],"ingredients":{"D":ingr_repr("minecraft:diamond"),"S":ingr_repr("simplunium_ingot", ns),"M":ingr_repr("machine_block", ns),"I":ingr_repr("minecraft:iron_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DDD","SMS","CCC"],"ingredients":{"D":ingr_repr("minecraft:diamond"),"S":ingr_repr("simplunium_ingot", ns),"M":ingr_repr("machine_block", ns),"C":ingr_repr("minecraft:copper_block")}},
+			],
 			WIKI_COMPONENT: [
 				{"text":"Ore processing and grinding machine.","color":"yellow"},
-				{"text":"\nGrinds ores into dusts for increased yields","color":"gray"}
+				{"text":"\nGrinds ores into dusts for increased yields","color":"gray"},
 			],
 		},
 		"elevator": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":20, "max_storage": 1200}},
-			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","IRI","III"],"ingredients":{"I":ingr_repr("minecraft:iron_block", ns),"R":ingr_repr("minecraft:redstone_lamp")}}],
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","IRI","III"],"ingredients":{"I":ingr_repr("minecraft:iron_block", ns),"R":ingr_repr("minecraft:redstone_lamp")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["ICI","CRC","ICI"],"ingredients":{"I":ingr_repr("minecraft:iron_block", ns),"C":ingr_repr("minecraft:copper_block", ns),"R":ingr_repr("minecraft:redstone_lamp")}},
+			],
 			WIKI_COMPONENT: [
 				{"text":"Vertical transport system for players.","color":"yellow"},
 				{"text":"\nSneak on top to teleport to an elevator placed below","color":"gray"},
@@ -207,7 +270,7 @@ def main_additions() -> None:
 			},
 			WIKI_COMPONENT: [
 				{"text":"Basic energy transmission cable.","color":"yellow"},
-				{"text":"\nConnects energy generators to machines and batteries","color":"gray"}
+				{"text":"\nConnects energy generators to machines and batteries","color":"gray"},
 			],
 		},
 		"advanced_cable": {
@@ -221,7 +284,7 @@ def main_additions() -> None:
 			},
 			WIKI_COMPONENT: [
 				{"text":"Improved energy transmission cable.","color":"yellow"},
-				{"text":"\nUpgraded cable for higher energy throughput","color":"gray"}
+				{"text":"\nUpgraded cable for higher energy throughput","color":"gray"},
 			],
 		},
 		"elite_cable": {
@@ -235,9 +298,13 @@ def main_additions() -> None:
 			},
 			WIKI_COMPONENT: [
 				{"text":"High-capacity energy transmission cable.","color":"yellow"},
-				{"text":"\nTop-tier cable for maximum energy transfer","color":"gray"}
+				{"text":"\nTop-tier cable for maximum energy transfer","color":"gray"},
 			],
 		},
+
+		# Mechanization items
+		"tin_dust": {WIKI_COMPONENT: MECHANIZATION_COMPATIBILITY},
+		"titanium_dust": {WIKI_COMPONENT: MECHANIZATION_COMPATIBILITY},
 	}
 
 	# Custom blocks
@@ -245,7 +312,7 @@ def main_additions() -> None:
 	additions["deepslate_simplunium_ore"] = {WIKI_COMPONENT: ORE_WIKI}
 	additions["simplunium_block"] = {VANILLA_BLOCK: {"id": "minecraft:iron_block", "apply_facing": False}}
 	additions["raw_simplunium_block"] = {VANILLA_BLOCK: {"id": "minecraft:raw_iron_block", "apply_facing": False}}
-	additions["machine_block"] = {VANILLA_BLOCK: {"id": "minecraft:iron_block", "apply_facing": False}}
+	additions["machine_block"][VANILLA_BLOCK] = {"id": "minecraft:iron_block", "apply_facing": False}
 	additions["simple_battery"][VANILLA_BLOCK] = {"id": "minecraft:copper_block", "apply_facing": False}
 	additions["advanced_battery"][VANILLA_BLOCK] = {"id": "minecraft:gold_block", "apply_facing": False}
 	additions["elite_battery"][VANILLA_BLOCK] = {"id": "minecraft:iron_block", "apply_facing": False}
