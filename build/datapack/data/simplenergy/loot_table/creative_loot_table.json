@@ -34,6 +34,7 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/battery_switcher_both"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/battery_switcher_output"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/battery_switcher_input"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/machine_block"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/simple_battery"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/advanced_battery"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/elite_battery"}]},

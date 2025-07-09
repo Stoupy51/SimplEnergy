@@ -1,6 +1,7 @@
 {
 	"textures": {
-		"layer0": "simplenergy:item/gui/electric_brewing_stand_5"
+		"layer0": "simplenergy:item/gui/electric_brewing_stand_5",
+		"particle": "simplenergy:item/gui/electric_brewing_stand_5"
 	},
 	"elements": [
 		{

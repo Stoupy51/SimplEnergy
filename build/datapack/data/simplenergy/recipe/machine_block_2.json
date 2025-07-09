@@ -2,46 +2,22 @@
 	"type": "minecraft:crafting_shaped",
 	"category": "misc",
 	"pattern": [
-		"III",
-		"RFR",
-		"SSS"
+		"SSS",
+		"SIS",
+		"CCC"
 	],
 	"key": {
-		"I": "minecraft:iron_block",
-		"R": "minecraft:redstone",
-		"F": "minecraft:furnace",
-		"S": "minecraft:stone"
+		"S": "minecraft:stone",
+		"C": "minecraft:copper_block",
+		"I": "minecraft:iron_block"
 	},
 	"result": {
 		"id": "minecraft:furnace",
 		"count": 1,
 		"components": {
-			"minecraft:custom_data": {
-				"energy": {
-					"generation": 10,
-					"max_storage": 800
-				},
-				"simplenergy": {
-					"furnace_generator": true
-				},
-				"smithed": {
-					"ignore": {
-						"functionality": true,
-						"crafting": true
-					}
-				}
-			},
+			"minecraft:item_model": "simplenergy:machine_block",
+			"minecraft:item_name": "Machine Block",
 			"minecraft:lore": [
-				{
-					"translate": "simplenergy.energy_generation_10_kw",
-					"italic": false,
-					"color": "gray"
-				},
-				{
-					"translate": "simplenergy.energy_buffer_800_kj",
-					"italic": false,
-					"color": "gray"
-				},
 				[
 					"",
 					{
@@ -57,8 +33,17 @@
 					}
 				]
 			],
-			"minecraft:item_model": "simplenergy:furnace_generator",
-			"minecraft:item_name": "Furnace Generator",
+			"minecraft:custom_data": {
+				"simplenergy": {
+					"machine_block": true
+				},
+				"smithed": {
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				}
+			},
 			"minecraft:container": [
 				{
 					"slot": 0,
@@ -69,7 +54,7 @@
 							"minecraft:custom_data": {
 								"smithed": {
 									"block": {
-										"id": "simplenergy:furnace_generator",
+										"id": "simplenergy:machine_block",
 										"from": "simplenergy"
 									}
 								}

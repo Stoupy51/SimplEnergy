@@ -1,6 +1,7 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
+		"all": "simplenergy:item/wind_turbine_side",
 		"0": "simplenergy:item/wind_turbine_blades",
 		"1": "minecraft:block/iron_block",
 		"2": "simplenergy:item/wind_turbine_side",

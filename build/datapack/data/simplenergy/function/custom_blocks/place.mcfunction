@@ -9,6 +9,7 @@ execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:simpl
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:simplunium_ore"} run function simplenergy:custom_blocks/simplunium_ore/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:deepslate_simplunium_ore"} run function simplenergy:custom_blocks/deepslate_simplunium_ore/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:raw_simplunium_block"} run function simplenergy:custom_blocks/raw_simplunium_block/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:machine_block"} run function simplenergy:custom_blocks/machine_block/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:simple_battery"} run function simplenergy:custom_blocks/simple_battery/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:advanced_battery"} run function simplenergy:custom_blocks/advanced_battery/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"simplenergy:elite_battery"} run function simplenergy:custom_blocks/elite_battery/place_main

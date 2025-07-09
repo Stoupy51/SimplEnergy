@@ -2,45 +2,22 @@
 	"type": "minecraft:crafting_shaped",
 	"category": "misc",
 	"pattern": [
-		"LLL",
-		"LFL",
+		"SSS",
+		"SCS",
 		"III"
 	],
 	"key": {
-		"L": "minecraft:lapis_lazuli",
-		"F": "minecraft:furnace",
+		"S": "minecraft:stone",
+		"C": "minecraft:copper_block",
 		"I": "minecraft:iron_block"
 	},
 	"result": {
 		"id": "minecraft:furnace",
 		"count": 1,
 		"components": {
-			"minecraft:custom_data": {
-				"energy": {
-					"usage": 20,
-					"max_storage": 1600
-				},
-				"simplenergy": {
-					"electric_furnace": true
-				},
-				"smithed": {
-					"ignore": {
-						"functionality": true,
-						"crafting": true
-					}
-				}
-			},
+			"minecraft:item_model": "simplenergy:machine_block",
+			"minecraft:item_name": "Machine Block",
 			"minecraft:lore": [
-				{
-					"translate": "simplenergy.power_usage_20_kw",
-					"italic": false,
-					"color": "gray"
-				},
-				{
-					"translate": "simplenergy.energy_buffer_1600_kj",
-					"italic": false,
-					"color": "gray"
-				},
 				[
 					"",
 					{
@@ -56,8 +33,17 @@
 					}
 				]
 			],
-			"minecraft:item_model": "simplenergy:electric_furnace",
-			"minecraft:item_name": "Electric Furnace",
+			"minecraft:custom_data": {
+				"simplenergy": {
+					"machine_block": true
+				},
+				"smithed": {
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				}
+			},
 			"minecraft:container": [
 				{
 					"slot": 0,
@@ -68,7 +54,7 @@
 							"minecraft:custom_data": {
 								"smithed": {
 									"block": {
-										"id": "simplenergy:electric_furnace",
+										"id": "simplenergy:machine_block",
 										"from": "simplenergy"
 									}
 								}

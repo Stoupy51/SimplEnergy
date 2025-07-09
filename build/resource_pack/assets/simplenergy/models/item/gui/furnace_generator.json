@@ -1,6 +1,7 @@
 {
 	"textures": {
-		"layer0": "simplenergy:item/gui/furnace_generator"
+		"layer0": "simplenergy:item/gui/furnace_generator",
+		"particle": "simplenergy:item/gui/furnace_generator"
 	},
 	"elements": [
 		{

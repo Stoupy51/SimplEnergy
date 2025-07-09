@@ -1,6 +1,7 @@
 {
 	"textures": {
-		"layer0": "simplenergy:item/gui/redstone_generator"
+		"layer0": "simplenergy:item/gui/redstone_generator",
+		"particle": "simplenergy:item/gui/redstone_generator"
 	},
 	"elements": [
 		{

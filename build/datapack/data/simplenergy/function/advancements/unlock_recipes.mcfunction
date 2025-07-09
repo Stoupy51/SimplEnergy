@@ -52,17 +52,25 @@ execute if score #success simplenergy.data matches 1 run recipe give @s simplene
 # minecraft:iron_block
 scoreboard players set #success simplenergy.data 0
 execute store success score #success simplenergy.data if items entity @s container.* minecraft:iron_block
-execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:electric_furnace
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:elevator
-execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:furnace_generator
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:heat_generator
+execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:machine_block
+execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:machine_block_2
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:slot_unlocker
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:solar_panel
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:wind_turbine
 
+# minecraft:stone
+scoreboard players set #success simplenergy.data 0
+execute store success score #success simplenergy.data if items entity @s container.* minecraft:stone
+execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:machine_block
+execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:machine_block_2
+
 # minecraft:copper_block
 scoreboard players set #success simplenergy.data 0
 execute store success score #success simplenergy.data if items entity @s container.* minecraft:copper_block
+execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:machine_block
+execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:machine_block_2
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:simple_battery
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:wind_turbine
 
@@ -70,19 +78,7 @@ execute if score #success simplenergy.data matches 1 run recipe give @s simplene
 scoreboard players set #success simplenergy.data 0
 execute store success score #success simplenergy.data if items entity @s container.* minecraft:redstone
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:cauldron_generator
-execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:furnace_generator
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:simple_battery
-
-# minecraft:furnace
-scoreboard players set #success simplenergy.data 0
-execute store success score #success simplenergy.data if items entity @s container.* minecraft:furnace
-execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:electric_furnace
-execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:furnace_generator
-
-# minecraft:stone
-scoreboard players set #success simplenergy.data 0
-execute store success score #success simplenergy.data if items entity @s container.* minecraft:stone
-execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:furnace_generator
 
 # minecraft:glass
 scoreboard players set #success simplenergy.data 0
@@ -97,7 +93,6 @@ execute if score #success simplenergy.data matches 1 run recipe give @s simplene
 # minecraft:lapis_lazuli
 scoreboard players set #success simplenergy.data 0
 execute store success score #success simplenergy.data if items entity @s container.* minecraft:lapis_lazuli
-execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:electric_furnace
 execute if score #success simplenergy.data matches 1 run recipe give @s simplenergy:solar_panel
 
 # minecraft:daylight_detector
@@ -125,13 +120,13 @@ execute if score #success simplenergy.data matches 1 run recipe give @s simplene
 ## Add result items
 execute if items entity @s container.* *[custom_data~{"simplenergy": {"multimeter":true} }] run recipe give @s simplenergy:multimeter
 execute if items entity @s container.* *[custom_data~{"simplenergy": {"slot_unlocker":true} }] run recipe give @s simplenergy:slot_unlocker
+execute if items entity @s container.* *[custom_data~{"simplenergy": {"machine_block":true} }] run recipe give @s simplenergy:machine_block
+execute if items entity @s container.* *[custom_data~{"simplenergy": {"machine_block":true} }] run recipe give @s simplenergy:machine_block_2
 execute if items entity @s container.* *[custom_data~{"simplenergy": {"simple_battery":true} }] run recipe give @s simplenergy:simple_battery
 execute if items entity @s container.* *[custom_data~{"simplenergy": {"cauldron_generator":true} }] run recipe give @s simplenergy:cauldron_generator
-execute if items entity @s container.* *[custom_data~{"simplenergy": {"furnace_generator":true} }] run recipe give @s simplenergy:furnace_generator
 execute if items entity @s container.* *[custom_data~{"simplenergy": {"heat_generator":true} }] run recipe give @s simplenergy:heat_generator
 execute if items entity @s container.* *[custom_data~{"simplenergy": {"wind_turbine":true} }] run recipe give @s simplenergy:wind_turbine
 execute if items entity @s container.* *[custom_data~{"simplenergy": {"solar_panel":true} }] run recipe give @s simplenergy:solar_panel
-execute if items entity @s container.* *[custom_data~{"simplenergy": {"electric_furnace":true} }] run recipe give @s simplenergy:electric_furnace
 execute if items entity @s container.* *[custom_data~{"simplenergy": {"elevator":true} }] run recipe give @s simplenergy:elevator
 execute if items entity @s container.* *[custom_data~{"simplenergy": {"simple_cable":true} }] run recipe give @s simplenergy:simple_cable
 execute if items entity @s container.* *[custom_data~{"simplenergy": {"simple_cable":true} }] run recipe give @s simplenergy:simple_cable_2

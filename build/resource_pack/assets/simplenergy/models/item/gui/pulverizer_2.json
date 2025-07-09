@@ -1,6 +1,7 @@
 {
 	"textures": {
-		"layer0": "simplenergy:item/gui/pulverizer_2"
+		"layer0": "simplenergy:item/gui/pulverizer_2",
+		"particle": "simplenergy:item/gui/pulverizer_2"
 	},
 	"elements": [
 		{

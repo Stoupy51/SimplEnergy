@@ -37,6 +37,7 @@ scoreboard players add #total_creative_battery simplenergy.data 0
 scoreboard players add #total_elite_battery simplenergy.data 0
 scoreboard players add #total_advanced_battery simplenergy.data 0
 scoreboard players add #total_simple_battery simplenergy.data 0
+scoreboard players add #total_machine_block simplenergy.data 0
 scoreboard players add #total_raw_simplunium_block simplenergy.data 0
 scoreboard players add #total_deepslate_simplunium_ore simplenergy.data 0
 scoreboard players add #total_simplunium_ore simplenergy.data 0
@@ -45,6 +46,7 @@ tellraw @s [{"translate": "simplenergy.total_simplunium_block","color":"gold"},{
 tellraw @s [{"translate": "simplenergy.total_simplunium_ore","color":"gold"},{"score":{"name":"#total_simplunium_ore","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_deepslate_simplunium_ore","color":"gold"},{"score":{"name":"#total_deepslate_simplunium_ore","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_raw_simplunium_block","color":"gold"},{"score":{"name":"#total_raw_simplunium_block","objective":"simplenergy.data"},"color":"yellow"}]
+tellraw @s [{"translate": "simplenergy.total_machine_block","color":"gold"},{"score":{"name":"#total_machine_block","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_simple_battery","color":"gold"},{"score":{"name":"#total_simple_battery","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_advanced_battery","color":"gold"},{"score":{"name":"#total_advanced_battery","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [{"translate": "simplenergy.total_elite_battery","color":"gold"},{"score":{"name":"#total_elite_battery","objective":"simplenergy.data"},"color":"yellow"}]

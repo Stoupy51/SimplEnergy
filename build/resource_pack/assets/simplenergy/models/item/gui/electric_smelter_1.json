@@ -1,6 +1,7 @@
 {
 	"textures": {
-		"layer0": "simplenergy:item/gui/electric_smelter_1"
+		"layer0": "simplenergy:item/gui/electric_smelter_1",
+		"particle": "simplenergy:item/gui/electric_smelter_1"
 	},
 	"elements": [
 		{

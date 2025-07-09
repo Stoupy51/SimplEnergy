@@ -1,6 +1,7 @@
 {
 	"textures": {
-		"layer0": "simplenergy:item/gui/progress_unblocked_05"
+		"layer0": "simplenergy:item/gui/progress_unblocked_05",
+		"particle": "simplenergy:item/gui/progress_unblocked_05"
 	},
 	"display": {
 		"firstperson_lefthand": {
