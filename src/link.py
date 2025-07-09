@@ -51,7 +51,7 @@ def beet_default(ctx: Context) -> None:
 	keep_energy_for_batteries(["simple_battery", "advanced_battery", "elite_battery", "creative_battery"])
 
 	# Setup energy balancing
-	setup_energy_balancing(["solar_panel", "cauldron_generator", "simple_battery", "advanced_battery", "elite_battery"])
+	setup_energy_balancing(["solar_panel", "cauldron_generator", "heat_generator", "simple_battery", "advanced_battery", "elite_battery"])
 
 	# Setup cables models
 	setup_cables_models(["simple_cable", "advanced_cable", "elite_cable"])
