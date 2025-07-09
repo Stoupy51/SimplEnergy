@@ -88,21 +88,42 @@ def main_additions() -> None:
 			RESULT_OF_CRAFTING:[
 				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","CRC","III"],"ingredients":{"C":ingr_repr("minecraft:copper_block"),"R":ingr_repr("minecraft:redstone"),"I":ingr_repr("minecraft:iron_ingot")}},
 				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","CIC","RRR"],"ingredients":{"C":ingr_repr("minecraft:copper_block"),"R":ingr_repr("minecraft:redstone_block"),"I":ingr_repr("minecraft:iron_ingot")}}
-			]
+			],
+			WIKI_COMPONENT: [
+				{"text":"Basic energy storage device.","color":"yellow"},
+				{"text":"\nStores up to 10,000 kJ","color":"gray"},
+				{"text":"\nModes: Input Only, Output Only, Both (use Battery Switcher)","color":"gray"},
+				{"text":"\nBreaking the battery preserves stored energy","color":"gray"},
+				{"text":"\nBalances energy storage with adjacent simple batteries","color":"gray"},
+			],
 		},
 		"advanced_battery": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 25000}},
 			RESULT_OF_CRAFTING:[
 				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["GGG","GXG","CCC"],"ingredients":{"G":ingr_repr("minecraft:gold_block"),"X":ingr_repr("simple_battery", ns),"C":ingr_repr("minecraft:copper_block")}},
 				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["GGG","GXG","III"],"ingredients":{"G":ingr_repr("minecraft:gold_block"),"X":ingr_repr("simple_battery", ns),"I":ingr_repr("minecraft:iron_block")}}
-			]
+			],
+			WIKI_COMPONENT: [
+				{"text":"Advanced energy storage device.","color":"yellow"},
+				{"text":"\nStores up to 25,000 kJ","color":"gray"},
+				{"text":"\nModes: Input Only, Output Only, Both (use Battery Switcher)","color":"gray"},
+				{"text":"\nBreaking the battery preserves stored energy","color":"gray"},
+				{"text":"\nBalances energy storage with adjacent advanced batteries","color":"gray"},
+			],
 		},
 		"elite_battery": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 50000}},
 			RESULT_OF_CRAFTING:[
 				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RRR","RXR","SSS"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"X":ingr_repr("advanced_battery", ns),"S":ingr_repr("simplunium_block", ns)}},
 				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RRR","SXS","III"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"X":ingr_repr("advanced_battery", ns),"S":ingr_repr("simplunium_block", ns),"I":ingr_repr("minecraft:iron_block")}}
-			]
+			],
+			WIKI_COMPONENT: [
+				{"text":"Elite energy storage device.","color":"yellow"},
+				{"text":"\nStores up to 50,000 kJ","color":"gray"},
+				{"text":"\nModes: Input Only, Output Only, Both (use Battery Switcher)","color":"gray"},
+				{"text":"\nBreaking the battery preserves stored energy","color":"gray"},
+				{"text":"\nBalances energy storage with adjacent elite batteries","color":"gray"},
+			],
 		},
 		"creative_battery": {"id": CUSTOM_BLOCK_VANILLA, "custom_data": {"energy": {"storage":2000000000, "max_storage": 2147483647}}},
 
@@ -125,6 +146,7 @@ def main_additions() -> None:
 			WIKI_COMPONENT: [
 				{"text":"Basic water-powered generator.","color":"yellow"},
 				{"text":"\nRequires water to operate - fill the cauldron with water","color":"gray"},
+				{"text":"\nBalances energy storage with adjacent cauldron generators","color":"gray"},
 			],
 		},
 		"furnace_generator": {
@@ -160,6 +182,7 @@ def main_additions() -> None:
 			WIKI_COMPONENT: [
 				{"text":"Heat-powered energy generator.","color":"yellow"},
 				{"text":"\nMust be placed directly adjacent to lava to operate","color":"gray"},
+				{"text":"\nBalances energy storage with adjacent heat generators","color":"gray"},
 			],
 		},
 		"wind_turbine": {
@@ -187,6 +210,7 @@ def main_additions() -> None:
 			WIKI_COMPONENT: [
 				{"text":"Daylight-powered generator.","color":"yellow"},
 				{"text":"\nRequires direct sunlight to operate","color":"gray"},
+				{"text":"\nBalances energy storage with adjacent solar panels","color":"gray"},
 			],
 		},
 
