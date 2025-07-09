@@ -66,6 +66,11 @@ def main_additions() -> None:
 		"battery_switcher_both": {"id": "minecraft:warped_fungus_on_a_stick", OVERRIDE_MODEL: {"parent":"item/handheld"}, "custom_data": {ns: {"battery_switcher": True}}},
 		"battery_switcher_output": {"id": "minecraft:warped_fungus_on_a_stick", OVERRIDE_MODEL: {"parent":"item/handheld"}, "custom_data": {ns: {"battery_switcher": True}}},
 		"battery_switcher_input": {"id": "minecraft:warped_fungus_on_a_stick", OVERRIDE_MODEL: {"parent":"item/handheld"}, "custom_data": {ns: {"battery_switcher": True}}},
+		"machine_block": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy",
+			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","SCS","III"],"ingredients":{"S":ingr_repr("minecraft:stone"),"C":ingr_repr("minecraft:copper_block"),"I":ingr_repr("minecraft:iron_block")}}],
+			WIKI_COMPONENT: [{"text":"Basic machine block for energy systems.","color":"yellow"},{"text":"\nUsed as a base for most machines and generators","color":"gray"}]
+		},
 
 		# Batteries
 		"simple_battery": {"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"storage":0, "max_storage": 10000}},			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","CRC","III"],"ingredients":{"C":ingr_repr("minecraft:copper_block"),"R":ingr_repr("minecraft:redstone"),"I":ingr_repr("minecraft:iron_ingot")}}]},
@@ -92,7 +97,7 @@ def main_additions() -> None:
 		},
 		"furnace_generator": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"generation":10, "max_storage": 800}},
-			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","RFR","SSS"],"ingredients":{"I":ingr_repr("minecraft:iron_block"),"R":ingr_repr("minecraft:redstone"),"F":ingr_repr("minecraft:furnace"),"S":ingr_repr("minecraft:stone")}}],
+			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","RMR","SSS"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"R":ingr_repr("minecraft:redstone"),"M":ingr_repr("machine_block", ns),"S":ingr_repr("minecraft:stone")}}],
 			WIKI_COMPONENT: [
 				{"text":"Fuel-burning energy generator.","color":"yellow"},
 				{"text":"\nConsumes any furnace fuel to generate energy","color":"gray"}
@@ -137,7 +142,7 @@ def main_additions() -> None:
 		# Machines
 		"electric_furnace": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":20, "max_storage": 1600}},
-			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LFL","III"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"F":ingr_repr("minecraft:furnace"),"I":ingr_repr("minecraft:iron_block")}}],
+			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LLL","LML","CCC"],"ingredients":{"L":ingr_repr("minecraft:lapis_lazuli"),"M":ingr_repr("machine_block", ns),"C":ingr_repr("minecraft:copper_block")}}],
 			WIKI_COMPONENT: [
 				{"text":"Electric-powered smelting machine.","color":"yellow"},
 				{"text":"\nSmelts items using electricity instead of fuel (1.5x faster)","color":"gray"}
@@ -170,7 +175,7 @@ def main_additions() -> None:
 		},
 		"pulverizer": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy", "custom_data": {"energy": {"usage":120, "max_storage": 6400}},
-			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DDD","IFI","CCC"],"ingredients":{"D":ingr_repr("minecraft:diamond"),"I":ingr_repr("simplunium_ingot", ns),"F":ingr_repr("electric_furnace", ns),"C":ingr_repr("minecraft:copper_block")}}],
+			RESULT_OF_CRAFTING:[{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DDD","IMI","CCC"],"ingredients":{"D":ingr_repr("minecraft:diamond"),"I":ingr_repr("simplunium_ingot", ns),"M":ingr_repr("machine_block", ns),"C":ingr_repr("minecraft:copper_block")}}],
 			WIKI_COMPONENT: [
 				{"text":"Ore processing and grinding machine.","color":"yellow"},
 				{"text":"\nGrinds ores into dusts for increased yields","color":"gray"}
@@ -240,6 +245,7 @@ def main_additions() -> None:
 	additions["deepslate_simplunium_ore"] = {WIKI_COMPONENT: ORE_WIKI}
 	additions["simplunium_block"] = {VANILLA_BLOCK: {"id": "minecraft:iron_block", "apply_facing": False}}
 	additions["raw_simplunium_block"] = {VANILLA_BLOCK: {"id": "minecraft:raw_iron_block", "apply_facing": False}}
+	additions["machine_block"] = {VANILLA_BLOCK: {"id": "minecraft:iron_block", "apply_facing": False}}
 	additions["simple_battery"][VANILLA_BLOCK] = {"id": "minecraft:copper_block", "apply_facing": False}
 	additions["advanced_battery"][VANILLA_BLOCK] = {"id": "minecraft:gold_block", "apply_facing": False}
 	additions["elite_battery"][VANILLA_BLOCK] = {"id": "minecraft:iron_block", "apply_facing": False}
