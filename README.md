@@ -11,6 +11,38 @@
 
 ![SimplEnergy Image](https://raw.githubusercontent.com/Stoupy51/SimplEnergy/refs/heads/main/assets/showcase/primary.png)
 
+## 🎬 Showcase
+
+<details>
+<summary>⚡ Solar Panels in Action</summary>
+
+![Solar Panels](https://raw.githubusercontent.com/Stoupy51/SimplEnergy/refs/heads/main/assets/showcase/solar_panels.gif)
+
+</details>
+
+<details>
+<summary>🔋 Battery Charging System</summary>
+
+![Filling Batteries](https://raw.githubusercontent.com/Stoupy51/SimplEnergy/refs/heads/main/assets/showcase/filling_the_batteries.gif)
+
+</details>
+
+<details>
+<summary>🏭 Automated Pulverizer Process</summary>
+
+![Automated Pulverizer](https://raw.githubusercontent.com/Stoupy51/SimplEnergy/refs/heads/main/assets/showcase/automated_pulverizer_process.gif)
+
+</details>
+
+<details>
+<summary>🔺 Elevator System</summary>
+
+![Elevator](https://raw.githubusercontent.com/Stoupy51/SimplEnergy/refs/heads/main/assets/showcase/elevator.gif)
+
+</details>
+
+<br>
+
 # 📖 What is SimplEnergy
 
 SimplEnergy is a simple Technology data pack created to add simple energy mechanics in your survival world.<br>
