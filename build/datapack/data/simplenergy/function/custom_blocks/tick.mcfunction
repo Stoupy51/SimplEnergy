@@ -1,7 +1,7 @@
 
 #> simplenergy:custom_blocks/tick
 #
-# @within	simplenergy:v2.0.6/tick
+# @within	simplenergy:v2.0.7/tick
 #
 
 execute if entity @s[tag=simplenergy.electric_smelter] run function simplenergy:custom_blocks/electric_smelter/tick
