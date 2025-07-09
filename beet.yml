@@ -106,7 +106,7 @@ meta:
             # Enables caching of Minecraft assets and item renders
             cache_assets: true
             # Enables caching of manual content and images
-            cache_pages: true
+            cache_pages: false
             # Path for manual debug dump
             json_dump_path: "manual_cache/content.json"
             # Manual title used in book and first page. Defaults to "{name} Manual"
@@ -117,4 +117,6 @@ meta:
             max_rows_per_page: 5
             # Text component used for the manual's first page
             first_page_text: [{"text":"The following manual will guide you through recipes and energy statistics about devices.", "color": "#505050"}]
+            # Controls generation of showcase images: 0=disabled, 1=manual items only, 2=all project items, 3=both
+            showcase_image: 3
 
