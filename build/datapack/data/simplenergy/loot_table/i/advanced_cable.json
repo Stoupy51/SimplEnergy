@@ -44,7 +44,9 @@
 										{"translate": "simplenergy","italic": true,"color": "blue"}
 									]
 								],
-								"minecraft:item_name": "Advanced Cable"
+								"minecraft:item_name": {
+									"translate": "simplenergy.advanced_cable"
+								}
 							}
 						}
 					]

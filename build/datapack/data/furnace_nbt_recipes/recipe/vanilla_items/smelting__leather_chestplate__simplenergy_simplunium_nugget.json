@@ -22,7 +22,9 @@
 				}
 			},
 			"minecraft:item_model": "simplenergy:simplunium_nugget",
-			"minecraft:item_name": "Simplunium Nugget",
+			"minecraft:item_name": {
+				"translate": "simplenergy.simplunium_nugget"
+			},
 			"minecraft:lore": [
 				[
 					"",

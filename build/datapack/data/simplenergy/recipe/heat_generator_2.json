@@ -57,7 +57,9 @@
 				]
 			],
 			"minecraft:item_model": "simplenergy:heat_generator",
-			"minecraft:item_name": "Heat Generator",
+			"minecraft:item_name": {
+				"translate": "simplenergy.heat_generator"
+			},
 			"minecraft:container": [
 				{
 					"slot": 0,

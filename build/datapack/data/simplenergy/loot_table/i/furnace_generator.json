@@ -40,7 +40,9 @@
 									]
 								],
 								"minecraft:item_model": "simplenergy:furnace_generator",
-								"minecraft:item_name": "Furnace Generator",
+								"minecraft:item_name": {
+									"translate": "simplenergy.furnace_generator"
+								},
 								"minecraft:container": [
 									{
 										"slot": 0,

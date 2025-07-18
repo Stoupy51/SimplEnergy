@@ -40,7 +40,9 @@
 									]
 								],
 								"minecraft:item_model": "simplenergy:solar_panel",
-								"minecraft:item_name": "Solar Panel",
+								"minecraft:item_name": {
+									"translate": "simplenergy.solar_panel"
+								},
 								"minecraft:container": [
 									{
 										"slot": 0,

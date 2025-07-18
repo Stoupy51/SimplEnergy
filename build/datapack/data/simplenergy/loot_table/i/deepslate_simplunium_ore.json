@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "simplenergy:deepslate_simplunium_ore",
-								"minecraft:item_name": "Deepslate Simplunium Ore",
+								"minecraft:item_name": {
+									"translate": "simplenergy.deepslate_simplunium_ore"
+								},
 								"minecraft:lore": [
 									[
 										"",

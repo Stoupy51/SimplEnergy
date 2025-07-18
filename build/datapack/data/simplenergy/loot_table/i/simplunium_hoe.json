@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "simplenergy:simplunium_hoe",
-								"minecraft:item_name": "Simplunium Hoe",
+								"minecraft:item_name": {
+									"translate": "simplenergy.simplunium_hoe"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -43,7 +43,9 @@
 									]
 								],
 								"minecraft:item_model": "simplenergy:battery_switcher",
-								"minecraft:item_name": "Battery Switcher",
+								"minecraft:item_name": {
+									"translate": "simplenergy.battery_switcher"
+								},
 								"minecraft:custom_data": {
 									"simplenergy": {
 										"battery_switcher": true

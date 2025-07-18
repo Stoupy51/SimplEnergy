@@ -18,7 +18,9 @@
 										"id": "tin_ore"
 									}
 								},
-								"minecraft:item_name": "Deepslate Tin Ore",
+								"minecraft:item_name": {
+									"translate": "simplenergy.deepslate_tin_ore"
+								},
 								"minecraft:lore": [
 									{
 										"translate": "simplenergy.mechanization",

@@ -23,7 +23,9 @@
 									]
 								],
 								"minecraft:item_model": "simplenergy:slot_unlocker",
-								"minecraft:item_name": "Slot Unlocker",
+								"minecraft:item_name": {
+									"translate": "simplenergy.slot_unlocker"
+								},
 								"minecraft:custom_data": {
 									"simplenergy": {
 										"slot_unlocker": true

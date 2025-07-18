@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "simplenergy:simplunium_dust",
-								"minecraft:item_name": "Simplunium Dust",
+								"minecraft:item_name": {
+									"translate": "simplenergy.simplunium_dust"
+								},
 								"minecraft:lore": [
 									[
 										"",

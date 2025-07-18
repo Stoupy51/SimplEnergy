@@ -18,7 +18,9 @@
 										"id": "raw_tin"
 									}
 								},
-								"minecraft:item_name": "Raw Tin",
+								"minecraft:item_name": {
+									"translate": "simplenergy.raw_tin"
+								},
 								"minecraft:lore": [
 									{
 										"translate": "simplenergy.mechanization",

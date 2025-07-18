@@ -40,7 +40,9 @@
 									]
 								],
 								"minecraft:item_model": "simplenergy:electric_furnace",
-								"minecraft:item_name": "Electric Furnace",
+								"minecraft:item_name": {
+									"translate": "simplenergy.electric_furnace"
+								},
 								"minecraft:container": [
 									{
 										"slot": 0,

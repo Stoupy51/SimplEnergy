@@ -56,7 +56,9 @@
 				]
 			],
 			"minecraft:item_model": "simplenergy:elevator",
-			"minecraft:item_name": "Elevator",
+			"minecraft:item_name": {
+				"translate": "simplenergy.elevator"
+			},
 			"minecraft:container": [
 				{
 					"slot": 0,

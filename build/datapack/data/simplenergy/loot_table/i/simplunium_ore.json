@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "simplenergy:simplunium_ore",
-								"minecraft:item_name": "Simplunium Ore",
+								"minecraft:item_name": {
+									"translate": "simplenergy.simplunium_ore"
+								},
 								"minecraft:lore": [
 									[
 										"",

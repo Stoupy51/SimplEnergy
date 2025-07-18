@@ -18,7 +18,9 @@
 										"id": "titanium_ore"
 									}
 								},
-								"minecraft:item_name": "Titanium Ore",
+								"minecraft:item_name": {
+									"translate": "simplenergy.titanium_ore"
+								},
 								"minecraft:lore": [
 									{
 										"translate": "simplenergy.mechanization",

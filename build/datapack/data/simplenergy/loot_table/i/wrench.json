@@ -33,7 +33,9 @@
 									]
 								],
 								"minecraft:item_model": "simplenergy:wrench",
-								"minecraft:item_name": "Wrench",
+								"minecraft:item_name": {
+									"translate": "simplenergy.wrench"
+								},
 								"minecraft:custom_data": {
 									"simplenergy": {
 										"wrench": true

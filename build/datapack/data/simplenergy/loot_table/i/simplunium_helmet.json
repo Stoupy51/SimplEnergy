@@ -34,7 +34,9 @@
 									}
 								],
 								"minecraft:item_model": "simplenergy:simplunium_helmet",
-								"minecraft:item_name": "Simplunium Helmet",
+								"minecraft:item_name": {
+									"translate": "simplenergy.simplunium_helmet"
+								},
 								"minecraft:lore": [
 									[
 										"",

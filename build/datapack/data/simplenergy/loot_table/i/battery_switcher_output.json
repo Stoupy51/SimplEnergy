@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "simplenergy:battery_switcher_output",
-								"minecraft:item_name": "Battery Switcher Output",
+								"minecraft:item_name": {
+									"translate": "simplenergy.battery_switcher_output"
+								},
 								"minecraft:lore": [
 									[
 										"",

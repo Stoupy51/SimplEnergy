@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "simplenergy:tin_dust",
-								"minecraft:item_name": "Tin Dust",
+								"minecraft:item_name": {
+									"translate": "simplenergy.tin_dust"
+								},
 								"minecraft:lore": [
 									[
 										"",

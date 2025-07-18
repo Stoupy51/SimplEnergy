@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "simplenergy:simplunium_pickaxe",
-								"minecraft:item_name": "Simplunium Pickaxe",
+								"minecraft:item_name": {
+									"translate": "simplenergy.simplunium_pickaxe"
+								},
 								"minecraft:lore": [
 									[
 										"",

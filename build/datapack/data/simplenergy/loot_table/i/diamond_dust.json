@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "simplenergy:diamond_dust",
-								"minecraft:item_name": "Diamond Dust",
+								"minecraft:item_name": {
+									"translate": "simplenergy.diamond_dust"
+								},
 								"minecraft:lore": [
 									[
 										"",

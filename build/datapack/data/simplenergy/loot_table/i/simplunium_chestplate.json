@@ -34,7 +34,9 @@
 									}
 								],
 								"minecraft:item_model": "simplenergy:simplunium_chestplate",
-								"minecraft:item_name": "Simplunium Chestplate",
+								"minecraft:item_name": {
+									"translate": "simplenergy.simplunium_chestplate"
+								},
 								"minecraft:lore": [
 									[
 										"",

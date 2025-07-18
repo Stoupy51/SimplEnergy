@@ -18,7 +18,9 @@
 										"id": "titanium_ingot"
 									}
 								},
-								"minecraft:item_name": "Titanium Ingot",
+								"minecraft:item_name": {
+									"translate": "simplenergy.titanium_ingot"
+								},
 								"minecraft:lore": [
 									{
 										"translate": "simplenergy.mechanization",

@@ -35,7 +35,9 @@
 									]
 								],
 								"minecraft:item_model": "simplenergy:advanced_battery",
-								"minecraft:item_name": "Advanced Battery",
+								"minecraft:item_name": {
+									"translate": "simplenergy.advanced_battery"
+								},
 								"minecraft:container": [
 									{
 										"slot": 0,

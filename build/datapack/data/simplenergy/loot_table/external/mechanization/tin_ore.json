@@ -18,7 +18,9 @@
 										"id": "tin_ore"
 									}
 								},
-								"minecraft:item_name": "Tin Ore",
+								"minecraft:item_name": {
+									"translate": "simplenergy.tin_ore"
+								},
 								"minecraft:lore": [
 									{
 										"translate": "simplenergy.mechanization",

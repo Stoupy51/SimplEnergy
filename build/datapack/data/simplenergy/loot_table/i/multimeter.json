@@ -38,7 +38,9 @@
 									]
 								],
 								"minecraft:item_model": "simplenergy:multimeter",
-								"minecraft:item_name": "Multimeter",
+								"minecraft:item_name": {
+									"translate": "simplenergy.multimeter"
+								},
 								"minecraft:custom_data": {
 									"simplenergy": {
 										"multimeter": true

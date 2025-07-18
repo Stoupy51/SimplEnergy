@@ -44,7 +44,9 @@
 									}
 								],
 								"minecraft:item_model": "simplenergy:simplunium_shovel",
-								"minecraft:item_name": "Simplunium Shovel",
+								"minecraft:item_name": {
+									"translate": "simplenergy.simplunium_shovel"
+								},
 								"minecraft:lore": [
 									[
 										"",

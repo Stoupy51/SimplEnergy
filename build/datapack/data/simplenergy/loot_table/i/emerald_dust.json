@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "simplenergy:emerald_dust",
-								"minecraft:item_name": "Emerald Dust",
+								"minecraft:item_name": {
+									"translate": "simplenergy.emerald_dust"
+								},
 								"minecraft:lore": [
 									[
 										"",

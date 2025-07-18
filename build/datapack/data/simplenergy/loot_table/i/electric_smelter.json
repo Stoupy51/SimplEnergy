@@ -40,7 +40,9 @@
 									]
 								],
 								"minecraft:item_model": "simplenergy:electric_smelter",
-								"minecraft:item_name": "Electric Smelter",
+								"minecraft:item_name": {
+									"translate": "simplenergy.electric_smelter"
+								},
 								"minecraft:container": [
 									{
 										"slot": 0,

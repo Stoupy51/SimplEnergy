@@ -18,7 +18,9 @@
 										"id": "tin_ingot"
 									}
 								},
-								"minecraft:item_name": "Tin Ingot",
+								"minecraft:item_name": {
+									"translate": "simplenergy.tin_ingot"
+								},
 								"minecraft:lore": [
 									{
 										"translate": "simplenergy.mechanization",

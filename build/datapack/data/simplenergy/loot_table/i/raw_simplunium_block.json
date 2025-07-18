@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "simplenergy:raw_simplunium_block",
-								"minecraft:item_name": "Raw Simplunium Block",
+								"minecraft:item_name": {
+									"translate": "simplenergy.raw_simplunium_block"
+								},
 								"minecraft:lore": [
 									[
 										"",

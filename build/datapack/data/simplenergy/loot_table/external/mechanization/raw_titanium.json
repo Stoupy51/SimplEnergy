@@ -18,7 +18,9 @@
 										"id": "raw_titanium"
 									}
 								},
-								"minecraft:item_name": "Raw Titanium",
+								"minecraft:item_name": {
+									"translate": "simplenergy.raw_titanium"
+								},
 								"minecraft:lore": [
 									{
 										"translate": "simplenergy.mechanization",
