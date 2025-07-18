@@ -2,49 +2,49 @@
 	"mechanization:raw_tin": {
 		"id": "minecraft:structure_block",
 		"custom_data": {"smithed": {"dict": {"raw": {"tin": true}}},"mechanization": {"id": "raw_tin"}},
-		"item_name": "Raw Tin",
+		"item_name": {"text": "Raw Tin"},
 		"lore": [{"text": "Mechanization","italic": true,"color": "blue"}]
 	},
 	"mechanization:tin_ore": {
 		"id": "minecraft:blast_furnace",
 		"custom_data": {"smithed": {"dict": {"ore": {"tin": true}}},"mechanization": {"id": "tin_ore"}},
-		"item_name": "Tin Ore",
+		"item_name": {"text": "Tin Ore"},
 		"lore": [{"text": "Mechanization","italic": true,"color": "blue"}]
 	},
 	"mechanization:deepslate_tin_ore": {
 		"id": "minecraft:blast_furnace",
 		"custom_data": {"smithed": {"dict": {"ore": {"tin": true}}},"mechanization": {"id": "tin_ore"}},
-		"item_name": "Deepslate Tin Ore",
+		"item_name": {"text": "Deepslate Tin Ore"},
 		"lore": [{"text": "Mechanization","italic": true,"color": "blue"}]
 	},
 	"mechanization:tin_ingot": {
 		"id": "minecraft:structure_block",
 		"custom_data": {"smithed": {"dict": {"ingot": {"tin": true}}},"mechanization": {"id": "tin_ingot"}},
-		"item_name": "Tin Ingot",
+		"item_name": {"text": "Tin Ingot"},
 		"lore": [{"text": "Mechanization","italic": true,"color": "blue"}]
 	},
 	"mechanization:raw_titanium": {
 		"id": "minecraft:structure_block",
 		"custom_data": {"smithed": {"dict": {"raw": {"titanium": true}}},"mechanization": {"id": "raw_titanium"}},
-		"item_name": "Raw Titanium",
+		"item_name": {"text": "Raw Titanium"},
 		"lore": [{"text": "Mechanization","italic": true,"color": "blue"}]
 	},
 	"mechanization:titanium_ore": {
 		"id": "minecraft:blast_furnace",
 		"custom_data": {"smithed": {"dict": {"ore": {"titanium": true}}},"mechanization": {"id": "titanium_ore"}},
-		"item_name": "Titanium Ore",
+		"item_name": {"text": "Titanium Ore"},
 		"lore": [{"text": "Mechanization","italic": true,"color": "blue"}]
 	},
 	"mechanization:deepslate_titanium_ore": {
 		"id": "minecraft:blast_furnace",
 		"custom_data": {"smithed": {"dict": {"ore": {"titanium": true}}},"mechanization": {"id": "titanium_ore"}},
-		"item_name": "Deepslate Titanium Ore",
+		"item_name": {"text": "Deepslate Titanium Ore"},
 		"lore": [{"text": "Mechanization","italic": true,"color": "blue"}]
 	},
 	"mechanization:titanium_ingot": {
 		"id": "minecraft:structure_block",
 		"custom_data": {"smithed": {"dict": {"ingot": {"titanium": true}}},"mechanization": {"id": "titanium_ingot"}},
-		"item_name": "Titanium Ingot",
+		"item_name": {"text": "Titanium Ingot"},
 		"lore": [{"text": "Mechanization","italic": true,"color": "blue"}]
 	}
 }
