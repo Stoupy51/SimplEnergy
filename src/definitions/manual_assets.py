@@ -17,6 +17,7 @@ def manual_assets_main() -> None:
 	super_copy(f"{ASSETS_FOLDER}/simple_cable.png", f"{manual_cache}/items/{Mem.ctx.project_id}/")
 	super_copy(f"{ASSETS_FOLDER}/advanced_cable.png", f"{manual_cache}/items/{Mem.ctx.project_id}/")
 	super_copy(f"{ASSETS_FOLDER}/elite_cable.png", f"{manual_cache}/items/{Mem.ctx.project_id}/")
+	super_copy(f"{ASSETS_FOLDER}/basic_item_cable.png", f"{manual_cache}/items/{Mem.ctx.project_id}/")
 
 	return
 

@@ -4,9 +4,10 @@ from stewbeet.contrib.simplenergy import (
 	Context,
 	GuiTranslation,
 	Mem,
+	energy_cables_models,
 	insert_lib_calls,
+	item_cables_models,
 	keep_energy_for_batteries,
-	setup_cables_models,
 	setup_energy_balancing,
 	setup_gui_in_resource_packs,
 	setup_wrench,
@@ -53,8 +54,11 @@ def beet_default(ctx: Context) -> None:
 	# Setup energy balancing
 	setup_energy_balancing(["solar_panel", "cauldron_generator", "heat_generator", "simple_battery", "advanced_battery", "elite_battery"])
 
-	# Setup cables models
-	setup_cables_models(["simple_cable", "advanced_cable", "elite_cable"])
+	# Setup energy cables models
+	energy_cables_models(["simple_cable", "advanced_cable", "elite_cable"])
+
+	# Setup item cables models
+	item_cables_models({"basic_item_cable":{"0":"basic_item_cable/center","1":"basic_item_cable/pillon","2":"basic_item_cable/glass"}})
 
 	# Setup custom ore generation
 	setup_custom_ore_generation()

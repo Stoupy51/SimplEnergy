@@ -552,6 +552,17 @@
 		"lore": [{"text": "[Transfer Speed: 240 kW]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_name": {"text": "Elite Cable"}
 	},
+	"basic_item_cable": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 8,"category": "misc","shape": ["SGS"],"ingredients": {"S": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}},"G": {"item": "minecraft:glass"}}},{"type": "crafting_shaped","result_count": 8,"category": "misc","shape": ["S","G","S"],"ingredients": {"S": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}},"G": {"item": "minecraft:glass"}}}],
+		"wiki_components": [{"text": "Item transport cable.","color": "yellow"},{"text": "\nConnects machines and storage for item transfer","color": "gray"}],
+		"vanilla_block": {"id": "minecraft:conduit[waterlogged=false]","apply_facing": false},
+		"item_model": "simplenergy:basic_item_cable",
+		"item_name": {"text": "Basic Item Cable"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
+		"custom_data": {"simplenergy": {"basic_item_cable": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"manual": {
 		"id": "minecraft:written_book",
 		"category": "miscellaneous",
