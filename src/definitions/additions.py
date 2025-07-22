@@ -325,6 +325,18 @@ def main_additions() -> None:
 				{"text":"\nTop-tier cable for maximum energy transfer","color":"gray"},
 			],
 		},
+		"basic_item_cable": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: "energy",
+			OVERRIDE_MODEL: {"parent":f"{ns}:block/basic_item_cable/no_variant", "textures": None},
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":8,"category":"misc","shape":["SGS"],"ingredients":{"S":ingr_repr("simplunium_ingot", ns),"G":ingr_repr("minecraft:glass")}},
+				{"type":"crafting_shaped","result_count":8,"category":"misc","shape":["S","G","S"],"ingredients":{"S":ingr_repr("simplunium_ingot", ns),"G":ingr_repr("minecraft:glass")}},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Item transport cable.","color":"yellow"},
+				{"text":"\nConnects machines and storage for item transfer","color":"gray"},
+			],
+		},
 
 		# Mechanization items
 		"tin_dust": {WIKI_COMPONENT: MECHANIZATION_COMPATIBILITY},
@@ -355,6 +367,7 @@ def main_additions() -> None:
 	additions["simple_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["simple_cable"]["profile"]) + "}"}
 	additions["advanced_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["advanced_cable"]["profile"]) + "}"}
 	additions["elite_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["elite_cable"]["profile"]) + "}"}
+	additions["basic_item_cable"][VANILLA_BLOCK] = {"id": "minecraft:conduit[waterlogged=false]", "apply_facing": False}
 
 	additions["manual"] = {
 		"id": "minecraft:written_book", "category": MISC,

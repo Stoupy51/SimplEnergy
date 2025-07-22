@@ -53,6 +53,7 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/simple_cable"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/advanced_cable"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/elite_cable"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/basic_item_cable"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/manual"}]}
 	]
 }

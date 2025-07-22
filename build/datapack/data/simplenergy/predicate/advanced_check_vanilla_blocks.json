@@ -4,6 +4,7 @@
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_barrel\"]}","location": {"block": {"blocks": "minecraft:barrel"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_brewing_stand\"]}","location": {"block": {"blocks": "minecraft:brewing_stand"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_cauldron\"]}","location": {"block": {"blocks": "#minecraft:cauldrons"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_conduit\"]}","location": {"block": {"blocks": "minecraft:conduit"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_copper_block\"]}","location": {"block": {"blocks": "minecraft:copper_block"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_daylight_detector\"]}","location": {"block": {"blocks": "minecraft:daylight_detector"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_furnace\"]}","location": {"block": {"blocks": "minecraft:furnace"}}}},
