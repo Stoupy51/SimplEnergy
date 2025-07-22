@@ -1,10 +1,11 @@
 
 # ruff: noqa: E501
 # Imports
-import stouputils as stp
-from beet import Advancement, BlockTag, FunctionTag, ItemModifier, Predicate
-from stewbeet.core import *
+from stewbeet import *
+from stouputils.io import get_root_path
 
+# Constants
+ROOT: str = get_root_path(__file__)
 
 # Setup energy balancing
 def setup_remaining() -> None:
@@ -77,14 +78,11 @@ tellraw @s ["",{{"text":"Markers on furnaces: ","color":"gray"}},{{"score":{{"na
 
 	# Check daylight power predicate
 	json_content: dict = {"condition":"minecraft:any_of","terms":[{"condition":"minecraft:location_check","predicate":{"block":{"state":{"inverted":"false","power":{"min":"10","max":"15"}}}}},{"condition":"minecraft:location_check","predicate":{"block":{"state":{"inverted":"true","power":{"min":"0","max":"5"}}}}}]}
-	Mem.ctx.data[ns].predicates["check_daylight_power"] = Predicate(super_json_dump(json_content, max_level = -1))
+	Mem.ctx.data[ns].predicates["check_daylight_power"] = set_json_encoder(Predicate(json_content), max_level = -1)
 
 
 	# Setup block tags
-	json_content: dict = {"replace":False,"values":["minecraft:air","minecraft:cave_air","minecraft:void_air","minecraft:structure_void"]}
-	Mem.ctx.data[ns].block_tags["air"] = BlockTag(super_json_dump(json_content, max_level = -1))
-	json_content: dict = {"replace":False,"values":[f"#{ns}:air","#minecraft:replaceable","#minecraft:wool_carpets","#minecraft:standing_signs","#minecraft:wall_signs","#minecraft:saplings","#minecraft:leaves","#minecraft:signs","minecraft:moss_carpet","minecraft:peony","minecraft:rose_bush","minecraft:lilac","minecraft:sunflower","minecraft:lily_pad","minecraft:vine","minecraft:red_mushroom","minecraft:brown_mushroom","minecraft:cobweb","minecraft:water","minecraft:kelp_plant","minecraft:seagrass","minecraft:ladder","minecraft:snow","minecraft:powder_snow","minecraft:moving_piston","minecraft:oak_sapling","minecraft:spruce_sapling","minecraft:birch_sapling","minecraft:jungle_sapling","minecraft:acacia_sapling","minecraft:dark_oak_sapling","minecraft:mangrove_propagule","#minecraft:flowers","minecraft:mangrove_propagule","minecraft:cobweb","minecraft:torch","minecraft:wall_torch","minecraft:soul_torch","minecraft:soul_wall_torch","minecraft:spore_blossom","minecraft:brown_mushroom","minecraft:red_mushroom","minecraft:crimson_fungus","minecraft:warped_fungus","minecraft:crimson_roots","minecraft:warped_roots","minecraft:nether_sprouts","minecraft:weeping_vines","minecraft:twisting_vines","minecraft:water","minecraft:sugar_cane","minecraft:kelp","minecraft:hanging_roots","minecraft:small_dripleaf","minecraft:bamboo","minecraft:end_rod","minecraft:vine","#minecraft:corals","minecraft:dead_tube_coral","minecraft:dead_brain_coral","minecraft:dead_bubble_coral","minecraft:dead_fire_coral","minecraft:dead_horn_coral","minecraft:dead_tube_coral_fan","minecraft:dead_brain_coral_fan","minecraft:dead_bubble_coral_fan","minecraft:dead_fire_coral_fan","minecraft:dead_horn_coral_fan","minecraft:scaffolding","#minecraft:flower_pots","#minecraft:banners","minecraft:lantern","minecraft:soul_lantern","minecraft:candle","minecraft:small_amethyst_bud","minecraft:medium_amethyst_bud","minecraft:large_amethyst_bud","minecraft:amethyst_cluster","minecraft:redstone_wire","minecraft:repeater","minecraft:comparator","minecraft:lever","minecraft:tripwire_hook","#minecraft:buttons","#minecraft:pressure_plates","#minecraft:rails","minecraft:conduit"]}
-	Mem.ctx.data[ns].block_tags["non_solid"] = BlockTag(super_json_dump(json_content, max_level = -1))
+	Mem.ctx.data[ns].block_tags["solid"] = BlockTag(source_path=f"{ROOT}/solid.json")
 
 
 	## Right click detection
@@ -112,12 +110,12 @@ data remove storage {ns}:main SelectedItemTag
 scoreboard players reset @s {ns}.right_click
 """)
 	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":[{"condition":"minecraft:entity_scores","entity":"this","scores":{f"{ns}.right_click":{"min":1}}}]}}},"requirements":[["requirement"]],"rewards":{"function":f"{ns}:utils/on_right_click"}}
-	Mem.ctx.data[ns].advancements["right_click"] = Advancement(super_json_dump(json_content, max_level = -1))
+	Mem.ctx.data[ns].advancements["right_click"] = set_json_encoder(Advancement(json_content), max_level = -1)
 
 
 	# Setup wrench stuff
 	json_content: dict = {"values": [f"{ns}:utils/wrench/rotate/furnace"]}
-	Mem.ctx.data[ns].function_tags["calls/wrench_rotate"] = FunctionTag(super_json_dump(json_content, max_level = -1))
+	Mem.ctx.data[ns].function_tags["calls/wrench_rotate"] = set_json_encoder(FunctionTag(json_content), max_level = -1)
 	write_function(f"{ns}:utils/wrench/right_click", f"""
 # Look at where player is looking at and stop when found a block
 scoreboard players set #raycast {ns}.data 0
@@ -126,10 +124,10 @@ scoreboard players reset #raycast {ns}.data
 """)
 	write_function(f"{ns}:utils/wrench/raycast", f"""
 # Stop case when raycast hits a block that is from wrench_raycast tag
-execute unless block ~ ~ ~ #{ns}:non_solid align xyz run function {ns}:utils/wrench/stop_case
+execute if block ~ ~ ~ #{ns}:solid align xyz run function {ns}:utils/wrench/stop_case
 
 # Continue raycast until it hits a block that is solid or the max distance is reached
-execute if score #raycast {ns}.data matches 0 if entity @s[distance=..5] if block ~ ~ ~ #{ns}:non_solid positioned ^ ^ ^.2 run function {ns}:utils/wrench/raycast
+execute if score #raycast {ns}.data matches 0 if entity @s[distance=..5] unless block ~ ~ ~ #{ns}:solid positioned ^ ^ ^.2 run function {ns}:utils/wrench/raycast
 """)
 	write_function(f"{ns}:utils/wrench/stop_case", f"""
 # Try to rotation block from {ns} or mechanization or break cable
@@ -185,10 +183,10 @@ execute anchored eyes positioned ^ ^ ^.2 run function {ns}:utils/multimeter/righ
 """)
 	write_function(f"{ns}:utils/multimeter/right_click/raycast", f"""
 # Stop case when raycast hits a block that is solid
-execute unless block ~ ~ ~ #{ns}:non_solid run function {ns}:utils/multimeter/right_click/stop_case
+execute if block ~ ~ ~ #{ns}:solid run function {ns}:utils/multimeter/right_click/stop_case
 
 # Continue raycast until it hits a block that is solid or the max distance is reached
-execute if entity @s[distance=..5] if block ~ ~ ~ #{ns}:non_solid positioned ^ ^ ^.2 run function {ns}:utils/multimeter/right_click/raycast
+execute if entity @s[distance=..5] unless block ~ ~ ~ #{ns}:solid positioned ^ ^ ^.2 run function {ns}:utils/multimeter/right_click/raycast
 """)
 	write_function(f"{ns}:utils/multimeter/right_click/stop_case", f"""
 # Tellraw Energy Display
@@ -200,10 +198,10 @@ tag @s remove {ns}.temp
 	# Passive
 	write_function(f"{ns}:utils/multimeter/passive/main", f"""
 # Stop case when raycast hits a block that is solid
-execute unless block ~ ~ ~ #{ns}:non_solid run function {ns}:utils/multimeter/passive/stop_case
+execute if block ~ ~ ~ #{ns}:solid run function {ns}:utils/multimeter/passive/stop_case
 
 # Continue raycast until it hits a block that is solid or the max distance is reached
-execute if entity @s[distance=..5] if block ~ ~ ~ #{ns}:non_solid positioned ^ ^ ^.5 run function {ns}:utils/multimeter/passive/main
+execute if entity @s[distance=..5] unless block ~ ~ ~ #{ns}:solid positioned ^ ^ ^.5 run function {ns}:utils/multimeter/passive/main
 """)
 	write_function(f"{ns}:utils/multimeter/passive/stop_case", f"""
 # Execute at the block found the function
@@ -213,7 +211,7 @@ tag @s remove {ns}.temp
 """)
 	write_function(f"{ns}:utils/multimeter/passive/found_entity", f"""
 # Summon glowing snowball on block
-execute unless block ~ ~ ~ #{ns}:non_solid run summon snowball ~.5 ~.3 ~.5 {{NoGravity:1b,Silent:1b,Glowing:1b,Tags:["{ns}.multimeter_marker"]}}
+execute if block ~ ~ ~ #{ns}:solid run summon snowball ~.5 ~.3 ~.5 {{NoGravity:1b,Silent:1b,Glowing:1b,Tags:["{ns}.multimeter_marker"]}}
 
 # Title to the player
 title @a[tag={ns}.temp] actionbar [{{"text":"Energy stored: ","italic":false,"color":"aqua"}},{{"score":{{"name":"@s","objective":"energy.storage"}},"italic":false,"color":"yellow"}},{{"text":"/"}},{{"score":{{"name":"@s","objective":"energy.max_storage"}},"italic":false,"color":"yellow"}},{{"text":" kJ"}},{{"text":"  |  ","color":"yellow"}},{{"text":"Change Rate: "}},{{"score":{{"name":"@s","objective":"energy.change_rate"}},"italic":false,"color":"yellow"}},{{"text":" kW"}}]
@@ -263,10 +261,10 @@ execute anchored eyes positioned ^ ^ ^.2 run function {ns}:utils/battery_switche
 """)
 	write_function(f"{ns}:utils/battery_switcher/right_click/raycast", f"""
 # Stop case when raycast hits a block that is solid
-execute unless block ~ ~ ~ #{ns}:non_solid run function {ns}:utils/battery_switcher/right_click/stop_case
+execute if block ~ ~ ~ #{ns}:solid run function {ns}:utils/battery_switcher/right_click/stop_case
 
 # Continue raycast until it hits a block that is solid or the max distance is reached
-execute if entity @s[distance=..5] if block ~ ~ ~ #{ns}:non_solid positioned ^ ^ ^.2 run function {ns}:utils/battery_switcher/right_click/raycast
+execute if entity @s[distance=..5] unless block ~ ~ ~ #{ns}:solid positioned ^ ^ ^.2 run function {ns}:utils/battery_switcher/right_click/raycast
 """)
 	write_function(f"{ns}:utils/battery_switcher/right_click/stop_case", f"""
 tag @s add {ns}.temp
@@ -288,10 +286,10 @@ execute if score #state {ns}.data matches 0 run item modify entity @s weapon.off
 """)
 	write_function(f"{ns}:utils/battery_switcher/passive/main", f"""
 # Stop case when raycast hits a block that is solid
-execute unless block ~ ~ ~ #{ns}:non_solid run function {ns}:utils/battery_switcher/passive/stop_case
+execute if block ~ ~ ~ #{ns}:solid run function {ns}:utils/battery_switcher/passive/stop_case
 
 # Continue raycast until it hits a block that is solid or the max distance is reached
-execute if entity @s[distance=..5] if block ~ ~ ~ #{ns}:non_solid positioned ^ ^ ^.5 run function {ns}:utils/battery_switcher/passive/main
+execute if entity @s[distance=..5] unless block ~ ~ ~ #{ns}:solid positioned ^ ^ ^.5 run function {ns}:utils/battery_switcher/passive/main
 """)
 	write_function(f"{ns}:utils/battery_switcher/passive/stop_case", f"""
 # Execute at the block found the function
@@ -305,7 +303,7 @@ tag @s remove {ns}.temp
 function {ns}:utils/battery_switcher/get_state
 
 # Summon glowing egg on block depending on the state
-execute unless block ~ ~ ~ #{ns}:non_solid run summon egg ~ ~ ~ {{NoGravity:1b,Silent:1b,Glowing:1b,Tags:["{ns}.battery_switcher_marker"]}}
+execute if block ~ ~ ~ #{ns}:solid run summon egg ~ ~ ~ {{NoGravity:1b,Silent:1b,Glowing:1b,Tags:["{ns}.battery_switcher_marker"]}}
 execute if score #state {ns}.data matches 1 run team join {ns}.green @e[type=egg,tag={ns}.battery_switcher_marker,distance=..0.5]
 execute if score #state {ns}.data matches 2 run team join {ns}.aqua @e[type=egg,tag={ns}.battery_switcher_marker,distance=..0.5]
 execute if score #state {ns}.data matches 3 run team join {ns}.gold @e[type=egg,tag={ns}.battery_switcher_marker,distance=..0.5]
@@ -341,14 +339,14 @@ execute if score #success {ns}.data matches 1 run schedule function {ns}:utils/b
 	both_model: str = Mem.definitions["battery_switcher_both"]["item_model"]
 	input_model: str = Mem.definitions["battery_switcher_input"]["item_model"]
 	output_model: str = Mem.definitions["battery_switcher_output"]["item_model"]
-	dumped_template: str = stp.super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":"TO_REPLACE"}})
+	dumped_template: str = super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":"TO_REPLACE"}})
 	for mode, model in [("default", default_model), ("both", both_model), ("input", input_model), ("output", output_model)]:
-		Mem.ctx.data[ns].item_modifiers[f"battery_switcher/{mode}"] = ItemModifier(dumped_template.replace("TO_REPLACE", model))
+		Mem.ctx.data[ns].item_modifiers[f"battery_switcher/{mode}"] = set_json_encoder(ItemModifier(dumped_template.replace("TO_REPLACE", model)))
 
 
 	# Setup first_join advancement
 	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:tick"}},"requirements":[["requirement"]],"rewards":{"function":f"{ns}:advancements/first_join"}}
-	Mem.ctx.data[ns].advancements["first_join"] = Advancement(super_json_dump(json_content, max_level = -1))
+	Mem.ctx.data[ns].advancements["first_join"] = set_json_encoder(Advancement(json_content), max_level = -1)
 	write_function(f"{ns}:advancements/first_join", f"""
 execute unless score #{ns}.loaded load.status matches 1 run advancement revoke @s only {ns}:first_join
 execute if score #{ns}.loaded load.status matches 1 run loot give @s loot {ns}:i/manual
@@ -357,7 +355,7 @@ execute if score #{ns}.loaded load.status matches 1 run loot give @s loot {ns}:i
 
 	# Setup inventory_changed advancement
 	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:inventory_changed"}},"requirements":[["requirement"]],"rewards":{"function":f"{ns}:advancements/inventory_changed"}}
-	Mem.ctx.data[ns].advancements["inventory_changed"] = Advancement(super_json_dump(json_content, max_level = -1))
+	Mem.ctx.data[ns].advancements["inventory_changed"] = set_json_encoder(Advancement(json_content), max_level = -1)
 	write_function(f"{ns}:advancements/inventory_changed", f"""
 # Revoke advancement
 advancement revoke @s only {ns}:inventory_changed
