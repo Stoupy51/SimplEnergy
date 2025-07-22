@@ -1,15 +1,15 @@
 {
-  "criteria": {
-    "requirement": {
-      "trigger": "minecraft:tick"
-    }
-  },
-  "requirements": [
-    [
-      "requirement"
-    ]
-  ],
-  "rewards": {
-    "function": "simplenergy:advancements/first_join"
-  }
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:tick"
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"rewards": {
+		"function": "simplenergy:advancements/first_join"
+	}
 }

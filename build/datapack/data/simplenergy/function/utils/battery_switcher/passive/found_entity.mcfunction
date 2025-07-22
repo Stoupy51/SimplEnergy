@@ -8,7 +8,7 @@
 function simplenergy:utils/battery_switcher/get_state
 
 # Summon glowing egg on block depending on the state
-execute unless block ~ ~ ~ #simplenergy:non_solid run summon egg ~ ~ ~ {NoGravity:1b,Silent:1b,Glowing:1b,Tags:["simplenergy.battery_switcher_marker"]}
+execute if block ~ ~ ~ #simplenergy:solid run summon egg ~ ~ ~ {NoGravity:1b,Silent:1b,Glowing:1b,Tags:["simplenergy.battery_switcher_marker"]}
 execute if score #state simplenergy.data matches 1 run team join simplenergy.green @e[type=egg,tag=simplenergy.battery_switcher_marker,distance=..0.5]
 execute if score #state simplenergy.data matches 2 run team join simplenergy.aqua @e[type=egg,tag=simplenergy.battery_switcher_marker,distance=..0.5]
 execute if score #state simplenergy.data matches 3 run team join simplenergy.gold @e[type=egg,tag=simplenergy.battery_switcher_marker,distance=..0.5]
