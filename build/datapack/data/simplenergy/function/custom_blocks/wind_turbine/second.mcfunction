@@ -1,6 +1,8 @@
 
 #> simplenergy:custom_blocks/wind_turbine/second
 #
+# @executed	as @e[tag=simplenergy.second] & at @s
+#
 # @within	simplenergy:custom_blocks/second
 #
 

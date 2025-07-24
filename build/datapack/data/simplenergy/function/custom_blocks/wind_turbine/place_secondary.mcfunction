@@ -1,7 +1,9 @@
 
 #> simplenergy:custom_blocks/wind_turbine/place_secondary
 #
-# @within	simplenergy:custom_blocks/wind_turbine/place_main
+# @executed	at @s
+#
+# @within	simplenergy:custom_blocks/wind_turbine/place_main [ at @s ]
 #
 
 # Add convention and utils tags, and the custom block tag

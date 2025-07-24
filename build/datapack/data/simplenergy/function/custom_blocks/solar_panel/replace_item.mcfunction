@@ -1,7 +1,9 @@
 
 #> simplenergy:custom_blocks/solar_panel/replace_item
 #
-# @within	simplenergy:custom_blocks/solar_panel/destroy
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:daylight_detector"}},distance=..1]
+#
+# @within	simplenergy:custom_blocks/solar_panel/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:daylight_detector"}},distance=..1] ]
 #
 
 data modify entity @s Item.components set from storage simplenergy:items all.solar_panel.components

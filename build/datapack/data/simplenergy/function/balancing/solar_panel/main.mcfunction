@@ -1,6 +1,8 @@
 
 #> simplenergy:balancing/solar_panel/main
 #
+# @executed	as @e[tag=simplenergy.can_balance,scores={energy.storage=20..}] & at @s[tag=!simplenergy.balanced]
+#
 # @within	simplenergy:balancing/main
 #
 

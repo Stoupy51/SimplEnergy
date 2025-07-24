@@ -1,6 +1,8 @@
 
 #> simplenergy:advancements/first_join
 #
+# @executed	as the player & at current position
+#
 # @within	advancement simplenergy:first_join
 #
 

@@ -1,7 +1,9 @@
 
 #> simplenergy:utils/wrench/stop_case
 #
-# @within	simplenergy:utils/wrench/raycast
+# @executed	align xyz
+#
+# @within	simplenergy:utils/wrench/raycast [ align xyz ]
 #
 
 # Try to rotation block from simplenergy or mechanization or break cable

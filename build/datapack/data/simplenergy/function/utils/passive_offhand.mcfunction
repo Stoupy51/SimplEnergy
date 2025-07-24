@@ -1,7 +1,9 @@
 
 #> simplenergy:utils/passive_offhand
 #
-# @within	simplenergy:v2.0.8/tick_2
+# @executed	as @a[tag=!...] & at @s
+#
+# @within	simplenergy:v2.0.8/tick_2 [ as @a[tag=!...] & at @s ]
 #
 
 # Copy offhand

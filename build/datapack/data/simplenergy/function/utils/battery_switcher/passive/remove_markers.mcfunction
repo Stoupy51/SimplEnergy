@@ -1,6 +1,8 @@
 
 #> simplenergy:utils/battery_switcher/passive/remove_markers
 #
+# @executed	as @n[tag=simplenergy.battery_switcher,scores={energy.max_storage=1..},distance=..1.5] & at @s & align xyz & positioned ~.5 ~.3 ~.5
+#
 # @within	simplenergy:utils/battery_switcher/passive/found_entity 1t replace
 #			simplenergy:utils/battery_switcher/passive/remove_markers 1t replace
 #

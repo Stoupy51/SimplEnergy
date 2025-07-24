@@ -1,7 +1,9 @@
 
 #> simplenergy:balancing/main
 #
-# @within	simplenergy:v2.0.8/second_5
+# @executed	as @e[tag=simplenergy.can_balance,scores={energy.storage=20..}] & at @s[tag=!simplenergy.balanced]
+#
+# @within	simplenergy:v2.0.8/second_5 [ as @e[tag=simplenergy.can_balance,scores={energy.storage=20..}] & at @s[tag=!simplenergy.balanced] ]
 #
 
 # Stop if already balanced

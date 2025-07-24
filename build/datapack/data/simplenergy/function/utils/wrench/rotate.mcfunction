@@ -2,7 +2,7 @@
 #> simplenergy:utils/wrench/rotate
 #
 # @within	simplenergy:calls/mechanization/wrench_modify
-#			simplenergy:utils/wrench/stop_case
+#			simplenergy:utils/wrench/stop_case [ as @n[tag=simplenergy.rotatable,dx=0,dy=0,dz=0] & at @s ]
 #
 
 # Copy block data

@@ -1,6 +1,8 @@
 
 #> simplenergy:custom_blocks/_player_head/search_elite_cable
 #
+# @executed	as the player & at current position
+#
 # @within	advancement simplenergy:custom_block_head/elite_cable
 #
 

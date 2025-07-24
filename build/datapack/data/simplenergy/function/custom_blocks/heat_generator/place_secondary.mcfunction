@@ -1,7 +1,9 @@
 
 #> simplenergy:custom_blocks/heat_generator/place_secondary
 #
-# @within	simplenergy:custom_blocks/heat_generator/place_main
+# @executed	at @s
+#
+# @within	simplenergy:custom_blocks/heat_generator/place_main [ at @s ]
 #
 
 # Add convention and utils tags, and the custom block tag

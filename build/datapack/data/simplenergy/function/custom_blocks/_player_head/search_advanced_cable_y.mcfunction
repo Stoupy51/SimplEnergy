@@ -1,7 +1,25 @@
 
 #> simplenergy:custom_blocks/_player_head/search_advanced_cable_y
 #
-# @within	simplenergy:custom_blocks/_player_head/search_advanced_cable
+# @executed	positioned ~-8 ~ ~
+#
+# @within	simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~-8 ~ ~ ]
+#			simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~-7 ~ ~ ]
+#			simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~-6 ~ ~ ]
+#			simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~-5 ~ ~ ]
+#			simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~-4 ~ ~ ]
+#			simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~-3 ~ ~ ]
+#			simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~-2 ~ ~ ]
+#			simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~-1 ~ ~ ]
+#			simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~0 ~ ~ ]
+#			simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~1 ~ ~ ]
+#			simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~2 ~ ~ ]
+#			simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~3 ~ ~ ]
+#			simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~4 ~ ~ ]
+#			simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~5 ~ ~ ]
+#			simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~6 ~ ~ ]
+#			simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~7 ~ ~ ]
+#			simplenergy:custom_blocks/_player_head/search_advanced_cable [ positioned ~8 ~ ~ ]
 #
 
 # Search y coordinates

@@ -1,7 +1,9 @@
 
 #> simplenergy:utils/battery_switcher/passive/found_entity
 #
-# @within	simplenergy:utils/battery_switcher/passive/stop_case
+# @executed	as @n[tag=simplenergy.battery_switcher,scores={energy.max_storage=1..},distance=..1.5] & at @s & align xyz & positioned ~.5 ~.3 ~.5
+#
+# @within	simplenergy:utils/battery_switcher/passive/stop_case [ as @n[tag=simplenergy.battery_switcher,scores={energy.max_storage=1..},distance=..1.5] & at @s & align xyz & positioned ~.5 ~.3 ~.5 ]
 #
 
 # Get current state

@@ -1,8 +1,10 @@
 
 #> simplenergy:utils/battery_switcher/passive/main
 #
+# @executed	anchored eyes & positioned ^ ^ ^.2
+#
 # @within	simplenergy:utils/battery_switcher/passive/pre_raycast
-#			simplenergy:utils/battery_switcher/passive/main
+#			simplenergy:utils/battery_switcher/passive/main [ positioned ^ ^ ^.5 ]
 #
 
 # Stop case when raycast hits a block that is solid

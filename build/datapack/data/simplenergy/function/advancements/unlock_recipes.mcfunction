@@ -1,6 +1,8 @@
 
 #> simplenergy:advancements/unlock_recipes
 #
+# @executed	as the player & at current position
+#
 # @within	advancement simplenergy:unlock_recipes
 #
 

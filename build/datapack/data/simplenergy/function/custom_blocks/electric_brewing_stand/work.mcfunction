@@ -1,6 +1,8 @@
 
 #> simplenergy:custom_blocks/electric_brewing_stand/work
 #
+# @executed	as @e[tag=simplenergy.tick] & at @s
+#
 # @within	simplenergy:custom_blocks/electric_brewing_stand/tick
 #
 

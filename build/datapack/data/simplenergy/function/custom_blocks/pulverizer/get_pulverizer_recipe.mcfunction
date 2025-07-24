@@ -1,6 +1,8 @@
 
 #> simplenergy:custom_blocks/pulverizer/get_pulverizer_recipe
 #
+# @executed	as @e[tag=simplenergy.tick] & at @s
+#
 # @within	simplenergy:custom_blocks/pulverizer/gui_active_slot
 #
 

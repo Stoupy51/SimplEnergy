@@ -1,6 +1,8 @@
 
 #> simplenergy:utils/multimeter/right_click/stop_case
 #
+# @executed	anchored eyes & positioned ^ ^ ^.2
+#
 # @within	simplenergy:utils/multimeter/right_click/raycast
 #
 

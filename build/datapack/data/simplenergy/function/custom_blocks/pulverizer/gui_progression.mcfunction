@@ -1,6 +1,8 @@
 
 #> simplenergy:custom_blocks/pulverizer/gui_progression
 #
+# @executed	as @e[tag=simplenergy.tick] & at @s
+#
 # @within	simplenergy:custom_blocks/pulverizer/gui_passive_slot {"index":$(index),"slot":$(slot)}
 #			simplenergy:custom_blocks/pulverizer/reset_progress {"index":$(index),"slot":$(slot)}
 #

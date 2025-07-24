@@ -1,7 +1,9 @@
 
 #> simplenergy:utils/battery_switcher/right_click/found_entity
 #
-# @within	simplenergy:utils/battery_switcher/right_click/stop_case
+# @executed	as @n[tag=simplenergy.battery_switcher,scores={energy.max_storage=1..},distance=..1.5]
+#
+# @within	simplenergy:utils/battery_switcher/right_click/stop_case [ as @n[tag=simplenergy.battery_switcher,scores={energy.max_storage=1..},distance=..1.5] ]
 #
 
 # Get current state and go next state

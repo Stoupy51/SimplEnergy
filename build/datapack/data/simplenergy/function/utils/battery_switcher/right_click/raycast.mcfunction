@@ -1,8 +1,10 @@
 
 #> simplenergy:utils/battery_switcher/right_click/raycast
 #
-# @within	simplenergy:utils/battery_switcher/right_click/main
-#			simplenergy:utils/battery_switcher/right_click/raycast
+# @executed	anchored eyes & positioned ^ ^ ^.2
+#
+# @within	simplenergy:utils/battery_switcher/right_click/main [ anchored eyes & positioned ^ ^ ^.2 ]
+#			simplenergy:utils/battery_switcher/right_click/raycast [ positioned ^ ^ ^.2 ]
 #
 
 # Stop case when raycast hits a block that is solid

@@ -1,7 +1,9 @@
 
 #> simplenergy:custom_blocks/electric_smelter/replace_item
 #
-# @within	simplenergy:custom_blocks/electric_smelter/destroy
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:furnace"}},distance=..1]
+#
+# @within	simplenergy:custom_blocks/electric_smelter/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:furnace"}},distance=..1] ]
 #
 
 data modify entity @s Item.components set from storage simplenergy:items all.electric_smelter.components

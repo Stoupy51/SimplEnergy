@@ -1,7 +1,9 @@
 
 #> simplenergy:custom_blocks/second
 #
-# @within	simplenergy:v2.0.8/second
+# @executed	as @e[tag=simplenergy.second] & at @s
+#
+# @within	simplenergy:v2.0.8/second [ as @e[tag=simplenergy.second] & at @s ]
 #
 
 execute if entity @s[tag=simplenergy.solar_panel] run function simplenergy:custom_blocks/solar_panel/second

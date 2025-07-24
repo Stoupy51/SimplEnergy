@@ -1,7 +1,9 @@
 
 #> simplenergy:balancing/solar_panel/found
 #
-# @within	simplenergy:balancing/solar_panel/found
+# @executed	as @e[tag=...,dx=0,dy=0,dz=0] & at @s
+#
+# @within	simplenergy:balancing/solar_panel/found [ as @e[tag=...,dx=0,dy=0,dz=0] & at @s ]
 #			simplenergy:balancing/solar_panel/main
 #
 

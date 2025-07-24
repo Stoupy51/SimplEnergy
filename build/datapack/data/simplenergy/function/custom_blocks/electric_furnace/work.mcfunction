@@ -1,6 +1,8 @@
 
 #> simplenergy:custom_blocks/electric_furnace/work
 #
+# @executed	as @e[tag=simplenergy.tick] & at @s
+#
 # @within	simplenergy:custom_blocks/electric_furnace/tick
 #
 

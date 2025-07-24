@@ -1,6 +1,8 @@
 
 #> simplenergy:custom_blocks/deepslate_simplunium_ore/destroy
 #
+# @executed	as @e[type=item_display,tag=...,predicate=!simplenergy:check_vanilla_blocks] & at @s
+#
 # @within	simplenergy:custom_blocks/_groups/minecraft_polished_deepslate
 #
 

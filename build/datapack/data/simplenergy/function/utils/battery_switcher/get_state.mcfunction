@@ -1,6 +1,8 @@
 
 #> simplenergy:utils/battery_switcher/get_state
 #
+# @executed	as @n[tag=simplenergy.battery_switcher,scores={energy.max_storage=1..},distance=..1.5]
+#
 # @within	simplenergy:utils/battery_switcher/right_click/found_entity
 #			simplenergy:utils/battery_switcher/passive/found_entity
 #

@@ -1,6 +1,8 @@
 
 #> simplenergy:custom_blocks/redstone_generator/consume_redstone_block
 #
+# @executed	as @e[tag=simplenergy.second] & at @s
+#
 # @within	simplenergy:custom_blocks/redstone_generator/second
 #
 

@@ -1,8 +1,10 @@
 
 #> simplenergy:utils/multimeter/passive/main
 #
-# @within	simplenergy:utils/passive_offhand
-#			simplenergy:utils/multimeter/passive/main
+# @executed	anchored eyes & positioned ^ ^ ^.2
+#
+# @within	simplenergy:utils/passive_offhand [ anchored eyes & positioned ^ ^ ^.2 ]
+#			simplenergy:utils/multimeter/passive/main [ positioned ^ ^ ^.5 ]
 #
 
 # Stop case when raycast hits a block that is solid

@@ -1,7 +1,9 @@
 
 #> simplenergy:utils/multimeter/passive/found_entity
 #
-# @within	simplenergy:utils/multimeter/passive/stop_case
+# @executed	as @n[scores={energy.max_storage=1..},distance=..1.5] & at @s & align xyz
+#
+# @within	simplenergy:utils/multimeter/passive/stop_case [ as @n[scores={energy.max_storage=1..},distance=..1.5] & at @s & align xyz ]
 #
 
 # Summon glowing snowball on block

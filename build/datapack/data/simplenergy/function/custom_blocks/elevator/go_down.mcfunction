@@ -1,8 +1,10 @@
 
 #> simplenergy:custom_blocks/elevator/go_down
 #
-# @within	simplenergy:custom_blocks/elevator/as_player
-#			simplenergy:custom_blocks/elevator/go_down
+# @executed	positioned ~ ~-3 ~
+#
+# @within	simplenergy:custom_blocks/elevator/as_player [ positioned ~ ~-3 ~ ]
+#			simplenergy:custom_blocks/elevator/go_down [ positioned ~ ~-1 ~ ]
 #
 
 # Find an elevator block in the direction of the player

@@ -1,6 +1,8 @@
 
 #> simplenergy:advancements/inventory_changed_loop
 #
+# @executed	as the player & at current position
+#
 # @within	simplenergy:advancements/inventory_changed with storage simplenergy:main Inventory[0]
 #			simplenergy:advancements/inventory_changed_loop with storage simplenergy:main Inventory[0]
 #

@@ -1,6 +1,8 @@
 
 #> simplenergy:utils/keep_energy
 #
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:copper_block"}},distance=..1]
+#
 # @within	simplenergy:custom_blocks/simple_battery/replace_item
 #			simplenergy:custom_blocks/advanced_battery/replace_item
 #			simplenergy:custom_blocks/elite_battery/replace_item

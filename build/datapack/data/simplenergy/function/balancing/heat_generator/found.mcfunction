@@ -1,7 +1,9 @@
 
 #> simplenergy:balancing/heat_generator/found
 #
-# @within	simplenergy:balancing/heat_generator/found
+# @executed	as @e[tag=...,dx=0,dy=0,dz=0] & at @s
+#
+# @within	simplenergy:balancing/heat_generator/found [ as @e[tag=...,dx=0,dy=0,dz=0] & at @s ]
 #			simplenergy:balancing/heat_generator/main
 #
 

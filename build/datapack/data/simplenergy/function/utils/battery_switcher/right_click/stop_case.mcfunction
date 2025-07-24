@@ -1,6 +1,8 @@
 
 #> simplenergy:utils/battery_switcher/right_click/stop_case
 #
+# @executed	anchored eyes & positioned ^ ^ ^.2
+#
 # @within	simplenergy:utils/battery_switcher/right_click/raycast
 #
 

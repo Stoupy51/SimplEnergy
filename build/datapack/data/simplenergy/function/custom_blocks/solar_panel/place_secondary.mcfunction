@@ -1,7 +1,9 @@
 
 #> simplenergy:custom_blocks/solar_panel/place_secondary
 #
-# @within	simplenergy:custom_blocks/solar_panel/place_main
+# @executed	at @s
+#
+# @within	simplenergy:custom_blocks/solar_panel/place_main [ at @s ]
 #
 
 # Add convention and utils tags, and the custom block tag

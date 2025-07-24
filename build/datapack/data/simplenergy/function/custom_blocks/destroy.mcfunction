@@ -1,10 +1,12 @@
 
 #> simplenergy:custom_blocks/destroy
 #
-# @within	simplenergy:v2.0.8/tick_2
-#			simplenergy:v2.0.8/second
-#			simplenergy:v2.0.8/second_5
-#			simplenergy:calls/common_signals/on_ore_destroyed
+# @executed	as @e[type=item_display,tag=...,predicate=!simplenergy:check_vanilla_blocks] & at @s
+#
+# @within	simplenergy:v2.0.8/tick_2 [ as @e[type=item_display,tag=...,predicate=!simplenergy:check_vanilla_blocks] & at @s ]
+#			simplenergy:v2.0.8/second [ as @e[type=item_display,tag=...,predicate=!simplenergy:advanced_check_vanilla_blocks] & at @s ]
+#			simplenergy:v2.0.8/second_5 [ as @e[type=item_display,tag=simplenergy.custom_block,predicate=!simplenergy:advanced_check_vanilla_blocks] & at @s ]
+#			simplenergy:calls/common_signals/on_ore_destroyed [ as @e[tag=simplenergy.custom_block,dx=0,dy=0,dz=0] & at @s ]
 #			simplenergy:calls/mechanization/wrench_break
 #
 

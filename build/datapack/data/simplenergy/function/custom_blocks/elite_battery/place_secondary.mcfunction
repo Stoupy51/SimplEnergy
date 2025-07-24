@@ -1,7 +1,9 @@
 
 #> simplenergy:custom_blocks/elite_battery/place_secondary
 #
-# @within	simplenergy:custom_blocks/elite_battery/place_main
+# @executed	at @s
+#
+# @within	simplenergy:custom_blocks/elite_battery/place_main [ at @s ]
 #
 
 # Add convention and utils tags, and the custom block tag

@@ -2,7 +2,34 @@
 #> simplenergy:custom_blocks/simplunium_ore/place_main
 #
 # @within	simplenergy:custom_blocks/place
-#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~-0.4 ~-0.4 ~-0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~-0.4 ~-0.4 ~0.0 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~-0.4 ~-0.4 ~0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~-0.4 ~0.0 ~-0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~-0.4 ~0.0 ~0.0 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~-0.4 ~0.0 ~0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~-0.4 ~0.4 ~-0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~-0.4 ~0.4 ~0.0 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~-0.4 ~0.4 ~0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.0 ~-0.4 ~-0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.0 ~-0.4 ~0.0 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.0 ~-0.4 ~0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.0 ~0.0 ~-0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.0 ~0.0 ~0.0 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.0 ~0.0 ~0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.0 ~0.4 ~-0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.0 ~0.4 ~0.0 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.0 ~0.4 ~0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.4 ~-0.4 ~-0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.4 ~-0.4 ~0.0 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.4 ~-0.4 ~0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.4 ~0.0 ~-0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.4 ~0.0 ~0.0 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.4 ~0.0 ~0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.4 ~0.4 ~-0.4 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.4 ~0.4 ~0.0 ]
+#			simplenergy:calls/smart_ore_generation/veins/simplunium_ore [ at @s & positioned ~0.4 ~0.4 ~0.4 ]
 #
 
 tag @s add simplenergy.placer

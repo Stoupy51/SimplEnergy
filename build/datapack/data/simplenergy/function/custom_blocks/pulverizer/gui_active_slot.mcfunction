@@ -1,6 +1,8 @@
 
 #> simplenergy:custom_blocks/pulverizer/gui_active_slot
 #
+# @executed	as @e[tag=simplenergy.tick] & at @s
+#
 # @within	simplenergy:custom_blocks/pulverizer/work {"index":0,"slot":9,"result":18}
 #			simplenergy:custom_blocks/pulverizer/work {"index":1,"slot":10,"result":19}
 #			simplenergy:custom_blocks/pulverizer/work {"index":2,"slot":11,"result":20}

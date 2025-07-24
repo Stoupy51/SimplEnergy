@@ -1,6 +1,8 @@
 
 #> simplenergy:utils/battery_switcher/right_click/main
 #
+# @executed	as the player & at current position
+#
 # @within	simplenergy:utils/on_right_click
 #
 

@@ -1,6 +1,8 @@
 
 #> simplenergy:utils/multimeter/passive/remove_markers
 #
+# @executed	as @n[scores={energy.max_storage=1..},distance=..1.5] & at @s & align xyz
+#
 # @within	simplenergy:utils/multimeter/passive/found_entity 1t replace
 #			simplenergy:utils/multimeter/passive/remove_markers 1t replace
 #

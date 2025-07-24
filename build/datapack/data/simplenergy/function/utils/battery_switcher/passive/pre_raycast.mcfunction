@@ -1,7 +1,9 @@
 
 #> simplenergy:utils/battery_switcher/passive/pre_raycast
 #
-# @within	simplenergy:utils/passive_offhand
+# @executed	anchored eyes & positioned ^ ^ ^.2
+#
+# @within	simplenergy:utils/passive_offhand [ anchored eyes & positioned ^ ^ ^.2 ]
 #
 
 # If no battery found (no state), set custom model data to default

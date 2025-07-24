@@ -1,7 +1,9 @@
 
 #> simplenergy:custom_blocks/electric_brewing_stand/replace_item
 #
-# @within	simplenergy:custom_blocks/electric_brewing_stand/destroy
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:brewing_stand"}},distance=..1]
+#
+# @within	simplenergy:custom_blocks/electric_brewing_stand/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:brewing_stand"}},distance=..1] ]
 #
 
 data modify entity @s Item.components set from storage simplenergy:items all.electric_brewing_stand.components

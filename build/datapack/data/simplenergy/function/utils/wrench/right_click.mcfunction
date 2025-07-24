@@ -1,6 +1,8 @@
 
 #> simplenergy:utils/wrench/right_click
 #
+# @executed	as the player & at current position
+#
 # @within	simplenergy:utils/on_right_click
 #
 

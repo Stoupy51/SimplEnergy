@@ -1,7 +1,9 @@
 
 #> simplenergy:balancing/elite_battery/found
 #
-# @within	simplenergy:balancing/elite_battery/found
+# @executed	as @e[tag=...,dx=0,dy=0,dz=0] & at @s
+#
+# @within	simplenergy:balancing/elite_battery/found [ as @e[tag=...,dx=0,dy=0,dz=0] & at @s ]
 #			simplenergy:balancing/elite_battery/main
 #
 

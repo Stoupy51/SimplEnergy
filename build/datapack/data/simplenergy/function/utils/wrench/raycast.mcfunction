@@ -1,8 +1,10 @@
 
 #> simplenergy:utils/wrench/raycast
 #
-# @within	simplenergy:utils/wrench/right_click
-#			simplenergy:utils/wrench/raycast
+# @executed	anchored eyes & positioned ^ ^ ^.2
+#
+# @within	simplenergy:utils/wrench/right_click [ anchored eyes & positioned ^ ^ ^.2 ]
+#			simplenergy:utils/wrench/raycast [ positioned ^ ^ ^.2 ]
 #
 
 # Stop case when raycast hits a block that is from wrench_raycast tag

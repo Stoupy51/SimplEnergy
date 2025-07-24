@@ -1,6 +1,8 @@
 
 #> simplenergy:utils/multimeter/passive/stop_case
 #
+# @executed	anchored eyes & positioned ^ ^ ^.2
+#
 # @within	simplenergy:utils/multimeter/passive/main
 #
 

@@ -1,7 +1,25 @@
 
 #> simplenergy:custom_blocks/simple_cable/place_main
 #
-# @within	simplenergy:custom_blocks/_player_head/search_simple_cable_z
+# @executed	positioned ~ ~ ~-8
+#
+# @within	simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~-8 ]
+#			simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~-7 ]
+#			simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~-6 ]
+#			simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~-5 ]
+#			simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~-4 ]
+#			simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~-3 ]
+#			simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~-2 ]
+#			simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~-1 ]
+#			simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~0 ]
+#			simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~1 ]
+#			simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~2 ]
+#			simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~3 ]
+#			simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~4 ]
+#			simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~5 ]
+#			simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~6 ]
+#			simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~7 ]
+#			simplenergy:custom_blocks/_player_head/search_simple_cable_z [ positioned ~ ~ ~8 ]
 #
 
 tag @s add simplenergy.placer

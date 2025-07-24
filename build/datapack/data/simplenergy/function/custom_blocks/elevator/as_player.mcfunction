@@ -1,7 +1,9 @@
 
 #> simplenergy:custom_blocks/elevator/as_player
 #
-# @within	simplenergy:custom_blocks/elevator/tick
+# @executed	positioned ~ ~1 ~ & as @a[distance=..1,dx=0,dz=0]
+#
+# @within	simplenergy:custom_blocks/elevator/tick [ positioned ~ ~1 ~ & as @a[distance=..1,dx=0,dz=0] ]
 #
 
 # Compute the time difference between the player and the elevator, and stop if too high (5 ticks)

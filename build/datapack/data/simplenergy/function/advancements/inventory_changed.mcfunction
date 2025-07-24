@@ -1,6 +1,8 @@
 
 #> simplenergy:advancements/inventory_changed
 #
+# @executed	as the player & at current position
+#
 # @within	advancement simplenergy:inventory_changed
 #
 

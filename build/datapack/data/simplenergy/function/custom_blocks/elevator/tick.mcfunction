@@ -1,6 +1,8 @@
 
 #> simplenergy:custom_blocks/elevator/tick
 #
+# @executed	as @e[tag=simplenergy.tick] & at @s
+#
 # @within	simplenergy:custom_blocks/tick
 #
 

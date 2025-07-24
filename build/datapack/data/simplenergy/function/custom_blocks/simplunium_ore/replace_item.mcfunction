@@ -1,7 +1,9 @@
 
 #> simplenergy:custom_blocks/simplunium_ore/replace_item
 #
-# @within	simplenergy:custom_blocks/simplunium_ore/destroy
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:polished_deepslate"}},distance=..1]
+#
+# @within	simplenergy:custom_blocks/simplunium_ore/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:polished_deepslate"}},distance=..1] ]
 #
 
 # If silk touch applied

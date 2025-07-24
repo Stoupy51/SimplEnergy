@@ -1,7 +1,9 @@
 
 #> simplenergy:custom_blocks/advanced_cable/replace_item
 #
-# @within	simplenergy:custom_blocks/advanced_cable/destroy
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:player_head"}},distance=..1]
+#
+# @within	simplenergy:custom_blocks/advanced_cable/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:player_head"}},distance=..1] ]
 #
 
 data modify entity @s Item.components set from storage simplenergy:items all.advanced_cable.components

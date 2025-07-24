@@ -1,6 +1,8 @@
 
 #> simplenergy:calls/update_energy_lore/main
 #
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:copper_block"}},distance=..1]
+#
 # @within	#energy:v1/update_energy_lore/main
 #			simplenergy:utils/keep_energy
 #

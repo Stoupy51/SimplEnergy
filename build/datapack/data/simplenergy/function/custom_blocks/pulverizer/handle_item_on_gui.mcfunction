@@ -1,6 +1,8 @@
 
 #> simplenergy:custom_blocks/pulverizer/handle_item_on_gui
 #
+# @executed	as @e[tag=simplenergy.tick] & at @s
+#
 # @within	simplenergy:custom_blocks/pulverizer/gui_passive_slot {"index":$(index),"slot":$(slot)}
 #
 
