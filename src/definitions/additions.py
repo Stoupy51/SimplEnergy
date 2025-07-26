@@ -335,6 +335,33 @@ def main_additions() -> None:
 			WIKI_COMPONENT: [
 				{"text":"Item transport cable.","color":"yellow"},
 				{"text":"\nConnects machines and storage for item transfer","color":"gray"},
+				{"text":"\nRequires both Servo Extractor and Servo Inserter","color":"gray"},
+			],
+		},
+		"servo_extractor": {
+			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: "energy",
+			"custom_data": {ns: {"stack_limit":4, "retry_limit": 1}},
+			OVERRIDE_MODEL: {"parent":f"{ns}:block/servo/extract_item", "textures": None},
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CRC","SPS"," E "],"ingredients":{"C":ingr_repr("basic_item_cable", ns),"R":ingr_repr("minecraft:redstone_block"),"S":ingr_repr("simplunium_ingot", ns),"P":ingr_repr("minecraft:comparator"),"E":ingr_repr("minecraft:emerald")}},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Item extraction servo-mechanism.","color":"yellow"},
+				{"text":"\nExtracts items from containers when placed on valid output faces","color":"gray"},
+				{"text":"\nMust be connected to Basic Item Cable for item transport","color":"gray"},
+			],
+		},
+		"servo_inserter": {
+			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: "energy",
+			"custom_data": {ns: {"stack_limit":4, "retry_limit": 1}},
+			OVERRIDE_MODEL: {"parent":f"{ns}:block/servo/insert_item", "textures": None},
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":[" D ","SPS","CRC"],"ingredients":{"C":ingr_repr("basic_item_cable", ns),"R":ingr_repr("minecraft:redstone_block"),"S":ingr_repr("simplunium_ingot", ns),"P":ingr_repr("minecraft:comparator"),"D":ingr_repr("minecraft:diamond")}},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Item insertion servo-mechanism.","color":"yellow"},
+				{"text":"\nInserts items into containers when placed on valid input faces","color":"gray"},
+				{"text":"\nMust be connected to Basic Item Cable for item transport","color":"gray"},
 			],
 		},
 
@@ -368,6 +395,8 @@ def main_additions() -> None:
 	additions["advanced_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["advanced_cable"]["profile"]) + "}"}
 	additions["elite_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["elite_cable"]["profile"]) + "}"}
 	additions["basic_item_cable"][VANILLA_BLOCK] = {"id": "minecraft:conduit[waterlogged=false]", "apply_facing": False}
+	additions["servo_extractor"][VANILLA_BLOCK] = {"contents": True}	# Item frame custom block entity
+	additions["servo_inserter"][VANILLA_BLOCK] = {"contents": True}		# Item frame custom block entity
 
 	additions["manual"] = {
 		"id": "minecraft:written_book", "category": MISC,

@@ -556,12 +556,34 @@
 		"id": "minecraft:furnace",
 		"category": "energy",
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 8,"category": "misc","shape": ["SGS"],"ingredients": {"S": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}},"G": {"item": "minecraft:glass"}}},{"type": "crafting_shaped","result_count": 8,"category": "misc","shape": ["S","G","S"],"ingredients": {"S": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}},"G": {"item": "minecraft:glass"}}}],
-		"wiki_components": [{"text": "Item transport cable.","color": "yellow"},{"text": "\nConnects machines and storage for item transfer","color": "gray"}],
+		"wiki_components": [{"text": "Item transport cable.","color": "yellow"},{"text": "\nConnects machines and storage for item transfer","color": "gray"},{"text": "\nRequires both Servo Extractor and Servo Inserter","color": "gray"}],
 		"vanilla_block": {"id": "minecraft:conduit[waterlogged=false]","apply_facing": false},
 		"item_model": "simplenergy:basic_item_cable",
 		"item_name": {"text": "Basic Item Cable"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"custom_data": {"simplenergy": {"basic_item_cable": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"servo_extractor": {
+		"id": "minecraft:item_frame",
+		"category": "energy",
+		"custom_data": {"simplenergy": {"stack_limit": 4,"retry_limit": 1,"servo_extractor": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["CRC","SPS"," E "],"ingredients": {"C": {"components": {"minecraft:custom_data": {"simplenergy": {"basic_item_cable": true}}}},"R": {"item": "minecraft:redstone_block"},"S": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}},"P": {"item": "minecraft:comparator"},"E": {"item": "minecraft:emerald"}}}],
+		"wiki_components": [{"text": "Item extraction servo-mechanism.","color": "yellow"},{"text": "\nExtracts items from containers when placed on valid output faces","color": "gray"},{"text": "\nMust be connected to Basic Item Cable for item transport","color": "gray"}],
+		"vanilla_block": {"contents": true},
+		"item_model": "simplenergy:servo_extractor",
+		"item_name": {"text": "Servo Extractor"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]]
+	},
+	"servo_inserter": {
+		"id": "minecraft:item_frame",
+		"category": "energy",
+		"custom_data": {"simplenergy": {"stack_limit": 4,"retry_limit": 1,"servo_inserter": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": [" D ","SPS","CRC"],"ingredients": {"C": {"components": {"minecraft:custom_data": {"simplenergy": {"basic_item_cable": true}}}},"R": {"item": "minecraft:redstone_block"},"S": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}},"P": {"item": "minecraft:comparator"},"D": {"item": "minecraft:diamond"}}}],
+		"wiki_components": [{"text": "Item insertion servo-mechanism.","color": "yellow"},{"text": "\nInserts items into containers when placed on valid input faces","color": "gray"},{"text": "\nMust be connected to Basic Item Cable for item transport","color": "gray"}],
+		"vanilla_block": {"contents": true},
+		"item_model": "simplenergy:servo_inserter",
+		"item_name": {"text": "Servo Inserter"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]]
 	},
 	"manual": {
 		"id": "minecraft:written_book",

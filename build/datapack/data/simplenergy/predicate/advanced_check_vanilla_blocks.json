@@ -13,6 +13,7 @@
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_iron_trapdoor\"]}","location": {"block": {"blocks": "minecraft:iron_trapdoor"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_player_head\"]}","location": {"block": {"blocks": "minecraft:player_head"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_polished_deepslate\"]}","location": {"block": {"blocks": "minecraft:polished_deepslate"}}}},
-		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_raw_iron_block\"]}","location": {"block": {"blocks": "minecraft:raw_iron_block"}}}}
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_raw_iron_block\"]}","location": {"block": {"blocks": "minecraft:raw_iron_block"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_item_frame\"]}","slots": {"contents": {"predicates": {"minecraft:custom_data": {"simplenergy": {"item_frame_destroy": true}}}}}}}
 	]
 }

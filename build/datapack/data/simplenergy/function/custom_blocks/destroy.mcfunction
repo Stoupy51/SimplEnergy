@@ -4,9 +4,10 @@
 # @executed	as @e[type=item_display,tag=...,predicate=!simplenergy:check_vanilla_blocks] & at @s
 #
 # @within	simplenergy:v2.0.8/tick_2 [ as @e[type=item_display,tag=...,predicate=!simplenergy:check_vanilla_blocks] & at @s ]
-#			simplenergy:v2.0.8/second [ as @e[type=item_display,tag=...,predicate=!simplenergy:advanced_check_vanilla_blocks] & at @s ]
+#			simplenergy:v2.0.8/second [ as @e[type=#simplenergy:custom_blocks,tag=...,predicate=!simplenergy:advanced_check_vanilla_blocks] & at @s ]
 #			simplenergy:v2.0.8/second_5 [ as @e[type=item_display,tag=simplenergy.custom_block,predicate=!simplenergy:advanced_check_vanilla_blocks] & at @s ]
 #			simplenergy:calls/common_signals/on_ore_destroyed [ as @e[tag=simplenergy.custom_block,dx=0,dy=0,dz=0] & at @s ]
+#			simplenergy:calls/common_signals/on_item_frame_destroy [ as @e[tag=simplenergy.custom_block,dx=0,dy=0,dz=0] & at @s ]
 #			simplenergy:calls/mechanization/wrench_break
 #
 
@@ -23,4 +24,5 @@ execute if score #total_vanilla_iron_trapdoor simplenergy.data matches 1.. if en
 execute if score #total_vanilla_player_head simplenergy.data matches 1.. if entity @s[tag=simplenergy.vanilla.minecraft_player_head] unless block ~ ~ ~ minecraft:player_head run function simplenergy:custom_blocks/_groups/minecraft_player_head
 execute if score #total_vanilla_polished_deepslate simplenergy.data matches 1.. if entity @s[tag=simplenergy.vanilla.minecraft_polished_deepslate] unless block ~ ~ ~ minecraft:polished_deepslate run function simplenergy:custom_blocks/_groups/minecraft_polished_deepslate
 execute if score #total_vanilla_raw_iron_block simplenergy.data matches 1.. if entity @s[tag=simplenergy.vanilla.minecraft_raw_iron_block] unless block ~ ~ ~ minecraft:raw_iron_block run function simplenergy:custom_blocks/_groups/minecraft_raw_iron_block
+execute if score #total_vanilla_item_frame simplenergy.data matches 1.. if entity @s[tag=simplenergy.vanilla.minecraft_item_frame] unless items entity @s contents *[minecraft:custom_data~{simplenergy:{item_frame_destroy:true}}] run function simplenergy:custom_blocks/_groups/minecraft_item_frame
 

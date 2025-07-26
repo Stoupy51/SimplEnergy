@@ -17,7 +17,6 @@ scoreboard players remove #total_basic_item_cable simplenergy.data 1
 # Kill the custom block entity
 kill @s
 
-
 # Item cable destruction cleanup
 function #itemio:calls/cables/destroy
 

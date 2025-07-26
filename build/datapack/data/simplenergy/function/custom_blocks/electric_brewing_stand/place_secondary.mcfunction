@@ -19,7 +19,7 @@ tag @s add simplenergy.vanilla.minecraft_brewing_stand
 data merge entity @s {"CustomName": {"translate": "simplenergy.electric_brewing_stand"}}
 
 # Modify item display entity to match the custom block
-item replace entity @s container.0 with minecraft:furnace[item_model="simplenergy:electric_brewing_stand"]
+item replace entity @s contents with minecraft:furnace[item_model="simplenergy:electric_brewing_stand"]
 data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 data modify entity @s brightness set value {block:15,sky:15}
 

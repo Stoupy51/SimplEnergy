@@ -8,6 +8,7 @@ from stewbeet.contrib.simplenergy import (
 	insert_lib_calls,
 	item_cables_models,
 	keep_energy_for_batteries,
+	servo_mechanisms_models,
 	setup_energy_balancing,
 	setup_gui_in_resource_packs,
 	setup_wrench,
@@ -57,8 +58,12 @@ def beet_default(ctx: Context) -> None:
 	# Setup energy cables models
 	energy_cables_models(["simple_cable", "advanced_cable", "elite_cable"])
 
-	# Setup item cables models
+	# Setup item cables models and servo mechanisms
 	item_cables_models({"basic_item_cable":{"0":"basic_item_cable/center","1":"basic_item_cable/pillon","2":"basic_item_cable/glass"}})
+	servo_mechanisms_models({
+		"servo_extractor":	{"type": "extract", "default": "servo/extract_default", "connected": "servo/extract_connected"},
+		"servo_inserter":	{"type": "insert",  "default": "servo/insert_default",  "connected": "servo/insert_connected"},
+	})
 
 	# Setup custom ore generation
 	setup_custom_ore_generation()
