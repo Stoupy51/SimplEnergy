@@ -34,6 +34,7 @@ data modify entity @s transformation.translation[1] set value 0.002f
 		default_model: str = Mem.definitions[gen]["item_model"]
 		working_model: str = default_model + "_on"
 		gui_slot: int = 0 if gen == "furnace_generator" else 1
+		input_slot: int = 1 if gen == "furnace_generator" else 0
 
 		# If redstone generator, add logic to consume redstone for fuel
 		redstone_generator: str = ""
@@ -73,6 +74,14 @@ execute store result score #count {ns}.data run data get block ~ ~ ~ Items[{{Slo
 scoreboard players remove #count {ns}.data 1
 execute if score #count {ns}.data matches 1.. store result block ~ ~ ~ Items[{{Slot:0b}}].count int 1 run scoreboard players get #count {ns}.data
 execute if score #count {ns}.data matches 0 run data remove block ~ ~ ~ Items[{{Slot:0b}}]
+""")
+
+		write_function(f"{ns}:custom_blocks/{gen}/place_secondary", f"""
+# ItemIO compatibility
+tag @s add itemio.container
+tag @s add itemio.container.hopper
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value [{{"Slot":{input_slot},"mode":"input","allowed_side":{{"north":true,"south":true,"east":true,"west":true,"top":true}}}}]
+function #itemio:calls/container/init
 """)
 
 	# Electric Smelter & Electric Furnace & Electric Brewing Stand
@@ -141,6 +150,23 @@ execute if score #burn_time {ns}.data matches 21.. run scoreboard players set #b
 execute if score #old_burn_time {ns}.data matches ..200 store result block ~ ~ ~ {burn} {burn_type} 1 run scoreboard players get #burn_time {ns}.data
 """
 		write_function(f"{ns}:custom_blocks/{machine}/work", content)
+		output_list: list[str] = []
+		if machine == "electric_brewing_stand":
+			output_list.append('data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":0,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}')
+			output_list.append('data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":1,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}')
+			output_list.append('data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}')
+		else:
+			output_list.append('data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}')
+		outputs: str = "\n".join(output_list)
+		write_function(f"{ns}:custom_blocks/{machine}/place_secondary", f"""
+# ItemIO compatibility
+tag @s add itemio.container
+tag @s add itemio.container.hopper
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value []
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {{"Slot":{ingr_slot},"mode":"input","allowed_side":{{"north":true,"south":true,"east":true,"west":true,"top":true}}}}
+{outputs}
+function #itemio:calls/container/init
+""")
 
 	# Cauldron Generator
 	energy: dict = Mem.definitions["cauldron_generator"]["custom_data"]["energy"]
