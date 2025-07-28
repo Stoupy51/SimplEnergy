@@ -37,6 +37,12 @@ scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
+# ItemIO compatibility
+tag @s add itemio.container
+tag @s add itemio.container.hopper
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value [{"Slot":0,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}]
+function #itemio:calls/container/init
+
 # Add tag for loop every second
 tag @s add simplenergy.second
 scoreboard players add #second_entities simplenergy.data 1

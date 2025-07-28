@@ -31,6 +31,16 @@ scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
+# ItemIO compatibility
+tag @s add itemio.container
+tag @s add itemio.container.hopper
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value []
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":3,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":0,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":1,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}
+function #itemio:calls/container/init
+
 # Rotate the entity and set scale
 data modify entity @s Rotation[0] set value 180.0f
 data modify entity @s transformation.scale[1] set value 1.025f
