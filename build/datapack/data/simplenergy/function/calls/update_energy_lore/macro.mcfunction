@@ -1,7 +1,7 @@
 
 #> simplenergy:calls/update_energy_lore/macro
 #
-# @executed	as @n[type=item,nbt={Item:{id:"minecraft:copper_block"}},distance=..1]
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:waxed_copper_block"}},distance=..1]
 #
 # @within	simplenergy:calls/update_energy_lore/main with storage simplenergy:temp macro
 #

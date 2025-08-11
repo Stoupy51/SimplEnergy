@@ -8,6 +8,7 @@ scoreboard players add #tick_entities simplenergy.data 0
 scoreboard players add #second_entities simplenergy.data 0
 scoreboard players add #total_custom_blocks simplenergy.data 0
 scoreboard players add #total_vanilla_item_frame simplenergy.data 0
+scoreboard players add #total_vanilla_waxed_copper_block simplenergy.data 0
 scoreboard players add #total_vanilla_raw_iron_block simplenergy.data 0
 scoreboard players add #total_vanilla_polished_deepslate simplenergy.data 0
 scoreboard players add #total_vanilla_player_head simplenergy.data 0
@@ -16,7 +17,6 @@ scoreboard players add #total_vanilla_iron_block simplenergy.data 0
 scoreboard players add #total_vanilla_gold_block simplenergy.data 0
 scoreboard players add #total_vanilla_furnace simplenergy.data 0
 scoreboard players add #total_vanilla_daylight_detector simplenergy.data 0
-scoreboard players add #total_vanilla_copper_block simplenergy.data 0
 scoreboard players add #total_vanilla_conduit simplenergy.data 0
 scoreboard players add #total_vanilla_cauldron simplenergy.data 0
 scoreboard players add #total_vanilla_brewing_stand simplenergy.data 0
@@ -77,7 +77,6 @@ tellraw @s [{"translate": "simplenergy.vanilla_minecraft_barrel","color":"gray"}
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_brewing_stand","color":"gray"},{"score":{"name":"#total_vanilla_brewing_stand","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_cauldron","color":"gray"},{"score":{"name":"#total_vanilla_cauldron","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_conduit","color":"gray"},{"score":{"name":"#total_vanilla_conduit","objective":"simplenergy.data"},"color":"white"}]
-tellraw @s [{"translate": "simplenergy.vanilla_minecraft_copper_block","color":"gray"},{"score":{"name":"#total_vanilla_copper_block","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_daylight_detector","color":"gray"},{"score":{"name":"#total_vanilla_daylight_detector","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_furnace","color":"gray"},{"score":{"name":"#total_vanilla_furnace","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_gold_block","color":"gray"},{"score":{"name":"#total_vanilla_gold_block","objective":"simplenergy.data"},"color":"white"}]
@@ -86,6 +85,7 @@ tellraw @s [{"translate": "simplenergy.vanilla_minecraft_iron_trapdoor","color":
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_player_head","color":"gray"},{"score":{"name":"#total_vanilla_player_head","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_polished_deepslate","color":"gray"},{"score":{"name":"#total_vanilla_polished_deepslate","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_raw_iron_block","color":"gray"},{"score":{"name":"#total_vanilla_raw_iron_block","objective":"simplenergy.data"},"color":"white"}]
+tellraw @s [{"translate": "simplenergy.vanilla_minecraft_waxed_copper_block","color":"gray"},{"score":{"name":"#total_vanilla_waxed_copper_block","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_item_frame","color":"gray"},{"score":{"name":"#total_vanilla_item_frame","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.total_custom_blocks","color":"dark_aqua"},{"score":{"name":"#total_custom_blocks","objective":"simplenergy.data"},"color":"aqua"}]
 tellraw @s [{"translate": "simplenergy.second_tag_function","color":"green"},{"score":{"name":"#second_entities","objective":"simplenergy.data"},"color":"dark_green"}]

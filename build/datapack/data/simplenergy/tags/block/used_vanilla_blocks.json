@@ -3,7 +3,6 @@
 		"minecraft:barrel",
 		"minecraft:brewing_stand",
 		"minecraft:conduit",
-		"minecraft:copper_block",
 		"minecraft:daylight_detector",
 		"minecraft:furnace",
 		"minecraft:gold_block",
@@ -12,6 +11,7 @@
 		"minecraft:player_head",
 		"minecraft:polished_deepslate",
 		"minecraft:raw_iron_block",
+		"minecraft:waxed_copper_block",
 		"#minecraft:cauldrons"
 	]
 }

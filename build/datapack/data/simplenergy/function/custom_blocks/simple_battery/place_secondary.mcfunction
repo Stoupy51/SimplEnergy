@@ -13,7 +13,7 @@ tag @s add smithed.entity
 tag @s add smithed.block
 tag @s add simplenergy.custom_block
 tag @s add simplenergy.simple_battery
-tag @s add simplenergy.vanilla.minecraft_copper_block
+tag @s add simplenergy.vanilla.minecraft_waxed_copper_block
 
 # Add a custom name
 data merge entity @s {"CustomName": {"translate": "simplenergy.simple_battery"}}

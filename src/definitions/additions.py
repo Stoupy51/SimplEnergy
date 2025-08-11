@@ -376,7 +376,7 @@ def main_additions() -> None:
 	additions["simplunium_block"] = {VANILLA_BLOCK: {"id": "minecraft:iron_block", "apply_facing": False}}
 	additions["raw_simplunium_block"] = {VANILLA_BLOCK: {"id": "minecraft:raw_iron_block", "apply_facing": False}}
 	additions["machine_block"][VANILLA_BLOCK] = {"id": "minecraft:iron_block", "apply_facing": False}
-	additions["simple_battery"][VANILLA_BLOCK] = {"id": "minecraft:copper_block", "apply_facing": False}
+	additions["simple_battery"][VANILLA_BLOCK] = {"id": "minecraft:waxed_copper_block", "apply_facing": False}
 	additions["advanced_battery"][VANILLA_BLOCK] = {"id": "minecraft:gold_block", "apply_facing": False}
 	additions["elite_battery"][VANILLA_BLOCK] = {"id": "minecraft:iron_block", "apply_facing": False}
 	additions["creative_battery"][VANILLA_BLOCK] = {"id": "minecraft:iron_block", "apply_facing": False}
