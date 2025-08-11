@@ -363,7 +363,7 @@
 		"custom_data": {"energy": {"storage": 0,"max_storage": 10000},"simplenergy": {"simple_battery": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["CCC","CRC","III"],"ingredients": {"C": {"item": "minecraft:copper_block"},"R": {"item": "minecraft:redstone"},"I": {"item": "minecraft:iron_ingot"}}},{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["CCC","CIC","RRR"],"ingredients": {"C": {"item": "minecraft:copper_block"},"R": {"item": "minecraft:redstone_block"},"I": {"item": "minecraft:iron_ingot"}}}],
 		"wiki_components": [{"text": "Basic energy storage device.","color": "yellow"},{"text": "\nStores up to 10,000 kJ","color": "gray"},{"text": "\nModes: Input Only, Output Only, Both (use Battery Switcher)","color": "gray"},{"text": "\nBreaking the battery preserves stored energy","color": "gray"},{"text": "\nBalances energy storage with adjacent simple batteries","color": "gray"}],
-		"vanilla_block": {"id": "minecraft:copper_block","apply_facing": false},
+		"vanilla_block": {"id": "minecraft:waxed_copper_block","apply_facing": false},
 		"lore": [{"text": "[Energy Storage: 10 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"item_model": "simplenergy:simple_battery",
 		"item_name": {"text": "Simple Battery"}
