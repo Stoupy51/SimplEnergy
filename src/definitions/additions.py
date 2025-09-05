@@ -1,7 +1,21 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet.core import *
+from stewbeet import (
+	CATEGORY,
+	CUSTOM_BLOCK_ALTERNATIVE,
+	CUSTOM_BLOCK_HEAD,
+	CUSTOM_BLOCK_VANILLA,
+	CUSTOM_ITEM_VANILLA,
+	OVERRIDE_MODEL,
+	RESULT_OF_CRAFTING,
+	VANILLA_BLOCK,
+	WIKI_COMPONENT,
+	JsonDict,
+	Mem,
+	TextComponent,
+	ingr_repr,
+)
 from stouputils.print import info
 
 # Constants
@@ -23,7 +37,7 @@ def main_additions() -> None:
 	ns: str = Mem.ctx.project_id
 
 	# Give Additional data for every item
-	additions = {
+	additions: dict[str, JsonDict] = {
 
 		# Miscellaneous items
 		"multimeter": {
