@@ -4,6 +4,9 @@
 			"path": "."
 		},
 		{
+			"path": "../StardustFragment"
+		},
+		{
 			"path": "../StewBeet"
 		}
 	],
