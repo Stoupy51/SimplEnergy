@@ -1,8 +1,21 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet import *
-from stouputils.io import get_root_path
+from stewbeet import (
+    Advancement,
+	BlockTag,
+	FunctionTag,
+	ItemModifier,
+	JsonDict,
+	Mem,
+	Predicate,
+	set_json_encoder,
+	write_function,
+	write_load_file,
+	write_tick_file,
+	write_versioned_function,
+)
+from stouputils.io import get_root_path, super_json_dump
 
 # Constants
 ROOT: str = get_root_path(__file__)
@@ -77,7 +90,7 @@ tellraw @s ["",{{"text":"Markers on furnaces: ","color":"gray"}},{{"score":{{"na
 
 
 	# Check daylight power predicate
-	json_content: dict = {"condition":"minecraft:any_of","terms":[{"condition":"minecraft:location_check","predicate":{"block":{"state":{"inverted":"false","power":{"min":"10","max":"15"}}}}},{"condition":"minecraft:location_check","predicate":{"block":{"state":{"inverted":"true","power":{"min":"0","max":"5"}}}}}]}
+	json_content: JsonDict = {"condition":"minecraft:any_of","terms":[{"condition":"minecraft:location_check","predicate":{"block":{"state":{"inverted":"false","power":{"min":"10","max":"15"}}}}},{"condition":"minecraft:location_check","predicate":{"block":{"state":{"inverted":"true","power":{"min":"0","max":"5"}}}}}]}
 	Mem.ctx.data[ns].predicates["check_daylight_power"] = set_json_encoder(Predicate(json_content), max_level = -1)
 
 
@@ -109,12 +122,12 @@ data remove storage {ns}:main OffhandTag
 data remove storage {ns}:main SelectedItemTag
 scoreboard players reset @s {ns}.right_click
 """)
-	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":[{"condition":"minecraft:entity_scores","entity":"this","scores":{f"{ns}.right_click":{"min":1}}}]}}},"requirements":[["requirement"]],"rewards":{"function":f"{ns}:utils/on_right_click"}}
+	json_content: JsonDict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":[{"condition":"minecraft:entity_scores","entity":"this","scores":{f"{ns}.right_click":{"min":1}}}]}}},"requirements":[["requirement"]],"rewards":{"function":f"{ns}:utils/on_right_click"}}
 	Mem.ctx.data[ns].advancements["right_click"] = set_json_encoder(Advancement(json_content), max_level = -1)
 
 
 	# Setup wrench stuff
-	json_content: dict = {"values": [f"{ns}:utils/wrench/rotate/furnace"]}
+	json_content: JsonDict = {"values": [f"{ns}:utils/wrench/rotate/furnace"]}
 	Mem.ctx.data[ns].function_tags["calls/wrench_rotate"] = set_json_encoder(FunctionTag(json_content), max_level = -1)
 	write_function(f"{ns}:utils/wrench/right_click", f"""
 # Look at where player is looking at and stop when found a block
@@ -345,7 +358,7 @@ execute if score #success {ns}.data matches 1 run schedule function {ns}:utils/b
 
 
 	# Setup first_join advancement
-	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:tick"}},"requirements":[["requirement"]],"rewards":{"function":f"{ns}:advancements/first_join"}}
+	json_content: JsonDict = {"criteria":{"requirement":{"trigger":"minecraft:tick"}},"requirements":[["requirement"]],"rewards":{"function":f"{ns}:advancements/first_join"}}
 	Mem.ctx.data[ns].advancements["first_join"] = set_json_encoder(Advancement(json_content), max_level = -1)
 	write_function(f"{ns}:advancements/first_join", f"""
 execute unless score #{ns}.loaded load.status matches 1 run advancement revoke @s only {ns}:first_join
@@ -354,7 +367,7 @@ execute if score #{ns}.loaded load.status matches 1 run loot give @s loot {ns}:i
 
 
 	# Setup inventory_changed advancement
-	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:inventory_changed"}},"requirements":[["requirement"]],"rewards":{"function":f"{ns}:advancements/inventory_changed"}}
+	json_content: JsonDict = {"criteria":{"requirement":{"trigger":"minecraft:inventory_changed"}},"requirements":[["requirement"]],"rewards":{"function":f"{ns}:advancements/inventory_changed"}}
 	Mem.ctx.data[ns].advancements["inventory_changed"] = set_json_encoder(Advancement(json_content), max_level = -1)
 	write_function(f"{ns}:advancements/inventory_changed", f"""
 # Revoke advancement
