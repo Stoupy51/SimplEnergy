@@ -42,7 +42,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]]
 	},
 	"simplunium_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:iron_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"simplunium": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_helmet": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}}}}],
@@ -54,7 +54,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]]
 	},
 	"simplunium_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:iron_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"simplunium": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_chestplate": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","XXX","XXX"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}}}}],
@@ -66,7 +66,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]]
 	},
 	"simplunium_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:iron_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"simplunium": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_leggings": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["XXX","X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}}}}],
@@ -78,7 +78,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]]
 	},
 	"simplunium_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:iron_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"simplunium": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_boots": true}},
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["X X","X X"],"ingredients": {"X": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}}}}],

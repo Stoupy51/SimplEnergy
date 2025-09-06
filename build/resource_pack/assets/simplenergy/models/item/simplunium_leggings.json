@@ -1,7 +1,6 @@
 {
-	"parent": "minecraft:item/leather_leggings",
+	"parent": "minecraft:item/iron_leggings",
 	"textures": {
-		"layer0": "simplenergy:item/simplunium_leggings",
-		"layer1": "simplenergy:item/simplunium_leggings"
+		"layer0": "simplenergy:item/simplunium_leggings"
 	}
 }
