@@ -200,6 +200,7 @@
 		{"type": "bitmap","file": "simplenergy:font/high_res/blue_stained_glass_pane.png","ascent": 7,"height": 16,"chars": ["茔"]},
 		{"type": "bitmap","file": "simplenergy:font/wiki_icons/simplenergy_electric_smelter.png","ascent": 8,"height": 16,"chars": ["茧"]},
 		{"type": "bitmap","file": "simplenergy:font/high_res/redstone_lamp.png","ascent": 7,"height": 16,"chars": ["荎"]},
+		{"type": "bitmap","file": "simplenergy:font/high_res/simple_cable_12.png","ascent": 7,"height": 16,"chars": ["荖"]},
 		{"type": "bitmap","file": "simplenergy:font/high_res/coal.png","ascent": 7,"height": 16,"chars": ["荙"]},
 		{"type": "bitmap","file": "simplenergy:font/high_res/charcoal.png","ascent": 7,"height": 16,"chars": ["荡"]},
 		{"type": "bitmap","file": "simplenergy:font/wiki_icons/simplenergy_advanced_cable.png","ascent": 8,"height": 16,"chars": ["荭"]},

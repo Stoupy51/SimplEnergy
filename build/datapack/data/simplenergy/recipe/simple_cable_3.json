@@ -14,7 +14,7 @@
 	},
 	"result": {
 		"id": "minecraft:player_head",
-		"count": 1,
+		"count": 12,
 		"components": {
 			"minecraft:custom_data": {
 				"energy": {
