@@ -219,17 +219,19 @@
 		{"type": "bitmap","file": "simplenergy:font/none.png","ascent": 0,"height": 2,"chars": ["#"]},
 		{"type": "bitmap","file": "simplenergy:font/none.png","ascent": 0,"height": 1,"chars": ["$"]},
 		{"type": "bitmap","file": "simplenergy:font/none.png","ascent": 7,"height": 16,"chars": ["%"]},
-		{"type": "bitmap","file": "simplenergy:font/invisible_item.png","ascent": 7,"height": 16,"chars": ["1"]},
+		{"type": "bitmap","file": "simplenergy:font/invisible_item.png","ascent": 7,"height": 16,"chars": ["3"]},
 		{"type": "bitmap","file": "simplenergy:font/wiki_information.png","ascent": 8,"height": 16,"chars": ["&"]},
 		{"type": "bitmap","file": "simplenergy:font/wiki_result_of_craft.png","ascent": 8,"height": 16,"chars": ["'"]},
 		{"type": "bitmap","file": "simplenergy:font/wiki_ingredient_of_craft.png","ascent": 8,"height": 16,"chars": ["("]},
 		{"type": "bitmap","file": "simplenergy:font/shaped_3x3.png","ascent": 1,"height": 58,"chars": ["*"]},
 		{"type": "bitmap","file": "simplenergy:font/shaped_2x2.png","ascent": 1,"height": 58,"chars": [")"]},
 		{"type": "bitmap","file": "simplenergy:font/furnace.png","ascent": 1,"height": 58,"chars": ["+"]},
-		{"type": "bitmap","file": "simplenergy:font/pulverizing.png","ascent": 4,"height": 58,"chars": [","]},
-		{"type": "bitmap","file": "simplenergy:font/shaped_3x3.png","ascent": -4,"height": 58,"chars": ["."]},
-		{"type": "bitmap","file": "simplenergy:font/shaped_2x2.png","ascent": -2,"height": 58,"chars": ["-"]},
-		{"type": "bitmap","file": "simplenergy:font/furnace.png","ascent": -3,"height": 58,"chars": ["/"]},
-		{"type": "bitmap","file": "simplenergy:font/pulverizing.png","ascent": -3,"height": 58,"chars": ["0"]}
+		{"type": "bitmap","file": "simplenergy:font/stonecutting.png","ascent": 4,"height": 58,"chars": [","]},
+		{"type": "bitmap","file": "simplenergy:font/pulverizing.png","ascent": 4,"height": 58,"chars": ["-"]},
+		{"type": "bitmap","file": "simplenergy:font/shaped_3x3.png","ascent": -4,"height": 58,"chars": ["/"]},
+		{"type": "bitmap","file": "simplenergy:font/shaped_2x2.png","ascent": -2,"height": 58,"chars": ["."]},
+		{"type": "bitmap","file": "simplenergy:font/furnace.png","ascent": -3,"height": 58,"chars": ["0"]},
+		{"type": "bitmap","file": "simplenergy:font/stonecutting.png","ascent": -3,"height": 58,"chars": ["1"]},
+		{"type": "bitmap","file": "simplenergy:font/pulverizing.png","ascent": -3,"height": 58,"chars": ["2"]}
 	]
 }
