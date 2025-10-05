@@ -1,7 +1,7 @@
 {
 	"simplenergy": " SimplEnergy",
 	"simplenergy.0_kw_at_y50_2_kw_at_y60_20_kw_at_y150": "\n(0 kW at y=50, 2 kW at y=60, ..., 20 kW at y=150)",
-	"simplenergy.111": "1$1$1$\n\n",
+	"simplenergy.333": "3$3$3$\n\n",
 	"simplenergy.a_better_furnace": "A Better Furnace",
 	"simplenergy.a_diagnostic_tool_for_energy_systems": "A diagnostic tool for energy systems.",
 	"simplenergy.a_simple_energy_storage": "A Simple Energy Storage",
@@ -236,6 +236,7 @@
 	"simplenergy.send_receive": "Send & Receive: ",
 	"simplenergy.servo_extractor": "Servo Extractor",
 	"simplenergy.servo_inserter": "Servo Inserter",
+	"simplenergy.shaped_recipe": "Shaped Recipe\n",
 	"simplenergy.simple_battery": "Simple Battery",
 	"simplenergy.simple_cable": "Simple Cable",
 	"simplenergy.simplunium_age": "Simplunium Age",
@@ -256,6 +257,7 @@
 	"simplenergy.slot_unlocker": "Slot Unlocker",
 	"simplenergy.smartoregeneration_v1_7_2": "- [SmartOreGeneration (v1.7.2+)]",
 	"simplenergy.smelt_into_simplunium_ingots_for_crafting": "\nSmelt into Simplunium Ingots for crafting",
+	"simplenergy.smelting": "Smelting\n",
 	"simplenergy.smelts_items_using_electricity_instead_of_fuel_1_5x_faster": "\nSmelts items using electricity instead of fuel (1.5x faster)",
 	"simplenergy.smithed_crafter_v0_7_1": "- [Smithed Crafter (v0.7.1+)]",
 	"simplenergy.smithed_custom_block_v0_7_1": "- [Smithed Custom Block (v0.7.1+)]",
@@ -342,5 +344,6 @@
 	"simplenergy_error_libraries_are_missingplease_download_the_right": "SimplEnergy Error: Libraries are missing\nplease download the right SimplEnergy datapack\nor download each of these libraries one by one:",
 	"simplenergy_error_this_version_is_made_for_minecraft_1_21_8": "SimplEnergy Error: This version is made for Minecraft 1.21.8+.",
 	"simplenergy_manual": "SimplEnergy Manual\n",
+	"simplenergy_pulverizing": "Simplenergy Pulverizing\n",
 	"simplenergy_stats": "\n[SimplEnergy Stats]"
 }
