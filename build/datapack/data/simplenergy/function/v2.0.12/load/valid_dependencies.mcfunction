@@ -12,10 +12,10 @@ execute store result score #game_version simplenergy.data run data get entity @p
 
 # Check if the game version is supported
 scoreboard players set #mcload_error simplenergy.data 0
-execute unless score #game_version simplenergy.data matches 4435.. run scoreboard players set #mcload_error simplenergy.data 1
+execute unless score #game_version simplenergy.data matches 4554.. run scoreboard players set #mcload_error simplenergy.data 1
 
 # Decode errors
-execute if score #mcload_error simplenergy.data matches 1 run tellraw @a {"translate": "simplenergy_error_this_version_is_made_for_minecraft_1_21_8","color":"red"}
+execute if score #mcload_error simplenergy.data matches 1 run tellraw @a {"translate": "simplenergy_error_this_version_is_made_for_minecraft_1_21_9","color":"red"}
 execute if score #dependency_error simplenergy.data matches 1 run tellraw @a {"translate": "simplenergy_error_libraries_are_missingplease_download_the_right","color":"red"}
 execute if score #dependency_error simplenergy.data matches 1 unless score #common_signals.major load.status matches 0.. run tellraw @a {"translate": "simplenergy.common_signals_v0_1_1","color":"gold","click_event":{"action":"open_url","url":"https://github.com/Stoupy51/CommonSignals"}}
 execute if score #dependency_error simplenergy.data matches 1 if score #common_signals.major load.status matches 0 unless score #common_signals.minor load.status matches 1.. run tellraw @a {"translate": "simplenergy.common_signals_v0_1_1","color":"gold","click_event":{"action":"open_url","url":"https://github.com/Stoupy51/CommonSignals"}}
