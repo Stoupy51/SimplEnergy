@@ -7,6 +7,7 @@ from stewbeet import (
 	CUSTOM_BLOCK_HEAD,
 	CUSTOM_BLOCK_VANILLA,
 	CUSTOM_ITEM_VANILLA,
+	NO_SILK_TOUCH_DROP,
 	OVERRIDE_MODEL,
 	RESULT_OF_CRAFTING,
 	VANILLA_BLOCK,
@@ -384,9 +385,19 @@ def main_additions() -> None:
 		"titanium_dust": {WIKI_COMPONENT: MECHANIZATION_COMPATIBILITY},
 	}
 
+	# Raw materials
+	additions["raw_simplunium"] = {
+		WIKI_COMPONENT: [
+			{"text":"Raw ore material for the energy system.","color":"yellow"},
+			{"text":"\nDrop from mining Simplunium Ore (1-2 per ore)","color":"gray"},
+			{"text":"\nSmelt in furnace to create Simplunium Ingots","color":"gray"},
+			{"text":"\nCan be pulverized into Simplunium Dust","color":"gray"},
+		]
+	}
+
 	# Custom blocks
-	additions["simplunium_ore"] = {WIKI_COMPONENT: ORE_WIKI}
-	additions["deepslate_simplunium_ore"] = {WIKI_COMPONENT: ORE_WIKI}
+	additions["simplunium_ore"] = {WIKI_COMPONENT: ORE_WIKI, NO_SILK_TOUCH_DROP: {"id": "raw_simplunium", "count": {"min":1, "max":2}}}
+	additions["deepslate_simplunium_ore"] = {WIKI_COMPONENT: ORE_WIKI, NO_SILK_TOUCH_DROP: {"id": "raw_simplunium", "count": {"min":1, "max":2}}}
 	additions["simplunium_block"] = {VANILLA_BLOCK: {"id": "minecraft:iron_block", "apply_facing": False}}
 	additions["raw_simplunium_block"] = {VANILLA_BLOCK: {"id": "minecraft:raw_iron_block", "apply_facing": False}}
 	additions["machine_block"][VANILLA_BLOCK] = {"id": "minecraft:iron_block", "apply_facing": False}
