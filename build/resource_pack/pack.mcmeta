@@ -1,7 +1,9 @@
 {
 	"pack": {
 		"pack_format": 69,
-		"description": "SimplEnergy [2.0.12] by Stoupy51"
+		"description": "SimplEnergy [2.0.12] by Stoupy51",
+		"min_format": 69,
+		"max_format": 1000
 	},
 	"id": "simplenergy"
 }
