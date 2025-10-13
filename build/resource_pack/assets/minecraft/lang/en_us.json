@@ -186,7 +186,7 @@
 	"simplenergy.mechanization": "Mechanization",
 	"simplenergy.mechanization_integration_item": "Mechanization Integration Item",
 	"simplenergy.mine": "\n- Mine: ",
-	"simplenergy.mining": "Mining\n",
+	"simplenergy.mining": "\nMining",
 	"simplenergy.miscellaneous": "Miscellaneous\n",
 	"simplenergy.modes_input_only_output_only_both": "\nModes: Input Only, Output Only, Both",
 	"simplenergy.modes_input_only_output_only_both_use_battery_switcher": "\nModes: Input Only, Output Only, Both (use Battery Switcher)",
@@ -262,7 +262,7 @@
 	"simplenergy.smartoregeneration_v1_7_2": "- [SmartOreGeneration (v1.7.2+)]",
 	"simplenergy.smelt_in_furnace_to_create_simplunium_ingots": "\nSmelt in furnace to create Simplunium Ingots",
 	"simplenergy.smelt_into_simplunium_ingots_for_crafting": "\nSmelt into Simplunium Ingots for crafting",
-	"simplenergy.smelting": "Smelting\n",
+	"simplenergy.smelting": "\nSmelting",
 	"simplenergy.smelts_items_using_electricity_instead_of_fuel_1_5x_faster": "\nSmelts items using electricity instead of fuel (1.5x faster)",
 	"simplenergy.smithed_crafter_v0_7_1": "- [Smithed Crafter (v0.7.1+)]",
 	"simplenergy.smithed_custom_block_v0_7_1": "- [Smithed Custom Block (v0.7.1+)]",
@@ -349,6 +349,6 @@
 	"simplenergy_error_libraries_are_missingplease_download_the_right": "SimplEnergy Error: Libraries are missing\nplease download the right SimplEnergy datapack\nor download each of these libraries one by one:",
 	"simplenergy_error_this_version_is_made_for_minecraft_1_21_10": "SimplEnergy Error: This version is made for Minecraft 1.21.10+.",
 	"simplenergy_manual": "SimplEnergy Manual\n",
-	"simplenergy_pulverizing": "SimplEnergy Pulverizing\n",
+	"simplenergy_pulverizing": "\nSimplEnergy Pulverizing",
 	"simplenergy_stats": "\n[SimplEnergy Stats]"
 }

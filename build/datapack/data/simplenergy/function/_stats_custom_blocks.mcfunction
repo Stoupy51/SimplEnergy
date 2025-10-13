@@ -4,8 +4,8 @@
 # @within	???
 #
 
-scoreboard players add #tick_entities simplenergy.data 0
 scoreboard players add #second_entities simplenergy.data 0
+scoreboard players add #tick_entities simplenergy.data 0
 scoreboard players add #total_custom_blocks simplenergy.data 0
 scoreboard players add #total_vanilla_item_frame simplenergy.data 0
 scoreboard players add #total_vanilla_waxed_copper_block simplenergy.data 0
@@ -88,6 +88,6 @@ tellraw @s [{"translate": "simplenergy.vanilla_minecraft_raw_iron_block","color"
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_waxed_copper_block","color":"gray"},{"score":{"name":"#total_vanilla_waxed_copper_block","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.vanilla_minecraft_item_frame","color":"gray"},{"score":{"name":"#total_vanilla_item_frame","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [{"translate": "simplenergy.total_custom_blocks","color":"dark_aqua"},{"score":{"name":"#total_custom_blocks","objective":"simplenergy.data"},"color":"aqua"}]
-tellraw @s [{"translate": "simplenergy.second_tag_function","color":"green"},{"score":{"name":"#second_entities","objective":"simplenergy.data"},"color":"dark_green"}]
 tellraw @s [{"translate": "simplenergy.tick_tag_function","color":"green"},{"score":{"name":"#tick_entities","objective":"simplenergy.data"},"color":"dark_green"}]
+tellraw @s [{"translate": "simplenergy.second_tag_function","color":"green"},{"score":{"name":"#second_entities","objective":"simplenergy.data"},"color":"dark_green"}]
 
