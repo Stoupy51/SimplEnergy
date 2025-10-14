@@ -1,6 +1,6 @@
 
 # Imports
-from stewbeet.core import *
+from stewbeet.core import *  # type: ignore
 
 from .additions import main_additions
 from .manual_assets import manual_assets_main
@@ -12,7 +12,7 @@ ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 		DefaultOre.IRON, simplunium_durability, {"attack_damage": 1, "armor": 0.5, "mining_efficiency": 0.2}
 	),
 }
-DUSTS_CONFIGS: dict[str, tuple[list[str|dict], dict]] = {
+DUSTS_CONFIGS: dict[str, tuple[list[str|JsonDict], JsonDict]] = {
 	"copper":	(["raw_copper","copper_ore","deepslate_copper_ore"],												ingr_repr("minecraft:copper_ingot")),
 	"iron":		(["raw_iron","iron_ore","deepslate_iron_ore"],														ingr_repr("minecraft:iron_ingot")),
 	"gold":		(["raw_gold","gold_ore","deepslate_gold_ore"],														ingr_repr("minecraft:gold_ingot")),
@@ -27,8 +27,6 @@ DUSTS_CONFIGS: dict[str, tuple[list[str|dict], dict]] = {
 
 # Make all the item definitions
 def beet_default(ctx: Context) -> None:
-	if Mem.ctx is None:
-		Mem.ctx = ctx
 
 	# Generate ores in database
 	generate_everything_about_these_materials(ORES_CONFIGS)
@@ -45,6 +43,7 @@ def beet_default(ctx: Context) -> None:
 	add_item_name_and_lore_if_missing()
 	add_private_custom_data_for_namespace()
 	add_smithed_ignore_vanilla_behaviours_convention()
+	set_manual_components(white_list=["item_name", "lore", "custom_name", "attribute_modifiers"])
 
 	# Copy manual assets that can't be generated
 	manual_assets_main()
