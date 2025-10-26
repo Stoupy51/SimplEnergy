@@ -1,5 +1,9 @@
 {
 	"pools": [
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/simplunium_ingot"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/simplunium_nugget"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/raw_simplunium"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/simplunium_dust"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/simplunium_block"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/simplunium_ore"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/deepslate_simplunium_ore"}]},
@@ -13,10 +17,6 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/simplunium_axe"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/simplunium_shovel"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/simplunium_hoe"}]},
-		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/simplunium_ingot"}]},
-		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/simplunium_nugget"}]},
-		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/raw_simplunium"}]},
-		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/simplunium_dust"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/copper_dust"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/iron_dust"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/gold_dust"}]},

@@ -37,7 +37,7 @@ modrinth_config: JsonDict = {
     "dependencies": [
         #{"project_id": "QQRRSSTT", "version_id": "IIJJKKLL", "dependency_type": "required"},
     ],
-    "version_type": "alpha",
+    "version_type": "beta",
     "build_folder": cfg.output,
 }
 upload_to_modrinth(credentials, modrinth_config, changelog)
