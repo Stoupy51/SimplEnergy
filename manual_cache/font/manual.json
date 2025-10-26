@@ -225,6 +225,7 @@
 		{"type": "bitmap","file": "simplenergy:font/furnace.png","ascent": -3,"height": 58,"chars": ["G"]},
 		{"type": "bitmap","file": "simplenergy:font/stonecutting.png","ascent": -3,"height": 58,"chars": ["H"]},
 		{"type": "bitmap","file": "simplenergy:font/pulverizing.png","ascent": -3,"height": 58,"chars": ["I"]},
-		{"type": "bitmap","file": "simplenergy:font/mining.png","ascent": -3,"height": 58,"chars": ["P"]}
+		{"type": "bitmap","file": "simplenergy:font/mining.png","ascent": -3,"height": 58,"chars": ["P"]},
+		{"type": "bitmap","file": "simplenergy:font/book.png","ascent": 25,"height": 300,"chars": ["V"]}
 	]
 }
