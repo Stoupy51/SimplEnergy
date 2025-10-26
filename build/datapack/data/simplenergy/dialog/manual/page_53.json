@@ -1,0 +1,57 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "simplenergy.pulverizer",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_52"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"},{"text": " (52)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_54"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"},{"text": " (54)"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_52"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"},{"text": " (52)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_54"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"},{"text": " (54)"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$脅$脅$脅","hover_event": {"action": "show_item","id": "minecraft:diamond","components": {}}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "minecraft:diamond","components": {}}},
+				"  \n\"",
+				{"text": "$耩","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_12"}},
+				{"text": "$聡","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.machine_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_40"}},
+				{"text": "$耩","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_12"}},
+				"\"\"",
+				{"text": "$$聻","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "simplenergy.power_usage_120_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_6400_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_name": {"translate": "simplenergy.pulverizer"}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_12"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.machine_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_40"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_12"}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "simplenergy.power_usage_120_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_6400_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_name": {"translate": "simplenergy.pulverizer"}}}},
+				"#$\n\"",
+				{"text": "$脈$脈$脈","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.ore_processing_and_grinding_machine","color": "yellow"},{"translate": "simplenergy.grinds_ores_into_dusts_for_increased_yields","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$脅"},{"text": "$脅"},{"text": "$脅"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$聡"},{"text": "$耩"},"\"\"",{"text": "$$聻"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$脈"},{"text": "$脈"},{"text": "$脈"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.diamond","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.machine_block","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$脅"},{"text": "$脅"},{"text": "$脅"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$聡"},{"text": "$耩"},"\"\"",{"text": "$$聻"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$舿"},{"text": "$舿"},{"text": "$舿"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.diamond","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.machine_block","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.copper_block","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.ore_processing_and_grinding_machine","color": "yellow"},{"translate": "simplenergy.grinds_ores_into_dusts_for_increased_yields","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$脅"},{"text": "$脅"},{"text": "$脅"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$聡"},{"text": "$耩"},"\"\"",{"text": "$$聻"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$脈"},{"text": "$脈"},{"text": "$脈"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.diamond","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.machine_block","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$脅"},{"text": "$脅"},{"text": "$脅"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$聡"},{"text": "$耩"},"\"\"",{"text": "$$聻"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$舿"},{"text": "$舿"},{"text": "$舿"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.diamond","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.machine_block","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.copper_block","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

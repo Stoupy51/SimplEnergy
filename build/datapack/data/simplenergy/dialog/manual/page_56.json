@@ -1,0 +1,57 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "simplenergy.advanced_cable",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_55"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"},{"text": " (55)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_57"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"},{"text": " (57)"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_55"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"},{"text": " (55)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_57"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"},{"text": " (57)"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$膄$膄$膄","hover_event": {"action": "show_item","id": "minecraft:lapis_lazuli","components": {}}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "minecraft:lapis_lazuli","components": {}}},
+				"  \n\"",
+				{"text": "$膄","hover_event": {"action": "show_item","id": "minecraft:lapis_lazuli","components": {}}},
+				{"text": "$聿","hover_event": {"action": "show_item","id": "player_head","components": {"lore": [{"translate": "simplenergy.transfer_speed_40_kw","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_name": {"translate": "simplenergy.simple_cable"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_55"}},
+				{"text": "$膄","hover_event": {"action": "show_item","id": "minecraft:lapis_lazuli","components": {}}},
+				"\"\"",
+				{"text": "$$肁","hover_event": {"action": "show_item","id": "player_head","components": {"lore": [{"translate": "simplenergy.transfer_speed_120_kw","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_name": {"translate": "simplenergy.advanced_cable"}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:lapis_lazuli","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "player_head","components": {"lore": [{"translate": "simplenergy.transfer_speed_40_kw","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_name": {"translate": "simplenergy.simple_cable"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_55"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:lapis_lazuli","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "player_head","components": {"lore": [{"translate": "simplenergy.transfer_speed_120_kw","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_name": {"translate": "simplenergy.advanced_cable"}}}},
+				"#$\n\"",
+				{"text": "$膄$膄$膄","hover_event": {"action": "show_item","id": "minecraft:lapis_lazuli","components": {}}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "minecraft:lapis_lazuli","components": {}}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.improved_energy_transmission_cable","color": "yellow"},{"translate": "simplenergy.upgraded_cable_for_higher_energy_throughput","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$膄"},{"text": "$膄"},{"text": "$膄"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$膄"},{"text": "$聿"},{"text": "$膄"},"\"\"",{"text": "$$肁"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$膄"},{"text": "$膄"},{"text": "$膄"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simple_cable","color": "gray"},{"text": "\n- x8 ","color": "gray"},{"translate": "simplenergy.lapis_lazuli","color": "gray"}]}},
+				{"text": "荈\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$肓"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"",{"text": "$肓"},{"text": "$肁"},{"text": "$肓"},"\"\"",{"text": "$$肃"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"","U$",{"text": "$肓"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.advanced_cable","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.redstone_block","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_57"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.improved_energy_transmission_cable","color": "yellow"},{"translate": "simplenergy.upgraded_cable_for_higher_energy_throughput","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$膄"},{"text": "$膄"},{"text": "$膄"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$膄"},{"text": "$聿"},{"text": "$膄"},"\"\"",{"text": "$$肁"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$膄"},{"text": "$膄"},{"text": "$膄"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simple_cable","color": "gray"},{"text": "\n- x8 ","color": "gray"},{"translate": "simplenergy.lapis_lazuli","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$肓"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"",{"text": "$肓"},{"text": "$肁"},{"text": "$肓"},"\"\"",{"text": "$$肃"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"","U$",{"text": "$肓"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.advanced_cable","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.redstone_block","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_57"}},
+				"\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

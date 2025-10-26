@@ -1,0 +1,69 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "simplenergy.heat_generator",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_46"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"},{"text": " (46)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_48"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"},{"text": " (48)"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_46"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"},{"text": " (46)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_48"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"},{"text": " (48)"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$脈","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				{"text": "$脌","hover_event": {"action": "show_item","id": "minecraft:glass","components": {}}},
+				{"text": "$脈","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				"  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:glass","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				"  \n\"",
+				{"text": "$脌","hover_event": {"action": "show_item","id": "minecraft:glass","components": {}}},
+				{"text": "$膮","hover_event": {"action": "show_item","id": "minecraft:netherite_scrap","components": {}}},
+				{"text": "$脌","hover_event": {"action": "show_item","id": "minecraft:glass","components": {}}},
+				"\"\"",
+				{"text": "$$聯","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "simplenergy.energy_generation_20_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_1600_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_name": {"translate": "simplenergy.heat_generator"}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:glass","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:netherite_scrap","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:glass","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "simplenergy.energy_generation_20_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_1600_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_name": {"translate": "simplenergy.heat_generator"}}}},
+				"#$\n\"",
+				{"text": "$脈","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				{"text": "$脌","hover_event": {"action": "show_item","id": "minecraft:glass","components": {}}},
+				{"text": "$脈","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				"  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:glass","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.heat_powered_energy_generator","color": "yellow"},{"translate": "simplenergy.must_be_placed_directly_adjacent_to_lava_to_operate","color": "gray"},{"translate": "simplenergy.balances_energy_storage_with_adjacent_heat_generators","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$脈"},{"text": "$脌"},{"text": "$脈"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$脌"},{"text": "$膮"},{"text": "$脌"},"\"\"",{"text": "$$聯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$脈"},{"text": "$脌"},{"text": "$脈"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.glass","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.netherite_scrap","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$脌"},{"text": "$脈"},{"text": "$脌"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$脈"},{"text": "$膮"},{"text": "$脈"},"\"\"",{"text": "$$聯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$脌"},{"text": "$脈"},{"text": "$脌"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.glass","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.netherite_scrap","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$脈"},{"text": "$脌"},{"text": "$脈"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$脌"},{"text": "$膬"},{"text": "$脌"},"\"\"",{"text": "$$聯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$脈"},{"text": "$脌"},{"text": "$脈"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.glass","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.ancient_debris","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$脌"},{"text": "$脈"},{"text": "$脌"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$脈"},{"text": "$膬"},{"text": "$脈"},"\"\"",{"text": "$$聯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$脌"},{"text": "$脈"},{"text": "$脌"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.glass","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.ancient_debris","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.heat_powered_energy_generator","color": "yellow"},{"translate": "simplenergy.must_be_placed_directly_adjacent_to_lava_to_operate","color": "gray"},{"translate": "simplenergy.balances_energy_storage_with_adjacent_heat_generators","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$脈"},{"text": "$脌"},{"text": "$脈"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$脌"},{"text": "$膮"},{"text": "$脌"},"\"\"",{"text": "$$聯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$脈"},{"text": "$脌"},{"text": "$脈"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.glass","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.netherite_scrap","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$脌"},{"text": "$脈"},{"text": "$脌"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$脈"},{"text": "$膮"},{"text": "$脈"},"\"\"",{"text": "$$聯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$脌"},{"text": "$脈"},{"text": "$脌"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.glass","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.netherite_scrap","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$脈"},{"text": "$脌"},{"text": "$脈"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$脌"},{"text": "$膬"},{"text": "$脌"},"\"\"",{"text": "$$聯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$脈"},{"text": "$脌"},{"text": "$脈"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.glass","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.ancient_debris","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$脌"},{"text": "$脈"},{"text": "$脌"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$脈"},{"text": "$膬"},{"text": "$脈"},"\"\"",{"text": "$$聯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$脌"},{"text": "$脈"},{"text": "$脌"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.glass","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.ancient_debris","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

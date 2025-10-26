@@ -1,0 +1,57 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "simplenergy.wind_turbine",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_47"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"},{"text": " (47)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_49"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"},{"text": " (49)"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_47"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"},{"text": " (47)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_49"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"},{"text": " (49)"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"U$",
+				{"text": "$腪","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				"U$  \n\"U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				"U$  \n\"",
+				{"text": "$腪","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				{"text": "$舿","hover_event": {"action": "show_item","id": "minecraft:copper_block","components": {}}},
+				{"text": "$腪","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				"\"\"",
+				{"text": "$$聱","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "simplenergy.energy_generation_20_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_800_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_name": {"translate": "simplenergy.wind_turbine"}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:copper_block","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "simplenergy.energy_generation_20_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_800_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_name": {"translate": "simplenergy.wind_turbine"}}}},
+				"#$\n\"",
+				{"text": "$脈$脈$脈","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.altitude_dependent_wind_generator","color": "yellow"},{"translate": "simplenergy.higher_altitude_increases_energy_generation","color": "gray"},{"translate": "simplenergy.0_kw_at_y50_2_kw_at_y60_20_kw_at_y150","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$腪"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"",{"text": "$腪"},{"text": "$舿"},{"text": "$腪"},"\"\"",{"text": "$$聱"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$脈"},{"text": "$脈"},{"text": "$脈"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.copper_block","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$腪"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"",{"text": "$腪"},{"text": "$腪"},{"text": "$腪"},"\"\"",{"text": "$$聱"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$脈"},{"text": "$脈"},{"text": "$脈"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.altitude_dependent_wind_generator","color": "yellow"},{"translate": "simplenergy.higher_altitude_increases_energy_generation","color": "gray"},{"translate": "simplenergy.0_kw_at_y50_2_kw_at_y60_20_kw_at_y150","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$腪"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"",{"text": "$腪"},{"text": "$舿"},{"text": "$腪"},"\"\"",{"text": "$$聱"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$脈"},{"text": "$脈"},{"text": "$脈"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.copper_block","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$腪"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"",{"text": "$腪"},{"text": "$腪"},{"text": "$腪"},"\"\"",{"text": "$$聱"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$脈"},{"text": "$脈"},{"text": "$脈"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

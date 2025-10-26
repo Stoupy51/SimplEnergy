@@ -1,0 +1,83 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "simplenergy.energy",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_6"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"},{"text": " (6)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"},{"text": " (8)"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_6"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"},{"text": " (6)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"},{"text": " (8)"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"ဦ\n\"",
+				{"text": "$聡","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.machine_block"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_40"}},
+				{"text": "$聣","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.simple_battery"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_41"}},
+				{"text": "$聥","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.advanced_battery"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_42"}},
+				{"text": "$聧","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.elite_battery"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_43"}},
+				{"text": "$聩","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.cauldron_generator"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_44"}},
+				"#\n\"",
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.machine_block"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_40"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.simple_battery"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_41"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.advanced_battery"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_42"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.elite_battery"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_43"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.cauldron_generator"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_44"}},
+				"#\n\"",
+				{"text": "$聫","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.furnace_generator"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_45"}},
+				{"text": "$聭","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.redstone_generator"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_46"}},
+				{"text": "$聯","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.heat_generator"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_47"}},
+				{"text": "$聱","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.wind_turbine"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_48"}},
+				{"text": "$聳","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.solar_panel"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_49"}},
+				"#\n\"",
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.furnace_generator"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_45"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.redstone_generator"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_46"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.heat_generator"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_47"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.wind_turbine"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_48"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.solar_panel"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_49"}},
+				"#\n\"",
+				{"text": "$聵","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.electric_furnace"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_50"}},
+				{"text": "$職","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.electric_smelter"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_51"}},
+				{"text": "$聹","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.electric_brewing_stand"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_52"}},
+				{"text": "$聻","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.pulverizer"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_53"}},
+				{"text": "$聽","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.elevator"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_54"}},
+				"#\n\"",
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.electric_furnace"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_50"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.electric_smelter"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_51"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.electric_brewing_stand"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_52"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.pulverizer"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_53"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.elevator"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_54"}},
+				"#\n\"",
+				{"text": "$聿","hover_event": {"action": "show_item","id": "player_head","components": {"item_name": {"translate": "simplenergy.simple_cable"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_55"}},
+				{"text": "$肁","hover_event": {"action": "show_item","id": "player_head","components": {"item_name": {"translate": "simplenergy.advanced_cable"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_56"}},
+				{"text": "$肃","hover_event": {"action": "show_item","id": "player_head","components": {"item_name": {"translate": "simplenergy.elite_cable"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_57"}},
+				{"text": "$肅","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.basic_item_cable"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_58"}},
+				{"text": "$肇","hover_event": {"action": "show_item","id": "item_frame","components": {"item_name": {"translate": "simplenergy.servo_extractor"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_59"}},
+				"#\n\"",
+				{"text": "!","hover_event": {"action": "show_item","id": "player_head","components": {"item_name": {"translate": "simplenergy.simple_cable"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_55"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "player_head","components": {"item_name": {"translate": "simplenergy.advanced_cable"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_56"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "player_head","components": {"item_name": {"translate": "simplenergy.elite_cable"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_57"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.basic_item_cable"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_58"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "item_frame","components": {"item_name": {"translate": "simplenergy.servo_extractor"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_59"}},
+				"#\n\"",
+				{"text": "$肉","hover_event": {"action": "show_item","id": "item_frame","components": {"item_name": {"translate": "simplenergy.servo_inserter"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_60"}},
+				"!!!!#\n\"",
+				{"text": "!","hover_event": {"action": "show_item","id": "item_frame","components": {"item_name": {"translate": "simplenergy.servo_inserter"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_60"}},
+				"!!!!#\n",
+				"\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

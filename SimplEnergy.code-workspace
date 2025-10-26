@@ -1,13 +1,16 @@
 {
 	"folders": [
 		{
+			"name": "StewBeet",
+			"path": "../StewBeet"
+		},
+		{
+			"name": "SimplEnergy",
 			"path": "."
 		},
 		{
+			"name": "StardustFragment",
 			"path": "../StardustFragment"
-		},
-		{
-			"path": "../StewBeet"
 		}
 	],
 	"settings": {

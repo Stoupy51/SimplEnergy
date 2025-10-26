@@ -128,4 +128,6 @@ meta:
             first_page_text: [{"text":"The following manual will guide you through recipes and energy statistics about devices.", "color": "#505050"}]
             # Controls generation of showcase images: 0=disabled, 1=manual items only, 2=all project items, 3=both
             showcase_image: 3
+            # Use dialog system instead of a book (dialogs requires server restart to take effect)
+            use_dialog: 1 # 0 = no, 1 = yes, 2 = yes and no book
 

@@ -589,9 +589,9 @@
 	"manual": {
 		"id": "minecraft:written_book",
 		"category": "miscellaneous",
+		"item_name": "SimplEnergy Manual",
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"group": "manual","category": "miscellaneous","ingredients": [{"item": "minecraft:book"},{"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}}]},{"type": "crafting_shapeless","result_count": 1,"group": "manual","category": "miscellaneous","ingredients": [{"components": {"minecraft:custom_data": {"simplenergy": {"manual": true}}}}]}],
 		"item_model": "simplenergy:manual",
-		"item_name": {"text": "Manual"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"custom_data": {"simplenergy": {"manual": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	}

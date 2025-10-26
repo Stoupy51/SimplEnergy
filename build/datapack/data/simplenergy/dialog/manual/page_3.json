@@ -1,0 +1,41 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "simplenergy.category_browser",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_2"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"},{"text": " (2)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_4"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"},{"text": " (4)"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_2"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"},{"text": " (2)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_4"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"},{"text": " (4)"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"အ\n\"",
+				{"text": "$耡","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.material","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_4"}},
+				{"text": "$聅","hover_event": {"action": "show_item","id": "iron_helmet","components": {"item_name": {"translate": "simplenergy.equipment","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_5"}},
+				{"text": "$聗","hover_event": {"action": "show_item","id": "warped_fungus_on_a_stick","components": {"item_name": {"translate": "simplenergy.miscellaneous","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_6"}},
+				{"text": "$聡","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.energy","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_7"}},
+				"#\n\"",
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.material","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_4"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "iron_helmet","components": {"item_name": {"translate": "simplenergy.equipment","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_5"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "warped_fungus_on_a_stick","components": {"item_name": {"translate": "simplenergy.miscellaneous","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_6"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "simplenergy.energy","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_7"}},
+				"#\n",
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

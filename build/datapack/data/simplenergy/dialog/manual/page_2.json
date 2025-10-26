@@ -1,0 +1,52 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "simplenergy.heavy_workbench",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"},{"text": " (1)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_3"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"},{"text": " (3)"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"},{"text": " (1)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_3"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"},{"text": " (3)"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$荿$荿$荿","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				"  \n\"",
+				{"text": "$荿","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				{"text": "$莀","hover_event": {"action": "show_item","id": "minecraft:crafting_table","components": {}}},
+				{"text": "$荿","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				"\"\"",
+				{"text": "$$荾","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": "Heavy Workbench"}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:crafting_table","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": "Heavy Workbench"}}},
+				"#$\n\"",
+				{"text": "$莁$莁$莁","hover_event": {"action": "show_item","id": "minecraft:smooth_stone","components": {}}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "minecraft:smooth_stone","components": {}}},
+				"  \n",
+				[{"translate": "simplenergy.every_recipe_that_uses_custom_items","font": "minecraft:default","color": "black"},{"translate": "simplenergy.must","color": "red","underlined": true}," be crafted using the Heavy Workbench."],
+				"\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}
