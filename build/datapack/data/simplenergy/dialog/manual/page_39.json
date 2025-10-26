@@ -36,10 +36,10 @@
 				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"E\n","\"",{"text": "$脝"},{"text": "$耩"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$聟"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.book","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"}]}},
 				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"E\n","\"",{"text": "$聟"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$聟"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.manual","color": "gray"}]}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"E\n","\"",{"text": "$脝"},{"text": "$耩"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$聟"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.book","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"E\n","\"",{"text": "$聟"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$聟"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.manual","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"E\n","\"",{"text": "$聟"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$聟"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.manual","color": "gray"}]}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

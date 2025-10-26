@@ -46,7 +46,7 @@
 				[{"translate": "simplenergy.every_recipe_that_uses_custom_items","font": "minecraft:default","color": "black"},{"translate": "simplenergy.must","color": "red","underlined": true}," be crafted using the Heavy Workbench."],
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

@@ -46,10 +46,10 @@
 				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.high_capacity_energy_transmission_cable","color": "yellow"},{"translate": "simplenergy.top_tier_cable_for_maximum_energy_transfer","color": "gray"}]}},
 				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$肓"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"",{"text": "$肓"},{"text": "$肁"},{"text": "$肓"},"\"\"",{"text": "$$肃"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"","U$",{"text": "$肓"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.advanced_cable","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.redstone_block","color": "gray"}]}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.high_capacity_energy_transmission_cable","color": "yellow"},{"translate": "simplenergy.top_tier_cable_for_maximum_energy_transfer","color": "gray"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$肓"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"",{"text": "$肓"},{"text": "$肁"},{"text": "$肓"},"\"\"",{"text": "$$肃"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"","U$",{"text": "$肓"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.advanced_cable","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.redstone_block","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$肓"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"",{"text": "$肓"},{"text": "$肁"},{"text": "$肓"},"\"\"",{"text": "$$肃"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"","U$",{"text": "$肓"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.advanced_cable","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.redstone_block","color": "gray"}]}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

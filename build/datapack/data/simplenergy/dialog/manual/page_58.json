@@ -47,7 +47,7 @@
 				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$脅"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"",{"text": "$耩"},{"text": "$脒"},{"text": "$耩"},"\"\"",{"text": "$$肉"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$肅"},{"text": "$肓"},{"text": "$肅"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.basic_item_cable","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.redstone_block","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.comparator","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.diamond","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_60"}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

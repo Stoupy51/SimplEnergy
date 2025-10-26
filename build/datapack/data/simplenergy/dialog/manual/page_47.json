@@ -63,7 +63,7 @@
 				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$脌"},{"text": "$脈"},{"text": "$脌"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$脈"},{"text": "$膬"},{"text": "$脈"},"\"\"",{"text": "$$聯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$脌"},{"text": "$脈"},{"text": "$脌"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.glass","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.ancient_debris","color": "gray"}]}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

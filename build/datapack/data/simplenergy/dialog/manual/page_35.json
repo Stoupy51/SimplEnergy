@@ -42,10 +42,10 @@
 				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.a_diagnostic_tool_for_energy_systems","color": "yellow"},{"translate": "simplenergy.hold_in_your_offhand_to_automatically_scan_machines_when_looking","color": "gray"}]}},
 				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$腪"},{"text": "$腪"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$腝"},{"text": "$腝"},"U$\"\"",{"text": "$$聗"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$\"\"",{"text": "U$"},"\n","\"",{"text": "$腝"},{"text": "$腝"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.copper_ingot","color": "gray"}]}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.a_diagnostic_tool_for_energy_systems","color": "yellow"},{"translate": "simplenergy.hold_in_your_offhand_to_automatically_scan_machines_when_looking","color": "gray"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$腪"},{"text": "$腪"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$腝"},{"text": "$腝"},"U$\"\"",{"text": "$$聗"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$\"\"",{"text": "U$"},"\n","\"",{"text": "$腝"},{"text": "$腝"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.copper_ingot","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$腪"},{"text": "$腪"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$腝"},{"text": "$腝"},"U$\"\"",{"text": "$$聗"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$\"\"",{"text": "U$"},"\n","\"",{"text": "$腝"},{"text": "$腝"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.copper_ingot","color": "gray"}]}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }
