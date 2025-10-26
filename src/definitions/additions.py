@@ -424,7 +424,7 @@ def main_additions() -> None:
 	additions["servo_inserter"][VANILLA_BLOCK] = {"contents": True}		# Item frame custom block entity
 
 	additions["manual"] = {
-		"id": "minecraft:written_book", "category": MISC,
+		"id": "minecraft:written_book", "category": MISC, "item_name": "SimplEnergy Manual",
 		RESULT_OF_CRAFTING: [
 			# Put a book and a steel ingot in the crafting grid to get the manual
 			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients": [ingr_repr("minecraft:book"), ingr_repr("simplunium_ingot", ns)]},
