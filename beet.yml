@@ -8,7 +8,7 @@ description: ""
 # Author(s) name(s) displayed in pack.mcmeta, also used to add 'convention.debug' tag to the players of the same name(s) <-- showing additionnal displays like datapack loading
 author: "Stoupy51"
 # Project version in semantic versioning format: major.minor.patch (e.g., 1.0.0 or 2.84.615).
-version: "2.0.12"
+version: "2.0.13"
 # Minecraft version. Determines what resources beet loads (plugins like `mecha` determine what commands to use). Defaults: Latest
 minecraft: "1.21.6"
 
@@ -125,8 +125,8 @@ meta:
             name: ""
             # Maximum number of items displayed per row in manual (max: 6)
             max_items_per_row: 5
-            # Maximum number of rows displayed per page in manual (max: 6)
-            max_rows_per_page: 5
+            # Maximum number of rows displayed per page in manual (max: 7)
+            max_rows_per_page: 7
             # Text component used for the manual's first page
             first_page_text: [{"text":"The following manual will guide you through recipes and energy statistics about devices.", "color": "#505050"}]
             # Controls generation of showcase images: 0=disabled, 1=manual items only, 2=all project items, 3=both
