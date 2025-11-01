@@ -283,6 +283,18 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]],
 		"custom_data": {"simplenergy": {"titanium_dust": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"je_taime_stoupy51": {
+		"id": "minecraft:command_block",
+		"custom_data": {"simplenergy": {"je_taime_stoupy51": true},"smithed": {"dict": {"record": {"je_taime_stoupy51": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "simplenergy:je_taime_stoupy51",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"category": "miscellaneous",
+		"result_of_crafting": [{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_13"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_cat"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_blocks"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_chirp"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_far"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_mall"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_mellohi"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_stal"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_strad"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_ward"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_11"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_wait"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_creator_music_box"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_creator"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_precipice"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_otherside"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_relic"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_5"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_pigstep"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_tears"}},{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","ingredient": {"item": "minecraft:music_disc_lava_chicken"}}],
+		"item_model": "simplenergy:je_taime_stoupy51",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"text": " SimplEnergy","italic": true,"color": "blue"}]]
+	},
 	"multimeter": {
 		"id": "minecraft:warped_fungus_on_a_stick",
 		"category": "miscellaneous",

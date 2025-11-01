@@ -9,6 +9,7 @@ from stewbeet import (
 	CUSTOM_ITEM_VANILLA,
 	NO_SILK_TOUCH_DROP,
 	OVERRIDE_MODEL,
+	PULVERIZING,
 	RESULT_OF_CRAFTING,
 	VANILLA_BLOCK,
 	WIKI_COMPONENT,
@@ -94,6 +95,16 @@ def main_additions() -> None:
 			WIKI_COMPONENT: [
 				{"text":"Basic machine block for energy systems.","color":"yellow"},
 				{"text":"\nUsed as a base for most machines and generators","color":"gray"},
+			],
+		},
+		"je_taime_stoupy51": {
+			CATEGORY: MISC,
+			RESULT_OF_CRAFTING: [
+				{"type":PULVERIZING,"result_count":1,"category":"misc","ingredient":ingr_repr(f"minecraft:music_disc_{disc}")}
+				for disc in [
+					"13","cat","blocks","chirp","far","mall","mellohi","stal","strad","ward","11","wait",
+					"creator_music_box","creator","precipice","otherside","relic","5","pigstep","tears","lava_chicken"
+				]
 			],
 		},
 
