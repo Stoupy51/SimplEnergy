@@ -9,12 +9,12 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "V   ","font": "simplenergy:manual","color": "white"},
-				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_39"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"},{"text": " (39)"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_39"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (39)"]}},
 				" ",
-				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_41"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"},{"text": " (41)"}]}},
-				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_39"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"},{"text": " (39)"}]}},
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_41"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (41)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_39"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (39)"]}},
 				" ",
-				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_41"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"},{"text": " (41)"}]}}
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_41"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (41)"]}}
 			],
 			"width": 400
 		},
