@@ -34,6 +34,9 @@ def beet_default(ctx: Context) -> None:
 	# Generate dusts in database
 	add_recipes_for_all_dusts(DUSTS_CONFIGS)
 
+	# Generate custom disc records
+	generate_custom_records("auto")
+
 	# Apply database additions
 	main_additions()
 

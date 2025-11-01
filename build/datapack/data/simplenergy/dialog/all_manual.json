@@ -63,7 +63,8 @@
 		"simplenergy:manual/page_57",
 		"simplenergy:manual/page_58",
 		"simplenergy:manual/page_59",
-		"simplenergy:manual/page_60"
+		"simplenergy:manual/page_60",
+		"simplenergy:manual/page_61"
 	],
 	"exit_action": {
 		"label": {"translate": "gui.back"},

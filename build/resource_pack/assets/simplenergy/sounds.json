@@ -1,4 +1,8 @@
 {
+	"je_taime_stoupy51": {
+		"subtitle": "je_taime_stoupy51",
+		"sounds": [{"name": "simplenergy:je_taime_stoupy51","stream": true}]
+	},
 	"cauldron_generator": {
 		"subtitle": "Cauldron Generator",
 		"sounds": ["simplenergy:cauldron_generator"]
