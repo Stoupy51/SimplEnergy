@@ -2,7 +2,7 @@
 # ruff: noqa: E501
 # Imports
 from beet import Predicate
-from stewbeet.core import *
+from stewbeet.core import CUSTOM_ITEM_VANILLA, JsonDict, Mem, set_json_encoder, write_function
 
 from .pulverizer import pulverizer
 
@@ -10,10 +10,10 @@ from .pulverizer import pulverizer
 # Setup machines work and visuals
 def setup_machines(gui: dict[str, str]) -> None:
 	ns: str = Mem.ctx.project_id
-	GUI_DATA: str = 'tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}'
+	GUI_DATA: str = r'tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}'
 
 	# Solar panel
-	energy: dict = Mem.definitions["solar_panel"]["custom_data"]["energy"]
+	energy: JsonDict = Mem.definitions["solar_panel"]["custom_data"]["energy"]
 	content: str = f"""# Produce Energy depending on the power of daylight sensor
 execute if predicate {ns}:check_daylight_power run scoreboard players add @s energy.storage {energy["generation"]}
 execute if score @s energy.storage > @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
@@ -28,7 +28,7 @@ data modify entity @s transformation.translation[1] set value 0.002f
 
 	# Furnace Generator & Redstone Generator
 	for gen in ["furnace_generator", "redstone_generator"]:
-		energy: dict = Mem.definitions[gen]["custom_data"]["energy"]
+		energy: JsonDict = Mem.definitions[gen]["custom_data"]["energy"]
 		default_gui: str = gui[f"gui/{gen}.png"]
 		working_gui: str = gui[f"gui/{gen}_on.png"]
 		default_model: str = Mem.definitions[gen]["item_model"]
@@ -50,9 +50,9 @@ execute if data block ~ ~ ~ {{Items:[{{Slot:0b,id:"minecraft:redstone_block"}}],
 
 # Update the gui to default
 execute store result score #burn_time {ns}.data run data get block ~ ~ ~ lit_time_remaining
-execute if score #burn_time {ns}.data matches 0 run item replace block ~ ~ ~ container.{gui_slot} with paper[item_model="{default_gui}",{GUI_DATA}]
+execute if score #burn_time {ns}.data matches 0 run item replace block ~ ~ ~ container.{gui_slot} with cobblestone[item_model="{default_gui}",{GUI_DATA}]
 execute if score #burn_time {ns}.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
-execute if score #burn_time {ns}.data matches 1.. run item replace block ~ ~ ~ container.{gui_slot} with paper[item_model="{working_gui}",{GUI_DATA}]
+execute if score #burn_time {ns}.data matches 1.. run item replace block ~ ~ ~ container.{gui_slot} with cobblestone[item_model="{working_gui}",{GUI_DATA}]
 execute if score #burn_time {ns}.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
 
 # Update the gui & produce Energy while working
@@ -86,7 +86,7 @@ function #itemio:calls/container/init
 
 	# Electric Smelter & Electric Furnace & Electric Brewing Stand
 	for machine in ["electric_smelter", "electric_furnace", "electric_brewing_stand"]:
-		energy: dict = Mem.definitions[machine]["custom_data"]["energy"]
+		energy: JsonDict = Mem.definitions[machine]["custom_data"]["energy"]
 		cook: str = "cooking_time_spent" if machine != "electric_brewing_stand" else "BrewTime"
 		burn: str = "lit_time_remaining" if machine != "electric_brewing_stand" else "Fuel"
 		burn_type: str = "short" if machine != "electric_brewing_stand" else "byte"
@@ -169,7 +169,7 @@ function #itemio:calls/container/init
 """)
 
 	# Cauldron Generator
-	energy: dict = Mem.definitions["cauldron_generator"]["custom_data"]["energy"]
+	energy: JsonDict = Mem.definitions["cauldron_generator"]["custom_data"]["energy"]
 	default_model: str = Mem.definitions["cauldron_generator"]["item_model"]
 	working_model: str = default_model + "_on"
 	content: str = f"""
@@ -207,7 +207,7 @@ data modify entity @s transformation.translation[1] set value 0.01f
 	write_function(f"{ns}:custom_blocks/electric_brewing_stand/place_secondary", to_add)
 
 	# Heat generator
-	energy: dict = Mem.definitions["heat_generator"]["custom_data"]["energy"]
+	energy: JsonDict = Mem.definitions["heat_generator"]["custom_data"]["energy"]
 	default_model: str = Mem.definitions["heat_generator"]["item_model"]
 	working_model: str = default_model + "_on"
 	write_function(f"{ns}:custom_blocks/heat_generator/second", f"""
@@ -233,7 +233,7 @@ execute if score @s energy.storage >= @s energy.max_storage run scoreboard playe
 """)
 
 	# Wind turbine
-	energy: dict = Mem.definitions["wind_turbine"]["custom_data"]["energy"]
+	energy: JsonDict = Mem.definitions["wind_turbine"]["custom_data"]["energy"]
 	default_model: str = Mem.definitions["wind_turbine"]["item_model"]
 	working_model: str = default_model + "_on"
 	write_function(f"{ns}:custom_blocks/wind_turbine/second", f"""
@@ -259,7 +259,7 @@ execute if score @s energy.storage >= @s energy.max_storage run scoreboard playe
 """)
 
 	# Elevator
-	energy: dict = Mem.definitions["elevator"]["custom_data"]["energy"]
+	energy: JsonDict = Mem.definitions["elevator"]["custom_data"]["energy"]
 	default_model: str = Mem.definitions["elevator"]["item_model"]
 	working_model: str = default_model + "_on"
 	Mem.ctx.data[ns].predicates["is_on_ground"] = set_json_encoder(Predicate({"condition":"minecraft:entity_properties","entity":"this","predicate":{"movement":{"vertical_speed":{"max":0.1}}}}))
@@ -296,6 +296,7 @@ execute if score #success {ns}.data matches 1 run playsound {ns}:elevator block 
 execute if score #success {ns}.data matches 1 run scoreboard players operation @s {ns}.elevator_time = #elevator_time {ns}.data
 execute if score #success {ns}.data matches 0 if entity @s[distance=..72] positioned ~ ~{y_offset} ~ run function {ns}:custom_blocks/elevator/go_{direction}
 """)
+
 	# Pulverizer
 	pulverizer(gui)
 
