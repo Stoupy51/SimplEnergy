@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.heat_generator",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/heat_generator",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.heat_generator",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/heat_generator"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

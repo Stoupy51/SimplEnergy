@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.lapis_dust",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/lapis_dust",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.lapis_dust",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/lapis_dust"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

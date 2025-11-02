@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.simplunium_pickaxe",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/simplunium_pickaxe",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.simplunium_pickaxe",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/simplunium_pickaxe"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

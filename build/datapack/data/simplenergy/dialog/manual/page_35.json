@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.je_taime_stoupy51",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/je_taime_stoupy51",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.je_taime_stoupy51",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/je_taime_stoupy51"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

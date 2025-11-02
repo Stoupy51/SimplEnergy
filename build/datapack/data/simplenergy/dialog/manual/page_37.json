@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.wrench",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/wrench",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.wrench",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/wrench"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

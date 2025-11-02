@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.iron_dust",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/iron_dust",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.iron_dust",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/iron_dust"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

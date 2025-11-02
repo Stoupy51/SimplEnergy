@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.simplunium_ingot",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/simplunium_ingot",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.simplunium_ingot",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/simplunium_ingot"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

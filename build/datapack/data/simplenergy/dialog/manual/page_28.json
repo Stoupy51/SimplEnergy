@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.simplunium_leggings",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/simplunium_leggings",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.simplunium_leggings",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/simplunium_leggings"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

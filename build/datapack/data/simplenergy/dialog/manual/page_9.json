@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.simplunium_nugget",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/simplunium_nugget",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.simplunium_nugget",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/simplunium_nugget"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

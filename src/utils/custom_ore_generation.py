@@ -11,7 +11,7 @@ def setup_custom_ore_generation():
 	CustomOreGeneration.all_with_config(ore_configs = {
 		"simplunium_ore": [
 			CustomOreGeneration(
-				dimensions = ["minecraft:overworld"],
+				dimensions = ["minecraft:overworld", "stardust:cavern", "stardust:celestial"],
 				maximum_height = 50,
 				minimum_height = 0,
 				veins_per_region = 1.5,
@@ -20,7 +20,7 @@ def setup_custom_ore_generation():
 		],
 		"deepslate_simplunium_ore": [
 			CustomOreGeneration(
-				dimensions = ["minecraft:overworld"],
+				dimensions = ["minecraft:overworld", "stardust:cavern", "stardust:celestial"],
 				maximum_height = 0,
 				veins_per_region = 1.5,
 				vein_size_logic = 0.4,

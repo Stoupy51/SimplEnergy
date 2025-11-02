@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.tin_dust",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/tin_dust",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.tin_dust",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/tin_dust"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

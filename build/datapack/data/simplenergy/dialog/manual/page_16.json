@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.copper_dust",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/copper_dust",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.copper_dust",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/copper_dust"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

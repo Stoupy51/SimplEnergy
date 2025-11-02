@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.simplunium_boots",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/simplunium_boots",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.simplunium_boots",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/simplunium_boots"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

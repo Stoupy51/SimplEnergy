@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.gold_dust",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/gold_dust",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.gold_dust",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/gold_dust"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

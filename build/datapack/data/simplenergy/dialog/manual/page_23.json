@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.netherite_dust",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/netherite_dust",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.netherite_dust",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/netherite_dust"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

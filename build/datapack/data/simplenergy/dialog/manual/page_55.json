@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.elevator",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/elevator",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.elevator",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/elevator"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

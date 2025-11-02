@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.quartz_dust",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/quartz_dust",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.quartz_dust",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/quartz_dust"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

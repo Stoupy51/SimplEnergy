@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.raw_simplunium_block",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/raw_simplunium_block",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.raw_simplunium_block",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/raw_simplunium_block"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

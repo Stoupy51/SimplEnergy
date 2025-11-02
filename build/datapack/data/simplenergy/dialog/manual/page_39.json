@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.battery_switcher",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/battery_switcher",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.battery_switcher",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/battery_switcher"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

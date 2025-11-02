@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.slot_unlocker",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/slot_unlocker",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.slot_unlocker",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/slot_unlocker"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

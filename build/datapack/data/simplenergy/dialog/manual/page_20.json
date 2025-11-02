@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.diamond_dust",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "simplenergy:item/diamond_dust",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "simplenergy.diamond_dust",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/diamond_dust"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

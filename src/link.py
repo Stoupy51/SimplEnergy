@@ -1,9 +1,8 @@
 
 # Imports
+from beet import Context
 from stewbeet.contrib.simplenergy import (
-	Context,
 	GuiTranslation,
-	Mem,
 	energy_cables_models,
 	insert_lib_calls,
 	item_cables_models,
@@ -22,8 +21,6 @@ from .utils.remaining import setup_remaining
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 def beet_default(ctx: Context) -> None:
-	if Mem.ctx is None:
-		Mem.ctx = ctx
 
 	# Add commands to place and destroy functions for energy items
 	insert_lib_calls()
@@ -40,7 +37,7 @@ def beet_default(ctx: Context) -> None:
 			"furnace_generator": GuiTranslation.furnace_top,
 			"redstone_generator": GuiTranslation.furnace_bottom,
 			"pulverizer": GuiTranslation.barrel_bottom_right,
-		}
+		} # pyright: ignore[reportArgumentType]
 	)
 
 	# Setup machines
