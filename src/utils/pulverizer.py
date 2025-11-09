@@ -1,7 +1,7 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet.core import *
+from stewbeet.core import CUSTOM_ITEM_VANILLA, JsonDict, Mem, write_function
 
 
 # Setup pulverizer work and visuals
@@ -11,7 +11,7 @@ def pulverizer(gui: dict[str, str]) -> None:
 	GUI_DATA_TOOLTIP: str = 'custom_data={"common_signals":{"temp":true}}'
 	PULVERIZER_SLOTS: int = 8
 	PULVERIZER_TIME: int = 200
-	energy: dict = Mem.definitions["pulverizer"]["custom_data"]["energy"]
+	energy: JsonDict = Mem.definitions["pulverizer"]["custom_data"]["energy"]
 
 
 	## Passive parts
@@ -43,13 +43,15 @@ data modify storage {ns}:temp Items set from block ~ ~ ~ Items
 
 # Launch work function if enough power
 scoreboard players set #working {ns}.data 0
-execute if score @s energy.storage matches {energy["usage"]}.. run function {ns}:custom_blocks/pulverizer/work
-
-# Update gui depending on energy storage
-{machine_gui_str}
+execute if score @s energy.storage >= @s {ns}.energy_rate run function {ns}:custom_blocks/pulverizer/work
 
 # Update gui for each slot
 function {ns}:custom_blocks/pulverizer/gui_for_each_slot
+
+# Update gui depending on energy storage
+data modify storage {ns}:temp intruder set from storage {ns}:temp Items[{{Slot:{gui_slot}b}}]
+execute if data storage {ns}:temp intruder unless data storage {ns}:temp intruder.components."minecraft:custom_data".common_signals.temp run function {ns}:custom_blocks/pulverizer/handle_item_on_gui {{"index":{gui_slot},"slot":{gui_slot}}}
+{machine_gui_str}
 
 # Update block visual depends on cook time, and playsound every second
 execute if score #working {ns}.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
@@ -80,7 +82,7 @@ execute store result score #progression {ns}.data run data get storage {ns}:temp
 $data modify storage {ns}:temp intruder set from storage {ns}:temp Items[{{Slot:$(slot)b}}]
 
 # If item is not a GUI, launch function to handle it
-$execute unless data storage {ns}:temp intruder.components."minecraft:custom_data".common_signals.temp run function {ns}:custom_blocks/pulverizer/handle_item_on_gui {{"index":$(index),"slot":$(slot)}}
+$execute if data storage {ns}:temp intruder unless data storage {ns}:temp intruder.components."minecraft:custom_data".common_signals.temp run function {ns}:custom_blocks/pulverizer/handle_item_on_gui {{"index":$(index),"slot":$(slot)}}
 
 # Set item gui (blocked if not unlocked, progression otherwise)
 $execute if data storage {ns}:temp slot.blocked run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="{blocked_model}",{GUI_DATA_TOOLTIP},item_name={{"text":"Blocked","italic":false}},lore=[{{"text":"Place a Slot Unlocker to unlock","color":"gray","italic":false}}]]
@@ -133,7 +135,10 @@ execute if score #drop_item {ns}.data matches 0 if data storage {ns}:temp slot.b
 {for_each_slots}
 
 # Consume energy if any slot is working
-execute if score #working {ns}.data matches 1.. run scoreboard players remove @s energy.storage {energy["usage"] // 20}
+execute if score #working {ns}.data matches 1.. run scoreboard players set #20 {ns}.data 20
+execute if score #working {ns}.data matches 1.. run scoreboard players operation #energy_rate {ns}.data = @s {ns}.energy_rate
+execute if score #working {ns}.data matches 1.. run scoreboard players operation #energy_rate {ns}.data /= #20 {ns}.data
+execute if score #working {ns}.data matches 1.. run scoreboard players operation @s energy.storage -= #energy_rate {ns}.data
 """)
 
 	# Reset progress function
