@@ -7,7 +7,7 @@
 #
 
 # Try to destroy the block
-execute as @e[tag=simplenergy.custom_block,dx=0,dy=0,dz=0] at @s run function simplenergy:custom_blocks/destroy
+function simplenergy:calls/common_signals/custom_block_destroy
 
 # If still alive, it means that the item_frame has been destroyed too,
 execute at @s if entity @s[distance=..1] run function simplenergy:calls/common_signals/item_frame_destroy_alt

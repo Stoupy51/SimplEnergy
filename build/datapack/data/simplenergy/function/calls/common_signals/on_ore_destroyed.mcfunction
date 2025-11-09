@@ -13,5 +13,5 @@ execute store result score #item_count simplenergy.data run data get entity @s I
 execute store success score #is_silk_touch simplenergy.data if data entity @s Item.components."minecraft:custom_data".common_signals.silk_touch
 
 # Try to destroy the block
-execute as @e[tag=simplenergy.custom_block,dx=0,dy=0,dz=0] at @s run function simplenergy:custom_blocks/destroy
+function simplenergy:calls/common_signals/custom_block_destroy
 

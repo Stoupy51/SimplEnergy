@@ -14,6 +14,9 @@ team modify simplenergy.green color green
 team modify simplenergy.gold color gold
 team modify simplenergy.aqua color aqua
 
+# Score for energy usage or generation
+scoreboard objectives add simplenergy.energy_rate dummy
+
 # Opening manual detection
 scoreboard objectives add simplenergy.open_manual minecraft.used:minecraft.written_book
 
