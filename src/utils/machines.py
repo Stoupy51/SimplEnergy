@@ -13,9 +13,8 @@ def setup_machines(gui: dict[str, str]) -> None:
 	GUI_DATA: str = r'tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}'
 
 	# Solar panel
-	energy: JsonDict = Mem.definitions["solar_panel"]["custom_data"]["energy"]
 	content: str = f"""# Produce Energy depending on the power of daylight sensor
-execute if predicate {ns}:check_daylight_power run scoreboard players add @s energy.storage {energy["generation"]}
+execute if predicate {ns}:check_daylight_power run scoreboard players operation @s energy.storage += @s {ns}.energy_rate
 execute if score @s energy.storage > @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 """
 	write_function(f"{ns}:custom_blocks/solar_panel/second", content)
@@ -28,7 +27,6 @@ data modify entity @s transformation.translation[1] set value 0.002f
 
 	# Furnace Generator & Redstone Generator
 	for gen in ["furnace_generator", "redstone_generator"]:
-		energy: JsonDict = Mem.definitions[gen]["custom_data"]["energy"]
 		default_gui: str = gui[f"gui/{gen}.png"]
 		working_gui: str = gui[f"gui/{gen}_on.png"]
 		default_model: str = Mem.definitions[gen]["item_model"]
@@ -61,7 +59,7 @@ execute if score #burn_time {ns}.data matches 1.. run item replace block ~ ~ ~ c
 execute if score #burn_time {ns}.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
 
 # Update the gui & produce Energy while working
-execute if score #burn_time {ns}.data matches 1.. run scoreboard players add @s energy.storage {energy["generation"]}
+execute if score #burn_time {ns}.data matches 1.. run scoreboard players operation @s energy.storage += @s {ns}.energy_rate
 execute if score #burn_time {ns}.data matches 1.. run playsound {ns}:{gen} block @a[distance=..12] ~ ~ ~ 0.25
 execute if score @s energy.storage > @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 """
@@ -129,7 +127,7 @@ function #itemio:calls/container/init
 data modify storage {ns}:temp all set from block ~ ~ ~
 execute store result score #cook_time {ns}.data run data get storage {ns}:temp all.{cook}
 execute store result score #burn_time {ns}.data run data get storage {ns}:temp all.{burn}
-execute if score @s energy.storage matches {energy["usage"]}.. if data storage {ns}:temp all.Items[{{Slot:{ingr_slot}b}}] run function {ns}:custom_blocks/{machine}/work
+execute if score @s energy.storage >= @s {ns}.energy_rate if data storage {ns}:temp all.Items[{{Slot:{ingr_slot}b}}] run function {ns}:custom_blocks/{machine}/work
 
 # Update gui depending on energy storage
 {machine_gui_str}
@@ -144,7 +142,10 @@ execute if score #cook_time {ns}.data matches 1.. if score #second {ns}.data mat
 		write_function(f"{ns}:custom_blocks/{machine}/tick", content)
 		content: str = f"""
 # Change {cook} value and use energy
-execute if score #cook_time {ns}.data matches 1.. run scoreboard players remove @s energy.storage {energy["usage"] // 20}
+execute if score #cook_time {ns}.data matches 1.. run scoreboard players set #20 {ns}.data 20
+execute if score #cook_time {ns}.data matches 1.. run scoreboard players operation #energy_rate {ns}.data = @s {ns}.energy_rate
+execute if score #cook_time {ns}.data matches 1.. run scoreboard players operation #energy_rate {ns}.data /= #20 {ns}.data
+execute if score #cook_time {ns}.data matches 1.. run scoreboard players operation @s energy.storage -= #energy_rate {ns}.data
 {faster_cook}
 {check_cook_limit}execute if score #cook_time {ns}.data matches 1.. store result block ~ ~ ~ {cook} short 1 run scoreboard players get #cook_time {ns}.data
 
@@ -174,7 +175,6 @@ function #itemio:calls/container/init
 """)
 
 	# Cauldron Generator
-	energy: JsonDict = Mem.definitions["cauldron_generator"]["custom_data"]["energy"]
 	default_model: str = Mem.definitions["cauldron_generator"]["item_model"]
 	working_model: str = default_model + "_on"
 	content: str = f"""
@@ -196,7 +196,7 @@ execute if score @s {ns}.private matches 180.. run scoreboard players reset @s {
 execute if score @s {ns}.private matches 1.. if block ~ ~ ~ water_cauldron[level=3] run scoreboard players set @s {ns}.private 1
 
 # Generate energy & Playsound
-scoreboard players add @s energy.storage {energy["generation"]}
+scoreboard players operation @s energy.storage += @s {ns}.energy_rate
 execute if score @s energy.storage >= @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 playsound {ns}:cauldron_generator block @a[distance=..12] ~ ~ ~ 0.25
 """
@@ -212,7 +212,6 @@ data modify entity @s transformation.translation[1] set value 0.01f
 	write_function(f"{ns}:custom_blocks/electric_brewing_stand/place_secondary", to_add)
 
 	# Heat generator
-	energy: JsonDict = Mem.definitions["heat_generator"]["custom_data"]["energy"]
 	default_model: str = Mem.definitions["heat_generator"]["item_model"]
 	working_model: str = default_model + "_on"
 	write_function(f"{ns}:custom_blocks/heat_generator/second", f"""
@@ -233,7 +232,7 @@ execute if score #working {ns}.data matches 1 run data modify entity @s item.com
 execute if score #working {ns}.data matches ..0 run return run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
 
 # Generate energy and playsound
-scoreboard players add @s energy.storage {energy["generation"]}
+scoreboard players operation @s energy.storage += @s {ns}.energy_rate
 execute if score @s energy.storage >= @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 """)
 
@@ -264,18 +263,20 @@ execute if score @s energy.storage >= @s energy.max_storage run scoreboard playe
 """)
 
 	# Elevator
-	energy: JsonDict = Mem.definitions["elevator"]["custom_data"]["energy"]
 	default_model: str = Mem.definitions["elevator"]["item_model"]
 	working_model: str = default_model + "_on"
 	Mem.ctx.data[ns].predicates["is_on_ground"] = set_json_encoder(Predicate({"condition":"minecraft:entity_properties","entity":"this","predicate":{"movement":{"vertical_speed":{"max":0.1}}}}))
 	Mem.ctx.data[ns].predicates["is_sneaking"] = set_json_encoder(Predicate({"condition":"minecraft:entity_properties","entity":"this","predicate":{"flags":{"is_sneaking":True}}}))
 	write_function(f"{ns}:custom_blocks/elevator/tick", f"""
 # If not enough energy, update model and stop
-execute unless score @s energy.storage matches {energy["usage"]}.. run return run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
+execute unless score @s energy.storage >= @s {ns}.energy_rate run return run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
 data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
 
-# Consume energy ({energy["usage"]} per second)
-scoreboard players remove @s energy.storage {energy["usage"] // 20}
+# Consume energy
+scoreboard players set #20 {ns}.data 20
+scoreboard players operation #energy_rate {ns}.data = @s {ns}.energy_rate
+scoreboard players operation #energy_rate {ns}.data /= #20 {ns}.data
+scoreboard players operation @s energy.storage -= #energy_rate {ns}.data
 
 # Check if a player is on top of the elevator (cooldown)
 execute positioned ~ ~1 ~ as @a[distance=..1,dx=0,dz=0] run function {ns}:custom_blocks/elevator/as_player

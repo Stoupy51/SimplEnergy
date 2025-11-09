@@ -24,7 +24,7 @@ execute if score #burn_time simplenergy.data matches 1.. run item replace block 
 execute if score #burn_time simplenergy.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:redstone_generator_on"
 
 # Update the gui & produce Energy while working
-execute if score #burn_time simplenergy.data matches 1.. run scoreboard players add @s energy.storage 80
+execute if score #burn_time simplenergy.data matches 1.. run scoreboard players operation @s energy.storage += @s simplenergy.energy_rate
 execute if score #burn_time simplenergy.data matches 1.. run playsound simplenergy:redstone_generator block @a[distance=..12] ~ ~ ~ 0.25
 execute if score @s energy.storage > @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 

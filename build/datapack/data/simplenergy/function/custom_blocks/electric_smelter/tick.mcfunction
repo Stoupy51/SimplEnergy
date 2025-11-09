@@ -10,7 +10,7 @@
 data modify storage simplenergy:temp all set from block ~ ~ ~
 execute store result score #cook_time simplenergy.data run data get storage simplenergy:temp all.cooking_time_spent
 execute store result score #burn_time simplenergy.data run data get storage simplenergy:temp all.lit_time_remaining
-execute if score @s energy.storage matches 100.. if data storage simplenergy:temp all.Items[{Slot:0b}] run function simplenergy:custom_blocks/electric_smelter/work
+execute if score @s energy.storage >= @s simplenergy.energy_rate if data storage simplenergy:temp all.Items[{Slot:0b}] run function simplenergy:custom_blocks/electric_smelter/work
 
 # Update gui depending on energy storage
 execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.1 with minecraft:command_block[item_model="simplenergy:gui/electric_smelter_0",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]

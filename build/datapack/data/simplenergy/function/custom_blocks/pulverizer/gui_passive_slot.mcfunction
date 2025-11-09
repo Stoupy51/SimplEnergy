@@ -20,7 +20,7 @@ execute store result score #progression simplenergy.data run data get storage si
 $data modify storage simplenergy:temp intruder set from storage simplenergy:temp Items[{Slot:$(slot)b}]
 
 # If item is not a GUI, launch function to handle it
-$execute unless data storage simplenergy:temp intruder.components."minecraft:custom_data".common_signals.temp run function simplenergy:custom_blocks/pulverizer/handle_item_on_gui {"index":$(index),"slot":$(slot)}
+$execute if data storage simplenergy:temp intruder unless data storage simplenergy:temp intruder.components."minecraft:custom_data".common_signals.temp run function simplenergy:custom_blocks/pulverizer/handle_item_on_gui {"index":$(index),"slot":$(slot)}
 
 # Set item gui (blocked if not unlocked, progression otherwise)
 $execute if data storage simplenergy:temp slot.blocked run item replace block ~ ~ ~ container.$(slot) with minecraft:command_block[item_model="simplenergy:gui/progress_blocked",custom_data={"common_signals":{"temp":true}},item_name={"translate": "simplenergy.blocked","italic":false},lore=[{"translate": "simplenergy.place_a_slot_unlocker_to_unlock","color":"gray","italic":false}]]

@@ -7,7 +7,10 @@
 #
 
 # Change BrewTime value and use energy
-execute if score #cook_time simplenergy.data matches 1.. run scoreboard players remove @s energy.storage 2
+execute if score #cook_time simplenergy.data matches 1.. run scoreboard players set #20 simplenergy.data 20
+execute if score #cook_time simplenergy.data matches 1.. run scoreboard players operation #energy_rate simplenergy.data = @s simplenergy.energy_rate
+execute if score #cook_time simplenergy.data matches 1.. run scoreboard players operation #energy_rate simplenergy.data /= #20 simplenergy.data
+execute if score #cook_time simplenergy.data matches 1.. run scoreboard players operation @s energy.storage -= #energy_rate simplenergy.data
 execute if score #cook_time simplenergy.data matches 4.. run scoreboard players remove #cook_time simplenergy.data 3
 execute if score #cook_time simplenergy.data matches 1.. store result block ~ ~ ~ BrewTime short 1 run scoreboard players get #cook_time simplenergy.data
 

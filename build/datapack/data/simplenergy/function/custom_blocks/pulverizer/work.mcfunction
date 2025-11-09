@@ -17,5 +17,8 @@ execute unless data storage simplenergy:temp slots[6].blocked run function simpl
 execute unless data storage simplenergy:temp slots[7].blocked run function simplenergy:custom_blocks/pulverizer/gui_active_slot {"index":7,"slot":16,"result":25}
 
 # Consume energy if any slot is working
-execute if score #working simplenergy.data matches 1.. run scoreboard players remove @s energy.storage 6
+execute if score #working simplenergy.data matches 1.. run scoreboard players set #20 simplenergy.data 20
+execute if score #working simplenergy.data matches 1.. run scoreboard players operation #energy_rate simplenergy.data = @s simplenergy.energy_rate
+execute if score #working simplenergy.data matches 1.. run scoreboard players operation #energy_rate simplenergy.data /= #20 simplenergy.data
+execute if score #working simplenergy.data matches 1.. run scoreboard players operation @s energy.storage -= #energy_rate simplenergy.data
 

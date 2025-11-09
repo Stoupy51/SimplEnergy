@@ -3,7 +3,8 @@
 #
 # @executed	as @e[tag=simplenergy.tick] & at @s
 #
-# @within	simplenergy:custom_blocks/pulverizer/gui_passive_slot {"index":$(index),"slot":$(slot)}
+# @within	simplenergy:custom_blocks/pulverizer/tick {"index":26,"slot":26}
+#			simplenergy:custom_blocks/pulverizer/gui_passive_slot {"index":$(index),"slot":$(slot)}
 #
 
 # If slot is locked and it's not a Slot Unlocker, drop the item

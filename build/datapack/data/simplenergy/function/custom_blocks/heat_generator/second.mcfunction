@@ -23,6 +23,6 @@ execute if score #working simplenergy.data matches 1 run data modify entity @s i
 execute if score #working simplenergy.data matches ..0 run return run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:heat_generator"
 
 # Generate energy and playsound
-scoreboard players add @s energy.storage 20
+scoreboard players operation @s energy.storage += @s simplenergy.energy_rate
 execute if score @s energy.storage >= @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 

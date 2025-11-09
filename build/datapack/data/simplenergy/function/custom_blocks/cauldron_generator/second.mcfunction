@@ -24,7 +24,7 @@ execute if score @s simplenergy.private matches 180.. run scoreboard players res
 execute if score @s simplenergy.private matches 1.. if block ~ ~ ~ water_cauldron[level=3] run scoreboard players set @s simplenergy.private 1
 
 # Generate energy & Playsound
-scoreboard players add @s energy.storage 5
+scoreboard players operation @s energy.storage += @s simplenergy.energy_rate
 execute if score @s energy.storage >= @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 playsound simplenergy:cauldron_generator block @a[distance=..12] ~ ~ ~ 0.25
 
