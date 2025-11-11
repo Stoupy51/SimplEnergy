@@ -3,6 +3,7 @@
 	"title": [
 		{
 			"sprite": "simplenergy:item/simplunium_nugget",
+			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
@@ -17,7 +18,14 @@
 		},
 		" ",
 		{
-			"sprite": "simplenergy:item/simplunium_nugget"
+			"sprite": "simplenergy:item/simplunium_nugget",
+			"atlas": "minecraft:items",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
 		}
 	],
 	"body": [

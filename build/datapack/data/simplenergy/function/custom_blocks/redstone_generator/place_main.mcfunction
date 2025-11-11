@@ -6,7 +6,7 @@
 
 tag @s add simplenergy.placer
 function simplenergy:custom_blocks/get_rotation
-setblock ~ ~ ~ air
+setblock ~ ~ ~ air strict
 execute if score #rotation simplenergy.data matches 1 run setblock ~ ~ ~ minecraft:furnace[facing=north]{"CustomName": {"translate": "simplenergy.redstone_generator"}}
 execute if score #rotation simplenergy.data matches 2 run setblock ~ ~ ~ minecraft:furnace[facing=east]{"CustomName": {"translate": "simplenergy.redstone_generator"}}
 execute if score #rotation simplenergy.data matches 3 run setblock ~ ~ ~ minecraft:furnace[facing=south]{"CustomName": {"translate": "simplenergy.redstone_generator"}}

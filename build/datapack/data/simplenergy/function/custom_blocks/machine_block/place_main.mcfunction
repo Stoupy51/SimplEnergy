@@ -5,7 +5,7 @@
 #
 
 tag @s add simplenergy.placer
-setblock ~ ~ ~ air
+setblock ~ ~ ~ air strict
 setblock ~ ~ ~ minecraft:iron_block
 execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function simplenergy:custom_blocks/machine_block/place_secondary
 tag @s remove simplenergy.placer

@@ -1,9 +1,11 @@
 {
-	"parent": "block/cauldron",
+	"parent": "minecraft:block/cauldron",
 	"textures": {
+		"particle": "simplenergy:item/cauldron_generator_side",
 		"side": "simplenergy:item/cauldron_generator_side",
 		"top": "simplenergy:item/cauldron_generator_top",
-		"bottom": "simplenergy:item/cauldron_generator_bottom"
+		"bottom": "simplenergy:item/cauldron_generator_bottom",
+		"inside": "simplenergy:atlas/cauldron_inner"
 	},
 	"display": {
 		"gui": {

@@ -3,6 +3,7 @@
 	"title": [
 		{
 			"sprite": "simplenergy:item/deepslate_simplunium_ore",
+			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
@@ -17,7 +18,14 @@
 		},
 		" ",
 		{
-			"sprite": "simplenergy:item/deepslate_simplunium_ore"
+			"sprite": "simplenergy:item/deepslate_simplunium_ore",
+			"atlas": "minecraft:items",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
 		}
 	],
 	"body": [

@@ -3,6 +3,7 @@
 	"title": [
 		{
 			"sprite": "simplenergy:item/battery_switcher",
+			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
@@ -17,7 +18,14 @@
 		},
 		" ",
 		{
-			"sprite": "simplenergy:item/battery_switcher"
+			"sprite": "simplenergy:item/battery_switcher",
+			"atlas": "minecraft:items",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
 		}
 	],
 	"body": [

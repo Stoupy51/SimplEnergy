@@ -160,7 +160,7 @@ def main_additions() -> None:
 				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["I I","IRI","III"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"R":ingr_repr("minecraft:redstone")}},
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:cauldron"),ingr_repr("minecraft:redstone"),ingr_repr("minecraft:iron_ingot")]},
 			],
-			OVERRIDE_MODEL: {"parent":"block/cauldron", "textures": {"side": f"{ns}:item/cauldron_generator_side", "top": f"{ns}:item/cauldron_generator_top", "bottom": f"{ns}:item/cauldron_generator_bottom"},
+			OVERRIDE_MODEL: {"parent":"minecraft:block/cauldron", "textures": {"particle": f"{ns}:item/cauldron_generator_side", "side": f"{ns}:item/cauldron_generator_side", "top": f"{ns}:item/cauldron_generator_top", "bottom": f"{ns}:item/cauldron_generator_bottom", "inside": "minecraft:block/cauldron_inner"},
 			"display":{
 				"gui":{"rotation":[30,225,0],"translation":[0,0,0],"scale":[0.625,0.625,0.625]},
 				"ground":{"rotation":[0,0,0],"translation":[0,3,0],"scale":[0.25,0.25,0.25]},
