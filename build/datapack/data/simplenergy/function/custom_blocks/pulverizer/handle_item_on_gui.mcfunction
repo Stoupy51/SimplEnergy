@@ -6,6 +6,8 @@
 # @within	simplenergy:custom_blocks/pulverizer/tick {"index":26,"slot":26}
 #			simplenergy:custom_blocks/pulverizer/gui_passive_slot {"index":$(index),"slot":$(slot)}
 #
+# @args		index (int)
+#
 
 # If slot is locked and it's not a Slot Unlocker, drop the item
 scoreboard players set #drop_item simplenergy.data 0

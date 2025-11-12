@@ -5,6 +5,9 @@
 #
 # @within	simplenergy:custom_blocks/pulverizer/gui_active_slot {"index":$(index),"slot":$(slot)}
 #
+# @args		index (int)
+#			slot (int)
+#
 
 scoreboard players set #progression simplenergy.data 0
 $data modify storage simplenergy:temp slots[$(index)].progression set value 0

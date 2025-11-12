@@ -6,6 +6,8 @@
 # @within	simplenergy:advancements/inventory_changed with storage simplenergy:main Inventory[0]
 #			simplenergy:advancements/inventory_changed_loop with storage simplenergy:main Inventory[0]
 #
+# @args		Slot (unknown)
+#
 
 # Get item in inventory and slot
 data modify storage simplenergy:main Item set from storage simplenergy:main Inventory[0]

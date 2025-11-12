@@ -5,6 +5,8 @@
 #
 # @within	simplenergy:custom_blocks/pulverizer/gui_active_slot {"result":$(result)}
 #
+# @args		result (int)
+#
 
 $execute if items entity @s container.$(result) *[minecraft:max_stack_size=64] run return 64
 $execute if items entity @s container.$(result) *[minecraft:max_stack_size=16] run return 16

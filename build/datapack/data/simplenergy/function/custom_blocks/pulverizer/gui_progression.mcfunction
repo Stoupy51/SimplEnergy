@@ -6,6 +6,8 @@
 # @within	simplenergy:custom_blocks/pulverizer/gui_passive_slot {"index":$(index),"slot":$(slot)}
 #			simplenergy:custom_blocks/pulverizer/reset_progress {"index":$(index),"slot":$(slot)}
 #
+# @args		slot (int)
+#
 
 $execute if score #progression simplenergy.data matches ..0 run item replace block ~ ~ ~ container.$(slot) with minecraft:command_block[item_model="simplenergy:gui/progress_unblocked_00",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
 $execute if score #progression simplenergy.data matches 1..12 run item replace block ~ ~ ~ container.$(slot) with minecraft:command_block[item_model="simplenergy:gui/progress_unblocked_01",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]

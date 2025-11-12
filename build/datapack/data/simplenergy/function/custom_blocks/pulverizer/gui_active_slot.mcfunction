@@ -12,6 +12,10 @@
 #			simplenergy:custom_blocks/pulverizer/work {"index":6,"slot":15,"result":24}
 #			simplenergy:custom_blocks/pulverizer/work {"index":7,"slot":16,"result":25}
 #
+# @args		index (int)
+#			slot (int)
+#			result (int)
+#
 
 # Get progression
 scoreboard players set #progression simplenergy.data 0

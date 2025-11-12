@@ -12,6 +12,9 @@
 #			simplenergy:custom_blocks/pulverizer/gui_for_each_slot {"index":6,"slot":15}
 #			simplenergy:custom_blocks/pulverizer/gui_for_each_slot {"index":7,"slot":16}
 #
+# @args		index (int)
+#			slot (int)
+#
 
 # Get slot and progression, and the item
 scoreboard players set #progression simplenergy.data 0
