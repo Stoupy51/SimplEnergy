@@ -3,11 +3,11 @@
 #
 # @executed	as the player & at current position
 #
-# @within	advancement simplenergy:inventory_changed
+# @within	advancement simplenergy:technical/inventory_changed
 #
 
 # Revoke advancement
-advancement revoke @s only simplenergy:inventory_changed
+advancement revoke @s only simplenergy:technical/inventory_changed
 tag @s remove simplenergy.offhand
 
 # Get offhand tag if holding multimeter in offhand

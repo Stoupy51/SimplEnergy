@@ -3,7 +3,7 @@
 #
 # @executed	as the player & at current position
 #
-# @within	advancement simplenergy:first_join
+# @within	advancement simplenergy:technical/first_join
 #
 
 execute unless score #simplenergy.loaded load.status matches 1 run advancement revoke @s only simplenergy:first_join

@@ -3,11 +3,11 @@
 #
 # @executed	as the player & at current position
 #
-# @within	advancement simplenergy:right_click
+# @within	advancement simplenergy:technical/right_click
 #
 
 # Advancement revoke
-advancement revoke @s only simplenergy:right_click
+advancement revoke @s only simplenergy:technical/right_click
 
 # Copy SelectedItem tag to storage and offhand
 data modify storage simplenergy:main SelectedItemTag set from entity @s SelectedItem.components."minecraft:custom_data"
