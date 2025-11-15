@@ -2,7 +2,7 @@
 #> simplenergy:v2.0.14/load/valid_dependencies
 #
 # @within	simplenergy:v2.0.14/load/secondary
-#			simplenergy:v2.0.14/load/valid_dependencies 1t replace
+#			simplenergy:v2.0.14/load/valid_dependencies 1t replace [ scheduled ]
 #
 
 # Waiting for a player to get the game version, but stop function if no player found

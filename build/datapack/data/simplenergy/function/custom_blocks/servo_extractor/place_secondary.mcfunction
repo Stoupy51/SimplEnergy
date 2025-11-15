@@ -28,6 +28,7 @@ execute at @s run tp @s ^ ^ ^0.1
 
 # Servo mechanism setup (1 item by 1 item: stack_limit)
 tag @s add itemio.servo.extract
+tag @s add itemio.servo
 tag @s add simplenergy.servo
 scoreboard players set @s itemio.servo.stack_limit 4
 scoreboard players set @s itemio.servo.retry_limit 1
