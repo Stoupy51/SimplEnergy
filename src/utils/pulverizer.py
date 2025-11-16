@@ -1,14 +1,12 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet.core import CUSTOM_ITEM_VANILLA, JsonDict, Mem, write_function
+from stewbeet.core import COMMON_SIGNAL, COMMON_SIGNAL_HIDDEN, CUSTOM_ITEM_VANILLA, JsonDict, Mem, write_function
 
 
 # Setup pulverizer work and visuals
 def pulverizer(gui: dict[str, str]) -> None:
 	ns: str = Mem.ctx.project_id
-	GUI_DATA: str = 'tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}'
-	GUI_DATA_TOOLTIP: str = 'custom_data={"common_signals":{"temp":true}}'
 	PULVERIZER_SLOTS: int = 8
 	PULVERIZER_TIME: int = 200
 	energy: JsonDict = Mem.definitions["pulverizer"]["custom_data"]["energy"]
@@ -24,13 +22,13 @@ def pulverizer(gui: dict[str, str]) -> None:
 	previous_max: int = 0
 	for i, gui_name in enumerate(all_gui):
 		if i == 0:
-			machine_gui.append(f"execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model=\"{gui[gui_name]}\",{GUI_DATA}]")
+			machine_gui.append(f"execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model=\"{gui[gui_name]}\",{COMMON_SIGNAL_HIDDEN}]")
 		elif i == (nb_gui - 1):
-			machine_gui.append(f"execute if score @s energy.storage matches {previous_max + 1}.. run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model=\"{gui[gui_name]}\",{GUI_DATA}]")
+			machine_gui.append(f"execute if score @s energy.storage matches {previous_max + 1}.. run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model=\"{gui[gui_name]}\",{COMMON_SIGNAL_HIDDEN}]")
 		else:
 			gui_min: int = previous_max + 1
 			previous_max = (i * energy["max_storage"] // nb_gui_2) - 1
-			machine_gui.append(f"execute if score @s energy.storage matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model=\"{gui[gui_name]}\",{GUI_DATA}]")
+			machine_gui.append(f"execute if score @s energy.storage matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model=\"{gui[gui_name]}\",{COMMON_SIGNAL_HIDDEN}]")
 	machine_gui_str: str = "\n".join(machine_gui)
 
 	default_model: str = Mem.definitions["pulverizer"]["item_model"]
@@ -85,7 +83,7 @@ $data modify storage {ns}:temp intruder set from storage {ns}:temp Items[{{Slot:
 $execute if data storage {ns}:temp intruder unless data storage {ns}:temp intruder.components."minecraft:custom_data".common_signals.temp run function {ns}:custom_blocks/pulverizer/handle_item_on_gui {{"index":$(index),"slot":$(slot)}}
 
 # Set item gui (blocked if not unlocked, progression otherwise)
-$execute if data storage {ns}:temp slot.blocked run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="{blocked_model}",{GUI_DATA_TOOLTIP},item_name={{"text":"Blocked","italic":false}},lore=[{{"text":"Place a Slot Unlocker to unlock","color":"gray","italic":false}}]]
+$execute if data storage {ns}:temp slot.blocked run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="{blocked_model}",{COMMON_SIGNAL},item_name={{"text":"Blocked","italic":false}},lore=[{{"text":"Place a Slot Unlocker to unlock","color":"gray","italic":false}}]]
 $execute unless data storage {ns}:temp slot.blocked run function {ns}:custom_blocks/pulverizer/gui_progression {{"index":$(index),"slot":$(slot)}}
 """)
 
@@ -96,13 +94,13 @@ $execute unless data storage {ns}:temp slot.blocked run function {ns}:custom_blo
 	previous_max: int = 0
 	for i, progression in enumerate(progressions_cmd):
 		if i == 0:
-			progressions_gui.append(f"$execute if score #progression {ns}.data matches ..0 run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model=\"{gui[progression]}\",{GUI_DATA}]")
+			progressions_gui.append(f"$execute if score #progression {ns}.data matches ..0 run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model=\"{gui[progression]}\",{COMMON_SIGNAL_HIDDEN}]")
 		elif i == (nb_gui - 1):
-			progressions_gui.append(f"$execute if score #progression {ns}.data matches {previous_max + 1}.. run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model=\"{gui[progression]}\",{GUI_DATA}]")
+			progressions_gui.append(f"$execute if score #progression {ns}.data matches {previous_max + 1}.. run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model=\"{gui[progression]}\",{COMMON_SIGNAL_HIDDEN}]")
 		else:
 			gui_min: int = previous_max + 1
 			previous_max = (i * PULVERIZER_TIME // nb_gui_2) - 1
-			progressions_gui.append(f"$execute if score #progression {ns}.data matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model=\"{gui[progression]}\",{GUI_DATA}]")
+			progressions_gui.append(f"$execute if score #progression {ns}.data matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model=\"{gui[progression]}\",{COMMON_SIGNAL_HIDDEN}]")
 	write_function(f"{ns}:custom_blocks/pulverizer/gui_progression", "\n".join(progressions_gui))
 
 
