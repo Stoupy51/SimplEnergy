@@ -3,7 +3,6 @@
 	"title": [
 		{
 			"sprite": "simplenergy:item/je_taime_stoupy51",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
@@ -13,13 +12,12 @@
 		},
 		" ",
 		{
-			"text": "Je Taime Stoupy51",
+			"translate": "simplenergy.je_taime_stoupy51",
 			"underlined": true
 		},
 		" ",
 		{
 			"sprite": "simplenergy:item/je_taime_stoupy51",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,

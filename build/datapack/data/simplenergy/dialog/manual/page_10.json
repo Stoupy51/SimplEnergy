@@ -3,7 +3,6 @@
 	"title": [
 		{
 			"sprite": "simplenergy:item/raw_simplunium",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
@@ -19,7 +18,6 @@
 		" ",
 		{
 			"sprite": "simplenergy:item/raw_simplunium",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,

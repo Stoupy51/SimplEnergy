@@ -2,7 +2,7 @@
 # ruff: noqa: E501
 # Imports
 from beet import Predicate
-from stewbeet.core import CUSTOM_ITEM_VANILLA, JsonDict, Mem, set_json_encoder, write_function
+from stewbeet.core import COMMON_SIGNAL_HIDDEN, CUSTOM_ITEM_VANILLA, JsonDict, Mem, set_json_encoder, write_function
 
 from .pulverizer import pulverizer
 
@@ -10,7 +10,6 @@ from .pulverizer import pulverizer
 # Setup machines work and visuals
 def setup_machines(gui: dict[str, str]) -> None:
 	ns: str = Mem.ctx.project_id
-	GUI_DATA: str = r'tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}'
 
 	# Solar panel
 	content: str = f"""# Produce Energy depending on the power of daylight sensor
@@ -55,7 +54,7 @@ execute if score @s energy.storage >= @s energy.max_storage run return run funct
 # Update the gui to default
 execute store result score #burn_time {ns}.data run data get block ~ ~ ~ lit_time_remaining
 execute if score #burn_time {ns}.data matches 0 run function {ns}:custom_blocks/{gen}/stop
-execute if score #burn_time {ns}.data matches 1.. run item replace block ~ ~ ~ container.{gui_slot} with cobblestone[item_model="{working_gui}",{GUI_DATA}]
+execute if score #burn_time {ns}.data matches 1.. run item replace block ~ ~ ~ container.{gui_slot} with cobblestone[item_model="{working_gui}",{COMMON_SIGNAL_HIDDEN}]
 execute if score #burn_time {ns}.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
 
 # Update the gui & produce Energy while working
@@ -65,7 +64,7 @@ execute if score @s energy.storage > @s energy.max_storage run scoreboard player
 """
 		write_function(f"{ns}:custom_blocks/{gen}/second", content)
 		write_function(f"{ns}:custom_blocks/{gen}/stop", f"""
-item replace block ~ ~ ~ container.{gui_slot} with cobblestone[item_model="{default_gui}",{GUI_DATA}]
+item replace block ~ ~ ~ container.{gui_slot} with cobblestone[item_model="{default_gui}",{COMMON_SIGNAL_HIDDEN}]
 data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
 """)
 
@@ -111,13 +110,13 @@ function #itemio:calls/container/init
 		previous_max: int = 0
 		for i, gui_name in enumerate(all_gui):
 			if i == 0:
-				machine_gui.append(f'execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{gui[gui_name]}",{GUI_DATA}]')
+				machine_gui.append(f'execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{gui[gui_name]}",{COMMON_SIGNAL_HIDDEN}]')
 			elif i == (nb_gui - 1):
-				machine_gui.append(f'execute if score @s energy.storage matches {previous_max + 1}.. run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{gui[gui_name]}",{GUI_DATA}]')
+				machine_gui.append(f'execute if score @s energy.storage matches {previous_max + 1}.. run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{gui[gui_name]}",{COMMON_SIGNAL_HIDDEN}]')
 			else:
 				gui_min: int = previous_max + 1
 				previous_max = (i * energy["max_storage"] // nb_gui_2) - 1
-				machine_gui.append(f'execute if score @s energy.storage matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{gui[gui_name]}",{GUI_DATA}]')
+				machine_gui.append(f'execute if score @s energy.storage matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{gui[gui_name]}",{COMMON_SIGNAL_HIDDEN}]')
 		machine_gui_str: str = "\n".join(machine_gui)
 
 		default_model: str = Mem.definitions[machine]["item_model"]
