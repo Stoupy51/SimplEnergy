@@ -285,7 +285,7 @@
 	},
 	"je_taime_stoupy51": {
 		"id": "minecraft:command_block",
-		"custom_data": {"simplenergy": {"je_taime_stoupy51": true},"smithed": {"dict": {"record": {"je_taime_stoupy51": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"simplenergy": {"je_taime_stoupy51": true},"smithed": {"dict": {"record": {"je_taime_stoupy51": true,"item_name": "Je t'aime Stoupy51"}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "simplenergy:je_taime_stoupy51",
 		"max_stack_size": 1,
