@@ -16,7 +16,7 @@ execute if score @s energy.storage >= @s energy.max_storage run return run funct
 # Update the gui to default
 execute store result score #burn_time simplenergy.data run data get block ~ ~ ~ lit_time_remaining
 execute if score #burn_time simplenergy.data matches 0 run function simplenergy:custom_blocks/furnace_generator/stop
-execute if score #burn_time simplenergy.data matches 1.. run item replace block ~ ~ ~ container.0 with cobblestone[item_model="simplenergy:gui/furnace_generator_on",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
+execute if score #burn_time simplenergy.data matches 1.. run item replace block ~ ~ ~ container.0 with cobblestone[item_model="simplenergy:gui/furnace_generator_on",tooltip_display={"hide_tooltip":true},custom_data={"common_signals":{"temp":true}}]
 execute if score #burn_time simplenergy.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:furnace_generator_on"
 
 # Update the gui & produce Energy while working

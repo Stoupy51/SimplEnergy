@@ -8,7 +8,8 @@
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
@@ -23,7 +24,8 @@
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		}
 	],
 	"body": [

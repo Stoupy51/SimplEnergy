@@ -15,7 +15,7 @@
 										"je_taime_stoupy51": true
 									},
 									"smithed": {
-										"dict": {"record": {"je_taime_stoupy51": true}},
+										"dict": {"record": {"je_taime_stoupy51": true,"item_name": "Je t'aime Stoupy51"}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

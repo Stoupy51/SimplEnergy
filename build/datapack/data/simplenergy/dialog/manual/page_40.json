@@ -1,31 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		{
-			"sprite": "simplenergy:item/manual",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			]
-		},
-		" ",
-		{
-			"translate": "simplenergy.manual",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "simplenergy:item/manual",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			]
-		}
-	],
+	"title": {
+		"translate": "simplenergy_manual",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

@@ -21,12 +21,12 @@ function simplenergy:custom_blocks/pulverizer/gui_for_each_slot
 # Update gui depending on energy storage
 data modify storage simplenergy:temp intruder set from storage simplenergy:temp Items[{Slot:26b}]
 execute if data storage simplenergy:temp intruder unless data storage simplenergy:temp intruder.components."minecraft:custom_data".common_signals.temp run function simplenergy:custom_blocks/pulverizer/handle_item_on_gui {"index":26,"slot":26}
-execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_0",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
-execute if score @s energy.storage matches 1..1599 run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_1",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
-execute if score @s energy.storage matches 1600..3199 run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_2",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
-execute if score @s energy.storage matches 3200..4799 run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_3",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
-execute if score @s energy.storage matches 4800..6399 run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_4",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
-execute if score @s energy.storage matches 6400.. run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_5",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_0",tooltip_display={"hide_tooltip":true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches 1..1599 run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_1",tooltip_display={"hide_tooltip":true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches 1600..3199 run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_2",tooltip_display={"hide_tooltip":true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches 3200..4799 run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_3",tooltip_display={"hide_tooltip":true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches 4800..6399 run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_4",tooltip_display={"hide_tooltip":true},custom_data={"common_signals":{"temp":true}}]
+execute if score @s energy.storage matches 6400.. run item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="simplenergy:gui/pulverizer_5",tooltip_display={"hide_tooltip":true},custom_data={"common_signals":{"temp":true}}]
 
 # Update block visual depends on cook time, and playsound every second
 execute if score #working simplenergy.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:pulverizer"
