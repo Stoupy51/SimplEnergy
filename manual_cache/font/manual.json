@@ -30,7 +30,7 @@
 		{"type": "bitmap","file": "simplenergy:font/high_res/simplunium_shovel.png","ascent": 7,"height": 16,"chars": ["聓"]},
 		{"type": "bitmap","file": "simplenergy:font/high_res/simplunium_hoe.png","ascent": 7,"height": 16,"chars": ["聕"]},
 		{"type": "bitmap","file": "simplenergy:font/category/miscellaneous.png","ascent": 1,"height": 131,"chars": ["ဥ"]},
-		{"type": "bitmap","file": "simplenergy:font/high_res/je_taime_stoupy51.png","ascent": 7,"height": 16,"chars": ["聗"]},
+		{"type": "bitmap","file": "simplenergy:font/high_res/luxio_suno_je_taime_stoupy51.png","ascent": 7,"height": 16,"chars": ["聗"]},
 		{"type": "bitmap","file": "simplenergy:font/high_res/multimeter.png","ascent": 7,"height": 16,"chars": ["聙"]},
 		{"type": "bitmap","file": "simplenergy:font/high_res/wrench.png","ascent": 7,"height": 16,"chars": ["聛"]},
 		{"type": "bitmap","file": "simplenergy:font/high_res/slot_unlocker.png","ascent": 7,"height": 16,"chars": ["聝"]},

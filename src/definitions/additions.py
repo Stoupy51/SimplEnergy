@@ -97,7 +97,7 @@ def main_additions() -> None:
 				{"text":"\nUsed as a base for most machines and generators","color":"gray"},
 			],
 		},
-		"je_taime_stoupy51": {
+		"luxio_suno_je_taime_stoupy51": {
 			CATEGORY: MISC,
 			RESULT_OF_CRAFTING: [
 				{"type":PULVERIZING,"result_count":1,"category":"misc","ingredient":ingr_repr(f"minecraft:music_disc_{disc}")}

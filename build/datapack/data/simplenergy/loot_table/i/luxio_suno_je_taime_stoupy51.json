@@ -12,10 +12,10 @@
 							"components": {
 								"minecraft:custom_data": {
 									"simplenergy": {
-										"je_taime_stoupy51": true
+										"luxio_suno_je_taime_stoupy51": true
 									},
 									"smithed": {
-										"dict": {"record": {"je_taime_stoupy51": true,"item_name": "Je t'aime Stoupy51"}},
+										"dict": {"record": {"luxio_suno_je_taime_stoupy51": true,"item_name": "Luxio & Suno - Je t'aime Stoupy51"}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},
@@ -23,10 +23,10 @@
 									"translate": "simplenergy.music_disc",
 									"italic": false
 								},
-								"minecraft:jukebox_playable": "simplenergy:je_taime_stoupy51",
+								"minecraft:jukebox_playable": "simplenergy:luxio_suno_je_taime_stoupy51",
 								"minecraft:max_stack_size": 1,
 								"minecraft:rarity": "rare",
-								"minecraft:item_model": "simplenergy:je_taime_stoupy51",
+								"minecraft:item_model": "simplenergy:luxio_suno_je_taime_stoupy51",
 								"minecraft:lore": [
 									[
 										"",

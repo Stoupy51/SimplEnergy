@@ -27,7 +27,7 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/netherite_dust"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/tin_dust"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/titanium_dust"}]},
-		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/je_taime_stoupy51"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/luxio_suno_je_taime_stoupy51"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/multimeter"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/wrench"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "simplenergy:i/slot_unlocker"}]},
