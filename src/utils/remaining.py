@@ -15,7 +15,7 @@ from stewbeet import (
 	write_tick_file,
 	write_versioned_function,
 )
-from stouputils.io import get_root_path, super_json_dump
+from stouputils.io import get_root_path, json_dump
 
 # Constants
 ROOT: str = get_root_path(__file__)
@@ -352,7 +352,7 @@ execute if score #success {ns}.data matches 1 run schedule function {ns}:utils/b
 	both_model: str = Mem.definitions["battery_switcher_both"]["item_model"]
 	input_model: str = Mem.definitions["battery_switcher_input"]["item_model"]
 	output_model: str = Mem.definitions["battery_switcher_output"]["item_model"]
-	dumped_template: str = super_json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":"TO_REPLACE"}})
+	dumped_template: str = json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":"TO_REPLACE"}})
 	for mode, model in [("default", default_model), ("both", both_model), ("input", input_model), ("output", output_model)]:
 		Mem.ctx.data[ns].item_modifiers[f"battery_switcher/{mode}"] = set_json_encoder(ItemModifier(dumped_template.replace("TO_REPLACE", model)))
 

@@ -5,14 +5,13 @@ from typing import Any
 
 import stouputils as stp
 from beet import Advancement, Texture
-from stewbeet.core import *
-from stewbeet.core.utils.io import super_merge_dict
+from stewbeet import JsonDict, Mem, super_merge_dict
 
 
 # Add visible advancements to the datapack
 def add_visible_advancements() -> None:
 	ns: str = Mem.ctx.project_id
-	textures_folder: str = Mem.ctx.meta.stewbeet.textures_folder
+	textures_folder: str = Mem.ctx.meta.stewbeet.textures_folder # type: ignore
 
 	# Copy advancement texture
 	source: str = f"{textures_folder}/advancement_background.png"
@@ -20,7 +19,7 @@ def add_visible_advancements() -> None:
 
 	# Advancements list
 	background: str = f"{ns}:block/gui/advancement_background"
-	advancements: dict[str, dict] = {
+	advancements: dict[str, JsonDict] = {
 		"simplunium_ingot": {"display": {"title": {"text": "SimplEnergy", "color": "gray"}, "description": {"text": "Obtain a Simplunium Ingot", "color": "green"}, "background": background}},
 		"advanced_battery": {"display": {"title": {"text": "More Energy Storage!", "color": "gray"}, "description": {"text": "Upgrade a Simple Battery", "color": "green"}}, "parent": f"{ns}:visible/simple_battery"},
 		"advanced_cable": {"display": {"title": {"text": "Better Cable, Faster Transfer", "color": "gray"}, "description": {"text": "Upgrade a Simple Cable", "color": "green"}}, "parent": f"{ns}:visible/simple_cable"},
@@ -64,7 +63,7 @@ def add_visible_advancements() -> None:
 
 	# For each advancement,
 	for item, adv in advancements.items():
-		data: dict = Mem.definitions.get(item, {})
+		data: JsonDict = Mem.definitions.get(item, {})
 		advancement: dict[str, Any] = {"display":{}, "criteria": {}, "requirements": [["requirement"]]}
 
 		# Set icon
@@ -86,7 +85,7 @@ def add_visible_advancements() -> None:
 
 		# Set the advancement
 		advancement = super_merge_dict(advancement, adv)
-		Mem.ctx.data[ns].advancements[f"visible/{item}"] = Advancement(stp.super_json_dump(advancement, max_level = 7))
+		Mem.ctx.data[ns].advancements[f"visible/{item}"] = Advancement(stp.json_dump(advancement, max_level = 7))
 
 	return
 
