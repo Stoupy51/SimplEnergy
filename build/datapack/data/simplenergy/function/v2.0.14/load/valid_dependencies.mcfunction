@@ -12,7 +12,7 @@ execute store result score #game_version simplenergy.data run data get entity @p
 
 # Check if the game version is supported
 scoreboard players set #mcload_error simplenergy.data 0
-execute unless score #game_version simplenergy.data matches 4664.. run scoreboard players set #mcload_error simplenergy.data 1
+execute unless score #game_version simplenergy.data matches 4669.. run scoreboard players set #mcload_error simplenergy.data 1
 
 # Decode errors
 execute if score #mcload_error simplenergy.data matches 1 run tellraw @a {"translate": "simplenergy_error_this_version_is_made_for_minecraft_1_21_11","color":"red"}

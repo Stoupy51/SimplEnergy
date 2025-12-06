@@ -1,0 +1,6 @@
+{
+	"parent": "item/spear_in_hand",
+	"textures": {
+		"layer0": "simplenergy:item/simplunium_spear_in_hand"
+	}
+}

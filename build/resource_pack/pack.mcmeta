@@ -6,10 +6,7 @@
 			75,
 			0
 		],
-		"max_format": [
-			1000,
-			0
-		]
+		"max_format": 75
 	},
 	"id": "simplenergy",
 	"overlays": {

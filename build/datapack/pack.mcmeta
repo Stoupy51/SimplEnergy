@@ -4,12 +4,9 @@
 		"description": "SimplEnergy [2.0.14] by Stoupy51",
 		"min_format": [
 			94,
-			0
+			1
 		],
-		"max_format": [
-			1000,
-			0
-		]
+		"max_format": 94
 	},
 	"id": "simplenergy"
 }

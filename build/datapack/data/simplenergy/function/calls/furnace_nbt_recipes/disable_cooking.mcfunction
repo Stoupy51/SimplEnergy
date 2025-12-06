@@ -14,5 +14,6 @@ execute if score #reset furnace_nbt_recipes.data matches 0 store success score #
 execute if score #reset furnace_nbt_recipes.data matches 0 store success score #reset furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"id":"minecraft:iron_leggings"}
 execute if score #reset furnace_nbt_recipes.data matches 0 store success score #reset furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"id":"minecraft:iron_pickaxe"}
 execute if score #reset furnace_nbt_recipes.data matches 0 store success score #reset furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"id":"minecraft:iron_shovel"}
+execute if score #reset furnace_nbt_recipes.data matches 0 store success score #reset furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"id":"minecraft:iron_spear"}
 execute if score #reset furnace_nbt_recipes.data matches 0 store success score #reset furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"id":"minecraft:iron_sword"}
 
