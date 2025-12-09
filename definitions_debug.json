@@ -296,7 +296,7 @@
 	},
 	"luxio_suno_je_taime_stoupy51": {
 		"id": "minecraft:command_block",
-		"custom_data": {"simplenergy": {"luxio_suno_je_taime_stoupy51": true},"smithed": {"dict": {"record": {"luxio_suno_je_taime_stoupy51": true,"item_name": "Luxio & Suno - Je t'aime Stoupy51"}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"simplenergy": {"luxio_suno_je_taime_stoupy51": true},"smithed": {"dict": {"record": {"luxio_suno_je_taime_stoupy51": true,"item_name": "Luxio & Suno - Je t'aime Stoupy51"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 103,"sound_event": {"sound_id": "simplenergy:luxio_suno_je_taime_stoupy51"},"description": {"text": "Luxio & Suno - Je t'aime Stoupy51"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "simplenergy:luxio_suno_je_taime_stoupy51",
 		"max_stack_size": 1,
