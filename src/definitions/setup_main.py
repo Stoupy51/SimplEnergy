@@ -1,6 +1,22 @@
 
 # Imports
-from stewbeet.core import *  # type: ignore
+from stewbeet import (
+	Context,
+	JsonDict,
+	VanillaEquipments,
+	EquipmentsConfig,
+	DefaultOre,
+	ingr_repr,
+	generate_everything_about_these_materials,
+	add_recipes_for_all_dusts,
+	generate_custom_records,
+	add_energy_lore_to_definitions,
+	add_item_model_component,
+	add_item_name_and_lore_if_missing,
+	add_private_custom_data_for_namespace,
+	add_smithed_ignore_vanilla_behaviours_convention,
+	set_manual_components
+)
 
 from .additions import main_additions
 from .manual_assets import manual_assets_main
