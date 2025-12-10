@@ -1,12 +1,13 @@
 {
 	"pack": {
+		"pack_format": 75,
 		"description": "SimplEnergy [2.0.15] by Stoupy51",
 		"min_format": [
 			75,
 			0
 		],
 		"max_format": [
-			75,
+			9999,
 			0
 		]
 	},
