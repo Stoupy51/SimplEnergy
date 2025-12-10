@@ -381,12 +381,18 @@ execute if items entity @s weapon.offhand *[custom_data~{{"{ns}":{{"multimeter":
 execute if items entity @s weapon.offhand *[custom_data~{{"{ns}":{{"battery_switcher":true}}}}] run tag @s add {ns}.offhand
 
 # For loop for each item in inventory
+execute if items entity @s container.* *[custom_data~{{"{ns}":{{"battery_switcher":true}}}}] run function {ns}:utils/battery_switcher/inventory_changed
+""")
+	write_function(f"{ns}:utils/battery_switcher/inventory_changed", f"""
+# Copy inventory to storage
 data modify storage {ns}:main Inventory set from entity @s Inventory
-function {ns}:advancements/inventory_changed_loop with storage {ns}:main Inventory[0]
+
+# Start inventory loop
+function {ns}:utils/battery_switcher/loop with storage {ns}:main Inventory[0]
 """)
 
 	# Inventory loop
-	write_function(f"{ns}:advancements/inventory_changed_loop", f"""
+	write_function(f"{ns}:utils/battery_switcher/loop", f"""
 # Get item in inventory and slot
 data modify storage {ns}:main Item set from storage {ns}:main Inventory[0]
 execute store result score #slot {ns}.data run data get storage {ns}:main Item.Slot
@@ -396,6 +402,6 @@ $execute if score #slot {ns}.data matches 0.. if data storage {ns}:main Item.com
 
 # Remove element and go next
 data remove storage {ns}:main Inventory[0]
-execute if data storage {ns}:main Inventory[0] run function {ns}:advancements/inventory_changed_loop with storage {ns}:main Inventory[0]
+execute if data storage {ns}:main Inventory[0] run function {ns}:utils/battery_switcher/loop with storage {ns}:main Inventory[0]
 """)
 

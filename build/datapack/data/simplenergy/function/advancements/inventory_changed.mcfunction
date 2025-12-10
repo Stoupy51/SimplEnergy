@@ -17,6 +17,5 @@ execute if items entity @s weapon.offhand *[custom_data~{"simplenergy":{"multime
 execute if items entity @s weapon.offhand *[custom_data~{"simplenergy":{"battery_switcher":true}}] run tag @s add simplenergy.offhand
 
 # For loop for each item in inventory
-data modify storage simplenergy:main Inventory set from entity @s Inventory
-function simplenergy:advancements/inventory_changed_loop with storage simplenergy:main Inventory[0]
+execute if items entity @s container.* *[custom_data~{"simplenergy":{"battery_switcher":true}}] run function simplenergy:utils/battery_switcher/inventory_changed
 

@@ -1,10 +1,10 @@
 
-#> simplenergy:advancements/inventory_changed_loop
+#> simplenergy:utils/battery_switcher/loop
 #
 # @executed	as the player & at current position
 #
-# @within	simplenergy:advancements/inventory_changed with storage simplenergy:main Inventory[0]
-#			simplenergy:advancements/inventory_changed_loop with storage simplenergy:main Inventory[0]
+# @within	simplenergy:utils/battery_switcher/inventory_changed with storage simplenergy:main Inventory[0]
+#			simplenergy:utils/battery_switcher/loop with storage simplenergy:main Inventory[0]
 #
 # @args		Slot (unknown)
 #
@@ -18,5 +18,5 @@ $execute if score #slot simplenergy.data matches 0.. if data storage simplenergy
 
 # Remove element and go next
 data remove storage simplenergy:main Inventory[0]
-execute if data storage simplenergy:main Inventory[0] run function simplenergy:advancements/inventory_changed_loop with storage simplenergy:main Inventory[0]
+execute if data storage simplenergy:main Inventory[0] run function simplenergy:utils/battery_switcher/loop with storage simplenergy:main Inventory[0]
 
