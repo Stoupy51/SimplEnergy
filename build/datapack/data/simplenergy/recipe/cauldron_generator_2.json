@@ -1,6 +1,7 @@
 {
 	"type": "minecraft:crafting_shapeless",
 	"category": "misc",
+	"group": "cauldron_generator",
 	"ingredients": [
 		"minecraft:cauldron",
 		"minecraft:redstone",

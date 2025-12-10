@@ -309,10 +309,10 @@ def main_additions() -> None:
 		"simple_cable": {
 			"id": CUSTOM_BLOCK_HEAD, CATEGORY: "energy", "custom_data": {"energy": {"transfer":40}},
 			RESULT_OF_CRAFTING:[
-				{"type":"crafting_shaped","result_count":12,"category":"misc","group":"simple_cable","shape":["ICI","IOI","ICI"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:coal")}},
-				{"type":"crafting_shaped","result_count":12,"category":"misc","group":"simple_cable","shape":["ICI","IOI","ICI"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:charcoal")}},
-				{"type":"crafting_shaped","result_count":12,"category":"misc","group":"simple_cable","shape":["III","COC","III"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:coal")}},
-				{"type":"crafting_shaped","result_count":12,"category":"misc","group":"simple_cable","shape":["III","COC","III"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:charcoal")}},
+				{"type":"crafting_shaped","result_count":12,"category":"misc","shape":["ICI","IOI","ICI"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:coal")}},
+				{"type":"crafting_shaped","result_count":12,"category":"misc","shape":["ICI","IOI","ICI"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:charcoal")}},
+				{"type":"crafting_shaped","result_count":12,"category":"misc","shape":["III","COC","III"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:coal")}},
+				{"type":"crafting_shaped","result_count":12,"category":"misc","shape":["III","COC","III"],"ingredients":{"I":ingr_repr("minecraft:iron_ingot"),"C":ingr_repr("minecraft:copper_ingot"),"O":ingr_repr("minecraft:charcoal")}},
 			],
 			"profile": {
 				"id": [-709098200,1001541428,-2043264882,-430220135],
@@ -438,10 +438,10 @@ def main_additions() -> None:
 		"id": "minecraft:written_book", "category": MISC, "item_name": "SimplEnergy Manual",
 		RESULT_OF_CRAFTING: [
 			# Put a book and a steel ingot in the crafting grid to get the manual
-			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients": [ingr_repr("minecraft:book"), ingr_repr("simplunium_ingot")]},
+			{"type":"crafting_shapeless","result_count":1,"category":MISC,"ingredients": [ingr_repr("minecraft:book"), ingr_repr("simplunium_ingot")]},
 
 			# Put the manual in the crafting grid to get the manual back (update the manual)
-			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients": [ingr_repr("manual")]},
+			{"type":"crafting_shapeless","result_count":1,"category":MISC,"ingredients": [ingr_repr("manual")]},
 		],
 	}
 

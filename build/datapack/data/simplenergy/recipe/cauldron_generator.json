@@ -1,6 +1,7 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"category": "misc",
+	"group": "cauldron_generator",
 	"pattern": [
 		"I I",
 		"IRI",
