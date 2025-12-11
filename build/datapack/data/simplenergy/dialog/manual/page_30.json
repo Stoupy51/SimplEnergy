@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "simplenergy:item/simplunium_sword",
+			"sprite": "simplenergy:item/dialog_sprite/simplunium_sword",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "simplenergy:item/simplunium_sword",
+			"sprite": "simplenergy:item/dialog_sprite/simplunium_sword",
 			"shadow_color": [
 				0,
 				0,

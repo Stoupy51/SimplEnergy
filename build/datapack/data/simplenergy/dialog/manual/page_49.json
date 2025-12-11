@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "simplenergy:item/heat_generator",
+			"sprite": "simplenergy:item/dialog_sprite/heat_generator",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "simplenergy:item/heat_generator",
+			"sprite": "simplenergy:item/dialog_sprite/heat_generator",
 			"shadow_color": [
 				0,
 				0,

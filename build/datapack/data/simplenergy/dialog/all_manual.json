@@ -1,8 +1,13 @@
 {
 	"type": "minecraft:dialog_list",
-	"title": {
-		"translate": "simplenergy_manual"
-	},
+	"title": [
+		"",
+		{"sprite": "simplenergy:item/dialog_sprite/pack_icon","shadow_color": [0,0,0,0],"atlas": "minecraft:items"},
+		" ",
+		{"translate": "simplenergy_manual"},
+		" ",
+		{"sprite": "simplenergy:item/dialog_sprite/pack_icon","shadow_color": [0,0,0,0],"atlas": "minecraft:items"}
+	],
 	"dialogs": [
 		"simplenergy:manual/page_1",
 		"simplenergy:manual/page_2",

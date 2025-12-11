@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "simplenergy:item/gold_dust",
+			"sprite": "simplenergy:item/dialog_sprite/gold_dust",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "simplenergy:item/gold_dust",
+			"sprite": "simplenergy:item/dialog_sprite/gold_dust",
 			"shadow_color": [
 				0,
 				0,

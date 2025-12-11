@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "simplenergy:item/copper_dust",
+			"sprite": "simplenergy:item/dialog_sprite/copper_dust",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "simplenergy:item/copper_dust",
+			"sprite": "simplenergy:item/dialog_sprite/copper_dust",
 			"shadow_color": [
 				0,
 				0,

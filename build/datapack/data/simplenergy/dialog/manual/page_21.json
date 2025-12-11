@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "simplenergy:item/emerald_dust",
+			"sprite": "simplenergy:item/dialog_sprite/emerald_dust",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "simplenergy:item/emerald_dust",
+			"sprite": "simplenergy:item/dialog_sprite/emerald_dust",
 			"shadow_color": [
 				0,
 				0,

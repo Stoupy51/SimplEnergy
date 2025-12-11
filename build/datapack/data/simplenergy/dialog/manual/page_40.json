@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "simplenergy:item/battery_switcher",
+			"sprite": "simplenergy:item/dialog_sprite/battery_switcher",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "simplenergy:item/battery_switcher",
+			"sprite": "simplenergy:item/dialog_sprite/battery_switcher",
 			"shadow_color": [
 				0,
 				0,

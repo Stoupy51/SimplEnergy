@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "simplenergy:item/deepslate_simplunium_ore",
+			"sprite": "simplenergy:item/dialog_sprite/deepslate_simplunium_ore",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "simplenergy:item/deepslate_simplunium_ore",
+			"sprite": "simplenergy:item/dialog_sprite/deepslate_simplunium_ore",
 			"shadow_color": [
 				0,
 				0,
