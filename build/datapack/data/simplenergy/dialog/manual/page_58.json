@@ -1,9 +1,34 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "simplenergy.advanced_cable",
-		"underlined": true
-	},
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/advanced_cable",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.advanced_cable",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/advanced_cable",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

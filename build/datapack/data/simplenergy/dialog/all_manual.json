@@ -4,7 +4,7 @@
 		"",
 		{"sprite": "simplenergy:item/dialog_sprite/pack_icon","shadow_color": [0,0,0,0],"atlas": "minecraft:items"},
 		" ",
-		{"translate": "simplenergy_manual"},
+		{"translate": "simplenergy_manual","underlined": true},
 		" ",
 		{"sprite": "simplenergy:item/dialog_sprite/pack_icon","shadow_color": [0,0,0,0],"atlas": "minecraft:items"}
 	],
