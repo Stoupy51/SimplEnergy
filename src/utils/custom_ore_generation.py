@@ -14,7 +14,7 @@ def setup_custom_ore_generation():
 				dimensions = ["minecraft:overworld", "stardust:cavern", "stardust:celestial"],
 				maximum_height = 50,
 				minimum_height = 0,
-				veins_per_region = 1.5,
+				veins_per_region = 0.5,
 				vein_size_logic = 0.4,
 			)
 		],
@@ -22,7 +22,7 @@ def setup_custom_ore_generation():
 			CustomOreGeneration(
 				dimensions = ["minecraft:overworld", "stardust:cavern", "stardust:celestial"],
 				maximum_height = 0,
-				veins_per_region = 1.5,
+				veins_per_region = 0.5,
 				vein_size_logic = 0.4,
 			)
 		],

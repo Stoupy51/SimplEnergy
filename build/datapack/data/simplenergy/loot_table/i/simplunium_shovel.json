@@ -37,7 +37,7 @@
 									},
 									{
 										"type": "mining_efficiency",
-										"amount": 0.2,
+										"amount": 2,
 										"operation": "add_value",
 										"slot": "mainhand",
 										"id": "simplenergy:mining_efficiency.mainhand"

@@ -25,7 +25,7 @@ from .manual_assets import manual_assets_main
 simplunium_durability = 3 * VanillaEquipments.PICKAXE.value[DefaultOre.IRON]["durability"]
 ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 	"simplunium_ingot":	EquipmentsConfig(
-		DefaultOre.IRON, simplunium_durability, {"attack_damage": 1, "armor": 0.5, "mining_efficiency": 0.2}
+		DefaultOre.IRON, simplunium_durability, {"attack_damage": 1, "armor": 0.5, "mining_efficiency": 2}
 	),
 }
 DUSTS_CONFIGS: dict[str, tuple[list[str|JsonDict], JsonDict]] = {
