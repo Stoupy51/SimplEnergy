@@ -9,13 +9,14 @@ from stewbeet import (
 	CUSTOM_ITEM_VANILLA,
 	NO_SILK_TOUCH_DROP,
 	OVERRIDE_MODEL,
-	PULVERIZING,
 	RESULT_OF_CRAFTING,
 	VANILLA_BLOCK,
 	WIKI_COMPONENT,
+	Item,
 	JsonDict,
 	Mem,
 	TextComponent,
+	WikiButton,
 	ingr_repr,
 )
 from stouputils.print import info
@@ -100,7 +101,7 @@ def main_additions() -> None:
 		"luxio_suno_je_taime_stoupy51": {
 			CATEGORY: MISC,
 			RESULT_OF_CRAFTING: [
-				{"type":PULVERIZING,"result_count":1,"category":"misc","ingredient":ingr_repr(f"minecraft:music_disc_{disc}")}
+				{"type":"simplenergy_pulverizing","result_count":1,"category":"misc","ingredient":ingr_repr(f"minecraft:music_disc_{disc}")}
 				for disc in [
 					"13","cat","blocks","chirp","far","mall","mellohi","stal","strad","ward","11","wait",
 					"creator_music_box","creator","precipice","otherside","relic","5","pigstep","tears","lava_chicken"
@@ -392,10 +393,6 @@ def main_additions() -> None:
 				{"text":"\nMust be connected to Basic Item Cable for item transport","color":"gray"},
 			],
 		},
-
-		# Mechanization items
-		"tin_dust": {WIKI_COMPONENT: MECHANIZATION_COMPATIBILITY},
-		"titanium_dust": {WIKI_COMPONENT: MECHANIZATION_COMPATIBILITY},
 	}
 
 	# Raw materials
@@ -446,6 +443,10 @@ def main_additions() -> None:
 			{"type":"crafting_shapeless","result_count":1,"category":MISC,"ingredients": [ingr_repr("manual")]},
 		],
 	}
+
+	# Mechanization items
+	Item.from_id("tin_dust").wiki_buttons = [WikiButton(MECHANIZATION_COMPATIBILITY)]
+	Item.from_id("titanium_dust").wiki_buttons = [WikiButton(MECHANIZATION_COMPATIBILITY)]
 
 	# Update the definitions with new data
 	for k, v in additions.items():

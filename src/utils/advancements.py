@@ -5,7 +5,7 @@ from typing import Any
 
 import stouputils as stp
 from beet import Advancement, Texture
-from stewbeet import JsonDict, Mem, super_merge_dict
+from stewbeet import Item, JsonDict, Mem, super_merge_dict
 
 
 # Add visible advancements to the datapack
@@ -39,8 +39,8 @@ def add_visible_advancements() -> None:
 		"wrench": {"display": {"title": {"text": "Having the control!", "color": "gray"}, "description": {"text": "Craft a wrench to rotate machines and break cables", "color": "green"}, "hidden": True}, "parent": f"{ns}:visible/simplunium_armor"},
 
 		"simplunium_armor": {
-			"display": { "icon": {"id": Mem.definitions["simplunium_chestplate"]["id"],"components": {
-					"minecraft:item_model": Mem.definitions["simplunium_chestplate"]["item_model"],
+			"display": { "icon": {"id": Mem.definitions["simplunium_chestplate"]["base_item"],"components": {
+					"minecraft:item_model": Mem.definitions["simplunium_chestplate"]["components"]["item_model"],
 				}},
 				"title": {"text": "Cover Me with Simplunium", "color": "gray"},
 				"description": {"text": "Better than iron armor", "color": "green"},
@@ -63,18 +63,18 @@ def add_visible_advancements() -> None:
 
 	# For each advancement,
 	for item, adv in advancements.items():
-		data: JsonDict = Mem.definitions.get(item, {})
 		advancement: dict[str, Any] = {"display":{}, "criteria": {}, "requirements": [["requirement"]]}
 
 		# Set icon
 		if not adv.get("display", {}).get("icon"):
-			icon: dict[str, Any] = {"id": data["id"]}
+			obj = Item.from_id(item)
+			icon: dict[str, Any] = {"id": obj.base_item}
 			components_to_copy: list[str] = ["item_model", "profile"]
 			for component in components_to_copy:
-				if data.get(component):
+				if obj.components.get(component):
 					if not icon.get("components"):
 						icon["components"] = {}
-					icon["components"][f"minecraft:{component}"] = data[component]
+					icon["components"][f"minecraft:{component}"] = obj.components[component]
 			advancement["display"]["icon"] = icon
 
 		# Set the criteria, if not already set
