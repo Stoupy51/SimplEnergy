@@ -4,6 +4,7 @@ from stewbeet import (
 	Context,
 	DefaultOre,
 	EquipmentsConfig,
+	Ingr,
 	JsonDict,
 	VanillaEquipments,
 	add_energy_lore_to_definitions,
@@ -14,7 +15,6 @@ from stewbeet import (
 	add_smithed_ignore_vanilla_behaviours_convention,
 	generate_custom_records,
 	generate_everything_about_these_materials,
-	ingr_repr,
 	set_manual_components,
 )
 
@@ -29,16 +29,16 @@ ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 	),
 }
 DUSTS_CONFIGS: dict[str, tuple[list[str|JsonDict], JsonDict]] = {
-	"copper":	(["raw_copper","copper_ore","deepslate_copper_ore"],												ingr_repr("minecraft:copper_ingot")),
-	"iron":		(["raw_iron","iron_ore","deepslate_iron_ore"],														ingr_repr("minecraft:iron_ingot")),
-	"gold":		(["raw_gold","gold_ore","deepslate_gold_ore"],														ingr_repr("minecraft:gold_ingot")),
-	"lapis":	(["lapis_ore","deepslate_lapis_ore"],																ingr_repr("minecraft:lapis_lazuli")),
-	"diamond":	(["diamond_ore","deepslate_diamond_ore"],															ingr_repr("minecraft:diamond")),
-	"emerald":	(["emerald_ore","deepslate_emerald_ore"],															ingr_repr("minecraft:emerald")),
-	"quartz":	(["nether_quartz_ore"],																				ingr_repr("minecraft:quartz")),
-	"netherite":(["ancient_debris"],																				ingr_repr("minecraft:netherite_scrap")),
-	"tin":		([ingr_repr(x, "mechanization") for x in ["raw_tin","tin_ore","deepslate_tin_ore"]],				ingr_repr("tin_ingot", "mechanization")),
-	"titanium":	([ingr_repr(x, "mechanization") for x in ["raw_titanium","titanium_ore","deepslate_titanium_ore"]],	ingr_repr("titanium_ingot", "mechanization")),
+	"copper":	(["raw_copper","copper_ore","deepslate_copper_ore"],												Ingr("minecraft:copper_ingot")),
+	"iron":		(["raw_iron","iron_ore","deepslate_iron_ore"],														Ingr("minecraft:iron_ingot")),
+	"gold":		(["raw_gold","gold_ore","deepslate_gold_ore"],														Ingr("minecraft:gold_ingot")),
+	"lapis":	(["lapis_ore","deepslate_lapis_ore"],																Ingr("minecraft:lapis_lazuli")),
+	"diamond":	(["diamond_ore","deepslate_diamond_ore"],															Ingr("minecraft:diamond")),
+	"emerald":	(["emerald_ore","deepslate_emerald_ore"],															Ingr("minecraft:emerald")),
+	"quartz":	(["nether_quartz_ore"],																				Ingr("minecraft:quartz")),
+	"netherite":(["ancient_debris"],																				Ingr("minecraft:netherite_scrap")),
+	"tin":		([Ingr(x, "mechanization") for x in ["raw_tin","tin_ore","deepslate_tin_ore"]],						Ingr("tin_ingot", "mechanization")),
+	"titanium":	([Ingr(x, "mechanization") for x in ["raw_titanium","titanium_ore","deepslate_titanium_ore"]],		Ingr("titanium_ingot", "mechanization")),
 }
 
 # Make all the item definitions
