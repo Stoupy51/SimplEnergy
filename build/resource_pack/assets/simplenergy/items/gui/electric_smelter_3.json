@@ -1,0 +1,7 @@
+{
+	"model": {
+		"type": "minecraft:model",
+		"model": "simplenergy:item/gui/electric_smelter_3"
+	},
+	"oversized_in_gui": true
+}

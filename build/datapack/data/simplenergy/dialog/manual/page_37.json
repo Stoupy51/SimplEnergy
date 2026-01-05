@@ -1,0 +1,76 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/multimeter",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.multimeter",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/multimeter",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_36"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (36)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_38"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (38)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_36"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (36)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_38"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (38)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$腯$腯","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				"U$  \n\"",
+				{"text": "U$U$","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				"U$  \n\"",
+				{"text": "$腢$腢","hover_event": {"action": "show_item","id": "minecraft:copper_ingot","components": {}}},
+				"U$\"\"",
+				{"text": "$$聛","hover_event": {"action": "show_item","id": "warped_fungus_on_a_stick","components": {"tooltip_display": {"hidden_components": ["minecraft:unbreakable"]},"lore": [{"translate": "simplenergy.allows_you_to_analyse_machines","italic": false,"color": "gray"},{"translate": "simplenergy.to_get_their_energy_information","italic": false,"color": "gray"},{"translate": "simplenergy.hold_in_offhand_for_passive_use","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:multimeter","item_name": {"translate": "simplenergy.multimeter"},"custom_data": {"simplenergy": {"multimeter": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "U$U$","hover_event": {"action": "show_item","id": "minecraft:copper_ingot","components": {}}},
+				"U$\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "warped_fungus_on_a_stick","components": {"tooltip_display": {"hidden_components": ["minecraft:unbreakable"]},"lore": [{"translate": "simplenergy.allows_you_to_analyse_machines","italic": false,"color": "gray"},{"translate": "simplenergy.to_get_their_energy_information","italic": false,"color": "gray"},{"translate": "simplenergy.hold_in_offhand_for_passive_use","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:multimeter","item_name": {"translate": "simplenergy.multimeter"},"custom_data": {"simplenergy": {"multimeter": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "$腢$腢","hover_event": {"action": "show_item","id": "minecraft:copper_ingot","components": {}}},
+				"U$  \n\"",
+				{"text": "U$U$","hover_event": {"action": "show_item","id": "minecraft:copper_ingot","components": {}}},
+				"U$  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.a_diagnostic_tool_for_energy_systems","color": "yellow"},{"translate": "simplenergy.hold_in_your_offhand_to_automatically_scan_machines_when_looking","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$腯"},{"text": "$腯"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$腢"},{"text": "$腢"},"U$\"\"",{"text": "$$聛"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$\"\"",{"text": "U$"},"\n","\"",{"text": "$腢"},{"text": "$腢"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.copper_ingot","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.a_diagnostic_tool_for_energy_systems","color": "yellow"},{"translate": "simplenergy.hold_in_your_offhand_to_automatically_scan_machines_when_looking","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$腯"},{"text": "$腯"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$腢"},{"text": "$腢"},"U$\"\"",{"text": "$$聛"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$\"\"",{"text": "U$"},"\n","\"",{"text": "$腢"},{"text": "$腢"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.copper_ingot","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

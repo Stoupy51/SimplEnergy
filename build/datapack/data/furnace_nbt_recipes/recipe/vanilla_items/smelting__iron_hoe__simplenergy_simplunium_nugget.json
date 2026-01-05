@@ -1,0 +1,48 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": "minecraft:iron_hoe",
+	"result": {
+		"id": "minecraft:command_block",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"smithed": {
+					"dict": {
+						"nugget": {
+							"simplunium": true
+						}
+					},
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				},
+				"simplenergy": {
+					"simplunium_nugget": true
+				}
+			},
+			"minecraft:item_model": "simplenergy:simplunium_nugget",
+			"minecraft:item_name": {
+				"translate": "simplenergy.simplunium_nugget"
+			},
+			"minecraft:lore": [
+				[
+					"",
+					{
+						"text": "I",
+						"color": "white",
+						"italic": false,
+						"font": "simplenergy:icons"
+					},
+					{
+						"translate": "simplenergy",
+						"italic": true,
+						"color": "blue"
+					}
+				]
+			]
+		}
+	},
+	"experience": 0.8,
+	"cookingtime": 200
+}

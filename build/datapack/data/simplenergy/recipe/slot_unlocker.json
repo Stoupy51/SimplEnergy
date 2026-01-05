@@ -1,0 +1,59 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"group": "slot_unlocker",
+	"pattern": [
+		"QBQ",
+		"NGN",
+		"NIN"
+	],
+	"key": {
+		"Q": "minecraft:quartz",
+		"B": "minecraft:breeze_rod",
+		"N": "minecraft:gold_nugget",
+		"G": "minecraft:raw_gold_block",
+		"I": "minecraft:iron_block"
+	},
+	"result": {
+		"id": "minecraft:paper",
+		"count": 1,
+		"components": {
+			"minecraft:lore": [
+				{
+					"translate": "simplenergy.unlocks_a_blocked_slot_in_a_machine",
+					"italic": false,
+					"color": "gray"
+				},
+				[
+					"",
+					{
+						"text": "I",
+						"color": "white",
+						"italic": false,
+						"font": "simplenergy:icons"
+					},
+					{
+						"translate": "simplenergy",
+						"italic": true,
+						"color": "blue"
+					}
+				]
+			],
+			"minecraft:item_model": "simplenergy:slot_unlocker",
+			"minecraft:item_name": {
+				"translate": "simplenergy.slot_unlocker"
+			},
+			"minecraft:custom_data": {
+				"simplenergy": {
+					"slot_unlocker": true
+				},
+				"smithed": {
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				}
+			}
+		}
+	}
+}

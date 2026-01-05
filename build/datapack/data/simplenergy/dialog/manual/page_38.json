@@ -1,0 +1,76 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/wrench",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.wrench",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/wrench",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_37"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (37)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_39"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (39)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_37"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (37)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_39"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (39)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"U$",
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"U$  \n\"U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"U$  \n\"U$",
+				{"text": "$耡$耡","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"\"\"",
+				{"text": "$$聝","hover_event": {"action": "show_item","id": "warped_fungus_on_a_stick","components": {"tooltip_display": {"hidden_components": ["minecraft:unbreakable"]},"lore": [{"translate": "simplenergy.provides_you_the_ability_to_instantly","italic": false,"color": "gray"},{"translate": "simplenergy.break_cables_and_rotates_machines_while_sneaking","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:wrench","item_name": {"translate": "simplenergy.wrench"},"custom_data": {"simplenergy": {"wrench": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"U$",
+				{"text": "U$U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "warped_fungus_on_a_stick","components": {"tooltip_display": {"hidden_components": ["minecraft:unbreakable"]},"lore": [{"translate": "simplenergy.provides_you_the_ability_to_instantly","italic": false,"color": "gray"},{"translate": "simplenergy.break_cables_and_rotates_machines_while_sneaking","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:wrench","item_name": {"translate": "simplenergy.wrench"},"custom_data": {"simplenergy": {"wrench": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"U$U$  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"U$U$  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.essential_tool_for_energy_system_maintenance","color": "yellow"},{"translate": "simplenergy.sneak_right_click_rotate_machines","color": "gray"},{"translate": "simplenergy.instantly_breaks_cables_for_easy_reconfiguration","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$耡"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"","U$",{"text": "$耡"},{"text": "$耡"},"\"\"",{"text": "$$聝"},"\n","\"","U$",{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耡"},"U$","U$","\n","\"",{"text": "U$"},"U$","U$","\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.essential_tool_for_energy_system_maintenance","color": "yellow"},{"translate": "simplenergy.sneak_right_click_rotate_machines","color": "gray"},{"translate": "simplenergy.instantly_breaks_cables_for_easy_reconfiguration","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$耡"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"","U$",{"text": "$耡"},{"text": "$耡"},"\"\"",{"text": "$$聝"},"\n","\"","U$",{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耡"},"U$","U$","\n","\"",{"text": "U$"},"U$","U$","\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

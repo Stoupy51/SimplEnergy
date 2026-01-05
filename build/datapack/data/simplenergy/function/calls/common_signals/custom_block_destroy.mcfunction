@@ -1,0 +1,12 @@
+
+#> simplenergy:calls/common_signals/custom_block_destroy
+#
+# @executed	at @s & align xyz
+#
+# @within	#common_signals:signals/custom_block_destroy
+#			simplenergy:calls/common_signals/on_ore_destroyed
+#			simplenergy:calls/common_signals/on_item_frame_destroy
+#
+
+execute as @e[tag=simplenergy.custom_block,dx=0,dy=0,dz=0] at @s run function simplenergy:custom_blocks/destroy
+

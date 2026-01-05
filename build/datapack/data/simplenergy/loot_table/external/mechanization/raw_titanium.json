@@ -1,0 +1,38 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:structure_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"raw": {"titanium": true}}
+									},
+									"mechanization": {
+										"id": "raw_titanium"
+									}
+								},
+								"minecraft:item_name": {
+									"translate": "simplenergy.raw_titanium"
+								},
+								"minecraft:lore": [
+									{
+										"translate": "simplenergy.mechanization",
+										"italic": true,
+										"color": "blue"
+									}
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

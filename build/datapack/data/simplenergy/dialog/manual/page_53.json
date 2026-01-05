@@ -1,0 +1,80 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/electric_smelter",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.electric_smelter",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/electric_smelter",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_52"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (52)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_54"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (54)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_52"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (52)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_54"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (54)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$耡$耡$耡","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"  \n\"",
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				{"text": "$聹","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"usage": 20,"max_storage": 1600},"simplenergy": {"electric_furnace": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:electric_furnace","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"lore": [{"translate": "simplenergy.power_usage_20_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_1600_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:electric_furnace","item_name": {"translate": "simplenergy.electric_furnace"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_52"}},
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"\"\"",
+				{"text": "$$聻","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"usage": 100,"max_storage": 8000},"simplenergy": {"electric_smelter": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:electric_smelter","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"lore": [{"translate": "simplenergy.power_usage_100_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_8000_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:electric_smelter","item_name": {"translate": "simplenergy.electric_smelter"}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"usage": 20,"max_storage": 1600},"simplenergy": {"electric_furnace": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:electric_furnace","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"lore": [{"translate": "simplenergy.power_usage_20_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_1600_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:electric_furnace","item_name": {"translate": "simplenergy.electric_furnace"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_52"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"usage": 100,"max_storage": 8000},"simplenergy": {"electric_smelter": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:electric_smelter","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"lore": [{"translate": "simplenergy.power_usage_100_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_8000_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:electric_smelter","item_name": {"translate": "simplenergy.electric_smelter"}}}},
+				"#$\n\"",
+				{"text": "$耩$耩$耩","hover_event": {"action": "show_item","id": "furnace","components": {"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:simplunium_block","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"custom_data": {"smithed": {"dict": {"block": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_block": true}},"item_model": "simplenergy:simplunium_block","item_name": {"translate": "simplenergy.simplunium_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_12"}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "furnace","components": {"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:simplunium_block","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"custom_data": {"smithed": {"dict": {"block": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_block": true}},"item_model": "simplenergy:simplunium_block","item_name": {"translate": "simplenergy.simplunium_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_12"}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.advanced_electric_smelting_station","color": "yellow"},{"translate": "simplenergy.faster_and_more_efficient_than_electric_furnace_8x_faster","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$耡"},{"text": "$耡"},{"text": "$耡"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耡"},{"text": "$聹"},{"text": "$耡"},"\"\"",{"text": "$$聻"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$耩"},{"text": "$耩"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x5 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.electric_furnace","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.simplunium_block","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.advanced_electric_smelting_station","color": "yellow"},{"translate": "simplenergy.faster_and_more_efficient_than_electric_furnace_8x_faster","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$耡"},{"text": "$耡"},{"text": "$耡"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耡"},{"text": "$聹"},{"text": "$耡"},"\"\"",{"text": "$$聻"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$耩"},{"text": "$耩"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x5 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.electric_furnace","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.simplunium_block","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

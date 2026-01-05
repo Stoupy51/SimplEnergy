@@ -1,0 +1,6 @@
+{
+	"sources": [
+		{"type": "minecraft:single","resource": "minecraft:block/cauldron_inner","sprite": "simplenergy:atlas/cauldron_inner"},
+		{"type": "minecraft:single","resource": "minecraft:block/iron_block","sprite": "simplenergy:atlas/iron_block"}
+	]
+}

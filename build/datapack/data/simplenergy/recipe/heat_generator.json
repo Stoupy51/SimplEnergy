@@ -1,0 +1,90 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"group": "heat_generator",
+	"pattern": [
+		"IGI",
+		"GAG",
+		"IGI"
+	],
+	"key": {
+		"I": "minecraft:iron_block",
+		"G": "minecraft:glass",
+		"A": "minecraft:netherite_scrap"
+	},
+	"result": {
+		"id": "minecraft:furnace",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"energy": {
+					"generation": 20,
+					"max_storage": 1600
+				},
+				"simplenergy": {
+					"heat_generator": true
+				},
+				"smithed": {
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				}
+			},
+			"minecraft:container": [
+				{
+					"slot": 0,
+					"item": {
+						"id": "minecraft:stone",
+						"count": 1,
+						"components": {
+							"minecraft:custom_data": {
+								"smithed": {
+									"block": {
+										"id": "simplenergy:heat_generator",
+										"from": "simplenergy"
+									}
+								}
+							}
+						}
+					}
+				}
+			],
+			"minecraft:tooltip_display": {
+				"hidden_components": [
+					"minecraft:container"
+				]
+			},
+			"minecraft:lore": [
+				{
+					"translate": "simplenergy.energy_generation_20_kw",
+					"italic": false,
+					"color": "gray"
+				},
+				{
+					"translate": "simplenergy.energy_buffer_1600_kj",
+					"italic": false,
+					"color": "gray"
+				},
+				[
+					"",
+					{
+						"text": "I",
+						"color": "white",
+						"italic": false,
+						"font": "simplenergy:icons"
+					},
+					{
+						"translate": "simplenergy",
+						"italic": true,
+						"color": "blue"
+					}
+				]
+			],
+			"minecraft:item_model": "simplenergy:heat_generator",
+			"minecraft:item_name": {
+				"translate": "simplenergy.heat_generator"
+			}
+		}
+	}
+}

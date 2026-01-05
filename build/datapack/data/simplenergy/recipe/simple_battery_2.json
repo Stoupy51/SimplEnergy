@@ -1,0 +1,85 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"group": "simple_battery",
+	"pattern": [
+		"CCC",
+		"CIC",
+		"RRR"
+	],
+	"key": {
+		"C": "minecraft:copper_block",
+		"R": "minecraft:redstone_block",
+		"I": "minecraft:iron_ingot"
+	},
+	"result": {
+		"id": "minecraft:furnace",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"energy": {
+					"storage": 0,
+					"max_storage": 10000
+				},
+				"simplenergy": {
+					"simple_battery": true
+				},
+				"smithed": {
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				}
+			},
+			"minecraft:container": [
+				{
+					"slot": 0,
+					"item": {
+						"id": "minecraft:stone",
+						"count": 1,
+						"components": {
+							"minecraft:custom_data": {
+								"smithed": {
+									"block": {
+										"id": "simplenergy:simple_battery",
+										"from": "simplenergy"
+									}
+								}
+							}
+						}
+					}
+				}
+			],
+			"minecraft:tooltip_display": {
+				"hidden_components": [
+					"minecraft:container"
+				]
+			},
+			"minecraft:lore": [
+				{
+					"translate": "simplenergy.energy_storage_10_mj",
+					"italic": false,
+					"color": "gray"
+				},
+				[
+					"",
+					{
+						"text": "I",
+						"color": "white",
+						"italic": false,
+						"font": "simplenergy:icons"
+					},
+					{
+						"translate": "simplenergy",
+						"italic": true,
+						"color": "blue"
+					}
+				]
+			],
+			"minecraft:item_model": "simplenergy:simple_battery",
+			"minecraft:item_name": {
+				"translate": "simplenergy.simple_battery"
+			}
+		}
+	}
+}

@@ -1,0 +1,88 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/simplunium_nugget",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.simplunium_nugget",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/simplunium_nugget",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (8)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_10"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (10)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (8)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_10"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (10)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$5\n\"",
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"U$  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"U$U$",
+				{"text": "$$肝","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"nugget": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_nugget": true}},"item_model": "simplenergy:simplunium_nugget","item_name": {"translate": "simplenergy.simplunium_nugget"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}}},
+				"#$\n\"U$U$U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"nugget": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_nugget": true}},"item_model": "simplenergy:simplunium_nugget","item_name": {"translate": "simplenergy.simplunium_nugget"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}}},
+				"#$\n\n\n",
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"E\n","\"",{"text": "$耡"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$肝"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聅"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_helmet","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_26"}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聇"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_chestplate","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_27"}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聉"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_leggings","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_28"}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聋"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_boots","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_29"}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聍"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_sword","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_30"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"E\n","\"",{"text": "$耡"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$肝"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聅"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_helmet","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_26"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聇"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_chestplate","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_27"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聉"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_leggings","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_28"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聋"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_boots","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_29"}},
+				{"text": "0\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聍"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_sword","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_30"}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聏"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_pickaxe","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_31"}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聑"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_axe","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_32"}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聓"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_shovel","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_33"}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聕"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_hoe","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_34"}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聗"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_spear","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_35"}},
+				{"text": "脒\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$耣"},{"text": "$耣"},{"text": "$耣"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耣"},{"text": "$耣"},{"text": "$耣"},"\"\"",{"text": "$$耡"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耣"},{"text": "$耣"},{"text": "$耣"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x9 ","color": "gray"},{"translate": "simplenergy.simplunium_nugget","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聏"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_pickaxe","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_31"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聑"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_axe","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_32"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聓"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_shovel","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_33"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聕"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_hoe","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_34"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聗"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_spear","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_35"}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$耣"},{"text": "$耣"},{"text": "$耣"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耣"},{"text": "$耣"},{"text": "$耣"},"\"\"",{"text": "$$耡"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耣"},{"text": "$耣"},{"text": "$耣"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x9 ","color": "gray"},{"translate": "simplenergy.simplunium_nugget","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:warped_fungus_on_a_stick",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:unbreakable"
+									]
+								},
+								"minecraft:lore": [
+									{
+										"translate": "simplenergy.provides_you_the_ability_to_instantly",
+										"italic": false,
+										"color": "gray"
+									},
+									{
+										"translate": "simplenergy.break_cables_and_rotates_machines_while_sneaking",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},
+										{"translate": "simplenergy","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "simplenergy:wrench",
+								"minecraft:item_name": {
+									"translate": "simplenergy.wrench"
+								},
+								"minecraft:custom_data": {
+									"simplenergy": {
+										"wrench": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,70 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/quartz_dust",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.quartz_dust",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/quartz_dust",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_21"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (21)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_23"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (23)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_21"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (21)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_23"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (23)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$9\n\n\n\"",
+				{"text": "$膩","hover_event": {"action": "show_item","id": "minecraft:nether_quartz_ore","components": {}}},
+				"\"\"\"\"#U$",
+				{"text": "$$膨","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"dust": {"quartz": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"quartz_dust": true}},"item_model": "simplenergy:quartz_dust","item_name": {"translate": "simplenergy.quartz_dust"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:nether_quartz_ore","components": {}}},
+				"\"\"\"\"#U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"dust": {"quartz": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"quartz_dust": true}},"item_model": "simplenergy:quartz_dust","item_name": {"translate": "simplenergy.quartz_dust"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}}},
+				"#$\n\n\n",
+				{"text": "膬##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$耽"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$膪"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.quartz_dust","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$膪"},"\"\"\"\"#U$",{"text": "$$耽"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.quartz","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$膩"},"\"\"\"\"#U$",{"text": "$$膨"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.nether_quartz_ore","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$耽"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$膪"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.quartz_dust","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$膪"},"\"\"\"\"#U$",{"text": "$$耽"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.quartz","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$膩"},"\"\"\"\"#U$",{"text": "$$膨"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.nether_quartz_ore","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

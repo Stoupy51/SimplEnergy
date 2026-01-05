@@ -1,0 +1,74 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/simplunium_dust",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.simplunium_dust",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/simplunium_dust",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_10"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (10)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_12"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (12)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_10"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (10)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_12"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (12)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$9\n\n\n\"",
+				{"text": "$耥","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"raw": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"raw_simplunium": true}},"item_model": "simplenergy:raw_simplunium","item_name": {"translate": "simplenergy.raw_simplunium"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_10"}},
+				"\"\"\"\"#U$",
+				{"text": "$$脚","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"dust": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_dust": true}},"item_model": "simplenergy:simplunium_dust","item_name": {"translate": "simplenergy.simplunium_dust"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"raw": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"raw_simplunium": true}},"item_model": "simplenergy:raw_simplunium","item_name": {"translate": "simplenergy.raw_simplunium"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_10"}},
+				"\"\"\"\"#U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"dust": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_dust": true}},"item_model": "simplenergy:simplunium_dust","item_name": {"translate": "simplenergy.simplunium_dust"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}}},
+				"#$\n\n\n",
+				{"text": "脤##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$耧"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耡"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_dust","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$耡"},"\"\"\"\"#U$",{"text": "$$耧"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$耥"},"\"\"\"\"#U$",{"text": "$$脚"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.raw_simplunium","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_10"}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$耫"},"\"\"\"\"#U$",{"text": "$$脚"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_ore","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_13"}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$耭"},"\"\"\"\"#U$",{"text": "$$脚"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.deepslate_simplunium_ore","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_14"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$耧"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耡"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_dust","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$耡"},"\"\"\"\"#U$",{"text": "$$耧"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$耥"},"\"\"\"\"#U$",{"text": "$$脚"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.raw_simplunium","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_10"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$耫"},"\"\"\"\"#U$",{"text": "$$脚"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_ore","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_13"}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$耭"},"\"\"\"\"#U$",{"text": "$$脚"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.deepslate_simplunium_ore","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_14"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

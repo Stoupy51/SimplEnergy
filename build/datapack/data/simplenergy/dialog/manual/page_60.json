@@ -1,0 +1,78 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/basic_item_cable",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.basic_item_cable",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/basic_item_cable",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_59"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (59)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_61"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (61)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_59"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (59)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_61"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (61)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"U$U$U$  \n\"U$U$U$  \n\"",
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				{"text": "$胜","hover_event": {"action": "show_item","id": "minecraft:glass","components": {}}},
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"\"\"",
+				{"text": "$$胚","hover_event": {"action": "show_item","id": "furnace","components": {"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:basic_item_cable","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"item_model": "simplenergy:basic_item_cable","item_name": {"translate": "simplenergy.basic_item_cable"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"custom_data": {"simplenergy": {"basic_item_cable": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:glass","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:basic_item_cable","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"item_model": "simplenergy:basic_item_cable","item_name": {"translate": "simplenergy.basic_item_cable"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"custom_data": {"simplenergy": {"basic_item_cable": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"U$U$U$  \n\"U$U$U$  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.item_transport_cable","color": "yellow"},{"translate": "simplenergy.connects_machines_and_storage_for_item_transfer","color": "gray"},{"translate": "simplenergy.requires_both_servo_extractor_and_servo_inserter","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$","U$","U$","\n","\"","U$","U$","U$","\n","\"",{"text": "$耡"},{"text": "$胜"},{"text": "$耡"},"\"\"",{"text": "$$胚"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"","U$","U$","U$","\n","\"","U$","U$","U$","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.glass","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$耡"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"","U$",{"text": "$胜"},"U$","\"\"",{"text": "$$胚"},"\n","\"","U$",{"text": "U$"},"U$","\"\"",{"text": "U$"},"\n","\"","U$",{"text": "$耡"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.glass","color": "gray"}]}},
+				{"text": "莙##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$肉"},{"text": "$胠"},{"text": "$肉"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耡"},{"text": "$胢"},{"text": "$耡"},"\"\"",{"text": "$$肋"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"","U$",{"text": "$胣"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.basic_item_cable","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.redstone_block","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.comparator","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.emerald","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_61"}},
+				{"text": "莠\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$胕"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"",{"text": "$耡"},{"text": "$胢"},{"text": "$耡"},"\"\"",{"text": "$$肍"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$肉"},{"text": "$胠"},{"text": "$肉"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.basic_item_cable","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.redstone_block","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.comparator","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.diamond","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_62"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.item_transport_cable","color": "yellow"},{"translate": "simplenergy.connects_machines_and_storage_for_item_transfer","color": "gray"},{"translate": "simplenergy.requires_both_servo_extractor_and_servo_inserter","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$","U$","U$","\n","\"","U$","U$","U$","\n","\"",{"text": "$耡"},{"text": "$胜"},{"text": "$耡"},"\"\"",{"text": "$$胚"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"","U$","U$","U$","\n","\"","U$","U$","U$","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.glass","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$耡"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"","U$",{"text": "$胜"},"U$","\"\"",{"text": "$$胚"},"\n","\"","U$",{"text": "U$"},"U$","\"\"",{"text": "U$"},"\n","\"","U$",{"text": "$耡"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.glass","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$肉"},{"text": "$胠"},{"text": "$肉"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耡"},{"text": "$胢"},{"text": "$耡"},"\"\"",{"text": "$$肋"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"","U$",{"text": "$胣"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.basic_item_cable","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.redstone_block","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.comparator","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.emerald","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_61"}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$胕"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"",{"text": "$耡"},{"text": "$胢"},{"text": "$耡"},"\"\"",{"text": "$$肍"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$肉"},{"text": "$胠"},{"text": "$肉"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.basic_item_cable","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.redstone_block","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.comparator","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.diamond","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_62"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

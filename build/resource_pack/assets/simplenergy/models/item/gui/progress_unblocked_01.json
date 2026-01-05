@@ -1,0 +1,20 @@
+{
+	"textures": {
+		"layer0": "simplenergy:item/gui/progress_unblocked_01",
+		"particle": "simplenergy:item/gui/progress_unblocked_01"
+	},
+	"display": {
+		"firstperson_lefthand": {
+			"rotation": [0,0,0],
+			"translation": [0,0,0],
+			"scale": [0,0,0]
+		},
+		"ground": {
+			"rotation": [0,0,0],
+			"translation": [0,0,0],
+			"scale": [0,0,0]
+		}
+	},
+	"gui_light": "front",
+	"parent": "item/generated"
+}

@@ -1,0 +1,74 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/copper_dust",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.copper_dust",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/copper_dust",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_15"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (15)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_17"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (17)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_15"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (15)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_17"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (17)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$9\n\n\n\"",
+				{"text": "$腡","hover_event": {"action": "show_item","id": "minecraft:raw_copper","components": {}}},
+				"\"\"\"\"#U$",
+				{"text": "$$腠","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"dust": {"copper": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"copper_dust": true}},"item_model": "simplenergy:copper_dust","item_name": {"translate": "simplenergy.copper_dust"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:raw_copper","components": {}}},
+				"\"\"\"\"#U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"dust": {"copper": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"copper_dust": true}},"item_model": "simplenergy:copper_dust","item_name": {"translate": "simplenergy.copper_dust"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}}},
+				"#$\n\n\n",
+				{"text": "腤##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$耱"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$腢"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.copper_dust","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$腢"},"\"\"\"\"#U$",{"text": "$$耱"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.copper_ingot","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$腡"},"\"\"\"\"#U$",{"text": "$$腠"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.raw_copper","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$腪"},"\"\"\"\"#U$",{"text": "$$腠"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.copper_ore","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$腬"},"\"\"\"\"#U$",{"text": "$$腠"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.deepslate_copper_ore","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$耱"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$腢"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.copper_dust","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$腢"},"\"\"\"\"#U$",{"text": "$$耱"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.copper_ingot","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$腡"},"\"\"\"\"#U$",{"text": "$$腠"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.raw_copper","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$腪"},"\"\"\"\"#U$",{"text": "$$腠"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.copper_ore","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$腬"},"\"\"\"\"#U$",{"text": "$$腠"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "simplenergy_pulverizing","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.deepslate_copper_ore","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

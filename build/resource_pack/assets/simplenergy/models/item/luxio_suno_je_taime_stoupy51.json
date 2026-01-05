@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "simplenergy:item/luxio_suno_je_taime_stoupy51"
+	}
+}

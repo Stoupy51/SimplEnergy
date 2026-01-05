@@ -1,0 +1,6 @@
+{
+	"model": {
+		"type": "minecraft:model",
+		"model": "simplenergy:item/heat_generator_on"
+	}
+}

@@ -1,0 +1,46 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:furnace",
+      "components": {
+        "minecraft:item_model": "simplenergy:electric_brewing_stand"
+      }
+    },
+    "title": {
+      "translate": "simplenergy.faster_brewing",
+      "color": "gray"
+    },
+    "description": {
+      "translate": "simplenergy.obtain_an_electric_brewing_stand",
+      "color": "green"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:custom_data": {
+                "simplenergy": {
+                  "electric_brewing_stand": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ],
+  "parent": "simplenergy:visible/electric_smelter"
+}

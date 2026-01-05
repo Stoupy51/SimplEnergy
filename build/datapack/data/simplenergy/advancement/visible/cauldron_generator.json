@@ -1,0 +1,46 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:furnace",
+      "components": {
+        "minecraft:item_model": "simplenergy:cauldron_generator"
+      }
+    },
+    "title": {
+      "translate": "simplenergy.the_simplest_generator",
+      "color": "gray"
+    },
+    "description": {
+      "translate": "simplenergy.craft_your_first_cauldron_generator",
+      "color": "green"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:custom_data": {
+                "simplenergy": {
+                  "cauldron_generator": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ],
+  "parent": "simplenergy:visible/simplunium_ingot"
+}

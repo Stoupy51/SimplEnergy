@@ -1,0 +1,80 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/battery_switcher",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.battery_switcher",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/battery_switcher",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_39"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (39)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_41"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (41)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_39"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (39)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_41"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (41)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"U$",
+				{"text": "$胰","hover_event": {"action": "show_item","id": "minecraft:redstone","components": {}}},
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"  \n\"U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:redstone","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"  \n\"U$",
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				{"text": "$胲","hover_event": {"action": "show_item","id": "minecraft:stone_button","components": {}}},
+				"\"\"",
+				{"text": "$$聡","hover_event": {"action": "show_item","id": "warped_fungus_on_a_stick","components": {"tooltip_display": {"hidden_components": ["minecraft:unbreakable"]},"lore": [{"translate": "simplenergy.allows_you_to_switch_batteries_states","italic": false,"color": "gray"},{"translate": "simplenergy.input_output_both","italic": false,"color": "gray"},{"translate": "simplenergy.hold_in_offhand_for_passive_use","italic": false,"color": "white"},{"translate": "simplenergy.right_click_on_a_battery_to_switch","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:battery_switcher","item_name": {"translate": "simplenergy.battery_switcher"},"custom_data": {"simplenergy": {"battery_switcher": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:stone_button","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "warped_fungus_on_a_stick","components": {"tooltip_display": {"hidden_components": ["minecraft:unbreakable"]},"lore": [{"translate": "simplenergy.allows_you_to_switch_batteries_states","italic": false,"color": "gray"},{"translate": "simplenergy.input_output_both","italic": false,"color": "gray"},{"translate": "simplenergy.hold_in_offhand_for_passive_use","italic": false,"color": "white"},{"translate": "simplenergy.right_click_on_a_battery_to_switch","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:battery_switcher","item_name": {"translate": "simplenergy.battery_switcher"},"custom_data": {"simplenergy": {"battery_switcher": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"U$U$  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"U$U$  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.controls_battery_input_output_modes","color": "yellow"},{"translate": "simplenergy.modes_input_only_output_only_both","color": "gray"},{"translate": "simplenergy.right_click_on_batteries_to_cycle_modes","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$胰"},{"text": "$耡"},"\n","\"","U$",{"text": "U$"},{"text": "U$"},"\n","\"","U$",{"text": "$耡"},{"text": "$胲"},"\"\"",{"text": "$$聡"},"\n","\"","U$",{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耡"},"U$","U$","\n","\"",{"text": "U$"},"U$","U$","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.redstone","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.stone_button","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.controls_battery_input_output_modes","color": "yellow"},{"translate": "simplenergy.modes_input_only_output_only_both","color": "gray"},{"translate": "simplenergy.right_click_on_batteries_to_cycle_modes","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$胰"},{"text": "$耡"},"\n","\"","U$",{"text": "U$"},{"text": "U$"},"\n","\"","U$",{"text": "$耡"},{"text": "$胲"},"\"\"",{"text": "$$聡"},"\n","\"","U$",{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耡"},"U$","U$","\n","\"",{"text": "U$"},"U$","U$","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.redstone","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.stone_button","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

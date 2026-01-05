@@ -1,0 +1,10 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": "minecraft:command_block",
+	"result": {
+		"id": "lapis_lazuli",
+		"count": 1
+	},
+	"experience": 0.8,
+	"cookingtime": 200
+}

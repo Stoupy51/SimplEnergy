@@ -1,0 +1,46 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:iron_pickaxe",
+      "components": {
+        "minecraft:item_model": "simplenergy:simplunium_pickaxe"
+      }
+    },
+    "title": {
+      "translate": "simplenergy.simplunium_age",
+      "color": "gray"
+    },
+    "description": {
+      "translate": "simplenergy.craft_a_simplunium_pickaxe",
+      "color": "green"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:custom_data": {
+                "simplenergy": {
+                  "simplunium_pickaxe": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ],
+  "parent": "simplenergy:visible/simplunium_ingot"
+}

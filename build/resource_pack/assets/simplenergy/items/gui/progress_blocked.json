@@ -1,0 +1,7 @@
+{
+	"model": {
+		"type": "minecraft:model",
+		"model": "simplenergy:item/gui/progress_blocked"
+	},
+	"oversized_in_gui": true
+}

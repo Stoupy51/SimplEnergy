@@ -1,0 +1,82 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/pulverizer",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.pulverizer",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/pulverizer",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_54"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (54)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_56"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (56)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_54"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (54)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_56"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (56)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$胕$胕$胕","hover_event": {"action": "show_item","id": "minecraft:diamond","components": {}}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "minecraft:diamond","components": {}}},
+				"  \n\"",
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				{"text": "$聥","hover_event": {"action": "show_item","id": "furnace","components": {"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:machine_block","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"item_model": "simplenergy:machine_block","item_name": {"translate": "simplenergy.machine_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"custom_data": {"simplenergy": {"machine_block": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_42"}},
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"\"\"",
+				{"text": "$$聿","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"usage": 120,"max_storage": 6400},"simplenergy": {"pulverizer": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:pulverizer","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"lore": [{"translate": "simplenergy.power_usage_120_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_6400_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:pulverizer","item_name": {"translate": "simplenergy.pulverizer"}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:machine_block","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"item_model": "simplenergy:machine_block","item_name": {"translate": "simplenergy.machine_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"custom_data": {"simplenergy": {"machine_block": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_42"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"usage": 120,"max_storage": 6400},"simplenergy": {"pulverizer": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:pulverizer","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"lore": [{"translate": "simplenergy.power_usage_120_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_6400_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:pulverizer","item_name": {"translate": "simplenergy.pulverizer"}}}},
+				"#$\n\"",
+				{"text": "$胘$胘$胘","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.ore_processing_and_grinding_machine","color": "yellow"},{"translate": "simplenergy.grinds_ores_into_dusts_for_increased_yields","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$胕"},{"text": "$胕"},{"text": "$胕"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耡"},{"text": "$聥"},{"text": "$耡"},"\"\"",{"text": "$$聿"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$胘"},{"text": "$胘"},{"text": "$胘"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.diamond","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.machine_block","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$胕"},{"text": "$胕"},{"text": "$胕"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耡"},{"text": "$聥"},{"text": "$耡"},"\"\"",{"text": "$$聿"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$艺"},{"text": "$艺"},{"text": "$艺"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.diamond","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.machine_block","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.copper_block","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.ore_processing_and_grinding_machine","color": "yellow"},{"translate": "simplenergy.grinds_ores_into_dusts_for_increased_yields","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$胕"},{"text": "$胕"},{"text": "$胕"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耡"},{"text": "$聥"},{"text": "$耡"},"\"\"",{"text": "$$聿"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$胘"},{"text": "$胘"},{"text": "$胘"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.diamond","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.machine_block","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$胕"},{"text": "$胕"},{"text": "$胕"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耡"},{"text": "$聥"},{"text": "$耡"},"\"\"",{"text": "$$聿"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$艺"},{"text": "$艺"},{"text": "$艺"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.diamond","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.machine_block","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.copper_block","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

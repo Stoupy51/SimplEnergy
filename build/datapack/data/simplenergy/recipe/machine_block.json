@@ -1,0 +1,76 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"group": "machine_block",
+	"pattern": [
+		"SSS",
+		"SCS",
+		"III"
+	],
+	"key": {
+		"S": "minecraft:stone",
+		"C": "minecraft:copper_block",
+		"I": "minecraft:iron_block"
+	},
+	"result": {
+		"id": "minecraft:furnace",
+		"count": 1,
+		"components": {
+			"minecraft:container": [
+				{
+					"slot": 0,
+					"item": {
+						"id": "minecraft:stone",
+						"count": 1,
+						"components": {
+							"minecraft:custom_data": {
+								"smithed": {
+									"block": {
+										"id": "simplenergy:machine_block",
+										"from": "simplenergy"
+									}
+								}
+							}
+						}
+					}
+				}
+			],
+			"minecraft:tooltip_display": {
+				"hidden_components": [
+					"minecraft:container"
+				]
+			},
+			"minecraft:item_model": "simplenergy:machine_block",
+			"minecraft:item_name": {
+				"translate": "simplenergy.machine_block"
+			},
+			"minecraft:lore": [
+				[
+					"",
+					{
+						"text": "I",
+						"color": "white",
+						"italic": false,
+						"font": "simplenergy:icons"
+					},
+					{
+						"translate": "simplenergy",
+						"italic": true,
+						"color": "blue"
+					}
+				]
+			],
+			"minecraft:custom_data": {
+				"simplenergy": {
+					"machine_block": true
+				},
+				"smithed": {
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				}
+			}
+		}
+	}
+}

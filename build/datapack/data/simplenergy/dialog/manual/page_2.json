@@ -1,0 +1,77 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/heavy_workbench",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.heavy_workbench",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/heavy_workbench",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (1)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_3"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (3)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (1)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_3"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (3)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$莺$莺$莺","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				"  \n\"",
+				{"text": "$莺","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				{"text": "$莻","hover_event": {"action": "show_item","id": "minecraft:crafting_table","components": {}}},
+				{"text": "$莺","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				"\"\"",
+				{"text": "$$莹","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": "Heavy Workbench","item_model": "simplenergy:heavy_workbench","container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:heavy_workbench","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:crafting_table","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": "Heavy Workbench","item_model": "simplenergy:heavy_workbench","container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:heavy_workbench","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]}}}},
+				"#$\n\"",
+				{"text": "$莼$莼$莼","hover_event": {"action": "show_item","id": "minecraft:smooth_stone","components": {}}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "minecraft:smooth_stone","components": {}}},
+				"  \n",
+				[{"translate": "simplenergy.every_recipe_that_uses_custom_items","font": "minecraft:default","color": "black"},{"translate": "simplenergy.must","color": "red","underlined": true}," be crafted using the Heavy Workbench."],
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

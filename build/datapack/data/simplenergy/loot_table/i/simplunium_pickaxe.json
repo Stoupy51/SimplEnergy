@@ -1,0 +1,64 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:iron_pickaxe",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"tools": {"simplunium": true,"pickaxe": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"simplenergy": {
+										"simplunium_pickaxe": true
+									}
+								},
+								"minecraft:max_damage": 750,
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "attack_damage",
+										"amount": 4,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_damage"
+									},
+									{
+										"type": "attack_speed",
+										"amount": -2.8,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_speed"
+									},
+									{
+										"type": "mining_efficiency",
+										"amount": 2,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "simplenergy:mining_efficiency.mainhand"
+									}
+								],
+								"minecraft:item_model": "simplenergy:simplunium_pickaxe",
+								"minecraft:item_name": {
+									"translate": "simplenergy.simplunium_pickaxe"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},
+										{"translate": "simplenergy","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

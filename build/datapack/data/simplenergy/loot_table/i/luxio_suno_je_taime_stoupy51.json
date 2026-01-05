@@ -1,0 +1,44 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"simplenergy": {
+										"luxio_suno_je_taime_stoupy51": true
+									},
+									"smithed": {
+										"dict": {"record": {"luxio_suno_je_taime_stoupy51": true,"item_name": "Luxio & Suno - Je t'aime Stoupy51"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 103,"sound_event": {"sound_id": "simplenergy:luxio_suno_je_taime_stoupy51"},"description": {"translate": "simplenergy.luxio_suno_je_taime_stoupy51"}}},
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_name": {
+									"translate": "simplenergy.music_disc",
+									"italic": false
+								},
+								"minecraft:jukebox_playable": "simplenergy:luxio_suno_je_taime_stoupy51",
+								"minecraft:max_stack_size": 1,
+								"minecraft:rarity": "rare",
+								"minecraft:item_model": "simplenergy:luxio_suno_je_taime_stoupy51",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},
+										{"translate": "simplenergy","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,84 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/furnace_generator",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.furnace_generator",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/furnace_generator",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_46"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (46)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_48"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (48)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_46"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (46)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_48"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (48)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$腯$腯$腯","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				"  \n\"",
+				{"text": "$胰","hover_event": {"action": "show_item","id": "minecraft:redstone","components": {}}},
+				{"text": "$聥","hover_event": {"action": "show_item","id": "furnace","components": {"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:machine_block","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"item_model": "simplenergy:machine_block","item_name": {"translate": "simplenergy.machine_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"custom_data": {"simplenergy": {"machine_block": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_42"}},
+				{"text": "$胰","hover_event": {"action": "show_item","id": "minecraft:redstone","components": {}}},
+				"\"\"",
+				{"text": "$$聯","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"generation": 10,"max_storage": 800},"simplenergy": {"furnace_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:furnace_generator","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"lore": [{"translate": "simplenergy.energy_generation_10_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_800_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:furnace_generator","item_name": {"translate": "simplenergy.furnace_generator"}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:redstone","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:machine_block","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"item_model": "simplenergy:machine_block","item_name": {"translate": "simplenergy.machine_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"custom_data": {"simplenergy": {"machine_block": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_42"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:redstone","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"generation": 10,"max_storage": 800},"simplenergy": {"furnace_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:furnace_generator","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"lore": [{"translate": "simplenergy.energy_generation_10_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_800_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:furnace_generator","item_name": {"translate": "simplenergy.furnace_generator"}}}},
+				"#$\n\"",
+				{"text": "$艹$艹$艹","hover_event": {"action": "show_item","id": "minecraft:stone","components": {}}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "minecraft:stone","components": {}}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.fuel_burning_energy_generator","color": "yellow"},{"translate": "simplenergy.consumes_any_furnace_fuel_to_generate_energy","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$腯"},{"text": "$腯"},{"text": "$腯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$胰"},{"text": "$聥"},{"text": "$胰"},"\"\"",{"text": "$$聯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$艹"},{"text": "$艹"},{"text": "$艹"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.redstone","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.machine_block","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.stone","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$胰"},{"text": "$胰"},{"text": "$胰"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$腯"},{"text": "$聥"},{"text": "$腯"},"\"\"",{"text": "$$聯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$艹"},{"text": "$艹"},{"text": "$艹"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.redstone","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.machine_block","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.stone","color": "gray"}]}},
+				{"text": "苡\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$胠"},{"text": "$胠"},{"text": "$胠"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$胠"},{"text": "$聯"},{"text": "$胠"},"\"\"",{"text": "$$聱"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$耩"},{"text": "$耩"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x5 ","color": "gray"},{"translate": "simplenergy.redstone_block","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.furnace_generator","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.simplunium_block","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_48"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.fuel_burning_energy_generator","color": "yellow"},{"translate": "simplenergy.consumes_any_furnace_fuel_to_generate_energy","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$腯"},{"text": "$腯"},{"text": "$腯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$胰"},{"text": "$聥"},{"text": "$胰"},"\"\"",{"text": "$$聯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$艹"},{"text": "$艹"},{"text": "$艹"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.redstone","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.machine_block","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.stone","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$胰"},{"text": "$胰"},{"text": "$胰"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$腯"},{"text": "$聥"},{"text": "$腯"},"\"\"",{"text": "$$聯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$艹"},{"text": "$艹"},{"text": "$艹"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.redstone","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.machine_block","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.stone","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$胠"},{"text": "$胠"},{"text": "$胠"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$胠"},{"text": "$聯"},{"text": "$胠"},"\"\"",{"text": "$$聱"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$耩"},{"text": "$耩"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x5 ","color": "gray"},{"translate": "simplenergy.redstone_block","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.furnace_generator","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "simplenergy.simplunium_block","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_48"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

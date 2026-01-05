@@ -1,0 +1,86 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/cauldron_generator",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.cauldron_generator",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/cauldron_generator",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_45"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (45)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_47"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (47)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_45"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (45)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_47"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (47)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$腯","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				"U$",
+				{"text": "$腯","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				"  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				"U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				"  \n\"",
+				{"text": "$腯","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				{"text": "$胰","hover_event": {"action": "show_item","id": "minecraft:redstone","components": {}}},
+				{"text": "$腯","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				"\"\"",
+				{"text": "$$聭","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"generation": 5,"max_storage": 500},"simplenergy": {"cauldron_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:cauldron_generator","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"lore": [{"translate": "simplenergy.energy_generation_5_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_500_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:cauldron_generator","item_name": {"translate": "simplenergy.cauldron_generator"}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:redstone","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"generation": 5,"max_storage": 500},"simplenergy": {"cauldron_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:cauldron_generator","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"lore": [{"translate": "simplenergy.energy_generation_5_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_500_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:cauldron_generator","item_name": {"translate": "simplenergy.cauldron_generator"}}}},
+				"#$\n\"",
+				{"text": "$腯$腯$腯","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "minecraft:iron_ingot","components": {}}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.basic_water_powered_generator","color": "yellow"},{"translate": "simplenergy.requires_water_to_operate_fill_the_cauldron_with_water","color": "gray"},{"translate": "simplenergy.balances_energy_storage_with_adjacent_cauldron_generators","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$腯"},"U$",{"text": "$腯"},"\n","\"",{"text": "U$"},"U$",{"text": "U$"},"\n","\"",{"text": "$腯"},{"text": "$胰"},{"text": "$腯"},"\"\"",{"text": "$$聭"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$腯"},{"text": "$腯"},{"text": "$腯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x7 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.redstone","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"E\n","\"",{"text": "$苋"},{"text": "$胰"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$聭"},"\n","\"",{"text": "$腯"},"U$U$",{"text": "U$"},"\n","\"",{"text": "U$"},"\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.cauldron","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.redstone","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.basic_water_powered_generator","color": "yellow"},{"translate": "simplenergy.requires_water_to_operate_fill_the_cauldron_with_water","color": "gray"},{"translate": "simplenergy.balances_energy_storage_with_adjacent_cauldron_generators","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$腯"},"U$",{"text": "$腯"},"\n","\"",{"text": "U$"},"U$",{"text": "U$"},"\n","\"",{"text": "$腯"},{"text": "$胰"},{"text": "$腯"},"\"\"",{"text": "$$聭"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$腯"},{"text": "$腯"},{"text": "$腯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x7 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.redstone","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"E\n","\"",{"text": "$苋"},{"text": "$胰"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$聭"},"\n","\"",{"text": "$腯"},"U$U$",{"text": "U$"},"\n","\"",{"text": "U$"},"\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.cauldron","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.redstone","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.iron_ingot","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

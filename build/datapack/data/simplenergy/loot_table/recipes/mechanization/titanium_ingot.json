@@ -1,0 +1,13 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "simplenergy:external/mechanization/titanium_ingot"
+				}
+			]
+		}
+	]
+}

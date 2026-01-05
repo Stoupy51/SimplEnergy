@@ -1,0 +1,88 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/slot_unlocker",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.slot_unlocker",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/slot_unlocker",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_38"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (38)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_40"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (40)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_38"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (38)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_40"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (40)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$膪","hover_event": {"action": "show_item","id": "minecraft:quartz","components": {}}},
+				{"text": "$艞","hover_event": {"action": "show_item","id": "minecraft:breeze_rod","components": {}}},
+				{"text": "$膪","hover_event": {"action": "show_item","id": "minecraft:quartz","components": {}}},
+				"  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:quartz","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:breeze_rod","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:quartz","components": {}}},
+				"  \n\"",
+				{"text": "$艟","hover_event": {"action": "show_item","id": "minecraft:gold_nugget","components": {}}},
+				{"text": "$艠","hover_event": {"action": "show_item","id": "minecraft:raw_gold_block","components": {}}},
+				{"text": "$艟","hover_event": {"action": "show_item","id": "minecraft:gold_nugget","components": {}}},
+				"\"\"",
+				{"text": "$$聟","hover_event": {"action": "show_item","id": "paper","components": {"lore": [{"translate": "simplenergy.unlocks_a_blocked_slot_in_a_machine","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:slot_unlocker","item_name": {"translate": "simplenergy.slot_unlocker"},"custom_data": {"simplenergy": {"slot_unlocker": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:gold_nugget","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:raw_gold_block","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:gold_nugget","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "paper","components": {"lore": [{"translate": "simplenergy.unlocks_a_blocked_slot_in_a_machine","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:slot_unlocker","item_name": {"translate": "simplenergy.slot_unlocker"},"custom_data": {"simplenergy": {"slot_unlocker": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "$艟","hover_event": {"action": "show_item","id": "minecraft:gold_nugget","components": {}}},
+				{"text": "$胘","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				{"text": "$艟","hover_event": {"action": "show_item","id": "minecraft:gold_nugget","components": {}}},
+				"  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:gold_nugget","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:gold_nugget","components": {}}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.unlocks_blocked_machine_inventory_slots","color": "yellow"},{"translate": "simplenergy.some_machines_may_have_locked_slots_that_require_this_tool_to_ac","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$膪"},{"text": "$艞"},{"text": "$膪"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$艟"},{"text": "$艠"},{"text": "$艟"},"\"\"",{"text": "$$聟"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$艟"},{"text": "$胘"},{"text": "$艟"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.quartz","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.breeze_rod","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.gold_nugget","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.raw_gold_block","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.unlocks_blocked_machine_inventory_slots","color": "yellow"},{"translate": "simplenergy.some_machines_may_have_locked_slots_that_require_this_tool_to_ac","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$膪"},{"text": "$艞"},{"text": "$膪"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$艟"},{"text": "$艠"},{"text": "$艟"},"\"\"",{"text": "$$聟"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$艟"},{"text": "$胘"},{"text": "$艟"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.quartz","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.breeze_rod","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.gold_nugget","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.raw_gold_block","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

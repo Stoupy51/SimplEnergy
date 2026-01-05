@@ -1,0 +1,21 @@
+{
+	"pack": {
+		"pack_format": 75,
+		"description": "SimplEnergy [2.0.15] by Stoupy51",
+		"min_format": [
+			75,
+			0
+		],
+		"max_format": [
+			9999,
+			0
+		]
+	},
+	"id": "simplenergy",
+	"overlays": {
+		"entries": [
+			{"formats": [0,72],"directory": "before_format_73","min_format": 0,"max_format": 72},
+			{"formats": [73,1000],"directory": "format_73_plus","min_format": 73,"max_format": 1000}
+		]
+	}
+}

@@ -1,0 +1,64 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"energy": {
+										"usage": 20,
+										"max_storage": 1600
+									},
+									"simplenergy": {
+										"electric_furnace": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:electric_furnace","from": "simplenergy"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								},
+								"minecraft:lore": [
+									{
+										"translate": "simplenergy.power_usage_20_kw",
+										"italic": false,
+										"color": "gray"
+									},
+									{
+										"translate": "simplenergy.energy_buffer_1600_kj",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},
+										{"translate": "simplenergy","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "simplenergy:electric_furnace",
+								"minecraft:item_name": {
+									"translate": "simplenergy.electric_furnace"
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

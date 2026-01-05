@@ -1,0 +1,64 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"energy": {
+										"usage": 120,
+										"max_storage": 6400
+									},
+									"simplenergy": {
+										"pulverizer": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:pulverizer","from": "simplenergy"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								},
+								"minecraft:lore": [
+									{
+										"translate": "simplenergy.power_usage_120_kw",
+										"italic": false,
+										"color": "gray"
+									},
+									{
+										"translate": "simplenergy.energy_buffer_6400_kj",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},
+										{"translate": "simplenergy","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "simplenergy:pulverizer",
+								"minecraft:item_name": {
+									"translate": "simplenergy.pulverizer"
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

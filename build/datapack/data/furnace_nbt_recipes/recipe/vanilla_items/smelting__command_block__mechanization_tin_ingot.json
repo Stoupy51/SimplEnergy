@@ -1,0 +1,34 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": "minecraft:command_block",
+	"result": {
+		"id": "minecraft:structure_block",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"smithed": {
+					"dict": {
+						"ingot": {
+							"tin": true
+						}
+					}
+				},
+				"mechanization": {
+					"id": "tin_ingot"
+				}
+			},
+			"minecraft:item_name": {
+				"translate": "simplenergy.tin_ingot"
+			},
+			"minecraft:lore": [
+				{
+					"translate": "simplenergy.mechanization",
+					"italic": true,
+					"color": "blue"
+				}
+			]
+		}
+	},
+	"experience": 0.8,
+	"cookingtime": 200
+}

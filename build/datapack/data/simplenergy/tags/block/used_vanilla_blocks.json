@@ -1,0 +1,17 @@
+{
+	"values": [
+		"minecraft:barrel",
+		"minecraft:brewing_stand",
+		"minecraft:conduit",
+		"minecraft:daylight_detector",
+		"minecraft:furnace",
+		"minecraft:gold_block",
+		"minecraft:iron_block",
+		"minecraft:iron_trapdoor",
+		"minecraft:player_head",
+		"minecraft:polished_deepslate",
+		"minecraft:raw_iron_block",
+		"minecraft:waxed_copper_block",
+		"#minecraft:cauldrons"
+	]
+}

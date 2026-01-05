@@ -1,0 +1,8 @@
+{
+	"parent": "block/cube_bottom_top",
+	"textures": {
+		"bottom": "simplenergy:item/elite_battery_bottom",
+		"side": "simplenergy:item/elite_battery_side",
+		"top": "simplenergy:item/elite_battery_top"
+	}
+}

@@ -1,0 +1,6 @@
+{
+	"model": {
+		"type": "minecraft:model",
+		"model": "simplenergy:item/electric_furnace_on"
+	}
+}

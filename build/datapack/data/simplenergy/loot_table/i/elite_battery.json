@@ -1,0 +1,59 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"energy": {
+										"storage": 0,
+										"max_storage": 50000
+									},
+									"simplenergy": {
+										"elite_battery": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:elite_battery","from": "simplenergy"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								},
+								"minecraft:lore": [
+									{
+										"translate": "simplenergy.energy_storage_50_mj",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},
+										{"translate": "simplenergy","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "simplenergy:elite_battery",
+								"minecraft:item_name": {
+									"translate": "simplenergy.elite_battery"
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,76 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/simplunium_spear",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.simplunium_spear",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/simplunium_spear",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_34"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (34)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_36"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (36)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_34"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (34)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_36"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (36)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"U$U$",
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"  \n\"U$U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},"item_model": "simplenergy:simplunium_ingot","item_name": {"translate": "simplenergy.simplunium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
+				"  \n\"U$",
+				{"text": "$肴","hover_event": {"action": "show_item","id": "minecraft:stick","components": {}}},
+				"U$\"\"",
+				{"text": "$$聗","hover_event": {"action": "show_item","id": "iron_spear","components": {"custom_data": {"smithed": {"dict": {"tools": {"simplunium": true,"spear": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_spear": true}},"max_damage": 750,"attribute_modifiers": [{"type": "attack_damage","amount": 3,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.947,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],"item_model": "simplenergy:simplunium_spear","item_name": {"translate": "simplenergy.simplunium_spear"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}}},
+				"#$\n\"U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:stick","components": {}}},
+				"U$\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "iron_spear","components": {"custom_data": {"smithed": {"dict": {"tools": {"simplunium": true,"spear": true}},"ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_spear": true}},"max_damage": 750,"attribute_modifiers": [{"type": "attack_damage","amount": 3,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.947,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],"item_model": "simplenergy:simplunium_spear","item_name": {"translate": "simplenergy.simplunium_spear"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]]}}},
+				"#$\n\"",
+				{"text": "$肴","hover_event": {"action": "show_item","id": "minecraft:stick","components": {}}},
+				"U$U$  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:stick","components": {}}},
+				"U$U$  \n\n",
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$","U$",{"text": "$耡"},"\n","\"","U$","U$",{"text": "U$"},"\n","\"","U$",{"text": "$肴"},"U$","\"\"",{"text": "$$聗"},"\n","\"","U$",{"text": "U$"},"U$","\"\"",{"text": "U$"},"\n","\"",{"text": "$肴"},"U$","U$","\n","\"",{"text": "U$"},"U$","U$","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.stick","color": "gray"}]},"priority": 0},
+				{"text": "舥\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聗"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_spear","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_9"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$","U$",{"text": "$耡"},"\n","\"","U$","U$",{"text": "U$"},"\n","\"","U$",{"text": "$肴"},"U$","\"\"",{"text": "$$聗"},"\n","\"","U$",{"text": "U$"},"U$","\"\"",{"text": "U$"},"\n","\"",{"text": "$肴"},"U$","U$","\n","\"",{"text": "U$"},"U$","U$","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "simplenergy.stick","color": "gray"}]},"priority": 0},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聗"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "simplenergy.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_spear","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_9"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

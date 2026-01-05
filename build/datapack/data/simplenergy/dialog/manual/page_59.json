@@ -1,0 +1,80 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/elite_cable",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.elite_cable",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/elite_cable",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_58"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (58)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_60"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (60)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_58"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (58)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_60"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (60)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"U$",
+				{"text": "$胠","hover_event": {"action": "show_item","id": "minecraft:redstone_block","components": {}}},
+				"U$  \n\"U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:redstone_block","components": {}}},
+				"U$  \n\"",
+				{"text": "$胠","hover_event": {"action": "show_item","id": "minecraft:redstone_block","components": {}}},
+				{"text": "$肅","hover_event": {"action": "show_item","id": "player_head","components": {"custom_data": {"energy": {"transfer": 120},"simplenergy": {"advanced_cable": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"profile": {"id": [-709098200,1001541428,-2043264882,-430220135],"properties": [{"name": "textures","value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzlmNjNlZGIwMDA4NWM1Mzk0Y2FmZjg2Yzk3ZmU4NGQxYmUwMGEwMDcxMDE4Y2YwOTAwZTdiNjMwYTY2Y2VlZSJ9fX0="}]},"lore": [{"translate": "simplenergy.transfer_speed_120_kw","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_name": {"translate": "simplenergy.advanced_cable"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_58"}},
+				{"text": "$胠","hover_event": {"action": "show_item","id": "minecraft:redstone_block","components": {}}},
+				"\"\"",
+				{"text": "$$肇","hover_event": {"action": "show_item","id": "player_head","components": {"custom_data": {"energy": {"transfer": 240},"simplenergy": {"elite_cable": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"profile": {"id": [-709098200,1001541428,-2043264882,-430220135],"properties": [{"name": "textures","value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjlmMzJjOWNkNTU2MzJmNjEzZjRhMDU2ZGEyYzJhYTkzZjMwOTk2ZGY2NzMxZTcyYmM1NDA4NzA4ZGE5MWYzOCJ9fX0="}]},"lore": [{"translate": "simplenergy.transfer_speed_240_kw","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_name": {"translate": "simplenergy.elite_cable"}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:redstone_block","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "player_head","components": {"custom_data": {"energy": {"transfer": 120},"simplenergy": {"advanced_cable": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"profile": {"id": [-709098200,1001541428,-2043264882,-430220135],"properties": [{"name": "textures","value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzlmNjNlZGIwMDA4NWM1Mzk0Y2FmZjg2Yzk3ZmU4NGQxYmUwMGEwMDcxMDE4Y2YwOTAwZTdiNjMwYTY2Y2VlZSJ9fX0="}]},"lore": [{"translate": "simplenergy.transfer_speed_120_kw","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_name": {"translate": "simplenergy.advanced_cable"}}},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_58"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:redstone_block","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "player_head","components": {"custom_data": {"energy": {"transfer": 240},"simplenergy": {"elite_cable": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"profile": {"id": [-709098200,1001541428,-2043264882,-430220135],"properties": [{"name": "textures","value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjlmMzJjOWNkNTU2MzJmNjEzZjRhMDU2ZGEyYzJhYTkzZjMwOTk2ZGY2NzMxZTcyYmM1NDA4NzA4ZGE5MWYzOCJ9fX0="}]},"lore": [{"translate": "simplenergy.transfer_speed_240_kw","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_name": {"translate": "simplenergy.elite_cable"}}}},
+				"#$\n\"U$",
+				{"text": "$胠","hover_event": {"action": "show_item","id": "minecraft:redstone_block","components": {}}},
+				"U$  \n\"U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:redstone_block","components": {}}},
+				"U$  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.high_capacity_energy_transmission_cable","color": "yellow"},{"translate": "simplenergy.top_tier_cable_for_maximum_energy_transfer","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$胠"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"",{"text": "$胠"},{"text": "$肅"},{"text": "$胠"},"\"\"",{"text": "$$肇"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"","U$",{"text": "$胠"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.advanced_cable","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.redstone_block","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.high_capacity_energy_transmission_cable","color": "yellow"},{"translate": "simplenergy.top_tier_cable_for_maximum_energy_transfer","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"","U$",{"text": "$胠"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n","\"",{"text": "$胠"},{"text": "$肅"},{"text": "$胠"},"\"\"",{"text": "$$肇"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"","U$",{"text": "$胠"},"U$","\n","\"","U$",{"text": "U$"},"U$","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.advanced_cable","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.redstone_block","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

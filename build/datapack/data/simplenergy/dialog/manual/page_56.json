@@ -1,0 +1,82 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/elevator",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.elevator",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/elevator",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_55"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (55)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_57"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (57)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_55"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (55)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_57"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (57)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$胘$胘$胘","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				"  \n\"",
+				{"text": "$胘","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				{"text": "$荚","hover_event": {"action": "show_item","id": "minecraft:redstone_lamp","components": {}}},
+				{"text": "$胘","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				"\"\"",
+				{"text": "$$肁","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"usage": 20,"max_storage": 1200},"simplenergy": {"elevator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:elevator","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"lore": [{"translate": "simplenergy.power_usage_20_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_1200_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:elevator","item_name": {"translate": "simplenergy.elevator"}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:redstone_lamp","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"usage": 20,"max_storage": 1200},"simplenergy": {"elevator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:elevator","from": "simplenergy"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"lore": [{"translate": "simplenergy.power_usage_20_kw","italic": false,"color": "gray"},{"translate": "simplenergy.energy_buffer_1200_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},{"translate": "simplenergy","italic": true,"color": "blue"}]],"item_model": "simplenergy:elevator","item_name": {"translate": "simplenergy.elevator"}}}},
+				"#$\n\"",
+				{"text": "$胘$胘$胘","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				"  \n\"",
+				{"translate": "simplenergy.uuu","hover_event": {"action": "show_item","id": "minecraft:iron_block","components": {}}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.vertical_transport_system_for_players","color": "yellow"},{"translate": "simplenergy.sneak_on_top_to_teleport_to_an_elevator_placed_below","color": "gray"},{"translate": "simplenergy.jump_on_top_to_teleport_to_an_elevator_placed_above","color": "gray"},{"translate": "simplenergy.maximum_distance_72_blocks","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$胘"},{"text": "$胘"},{"text": "$胘"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$胘"},{"text": "$荚"},{"text": "$胘"},"\"\"",{"text": "$$肁"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$胘"},{"text": "$胘"},{"text": "$胘"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.redstone_lamp","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$胘"},{"text": "$艺"},{"text": "$胘"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$艺"},{"text": "$荚"},{"text": "$艺"},"\"\"",{"text": "$$肁"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$胘"},{"text": "$艺"},{"text": "$胘"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.copper_block","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.redstone_lamp","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.vertical_transport_system_for_players","color": "yellow"},{"translate": "simplenergy.sneak_on_top_to_teleport_to_an_elevator_placed_below","color": "gray"},{"translate": "simplenergy.jump_on_top_to_teleport_to_an_elevator_placed_above","color": "gray"},{"translate": "simplenergy.maximum_distance_72_blocks","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$胘"},{"text": "$胘"},{"text": "$胘"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$胘"},{"text": "$荚"},{"text": "$胘"},"\"\"",{"text": "$$肁"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$胘"},{"text": "$胘"},{"text": "$胘"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.redstone_lamp","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$胘"},{"text": "$艺"},{"text": "$胘"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$艺"},{"text": "$荚"},{"text": "$艺"},"\"\"",{"text": "$$肁"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$胘"},{"text": "$艺"},{"text": "$胘"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.iron_block","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.copper_block","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.redstone_lamp","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}
