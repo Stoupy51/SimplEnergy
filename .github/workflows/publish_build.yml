@@ -20,7 +20,6 @@ jobs:
           python-version: '3.14'
       - name: Set up uv
         uses: astral-sh/setup-uv@v7
-      - uses: ssciwr/setup-mesa-dist-win@v2
       - name: Install stewbeet
         run: |
           uv venv
