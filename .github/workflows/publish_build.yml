@@ -1,0 +1,38 @@
+
+name: build
+
+on: 
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.14'
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+      - name: Install stewbeet
+        run: |
+          uv venv
+          uv pip install --pre stewbeet
+      - name: Build project
+        run: |
+          uv run stewbeet build
+      - name: Commit and push to build branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan build
+          git rm -rf --cached .
+          git add build/ manual_cache/
+          git commit -m "Build from ${{ github.ref_name }}"
+          git push -f origin build
