@@ -20,17 +20,16 @@ jobs:
           python-version: '3.14'
       - name: Set up uv
         uses: astral-sh/setup-uv@v7
-      - name: Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y xvfb libgl1-mesa-glx libglu1-mesa
+      - uses: ssciwr/setup-mesa-dist-win@v2
       - name: Install stewbeet
         run: |
           uv venv
           uv pip install --pre stewbeet
-      - name: Build project
-        run: |
-          xvfb-run -a uv run stewbeet build
+      - name: Setup OpenGL and Build project
+        uses: edayot/model_resolver@master
+        with:
+          commands: |
+            uv run stewbeet rebuild
       - name: Commit and push to build branch
         run: |
           git config user.name "github-actions[bot]"
