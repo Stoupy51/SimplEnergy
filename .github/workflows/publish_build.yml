@@ -30,12 +30,35 @@ jobs:
         with:
           commands: |
             uv run stewbeet rebuild
-      - name: Commit and push to build branch
+      - name: Save build artifacts
+        run: |
+          cp -r build /tmp/build
+          cp -r manual_cache /tmp/manual_cache
+      
+      - name: Configure git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+      
+      - name: Create orphan build branch
+        run: |
           git checkout --orphan build
-          git rm -rf --cached .
+      
+      - name: Clear working directory
+        run: |
+          git rm -rf .
+          rm -rf *
+      
+      - name: Restore build artifacts
+        run: |
+          cp -r /tmp/build .
+          cp -r /tmp/manual_cache .
+      
+      - name: Commit changes
+        run: |
           git add build/ manual_cache/
           git commit -m "Build from ${{ github.ref_name }}"
+      
+      - name: Push to build branch
+        run: |
           git push -f origin build
