@@ -39,8 +39,8 @@ def add_visible_advancements() -> None:
 		"wrench": {"display": {"title": {"text": "Having the control!", "color": "gray"}, "description": {"text": "Craft a wrench to rotate machines and break cables", "color": "green"}, "hidden": True}, "parent": f"{ns}:visible/simplunium_armor"},
 
 		"simplunium_armor": {
-			"display": { "icon": {"id": Mem.definitions["simplunium_chestplate"]["base_item"],"components": {
-					"minecraft:item_model": Mem.definitions["simplunium_chestplate"]["components"]["item_model"],
+			"display": { "icon": {"id": Item.from_id("simplunium_chestplate").base_item,"components": {
+					"minecraft:item_model": Item.from_id("simplunium_chestplate").components["item_model"],
 				}},
 				"title": {"text": "Cover Me with Simplunium", "color": "gray"},
 				"description": {"text": "Better than iron armor", "color": "green"},

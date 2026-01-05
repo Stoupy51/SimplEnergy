@@ -1,7 +1,7 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet.core import COMMON_SIGNAL, COMMON_SIGNAL_HIDDEN, CUSTOM_ITEM_VANILLA, JsonDict, Mem, write_function
+from stewbeet import COMMON_SIGNAL, COMMON_SIGNAL_HIDDEN, CUSTOM_ITEM_VANILLA, Block, JsonDict, Mem, write_function
 
 
 # Setup pulverizer work and visuals
@@ -9,7 +9,8 @@ def pulverizer(gui: dict[str, str]) -> None:
 	ns: str = Mem.ctx.project_id
 	PULVERIZER_SLOTS: int = 8
 	PULVERIZER_TIME: int = 200
-	energy: JsonDict = Mem.definitions["pulverizer"]["custom_data"]["energy"]
+	pulverizer_obj = Block.from_id("pulverizer")
+	energy: JsonDict = pulverizer_obj.components["custom_data"]["energy"]
 
 
 	## Passive parts
@@ -31,7 +32,7 @@ def pulverizer(gui: dict[str, str]) -> None:
 			machine_gui.append(f"execute if score @s energy.storage matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model=\"{gui[gui_name]}\",{COMMON_SIGNAL_HIDDEN}]")
 	machine_gui_str: str = "\n".join(machine_gui)
 
-	default_model: str = Mem.definitions["pulverizer"]["item_model"]
+	default_model: str = pulverizer_obj.components["item_model"]
 	working_model: str = default_model + "_on"
 	content: str = f"""
 # Copy slots to storage

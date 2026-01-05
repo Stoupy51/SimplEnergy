@@ -1,8 +1,7 @@
 
 # ruff: noqa: E501
 # Imports
-from beet import Predicate
-from stewbeet.core import COMMON_SIGNAL_HIDDEN, CUSTOM_ITEM_VANILLA, JsonDict, Mem, set_json_encoder, write_function
+from stewbeet import COMMON_SIGNAL_HIDDEN, CUSTOM_ITEM_VANILLA, Block, JsonDict, Mem, Predicate, set_json_encoder, write_function
 
 from .pulverizer import pulverizer
 
@@ -28,7 +27,7 @@ data modify entity @s transformation.translation[1] set value 0.002f
 	for gen in ["furnace_generator", "redstone_generator"]:
 		default_gui: str = gui[f"gui/{gen}.png"]
 		working_gui: str = gui[f"gui/{gen}_on.png"]
-		default_model: str = Mem.definitions[gen]["item_model"]
+		default_model: str = Block.from_id(gen).components["item_model"]
 		working_model: str = default_model + "_on"
 		gui_slot: int = 0 if gen == "furnace_generator" else 1
 		input_slot: int = 1 if gen == "furnace_generator" else 0
@@ -88,7 +87,7 @@ function #itemio:calls/container/init
 
 	# Electric Smelter & Electric Furnace & Electric Brewing Stand
 	for machine in ["electric_smelter", "electric_furnace", "electric_brewing_stand"]:
-		energy: JsonDict = Mem.definitions[machine]["custom_data"]["energy"]
+		energy: JsonDict = Block.from_id(machine).components["custom_data"]["energy"]
 		cook: str = "cooking_time_spent" if machine != "electric_brewing_stand" else "BrewTime"
 		burn: str = "lit_time_remaining" if machine != "electric_brewing_stand" else "Fuel"
 		burn_type: str = "short" if machine != "electric_brewing_stand" else "byte"
@@ -119,7 +118,7 @@ function #itemio:calls/container/init
 				machine_gui.append(f'execute if score @s energy.storage matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{gui[gui_name]}",{COMMON_SIGNAL_HIDDEN}]')
 		machine_gui_str: str = "\n".join(machine_gui)
 
-		default_model: str = Mem.definitions[machine]["item_model"]
+		default_model: str = Block.from_id(machine).components["item_model"]
 		working_model: str = default_model + "_on"
 		content: str = f"""
 # Store values for efficient look up
@@ -174,7 +173,7 @@ function #itemio:calls/container/init
 """)
 
 	# Cauldron Generator
-	default_model: str = Mem.definitions["cauldron_generator"]["item_model"]
+	default_model: str = Block.from_id("cauldron_generator").components["item_model"]
 	working_model: str = default_model + "_on"
 	content: str = f"""
 # Stop function if no water or full
@@ -211,7 +210,7 @@ data modify entity @s transformation.translation[1] set value 0.01f
 	write_function(f"{ns}:custom_blocks/electric_brewing_stand/place_secondary", to_add)
 
 	# Heat generator
-	default_model: str = Mem.definitions["heat_generator"]["item_model"]
+	default_model: str = Block.from_id("heat_generator").components["item_model"]
 	working_model: str = default_model + "_on"
 	write_function(f"{ns}:custom_blocks/heat_generator/second", f"""
 # Prepare working state
@@ -236,8 +235,8 @@ execute if score @s energy.storage >= @s energy.max_storage run scoreboard playe
 """)
 
 	# Wind turbine
-	energy: JsonDict = Mem.definitions["wind_turbine"]["custom_data"]["energy"]
-	default_model: str = Mem.definitions["wind_turbine"]["item_model"]
+	energy: JsonDict = Block.from_id("wind_turbine").components["custom_data"]["energy"]
+	default_model: str = Block.from_id("wind_turbine").components["item_model"]
 	working_model: str = default_model + "_on"
 	write_function(f"{ns}:custom_blocks/wind_turbine/second", f"""
 # Get height of the wind turbine
@@ -262,7 +261,7 @@ execute if score @s energy.storage >= @s energy.max_storage run scoreboard playe
 """)
 
 	# Elevator
-	default_model: str = Mem.definitions["elevator"]["item_model"]
+	default_model: str = Block.from_id("elevator").components["item_model"]
 	working_model: str = default_model + "_on"
 	Mem.ctx.data[ns].predicates["is_on_ground"] = set_json_encoder(Predicate({"condition":"minecraft:entity_properties","entity":"this","predicate":{"movement":{"vertical_speed":{"max":0.1}}}}))
 	Mem.ctx.data[ns].predicates["is_sneaking"] = set_json_encoder(Predicate({"condition":"minecraft:entity_properties","entity":"this","predicate":{"flags":{"is_sneaking":True}}}))

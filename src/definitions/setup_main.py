@@ -18,7 +18,9 @@ from stewbeet import (
 	set_manual_components,
 )
 
-from .additions import main_additions
+from .additions.energy import main_additions as energy_additions
+from .additions.material import main_additions as material_additions
+from .additions.misc import main_additions as misc_additions
 from .manual_assets import manual_assets_main
 
 # Constants
@@ -54,7 +56,9 @@ def beet_default(ctx: Context) -> None:
 	generate_custom_records("auto")
 
 	# Apply database additions
-	main_additions()
+	material_additions()
+	energy_additions()
+	misc_additions()
 
 	# Final adjustments
 	add_energy_lore_to_definitions()
