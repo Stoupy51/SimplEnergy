@@ -149,7 +149,7 @@ def main_additions() -> None:
 			{"text":"High-output redstone generator.","color":"yellow"},
 			{"text":"\nAdvanced generator powered by redstone dust and blocks","color":"gray"},
 		])],
-		components={"custom_data": {"energy": {"generation":80, "max_storage": 6400}}}
+		components={"custom_data": {"energy": {"generation":80, "max_storage": 6400}}},
 	)
 
 	Block(
