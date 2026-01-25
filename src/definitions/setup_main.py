@@ -13,6 +13,7 @@ from stewbeet import (
 	add_private_custom_data_for_namespace,
 	add_recipes_for_all_dusts,
 	add_smithed_ignore_vanilla_behaviours_convention,
+	export_all_definitions_to_json,
 	generate_custom_records,
 	generate_everything_about_these_materials,
 	set_manual_components,
@@ -30,7 +31,7 @@ ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 		DefaultOre.IRON, simplunium_durability, {"attack_damage": 1, "armor": 0.5, "mining_efficiency": 2}
 	),
 }
-DUSTS_CONFIGS: dict[str, tuple[list[str|JsonDict], JsonDict]] = {
+DUSTS_CONFIGS: dict[str, tuple[list[str|JsonDict], Ingr]] = {
 	"copper":	(["raw_copper","copper_ore","deepslate_copper_ore"],												Ingr("minecraft:copper_ingot")),
 	"iron":		(["raw_iron","iron_ore","deepslate_iron_ore"],														Ingr("minecraft:iron_ingot")),
 	"gold":		(["raw_gold","gold_ore","deepslate_gold_ore"],														Ingr("minecraft:gold_ingot")),
@@ -70,4 +71,7 @@ def beet_default(ctx: Context) -> None:
 
 	# Copy manual assets that can't be generated
 	manual_assets_main()
+
+	# Debug purposes: export all definitions to a single json file
+	export_all_definitions_to_json(f"{ctx.directory}/definitions_debug.json")
 

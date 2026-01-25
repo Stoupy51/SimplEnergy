@@ -41,7 +41,6 @@ resource_pack:
 pipeline:
     - "src.definitions.setup_main" # User code
     - "src.definitions.setup_external" # User code
-    - "stewbeet.plugins.verify_definitions"
     - "stewbeet.plugins.resource_pack.sounds"
     - "stewbeet.plugins.resource_pack.item_models"
     - "stewbeet.plugins.resource_pack.check_power_of_2"
