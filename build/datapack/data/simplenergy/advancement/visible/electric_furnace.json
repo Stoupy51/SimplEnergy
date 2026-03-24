@@ -1,0 +1,46 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:furnace",
+      "components": {
+        "minecraft:item_model": "simplenergy:electric_furnace"
+      }
+    },
+    "title": {
+      "translate": "simplenergy.a_better_furnace",
+      "color": "gray"
+    },
+    "description": {
+      "translate": "simplenergy.craft_your_first_electric_furnace",
+      "color": "green"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:custom_data": {
+                "simplenergy": {
+                  "electric_furnace": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ],
+  "parent": "simplenergy:visible/simplunium_ingot"
+}

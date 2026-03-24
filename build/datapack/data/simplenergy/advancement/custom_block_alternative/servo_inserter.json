@@ -1,0 +1,34 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:item_used_on_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:item_frame"
+							],
+							"predicates": {
+								"minecraft:custom_data": {
+									"simplenergy": {
+										"servo_inserter": true
+									}
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"rewards": {
+		"function": "simplenergy:custom_blocks/servo_inserter/search"
+	}
+}

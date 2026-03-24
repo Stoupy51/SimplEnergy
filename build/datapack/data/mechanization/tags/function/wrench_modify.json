@@ -1,0 +1,6 @@
+{
+	"required": false,
+	"values": [
+		"simplenergy:calls/mechanization/wrench_modify"
+	]
+}

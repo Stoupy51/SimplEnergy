@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/warped_fungus_on_a_stick",
+	"textures": {
+		"layer0": "simplenergy:item/wrench"
+	}
+}

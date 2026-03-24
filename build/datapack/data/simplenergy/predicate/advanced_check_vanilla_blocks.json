@@ -1,0 +1,19 @@
+{
+	"condition": "minecraft:any_of",
+	"terms": [
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_barrel\"]}","location": {"block": {"blocks": "minecraft:barrel"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_brewing_stand\"]}","location": {"block": {"blocks": "minecraft:brewing_stand"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_cauldron\"]}","location": {"block": {"blocks": "#minecraft:cauldrons"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_conduit\"]}","location": {"block": {"blocks": "minecraft:conduit"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_daylight_detector\"]}","location": {"block": {"blocks": "minecraft:daylight_detector"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_furnace\"]}","location": {"block": {"blocks": "minecraft:furnace"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_gold_block\"]}","location": {"block": {"blocks": "minecraft:gold_block"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_iron_block\"]}","location": {"block": {"blocks": "minecraft:iron_block"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_iron_trapdoor\"]}","location": {"block": {"blocks": "minecraft:iron_trapdoor"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_player_head\"]}","location": {"block": {"blocks": "minecraft:player_head"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_polished_deepslate\"]}","location": {"block": {"blocks": "minecraft:polished_deepslate"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_raw_iron_block\"]}","location": {"block": {"blocks": "minecraft:raw_iron_block"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_waxed_copper_block\"]}","location": {"block": {"blocks": "minecraft:waxed_copper_block"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"simplenergy.vanilla.minecraft_item_frame\"]}","slots": {"contents": {"predicates": {"minecraft:custom_data": {"simplenergy": {"item_frame_destroy": true}}}}}}}
+	]
+}

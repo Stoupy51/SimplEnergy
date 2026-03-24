@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/paper",
+	"textures": {
+		"layer0": "simplenergy:item/slot_unlocker"
+	}
+}

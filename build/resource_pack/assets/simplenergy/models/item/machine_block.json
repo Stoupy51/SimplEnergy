@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"end": "simplenergy:item/machine_block_end",
+		"side": "simplenergy:item/machine_block_side"
+	}
+}

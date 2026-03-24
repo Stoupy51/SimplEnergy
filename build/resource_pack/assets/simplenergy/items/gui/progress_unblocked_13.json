@@ -1,0 +1,7 @@
+{
+	"model": {
+		"type": "minecraft:model",
+		"model": "simplenergy:item/gui/progress_unblocked_13"
+	},
+	"oversized_in_gui": true
+}
