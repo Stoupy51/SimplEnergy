@@ -17,7 +17,7 @@ directory: "."
 # Path to a folder for beet to output. If not defined, no files will visibly output
 output: "build"
 # List of files or glob patterns that should be ignored by the file watcher and not cause any rebuild when using `$ beet watch`
-ignore: []
+ignore: ["build", "manual_cache", "definitions_debug.json"]
 
 # A list of importable plugin strings
 require:
@@ -68,7 +68,7 @@ pipeline:
 # Generic dict which holds extra information usable by plugins
 meta:
     # List of supported Minecraft versions (used when uploading to Modrinth or Smithed)
-    mc_supports: ["1.21.11", "26.1", "infinite"]
+    mc_supports: ["1.21.11", "26.1", "26.1.1", "26.1.2", "infinite"]
 
     # Model resolver configuration for caching models
     model_resolver:

@@ -23,7 +23,7 @@ scoreboard objectives add simplenergy.open_manual minecraft.used:minecraft.writt
 # Register the manual to the universal manual
 execute unless data storage stewbeet:main universal_manual run data modify storage stewbeet:main universal_manual set value []
 data remove storage stewbeet:main universal_manual[{"name":"SimplEnergy"}]
-data modify storage stewbeet:main universal_manual append value {"name":"SimplEnergy","loot_table":"simplenergy:i/manual","hover":[{"text": ""}, {"translate": "simplenergy_manual_2"}, {"text": "ဠ\\n\\n\\n\\n\\n\\n", "font": "simplenergy:manual", "color": "white"}, [{"text": "", "font": "minecraft:default", "color": "black"}, {"translate": "simplenergy.the_following_manual_will_guide_you_through_recipes_and_energy_s", "color": "#505050"}]]}
+data modify storage stewbeet:main universal_manual append value {"name":"SimplEnergy","loot_table":"simplenergy:i/manual","hover":[{"text": ""}, [{"translate":"simplenergy_manual"}, "\n"], {"text": "ဠ\\n\\n\\n\\n\\n\\n", "font": "simplenergy:manual", "color": "white"}, [{"text": "", "font": "minecraft:default", "color": "black"}, {"translate": "simplenergy.the_following_manual_will_guide_you_through_recipes_and_energy_s", "color": "#505050"}]]}
 
 # Confirm load
 tellraw @a[tag=convention.debug] {"translate":"simplenergy.loaded_simplenergy_v2_0_16","color":"green"}
