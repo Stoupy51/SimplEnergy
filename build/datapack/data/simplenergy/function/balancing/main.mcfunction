@@ -3,7 +3,7 @@
 #
 # @executed	as @e[tag=simplenergy.can_balance,scores={energy.storage=20..}] & at @s[tag=!simplenergy.balanced]
 #
-# @within	simplenergy:v2.0.16/second_5 [ as @e[tag=simplenergy.can_balance,scores={energy.storage=20..}] & at @s[tag=!simplenergy.balanced] ]
+# @within	simplenergy:v2.0.17/second_5 [ as @e[tag=simplenergy.can_balance,scores={energy.storage=20..}] & at @s[tag=!simplenergy.balanced] ]
 #
 
 # Stop if already balanced
