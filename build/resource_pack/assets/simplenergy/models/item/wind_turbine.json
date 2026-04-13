@@ -1,0 +1,100 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "simplenergy:item/wind_turbine_side",
+		"0": "simplenergy:item/wind_turbine_blades",
+		"1": "simplenergy:atlas/iron_block",
+		"2": "simplenergy:item/wind_turbine_side",
+		"particle": "simplenergy:item/wind_turbine_blades"
+	},
+	"elements": [
+		{
+			"name": "blades",
+			"from": [
+				1,
+				4,
+				7.5
+			],
+			"to": [
+				15,
+				18,
+				7.5
+			],
+			"faces": {
+				"north": {"uv": [0,0,16,16],"texture": "#0","cullface": "north"},
+				"south": {"uv": [16,0,0,16],"texture": "#0","cullface": "south"}
+			}
+		},
+		{
+			"from": [
+				0,
+				0,
+				0
+			],
+			"to": [
+				16,
+				3.025,
+				16
+			],
+			"faces": {
+				"north": {"uv": [0,13,16,16],"texture": "#2","cullface": "north"},
+				"east": {"uv": [0,13,16,16],"texture": "#2","cullface": "north"},
+				"south": {"uv": [0,13,16,16],"texture": "#2","cullface": "north"},
+				"west": {"uv": [0,13,16,16],"texture": "#2","cullface": "north"},
+				"up": {"uv": [0,0,16,16],"texture": "#1","cullface": "north"},
+				"down": {"uv": [0,0,16,16],"texture": "#1","cullface": "north"}
+			}
+		},
+		{
+			"from": [
+				7,
+				3,
+				7.51
+			],
+			"to": [
+				9,
+				13,
+				8.51
+			],
+			"faces": {
+				"north": {"uv": [0,3,16,13],"texture": "#1","cullface": "north"},
+				"east": {"uv": [0,3,16,13],"texture": "#1","cullface": "north"},
+				"south": {"uv": [0,3,16,13],"texture": "#1","cullface": "north"},
+				"west": {"uv": [0,3,16,13],"texture": "#1","cullface": "north"},
+				"up": {"uv": [12,14,15,15],"texture": "#1","cullface": "north"},
+				"down": {"uv": [12,14,15,15],"texture": "#1","cullface": "north"}
+			}
+		}
+	],
+	"display": {
+		"head": {
+			"translation": [
+				0,
+				-30.42,
+				0
+			],
+			"scale": [
+				1.605,
+				1.605,
+				1.605
+			]
+		},
+		"fixed": {
+			"rotation": [
+				-90,
+				0,
+				0
+			],
+			"translation": [
+				0,
+				0,
+				-16.05
+			],
+			"scale": [
+				2.0075,
+				2.0075,
+				2.0075
+			]
+		}
+	}
+}

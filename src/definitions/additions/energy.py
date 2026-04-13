@@ -21,7 +21,7 @@ def main_additions() -> None:
 	# Energy materials
 	Block(
 		id="machine_block",
-		vanilla_block=VanillaBlock(id="minecraft:iron_block", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:iron_block"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapedRecipe(category="misc", shape=["SSS","SCS","III"], ingredients={"S":Ingr("minecraft:stone"),"C":Ingr("minecraft:copper_block"),"I":Ingr("minecraft:iron_block")}),
@@ -36,7 +36,7 @@ def main_additions() -> None:
 	# Batteries
 	Block(
 		id="simple_battery",
-		vanilla_block=VanillaBlock(id="minecraft:waxed_copper_block", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:waxed_copper_block"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapedRecipe(category="misc", shape=["CCC","CRC","III"], ingredients={"C":Ingr("minecraft:copper_block"),"R":Ingr("minecraft:redstone"),"I":Ingr("minecraft:iron_ingot")}),
@@ -54,7 +54,7 @@ def main_additions() -> None:
 
 	Block(
 		id="advanced_battery",
-		vanilla_block=VanillaBlock(id="minecraft:gold_block", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:gold_block"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapedRecipe(category="misc", shape=["GGG","GXG","CCC"], ingredients={"G":Ingr("minecraft:gold_block"),"X":Ingr("simple_battery"),"C":Ingr("minecraft:copper_block")}),
@@ -72,7 +72,7 @@ def main_additions() -> None:
 
 	Block(
 		id="elite_battery",
-		vanilla_block=VanillaBlock(id="minecraft:iron_block", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:iron_block"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapedRecipe(category="misc", shape=["RRR","RXR","SSS"], ingredients={"R":Ingr("minecraft:redstone_block"),"X":Ingr("advanced_battery"),"S":Ingr("simplunium_block")}),
@@ -90,14 +90,14 @@ def main_additions() -> None:
 
 	Block(
 		id="creative_battery",
-		vanilla_block=VanillaBlock(id="minecraft:iron_block", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:iron_block"),
 		components={"custom_data": {"energy": {"storage":2000000000, "max_storage": 2147483647}}}
 	)
 
 	# Energy generators
 	Block(
 		id="cauldron_generator",
-		vanilla_block=VanillaBlock(id="minecraft:cauldron", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:cauldron"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapedRecipe(category="misc", shape=["I I","IRI","III"], ingredients={"I":Ingr("minecraft:iron_ingot"),"R":Ingr("minecraft:redstone")}),
@@ -124,7 +124,7 @@ def main_additions() -> None:
 
 	Block(
 		id="furnace_generator",
-		vanilla_block=VanillaBlock(id="minecraft:furnace", apply_facing=True),
+		vanilla_block=VanillaBlock(id="minecraft:furnace", block_facing="player"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapedRecipe(category="misc", shape=["III","RMR","SSS"], ingredients={"I":Ingr("minecraft:iron_ingot"),"R":Ingr("minecraft:redstone"),"M":Ingr("machine_block"),"S":Ingr("minecraft:stone")}),
@@ -139,7 +139,7 @@ def main_additions() -> None:
 
 	Block(
 		id="redstone_generator",
-		vanilla_block=VanillaBlock(id="minecraft:furnace", apply_facing=True),
+		vanilla_block=VanillaBlock(id="minecraft:furnace", block_facing="player"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapedRecipe(category="misc", shape=["RRR","RFR","SSS"], ingredients={"R":Ingr("minecraft:redstone_block"),"F":Ingr("furnace_generator"),"S":Ingr("simplunium_block")}),
@@ -154,7 +154,7 @@ def main_additions() -> None:
 
 	Block(
 		id="heat_generator",
-		vanilla_block=VanillaBlock(id="minecraft:iron_block", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:iron_block"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapedRecipe(category="misc", shape=["IGI","GAG","IGI"], ingredients={"I":Ingr("minecraft:iron_block"),"G":Ingr("minecraft:glass"),"A":Ingr("minecraft:netherite_scrap")}),
@@ -172,7 +172,7 @@ def main_additions() -> None:
 
 	Block(
 		id="wind_turbine",
-		vanilla_block=VanillaBlock(id="minecraft:iron_trapdoor", apply_facing=True),
+		vanilla_block=VanillaBlock(id="minecraft:iron_trapdoor", block_facing="player"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapedRecipe(category="misc", shape=[" I ","ICI","BBB"], ingredients={"I":Ingr("minecraft:iron_ingot"),"C":Ingr("minecraft:copper_block"),"B":Ingr("minecraft:iron_block")}),
@@ -189,7 +189,7 @@ def main_additions() -> None:
 
 	Block(
 		id="solar_panel",
-		vanilla_block=VanillaBlock(id="minecraft:daylight_detector", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:daylight_detector"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapedRecipe(category="misc", shape=["LLL","LDL","III"], ingredients={"L":Ingr("minecraft:lapis_lazuli"),"D":Ingr("minecraft:daylight_detector"),"I":Ingr("minecraft:iron_block")}),
@@ -209,7 +209,7 @@ def main_additions() -> None:
 	# Machines
 	Block(
 		id="electric_furnace",
-		vanilla_block=VanillaBlock(id="minecraft:furnace", apply_facing=True),
+		vanilla_block=VanillaBlock(id="minecraft:furnace", block_facing="player"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapedRecipe(category="misc", shape=["LLL","LML","III"], ingredients={"L":Ingr("minecraft:lapis_lazuli"),"M":Ingr("machine_block"),"I":Ingr("minecraft:iron_block")}),
@@ -224,7 +224,7 @@ def main_additions() -> None:
 
 	Block(
 		id="electric_smelter",
-		vanilla_block=VanillaBlock(id="minecraft:furnace", apply_facing=True),
+		vanilla_block=VanillaBlock(id="minecraft:furnace", block_facing="player"),
 		manual_category="energy",
 		recipes=[CraftingShapedRecipe(category="misc", shape=["SSS","SFS","BBB"], ingredients={"S":Ingr("simplunium_ingot"),"F":Ingr("electric_furnace"),"B":Ingr("simplunium_block")})],
 		wiki_buttons=[WikiButton([
@@ -236,7 +236,7 @@ def main_additions() -> None:
 
 	Block(
 		id="electric_brewing_stand",
-		vanilla_block=VanillaBlock(id="minecraft:brewing_stand", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:brewing_stand"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapedRecipe(category="misc", shape=["SSS","SBS","LLL"], ingredients={"S":Ingr("simplunium_ingot"),"B":Ingr("minecraft:brewing_stand"),"L":Ingr("minecraft:lapis_block")}),
@@ -260,7 +260,7 @@ def main_additions() -> None:
 
 	Block(
 		id="pulverizer",
-		vanilla_block=VanillaBlock(id="minecraft:barrel", apply_facing=True),
+		vanilla_block=VanillaBlock(id="minecraft:barrel", block_facing="player"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapedRecipe(category="misc", shape=["DDD","SMS","III"], ingredients={"D":Ingr("minecraft:diamond"),"S":Ingr("simplunium_ingot"),"M":Ingr("machine_block"),"I":Ingr("minecraft:iron_block")}),
@@ -275,7 +275,7 @@ def main_additions() -> None:
 
 	Block(
 		id="elevator",
-		vanilla_block=VanillaBlock(id="minecraft:iron_block", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:iron_block"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapedRecipe(category="misc", shape=["III","IRI","III"], ingredients={"I":Ingr("minecraft:iron_block"),"R":Ingr("minecraft:redstone_lamp")}),
@@ -306,7 +306,7 @@ def main_additions() -> None:
 
 	BlockHead(
 		id="simple_cable",
-		vanilla_block=VanillaBlock(apply_facing=False, id="minecraft:player_head{profile:" + str(simple_cable_profile) + "}"),
+		vanilla_block=VanillaBlock(id="minecraft:player_head{profile:" + str(simple_cable_profile) + "}"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapedRecipe(result_count=12, category="misc", shape=["ICI","IOI","ICI"], ingredients={"I":Ingr("minecraft:iron_ingot"),"C":Ingr("minecraft:copper_ingot"),"O":Ingr("minecraft:coal")}),
@@ -326,7 +326,7 @@ def main_additions() -> None:
 
 	BlockHead(
 		id="advanced_cable",
-		vanilla_block=VanillaBlock(apply_facing=False, id="minecraft:player_head{profile:" + str(advanced_cable_profile) + "}"),
+		vanilla_block=VanillaBlock(id="minecraft:player_head{profile:" + str(advanced_cable_profile) + "}"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapelessRecipe(category="misc", ingredients=[Ingr("simple_cable")] + 8*[Ingr("minecraft:lapis_lazuli")]),
@@ -343,7 +343,7 @@ def main_additions() -> None:
 
 	BlockHead(
 		id="elite_cable",
-		vanilla_block=VanillaBlock(apply_facing=False, id="minecraft:player_head{profile:" + str(elite_cable_profile) + "}"),
+		vanilla_block=VanillaBlock(id="minecraft:player_head{profile:" + str(elite_cable_profile) + "}"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapelessRecipe(category="misc", ingredients=[Ingr("advanced_cable")] + 4*[Ingr("minecraft:redstone_block")]),
@@ -360,7 +360,7 @@ def main_additions() -> None:
 
 	Block(
 		id="basic_item_cable",
-		vanilla_block=VanillaBlock(id="minecraft:conduit[waterlogged=false]", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:conduit[waterlogged=false]"),
 		manual_category="energy",
 		override_model={"parent":f"{ns}:block/basic_item_cable/no_variant", "textures": None},
 		recipes=[

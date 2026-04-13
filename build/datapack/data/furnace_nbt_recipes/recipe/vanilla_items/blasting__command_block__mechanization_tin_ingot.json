@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:blasting",
+	"ingredient": "minecraft:command_block",
+	"result": {
+		"id": "minecraft:command_block",
+		"count": 1,
+		"components": {
+			"minecraft:item_name": {
+				"translate": "simplenergy.tin_ingot"
+			},
+			"minecraft:lore": [
+				{
+					"translate": "simplenergy.mechanization",
+					"italic": true,
+					"color": "blue"
+				}
+			]
+		}
+	},
+	"experience": 0.8,
+	"cookingtime": 100
+}

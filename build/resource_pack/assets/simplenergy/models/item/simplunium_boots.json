@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/iron_boots",
+	"textures": {
+		"layer0": "simplenergy:item/simplunium_boots"
+	}
+}

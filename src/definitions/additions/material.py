@@ -38,8 +38,8 @@ def main_additions() -> None:
 		obj = Block.from_id(ore)
 		obj.wiki_buttons = [WikiButton(ORE_WIKI)]
 		obj.no_silk_touch_drop = NoSilkTouchDrop(id="raw_simplunium", count={"min":1, "max":2})
-	Block.from_id("simplunium_block").vanilla_block = VanillaBlock(id="minecraft:iron_block", apply_facing=False)
-	Block.from_id("raw_simplunium_block").vanilla_block = VanillaBlock(id="minecraft:raw_iron_block", apply_facing=False)
+	Block.from_id("simplunium_block").vanilla_block = VanillaBlock(id="minecraft:iron_block")
+	Block.from_id("raw_simplunium_block").vanilla_block = VanillaBlock(id="minecraft:raw_iron_block")
 
 	# Mechanization items
 	Item.from_id("tin_dust").wiki_buttons = [WikiButton(MECHANIZATION_COMPATIBILITY)]

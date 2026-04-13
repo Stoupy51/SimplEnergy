@@ -1,0 +1,46 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:furnace",
+      "components": {
+        "minecraft:item_model": "simplenergy:electric_smelter"
+      }
+    },
+    "title": {
+      "translate": "simplenergy.a_very_fast_smelter",
+      "color": "gray"
+    },
+    "description": {
+      "translate": "simplenergy.upgrade_an_electric_furnace",
+      "color": "green"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:custom_data": {
+                "simplenergy": {
+                  "electric_smelter": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ],
+  "parent": "simplenergy:visible/electric_furnace"
+}

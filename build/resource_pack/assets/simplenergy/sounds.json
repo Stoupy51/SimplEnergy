@@ -1,0 +1,38 @@
+{
+	"luxio_suno_je_taime_stoupy51": {
+		"subtitle": "luxio_suno_je_taime_stoupy51",
+		"sounds": [{"name": "simplenergy:luxio_suno_je_taime_stoupy51","stream": true}]
+	},
+	"cauldron_generator": {
+		"subtitle": "Cauldron Generator",
+		"sounds": ["simplenergy:cauldron_generator"]
+	},
+	"electric_brewing_stand": {
+		"subtitle": "Electric Brewing Stand",
+		"sounds": ["simplenergy:electric_brewing_stand"]
+	},
+	"electric_furnace": {
+		"subtitle": "Electric Furnace",
+		"sounds": ["simplenergy:electric_furnace"]
+	},
+	"electric_smelter": {
+		"subtitle": "Electric Smelter",
+		"sounds": ["simplenergy:electric_smelter"]
+	},
+	"elevator": {
+		"subtitle": "Elevator",
+		"sounds": ["simplenergy:elevator"]
+	},
+	"furnace_generator": {
+		"subtitle": "Furnace Generator",
+		"sounds": ["simplenergy:furnace_generator"]
+	},
+	"pulverizer": {
+		"subtitle": "Pulverizer",
+		"sounds": ["simplenergy:pulverizer"]
+	},
+	"redstone_generator": {
+		"subtitle": "Redstone Generator",
+		"sounds": ["simplenergy:redstone_generator"]
+	}
+}

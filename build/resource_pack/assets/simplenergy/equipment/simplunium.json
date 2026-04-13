@@ -1,0 +1,6 @@
+{
+	"layers": {
+		"humanoid": [{"texture": "simplenergy:simplunium_layer_1"}],
+		"humanoid_leggings": [{"texture": "simplenergy:simplunium_layer_2"}]
+	}
+}
