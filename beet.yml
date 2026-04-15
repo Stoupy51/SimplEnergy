@@ -101,9 +101,10 @@ meta:
         # The name can be whatever you want, it's just used in messages
         load_dependencies:
             energy:
-                version: [1, 8, 0]
                 name: "DatapackEnergy"
                 url: "https://github.com/ICY105/DatapackEnergy"
+                source: "smithed"
+                smithed_id: "energy"
         # Configuration for in-game manual
         manual:
             # Enables grid display in the manual for debugging
