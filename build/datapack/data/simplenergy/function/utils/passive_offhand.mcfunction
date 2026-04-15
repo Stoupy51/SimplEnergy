@@ -3,7 +3,7 @@
 #
 # @executed	as @a[tag=!...] & at @s
 #
-# @within	simplenergy:v2.0.17/tick_2 [ as @a[tag=!...] & at @s ]
+# @within	simplenergy:v2.0.18/tick_2 [ as @a[tag=!...] & at @s ]
 #
 
 # Copy offhand
