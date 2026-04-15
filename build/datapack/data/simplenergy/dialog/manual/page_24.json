@@ -1,0 +1,76 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/tin_dust",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "simplenergy.tin_dust",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "simplenergy:item/dialog_sprite/tin_dust",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_23"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (23)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_25"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (25)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_23"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (23)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_25"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (25)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$9\n\n\n\"",
+				{"text": "$臁","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "simplenergy.raw_tin"},"lore": [{"translate": "simplenergy.mechanization","italic": true,"color": "blue"}]}}},
+				"\"\"\"\"#U$",
+				{"text": "$$臀","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"dust": {"tin": true}},"id": "simplenergy:tin_dust","origin": "simplenergy","ignore": {"functionality": true,"crafting": true}},"simplenergy": {"tin_dust": true}},"item_model": "simplenergy:tin_dust","item_name": {"translate": "simplenergy.tin_dust"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "simplenergy"}]]]}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "simplenergy.raw_tin"},"lore": [{"translate": "simplenergy.mechanization","italic": true,"color": "blue"}]}}},
+				"\"\"\"\"#U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"dust": {"tin": true}},"id": "simplenergy:tin_dust","origin": "simplenergy","ignore": {"functionality": true,"crafting": true}},"simplenergy": {"tin_dust": true}},"item_model": "simplenergy:tin_dust","item_name": {"translate": "simplenergy.tin_dust"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "simplenergy"}]]]}}},
+				"#$\n\n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.mechanization_integration_item","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "simplenergy.requires_mechanization_datapack_to_be_installed_for_recipes_to_f"}]]}},
+				{"text": "臄##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聁"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$臂"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy.smelting"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.tin_dust","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$臂"},"\"\"\"\"#U$",{"text": "$$聁"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.tin_ingot","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$臁"},"\"\"\"\"#U$",{"text": "$$臀"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.raw_tin","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$臊"},"\"\"\"\"#U$",{"text": "$$臀"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.tin_ore","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$臌"},"\"\"\"\"#U$",{"text": "$$臀"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.deepslate_tin_ore","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "simplenergy.mechanization_integration_item","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "simplenergy.requires_mechanization_datapack_to_be_installed_for_recipes_to_f"}]]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聁"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$臂"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy.smelting"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.tin_dust","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$臂"},"\"\"\"\"#U$",{"text": "$$聁"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.tin_ingot","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$臁"},"\"\"\"\"#U$",{"text": "$$臀"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.raw_tin","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$臊"},"\"\"\"\"#U$",{"text": "$$臀"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.tin_ore","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$臌"},"\"\"\"\"#U$",{"text": "$$臀"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.deepslate_tin_ore","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

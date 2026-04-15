@@ -1,0 +1,7 @@
+{
+	"parent": "block/daylight_detector",
+	"textures": {
+		"side": "simplenergy:item/solar_panel_side",
+		"top": "simplenergy:item/solar_panel_top"
+	}
+}

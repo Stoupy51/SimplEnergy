@@ -1,0 +1,46 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:lore": [
+									{
+										"translate": "simplenergy.unlocks_a_blocked_slot_in_a_machine",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "simplenergy:icons"},
+										[{"text":" ","italic": true,"color": "blue"}, {"translate": "simplenergy"}]
+									]
+								],
+								"minecraft:item_model": "simplenergy:slot_unlocker",
+								"minecraft:item_name": {
+									"translate": "simplenergy.slot_unlocker"
+								},
+								"minecraft:custom_data": {
+									"simplenergy": {
+										"slot_unlocker": true
+									},
+									"smithed": {
+										"id": "simplenergy:slot_unlocker",
+										"origin": "simplenergy",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "simplenergy:block/servo/base_item",
+	"textures": {
+		"0": "simplenergy:block/servo/extract_default",
+		"particle": "simplenergy:block/servo/extract_default"
+	}
+}

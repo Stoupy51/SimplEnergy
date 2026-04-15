@@ -1,0 +1,32 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "simplenergy_manual",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "simplenergy:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (1)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_2"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (2)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (1)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_2"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (2)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "simplenergy:manual","color": "white","shadow_color": [0,0,0,0]},
+				{"text": "ဠ\n\n\n\n\n\n","font": "simplenergy:manual","color": "white"},
+				[{"text": "","font": "minecraft:default","color": "black"},{"translate": "simplenergy.the_following_manual_will_guide_you_through_recipes_and_energy_s","color": "#505050"}],
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}
