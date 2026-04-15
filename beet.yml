@@ -68,7 +68,7 @@ pipeline:
 # Generic dict which holds extra information usable by plugins
 meta:
     # List of supported Minecraft versions (used when uploading to Modrinth or Smithed)
-    mc_supports: ["1.21.11", "26.1", "26.1.1", "26.1.2", "infinite"]
+    mc_supports: ["26.1", "26.1.1", "26.1.2", "infinite"]
 
     # Model resolver configuration for caching models
     model_resolver:
