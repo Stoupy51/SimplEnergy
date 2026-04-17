@@ -1,5 +1,5 @@
 
-#> simplenergy:v2.0.18/load/enumerate
+#> simplenergy:v2.0.19/load/enumerate
 #
 # @within	#simplenergy:enumerate
 #
@@ -11,5 +11,5 @@ execute unless score #simplenergy.major load.status matches 2.. run scoreboard p
 execute if score #simplenergy.major load.status matches 2 unless score #simplenergy.minor load.status matches 0.. run scoreboard players set #simplenergy.minor load.status 0
 
 # If current patch is too low, set it to the current patch (only if major and minor are correct)
-execute if score #simplenergy.major load.status matches 2 if score #simplenergy.minor load.status matches 0 unless score #simplenergy.patch load.status matches 18.. run scoreboard players set #simplenergy.patch load.status 18
+execute if score #simplenergy.major load.status matches 2 if score #simplenergy.minor load.status matches 0 unless score #simplenergy.patch load.status matches 19.. run scoreboard players set #simplenergy.patch load.status 19
 

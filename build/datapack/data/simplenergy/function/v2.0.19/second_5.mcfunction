@@ -1,7 +1,7 @@
 
-#> simplenergy:v2.0.18/second_5
+#> simplenergy:v2.0.19/second_5
 #
-# @within	simplenergy:v2.0.18/tick
+# @within	simplenergy:v2.0.19/tick
 #
 
 # Reset timer
