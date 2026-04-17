@@ -5,7 +5,7 @@
 		"side": "simplenergy:item/cauldron_generator_side",
 		"top": "simplenergy:item/cauldron_generator_top",
 		"bottom": "simplenergy:item/cauldron_generator_bottom",
-		"inside": "simplenergy:atlas/cauldron_inner"
+		"inside": "simplenergy:item/cauldron_generator_base"
 	},
 	"display": {
 		"gui": {

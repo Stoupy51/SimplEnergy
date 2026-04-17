@@ -3,7 +3,7 @@
 	"textures": {
 		"all": "simplenergy:item/wind_turbine_side",
 		"0": "simplenergy:item/wind_turbine_blades",
-		"1": "simplenergy:atlas/iron_block",
+		"1": "simplenergy:item/wind_turbine_base",
 		"2": "simplenergy:item/wind_turbine_side",
 		"particle": "simplenergy:item/wind_turbine_blades"
 	},
