@@ -107,10 +107,5 @@ Join our active [Discord community](https://discord.gg/anxzu6rA9F) to:
 
 ## ⭐ Star History
 
-<a href="https://star-history.com/#Stoupy51/SimplEnergy&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Stoupy51/SimplEnergy&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Stoupy51/SimplEnergy&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Stoupy51/SimplEnergy&type=Date" />
- </picture>
-</a>
+[![Star History Chart](https://api.star-history.com/chart?repos=Stoupy51/SimplEnergy&type=date&legend=top-left)](https://www.star-history.com/?repos=Stoupy51%2FSimplEnergy&type=date&legend=top-left)
+
