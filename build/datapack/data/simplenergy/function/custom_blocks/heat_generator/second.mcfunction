@@ -11,12 +11,12 @@ scoreboard players set #working simplenergy.data 0
 execute if score @s energy.storage = @s energy.max_storage run scoreboard players set #working simplenergy.data -1
 
 # Check if lava is around
+execute if score #working simplenergy.data matches 0 if block ~ ~-1 ~ lava run scoreboard players set #working simplenergy.data 1
+execute if score #working simplenergy.data matches 0 if block ~ ~1 ~ lava run scoreboard players set #working simplenergy.data 1
 execute if score #working simplenergy.data matches 0 if block ~1 ~ ~ lava run scoreboard players set #working simplenergy.data 1
 execute if score #working simplenergy.data matches 0 if block ~-1 ~ ~ lava run scoreboard players set #working simplenergy.data 1
 execute if score #working simplenergy.data matches 0 if block ~ ~ ~1 lava run scoreboard players set #working simplenergy.data 1
 execute if score #working simplenergy.data matches 0 if block ~ ~ ~-1 lava run scoreboard players set #working simplenergy.data 1
-execute if score #working simplenergy.data matches 0 if block ~ ~1 ~ lava run scoreboard players set #working simplenergy.data 1
-execute if score #working simplenergy.data matches 0 if block ~ ~-1 ~ lava run scoreboard players set #working simplenergy.data 1
 
 # Update the model and stop if not working
 execute if score #working simplenergy.data matches 1 run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:heat_generator_on"
