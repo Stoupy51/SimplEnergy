@@ -14,6 +14,13 @@
 ## 🎬 Showcase
 
 <details>
+<summary>📖 Interactive In-Game Manual</summary>
+
+![In-game Manual](https://raw.githubusercontent.com/Stoupy51/StewBeet/refs/heads/main/docs/plugins/img/ingame_manual.gif)
+
+</details>
+
+<details>
 <summary>⚡ Solar Panels in Action</summary>
 
 ![Solar Panels](https://raw.githubusercontent.com/Stoupy51/SimplEnergy/refs/heads/main/assets/showcase/solar_panels.gif)
