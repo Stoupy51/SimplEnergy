@@ -1,7 +1,7 @@
 
-#> simplenergy:v2.0.19/load/confirm_load
+#> simplenergy:v2.0.20/load/confirm_load
 #
-# @within	simplenergy:v2.0.19/load/valid_dependencies
+# @within	simplenergy:v2.0.20/load/valid_dependencies
 #
 
 scoreboard objectives add simplenergy.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
@@ -26,7 +26,7 @@ data remove storage stewbeet:main universal_manual[{"name":"SimplEnergy"}]
 data modify storage stewbeet:main universal_manual append value {"name":"SimplEnergy","loot_table":"simplenergy:i/manual","hover":[{"text": ""}, [{"translate":"simplenergy_manual"}, "\n"], {"text": "ဠ\\n\\n\\n\\n\\n\\n", "font": "simplenergy:manual", "color": "white"}, [{"text": "", "font": "minecraft:default", "color": "black"}, {"translate": "simplenergy.the_following_manual_will_guide_you_through_recipes_and_energy_s", "color": "#505050"}]]}
 
 # Confirm load
-tellraw @a[tag=convention.debug] {"translate":"simplenergy.loaded_simplenergy_v2_0_19","color":"green"}
+tellraw @a[tag=convention.debug] {"translate":"simplenergy.loaded_simplenergy_v2_0_20","color":"green"}
 scoreboard players set #simplenergy.loaded load.status 1
-function simplenergy:v2.0.19/load/set_items_storage
+function simplenergy:v2.0.20/load/set_items_storage
 
