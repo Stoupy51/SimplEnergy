@@ -20,7 +20,7 @@ data merge entity @s {"CustomName": {"translate": "simplenergy.advanced_cable"}}
 
 # Modify item display entity to match the custom block
 data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
-data modify entity @s brightness set value {block:15,sky:15}
+function simplenergy:custom_blocks/compute_brightness
 
 tag @s add energy.cable
 scoreboard players set @s energy.transfer_rate 120

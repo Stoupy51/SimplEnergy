@@ -21,7 +21,7 @@ data merge entity @s {"CustomName": {"translate": "simplenergy.cauldron_generato
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="simplenergy:cauldron_generator"]
 data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
-data modify entity @s brightness set value {block:15,sky:15}
+function simplenergy:custom_blocks/compute_brightness
 
 # Energy part
 tag @s add energy.send
