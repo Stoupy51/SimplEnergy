@@ -6,8 +6,7 @@
 #
 
 # Waiting for a player to get the game version, but stop function if no player found
-execute unless entity @p run schedule function simplenergy:v2.0.20/load/valid_dependencies 1t replace
-execute unless entity @p run return 0
+execute unless entity @p run return run schedule function simplenergy:v2.0.20/load/valid_dependencies 1t replace
 execute store result score #game_version simplenergy.data run data get entity @p DataVersion
 
 # Check if the game version is supported

@@ -2,6 +2,6 @@
 	"condition": "minecraft:entity_properties",
 	"entity": "this",
 	"predicate": {
-		"movement": {"vertical_speed": {"max": 0.1}}
+		"movement": {"y": {"min": 1}}
 	}
 }
