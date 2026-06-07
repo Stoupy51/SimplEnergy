@@ -42,8 +42,8 @@ function energy:v1/api/init_machine
 tag @s add itemio.container
 tag @s add itemio.container.hopper
 data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value []
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":0,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":0b,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2b,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}
 function #itemio:calls/container/init
 
 # Make the block rotatable by wrench

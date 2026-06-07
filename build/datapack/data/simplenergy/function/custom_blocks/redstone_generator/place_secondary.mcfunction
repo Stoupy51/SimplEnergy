@@ -41,7 +41,7 @@ function energy:v1/api/init_machine
 # ItemIO compatibility
 tag @s add itemio.container
 tag @s add itemio.container.hopper
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value [{"Slot":0,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}]
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value [{"Slot":0b,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}]
 function #itemio:calls/container/init
 
 # Add tag for loop every second

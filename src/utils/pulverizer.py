@@ -245,9 +245,9 @@ tag @s add itemio.container.hopper
 {base} set value []
 """
 	for i in range(PULVERIZER_SLOTS):
-		content += f'{base} append value {{"Slot":{i},"mode":"input","allowed_side":{{"north":true,"south":true,"east":true,"west":true,"top":true}}}}\n'
+		content += f'{base} append value {{"Slot":{i}b,"mode":"input","allowed_side":{{"north":true,"south":true,"east":true,"west":true,"top":true}}}}\n'
 	for i in range(PULVERIZER_SLOTS):
-		content += f'{base} append value {{"Slot":{i+2*9},"mode":"output","allowed_side":{{"bottom":true}}}}\n'
+		content += f'{base} append value {{"Slot":{i+2*9}b,"mode":"output","allowed_side":{{"bottom":true}}}}\n'
 	content += "function #itemio:calls/container/init\n"
 	write_function(f"{ns}:custom_blocks/pulverizer/place_secondary", content)
 	write_function(f"{ns}:custom_blocks/pulverizer/destroy", "# ItemIO compatibility\nfunction #itemio:calls/container/destroy\n\n", prepend = True)

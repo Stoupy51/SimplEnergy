@@ -45,22 +45,22 @@ data modify entity @s item.components."minecraft:custom_data".simplenergy.pulver
 tag @s add itemio.container
 tag @s add itemio.container.hopper
 data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value []
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":0,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":1,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":3,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":4,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":5,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":6,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":7,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":18,"mode":"output","allowed_side":{"bottom":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":19,"mode":"output","allowed_side":{"bottom":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":20,"mode":"output","allowed_side":{"bottom":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":21,"mode":"output","allowed_side":{"bottom":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":22,"mode":"output","allowed_side":{"bottom":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":23,"mode":"output","allowed_side":{"bottom":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":24,"mode":"output","allowed_side":{"bottom":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":25,"mode":"output","allowed_side":{"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":0b,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":1b,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2b,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":3b,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":4b,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":5b,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":6b,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":7b,"mode":"input","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":18b,"mode":"output","allowed_side":{"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":19b,"mode":"output","allowed_side":{"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":20b,"mode":"output","allowed_side":{"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":21b,"mode":"output","allowed_side":{"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":22b,"mode":"output","allowed_side":{"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":23b,"mode":"output","allowed_side":{"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":24b,"mode":"output","allowed_side":{"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":25b,"mode":"output","allowed_side":{"bottom":true}}
 function #itemio:calls/container/init
 
 # Make the block rotatable by wrench

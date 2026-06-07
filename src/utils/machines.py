@@ -81,7 +81,7 @@ execute if score #count {ns}.data matches 0 run data remove block ~ ~ ~ Items[{{
 # ItemIO compatibility
 tag @s add itemio.container
 tag @s add itemio.container.hopper
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value [{{"Slot":{input_slot},"mode":"input","allowed_side":{{"north":true,"south":true,"east":true,"west":true,"top":true}}}}]
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value [{{"Slot":{input_slot}b,"mode":"input","allowed_side":{{"north":true,"south":true,"east":true,"west":true,"top":true}}}}]
 function #itemio:calls/container/init
 """)
 
@@ -156,18 +156,18 @@ execute if score #old_burn_time {ns}.data matches ..200 store result block ~ ~ ~
 		write_function(f"{ns}:custom_blocks/{machine}/work", content)
 		output_list: list[str] = []
 		if machine == "electric_brewing_stand":
-			output_list.append('data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":0,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}')
-			output_list.append('data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":1,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}')
-			output_list.append('data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}')
+			output_list.append('data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":0b,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}')
+			output_list.append('data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":1b,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}')
+			output_list.append('data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2b,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}')
 		else:
-			output_list.append('data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}')
+			output_list.append('data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2b,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}')
 		outputs: str = "\n".join(output_list)
 		write_function(f"{ns}:custom_blocks/{machine}/place_secondary", f"""
 # ItemIO compatibility
 tag @s add itemio.container
 tag @s add itemio.container.hopper
 data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value []
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {{"Slot":{ingr_slot},"mode":"input","allowed_side":{{"north":true,"south":true,"east":true,"west":true,"top":true}}}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {{"Slot":{ingr_slot}b,"mode":"input","allowed_side":{{"north":true,"south":true,"east":true,"west":true,"top":true}}}}
 {outputs}
 function #itemio:calls/container/init
 """)
