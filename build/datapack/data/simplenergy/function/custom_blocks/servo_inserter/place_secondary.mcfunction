@@ -32,5 +32,6 @@ tag @s add itemio.servo
 tag @s add simplenergy.servo
 scoreboard players set @s itemio.servo.stack_limit 4
 scoreboard players set @s itemio.servo.retry_limit 1
+scoreboard players set @s simplenergy.servo_off 0
 function #itemio:calls/servos/init
 

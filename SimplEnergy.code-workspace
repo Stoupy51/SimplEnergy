@@ -11,6 +11,9 @@
 		{
 			"name": "StardustFragment",
 			"path": "../StardustFragment"
+		},
+		{
+			"path": "../stouputils"
 		}
 	],
 	"settings": {

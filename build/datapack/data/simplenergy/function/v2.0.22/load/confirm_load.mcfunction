@@ -30,3 +30,6 @@ tellraw @a[tag=convention.debug] {"translate":"simplenergy.loaded_simplenergy_v2
 scoreboard players set #simplenergy.loaded load.status 1
 function simplenergy:v2.0.22/load/set_items_storage
 
+# Score for the on/off state of servo mechanisms
+scoreboard objectives add simplenergy.servo_off dummy
+

@@ -412,7 +412,8 @@
 			{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","group": "gold","ingredient": {"item": "minecraft:gold_ingot"}},
 			{"type": "simplenergy_pulverizing","result_count": 2,"category": "misc","group": "gold","ingredient": {"item": "minecraft:raw_gold"}},
 			{"type": "simplenergy_pulverizing","result_count": 2,"category": "misc","group": "gold","ingredient": {"item": "minecraft:gold_ore"}},
-			{"type": "simplenergy_pulverizing","result_count": 2,"category": "misc","group": "gold","ingredient": {"item": "minecraft:deepslate_gold_ore"}}
+			{"type": "simplenergy_pulverizing","result_count": 2,"category": "misc","group": "gold","ingredient": {"item": "minecraft:deepslate_gold_ore"}},
+			{"type": "simplenergy_pulverizing","result_count": 2,"category": "misc","group": "gold","ingredient": {"item": "minecraft:nether_gold_ore"}}
 		],
 		"components": {
 			"custom_data": {"smithed": {"dict": {"dust": {"gold": true}},"id": "simplenergy:gold_dust","origin": "simplenergy","ignore": {"functionality": true,"crafting": true}},"simplenergy": {"gold_dust": true}},
@@ -1137,7 +1138,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "servo_extractor","shape": ["CRC","SPS"," E "],"ingredients": {"C": {"components": {"minecraft:custom_data": {"simplenergy": {"basic_item_cable": true}}}},"R": {"item": "minecraft:redstone_block"},"S": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}},"P": {"item": "minecraft:comparator"},"E": {"item": "minecraft:emerald"}}}
 		],
 		"wiki_buttons": [
-			[{"text": "Item extraction servo-mechanism.","color": "yellow"},{"text": "\nExtracts items from containers when placed on valid output faces","color": "gray"},{"text": "\nMust be connected to Basic Item Cable for item transport","color": "gray"}]
+			[{"text": "Item extraction servo-mechanism.","color": "yellow"},{"text": "\nExtracts items from containers when placed on valid output faces","color": "gray"},{"text": "\nMust be connected to Basic Item Cable for item transport","color": "gray"},{"text": "\nCan be disabled by rotating it 45°","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"simplenergy": {"stack_limit": 4,"retry_limit": 1,"servo_extractor": true},"smithed": {"id": "simplenergy:servo_extractor","origin": "simplenergy","ignore": {"functionality": true,"crafting": true}}},
@@ -1161,7 +1162,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "servo_inserter","shape": [" D ","SPS","CRC"],"ingredients": {"C": {"components": {"minecraft:custom_data": {"simplenergy": {"basic_item_cable": true}}}},"R": {"item": "minecraft:redstone_block"},"S": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}},"P": {"item": "minecraft:comparator"},"D": {"item": "minecraft:diamond"}}}
 		],
 		"wiki_buttons": [
-			[{"text": "Item insertion servo-mechanism.","color": "yellow"},{"text": "\nInserts items into containers when placed on valid input faces","color": "gray"},{"text": "\nMust be connected to Basic Item Cable for item transport","color": "gray"}]
+			[{"text": "Item insertion servo-mechanism.","color": "yellow"},{"text": "\nInserts items into containers when placed on valid input faces","color": "gray"},{"text": "\nMust be connected to Basic Item Cable for item transport","color": "gray"},{"text": "\nCan be disabled by rotating it 45°","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"simplenergy": {"stack_limit": 4,"retry_limit": 1,"servo_inserter": true},"smithed": {"id": "simplenergy:servo_inserter","origin": "simplenergy","ignore": {"functionality": true,"crafting": true}}},

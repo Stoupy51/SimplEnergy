@@ -386,6 +386,7 @@ def main_additions() -> None:
 			{"text":"Item extraction servo-mechanism.","color":"yellow"},
 			{"text":"\nExtracts items from containers when placed on valid output faces","color":"gray"},
 			{"text":"\nMust be connected to Basic Item Cable for item transport","color":"gray"},
+			{"text":"\nCan be disabled by rotating it 45°","color":"gray"},
 		])],
 		components={"custom_data": {ns: {"stack_limit":4, "retry_limit": 1}}}
 	)
@@ -402,6 +403,7 @@ def main_additions() -> None:
 			{"text":"Item insertion servo-mechanism.","color":"yellow"},
 			{"text":"\nInserts items into containers when placed on valid input faces","color":"gray"},
 			{"text":"\nMust be connected to Basic Item Cable for item transport","color":"gray"},
+			{"text":"\nCan be disabled by rotating it 45°","color":"gray"},
 		])],
 		components={"custom_data": {ns: {"stack_limit":4, "retry_limit": 1}}}
 	)
