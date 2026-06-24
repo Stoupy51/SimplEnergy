@@ -34,7 +34,7 @@ ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 DUSTS_CONFIGS: dict[str, tuple[list[str|JsonDict], Ingr]] = {
 	"copper":	(["raw_copper","copper_ore","deepslate_copper_ore"],												Ingr("minecraft:copper_ingot")),
 	"iron":		(["raw_iron","iron_ore","deepslate_iron_ore"],														Ingr("minecraft:iron_ingot")),
-	"gold":		(["raw_gold","gold_ore","deepslate_gold_ore"],														Ingr("minecraft:gold_ingot")),
+	"gold":		(["raw_gold","gold_ore","deepslate_gold_ore","nether_gold_ore"],									Ingr("minecraft:gold_ingot")),
 	"lapis":	(["lapis_ore","deepslate_lapis_ore"],																Ingr("minecraft:lapis_lazuli")),
 	"diamond":	(["diamond_ore","deepslate_diamond_ore"],															Ingr("minecraft:diamond")),
 	"emerald":	(["emerald_ore","deepslate_emerald_ore"],															Ingr("minecraft:emerald")),

@@ -217,6 +217,7 @@
 	"simplenergy.must": "must",
 	"simplenergy.must_be_connected_to_basic_item_cable_for_item_transport": "Must be connected to Basic Item Cable for item transport",
 	"simplenergy.must_be_placed_directly_adjacent_to_lava_to_operate": "Must be placed directly adjacent to lava to operate",
+	"simplenergy.nether_gold_ore": "Nether Gold Ore",
 	"simplenergy.nether_quartz_ore": "Nether Quartz Ore",
 	"simplenergy.netherite_dust": "Netherite Dust",
 	"simplenergy.netherite_scrap": "Netherite Scrap",
@@ -368,7 +369,7 @@
 	"simplenergy.wind_turbine": "Wind Turbine",
 	"simplenergy.wrench": "Wrench",
 	"simplenergy_error_libraries_are_missingplease_download_the_right": "SimplEnergy Error: Libraries are missing\nplease download the right SimplEnergy datapack\nor download each of these libraries one by one:",
-	"simplenergy_error_this_version_is_made_for_minecraft_26_1": "SimplEnergy Error: This version is made for Minecraft 26.1+.",
+	"simplenergy_error_this_version_is_made_for_minecraft_26_2": "SimplEnergy Error: This version is made for Minecraft 26.2+.",
 	"simplenergy_manual": "SimplEnergy Manual",
 	"simplenergy_pulverizing": "(SimplEnergy) Pulverizing",
 	"simplenergy_stats": "[SimplEnergy Stats]"
