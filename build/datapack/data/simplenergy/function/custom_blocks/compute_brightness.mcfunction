@@ -27,7 +27,7 @@
 #			simplenergy:custom_blocks/advanced_cable/place_secondary
 #			simplenergy:custom_blocks/elite_cable/place_secondary
 #			simplenergy:custom_blocks/basic_item_cable/place_secondary
-#			simplenergy:v2.0.22/second_5 [ as @e[type=item_display,tag=simplenergy.custom_block,sort=random,limit=50] & at @s ]
+#			simplenergy:v2.0.23/second_5 [ as @e[type=item_display,tag=simplenergy.custom_block,sort=random,limit=50] & at @s ]
 #
 
 # Reset light score
