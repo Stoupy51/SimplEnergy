@@ -10,10 +10,10 @@
 			"contents": [
 				{"text": "V   ","font": "simplenergy:manual","color": "white"},
 				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (1)"]}},
-				{"text": "4","font": "simplenergy:manual","color": "white","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_first_page"}]}},
+				{"text": " ","font": "simplenergy:manual","color": "white"},
 				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_2"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (2)"]}},
 				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_previous_page"}," (1)"]}},
-				{"text": " ","font": "simplenergy:manual","color": "white","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_first_page"}]}},
+				{"text": " ","font": "simplenergy:manual","color": "white"},
 				{"text": "   ","click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_2"},"hover_event": {"action": "show_text","value": [{"translate": "simplenergy.go_to_next_page"}," (2)"]}}
 			],
 			"width": 400
