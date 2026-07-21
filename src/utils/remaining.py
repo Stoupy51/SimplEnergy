@@ -349,10 +349,10 @@ execute if score #success {ns}.data matches 1 run schedule function {ns}:utils/b
 """)
 
 	# Write item modifiers
-	default_model: str = Item.from_id("battery_switcher").components["item_model"]
-	both_model: str = Item.from_id("battery_switcher_both").components["item_model"]
-	input_model: str = Item.from_id("battery_switcher_input").components["item_model"]
-	output_model: str = Item.from_id("battery_switcher_output").components["item_model"]
+	default_model: str = Item.from_id("battery_switcher").item_model
+	both_model: str = Item.from_id("battery_switcher_both").item_model
+	input_model: str = Item.from_id("battery_switcher_input").item_model
+	output_model: str = Item.from_id("battery_switcher_output").item_model
 	dumped_template: str = json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":"TO_REPLACE"}})
 	for mode, model in [("default", default_model), ("both", both_model), ("input", input_model), ("output", output_model)]:
 		Mem.ctx.data[ns].item_modifiers[f"battery_switcher/{mode}"] = set_json_encoder(ItemModifier(dumped_template.replace("TO_REPLACE", model)))
@@ -363,7 +363,7 @@ execute if score #success {ns}.data matches 1 run schedule function {ns}:utils/b
 	Mem.ctx.data[ns].advancements["technical/first_join"] = set_json_encoder(Advancement(json_content), max_level = -1)
 	write_function(f"{ns}:advancements/first_join", f"""
 execute unless score #{ns}.loaded load.status matches 1 run advancement revoke @s only {ns}:first_join
-execute if score #{ns}.loaded load.status matches 1 run loot give @s loot {ns}:i/manual
+execute if score #{ns}.loaded load.status matches 1 run loot give @s loot {Item.from_id("manual").loot_table}
 """)
 
 

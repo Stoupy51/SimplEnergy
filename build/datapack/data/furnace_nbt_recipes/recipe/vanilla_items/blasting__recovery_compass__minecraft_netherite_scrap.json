@@ -1,6 +1,6 @@
 {
 	"type": "minecraft:blasting",
-	"ingredient": "minecraft:command_block",
+	"ingredient": "minecraft:recovery_compass",
 	"result": {
 		"id": "netherite_scrap",
 		"count": 1

@@ -1,8 +1,8 @@
 {
 	"type": "minecraft:smelting",
-	"ingredient": "minecraft:command_block",
+	"ingredient": "minecraft:recovery_compass",
 	"result": {
-		"id": "emerald",
+		"id": "iron_ingot",
 		"count": 1
 	},
 	"experience": 0.8,

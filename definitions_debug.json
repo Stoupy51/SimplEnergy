@@ -1,7 +1,7 @@
 {
 	"simplunium_ingot": {
 		"id": "simplunium_ingot",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "material",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "simplunium","ingredients": [{"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_block": true}}}}]},
@@ -25,7 +25,7 @@
 	},
 	"simplunium_nugget": {
 		"id": "simplunium_nugget",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "material",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "simplunium","ingredients": [{"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}}]},
@@ -50,7 +50,7 @@
 	},
 	"raw_simplunium": {
 		"id": "raw_simplunium",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "material",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 9,"category": "misc","group": "simplunium","ingredients": [{"components": {"minecraft:custom_data": {"simplenergy": {"raw_simplunium_block": true}}}}]}
@@ -68,7 +68,7 @@
 	},
 	"simplunium_dust": {
 		"id": "simplunium_dust",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "material",
 		"recipes": [
 			{"type": "smelting","result_count": 1,"category": "misc","group": "simplunium","result": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}},"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_dust": true}}}},"experience": 0.8,"cookingtime": 200},
@@ -364,7 +364,7 @@
 	},
 	"copper_dust": {
 		"id": "copper_dust",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "material",
 		"recipes": [
 			{"type": "smelting","result_count": 1,"category": "misc","group": "copper","result": {"item": "minecraft:copper_ingot"},"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"copper_dust": true}}}},"experience": 0.8,"cookingtime": 200},
@@ -384,7 +384,7 @@
 	},
 	"iron_dust": {
 		"id": "iron_dust",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "material",
 		"recipes": [
 			{"type": "smelting","result_count": 1,"category": "misc","group": "iron","result": {"item": "minecraft:iron_ingot"},"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"iron_dust": true}}}},"experience": 0.8,"cookingtime": 200},
@@ -404,7 +404,7 @@
 	},
 	"gold_dust": {
 		"id": "gold_dust",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "material",
 		"recipes": [
 			{"type": "smelting","result_count": 1,"category": "misc","group": "gold","result": {"item": "minecraft:gold_ingot"},"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"gold_dust": true}}}},"experience": 0.8,"cookingtime": 200},
@@ -425,7 +425,7 @@
 	},
 	"lapis_dust": {
 		"id": "lapis_dust",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "material",
 		"recipes": [
 			{"type": "smelting","result_count": 1,"category": "misc","group": "lapis","result": {"item": "minecraft:lapis_lazuli"},"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"lapis_dust": true}}}},"experience": 0.8,"cookingtime": 200},
@@ -444,7 +444,7 @@
 	},
 	"diamond_dust": {
 		"id": "diamond_dust",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "material",
 		"recipes": [
 			{"type": "smelting","result_count": 1,"category": "misc","group": "diamond","result": {"item": "minecraft:diamond"},"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"diamond_dust": true}}}},"experience": 0.8,"cookingtime": 200},
@@ -463,7 +463,7 @@
 	},
 	"emerald_dust": {
 		"id": "emerald_dust",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "material",
 		"recipes": [
 			{"type": "smelting","result_count": 1,"category": "misc","group": "emerald","result": {"item": "minecraft:emerald"},"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"emerald_dust": true}}}},"experience": 0.8,"cookingtime": 200},
@@ -482,7 +482,7 @@
 	},
 	"quartz_dust": {
 		"id": "quartz_dust",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "material",
 		"recipes": [
 			{"type": "smelting","result_count": 1,"category": "misc","group": "quartz","result": {"item": "minecraft:quartz"},"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"quartz_dust": true}}}},"experience": 0.8,"cookingtime": 200},
@@ -500,7 +500,7 @@
 	},
 	"netherite_dust": {
 		"id": "netherite_dust",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "material",
 		"recipes": [
 			{"type": "smelting","result_count": 1,"category": "misc","group": "netherite","result": {"item": "minecraft:netherite_scrap"},"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"netherite_dust": true}}}},"experience": 0.8,"cookingtime": 200},
@@ -518,7 +518,7 @@
 	},
 	"tin_dust": {
 		"id": "tin_dust",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "material",
 		"recipes": [
 			{"type": "smelting","result_count": 1,"category": "misc","group": "tin","result": {"components": {"minecraft:custom_data": {"mechanization": {"tin_ingot": true}}}},"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"tin_dust": true}}}},"experience": 0.8,"cookingtime": 200},
@@ -541,7 +541,7 @@
 	},
 	"titanium_dust": {
 		"id": "titanium_dust",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "material",
 		"recipes": [
 			{"type": "smelting","result_count": 1,"category": "misc","group": "titanium","result": {"components": {"minecraft:custom_data": {"mechanization": {"titanium_ingot": true}}}},"ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"titanium_dust": true}}}},"experience": 0.8,"cookingtime": 200},
@@ -564,7 +564,7 @@
 	},
 	"luxio_suno_je_taime_stoupy51": {
 		"id": "luxio_suno_je_taime_stoupy51",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "miscellaneous",
 		"recipes": [
 			{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","group": "luxio_suno_je_taime_stoupy51","ingredient": {"item": "minecraft:music_disc_13"}},

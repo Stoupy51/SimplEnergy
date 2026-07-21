@@ -40,7 +40,7 @@ def add_visible_advancements() -> None:
 
 		"simplunium_armor": {
 			"display": { "icon": {"id": Item.from_id("simplunium_chestplate").base_item,"components": {
-					"minecraft:item_model": Item.from_id("simplunium_chestplate").components["item_model"],
+					"minecraft:item_model": Item.from_id("simplunium_chestplate").item_model,
 				}},
 				"title": {"text": "Cover Me with Simplunium", "color": "gray"},
 				"description": {"text": "Better than iron armor", "color": "green"},

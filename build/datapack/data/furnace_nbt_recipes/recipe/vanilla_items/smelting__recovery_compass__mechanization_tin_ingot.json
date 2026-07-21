@@ -1,12 +1,12 @@
 {
-	"type": "minecraft:blasting",
-	"ingredient": "minecraft:command_block",
+	"type": "minecraft:smelting",
+	"ingredient": "minecraft:recovery_compass",
 	"result": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:recovery_compass",
 		"count": 1,
 		"components": {
 			"minecraft:item_name": {
-				"translate": "simplenergy.titanium_ingot"
+				"translate": "simplenergy.tin_ingot"
 			},
 			"minecraft:lore": [
 				{
@@ -18,5 +18,5 @@
 		}
 	},
 	"experience": 0.8,
-	"cookingtime": 100
+	"cookingtime": 200
 }

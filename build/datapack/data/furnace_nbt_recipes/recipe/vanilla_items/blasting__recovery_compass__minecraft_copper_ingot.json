@@ -1,8 +1,8 @@
 {
 	"type": "minecraft:blasting",
-	"ingredient": "minecraft:command_block",
+	"ingredient": "minecraft:recovery_compass",
 	"result": {
-		"id": "diamond",
+		"id": "copper_ingot",
 		"count": 1
 	},
 	"experience": 0.8,

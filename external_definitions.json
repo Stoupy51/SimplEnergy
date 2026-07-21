@@ -9,7 +9,7 @@
 			"item_name": {"text": "Raw Tin"},
 			"lore": [{"text": "Mechanization","italic": true,"color": "blue"}]
 		},
-		"base_item": "minecraft:command_block"
+		"base_item": "minecraft:recovery_compass"
 	},
 	"mechanization:tin_ore": {
 		"id": "mechanization:tin_ore",
@@ -21,7 +21,7 @@
 			"item_name": {"text": "Tin Ore"},
 			"lore": [{"text": "Mechanization","italic": true,"color": "blue"}]
 		},
-		"base_item": "minecraft:command_block"
+		"base_item": "minecraft:recovery_compass"
 	},
 	"mechanization:deepslate_tin_ore": {
 		"id": "mechanization:deepslate_tin_ore",
@@ -33,7 +33,7 @@
 			"item_name": {"text": "Deepslate Tin Ore"},
 			"lore": [{"text": "Mechanization","italic": true,"color": "blue"}]
 		},
-		"base_item": "minecraft:command_block"
+		"base_item": "minecraft:recovery_compass"
 	},
 	"mechanization:tin_ingot": {
 		"id": "mechanization:tin_ingot",
@@ -46,7 +46,7 @@
 			"lore": [{"text": "Mechanization","italic": true,"color": "blue"}]
 		},
 		"loot_table": "mechanization:base/tin_ingot",
-		"base_item": "minecraft:command_block"
+		"base_item": "minecraft:recovery_compass"
 	},
 	"mechanization:raw_titanium": {
 		"id": "mechanization:raw_titanium",
@@ -58,7 +58,7 @@
 			"item_name": {"text": "Raw Titanium"},
 			"lore": [{"text": "Mechanization","italic": true,"color": "blue"}]
 		},
-		"base_item": "minecraft:command_block"
+		"base_item": "minecraft:recovery_compass"
 	},
 	"mechanization:titanium_ore": {
 		"id": "mechanization:titanium_ore",
@@ -70,7 +70,7 @@
 			"item_name": {"text": "Titanium Ore"},
 			"lore": [{"text": "Mechanization","italic": true,"color": "blue"}]
 		},
-		"base_item": "minecraft:command_block"
+		"base_item": "minecraft:recovery_compass"
 	},
 	"mechanization:deepslate_titanium_ore": {
 		"id": "mechanization:deepslate_titanium_ore",
@@ -82,7 +82,7 @@
 			"item_name": {"text": "Deepslate Titanium Ore"},
 			"lore": [{"text": "Mechanization","italic": true,"color": "blue"}]
 		},
-		"base_item": "minecraft:command_block"
+		"base_item": "minecraft:recovery_compass"
 	},
 	"mechanization:titanium_ingot": {
 		"id": "mechanization:titanium_ingot",
@@ -95,6 +95,6 @@
 			"lore": [{"text": "Mechanization","italic": true,"color": "blue"}]
 		},
 		"loot_table": "mechanization:base/titanium_ingot",
-		"base_item": "minecraft:command_block"
+		"base_item": "minecraft:recovery_compass"
 	}
 }

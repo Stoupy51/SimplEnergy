@@ -1,8 +1,8 @@
 {
 	"type": "minecraft:smelting",
-	"ingredient": "minecraft:command_block",
+	"ingredient": "minecraft:recovery_compass",
 	"result": {
-		"id": "lapis_lazuli",
+		"id": "emerald",
 		"count": 1
 	},
 	"experience": 0.8,
