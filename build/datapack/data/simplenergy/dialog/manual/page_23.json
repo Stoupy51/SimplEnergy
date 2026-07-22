@@ -62,7 +62,7 @@
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$耺"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$胂"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy.smelting"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.netherite_dust","color": "gray"}]}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$胂"},"\"\"\"\"#U$",{"text": "$$耺"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.netherite_scrap","color": "gray"}]}},
 				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$胁"},"\"\"\"\"#U$",{"text": "$$胀"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.ancient_debris","color": "gray"}]}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

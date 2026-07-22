@@ -98,7 +98,7 @@
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$胬"},"\"\"\"\"#U$",{"text": "$$耩"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.music_disc_pigstep","color": "gray"}]}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$胭"},"\"\"\"\"#U$",{"text": "$$耩"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.music_disc_tears","color": "gray"}]}},
 				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$胮"},"\"\"\"\"#U$",{"text": "$$耩"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.music_disc_lava_chicken","color": "gray"}]}},
-				"\n\n\n\n\n\n\n\n\n\n\n"
+				"\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

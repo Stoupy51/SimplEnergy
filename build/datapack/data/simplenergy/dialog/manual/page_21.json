@@ -64,7 +64,7 @@
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$聾"},"\"\"\"\"#U$",{"text": "$$耸"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.emerald","color": "gray"}]}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$肹"},"\"\"\"\"#U$",{"text": "$$肸"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.emerald_ore","color": "gray"}]}},
 				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$肻"},"\"\"\"\"#U$",{"text": "$$肸"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.deepslate_emerald_ore","color": "gray"}]}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

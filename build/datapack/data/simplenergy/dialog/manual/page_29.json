@@ -72,7 +72,7 @@
 				{"text": "胓\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聀"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耬"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy.smelting"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_boots","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_9"}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"F\n","\"",{"text": "$耧"},"U$",{"text": "$耧"},"\n","\"",{"text": "U$"},"U$",{"text": "U$"},"\n","\"",{"text": "$耧"},"U$",{"text": "$耧"},"\"\"",{"text": "$$聀"},"\n","\"",{"text": "U$"},"U$",{"text": "U$"},"\"\"",{"text": "U$"},"\n","\n\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "simplenergy.simplunium_ingot","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_8"}},
 				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"G\n","\"",{"text": "$聀"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耬"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy.smelting"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.simplunium_boots","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "simplenergy:manual/page_9"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

@@ -66,7 +66,7 @@
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$肝"},"\"\"\"\"#U$",{"text": "$$肜"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.raw_copper","color": "gray"}]}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$肠"},"\"\"\"\"#U$",{"text": "$$肜"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.copper_ore","color": "gray"}]}},
 				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "simplenergy:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$股"},"\"\"\"\"#U$",{"text": "$$肜"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "simplenergy.deepslate_copper_ore","color": "gray"}]}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}
