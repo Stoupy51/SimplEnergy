@@ -31,15 +31,16 @@
 				[
 					"",
 					{
-						"text": "I",
+						"text": "ꀁ",
 						"color": "white",
 						"italic": false,
-						"font": "simplenergy:icons"
+						"font": "simplenergy:tooltip"
 					},
 					[{
-						"text":" ",
-						"italic": true,
-						"color": "blue"
+						"text":"뀁",
+						"italic": false,
+						"color": "white",
+						"font": "simplenergy:tooltip"
 					}, {"translate": "simplenergy"}]
 				]
 			]
