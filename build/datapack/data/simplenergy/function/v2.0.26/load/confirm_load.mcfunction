@@ -1,7 +1,7 @@
 
-#> simplenergy:v2.0.25/load/confirm_load
+#> simplenergy:v2.0.26/load/confirm_load
 #
-# @within	simplenergy:v2.0.25/load/valid_dependencies
+# @within	simplenergy:v2.0.26/load/valid_dependencies
 #
 
 scoreboard objectives add simplenergy.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
@@ -21,9 +21,9 @@ scoreboard objectives add simplenergy.energy_rate dummy
 scoreboard objectives add simplenergy.open_manual minecraft.used:minecraft.written_book
 
 # Confirm load
-tellraw @a[tag=convention.debug] {"translate":"simplenergy.loaded_simplenergy_v2_0_25","color":"green"}
+tellraw @a[tag=convention.debug] {"translate":"simplenergy.loaded_simplenergy_v2_0_26","color":"green"}
 scoreboard players set #simplenergy.loaded load.status 1
-function simplenergy:v2.0.25/load/set_items_storage
+function simplenergy:v2.0.26/load/set_items_storage
 
 # Score for the on/off state of servo mechanisms
 scoreboard objectives add simplenergy.servo_off dummy
