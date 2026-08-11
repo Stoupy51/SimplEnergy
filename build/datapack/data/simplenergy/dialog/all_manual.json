@@ -2,11 +2,11 @@
 	"type": "minecraft:dialog_list",
 	"title": [
 		"",
-		{"sprite": "simplenergy:item/dialog_sprite/pack_icon","shadow_color": [0,0,0,0],"atlas": "minecraft:items"},
+		{"text": "聙","font": "simplenergy:renders","shadow_color": [0,0,0,0]},
 		" ",
 		{"translate": "simplenergy_manual","underlined": true},
 		" ",
-		{"sprite": "simplenergy:item/dialog_sprite/pack_icon","shadow_color": [0,0,0,0],"atlas": "minecraft:items"}
+		{"text": "聙","font": "simplenergy:renders","shadow_color": [0,0,0,0]}
 	],
 	"dialogs": [
 		"simplenergy:manual/page_1",
