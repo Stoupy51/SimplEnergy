@@ -56,6 +56,6 @@
 		{"type": "bitmap","file": "simplenergy:font/renders/simplenergy_basic_item_cable_192x192.png","ascent": 9,"height": 12,"chars": ["聖"]},
 		{"type": "bitmap","file": "simplenergy:font/renders/simplenergy_servo_extractor_192x192.png","ascent": 9,"height": 12,"chars": ["聗"]},
 		{"type": "bitmap","file": "simplenergy:font/renders/simplenergy_servo_inserter_192x192.png","ascent": 9,"height": 12,"chars": ["聘"]},
-		{"type": "bitmap","file": "simplenergy:font/renders/ICON_192x192.png","ascent": 9,"height": 12,"chars": ["聙"]}
+		{"type": "bitmap","file": "simplenergy:font/renders/icon_192x192.png","ascent": 9,"height": 12,"chars": ["聙"]}
 	]
 }
