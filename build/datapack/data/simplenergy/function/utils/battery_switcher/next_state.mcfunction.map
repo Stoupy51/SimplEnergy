@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "next_state.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;AAgQ2D;AAC3D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

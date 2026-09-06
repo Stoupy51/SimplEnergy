@@ -30,3 +30,4 @@ tellraw @s ["",{"translate":"simplenergy.custom_blocks_loaded","color":"gray"},{
 tellraw @s ["",{"translate":"simplenergy.custom_ores","color":"gray"},{"score":{"name":"#custom_ores","objective":"simplenergy.data"},"color":"gold"}]
 tellraw @s ["",{"translate":"simplenergy.markers_on_furnaces","color":"gray"},{"score":{"name":"#markers","objective":"simplenergy.data"},"color":"gold"}]
 
+## sourceMappingURL=_stats.mcfunction.map

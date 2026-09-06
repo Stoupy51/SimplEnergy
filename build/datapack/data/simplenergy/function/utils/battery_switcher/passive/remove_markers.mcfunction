@@ -15,3 +15,4 @@ execute store success score #success simplenergy.data run scoreboard players add
 # Run again schedule if there are remaining eggs
 execute if score #success simplenergy.data matches 1 run schedule function simplenergy:utils/battery_switcher/passive/remove_markers 1t replace
 
+## sourceMappingURL=remove_markers.mcfunction.map

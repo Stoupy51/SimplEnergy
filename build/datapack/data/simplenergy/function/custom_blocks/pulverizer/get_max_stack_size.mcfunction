@@ -108,3 +108,4 @@ $execute if items entity @s container.$(result) *[minecraft:max_stack_size=96] r
 $execute if items entity @s container.$(result) *[minecraft:max_stack_size=97] run return 97
 $execute if items entity @s container.$(result) *[minecraft:max_stack_size=98] run return 98
 
+## sourceMappingURL=get_max_stack_size.mcfunction.map

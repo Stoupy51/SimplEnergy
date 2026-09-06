@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "inventory_changed.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;AAkYkE;AAClE;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "found_entity.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;AAiO+D;AAC/D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -30,3 +30,4 @@ function energy:v1/api/init_cable
 data modify entity @s item_display set value "fixed"
 tag @s add simplenergy.cable
 
+## sourceMappingURL=place_secondary.mcfunction.map

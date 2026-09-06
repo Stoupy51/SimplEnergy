@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "gui_passive_slot.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/pulverizer.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;;;;;;;;;AA4E2C;AAC3C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

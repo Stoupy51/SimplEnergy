@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "replace_item.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/pulverizer.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;;;;AAqOA;AACA;AACA;AACA"
+}

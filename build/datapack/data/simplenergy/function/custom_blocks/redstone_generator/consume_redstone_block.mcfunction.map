@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "consume_redstone_block.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/machines.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;AAmF6C;AAC7C;AACA;AACA;AACA;AACA;AACA"
+}

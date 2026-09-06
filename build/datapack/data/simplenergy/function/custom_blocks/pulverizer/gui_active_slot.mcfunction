@@ -66,3 +66,4 @@ scoreboard players remove #count simplenergy.data 1
 $execute if score #count simplenergy.data matches 1.. store result block ~ ~ ~ Items[{Slot:$(index)b}].count int 1 run scoreboard players get #count simplenergy.data
 $execute if score #count simplenergy.data matches 0 run data remove block ~ ~ ~ Items[{Slot:$(index)b}]
 
+## sourceMappingURL=gui_active_slot.mcfunction.map

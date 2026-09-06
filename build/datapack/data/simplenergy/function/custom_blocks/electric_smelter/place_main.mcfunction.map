@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "place_main.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/definitions/additions/energy.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;AAgOC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

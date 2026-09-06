@@ -15,3 +15,4 @@ scoreboard players add #total_custom_blocks simplenergy.data 1
 scoreboard players add #total_vanilla_iron_block simplenergy.data 1
 scoreboard players add #total_machine_block simplenergy.data 1
 
+## sourceMappingURL=place_main.mcfunction.map

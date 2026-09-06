@@ -12,3 +12,4 @@ advancement revoke @s only simplenergy:custom_block_alternative/servo_inserter
 # Execute the place function as and at the new placed item frame
 execute as @e[type=item_frame,tag=simplenergy.new,tag=simplenergy.servo_inserter] at @s run function simplenergy:custom_blocks/servo_inserter/place_main
 
+## sourceMappingURL=search.mcfunction.map

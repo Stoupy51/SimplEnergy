@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "handle_item_on_gui.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/pulverizer.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;;AA6G6C;AAC7C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

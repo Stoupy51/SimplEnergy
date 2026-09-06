@@ -12,3 +12,4 @@ scoreboard players remove #count simplenergy.data 1
 execute if score #count simplenergy.data matches 1.. store result block ~ ~ ~ Items[{Slot:0b}].count int 1 run scoreboard players get #count simplenergy.data
 execute if score #count simplenergy.data matches 0 run data remove block ~ ~ ~ Items[{Slot:0b}]
 
+## sourceMappingURL=consume_redstone_block.mcfunction.map

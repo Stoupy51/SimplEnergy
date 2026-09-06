@@ -1,7 +1,18 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet import COMMON_SIGNAL_HIDDEN, CUSTOM_ITEM_VANILLA, Block, BlockFunctions, JsonDict, Mem, Predicate, set_json_encoder, write_function
+from stewbeet import (
+	COMMON_SIGNAL_HIDDEN,
+	CUSTOM_ITEM_VANILLA,
+	Block,
+	BlockFunctions,
+	JsonDict,
+	McFunction,
+	Mem,
+	Predicate,
+	set_json_encoder,
+	write_function,
+)
 
 from .pulverizer import pulverizer
 
@@ -11,7 +22,7 @@ def setup_machines(gui: dict[str, str]) -> None:
 	ns: str = Mem.ctx.project_id
 
 	# Solar panel
-	content: str = f"""# Produce Energy depending on the power of daylight sensor
+	content: McFunction = f"""# Produce Energy depending on the power of daylight sensor
 execute if predicate {ns}:check_daylight_power run scoreboard players operation @s energy.storage += @s {ns}.energy_rate
 execute if score @s energy.storage > @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 """
@@ -34,7 +45,7 @@ data modify entity @s transformation.translation[1] set value 0.002f
 		input_slot: int = 1 if gen == "furnace_generator" else 0
 
 		# If redstone generator, add logic to consume redstone for fuel
-		redstone_generator: str = ""
+		redstone_generator: McFunction = ""
 		if gen == "redstone_generator":
 			redstone_generator = f"""
 # Consume redstone dust for fuel
@@ -42,7 +53,7 @@ execute if data block ~ ~ ~ {{Items:[{{Slot:0b,id:"minecraft:redstone"}}],lit_ti
 execute if data block ~ ~ ~ {{Items:[{{Slot:0b,id:"minecraft:redstone_block"}}],lit_time_remaining:0s}} run function {funcs["consume_redstone_block"]}
 """
 		# Write the second function for the generator
-		content: str = f"""
+		content: McFunction = f"""
 # Prevent the furnace from really cooking
 data modify block ~ ~ ~ cooking_total_time set value -200s
 data modify block ~ ~ ~ cooking_time_spent set value 0s
@@ -122,7 +133,7 @@ function #itemio:calls/container/init
 
 		default_model: str = Block.from_id(machine).item_model
 		working_model: str = default_model + "_on"
-		content: str = f"""
+		content: McFunction = f"""
 # Store values for efficient look up
 data modify storage {ns}:temp all set from block ~ ~ ~
 execute store result score #cook_time {ns}.data run data get storage {ns}:temp all.{cook}
@@ -140,7 +151,7 @@ execute if score #cook_time {ns}.data matches 1.. run data modify entity @s item
 execute if score #cook_time {ns}.data matches 1.. if score #second {ns}.data matches 0 run playsound {ns}:{machine} block @a[distance=..12] ~ ~ ~ {0.25 if machine != "electric_brewing_stand" else 1.0}
 """
 		write_function(funcs.tick, content)
-		content: str = f"""
+		content: McFunction = f"""
 # Change {cook} value and use energy
 execute if score #cook_time {ns}.data matches 1.. run scoreboard players set #20 {ns}.data 20
 execute if score #cook_time {ns}.data matches 1.. run scoreboard players operation #energy_rate {ns}.data = @s {ns}.energy_rate
@@ -156,7 +167,7 @@ execute if score #burn_time {ns}.data matches 21.. run scoreboard players set #b
 execute if score #old_burn_time {ns}.data matches ..200 store result block ~ ~ ~ {burn} {burn_type} 1 run scoreboard players get #burn_time {ns}.data
 """
 		write_function(funcs["work"], content)
-		output_list: list[str] = []
+		output_list: list[McFunction] = []
 		if machine == "electric_brewing_stand":
 			output_list.append('data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":0b,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}')
 			output_list.append('data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":1b,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}')
@@ -177,7 +188,7 @@ function #itemio:calls/container/init
 	# Cauldron Generator
 	default_model: str = Block.from_id("cauldron_generator").item_model
 	working_model: str = default_model + "_on"
-	content: str = f"""
+	content: McFunction = f"""
 # Stop function if no water or full
 scoreboard players set #working {ns}.data 1
 execute if score #working {ns}.data matches 1 if score @s energy.storage >= @s energy.max_storage run scoreboard players set #working {ns}.data 0
@@ -203,7 +214,7 @@ playsound {ns}:cauldron_generator block @a[distance=..12] ~ ~ ~ 0.25
 	write_function(BlockFunctions("cauldron_generator").second, content)
 
 	# Commands on Electric Brewing Stand placement
-	to_add: str = """
+	to_add: McFunction = """
 # Rotate the entity and set scale
 data modify entity @s Rotation[0] set value 180.0f
 data modify entity @s transformation.scale[1] set value 1.025f

@@ -27,3 +27,4 @@ $execute if score #progression simplenergy.data matches 173..185 run item replac
 $execute if score #progression simplenergy.data matches 186..199 run item replace block ~ ~ ~ container.$(slot) with minecraft:recovery_compass[item_model="simplenergy:gui/progress_unblocked_15",tooltip_display={"hide_tooltip":true},custom_data={"common_signals":{"temp":true}}]
 $execute if score #progression simplenergy.data matches 200.. run item replace block ~ ~ ~ container.$(slot) with minecraft:recovery_compass[item_model="simplenergy:gui/progress_unblocked_16",tooltip_display={"hide_tooltip":true},custom_data={"common_signals":{"temp":true}}]
 
+## sourceMappingURL=gui_progression.mcfunction.map

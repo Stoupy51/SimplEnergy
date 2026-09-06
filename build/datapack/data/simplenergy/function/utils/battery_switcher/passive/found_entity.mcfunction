@@ -28,3 +28,4 @@ execute if score #state simplenergy.data matches 3 run item modify entity @a[tag
 # Remove the egg by schedule function
 schedule function simplenergy:utils/battery_switcher/passive/remove_markers 1t replace
 
+## sourceMappingURL=found_entity.mcfunction.map

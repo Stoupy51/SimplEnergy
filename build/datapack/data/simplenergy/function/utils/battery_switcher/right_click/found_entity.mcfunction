@@ -10,3 +10,4 @@
 function simplenergy:utils/battery_switcher/get_state
 function simplenergy:utils/battery_switcher/next_state
 
+## sourceMappingURL=found_entity.mcfunction.map

@@ -26,3 +26,4 @@ execute if score #working simplenergy.data matches ..0 run return run data modif
 scoreboard players operation @s energy.storage += @s simplenergy.energy_rate
 execute if score @s energy.storage >= @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 
+## sourceMappingURL=second.mcfunction.map

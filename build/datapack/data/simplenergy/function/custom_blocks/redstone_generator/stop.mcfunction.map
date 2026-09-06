@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "stop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/machines.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;AA4EgC;AAChC;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "gui_progression.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/pulverizer.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;;;AAyGC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

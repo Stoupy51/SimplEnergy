@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "main.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;AAoNuD;AACvD;AACA;AACA;AACA;AACA;AACA"
+}

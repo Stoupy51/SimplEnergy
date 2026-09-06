@@ -47,6 +47,7 @@ scoreboard players add #total_raw_simplunium_block simplenergy.data 0
 scoreboard players add #total_deepslate_simplunium_ore simplenergy.data 0
 scoreboard players add #total_simplunium_ore simplenergy.data 0
 scoreboard players add #total_simplunium_block simplenergy.data 0
+
 tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"simplenergy.total_simplunium_block"}, ": "],{"score":{"name":"#total_simplunium_block","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"simplenergy.total_simplunium_ore"}, ": "],{"score":{"name":"#total_simplunium_ore","objective":"simplenergy.data"},"color":"yellow"}]
 tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"simplenergy.total_deepslate_simplunium_ore"}, ": "],{"score":{"name":"#total_deepslate_simplunium_ore","objective":"simplenergy.data"},"color":"yellow"}]
@@ -91,3 +92,4 @@ tellraw @s [[{"text":"- ","color":"dark_aqua"}, {"translate":"simplenergy.total_
 tellraw @s [[{"text":"- ","color":"green"}, {"translate":"simplenergy.tick_tag_function"}],{"score":{"name":"#tick_entities","objective":"simplenergy.data"},"color":"dark_green"}]
 tellraw @s [[{"text":"- ","color":"green"}, {"translate":"simplenergy.second_tag_function"}],{"score":{"name":"#second_entities","objective":"simplenergy.data"},"color":"dark_green"}]
 
+## sourceMappingURL=_stats_custom_blocks.mcfunction.map

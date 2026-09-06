@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "get_pulverizer_recipe.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/pulverizer.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;AA4MgD;AAChD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

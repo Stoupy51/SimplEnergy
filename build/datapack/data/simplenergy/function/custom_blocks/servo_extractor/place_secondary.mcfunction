@@ -35,3 +35,4 @@ scoreboard players set @s itemio.servo.retry_limit 1
 scoreboard players set @s simplenergy.servo_off 0
 function #itemio:calls/servos/init
 
+## sourceMappingURL=place_secondary.mcfunction.map

@@ -27,3 +27,4 @@ data remove storage simplenergy:main OffhandTag
 data remove storage simplenergy:main SelectedItemTag
 scoreboard players reset @s simplenergy.right_click
 
+## sourceMappingURL=on_right_click.mcfunction.map

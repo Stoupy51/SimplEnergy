@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "tick.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/machines.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;AAwJE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

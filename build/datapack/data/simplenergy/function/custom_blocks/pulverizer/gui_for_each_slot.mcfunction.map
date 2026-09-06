@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "gui_for_each_slot.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/pulverizer.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;AAoE4C;AAC5C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

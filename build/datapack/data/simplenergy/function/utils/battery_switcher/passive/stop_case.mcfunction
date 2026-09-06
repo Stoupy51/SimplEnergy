@@ -11,3 +11,4 @@ tag @s add simplenergy.temp
 execute as @n[tag=simplenergy.battery_switcher,scores={energy.max_storage=1..},distance=..1.5] at @s align xyz positioned ~.5 ~.3 ~.5 run function simplenergy:utils/battery_switcher/passive/found_entity
 tag @s remove simplenergy.temp
 
+## sourceMappingURL=stop_case.mcfunction.map

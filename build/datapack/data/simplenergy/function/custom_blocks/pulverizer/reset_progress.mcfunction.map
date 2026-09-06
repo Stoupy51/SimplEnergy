@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "reset_progress.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/pulverizer.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;;AAgJyC;AACzC;AACA;AACA;AACA;AACA"
+}

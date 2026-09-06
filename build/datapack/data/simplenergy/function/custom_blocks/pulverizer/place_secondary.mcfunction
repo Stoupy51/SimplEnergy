@@ -69,3 +69,4 @@ tag @s add simplenergy.rotatable
 tag @s add simplenergy.tick
 scoreboard players add #tick_entities simplenergy.data 1
 
+## sourceMappingURL=place_secondary.mcfunction.map

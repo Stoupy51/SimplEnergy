@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "rotate.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;AA8J6C;AAC7C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -48,3 +48,4 @@ function #itemio:calls/container/init
 tag @s add simplenergy.second
 scoreboard players add #second_entities simplenergy.data 1
 
+## sourceMappingURL=place_secondary.mcfunction.map

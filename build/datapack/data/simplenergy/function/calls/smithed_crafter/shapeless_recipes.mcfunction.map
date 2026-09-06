@@ -1,0 +1,11 @@
+{
+	"version": 3,
+	"file": "shapeless_recipes.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/definitions/additions/energy.py",
+		"src/definitions/additions/misc.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;AAiGC;AAqOA;AAiBA;AC9NA;AAAA"
+}

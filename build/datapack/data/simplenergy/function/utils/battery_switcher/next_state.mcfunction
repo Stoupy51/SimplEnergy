@@ -18,3 +18,4 @@ execute if score #state simplenergy.data matches 2 run tag @s add energy.send
 execute if score #state simplenergy.data matches 3 run tag @s add energy.receive
 execute if score #state simplenergy.data matches 3 run tag @s remove energy.send
 
+## sourceMappingURL=next_state.mcfunction.map

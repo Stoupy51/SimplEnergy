@@ -19,3 +19,4 @@ scoreboard players add #total_custom_blocks simplenergy.data 1
 scoreboard players add #total_vanilla_furnace simplenergy.data 1
 scoreboard players add #total_electric_furnace simplenergy.data 1
 
+## sourceMappingURL=place_main.mcfunction.map

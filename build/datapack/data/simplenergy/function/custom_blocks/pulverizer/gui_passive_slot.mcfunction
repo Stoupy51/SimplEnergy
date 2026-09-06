@@ -29,3 +29,4 @@ $execute if data storage simplenergy:temp intruder unless data storage simplener
 $execute if data storage simplenergy:temp slot.blocked run item replace block ~ ~ ~ container.$(slot) with minecraft:recovery_compass[item_model="simplenergy:gui/progress_blocked",custom_data={"common_signals":{"temp":true}},item_name={"translate":"simplenergy.blocked","italic":false},lore=[{"translate":"simplenergy.place_a_slot_unlocker_to_unlock","color":"gray","italic":false}]]
 $execute unless data storage simplenergy:temp slot.blocked run function simplenergy:custom_blocks/pulverizer/gui_progression {"index":$(index),"slot":$(slot)}
 
+## sourceMappingURL=gui_passive_slot.mcfunction.map

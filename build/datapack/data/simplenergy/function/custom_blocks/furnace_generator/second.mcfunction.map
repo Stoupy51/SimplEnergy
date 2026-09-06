@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "second.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/machines.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;AA2EE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

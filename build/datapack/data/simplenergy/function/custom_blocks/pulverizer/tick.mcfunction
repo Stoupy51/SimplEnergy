@@ -36,3 +36,4 @@ execute if score #working simplenergy.data matches 1.. if score #second simplene
 # Save slots to entity
 data modify entity @s item.components."minecraft:custom_data".simplenergy.pulverizer_slots set from storage simplenergy:temp slots
 
+## sourceMappingURL=tick.mcfunction.map

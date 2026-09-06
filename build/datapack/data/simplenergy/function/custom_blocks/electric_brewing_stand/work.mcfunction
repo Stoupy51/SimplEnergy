@@ -20,3 +20,4 @@ scoreboard players add #burn_time simplenergy.data 21
 execute if score #burn_time simplenergy.data matches 21.. run scoreboard players set #burn_time simplenergy.data 20
 execute if score #old_burn_time simplenergy.data matches ..200 store result block ~ ~ ~ Fuel byte 1 run scoreboard players get #burn_time simplenergy.data
 
+## sourceMappingURL=work.mcfunction.map

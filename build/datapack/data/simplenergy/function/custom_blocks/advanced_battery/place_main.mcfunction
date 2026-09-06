@@ -15,3 +15,4 @@ scoreboard players add #total_custom_blocks simplenergy.data 1
 scoreboard players add #total_vanilla_gold_block simplenergy.data 1
 scoreboard players add #total_advanced_battery simplenergy.data 1
 
+## sourceMappingURL=place_main.mcfunction.map

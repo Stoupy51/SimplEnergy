@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "_stats_custom_blocks.mcfunction",
+	"sourceRoot": "../../../../..",
+	"sources": [
+		"src/definitions/additions/energy.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAyYC;AAjBA;AAhBA;AAjBA;AAjBA;AApBA;AA/BA;AAfA;AAxBA;AAZA;AAfA;AApBA;AAjBA;AAlBA;AAfA;AAfA;AA3BA;AAPA;AAlBA;AAlBA;AAlBA;AAfA;;;;;;;;;AAAA;AAeA;AAkBA;AAkBA;AAkBA;AAOA;AA2BA;AAeA;AAeA;AAkBA;AAiBA;AAoBA;AAeA;AAYA;AAwBA;AAeA;AA+BA;AAoBA;AAiBA;AAiBA;AAgBA;AAiBA"
+}

@@ -16,3 +16,4 @@ execute if data storage simplenergy:main OffhandTag.simplenergy.battery_switcher
 # Memory clean up
 data remove storage simplenergy:main OffhandTag
 
+## sourceMappingURL=passive_offhand.mcfunction.map

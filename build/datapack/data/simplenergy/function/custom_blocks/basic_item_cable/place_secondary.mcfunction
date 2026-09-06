@@ -28,3 +28,4 @@ tag @s add simplenergy.cable
 tag @s add itemio.cable
 function #itemio:calls/cables/init
 
+## sourceMappingURL=place_secondary.mcfunction.map

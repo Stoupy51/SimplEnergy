@@ -19,3 +19,4 @@ scoreboard players operation @s energy.storage -= #energy_rate simplenergy.data
 # Check if a player is on top of the elevator (cooldown)
 execute positioned ~ ~1 ~ as @a[distance=..1,dx=0,dz=0] run function simplenergy:custom_blocks/elevator/as_player
 
+## sourceMappingURL=tick.mcfunction.map

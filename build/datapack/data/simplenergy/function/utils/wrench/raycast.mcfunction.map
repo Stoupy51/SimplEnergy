@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "raycast.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;AA0I8C;AAC9C;AACA;AACA;AACA;AACA;AACA"
+}

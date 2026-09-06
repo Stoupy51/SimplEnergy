@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "stop_case.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;AA2N4D;AAC5D;AACA;AACA;AACA;AACA"
+}

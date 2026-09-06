@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "remove_markers.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;AA2OiE;AACjE;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

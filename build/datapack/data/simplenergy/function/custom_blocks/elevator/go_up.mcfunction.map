@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "go_up.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/machines.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;AAsT2C;AAC3C;AACA;AACA;AACA"
+}

@@ -23,3 +23,4 @@ item replace entity @s contents with minecraft:furnace[item_model="simplenergy:m
 data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function simplenergy:custom_blocks/compute_brightness
 
+## sourceMappingURL=place_secondary.mcfunction.map

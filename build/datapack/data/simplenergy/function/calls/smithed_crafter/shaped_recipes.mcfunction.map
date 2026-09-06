@@ -1,0 +1,11 @@
+{
+	"version": 3,
+	"file": "shaped_recipes.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/definitions/additions/energy.py",
+		"src/definitions/additions/misc.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;;;;;;;;;;;AAqBC;AAAA;AAeA;AAAA;AAkBA;AAAA;AAkBA;AAAA;AAyBA;AA2BA;AAAA;AAeA;AAAA;AAeA;AAAA;AAAA;AAAA;AAkBA;AAAA;AAiBA;AAAA;AAAA;AAAA;AAoBA;AAAA;AAeA;AAYA;AAAA;AAwBA;AAAA;AAeA;AAAA;AA+BA;AAAA;AAAA;AAAA;AAsDA;AAAA;AAgBA;AAiBA;ACtXA;AAsBA;AAqBA;AAcA"
+}

@@ -20,3 +20,4 @@ $execute if score #slot simplenergy.data matches 0.. if data storage simplenergy
 data remove storage simplenergy:main Inventory[0]
 execute if data storage simplenergy:main Inventory[0] run function simplenergy:utils/battery_switcher/loop with storage simplenergy:main Inventory[0]
 
+## sourceMappingURL=loop.mcfunction.map

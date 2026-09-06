@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "on_right_click.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;AAwG8C;AAC9C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEA;AACA;AACA;AACA;AACA"
+}

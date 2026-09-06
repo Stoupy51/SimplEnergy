@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "first_join.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;AA2WiD;AACjD;AACA;AACA"
+}

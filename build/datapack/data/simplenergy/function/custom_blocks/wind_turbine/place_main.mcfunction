@@ -19,3 +19,4 @@ scoreboard players add #total_custom_blocks simplenergy.data 1
 scoreboard players add #total_vanilla_iron_trapdoor simplenergy.data 1
 scoreboard players add #total_wind_turbine simplenergy.data 1
 
+## sourceMappingURL=place_main.mcfunction.map

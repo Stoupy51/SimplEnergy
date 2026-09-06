@@ -22,6 +22,7 @@ ignore: ["build", "iso_renders", "manual_content.json", "definitions_debug.json"
 # A list of importable plugin strings
 require:
     - "stewbeet"
+    - "stewbeet.plugins.sniffer"
     - "stewbeet.plugins.livereload"
 
 # Takes a nested pack config, see PackConfig() documentation
@@ -61,6 +62,7 @@ pipeline:
     - "stewbeet.plugins.finalyze.last_final"
     - "stewbeet.plugins.auto.lang_file"
     - "stewbeet.plugins.auto.headers"
+    - "stewbeet.plugins.sniffer.emit"
     - "stewbeet.plugins.archive"
     - "stewbeet.plugins.merge_smithed_weld"
     - "stewbeet.plugins.copy_to_destination"

@@ -11,3 +11,4 @@ tag @s add simplenergy.temp
 execute as @n[scores={energy.max_storage=1..},distance=..1.5] at @s align xyz run function simplenergy:utils/multimeter/passive/found_entity
 tag @s remove simplenergy.temp
 
+## sourceMappingURL=stop_case.mcfunction.map

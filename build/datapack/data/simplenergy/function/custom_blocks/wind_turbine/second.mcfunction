@@ -26,3 +26,4 @@ execute if score #height simplenergy.data matches 140..149 run scoreboard player
 execute if score #height simplenergy.data matches 150.. run scoreboard players add @s energy.storage 20
 execute if score @s energy.storage >= @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 
+## sourceMappingURL=second.mcfunction.map

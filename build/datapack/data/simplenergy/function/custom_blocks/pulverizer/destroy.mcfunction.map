@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "destroy.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/pulverizer.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;AA6P+B;AAAA;AAAA;AA7BA;AAC/B;AACA;AAEA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "passive_offhand.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;AAiD+C;AAC/C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

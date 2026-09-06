@@ -28,3 +28,4 @@ scoreboard players operation @s energy.storage += @s simplenergy.energy_rate
 execute if score @s energy.storage >= @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 playsound simplenergy:cauldron_generator block @a[distance=..12] ~ ~ ~ 0.25
 
+## sourceMappingURL=second.mcfunction.map

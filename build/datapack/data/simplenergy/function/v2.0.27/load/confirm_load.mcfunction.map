@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "confirm_load.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": ";;;;;AA4BiB;AACjB;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

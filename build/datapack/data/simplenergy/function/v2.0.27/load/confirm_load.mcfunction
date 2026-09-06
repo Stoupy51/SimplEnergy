@@ -20,6 +20,7 @@ scoreboard objectives add simplenergy.energy_rate dummy
 # Opening manual detection
 scoreboard objectives add simplenergy.open_manual minecraft.used:minecraft.written_book
 
+
 # Confirm load
 tellraw @a[tag=convention.debug] {"translate":"simplenergy.loaded_simplenergy_v2_0_27","color":"green"}
 scoreboard players set #simplenergy.loaded load.status 1
@@ -28,3 +29,4 @@ function simplenergy:v2.0.27/load/set_items_storage
 # Score for the on/off state of servo mechanisms
 scoreboard objectives add simplenergy.servo_off dummy
 
+## sourceMappingURL=confirm_load.mcfunction.map
