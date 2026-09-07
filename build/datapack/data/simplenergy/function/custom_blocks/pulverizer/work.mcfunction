@@ -22,4 +22,3 @@ execute if score #working simplenergy.data matches 1.. run scoreboard players op
 execute if score #working simplenergy.data matches 1.. run scoreboard players operation #energy_rate simplenergy.data /= #20 simplenergy.data
 execute if score #working simplenergy.data matches 1.. run scoreboard players operation @s energy.storage -= #energy_rate simplenergy.data
 
-## sourceMappingURL=work.mcfunction.map

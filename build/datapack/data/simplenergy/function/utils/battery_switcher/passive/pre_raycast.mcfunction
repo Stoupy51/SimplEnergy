@@ -11,4 +11,3 @@ scoreboard players set #state simplenergy.data 0
 function simplenergy:utils/battery_switcher/passive/main
 execute if score #state simplenergy.data matches 0 run item modify entity @s weapon.offhand simplenergy:battery_switcher/default
 
-## sourceMappingURL=pre_raycast.mcfunction.map

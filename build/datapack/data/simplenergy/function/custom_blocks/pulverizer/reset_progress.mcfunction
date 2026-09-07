@@ -14,4 +14,3 @@ $data modify storage simplenergy:temp slots[$(index)].progression set value 0
 $function simplenergy:custom_blocks/pulverizer/gui_progression {"index":$(index),"slot":$(slot)}
 return fail
 
-## sourceMappingURL=reset_progress.mcfunction.map

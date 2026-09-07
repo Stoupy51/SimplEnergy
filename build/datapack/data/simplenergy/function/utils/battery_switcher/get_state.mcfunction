@@ -12,4 +12,3 @@ execute if score #state simplenergy.data matches 0 if entity @s[tag=energy.send,
 execute if score #state simplenergy.data matches 0 if entity @s[tag=energy.send] run scoreboard players set #state simplenergy.data 2
 execute if score #state simplenergy.data matches 0 if entity @s[tag=energy.receive] run scoreboard players set #state simplenergy.data 3
 
-## sourceMappingURL=get_state.mcfunction.map

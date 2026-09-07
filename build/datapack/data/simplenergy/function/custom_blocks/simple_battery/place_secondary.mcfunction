@@ -36,4 +36,3 @@ function energy:v1/api/init_machine
 # Add balancing tag
 tag @s add simplenergy.can_balance
 
-## sourceMappingURL=place_secondary.mcfunction.map

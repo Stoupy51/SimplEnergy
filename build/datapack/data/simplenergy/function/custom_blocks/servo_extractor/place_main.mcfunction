@@ -22,4 +22,3 @@ scoreboard players add #total_servo_extractor simplenergy.data 1
 # Replace the placing sound
 playsound minecraft:block.stone.place block @a[distance=..5]
 
-## sourceMappingURL=place_main.mcfunction.map

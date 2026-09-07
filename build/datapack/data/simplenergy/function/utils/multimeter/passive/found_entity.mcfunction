@@ -15,4 +15,3 @@ title @a[tag=simplenergy.temp] actionbar [{"translate":"simplenergy.energy_store
 # Remove the snowball by schedule function
 schedule function simplenergy:utils/multimeter/passive/remove_markers 1t replace
 
-## sourceMappingURL=found_entity.mcfunction.map

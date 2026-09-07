@@ -31,4 +31,3 @@ kill @s
 # Decrease the number of entities with tick tag
 scoreboard players remove #tick_entities simplenergy.data 1
 
-## sourceMappingURL=destroy.mcfunction.map

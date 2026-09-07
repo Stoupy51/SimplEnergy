@@ -16,4 +16,3 @@ function simplenergy:custom_blocks/pulverizer/gui_passive_slot {"index":5,"slot"
 function simplenergy:custom_blocks/pulverizer/gui_passive_slot {"index":6,"slot":15}
 function simplenergy:custom_blocks/pulverizer/gui_passive_slot {"index":7,"slot":16}
 
-## sourceMappingURL=gui_for_each_slot.mcfunction.map

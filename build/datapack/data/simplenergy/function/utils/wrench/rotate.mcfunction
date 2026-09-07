@@ -23,4 +23,3 @@ function #simplenergy:calls/wrench_rotate
 data remove storage simplenergy:main Block
 particle block{block_state:"minecraft:furnace"} ~ ~ ~ .5 .5 .5 0.1 10
 
-## sourceMappingURL=rotate.mcfunction.map

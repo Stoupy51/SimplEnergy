@@ -29,4 +29,3 @@ function simplenergy:v2.0.27/load/set_items_storage
 # Score for the on/off state of servo mechanisms
 scoreboard objectives add simplenergy.servo_off dummy
 
-## sourceMappingURL=confirm_load.mcfunction.map

@@ -15,4 +15,3 @@ execute if score #is_furnace simplenergy.data matches 1 if score #rotation simpl
 # Apply data back to furnace
 execute if score #is_furnace simplenergy.data matches 1 run data modify block ~ ~ ~ {} merge from storage simplenergy:main Block
 
-## sourceMappingURL=furnace.mcfunction.map

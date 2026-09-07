@@ -10,4 +10,3 @@
 execute store result score #item_frame_facing simplenergy.data run data get entity @s Facing
 kill @s
 
-## sourceMappingURL=get_facing.mcfunction.map

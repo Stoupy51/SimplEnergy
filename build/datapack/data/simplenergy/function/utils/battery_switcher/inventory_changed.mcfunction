@@ -12,4 +12,3 @@ data modify storage simplenergy:main Inventory set from entity @s Inventory
 # Start inventory loop
 function simplenergy:utils/battery_switcher/loop with storage simplenergy:main Inventory[0]
 
-## sourceMappingURL=inventory_changed.mcfunction.map

@@ -1,7 +1,7 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet import COMMON_SIGNAL, COMMON_SIGNAL_HIDDEN, CUSTOM_ITEM_VANILLA, Block, BlockFunctions, JsonDict, Mem, write_function
+from stewbeet import COMMON_SIGNAL, COMMON_SIGNAL_HIDDEN, CUSTOM_ITEM_VANILLA, Block, BlockFunctions, JsonDict, McFunction, Mem, write_function
 
 
 # Setup pulverizer work and visuals
@@ -35,7 +35,7 @@ def pulverizer(gui: dict[str, str]) -> None:
 	default_model: str = pulverizer_obj.item_model
 	funcs: BlockFunctions = pulverizer_obj.functions
 	working_model: str = default_model + "_on"
-	content: str = f"""
+	content: McFunction = f"""
 # Copy slots to storage
 data modify storage {ns}:temp slots set value [{{}},{','.join(['{"blocked":true}'] * (PULVERIZER_SLOTS - 1))}]
 data modify storage {ns}:temp slots set from entity @s item.components."minecraft:custom_data".{ns}.pulverizer_slots

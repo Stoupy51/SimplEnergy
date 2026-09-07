@@ -18,4 +18,3 @@ execute if predicate simplenergy:is_jumping positioned ~ ~2 ~ run return run fun
 # If player is sneaking, find an elevator block below and teleport the player to it
 execute if predicate simplenergy:is_sneaking positioned ~ ~-3 ~ run return run function simplenergy:custom_blocks/elevator/go_down
 
-## sourceMappingURL=as_player.mcfunction.map

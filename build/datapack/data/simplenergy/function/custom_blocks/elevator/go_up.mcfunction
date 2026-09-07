@@ -11,4 +11,3 @@
 execute at @e[tag=simplenergy.elevator,distance=..1,limit=1] run return run function simplenergy:custom_blocks/elevator/found_elevator
 execute if entity @s[distance=..72] positioned ~ ~1 ~ run function simplenergy:custom_blocks/elevator/go_up
 
-## sourceMappingURL=go_up.mcfunction.map

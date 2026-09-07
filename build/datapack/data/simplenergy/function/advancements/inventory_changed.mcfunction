@@ -19,4 +19,3 @@ execute if items entity @s weapon.offhand *[custom_data~{"simplenergy":{"battery
 # For loop for each item in inventory
 execute if items entity @s container.* *[custom_data~{"simplenergy":{"battery_switcher":true}}] run function simplenergy:utils/battery_switcher/inventory_changed
 
-## sourceMappingURL=inventory_changed.mcfunction.map

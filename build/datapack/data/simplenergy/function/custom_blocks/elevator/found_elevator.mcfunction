@@ -12,4 +12,3 @@ tp @s ~ ~0.6 ~
 playsound simplenergy:elevator block @s
 scoreboard players operation @s simplenergy.elevator_time = #elevator_time simplenergy.data
 
-## sourceMappingURL=found_elevator.mcfunction.map

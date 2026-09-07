@@ -11,4 +11,3 @@ scoreboard players set #raycast simplenergy.data 0
 execute anchored eyes positioned ^ ^ ^.2 run function simplenergy:utils/wrench/raycast
 scoreboard players reset #raycast simplenergy.data
 
-## sourceMappingURL=right_click.mcfunction.map

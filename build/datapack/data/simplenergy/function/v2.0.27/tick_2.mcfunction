@@ -14,4 +14,3 @@ execute if score #total_custom_blocks simplenergy.data matches 1.. as @e[type=it
 # Passive offhand loop
 execute as @a[tag=!global.ignore.gui,tag=simplenergy.offhand] at @s run function simplenergy:utils/passive_offhand
 
-## sourceMappingURL=tick_2.mcfunction.map

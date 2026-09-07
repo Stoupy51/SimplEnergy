@@ -15,4 +15,3 @@ execute if score #found simplenergy.data matches 1 run data modify storage simpl
 # Kill temporary entity
 kill @s
 
-## sourceMappingURL=get_pulverizer_recipe.mcfunction.map

@@ -26,4 +26,3 @@ execute if score #drop_item simplenergy.data matches 0 if data storage simplener
 execute if score #drop_item simplenergy.data matches 0 if data storage simplenergy:temp slot.blocked if score #count simplenergy.data matches 1.. run summon item ~ ~ ~ {Item:{id:"minecraft:stone",count:1b,components:{"minecraft:custom_data":{"temp":true}}}}
 execute if score #drop_item simplenergy.data matches 0 if data storage simplenergy:temp slot.blocked if score #count simplenergy.data matches 1.. run data modify entity @n[type=item,nbt={Item:{components:{"minecraft:custom_data":{"temp":true}}}}] Item set from storage simplenergy:temp intruder
 
-## sourceMappingURL=handle_item_on_gui.mcfunction.map

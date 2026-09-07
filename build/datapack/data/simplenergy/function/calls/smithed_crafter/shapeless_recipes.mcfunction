@@ -13,4 +13,3 @@ execute if score @s smithed.data matches 0 store result score @s smithed.data if
 execute if score @s smithed.data matches 0 store result score @s smithed.data if score count smithed.data matches 2 if data storage smithed.crafter:input {"recipe": [{"id": "minecraft:book", "count": 1}, {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}, "count": 1}]} run function simplenergy:calls/smithed_crafter/apply_recipe {"command":"loot replace block ~ ~ ~ container.16 loot simplenergy:i/manual"}
 execute if score @s smithed.data matches 0 store result score @s smithed.data if score count smithed.data matches 1 if data storage smithed.crafter:input {"recipe": [{"components": {"minecraft:custom_data": {"simplenergy": {"manual": true}}}, "count": 1}]} run function simplenergy:calls/smithed_crafter/apply_recipe {"command":"loot replace block ~ ~ ~ container.16 loot simplenergy:i/manual"}
 
-## sourceMappingURL=shapeless_recipes.mcfunction.map

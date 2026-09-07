@@ -51,4 +51,3 @@ data modify entity @s transformation.translation[1] set value 0.01f
 tag @s add simplenergy.tick
 scoreboard players add #tick_entities simplenergy.data 1
 
-## sourceMappingURL=place_secondary.mcfunction.map

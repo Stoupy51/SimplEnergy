@@ -19,4 +19,3 @@ scoreboard players add #elevator_time simplenergy.data 1
 # Custom blocks tick functions
 execute if score #tick_entities simplenergy.data matches 1.. as @e[tag=simplenergy.tick] at @s run function simplenergy:custom_blocks/tick
 
-## sourceMappingURL=tick.mcfunction.map

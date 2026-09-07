@@ -27,4 +27,3 @@ execute if score #cook_time simplenergy.data matches 0 run tag @s add simplenerg
 execute if score #cook_time simplenergy.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:electric_smelter_on"
 execute if score #cook_time simplenergy.data matches 1.. if score #second simplenergy.data matches 0 run playsound simplenergy:electric_smelter block @a[distance=..12] ~ ~ ~ 0.25
 
-## sourceMappingURL=tick.mcfunction.map

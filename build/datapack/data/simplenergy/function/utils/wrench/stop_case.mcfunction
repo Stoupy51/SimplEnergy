@@ -18,4 +18,3 @@ execute if score #success simplenergy.data matches 0 store result score #success
 # Playsound if block was rotated or cable was broken
 execute if score #success simplenergy.data matches 1 run playsound block.stone.break block @s
 
-## sourceMappingURL=stop_case.mcfunction.map

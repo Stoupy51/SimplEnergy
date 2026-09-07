@@ -28,4 +28,3 @@ execute if score #burn_time simplenergy.data matches 1.. run scoreboard players 
 execute if score #burn_time simplenergy.data matches 1.. run playsound simplenergy:redstone_generator block @a[distance=..12] ~ ~ ~ 0.25
 execute if score @s energy.storage > @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
 
-## sourceMappingURL=second.mcfunction.map
