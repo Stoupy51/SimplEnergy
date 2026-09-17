@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:loot_table",
-					"value": "mechanization:base/titanium_ingot"
+					"value": "#simplenergy:recipes/mechanization/titanium_ingot"
 				}
 			]
 		}
