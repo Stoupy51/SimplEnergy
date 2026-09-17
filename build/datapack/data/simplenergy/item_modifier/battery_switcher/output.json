@@ -1,5 +1,5 @@
 {
-	"function": "minecraft:set_components",
+	"type": "minecraft:set_components",
 	"components": {
 		"minecraft:item_model": "simplenergy:battery_switcher_output"
 	}

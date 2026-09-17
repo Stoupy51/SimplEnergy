@@ -13,5 +13,5 @@ execute if entity @s[tag=simplenergy.advanced_cable] run item replace entity @s 
 execute if entity @s[tag=simplenergy.elite_cable] run item replace entity @s contents with minecraft:recovery_compass[item_model="simplenergy:elite_cable"]
 
 # Get the right model
-item modify entity @s contents {"function": "minecraft:set_custom_model_data","floats": {"values": [{"type": "minecraft:score","target": "this","score": "energy.data"}],"mode": "replace_all"}}
+item modify entity @s contents {"type": "minecraft:set_custom_model_data","floats": {"values": [{"type": "minecraft:from_int","input": {"type": "minecraft:score","target": "this","score": "energy.data"}}],"mode": "replace_all"}}
 

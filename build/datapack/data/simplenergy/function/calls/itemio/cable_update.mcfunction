@@ -11,5 +11,5 @@ execute unless entity @s[tag=simplenergy.custom_block,tag=itemio.cable] run retu
 execute if entity @s[tag=simplenergy.basic_item_cable] run item replace entity @s contents with minecraft:recovery_compass[item_model="simplenergy:basic_item_cable"]
 
 # Get the right model
-item modify entity @s contents {"function": "minecraft:set_custom_model_data","floats": {"values": [{"type": "minecraft:score","target": "this","score": "itemio.math"}],"mode": "replace_all"}}
+item modify entity @s contents {"type": "minecraft:set_custom_model_data","floats": {"values": [{"type": "minecraft:from_int","input": {"type": "minecraft:score","target": "this","score": "itemio.math"}}],"mode": "replace_all"}}
 

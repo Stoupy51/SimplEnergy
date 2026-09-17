@@ -6,9 +6,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:warped_fungus_on_a_stick",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:tooltip_display": {
 									"hidden_components": [

@@ -4,10 +4,14 @@
 			"trigger": "minecraft:player_interacted_with_entity",
 			"conditions": {
 				"entity": {
-					"minecraft:entity_tags": {
-						"any_of": [
-							"simplenergy.servo"
-						]
+					"type": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"minecraft:entity_tags": {
+							"any_of": [
+								"simplenergy.servo"
+							]
+						}
 					}
 				}
 			}
