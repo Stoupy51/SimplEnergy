@@ -278,8 +278,8 @@ execute if score @s energy.storage >= @s energy.max_storage run scoreboard playe
 	default_model: str = obj.item_model
 	funcs: BlockFunctions = obj.functions
 	working_model: str = default_model + "_on"
-	Mem.ctx.data[ns].predicates["is_jumping"] = set_json_encoder(Predicate({"condition":"minecraft:entity_properties","entity":"this","predicate":{"movement":{"y":{"min":1}}}}))
-	Mem.ctx.data[ns].predicates["is_sneaking"] = set_json_encoder(Predicate({"condition":"minecraft:entity_properties","entity":"this","predicate":{"flags":{"is_sneaking":True}}}))
+	Mem.ctx.data[ns].predicates["is_jumping"] = set_json_encoder(Predicate({"type":"minecraft:entity_properties","entity":"this","predicate":{"movement":{"y":{"min":1}}}}))
+	Mem.ctx.data[ns].predicates["is_sneaking"] = set_json_encoder(Predicate({"type":"minecraft:entity_properties","entity":"this","predicate":{"flags":{"is_sneaking":True}}}))
 	write_function(funcs.tick, f"""
 # If not enough energy, update model and stop
 execute unless score @s energy.storage >= @s {ns}.energy_rate run return run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"

@@ -91,7 +91,7 @@ tellraw @s ["",{{"text":"Markers on furnaces: ","color":"gray"}},{{"score":{{"na
 
 
 	# Check daylight power predicate
-	json_content: JsonDict = {"condition":"minecraft:any_of","terms":[{"condition":"minecraft:location_check","predicate":{"block":{"state":{"inverted":"false","power":{"min":"10","max":"15"}}}}},{"condition":"minecraft:location_check","predicate":{"block":{"state":{"inverted":"true","power":{"min":"0","max":"5"}}}}}]}
+	json_content: JsonDict = {"type":"minecraft:any_of","terms":[{"type":"minecraft:location_check","predicate":{"block":{"state":{"inverted":"false","power":{"min":"10","max":"15"}}}}},{"type":"minecraft:location_check","predicate":{"block":{"state":{"inverted":"true","power":{"min":"0","max":"5"}}}}}]}
 	Mem.ctx.data[ns].predicates["check_daylight_power"] = set_json_encoder(Predicate(json_content), max_level = -1)
 
 
@@ -100,7 +100,7 @@ tellraw @s ["",{{"text":"Markers on furnaces: ","color":"gray"}},{{"score":{{"na
 
 
 	## Right click detection
-	json_content: JsonDict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":[{"condition":"minecraft:entity_scores","entity":"this","scores":{f"{ns}.right_click":{"min":1}}}]}}},"requirements":[["requirement"]],"rewards":{"function":f"{ns}:utils/on_right_click"}}
+	json_content: JsonDict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":{"type":"minecraft:entity_scores","entity":"this","scores":{f"{ns}.right_click":{"min":1}}}}}},"requirements":[["requirement"]],"rewards":{"function":f"{ns}:utils/on_right_click"}}
 	Mem.ctx.data[ns].advancements["technical/right_click"] = set_json_encoder(Advancement(json_content), max_level = -1)
 	write_function(f"{ns}:utils/on_right_click", f"""
 # Advancement revoke
@@ -353,7 +353,7 @@ execute if score #success {ns}.data matches 1 run schedule function {ns}:utils/b
 	both_model: str = Item.from_id("battery_switcher_both").item_model
 	input_model: str = Item.from_id("battery_switcher_input").item_model
 	output_model: str = Item.from_id("battery_switcher_output").item_model
-	dumped_template: str = json_dump({"function": "minecraft:set_components","components":{"minecraft:item_model":"TO_REPLACE"}})
+	dumped_template: str = json_dump({"type": "minecraft:set_components","components":{"minecraft:item_model":"TO_REPLACE"}})
 	for mode, model in [("default", default_model), ("both", both_model), ("input", input_model), ("output", output_model)]:
 		Mem.ctx.data[ns].item_modifiers[f"battery_switcher/{mode}"] = set_json_encoder(ItemModifier(dumped_template.replace("TO_REPLACE", model)))
 
