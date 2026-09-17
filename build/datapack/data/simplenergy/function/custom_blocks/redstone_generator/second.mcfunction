@@ -7,15 +7,15 @@
 #
 
 # Prevent the furnace from really cooking
-data modify block ~ ~ ~ cooking_total_time set value -200s
-data modify block ~ ~ ~ cooking_time_spent set value 0s
+data modify block ~ ~ ~ cooking_total_time set value -200
+data modify block ~ ~ ~ cooking_time_spent set value 0
 
 # Stop if full energy
 execute if score @s energy.storage >= @s energy.max_storage run return run function simplenergy:custom_blocks/redstone_generator/stop
 
 # Consume redstone dust for fuel
-execute if data block ~ ~ ~ {Items:[{Slot:0b,id:"minecraft:redstone"}],lit_time_remaining:0s} run function simplenergy:custom_blocks/redstone_generator/consume_redstone_dust
-execute if data block ~ ~ ~ {Items:[{Slot:0b,id:"minecraft:redstone_block"}],lit_time_remaining:0s} run function simplenergy:custom_blocks/redstone_generator/consume_redstone_block
+execute if data block ~ ~ ~ {Items:[{Slot:0b,id:"minecraft:redstone"}],lit_time_remaining:0} run function simplenergy:custom_blocks/redstone_generator/consume_redstone_dust
+execute if data block ~ ~ ~ {Items:[{Slot:0b,id:"minecraft:redstone_block"}],lit_time_remaining:0} run function simplenergy:custom_blocks/redstone_generator/consume_redstone_block
 
 # Update the gui to default
 execute store result score #burn_time simplenergy.data run data get block ~ ~ ~ lit_time_remaining

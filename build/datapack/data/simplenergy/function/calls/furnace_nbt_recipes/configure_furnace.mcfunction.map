@@ -1,10 +1,10 @@
 {
 	"version": 3,
-	"file": "go_down.mcfunction",
+	"file": "configure_furnace.mcfunction",
 	"sourceRoot": "../../../../../../..",
 	"sources": [
 		"src/utils/machines.py"
 	],
 	"names": [],
-	"mappings": "AA0T2C;;;;;;;;;AAC3C;AACA;AACA;AACA"
+	"mappings": "AA0LqE;;;;;;AACrE;AACA;AACA"
 }

@@ -7,8 +7,8 @@
 #
 
 # Prevent the furnace from really cooking
-data modify block ~ ~ ~ cooking_total_time set value -200s
-data modify block ~ ~ ~ cooking_time_spent set value 0s
+data modify block ~ ~ ~ cooking_total_time set value -200
+data modify block ~ ~ ~ cooking_time_spent set value 0
 
 # Stop if full energy
 execute if score @s energy.storage >= @s energy.max_storage run return run function simplenergy:custom_blocks/furnace_generator/stop
