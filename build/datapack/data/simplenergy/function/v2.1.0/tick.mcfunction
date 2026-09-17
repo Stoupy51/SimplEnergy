@@ -1,16 +1,16 @@
 
-#> simplenergy:v2.0.28/tick
+#> simplenergy:v2.1.0/tick
 #
-# @within	simplenergy:v2.0.28/load/tick_verification
+# @within	simplenergy:v2.1.0/load/tick_verification
 #
 
 # Timers
 scoreboard players add #tick_2 simplenergy.data 1
 scoreboard players add #second simplenergy.data 1
 scoreboard players add #second_5 simplenergy.data 1
-execute if score #tick_2 simplenergy.data matches 3.. run function simplenergy:v2.0.28/tick_2
-execute if score #second simplenergy.data matches 20.. run function simplenergy:v2.0.28/second
-execute if score #second_5 simplenergy.data matches 90.. run function simplenergy:v2.0.28/second_5
+execute if score #tick_2 simplenergy.data matches 3.. run function simplenergy:v2.1.0/tick_2
+execute if score #second simplenergy.data matches 20.. run function simplenergy:v2.1.0/second
+execute if score #second_5 simplenergy.data matches 90.. run function simplenergy:v2.1.0/second_5
 
 
 # Increase every tick the elevator time
