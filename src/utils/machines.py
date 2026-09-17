@@ -49,14 +49,14 @@ data modify entity @s transformation.translation[1] set value 0.002f
 		if gen == "redstone_generator":
 			redstone_generator = f"""
 # Consume redstone dust for fuel
-execute if data block ~ ~ ~ {{Items:[{{Slot:0b,id:"minecraft:redstone"}}],lit_time_remaining:0s}} run function {funcs["consume_redstone_dust"]}
-execute if data block ~ ~ ~ {{Items:[{{Slot:0b,id:"minecraft:redstone_block"}}],lit_time_remaining:0s}} run function {funcs["consume_redstone_block"]}
+execute if data block ~ ~ ~ {{Items:[{{Slot:0b,id:"minecraft:redstone"}}],lit_time_remaining:0}} run function {funcs["consume_redstone_dust"]}
+execute if data block ~ ~ ~ {{Items:[{{Slot:0b,id:"minecraft:redstone_block"}}],lit_time_remaining:0}} run function {funcs["consume_redstone_block"]}
 """
 		# Write the second function for the generator
 		content: McFunction = f"""
 # Prevent the furnace from really cooking
-data modify block ~ ~ ~ cooking_total_time set value -200s
-data modify block ~ ~ ~ cooking_time_spent set value 0s
+data modify block ~ ~ ~ cooking_total_time set value -200
+data modify block ~ ~ ~ cooking_time_spent set value 0
 
 # Stop if full energy
 execute if score @s energy.storage >= @s energy.max_storage run return run function {funcs["stop"]}
@@ -82,7 +82,7 @@ data modify entity @s item.components."minecraft:item_model" set value "{default
 		if gen == "redstone_generator":
 			for item, fuel in (("redstone_dust", 280), ("redstone_block", 280 * 9)):
 				write_function(funcs[f"consume_{item}"], f"""
-data modify block ~ ~ ~ lit_time_remaining set value {fuel}s
+data modify block ~ ~ ~ lit_time_remaining set value {fuel}
 execute store result score #count {ns}.data run data get block ~ ~ ~ Items[{{Slot:0b}}].count
 scoreboard players remove #count {ns}.data 1
 execute if score #count {ns}.data matches 1.. store result block ~ ~ ~ Items[{{Slot:0b}}].count int 1 run scoreboard players get #count {ns}.data
@@ -103,17 +103,16 @@ function #itemio:calls/container/init
 		energy: JsonDict = Block.from_id(machine).components["custom_data"]["energy"]
 		cook: str = "cooking_time_spent" if machine != "electric_brewing_stand" else "BrewTime"
 		burn: str = "lit_time_remaining" if machine != "electric_brewing_stand" else "Fuel"
-		burn_type: str = "short" if machine != "electric_brewing_stand" else "byte"
 		gui_slot: int = 1 if machine != "electric_brewing_stand" else 4
 		ingr_slot: int = 0 if machine != "electric_brewing_stand" else 3
-		check_cook_limit: str = f"execute if score #cook_time {ns}.data matches 200.. run scoreboard players set #cook_time {ns}.data 199\n" if machine != "electric_brewing_stand" else ""
-		faster_cook: str = ""
-		if machine == "electric_furnace":
-			faster_cook = f"execute if score #cook_time {ns}.data matches 1.. run scoreboard players add #cook_time {ns}.data 1"
-		elif machine == "electric_smelter":
-			faster_cook = f"execute if score #cook_time {ns}.data matches 1.. run scoreboard players add #cook_time {ns}.data 7"
-		elif machine == "electric_brewing_stand":
-			faster_cook = f"execute if score #cook_time {ns}.data matches 4.. run scoreboard players remove #cook_time {ns}.data 3"
+		# FurnaceNbtRecipes owns the furnace clock and paces it from the speed set on its marker,
+		# so only the brewing stand, having no library behind it, still moves its own cooking time.
+		cook_update: str = ""
+		if machine == "electric_brewing_stand":
+			cook_update = (
+				f"execute if score #cook_time {ns}.data matches 4.. run scoreboard players remove #cook_time {ns}.data 3\n"
+				f"execute if score #cook_time {ns}.data matches 1.. store result block ~ ~ ~ {cook} int 1 run scoreboard players get #cook_time {ns}.data"
+			)
 
 		all_gui: list[str] = [x for x in gui if machine + "_" in x]
 		nb_gui: int = len(all_gui)
@@ -157,14 +156,13 @@ execute if score #cook_time {ns}.data matches 1.. run scoreboard players set #20
 execute if score #cook_time {ns}.data matches 1.. run scoreboard players operation #energy_rate {ns}.data = @s {ns}.energy_rate
 execute if score #cook_time {ns}.data matches 1.. run scoreboard players operation #energy_rate {ns}.data /= #20 {ns}.data
 execute if score #cook_time {ns}.data matches 1.. run scoreboard players operation @s energy.storage -= #energy_rate {ns}.data
-{faster_cook}
-{check_cook_limit}execute if score #cook_time {ns}.data matches 1.. store result block ~ ~ ~ {cook} short 1 run scoreboard players get #cook_time {ns}.data
+{cook_update}
 
 # Change {burn} value
 scoreboard players operation #old_burn_time {ns}.data = #burn_time {ns}.data
 scoreboard players add #burn_time {ns}.data 21
 execute if score #burn_time {ns}.data matches 21.. run scoreboard players set #burn_time {ns}.data 20
-execute if score #old_burn_time {ns}.data matches ..200 store result block ~ ~ ~ {burn} {burn_type} 1 run scoreboard players get #burn_time {ns}.data
+execute if score #old_burn_time {ns}.data matches ..200 store result block ~ ~ ~ {burn} int 1 run scoreboard players get #burn_time {ns}.data
 """
 		write_function(funcs["work"], content)
 		output_list: list[McFunction] = []
@@ -184,6 +182,12 @@ data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig ap
 {outputs}
 function #itemio:calls/container/init
 """)
+
+	# Tell FurnaceNbtRecipes how fast the electric furnaces cook, once, when it starts tracking one
+	write_function(f"{ns}:calls/furnace_nbt_recipes/configure_furnace", f"""
+execute if data block ~ ~ ~ {{CustomName:{{translate:"{ns}.electric_furnace"}}}} run scoreboard players set @s furnace_nbt_recipes.speed 1500
+execute if data block ~ ~ ~ {{CustomName:{{translate:"{ns}.electric_smelter"}}}} run scoreboard players set @s furnace_nbt_recipes.speed 8000
+""", tags=["furnace_nbt_recipes:v1/configure_furnace"])
 
 	# Cauldron Generator
 	default_model: str = Block.from_id("cauldron_generator").item_model
