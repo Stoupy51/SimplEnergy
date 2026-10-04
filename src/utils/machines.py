@@ -54,8 +54,7 @@ execute if data block ~ ~ ~ {{Items:[{{Slot:0b,id:"minecraft:redstone_block"}}],
 """
 		# Write the second function for the generator
 		content: McFunction = f"""
-# Prevent the furnace from really cooking
-data modify block ~ ~ ~ cooking_total_time set value -200
+# The gui item only sits in the input slot so the furnace lights its fuel, reset its progress so it never smelts
 data modify block ~ ~ ~ cooking_time_spent set value 0
 
 # Stop if full energy
