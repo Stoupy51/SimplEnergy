@@ -1,7 +1,7 @@
 
 #> simplenergy:_stats_custom_blocks
 #
-# @within	???
+# @within	(public)
 #
 
 scoreboard players add #second_entities simplenergy.data 0

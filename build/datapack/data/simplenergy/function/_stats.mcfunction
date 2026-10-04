@@ -1,7 +1,7 @@
 
 #> simplenergy:_stats
 #
-# @within	???
+# @within	(public)
 #
 
 # Get numbers
