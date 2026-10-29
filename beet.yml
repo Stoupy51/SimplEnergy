@@ -22,7 +22,7 @@ ignore: ["build", "iso_renders", "manual_content.json", "definitions_debug.json"
 # A list of importable plugin strings
 require:
     - "stewbeet"
-    - "stewbeet.plugins.sniffer"
+    - "stewbeet.plugins.source_maps"
     - "stewbeet.plugins.livereload"
 
 # Takes a nested pack config, see PackConfig() documentation
