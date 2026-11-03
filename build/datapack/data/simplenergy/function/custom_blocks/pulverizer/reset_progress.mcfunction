@@ -10,7 +10,7 @@
 #
 
 scoreboard players set #progression simplenergy.data 0
-$data modify storage simplenergy:temp slots[$(index)].progression set value 0
+$scoreboard players set @s simplenergy.pulverizer_progress_$(index) 0
 $function simplenergy:custom_blocks/pulverizer/gui_progression {"index":$(index),"slot":$(slot)}
 return fail
 

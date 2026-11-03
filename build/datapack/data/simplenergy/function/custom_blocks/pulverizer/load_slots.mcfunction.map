@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "load_slots.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/pulverizer.py"
+	],
+	"names": [],
+	"mappings": "AA6DqC;;;;;;;;AACrC;AACA;AAFC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

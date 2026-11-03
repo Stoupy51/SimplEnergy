@@ -16,16 +16,10 @@
 #			slot (int)
 #
 
-# Get slot and progression, and the item
-scoreboard players set #progression simplenergy.data 0
-$data modify storage simplenergy:temp slot set from storage simplenergy:temp slots[$(index)]
-execute store result score #progression simplenergy.data run data get storage simplenergy:temp slot.progression
-$data modify storage simplenergy:temp intruder set from storage simplenergy:temp Items[{Slot:$(slot)b}]
-
-# If item is not a GUI, launch function to handle it
-$execute if data storage simplenergy:temp intruder unless data storage simplenergy:temp intruder.components."minecraft:custom_data".common_signals.temp run function simplenergy:custom_blocks/pulverizer/handle_item_on_gui {"index":$(index),"slot":$(slot)}
+$scoreboard players operation #progression simplenergy.data = @s simplenergy.pulverizer_progress_$(index)
+$execute if items block ~ ~ ~ container.$(slot) *[!custom_data~{"common_signals":{"temp":true}}] run function simplenergy:custom_blocks/pulverizer/handle_item_on_gui {"index":$(index),"slot":$(slot)}
 
 # Set item gui (blocked if not unlocked, progression otherwise)
-$execute if data storage simplenergy:temp slot.blocked run item replace block ~ ~ ~ container.$(slot) with minecraft:recovery_compass[item_model="simplenergy:gui/progress_blocked",custom_data={"common_signals":{"temp":true}},item_name={"translate":"simplenergy.blocked","fallback":"Blocked","italic":false},lore=[{"translate":"simplenergy.place_a_slot_unlocker_to_unlock","fallback":"Place a Slot Unlocker to unlock","color":"gray","italic":false}]]
-$execute unless data storage simplenergy:temp slot.blocked run function simplenergy:custom_blocks/pulverizer/gui_progression {"index":$(index),"slot":$(slot)}
+$execute unless entity @s[tag=simplenergy.pulverizer_unlocked_$(index)] run item replace block ~ ~ ~ container.$(slot) with minecraft:recovery_compass[item_model="simplenergy:gui/progress_blocked",custom_data={"common_signals":{"temp":true}},item_name={"translate":"simplenergy.blocked","fallback":"Blocked","italic":false},lore=[{"translate":"simplenergy.place_a_slot_unlocker_to_unlock","fallback":"Place a Slot Unlocker to unlock","color":"gray","italic":false}]]
+$execute if entity @s[tag=simplenergy.pulverizer_unlocked_$(index)] run function simplenergy:custom_blocks/pulverizer/gui_progression {"index":$(index),"slot":$(slot)}
 

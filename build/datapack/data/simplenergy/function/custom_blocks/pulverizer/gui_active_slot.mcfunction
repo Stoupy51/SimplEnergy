@@ -17,14 +17,12 @@
 #			result (int)
 #
 
-# Get progression
-scoreboard players set #progression simplenergy.data 0
-$execute store result score #progression simplenergy.data run data get storage simplenergy:temp slots[$(index)].progression
+$scoreboard players operation #progression simplenergy.data = @s simplenergy.pulverizer_progress_$(index)
 
-# Isolate ingredient
-data remove storage simplenergy:main pulverizer.input
+# Isolate ingredient, the container being read at most once per tick, and only when an ingredient is there
+$execute unless items block ~ ~ ~ container.$(index) * run return run function simplenergy:custom_blocks/pulverizer/reset_progress {"index":$(index),"slot":$(slot)}
+execute unless data storage simplenergy:temp Items run data modify storage simplenergy:temp Items set from block ~ ~ ~ Items
 $data modify storage simplenergy:main pulverizer.input set from storage simplenergy:temp Items[{Slot:$(index)b}]
-$execute unless data storage simplenergy:main pulverizer.input run return run function simplenergy:custom_blocks/pulverizer/reset_progress {"index":$(index),"slot":$(slot)}
 
 # Search the recipe, unless the previous slot holds the same ingredient and left #found and the output as they are
 data modify storage simplenergy:temp ingredient set from storage simplenergy:main pulverizer.input
@@ -54,7 +52,7 @@ $execute if score #output_occupied simplenergy.data matches 1 if score #count si
 
 # Progress the slot
 scoreboard players add #progression simplenergy.data 1
-$execute if score #progression simplenergy.data matches ..199 store result storage simplenergy:temp slots[$(index)].progression int 1 run scoreboard players get #progression simplenergy.data
+$execute if score #progression simplenergy.data matches ..199 run scoreboard players operation @s simplenergy.pulverizer_progress_$(index) = #progression simplenergy.data
 scoreboard players add #working simplenergy.data 1
 
 # Add the item to the result slot if progression is done

@@ -10,8 +10,23 @@
 function #itemio:calls/container/destroy
 
 # Copy slots to storage
-data remove storage simplenergy:temp slots
-data modify storage simplenergy:temp slots set from entity @s item.components."minecraft:custom_data".simplenergy.pulverizer_slots
+data modify storage simplenergy:temp slots set value [{},{},{},{},{},{},{},{}]
+execute unless entity @s[tag=simplenergy.pulverizer_unlocked_0] run data modify storage simplenergy:temp slots[0].blocked set value true
+execute unless entity @s[tag=simplenergy.pulverizer_unlocked_1] run data modify storage simplenergy:temp slots[1].blocked set value true
+execute unless entity @s[tag=simplenergy.pulverizer_unlocked_2] run data modify storage simplenergy:temp slots[2].blocked set value true
+execute unless entity @s[tag=simplenergy.pulverizer_unlocked_3] run data modify storage simplenergy:temp slots[3].blocked set value true
+execute unless entity @s[tag=simplenergy.pulverizer_unlocked_4] run data modify storage simplenergy:temp slots[4].blocked set value true
+execute unless entity @s[tag=simplenergy.pulverizer_unlocked_5] run data modify storage simplenergy:temp slots[5].blocked set value true
+execute unless entity @s[tag=simplenergy.pulverizer_unlocked_6] run data modify storage simplenergy:temp slots[6].blocked set value true
+execute unless entity @s[tag=simplenergy.pulverizer_unlocked_7] run data modify storage simplenergy:temp slots[7].blocked set value true
+execute store result storage simplenergy:temp slots[0].progression int 1 run scoreboard players get @s simplenergy.pulverizer_progress_0
+execute store result storage simplenergy:temp slots[1].progression int 1 run scoreboard players get @s simplenergy.pulverizer_progress_1
+execute store result storage simplenergy:temp slots[2].progression int 1 run scoreboard players get @s simplenergy.pulverizer_progress_2
+execute store result storage simplenergy:temp slots[3].progression int 1 run scoreboard players get @s simplenergy.pulverizer_progress_3
+execute store result storage simplenergy:temp slots[4].progression int 1 run scoreboard players get @s simplenergy.pulverizer_progress_4
+execute store result storage simplenergy:temp slots[5].progression int 1 run scoreboard players get @s simplenergy.pulverizer_progress_5
+execute store result storage simplenergy:temp slots[6].progression int 1 run scoreboard players get @s simplenergy.pulverizer_progress_6
+execute store result storage simplenergy:temp slots[7].progression int 1 run scoreboard players get @s simplenergy.pulverizer_progress_7
 
 # Datapack Energy
 function energy:v1/api/break_machine

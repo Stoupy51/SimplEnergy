@@ -26,6 +26,15 @@ tellraw @a[tag=convention.debug] {"translate":"simplenergy.loaded_simplenergy_v2
 scoreboard players set #simplenergy.loaded load.status 1
 function simplenergy:v2.2.0/load/set_items_storage
 
+scoreboard objectives add simplenergy.pulverizer_progress_0 dummy
+scoreboard objectives add simplenergy.pulverizer_progress_1 dummy
+scoreboard objectives add simplenergy.pulverizer_progress_2 dummy
+scoreboard objectives add simplenergy.pulverizer_progress_3 dummy
+scoreboard objectives add simplenergy.pulverizer_progress_4 dummy
+scoreboard objectives add simplenergy.pulverizer_progress_5 dummy
+scoreboard objectives add simplenergy.pulverizer_progress_6 dummy
+scoreboard objectives add simplenergy.pulverizer_progress_7 dummy
+
 # Chunk of the persistent utility entities
 forceload add -30000000 1600
 
