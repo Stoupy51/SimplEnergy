@@ -48,15 +48,8 @@ scoreboard players add #elevator_time {ns}.data 1
 execute as @a[tag=!global.ignore.gui,tag={ns}.offhand] at @s run function {ns}:utils/passive_offhand
 """)
 	write_function(f"{ns}:utils/passive_offhand", f"""
-# Copy offhand
-data modify storage {ns}:main OffhandTag set from entity @s equipment.offhand.components."minecraft:custom_data"
-
-# Switch case
-execute if data storage {ns}:main OffhandTag.{ns}.multimeter anchored eyes positioned ^ ^ ^.2 run function {ns}:utils/multimeter/passive/main
-execute if data storage {ns}:main OffhandTag.{ns}.battery_switcher anchored eyes positioned ^ ^ ^.2 run function {ns}:utils/battery_switcher/passive/pre_raycast
-
-# Memory clean up
-data remove storage {ns}:main OffhandTag
+execute if items entity @s weapon.offhand *[custom_data~{{"{ns}":{{"multimeter":true}}}}] anchored eyes positioned ^ ^ ^.2 run function {ns}:utils/multimeter/passive/main
+execute if items entity @s weapon.offhand *[custom_data~{{"{ns}":{{"battery_switcher":true}}}}] anchored eyes positioned ^ ^ ^.2 run function {ns}:utils/battery_switcher/passive/pre_raycast
 """)
 
 
@@ -106,23 +99,13 @@ tellraw @s ["",{{"text":"Markers on furnaces: ","color":"gray"}},{{"score":{{"na
 # Advancement revoke
 advancement revoke @s only {ns}:technical/right_click
 
-# Copy SelectedItem tag to storage and offhand
-data modify storage {ns}:main SelectedItemTag set from entity @s SelectedItem.components."minecraft:custom_data"
-data modify storage {ns}:main OffhandTag set from entity @s equipment.offhand.components."minecraft:custom_data"
+# Run the right click function of the item held in each hand
+execute if items entity @s weapon.mainhand *[custom_data~{{"{ns}":{{"multimeter":true}}}}] run function {ns}:utils/multimeter/right_click/main
+execute if items entity @s weapon.mainhand *[custom_data~{{"{ns}":{{"wrench":true}}}}] run function {ns}:utils/wrench/right_click
+execute if items entity @s weapon.offhand *[custom_data~{{"{ns}":{{"multimeter":true}}}}] run function {ns}:utils/multimeter/right_click/main
+execute if items entity @s weapon.offhand *[custom_data~{{"{ns}":{{"wrench":true}}}}] run function {ns}:utils/wrench/right_click
+execute if items entity @s weapon.offhand *[custom_data~{{"{ns}":{{"battery_switcher":true}}}}] run function {ns}:utils/battery_switcher/right_click/main
 
-# Switch on SelectedItem tag to run the right click function
-execute if data storage {ns}:main SelectedItemTag.{ns}.multimeter run function {ns}:utils/multimeter/right_click/main
-execute if data storage {ns}:main SelectedItemTag.{ns}.wrench run function {ns}:utils/wrench/right_click
-
-# Switch on OffhandTag tag
-execute if data storage {ns}:main OffhandTag.{ns}.multimeter run function {ns}:utils/multimeter/right_click/main
-execute if data storage {ns}:main OffhandTag.{ns}.wrench run function {ns}:utils/wrench/right_click
-execute if data storage {ns}:main OffhandTag.{ns}.battery_switcher run function {ns}:utils/battery_switcher/right_click/main
-
-
-# Memory clean up
-data remove storage {ns}:main OffhandTag
-data remove storage {ns}:main SelectedItemTag
 scoreboard players reset @s {ns}.right_click
 """)
 
