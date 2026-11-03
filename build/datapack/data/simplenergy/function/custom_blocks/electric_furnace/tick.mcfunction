@@ -10,7 +10,12 @@
 data modify storage simplenergy:temp all set from block ~ ~ ~
 execute store result score #cook_time simplenergy.data run data get storage simplenergy:temp all.cooking_time_spent
 execute store result score #burn_time simplenergy.data run data get storage simplenergy:temp all.lit_time_remaining
-execute if score @s energy.storage >= @s simplenergy.energy_rate if data storage simplenergy:temp all.Items[{Slot:0b}] run function simplenergy:custom_blocks/electric_furnace/work
+execute unless score #cook_time simplenergy.data matches 1.. if data storage simplenergy:temp all.Items[{Slot:0b}] if score @s furnace_nbt_recipes.progress matches 1.. run scoreboard players set #cook_time simplenergy.data 1
+scoreboard players set #output_full simplenergy.data 0
+execute if data storage simplenergy:temp all.Items[{Slot:2b,count:64}] run scoreboard players set #output_full simplenergy.data 1
+execute if score #output_full simplenergy.data matches 1 run scoreboard players set #cook_time simplenergy.data 0
+execute if score #output_full simplenergy.data matches 1 run data modify block ~ ~ ~ cooking_time_spent set value 0
+execute if score @s energy.storage >= @s simplenergy.energy_rate if score #output_full simplenergy.data matches 0 if data storage simplenergy:temp all.Items[{Slot:0b}] run function simplenergy:custom_blocks/electric_furnace/work
 
 # Update gui depending on energy storage
 execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.1 with minecraft:recovery_compass[item_model="simplenergy:gui/electric_furnace_0",tooltip_display={"hide_tooltip":true},custom_data={"common_signals":{"temp":true}}]

@@ -10,7 +10,8 @@
 data modify storage simplenergy:temp all set from block ~ ~ ~
 execute store result score #cook_time simplenergy.data run data get storage simplenergy:temp all.BrewTime
 execute store result score #burn_time simplenergy.data run data get storage simplenergy:temp all.Fuel
-execute if score @s energy.storage >= @s simplenergy.energy_rate if data storage simplenergy:temp all.Items[{Slot:3b}] run function simplenergy:custom_blocks/electric_brewing_stand/work
+scoreboard players set #output_full simplenergy.data 0
+execute if score @s energy.storage >= @s simplenergy.energy_rate if score #output_full simplenergy.data matches 0 if data storage simplenergy:temp all.Items[{Slot:3b}] run function simplenergy:custom_blocks/electric_brewing_stand/work
 
 # Update gui depending on energy storage
 execute if score @s energy.storage matches ..0 run item replace block ~ ~ ~ container.4 with minecraft:recovery_compass[item_model="simplenergy:gui/electric_brewing_stand_0",tooltip_display={"hide_tooltip":true},custom_data={"common_signals":{"temp":true}}]

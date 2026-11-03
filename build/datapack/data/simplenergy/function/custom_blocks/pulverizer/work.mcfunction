@@ -6,7 +6,8 @@
 # @within	simplenergy:custom_blocks/pulverizer/tick
 #
 
-# Monitor if any slot is working
+# Monitor if any slot is working, the recipe being searched again for each pulverizer
+data remove storage simplenergy:temp previous_ingredient
 execute unless data storage simplenergy:temp slots[0].blocked run function simplenergy:custom_blocks/pulverizer/gui_active_slot {"index":0,"slot":9,"result":18}
 execute unless data storage simplenergy:temp slots[1].blocked run function simplenergy:custom_blocks/pulverizer/gui_active_slot {"index":1,"slot":10,"result":19}
 execute unless data storage simplenergy:temp slots[2].blocked run function simplenergy:custom_blocks/pulverizer/gui_active_slot {"index":2,"slot":11,"result":20}

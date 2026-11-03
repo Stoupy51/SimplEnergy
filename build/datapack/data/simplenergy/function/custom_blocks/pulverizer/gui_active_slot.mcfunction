@@ -21,13 +21,17 @@
 scoreboard players set #progression simplenergy.data 0
 $execute store result score #progression simplenergy.data run data get storage simplenergy:temp slots[$(index)].progression
 
-# Isolate ingredient and try to get result
-scoreboard players set #found simplenergy.data 0
-data modify storage simplenergy:main pulverizer.input set value {}
-data modify storage simplenergy:main pulverizer.output set value {}
+# Isolate ingredient
+data remove storage simplenergy:main pulverizer.input
 $data modify storage simplenergy:main pulverizer.input set from storage simplenergy:temp Items[{Slot:$(index)b}]
 $execute unless data storage simplenergy:main pulverizer.input run return run function simplenergy:custom_blocks/pulverizer/reset_progress {"index":$(index),"slot":$(slot)}
-execute summon item_display run function simplenergy:custom_blocks/pulverizer/get_pulverizer_recipe
+
+# Search the recipe, unless the previous slot holds the same ingredient and left #found and the output as they are
+data modify storage simplenergy:temp ingredient set from storage simplenergy:main pulverizer.input
+data remove storage simplenergy:temp ingredient.Slot
+data remove storage simplenergy:temp ingredient.count
+execute store success score #new_ingredient simplenergy.data run data modify storage simplenergy:temp previous_ingredient set from storage simplenergy:temp ingredient
+execute if score #new_ingredient simplenergy.data matches 1 run function simplenergy:custom_blocks/pulverizer/get_pulverizer_recipe
 
 # If no recipe found, stop
 $execute if score #found simplenergy.data matches 0 run return run function simplenergy:custom_blocks/pulverizer/reset_progress {"index":$(index),"slot":$(slot)}
@@ -41,17 +45,17 @@ execute if score #output_occupied simplenergy.data matches 1 store success score
 execute if score #output_occupied simplenergy.data matches 1 if score #is_not_same_output simplenergy.data matches 0 store success score #is_not_same_output simplenergy.data run data modify storage simplenergy:temp copy.components set from storage simplenergy:main pulverizer.output.components
 $execute if score #output_occupied simplenergy.data matches 1 if score #is_not_same_output simplenergy.data matches 1 run return run function simplenergy:custom_blocks/pulverizer/reset_progress {"index":$(index),"slot":$(slot)}
 
-# Progress the slot
-scoreboard players add #progression simplenergy.data 1
-$execute if score #progression simplenergy.data matches ..199 store result storage simplenergy:temp slots[$(index)].progression int 1 run scoreboard players get #progression simplenergy.data
-scoreboard players add #working simplenergy.data 1
-
 # Calculate the output count
 execute store result score #count simplenergy.data run data get storage simplenergy:temp copy.count
 execute store result score #to_add simplenergy.data run data get storage simplenergy:main pulverizer.output.count
 scoreboard players operation #count simplenergy.data += #to_add simplenergy.data
-$execute if score #output_occupied simplenergy.data matches 1 run function simplenergy:custom_blocks/pulverizer/get_max_stack_size {"result":$(result)}
+$execute if score #output_occupied simplenergy.data matches 1 store result score #max_stack_size simplenergy.data run function simplenergy:custom_blocks/pulverizer/get_max_stack_size {"result":$(result)}
 $execute if score #output_occupied simplenergy.data matches 1 if score #count simplenergy.data > #max_stack_size simplenergy.data run return run function simplenergy:custom_blocks/pulverizer/reset_progress {"index":$(index),"slot":$(slot)}
+
+# Progress the slot
+scoreboard players add #progression simplenergy.data 1
+$execute if score #progression simplenergy.data matches ..199 store result storage simplenergy:temp slots[$(index)].progression int 1 run scoreboard players get #progression simplenergy.data
+scoreboard players add #working simplenergy.data 1
 
 # Add the item to the result slot if progression is done
 execute if score #progression simplenergy.data matches ..199 run return 1

@@ -40,6 +40,11 @@ scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
+# FurnaceNbtRecipes tracks this furnace through this entity, instead of summoning a marker
+kill @e[type=marker,tag=furnace_nbt_recipes.furnace,distance=..0.75]
+tag @s add furnace_nbt_recipes.furnace
+scoreboard players set @s furnace_nbt_recipes.speed 1500
+
 # ItemIO compatibility
 tag @s add itemio.container
 tag @s add itemio.container.hopper

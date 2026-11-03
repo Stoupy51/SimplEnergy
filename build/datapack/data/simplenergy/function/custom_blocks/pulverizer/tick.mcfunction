@@ -29,8 +29,8 @@ execute if score @s energy.storage matches 4800..6399 run item replace block ~ ~
 execute if score @s energy.storage matches 6400.. run item replace block ~ ~ ~ container.26 with minecraft:recovery_compass[item_model="simplenergy:gui/pulverizer_5",tooltip_display={"hide_tooltip":true},custom_data={"common_signals":{"temp":true}}]
 
 # Update block visual depends on cook time, and playsound every second
-execute if score #working simplenergy.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:pulverizer"
-execute if score #working simplenergy.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:pulverizer_on"
+execute if score #working simplenergy.data matches 0 unless items entity @s contents *[minecraft:item_model="simplenergy:pulverizer"] run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:pulverizer"
+execute if score #working simplenergy.data matches 1.. unless items entity @s contents *[minecraft:item_model="simplenergy:pulverizer_on"] run data modify entity @s item.components."minecraft:item_model" set value "simplenergy:pulverizer_on"
 execute if score #working simplenergy.data matches 1.. if score #second simplenergy.data matches 0 run playsound simplenergy:pulverizer block @a[distance=..12] ~ ~ ~ 0.25
 
 # Save slots to entity
