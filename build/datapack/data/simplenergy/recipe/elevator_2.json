@@ -59,12 +59,12 @@
 			},
 			"minecraft:lore": [
 				{
-					"translate": "simplenergy.power_usage_20_kw",
+					"translate": "simplenergy.power_usage_20_kw","fallback": "[Power Usage: 20 kW]",
 					"italic": false,
 					"color": "gray"
 				},
 				{
-					"translate": "simplenergy.energy_buffer_1200_kj",
+					"translate": "simplenergy.energy_buffer_1200_kj","fallback": "[Energy Buffer: 1200 kJ]",
 					"italic": false,
 					"color": "gray"
 				},
@@ -81,12 +81,12 @@
 						"italic": false,
 						"color": "white",
 						"font": "simplenergy:tooltip"
-					}, {"translate": "simplenergy"}]
+					}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 				]
 			],
 			"minecraft:item_model": "simplenergy:elevator",
 			"minecraft:item_name": {
-				"translate": "simplenergy.elevator"
+				"translate": "simplenergy.elevator","fallback": "Elevator"
 			}
 		}
 	}

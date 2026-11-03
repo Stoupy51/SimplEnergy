@@ -36,18 +36,18 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "simplenergy.transfer_speed_240_kw",
+										"translate": "simplenergy.transfer_speed_240_kw","fallback": "[Transfer Speed: 240 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 									]
 								],
 								"minecraft:item_name": {
-									"translate": "simplenergy.elite_cable"
+									"translate": "simplenergy.elite_cable","fallback": "Elite Cable"
 								}
 							}
 						}

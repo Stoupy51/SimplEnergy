@@ -8,10 +8,12 @@
     },
     "title": {
       "translate": "simplenergy.simplunium_age",
+      "fallback": "Simplunium Age",
       "color": "gray"
     },
     "description": {
       "translate": "simplenergy.craft_a_simplunium_pickaxe",
+      "fallback": "Craft a Simplunium Pickaxe",
       "color": "green"
     },
     "frame": "task",

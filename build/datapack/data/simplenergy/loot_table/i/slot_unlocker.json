@@ -12,19 +12,19 @@
 							"components": {
 								"minecraft:lore": [
 									{
-										"translate": "simplenergy.unlocks_a_blocked_slot_in_a_machine",
+										"translate": "simplenergy.unlocks_a_blocked_slot_in_a_machine","fallback": "Unlocks a blocked slot in a machine",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 									]
 								],
 								"minecraft:item_model": "simplenergy:slot_unlocker",
 								"minecraft:item_name": {
-									"translate": "simplenergy.slot_unlocker"
+									"translate": "simplenergy.slot_unlocker","fallback": "Slot Unlocker"
 								},
 								"minecraft:custom_data": {
 									"simplenergy": {

@@ -1,6 +1,17 @@
 {
 	"model": {
-		"type": "minecraft:model",
-		"model": "simplenergy:item/furnace_generator"
+		"type": "minecraft:select",
+		"property": "minecraft:custom_model_data",
+		"index": 0,
+		"cases": [
+			{
+				"when": "lit=true",
+				"model": {"type": "minecraft:model","model": "simplenergy:item/furnace_generator_on"}
+			}
+		],
+		"fallback": {
+			"type": "minecraft:model",
+			"model": "simplenergy:item/furnace_generator"
+		}
 	}
 }

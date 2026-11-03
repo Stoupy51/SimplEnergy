@@ -16,11 +16,10 @@ tag @s add simplenergy.electric_furnace
 tag @s add simplenergy.vanilla.minecraft_furnace
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "simplenergy.electric_furnace"}}
+data merge entity @s {"CustomName": {"translate": "simplenergy.electric_furnace","fallback": "Electric Furnace"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="simplenergy:electric_furnace"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function simplenergy:custom_blocks/compute_brightness
 
 # Apply rotation
@@ -28,6 +27,9 @@ execute if score #rotation simplenergy.data matches 1 run data modify entity @s 
 execute if score #rotation simplenergy.data matches 2 run data modify entity @s Rotation[0] set value 270.0f
 execute if score #rotation simplenergy.data matches 3 run data modify entity @s Rotation[0] set value 0.0f
 execute if score #rotation simplenergy.data matches 4 run data modify entity @s Rotation[0] set value 90.0f
+
+# Show the model of the state the host is in
+function simplenergy:custom_blocks/electric_furnace/follow_host
 
 # Energy part
 tag @s add energy.receive
@@ -51,4 +53,8 @@ tag @s add simplenergy.rotatable
 # Add tag for loop every tick
 tag @s add simplenergy.tick
 scoreboard players add #tick_entities simplenergy.data 1
+
+# Add tag for loop every second
+tag @s add simplenergy.second
+scoreboard players add #second_entities simplenergy.data 1
 

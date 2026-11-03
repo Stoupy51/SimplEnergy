@@ -17,29 +17,29 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "simplenergy.allows_you_to_analyse_machines",
+										"translate": "simplenergy.allows_you_to_analyse_machines","fallback": "Allows you to analyse machines",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "simplenergy.to_get_their_energy_information",
+										"translate": "simplenergy.to_get_their_energy_information","fallback": "to get their energy information",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "simplenergy.hold_in_offhand_for_passive_use",
+										"translate": "simplenergy.hold_in_offhand_for_passive_use","fallback": "[Hold in offhand for passive use]",
 										"italic": false,
 										"color": "white"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 									]
 								],
 								"minecraft:item_model": "simplenergy:multimeter",
 								"minecraft:item_name": {
-									"translate": "simplenergy.multimeter"
+									"translate": "simplenergy.multimeter","fallback": "Multimeter"
 								},
 								"minecraft:custom_data": {
 									"simplenergy": {

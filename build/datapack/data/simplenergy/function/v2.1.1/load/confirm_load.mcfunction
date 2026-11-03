@@ -22,7 +22,7 @@ scoreboard objectives add simplenergy.open_manual minecraft.used:minecraft.writt
 
 
 # Confirm load
-tellraw @a[tag=convention.debug] {"translate":"simplenergy.loaded_simplenergy_v2_1_1","color":"green"}
+tellraw @a[tag=convention.debug] {"translate":"simplenergy.loaded_simplenergy_v2_1_1","fallback":"[Loaded SimplEnergy v2.1.1]","color":"green"}
 scoreboard players set #simplenergy.loaded load.status 1
 function simplenergy:v2.1.1/load/set_items_storage
 

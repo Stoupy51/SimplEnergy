@@ -40,13 +40,13 @@
 								],
 								"minecraft:item_model": "simplenergy:simplunium_spear",
 								"minecraft:item_name": {
-									"translate": "simplenergy.simplunium_spear"
+									"translate": "simplenergy.simplunium_spear","fallback": "Simplunium Spear"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 									]
 								]
 							}

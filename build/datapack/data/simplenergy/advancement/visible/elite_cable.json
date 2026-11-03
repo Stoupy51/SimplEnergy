@@ -21,10 +21,12 @@
     },
     "title": {
       "translate": "simplenergy.more_and_more_transfer",
+      "fallback": "More and More Transfer",
       "color": "gray"
     },
     "description": {
       "translate": "simplenergy.upgrade_an_advanced_cable",
+      "fallback": "Upgrade an Advanced Cable",
       "color": "green"
     },
     "frame": "task",

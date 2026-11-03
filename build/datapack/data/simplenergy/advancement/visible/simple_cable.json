@@ -21,10 +21,12 @@
     },
     "title": {
       "translate": "simplenergy.energy_needs_cables",
+      "fallback": "Energy Needs Cables",
       "color": "gray"
     },
     "description": {
       "translate": "simplenergy.get_your_first_simple_cable",
+      "fallback": "Get your first Simple Cable",
       "color": "green"
     },
     "frame": "task",

@@ -8,10 +8,12 @@
     },
     "title": {
       "translate": "simplenergy.a_simple_energy_storage",
+      "fallback": "A Simple Energy Storage",
       "color": "gray"
     },
     "description": {
       "translate": "simplenergy.craft_your_first_simple_battery",
+      "fallback": "Craft your first Simple Battery",
       "color": "green"
     },
     "frame": "task",

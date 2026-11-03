@@ -16,10 +16,9 @@ tag @s add simplenergy.machine_block
 tag @s add simplenergy.vanilla.minecraft_iron_block
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "simplenergy.machine_block"}}
+data merge entity @s {"CustomName": {"translate": "simplenergy.machine_block","fallback": "Machine Block"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="simplenergy:machine_block"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function simplenergy:custom_blocks/compute_brightness
 

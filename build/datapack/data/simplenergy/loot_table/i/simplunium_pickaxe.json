@@ -47,13 +47,13 @@
 								],
 								"minecraft:item_model": "simplenergy:simplunium_pickaxe",
 								"minecraft:item_name": {
-									"translate": "simplenergy.simplunium_pickaxe"
+									"translate": "simplenergy.simplunium_pickaxe","fallback": "Simplunium Pickaxe"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 									]
 								]
 							}

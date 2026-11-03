@@ -37,24 +37,24 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "simplenergy.energy_generation_80_kw",
+										"translate": "simplenergy.energy_generation_80_kw","fallback": "[Energy Generation: 80 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "simplenergy.energy_buffer_6400_kj",
+										"translate": "simplenergy.energy_buffer_6400_kj","fallback": "[Energy Buffer: 6400 kJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 									]
 								],
 								"minecraft:item_model": "simplenergy:redstone_generator",
 								"minecraft:item_name": {
-									"translate": "simplenergy.redstone_generator"
+									"translate": "simplenergy.redstone_generator","fallback": "Redstone Generator"
 								}
 							}
 						}

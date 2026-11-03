@@ -8,10 +8,12 @@
     },
     "title": {
       "translate": "simplenergy.a_better_furnace",
+      "fallback": "A Better Furnace",
       "color": "gray"
     },
     "description": {
       "translate": "simplenergy.craft_your_first_electric_furnace",
+      "fallback": "Craft your first Electric Furnace",
       "color": "green"
     },
     "frame": "task",

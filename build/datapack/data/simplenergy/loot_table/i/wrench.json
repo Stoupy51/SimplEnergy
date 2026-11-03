@@ -17,24 +17,24 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "simplenergy.provides_you_the_ability_to_instantly",
+										"translate": "simplenergy.provides_you_the_ability_to_instantly","fallback": "Provides you the ability to instantly",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "simplenergy.break_cables_and_rotates_machines_while_sneaking",
+										"translate": "simplenergy.break_cables_and_rotates_machines_while_sneaking","fallback": "break cables and rotates machines while sneaking",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 									]
 								],
 								"minecraft:item_model": "simplenergy:wrench",
 								"minecraft:item_name": {
-									"translate": "simplenergy.wrench"
+									"translate": "simplenergy.wrench","fallback": "Wrench"
 								},
 								"minecraft:custom_data": {
 									"simplenergy": {

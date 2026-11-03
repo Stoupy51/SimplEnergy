@@ -16,14 +16,14 @@
 								"minecraft:max_stack_size": 16,
 								"minecraft:lore": [
 									[{
-										"translate":"simplenergy.by_stoupy",
+										"translate": "simplenergy.by_stoupy","fallback": "by Stoupy",
 										"color": "gray",
 										"italic": false
 									}, "51"],
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 									]
 								],
 								"minecraft:custom_data": {

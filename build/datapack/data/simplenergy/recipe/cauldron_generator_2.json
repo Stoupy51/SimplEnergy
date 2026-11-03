@@ -54,12 +54,12 @@
 			},
 			"minecraft:lore": [
 				{
-					"translate": "simplenergy.energy_generation_5_kw",
+					"translate": "simplenergy.energy_generation_5_kw","fallback": "[Energy Generation: 5 kW]",
 					"italic": false,
 					"color": "gray"
 				},
 				{
-					"translate": "simplenergy.energy_buffer_500_kj",
+					"translate": "simplenergy.energy_buffer_500_kj","fallback": "[Energy Buffer: 500 kJ]",
 					"italic": false,
 					"color": "gray"
 				},
@@ -76,12 +76,12 @@
 						"italic": false,
 						"color": "white",
 						"font": "simplenergy:tooltip"
-					}, {"translate": "simplenergy"}]
+					}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 				]
 			],
 			"minecraft:item_model": "simplenergy:cauldron_generator",
 			"minecraft:item_name": {
-				"translate": "simplenergy.cauldron_generator"
+				"translate": "simplenergy.cauldron_generator","fallback": "Cauldron Generator"
 			}
 		}
 	}

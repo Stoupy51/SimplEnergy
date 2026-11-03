@@ -8,10 +8,12 @@
     },
     "title": {
       "translate": "simplenergy.more_and_more_energy_storage",
+      "fallback": "More and More Energy Storage!",
       "color": "gray"
     },
     "description": {
       "translate": "simplenergy.upgrade_an_advanced_battery",
+      "fallback": "Upgrade an Advanced Battery",
       "color": "green"
     },
     "frame": "task",

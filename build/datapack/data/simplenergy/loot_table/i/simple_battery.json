@@ -37,19 +37,19 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "simplenergy.energy_storage_10_mj",
+										"translate": "simplenergy.energy_storage_10_mj","fallback": "[Energy Storage: 10 MJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 									]
 								],
 								"minecraft:item_model": "simplenergy:simple_battery",
 								"minecraft:item_name": {
-									"translate": "simplenergy.simple_battery"
+									"translate": "simplenergy.simple_battery","fallback": "Simple Battery"
 								}
 							}
 						}

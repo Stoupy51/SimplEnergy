@@ -5,6 +5,6 @@
 		"sound_id": "simplenergy:luxio_suno_je_taime_stoupy51"
 	},
 	"description": {
-		"translate": "simplenergy.luxio_suno_je_taime_stoupy51"
+		"translate": "simplenergy.luxio_suno_je_taime_stoupy51","fallback": "Luxio & Suno - Je t'aime Stoupy51"
 	}
 }

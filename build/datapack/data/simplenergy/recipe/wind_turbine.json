@@ -59,12 +59,12 @@
 			},
 			"minecraft:lore": [
 				{
-					"translate": "simplenergy.energy_generation_20_kw",
+					"translate": "simplenergy.energy_generation_20_kw","fallback": "[Energy Generation: 20 kW]",
 					"italic": false,
 					"color": "gray"
 				},
 				{
-					"translate": "simplenergy.energy_buffer_800_kj",
+					"translate": "simplenergy.energy_buffer_800_kj","fallback": "[Energy Buffer: 800 kJ]",
 					"italic": false,
 					"color": "gray"
 				},
@@ -81,12 +81,12 @@
 						"italic": false,
 						"color": "white",
 						"font": "simplenergy:tooltip"
-					}, {"translate": "simplenergy"}]
+					}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 				]
 			],
 			"minecraft:item_model": "simplenergy:wind_turbine",
 			"minecraft:item_name": {
-				"translate": "simplenergy.wind_turbine"
+				"translate": "simplenergy.wind_turbine","fallback": "Wind Turbine"
 			}
 		}
 	}

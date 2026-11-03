@@ -23,13 +23,13 @@
 								},
 								"minecraft:item_model": "simplenergy:battery_switcher_both",
 								"minecraft:item_name": {
-									"translate": "simplenergy.battery_switcher_both"
+									"translate": "simplenergy.battery_switcher_both","fallback": "Battery Switcher Both"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 									]
 								]
 							}

@@ -16,10 +16,9 @@ tag @s add simplenergy.advanced_cable
 tag @s add simplenergy.vanilla.minecraft_player_head
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "simplenergy.advanced_cable"}}
+data merge entity @s {"CustomName": {"translate": "simplenergy.advanced_cable","fallback": "Advanced Cable"}}
 
 # Modify item display entity to match the custom block
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function simplenergy:custom_blocks/compute_brightness
 
 tag @s add energy.cable

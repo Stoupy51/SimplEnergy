@@ -8,10 +8,12 @@
     },
     "title": {
       "translate": "simplenergy.measuring_energy",
+      "fallback": "Measuring Energy",
       "color": "gray"
     },
     "description": {
       "translate": "simplenergy.obtain_a_multimeter",
+      "fallback": "Obtain a Multimeter",
       "color": "green"
     },
     "frame": "task",

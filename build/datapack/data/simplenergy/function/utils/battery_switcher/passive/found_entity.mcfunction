@@ -16,9 +16,9 @@ execute if score #state simplenergy.data matches 2 run team join simplenergy.aqu
 execute if score #state simplenergy.data matches 3 run team join simplenergy.gold @e[type=egg,tag=simplenergy.battery_switcher_marker,distance=..0.5]
 
 # Title to the player
-execute if score #state simplenergy.data matches 1 run title @a[tag=simplenergy.temp] actionbar [{"translate":"simplenergy.current_state","color":"gray"},{"translate":"simplenergy.input_output","color":"green"}]
-execute if score #state simplenergy.data matches 2 run title @a[tag=simplenergy.temp] actionbar [{"translate":"simplenergy.current_state","color":"gray"},{"translate":"simplenergy.output","color":"aqua"}]
-execute if score #state simplenergy.data matches 3 run title @a[tag=simplenergy.temp] actionbar [{"translate":"simplenergy.current_state","color":"gray"},{"translate":"simplenergy.input","color":"gold"}]
+execute if score #state simplenergy.data matches 1 run title @a[tag=simplenergy.temp] actionbar [{"translate":"simplenergy.current_state","fallback":"Current state: ","color":"gray"},{"translate":"simplenergy.input_output","fallback":"[Input & Output]","color":"green"}]
+execute if score #state simplenergy.data matches 2 run title @a[tag=simplenergy.temp] actionbar [{"translate":"simplenergy.current_state","fallback":"Current state: ","color":"gray"},{"translate":"simplenergy.output","fallback":"[Output]","color":"aqua"}]
+execute if score #state simplenergy.data matches 3 run title @a[tag=simplenergy.temp] actionbar [{"translate":"simplenergy.current_state","fallback":"Current state: ","color":"gray"},{"translate":"simplenergy.input","fallback":"[Input]","color":"gold"}]
 
 # Modify player's offhand custom model data
 execute if score #state simplenergy.data matches 1 run item modify entity @a[tag=simplenergy.temp] weapon.offhand simplenergy:battery_switcher/both

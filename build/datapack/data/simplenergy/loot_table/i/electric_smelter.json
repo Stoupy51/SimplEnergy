@@ -37,24 +37,24 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "simplenergy.power_usage_100_kw",
+										"translate": "simplenergy.power_usage_100_kw","fallback": "[Power Usage: 100 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "simplenergy.energy_buffer_8000_kj",
+										"translate": "simplenergy.energy_buffer_8000_kj","fallback": "[Energy Buffer: 8000 kJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 									]
 								],
 								"minecraft:item_model": "simplenergy:electric_smelter",
 								"minecraft:item_name": {
-									"translate": "simplenergy.electric_smelter"
+									"translate": "simplenergy.electric_smelter","fallback": "Electric Smelter"
 								}
 							}
 						}

@@ -40,13 +40,13 @@
 								],
 								"minecraft:item_model": "simplenergy:simplunium_sword",
 								"minecraft:item_name": {
-									"translate": "simplenergy.simplunium_sword"
+									"translate": "simplenergy.simplunium_sword","fallback": "Simplunium Sword"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 									]
 								]
 							}

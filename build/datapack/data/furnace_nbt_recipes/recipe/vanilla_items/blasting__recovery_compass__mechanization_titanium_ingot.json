@@ -6,11 +6,11 @@
 		"count": 1,
 		"components": {
 			"minecraft:item_name": {
-				"translate": "simplenergy.titanium_ingot"
+				"translate": "simplenergy.titanium_ingot","fallback": "Titanium Ingot"
 			},
 			"minecraft:lore": [
 				{
-					"translate": "simplenergy.mechanization",
+					"translate": "simplenergy.mechanization","fallback": "Mechanization",
 					"italic": true,
 					"color": "blue"
 				}

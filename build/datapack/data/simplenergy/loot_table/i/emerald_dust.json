@@ -23,13 +23,13 @@
 								},
 								"minecraft:item_model": "simplenergy:emerald_dust",
 								"minecraft:item_name": {
-									"translate": "simplenergy.emerald_dust"
+									"translate": "simplenergy.emerald_dust","fallback": "Emerald Dust"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 									]
 								]
 							}

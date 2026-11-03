@@ -16,11 +16,10 @@ tag @s add simplenergy.electric_brewing_stand
 tag @s add simplenergy.vanilla.minecraft_brewing_stand
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "simplenergy.electric_brewing_stand"}}
+data merge entity @s {"CustomName": {"translate": "simplenergy.electric_brewing_stand","fallback": "Electric Brewing Stand"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="simplenergy:electric_brewing_stand"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function simplenergy:custom_blocks/compute_brightness
 
 # Energy part

@@ -10,6 +10,6 @@
 #			scale (string)
 #
 
-$execute unless data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore" insert -2 value [[{"text":"[","color":"gray","italic":false}, {"translate":"simplenergy.charge"}],"$(part_1).$(part_2)$(scale)"]
-$execute if data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore"[-2] set value [[{"text":"[","color":"gray","italic":false}, {"translate":"simplenergy.charge"}],"$(part_1).$(part_2)$(scale)"]
+$execute unless data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore" insert -2 value [[{"text":"[","color":"gray","italic":false}, {"translate":"simplenergy.charge","fallback":"Charge: "}],"$(part_1).$(part_2)$(scale)"]
+$execute if data storage energy:temp list[0].components."minecraft:custom_data".energy.has_storage_lore run data modify storage energy:temp list[0].components."minecraft:lore"[-2] set value [[{"text":"[","color":"gray","italic":false}, {"translate":"simplenergy.charge","fallback":"Charge: "}],"$(part_1).$(part_2)$(scale)"]
 

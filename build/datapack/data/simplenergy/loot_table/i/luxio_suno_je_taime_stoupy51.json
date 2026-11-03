@@ -15,14 +15,14 @@
 										"luxio_suno_je_taime_stoupy51": true
 									},
 									"smithed": {
-										"dict": {"record": {"luxio_suno_je_taime_stoupy51": true,"item_name": "Luxio & Suno - Je t'aime Stoupy51"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 103,"sound_event": {"sound_id": "simplenergy:luxio_suno_je_taime_stoupy51"},"description": {"translate": "simplenergy.luxio_suno_je_taime_stoupy51"}}},
+										"dict": {"record": {"luxio_suno_je_taime_stoupy51": true,"item_name": "Luxio & Suno - Je t'aime Stoupy51"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 103,"sound_event": {"sound_id": "simplenergy:luxio_suno_je_taime_stoupy51"},"description": {"translate": "simplenergy.luxio_suno_je_taime_stoupy51","fallback": "Luxio & Suno - Je t'aime Stoupy51"}}},
 										"id": "simplenergy:luxio_suno_je_taime_stoupy51",
 										"origin": "simplenergy",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},
 								"minecraft:item_name": {
-									"translate": "simplenergy.music_disc",
+									"translate": "simplenergy.music_disc","fallback": "Music Disc",
 									"italic": false
 								},
 								"minecraft:jukebox_playable": "simplenergy:luxio_suno_je_taime_stoupy51",
@@ -33,7 +33,7 @@
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 									]
 								]
 							}

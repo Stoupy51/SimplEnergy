@@ -8,10 +8,12 @@
     },
     "title": {
       "translate": "simplenergy.pulverizing",
+      "fallback": "Pulverizing",
       "color": "gray"
     },
     "description": {
       "translate": "simplenergy.craft_your_first_pulverizer",
+      "fallback": "Craft your first Pulverizer",
       "color": "green"
     },
     "frame": "task",

@@ -8,10 +8,12 @@
     },
     "title": {
       "translate": "simplenergy.use_the_sunlight",
+      "fallback": "Use the Sunlight",
       "color": "gray"
     },
     "description": {
       "translate": "simplenergy.get_your_first_solar_panel",
+      "fallback": "Get your first Solar Panel",
       "color": "green"
     },
     "frame": "task",

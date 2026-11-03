@@ -8,10 +8,12 @@
     },
     "title": {
       "translate": "simplenergy.faster_brewing",
+      "fallback": "Faster Brewing",
       "color": "gray"
     },
     "description": {
       "translate": "simplenergy.obtain_an_electric_brewing_stand",
+      "fallback": "Obtain an Electric Brewing Stand",
       "color": "green"
     },
     "frame": "task",

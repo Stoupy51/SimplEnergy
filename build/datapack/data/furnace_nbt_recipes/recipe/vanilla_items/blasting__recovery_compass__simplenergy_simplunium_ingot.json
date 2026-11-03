@@ -25,7 +25,7 @@
 			},
 			"minecraft:item_model": "simplenergy:simplunium_ingot",
 			"minecraft:item_name": {
-				"translate": "simplenergy.simplunium_ingot"
+				"translate": "simplenergy.simplunium_ingot","fallback": "Simplunium Ingot"
 			},
 			"minecraft:lore": [
 				[
@@ -41,7 +41,7 @@
 						"italic": false,
 						"color": "white",
 						"font": "simplenergy:tooltip"
-					}, {"translate": "simplenergy"}]
+					}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 				]
 			]
 		}

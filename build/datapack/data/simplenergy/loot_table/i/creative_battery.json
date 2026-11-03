@@ -37,19 +37,19 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "simplenergy.energy_storage_2147_gj",
+										"translate": "simplenergy.energy_storage_2147_gj","fallback": "[Energy Storage: 2147 GJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 									]
 								],
 								"minecraft:item_model": "simplenergy:creative_battery",
 								"minecraft:item_name": {
-									"translate": "simplenergy.creative_battery"
+									"translate": "simplenergy.creative_battery","fallback": "Creative Battery"
 								}
 							}
 						}

@@ -17,7 +17,7 @@ tag @s add simplenergy.servo_extractor
 tag @s add simplenergy.vanilla.minecraft_item_frame
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "simplenergy.servo_extractor"}}
+data merge entity @s {"CustomName": {"translate": "simplenergy.servo_extractor","fallback": "Servo Extractor"}}
 
 # Modify item frame entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="simplenergy:servo_extractor",custom_data={simplenergy:{item_frame_destroy:true,alt_destroy:"simplenergy.servo_extractor"}}]

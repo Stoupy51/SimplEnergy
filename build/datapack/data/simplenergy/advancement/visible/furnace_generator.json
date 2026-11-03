@@ -8,10 +8,12 @@
     },
     "title": {
       "translate": "simplenergy.also_named_the_coal_generator",
+      "fallback": "Also named the Coal Generator",
       "color": "gray"
     },
     "description": {
       "translate": "simplenergy.craft_your_first_furnace_generator",
+      "fallback": "Craft your first Furnace Generator",
       "color": "green"
     },
     "frame": "task",

@@ -42,7 +42,7 @@
 			},
 			"minecraft:item_model": "simplenergy:machine_block",
 			"minecraft:item_name": {
-				"translate": "simplenergy.machine_block"
+				"translate": "simplenergy.machine_block","fallback": "Machine Block"
 			},
 			"minecraft:lore": [
 				[
@@ -58,7 +58,7 @@
 						"italic": false,
 						"color": "white",
 						"font": "simplenergy:tooltip"
-					}, {"translate": "simplenergy"}]
+					}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 				]
 			],
 			"minecraft:custom_data": {

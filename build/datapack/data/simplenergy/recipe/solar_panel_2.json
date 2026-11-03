@@ -60,12 +60,12 @@
 			},
 			"minecraft:lore": [
 				{
-					"translate": "simplenergy.energy_generation_4_kw",
+					"translate": "simplenergy.energy_generation_4_kw","fallback": "[Energy Generation: 4 kW]",
 					"italic": false,
 					"color": "gray"
 				},
 				{
-					"translate": "simplenergy.energy_buffer_600_kj",
+					"translate": "simplenergy.energy_buffer_600_kj","fallback": "[Energy Buffer: 600 kJ]",
 					"italic": false,
 					"color": "gray"
 				},
@@ -82,12 +82,12 @@
 						"italic": false,
 						"color": "white",
 						"font": "simplenergy:tooltip"
-					}, {"translate": "simplenergy"}]
+					}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 				]
 			],
 			"minecraft:item_model": "simplenergy:solar_panel",
 			"minecraft:item_name": {
-				"translate": "simplenergy.solar_panel"
+				"translate": "simplenergy.solar_panel","fallback": "Solar Panel"
 			}
 		}
 	}

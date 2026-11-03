@@ -17,7 +17,7 @@ tag @s add simplenergy.servo_inserter
 tag @s add simplenergy.vanilla.minecraft_item_frame
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "simplenergy.servo_inserter"}}
+data merge entity @s {"CustomName": {"translate": "simplenergy.servo_inserter","fallback": "Servo Inserter"}}
 
 # Modify item frame entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="simplenergy:servo_inserter",custom_data={simplenergy:{item_frame_destroy:true,alt_destroy:"simplenergy.servo_inserter"}}]

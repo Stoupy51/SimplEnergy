@@ -8,10 +8,12 @@
     },
     "title": {
       "translate": "simplenergy.having_the_control",
+      "fallback": "Having the control!",
       "color": "gray"
     },
     "description": {
       "translate": "simplenergy.craft_a_wrench_to_rotate_machines_and_break_cables",
+      "fallback": "Craft a wrench to rotate machines and break cables",
       "color": "green"
     },
     "hidden": true,

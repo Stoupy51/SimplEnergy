@@ -8,10 +8,12 @@
     },
     "title": {
       "translate": "simplenergy.cover_me_with_simplunium",
+      "fallback": "Cover Me with Simplunium",
       "color": "gray"
     },
     "description": {
       "translate": "simplenergy.better_than_iron_armor",
+      "fallback": "Better than iron armor",
       "color": "green"
     },
     "hidden": true,

@@ -16,10 +16,9 @@ tag @s add simplenergy.raw_simplunium_block
 tag @s add simplenergy.vanilla.minecraft_raw_iron_block
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "simplenergy.raw_simplunium_block"}}
+data merge entity @s {"CustomName": {"translate": "simplenergy.raw_simplunium_block","fallback": "Raw Simplunium Block"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="simplenergy:raw_simplunium_block"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function simplenergy:custom_blocks/compute_brightness
 

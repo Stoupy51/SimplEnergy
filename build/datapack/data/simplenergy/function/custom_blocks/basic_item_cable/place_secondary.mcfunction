@@ -16,11 +16,10 @@ tag @s add simplenergy.basic_item_cable
 tag @s add simplenergy.vanilla.minecraft_conduit
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "simplenergy.basic_item_cable"}}
+data merge entity @s {"CustomName": {"translate": "simplenergy.basic_item_cable","fallback": "Basic Item Cable"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="simplenergy:basic_item_cable"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function simplenergy:custom_blocks/compute_brightness
 
 # Item cable setup for models, and common itemio cable tag

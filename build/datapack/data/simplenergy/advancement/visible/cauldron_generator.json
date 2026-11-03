@@ -8,10 +8,12 @@
     },
     "title": {
       "translate": "simplenergy.the_simplest_generator",
+      "fallback": "The Simplest Generator",
       "color": "gray"
     },
     "description": {
       "translate": "simplenergy.craft_your_first_cauldron_generator",
+      "fallback": "Craft your first Cauldron Generator",
       "color": "green"
     },
     "frame": "task",

@@ -37,24 +37,24 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "simplenergy.power_usage_20_kw",
+										"translate": "simplenergy.power_usage_20_kw","fallback": "[Power Usage: 20 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "simplenergy.energy_buffer_1600_kj",
+										"translate": "simplenergy.energy_buffer_1600_kj","fallback": "[Energy Buffer: 1600 kJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 									]
 								],
 								"minecraft:item_model": "simplenergy:electric_furnace",
 								"minecraft:item_name": {
-									"translate": "simplenergy.electric_furnace"
+									"translate": "simplenergy.electric_furnace","fallback": "Electric Furnace"
 								}
 							}
 						}

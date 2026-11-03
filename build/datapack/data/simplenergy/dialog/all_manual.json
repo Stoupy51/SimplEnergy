@@ -4,7 +4,7 @@
 		"",
 		{"text": "聙","font": "simplenergy:renders","shadow_color": [0,0,0,0]},
 		" ",
-		{"translate": "simplenergy_manual","underlined": true},
+		{"translate": "simplenergy_manual","fallback": "SimplEnergy Manual","underlined": true},
 		" ",
 		{"text": "聙","font": "simplenergy:renders","shadow_color": [0,0,0,0]}
 	],

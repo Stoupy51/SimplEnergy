@@ -16,11 +16,10 @@ tag @s add simplenergy.wind_turbine
 tag @s add simplenergy.vanilla.minecraft_iron_trapdoor
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "simplenergy.wind_turbine"}}
+data merge entity @s {"CustomName": {"translate": "simplenergy.wind_turbine","fallback": "Wind Turbine"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="simplenergy:wind_turbine"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function simplenergy:custom_blocks/compute_brightness
 
 # Apply rotation

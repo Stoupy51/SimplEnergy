@@ -16,10 +16,9 @@ tag @s add simplenergy.deepslate_simplunium_ore
 tag @s add simplenergy.vanilla.minecraft_polished_deepslate
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "simplenergy.deepslate_simplunium_ore"}}
+data merge entity @s {"CustomName": {"translate": "simplenergy.deepslate_simplunium_ore","fallback": "Deepslate Simplunium Ore"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="simplenergy:deepslate_simplunium_ore"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function simplenergy:custom_blocks/compute_brightness
 

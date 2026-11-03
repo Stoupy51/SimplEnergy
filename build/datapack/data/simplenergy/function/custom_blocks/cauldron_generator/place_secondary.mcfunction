@@ -16,11 +16,10 @@ tag @s add simplenergy.cauldron_generator
 tag @s add simplenergy.vanilla.minecraft_cauldron
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "simplenergy.cauldron_generator"}}
+data merge entity @s {"CustomName": {"translate": "simplenergy.cauldron_generator","fallback": "Cauldron Generator"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="simplenergy:cauldron_generator"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function simplenergy:custom_blocks/compute_brightness
 
 # Energy part

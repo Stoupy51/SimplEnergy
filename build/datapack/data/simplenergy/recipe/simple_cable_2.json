@@ -48,7 +48,7 @@
 			},
 			"minecraft:lore": [
 				{
-					"translate": "simplenergy.transfer_speed_40_kw",
+					"translate": "simplenergy.transfer_speed_40_kw","fallback": "[Transfer Speed: 40 kW]",
 					"italic": false,
 					"color": "gray"
 				},
@@ -65,11 +65,11 @@
 						"italic": false,
 						"color": "white",
 						"font": "simplenergy:tooltip"
-					}, {"translate": "simplenergy"}]
+					}, {"translate": "simplenergy","fallback": "SimplEnergy"}]
 				]
 			],
 			"minecraft:item_name": {
-				"translate": "simplenergy.simple_cable"
+				"translate": "simplenergy.simple_cable","fallback": "Simple Cable"
 			}
 		}
 	}

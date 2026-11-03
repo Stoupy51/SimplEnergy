@@ -8,10 +8,12 @@
     },
     "title": {
       "translate": "simplenergy",
+      "fallback": "SimplEnergy",
       "color": "gray"
     },
     "description": {
       "translate": "simplenergy.obtain_a_simplunium_ingot",
+      "fallback": "Obtain a Simplunium Ingot",
       "color": "green"
     },
     "background": "simplenergy:block/gui/advancement_background",

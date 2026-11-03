@@ -8,10 +8,12 @@
     },
     "title": {
       "translate": "simplenergy.a_very_fast_smelter",
+      "fallback": "A Very Fast Smelter",
       "color": "gray"
     },
     "description": {
       "translate": "simplenergy.upgrade_an_electric_furnace",
+      "fallback": "Upgrade an Electric Furnace",
       "color": "green"
     },
     "frame": "task",
