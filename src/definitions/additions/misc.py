@@ -132,7 +132,7 @@ def main_additions() -> None:
 	)
 
 	# Music discs pulverizing recipes
-	obj = Item.from_id("luxio_suno_je_taime_stoupy51")
+	obj = Item.from_id("luxio_je_taime_stoupy51")
 	obj.recipes.extend([
 		PulverizingRecipe(category="misc", ingredient=Ingr(f"minecraft:music_disc_{disc}"))
 		for disc in [

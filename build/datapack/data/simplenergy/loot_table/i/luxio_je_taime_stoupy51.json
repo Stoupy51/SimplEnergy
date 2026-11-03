@@ -12,11 +12,11 @@
 							"components": {
 								"minecraft:custom_data": {
 									"simplenergy": {
-										"luxio_suno_je_taime_stoupy51": true
+										"luxio_je_taime_stoupy51": true
 									},
 									"smithed": {
-										"dict": {"record": {"luxio_suno_je_taime_stoupy51": true,"item_name": "Luxio & Suno - Je t'aime Stoupy51"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 103,"sound_event": {"sound_id": "simplenergy:luxio_suno_je_taime_stoupy51"},"description": {"translate": "simplenergy.luxio_suno_je_taime_stoupy51","fallback": "Luxio & Suno - Je t'aime Stoupy51"}}},
-										"id": "simplenergy:luxio_suno_je_taime_stoupy51",
+										"dict": {"record": {"luxio_je_taime_stoupy51": true,"item_name": "Luxio - Je t'aime Stoupy51"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 103,"sound_event": {"sound_id": "simplenergy:luxio_je_taime_stoupy51"},"description": [{"translate": "simplenergy.luxio_je_taime_stoupy","fallback": "Luxio - Je t'aime Stoupy"}, "51"]}},
+										"id": "simplenergy:luxio_je_taime_stoupy51",
 										"origin": "simplenergy",
 										"ignore": {"functionality": true,"crafting": true}
 									}
@@ -25,10 +25,10 @@
 									"translate": "simplenergy.music_disc","fallback": "Music Disc",
 									"italic": false
 								},
-								"minecraft:jukebox_playable": "simplenergy:luxio_suno_je_taime_stoupy51",
+								"minecraft:jukebox_playable": "simplenergy:luxio_je_taime_stoupy51",
 								"minecraft:max_stack_size": 1,
 								"minecraft:rarity": "rare",
-								"minecraft:item_model": "simplenergy:luxio_suno_je_taime_stoupy51",
+								"minecraft:item_model": "simplenergy:luxio_je_taime_stoupy51",
 								"minecraft:lore": [
 									[
 										"",
