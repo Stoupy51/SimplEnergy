@@ -1,7 +1,7 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet import COMMON_SIGNAL, COMMON_SIGNAL_HIDDEN, CUSTOM_ITEM_VANILLA, Block, BlockFunctions, JsonDict, McFunction, Mem, write_function
+from stewbeet import COMMON_SIGNAL, COMMON_SIGNAL_HIDDEN, CUSTOM_ITEM_VANILLA, Block, BlockFunctions, JsonDict, McFunction, Mem, persistent_item_display, write_function
 
 
 # Setup pulverizer work and visuals
@@ -54,8 +54,8 @@ execute if data storage {ns}:temp intruder unless data storage {ns}:temp intrude
 {machine_gui_str}
 
 # Update block visual depends on cook time, and playsound every second
-execute if score #working {ns}.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
-execute if score #working {ns}.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
+execute if score #working {ns}.data matches 0 unless items entity @s contents *[minecraft:item_model="{default_model}"] run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
+execute if score #working {ns}.data matches 1.. unless items entity @s contents *[minecraft:item_model="{working_model}"] run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
 execute if score #working {ns}.data matches 1.. if score #second {ns}.data matches 0 run playsound {ns}:pulverizer block @a[distance=..12] ~ ~ ~ 0.25
 
 # Save slots to entity
@@ -131,7 +131,8 @@ execute if score #drop_item {ns}.data matches 0 if data storage {ns}:temp slot.b
 	# Work function
 	for_each_slots: str = "\n".join(f"execute unless data storage {ns}:temp slots[{i}].blocked run function {funcs["gui_active_slot"]} {{\"index\":{i},\"slot\":{i+9},\"result\":{i+9*2}}}" for i in range(PULVERIZER_SLOTS))
 	write_function(funcs["work"], f"""
-# Monitor if any slot is working
+# Monitor if any slot is working, the recipe being searched again for each pulverizer
+data remove storage {ns}:temp previous_ingredient
 {for_each_slots}
 
 # Consume energy if any slot is working
@@ -155,13 +156,17 @@ return fail
 scoreboard players set #progression {ns}.data 0
 $execute store result score #progression {ns}.data run data get storage {ns}:temp slots[$(index)].progression
 
-# Isolate ingredient and try to get result
-scoreboard players set #found {ns}.data 0
-data modify storage {ns}:main pulverizer.input set value {{}}
-data modify storage {ns}:main pulverizer.output set value {{}}
+# Isolate ingredient
+data remove storage {ns}:main pulverizer.input
 $data modify storage {ns}:main pulverizer.input set from storage {ns}:temp Items[{{Slot:$(index)b}}]
 $execute unless data storage {ns}:main pulverizer.input run return run function {funcs["reset_progress"]} {{"index":$(index),"slot":$(slot)}}
-execute summon item_display run function {funcs["get_pulverizer_recipe"]}
+
+# Search the recipe, unless the previous slot holds the same ingredient and left #found and the output as they are
+data modify storage {ns}:temp ingredient set from storage {ns}:main pulverizer.input
+data remove storage {ns}:temp ingredient.Slot
+data remove storage {ns}:temp ingredient.count
+execute store success score #new_ingredient {ns}.data run data modify storage {ns}:temp previous_ingredient set from storage {ns}:temp ingredient
+execute if score #new_ingredient {ns}.data matches 1 run function {funcs["get_pulverizer_recipe"]}
 
 # If no recipe found, stop
 $execute if score #found {ns}.data matches 0 run return run function {funcs["reset_progress"]} {{"index":$(index),"slot":$(slot)}}
@@ -175,17 +180,17 @@ execute if score #output_occupied {ns}.data matches 1 store success score #is_no
 execute if score #output_occupied {ns}.data matches 1 if score #is_not_same_output {ns}.data matches 0 store success score #is_not_same_output {ns}.data run data modify storage {ns}:temp copy.components set from storage {ns}:main pulverizer.output.components
 $execute if score #output_occupied {ns}.data matches 1 if score #is_not_same_output {ns}.data matches 1 run return run function {funcs["reset_progress"]} {{"index":$(index),"slot":$(slot)}}
 
-# Progress the slot
-scoreboard players add #progression {ns}.data 1
-$execute if score #progression {ns}.data matches ..{PULVERIZER_TIME - 1} store result storage {ns}:temp slots[$(index)].progression int 1 run scoreboard players get #progression {ns}.data
-scoreboard players add #working {ns}.data 1
-
 # Calculate the output count
 execute store result score #count {ns}.data run data get storage {ns}:temp copy.count
 execute store result score #to_add {ns}.data run data get storage {ns}:main pulverizer.output.count
 scoreboard players operation #count {ns}.data += #to_add {ns}.data
-$execute if score #output_occupied {ns}.data matches 1 run function {funcs["get_max_stack_size"]} {{"result":$(result)}}
+$execute if score #output_occupied {ns}.data matches 1 store result score #max_stack_size {ns}.data run function {funcs["get_max_stack_size"]} {{"result":$(result)}}
 $execute if score #output_occupied {ns}.data matches 1 if score #count {ns}.data > #max_stack_size {ns}.data run return run function {funcs["reset_progress"]} {{"index":$(index),"slot":$(slot)}}
+
+# Progress the slot
+scoreboard players add #progression {ns}.data 1
+$execute if score #progression {ns}.data matches ..{PULVERIZER_TIME - 1} store result storage {ns}:temp slots[$(index)].progression int 1 run scoreboard players get #progression {ns}.data
+scoreboard players add #working {ns}.data 1
 
 # Add the item to the result slot if progression is done
 execute if score #progression {ns}.data matches ..{PULVERIZER_TIME - 1} run return 1
@@ -201,16 +206,12 @@ $execute if score #count {ns}.data matches 1.. store result block ~ ~ ~ Items[{{
 $execute if score #count {ns}.data matches 0 run data remove block ~ ~ ~ Items[{{Slot:$(index)b}}]
 """)
 
-	# Get pulverizer recipe function
+	# Get pulverizer recipe function, recipes put their output in the contents of the item_display they run as
+	recipe_display: str = persistent_item_display("pulverizer_recipe")
 	write_function(funcs["get_pulverizer_recipe"], f"""
-# Get the recipe
-function #{ns}:calls/pulverizer_recipes
-
-# Place in storage the given output (if any)
-execute if score #found {ns}.data matches 1 run data modify storage {ns}:main pulverizer.output set from entity @s item
-
-# Kill temporary entity
-kill @s
+scoreboard players set #found {ns}.data 0
+execute as {recipe_display} run function #{ns}:calls/pulverizer_recipes
+execute if score #found {ns}.data matches 1 run data modify storage {ns}:main pulverizer.output set from entity {recipe_display} item
 """)
 
 	# Get max stack size function
@@ -218,7 +219,7 @@ kill @s
 	numbers: list[int] = [64, 16, 1, 99]
 	numbers += [i for i in range(1, 100) if i not in numbers]
 	for i in numbers:
-		content += f"$execute if items entity @s container.$(result) *[minecraft:max_stack_size={i}] run return {i}\n"
+		content += f"$execute if items block ~ ~ ~ container.$(result) *[minecraft:max_stack_size={i}] run return {i}\n"
 	write_function(funcs["get_max_stack_size"], content)
 
 	# Keep track of unlocked slots when destroying and placing
