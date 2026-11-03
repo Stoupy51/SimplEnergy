@@ -3,7 +3,7 @@
 #
 # @executed	as @e[tag=simplenergy.second] & at @s
 #
-# @within	simplenergy:v2.1.1/second [ as @e[tag=simplenergy.second] & at @s ]
+# @within	simplenergy:v2.2.0/second [ as @e[tag=simplenergy.second] & at @s ]
 #
 
 execute if entity @s[tag=simplenergy.furnace_generator] run function simplenergy:custom_blocks/furnace_generator/second
