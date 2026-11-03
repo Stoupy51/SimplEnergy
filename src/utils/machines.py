@@ -128,6 +128,17 @@ function #itemio:calls/container/init
 				previous_max = (i * energy["max_storage"] // nb_gui_2) - 1
 				machine_gui.append(f'execute if score @s energy.storage matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.{gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{gui[gui_name]}",{COMMON_SIGNAL_HIDDEN}]')
 		machine_gui_str: str = "\n".join(machine_gui)
+		output_full_check: str = f"scoreboard players set #output_full {ns}.data 0"
+		if machine != "electric_brewing_stand":
+			# Vanilla zeroes cooking_time_spent every tick on a recipe it does not know, so the library's own progress tells the furnace is cooking
+			output_full_check = (
+				f"execute unless score #cook_time {ns}.data matches 1.. if data storage {ns}:temp all.Items[{{Slot:0b}}] if score @s furnace_nbt_recipes.progress matches 1.. run scoreboard players set #cook_time {ns}.data 1\n"
+			) + output_full_check
+			output_full_check += (
+				f"\nexecute if data storage {ns}:temp all.Items[{{Slot:2b,count:64}}] run scoreboard players set #output_full {ns}.data 1"
+				f"\nexecute if score #output_full {ns}.data matches 1 run scoreboard players set #cook_time {ns}.data 0"
+				f"\nexecute if score #output_full {ns}.data matches 1 run data modify block ~ ~ ~ {cook} set value 0"
+			)
 
 		default_model: str = Block.from_id(machine).item_model
 		working_model: str = default_model + "_on"
@@ -136,7 +147,8 @@ function #itemio:calls/container/init
 data modify storage {ns}:temp all set from block ~ ~ ~
 execute store result score #cook_time {ns}.data run data get storage {ns}:temp all.{cook}
 execute store result score #burn_time {ns}.data run data get storage {ns}:temp all.{burn}
-execute if score @s energy.storage >= @s {ns}.energy_rate if data storage {ns}:temp all.Items[{{Slot:{ingr_slot}b}}] run function {funcs["work"]}
+{output_full_check}
+execute if score @s energy.storage >= @s {ns}.energy_rate if score #output_full {ns}.data matches 0 if data storage {ns}:temp all.Items[{{Slot:{ingr_slot}b}}] run function {funcs["work"]}
 
 # Update gui depending on energy storage
 {machine_gui_str}
@@ -172,7 +184,16 @@ execute if score #old_burn_time {ns}.data matches ..200 store result block ~ ~ ~
 		else:
 			output_list.append('data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2b,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}')
 		outputs: str = "\n".join(output_list)
-		write_function(funcs.place_secondary, f"""
+		track_furnace: str = ""
+		if machine != "electric_brewing_stand":
+			speed: int = 8000 if machine == "electric_smelter" else 1500
+			track_furnace = f"""
+# FurnaceNbtRecipes tracks this furnace through this entity, instead of summoning a marker
+kill @e[type=marker,tag=furnace_nbt_recipes.furnace,distance=..0.75]
+tag @s add furnace_nbt_recipes.furnace
+scoreboard players set @s furnace_nbt_recipes.speed {speed}
+"""
+		write_function(funcs.place_secondary, f"""{track_furnace}
 # ItemIO compatibility
 tag @s add itemio.container
 tag @s add itemio.container.hopper
@@ -181,12 +202,6 @@ data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig ap
 {outputs}
 function #itemio:calls/container/init
 """)
-
-	# Tell FurnaceNbtRecipes how fast the electric furnaces cook, once, when it starts tracking one
-	write_function(f"{ns}:calls/furnace_nbt_recipes/configure_furnace", f"""
-execute if data block ~ ~ ~ {{CustomName:{{translate:"{ns}.electric_furnace"}}}} run scoreboard players set @s furnace_nbt_recipes.speed 1500
-execute if data block ~ ~ ~ {{CustomName:{{translate:"{ns}.electric_smelter"}}}} run scoreboard players set @s furnace_nbt_recipes.speed 8000
-""", tags=["furnace_nbt_recipes:v1/configure_furnace"])
 
 	# Cauldron Generator
 	default_model: str = Block.from_id("cauldron_generator").item_model
