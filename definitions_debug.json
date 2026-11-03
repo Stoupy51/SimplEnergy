@@ -575,7 +575,6 @@
 	"luxio_suno_je_taime_stoupy51": {
 		"id": "luxio_suno_je_taime_stoupy51",
 		"base_item": "minecraft:recovery_compass",
-		"manual_category": "miscellaneous",
 		"recipes": [
 			{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","group": "luxio_suno_je_taime_stoupy51","ingredient": {"item": "minecraft:music_disc_13"}},
 			{"type": "simplenergy_pulverizing","result_count": 1,"category": "misc","group": "luxio_suno_je_taime_stoupy51","ingredient": {"item": "minecraft:music_disc_cat"}},

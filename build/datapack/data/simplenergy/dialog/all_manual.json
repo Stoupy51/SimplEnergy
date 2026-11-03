@@ -2,11 +2,11 @@
 	"type": "minecraft:dialog_list",
 	"title": [
 		"",
-		{"text": "聙","font": "simplenergy:renders","shadow_color": [0,0,0,0]},
+		{"text": "聘","font": "simplenergy:renders","shadow_color": [0,0,0,0]},
 		" ",
 		{"translate": "simplenergy_manual","fallback": "SimplEnergy Manual","underlined": true},
 		" ",
-		{"text": "聙","font": "simplenergy:renders","shadow_color": [0,0,0,0]}
+		{"text": "聘","font": "simplenergy:renders","shadow_color": [0,0,0,0]}
 	],
 	"dialogs": [
 		"simplenergy:manual/page_1",
@@ -69,8 +69,7 @@
 		"simplenergy:manual/page_58",
 		"simplenergy:manual/page_59",
 		"simplenergy:manual/page_60",
-		"simplenergy:manual/page_61",
-		"simplenergy:manual/page_62"
+		"simplenergy:manual/page_61"
 	],
 	"exit_action": {
 		"label": {"translate": "gui.back"},

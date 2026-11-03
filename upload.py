@@ -3,7 +3,13 @@
 # Imports
 from beet import ProjectConfig
 from stewbeet import JsonDict
-from stewbeet.continuous_delivery import load_credentials, upload_to_github, upload_to_modrinth, upload_to_pmc, upload_to_smithed
+from stewbeet.continuous_delivery import (
+    load_credentials,
+    upload_to_github,
+    upload_to_modrinth,
+    upload_to_pmc,
+    upload_to_smithed,
+)
 from stewbeet.utils import get_project_config
 from stouputils.io import read_file
 
