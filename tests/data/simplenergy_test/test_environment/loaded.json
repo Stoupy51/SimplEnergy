@@ -1,0 +1,4 @@
+{
+	"type": "minecraft:function",
+	"setup": "simplenergy_test:spawn_loader"
+}

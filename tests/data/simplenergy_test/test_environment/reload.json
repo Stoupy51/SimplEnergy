@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:all_of",
+	"definitions": [
+		{
+			"type": "minecraft:function",
+			"setup": "simplenergy_test:spawn_loader"
+		}
+	]
+}

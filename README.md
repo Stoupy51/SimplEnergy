@@ -112,6 +112,11 @@ Join our active [Discord community](https://discord.gg/anxzu6rA9F) to:
 - 🎨 VieuxGreluchon for Resource Pack
 - 🔧 AirDox_ for cables visual
 
+## 🧪 Tests
+
+🔬 The [Ward](https://github.com/mcbookshelf/ward) tests in `tests/` run against the built pack, libraries included: `uvx "mcward[cli]" test -p build/SimplEnergy_datapack_with_libs.zip -p tests -v 26.3 "simplenergy_test:*"`<br>
+🔁 Use `-v 26.4-snapshot-7` for the 26.4 snapshot. The first run starts a Ward server that stays up so the next runs take a second, and `uvx "mcward[cli]" stop --all` stops it.
+
 ## ⭐ Star History
 
 [![Star History Chart](https://api.star-history.com/chart?repos=Stoupy51/SimplEnergy&type=date&legend=top-left)](https://www.star-history.com/?repos=Stoupy51%2FSimplEnergy&type=date&legend=top-left)
