@@ -1,5 +1,4 @@
 
-# ruff: noqa: E501
 # Imports
 from stewbeet import (
 	COMMON_SIGNAL_HIDDEN,
@@ -15,6 +14,16 @@ from stewbeet import (
 )
 
 from .pulverizer import pulverizer
+
+
+# Functions
+def furnace_tracking(speed: int = 1000) -> McFunction:
+	return f"""
+# FurnaceNbtRecipes tracks this furnace through this entity, instead of summoning a marker
+kill @e[type=marker,tag=furnace_nbt_recipes.furnace,distance=..0.75]
+tag @s add furnace_nbt_recipes.furnace
+scoreboard players set @s furnace_nbt_recipes.speed {speed}
+"""
 
 
 # Setup machines work and visuals
@@ -88,7 +97,7 @@ execute if score #count {ns}.data matches 1.. store result block ~ ~ ~ Items[{{S
 execute if score #count {ns}.data matches 0 run data remove block ~ ~ ~ Items[{{Slot:0b}}]
 """)
 
-		write_function(funcs.place_secondary, f"""
+		write_function(funcs.place_secondary, f"""{furnace_tracking()}
 # ItemIO compatibility
 tag @s add itemio.container
 tag @s add itemio.container.hopper
@@ -115,7 +124,8 @@ function #itemio:calls/container/init
 
 		all_gui: list[str] = [x for x in gui if machine + "_" in x]
 		nb_gui: int = len(all_gui)
-		nb_gui_2: int = nb_gui - 2	# nb_gui-2 because we don't count the 0 and last
+		# nb_gui-2 because we don't count the 0 and last
+		nb_gui_2: int = nb_gui - 2
 		machine_gui: list[str] = []
 		previous_max: int = 0
 		for i, gui_name in enumerate(all_gui):
@@ -184,15 +194,7 @@ execute if score #old_burn_time {ns}.data matches ..200 store result block ~ ~ ~
 		else:
 			output_list.append('data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2b,"mode":"output","allowed_side":{"bottom":true,"north":true,"south":true,"east":true,"west":true}}')
 		outputs: str = "\n".join(output_list)
-		track_furnace: str = ""
-		if machine != "electric_brewing_stand":
-			speed: int = 8000 if machine == "electric_smelter" else 1500
-			track_furnace = f"""
-# FurnaceNbtRecipes tracks this furnace through this entity, instead of summoning a marker
-kill @e[type=marker,tag=furnace_nbt_recipes.furnace,distance=..0.75]
-tag @s add furnace_nbt_recipes.furnace
-scoreboard players set @s furnace_nbt_recipes.speed {speed}
-"""
+		track_furnace: str = "" if machine == "electric_brewing_stand" else furnace_tracking(8000 if machine == "electric_smelter" else 1500)
 		write_function(funcs.place_secondary, f"""{track_furnace}
 # ItemIO compatibility
 tag @s add itemio.container
@@ -340,7 +342,4 @@ scoreboard players operation @s {ns}.elevator_time = #elevator_time {ns}.data
 
 	# Pulverizer
 	pulverizer(gui)
-
-
-	return
 
