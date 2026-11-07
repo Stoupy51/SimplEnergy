@@ -1,7 +1,7 @@
 
-#> simplenergy:v2.2.0/load/confirm_load
+#> simplenergy:v2.3.0/load/confirm_load
 #
-# @within	simplenergy:v2.2.0/load/valid_dependencies
+# @within	simplenergy:v2.3.0/load/valid_dependencies
 #
 
 scoreboard objectives add simplenergy.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
@@ -22,9 +22,9 @@ scoreboard objectives add simplenergy.open_manual minecraft.used:minecraft.writt
 
 
 # Confirm load
-tellraw @a[tag=convention.debug] {"translate":"simplenergy.loaded_simplenergy_v2_2_0","fallback":"[Loaded SimplEnergy v2.2.0]","color":"green"}
+tellraw @a[tag=convention.debug] {"translate":"simplenergy.loaded_simplenergy_v2_3_0","fallback":"[Loaded SimplEnergy v2.3.0]","color":"green"}
 scoreboard players set #simplenergy.loaded load.status 1
-function simplenergy:v2.2.0/load/set_items_storage
+function simplenergy:v2.3.0/load/set_items_storage
 
 scoreboard objectives add simplenergy.pulverizer_progress_0 dummy
 scoreboard objectives add simplenergy.pulverizer_progress_1 dummy

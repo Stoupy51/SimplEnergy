@@ -16,7 +16,7 @@
 			{"type": "blasting","result_count": 1,"category": "misc","group": "simplunium","ingredient": {"components": {"minecraft:custom_data": {"simplenergy": {"deepslate_simplunium_ore": true}}}},"experience": 0.8,"cookingtime": 100}
 		],
 		"wiki_buttons": [
-			[{"text": "Core material of SimplEnergy.","color": "yellow"},{"text": "\nRequired for the Wrench, Battery Switcher, Pulverizer,","color": "gray"},{"text": "\nElectric Smelter, servos and item cables","color": "gray"},{"text": "\nSimplunium gear is equivalent to iron, with 3x","color": "gray"},{"text": "\nits durability and slightly better stats","color": "gray"},{"text": "\nIt is not diamond: its tools cannot mine obsidian or ancient debris","color": "red"}]
+			[{"text": "Core material of SimplEnergy.","color": "yellow"},{"text": "\nRequired for a lot of items in the pack","color": "gray"},{"text": "\nSimplunium gear is equivalent to iron, with 3x","color": "gray"},{"text": "\nits durability and slightly better stats","color": "gray"},{"text": "\nIt is not diamond: its tools cannot mine obsidian or ancient debris","color": "red"}]
 		],
 		"components": {
 			"custom_data": {"smithed": {"dict": {"ingot": {"simplunium": true}},"id": "simplenergy:simplunium_ingot","origin": "simplenergy","ignore": {"functionality": true,"crafting": true}},"simplenergy": {"simplunium_ingot": true}},
