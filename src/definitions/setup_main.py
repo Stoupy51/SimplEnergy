@@ -2,11 +2,9 @@
 # Imports
 from stewbeet import (
 	Context,
-	DefaultOre,
 	EquipmentsConfig,
 	Ingr,
 	JsonDict,
-	VanillaEquipments,
 	add_energy_lore_to_definitions,
 	add_item_model_component,
 	add_item_name_and_lore_if_missing,
@@ -20,17 +18,14 @@ from stewbeet import (
 )
 
 from .additions.energy import main_additions as energy_additions
+from .additions.gear import SIMPLUNIUM_EQUIPMENTS
+from .additions.gear import main_additions as gear_additions
 from .additions.material import main_additions as material_additions
 from .additions.misc import main_additions as misc_additions
 from .manual_assets import manual_assets_main
 
 # Constants
-simplunium_durability = 3 * VanillaEquipments.PICKAXE.value[DefaultOre.IRON]["durability"]
-ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
-	"simplunium_ingot":	EquipmentsConfig(
-		DefaultOre.IRON, simplunium_durability, {"attack_damage": 1, "armor": 0.5, "mining_efficiency": 2}
-	),
-}
+ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {"simplunium_ingot": SIMPLUNIUM_EQUIPMENTS}
 DUSTS_CONFIGS: dict[str, tuple[list[str|JsonDict], Ingr]] = {
 	"copper":	(["raw_copper","copper_ore","deepslate_copper_ore"],												Ingr("minecraft:copper_ingot")),
 	"iron":		(["raw_iron","iron_ore","deepslate_iron_ore"],														Ingr("minecraft:iron_ingot")),
@@ -58,6 +53,7 @@ def beet_default(ctx: Context) -> None:
 
 	# Apply database additions
 	material_additions()
+	gear_additions()
 	energy_additions()
 	misc_additions()
 
