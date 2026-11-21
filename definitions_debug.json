@@ -692,7 +692,7 @@
 		},
 		"skip_gives": false,
 		"vanilla_block": {
-			"id": "minecraft:waxed_copper_block",
+			"id": "minecraft:gold_block",
 			"contents": false,
 			"block_facing": false,
 			"visual_facing": "none",

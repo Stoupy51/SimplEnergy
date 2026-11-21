@@ -35,7 +35,7 @@ def main_additions() -> None:
 	# Batteries
 	Block(
 		id="simple_battery",
-		vanilla_block=VanillaBlock(id="minecraft:waxed_copper_block"),
+		vanilla_block=VanillaBlock(id="minecraft:gold_block"),
 		manual_category="energy",
 		recipes=[
 			CraftingShapedRecipe(category="misc", shape=["CCC","CRC","III"], ingredients={"C":Ingr("minecraft:copper_block"),"R":Ingr("minecraft:redstone"),"I":Ingr("minecraft:iron_ingot")}),

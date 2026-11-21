@@ -1,9 +1,9 @@
 
 #> simplenergy:custom_blocks/simple_battery/replace_item
 #
-# @executed	as @n[type=item,nbt={Item:{id:"minecraft:waxed_copper_block"}},distance=..1]
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:gold_block"}},distance=..1]
 #
-# @within	simplenergy:custom_blocks/simple_battery/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:waxed_copper_block"}},distance=..1] ]
+# @within	simplenergy:custom_blocks/simple_battery/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:gold_block"}},distance=..1] ]
 #
 
 # Replace the item with the custom one

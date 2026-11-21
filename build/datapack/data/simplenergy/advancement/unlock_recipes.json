@@ -1,9 +1,214 @@
 {
 	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:inventory_changed"
+		"0": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:ancient_debris",
+							"minecraft:blue_stained_glass",
+							"minecraft:blue_stained_glass_pane",
+							"minecraft:breeze_rod",
+							"minecraft:cauldron",
+							"minecraft:charcoal",
+							"minecraft:coal",
+							"minecraft:copper_block",
+							"minecraft:copper_ingot",
+							"minecraft:daylight_detector",
+							"minecraft:glass",
+							"minecraft:gold_nugget",
+							"minecraft:iron_block",
+							"minecraft:iron_ingot",
+							"minecraft:lapis_lazuli",
+							"minecraft:netherite_scrap",
+							"minecraft:quartz",
+							"minecraft:raw_gold_block",
+							"minecraft:redstone",
+							"minecraft:redstone_block",
+							"minecraft:redstone_lamp",
+							"minecraft:stone"
+						]
+					}
+				]
+			}
+		},
+		"1": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"simplenergy": {
+									"machine_block": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"2": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"simplenergy": {
+									"simple_battery": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"3": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"simplenergy": {
+									"cauldron_generator": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"4": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"simplenergy": {
+									"heat_generator": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"5": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"simplenergy": {
+									"wind_turbine": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"6": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"simplenergy": {
+									"solar_panel": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"7": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"simplenergy": {
+									"elevator": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"8": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"simplenergy": {
+									"simple_cable": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"9": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"simplenergy": {
+									"multimeter": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"10": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"simplenergy": {
+									"slot_unlocker": true
+								}
+							}
+						}
+					}
+				]
+			}
 		}
 	},
+	"requirements": [
+		[
+			"0",
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6",
+			"7",
+			"8",
+			"9",
+			"10"
+		]
+	],
 	"rewards": {
 		"function": "simplenergy:advancements/unlock_recipes"
 	}

@@ -8,7 +8,6 @@ scoreboard players add #second_entities simplenergy.data 0
 scoreboard players add #tick_entities simplenergy.data 0
 scoreboard players add #total_custom_blocks simplenergy.data 0
 scoreboard players add #total_vanilla_item_frame simplenergy.data 0
-scoreboard players add #total_vanilla_waxed_copper_block simplenergy.data 0
 scoreboard players add #total_vanilla_raw_iron_block simplenergy.data 0
 scoreboard players add #total_vanilla_polished_deepslate simplenergy.data 0
 scoreboard players add #total_vanilla_player_head simplenergy.data 0
@@ -86,7 +85,6 @@ tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"simplenergy.vanilla_min
 tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"simplenergy.vanilla_minecraft_player_head","fallback":"Vanilla 'minecraft:player_head'"}, ": "],{"score":{"name":"#total_vanilla_player_head","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"simplenergy.vanilla_minecraft_polished_deepslate","fallback":"Vanilla 'minecraft:polished_deepslate'"}, ": "],{"score":{"name":"#total_vanilla_polished_deepslate","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"simplenergy.vanilla_minecraft_raw_iron_block","fallback":"Vanilla 'minecraft:raw_iron_block'"}, ": "],{"score":{"name":"#total_vanilla_raw_iron_block","objective":"simplenergy.data"},"color":"white"}]
-tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"simplenergy.vanilla_minecraft_waxed_copper_block","fallback":"Vanilla 'minecraft:waxed_copper_block'"}, ": "],{"score":{"name":"#total_vanilla_waxed_copper_block","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"simplenergy.vanilla_minecraft_item_frame","fallback":"Vanilla 'minecraft:item_frame'"}, ": "],{"score":{"name":"#total_vanilla_item_frame","objective":"simplenergy.data"},"color":"white"}]
 tellraw @s [[{"text":"- ","color":"dark_aqua"}, {"translate":"simplenergy.total_custom_blocks","fallback":"Total custom blocks: "}],{"score":{"name":"#total_custom_blocks","objective":"simplenergy.data"},"color":"aqua"}]
 tellraw @s [[{"text":"- ","color":"green"}, {"translate":"simplenergy.tick_tag_function","fallback":"'tick' tag function: "}],{"score":{"name":"#tick_entities","objective":"simplenergy.data"},"color":"dark_green"}]
