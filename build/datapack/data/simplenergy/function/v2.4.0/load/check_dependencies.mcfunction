@@ -1,15 +1,15 @@
 
-#> simplenergy:v2.3.0/load/check_dependencies
+#> simplenergy:v2.4.0/load/check_dependencies
 #
-# @within	simplenergy:v2.3.0/load/secondary
+# @within	simplenergy:v2.4.0/load/secondary
 #
 
 ## Check if SimplEnergy is loadable (dependencies)
 scoreboard players set #dependency_error simplenergy.data 0
 execute if score #dependency_error simplenergy.data matches 0 unless score #smithed.custom_block.major load.status matches 0.. run scoreboard players set #dependency_error simplenergy.data 1
-execute if score #dependency_error simplenergy.data matches 0 if score #smithed.custom_block.major load.status matches 0 unless score #smithed.custom_block.minor load.status matches 12.. run scoreboard players set #dependency_error simplenergy.data 1
+execute if score #dependency_error simplenergy.data matches 0 if score #smithed.custom_block.major load.status matches 0 unless score #smithed.custom_block.minor load.status matches 13.. run scoreboard players set #dependency_error simplenergy.data 1
 execute if score #dependency_error simplenergy.data matches 0 unless score #smithed.crafter.major load.status matches 0.. run scoreboard players set #dependency_error simplenergy.data 1
-execute if score #dependency_error simplenergy.data matches 0 if score #smithed.crafter.major load.status matches 0 unless score #smithed.crafter.minor load.status matches 12.. run scoreboard players set #dependency_error simplenergy.data 1
+execute if score #dependency_error simplenergy.data matches 0 if score #smithed.crafter.major load.status matches 0 unless score #smithed.crafter.minor load.status matches 13.. run scoreboard players set #dependency_error simplenergy.data 1
 execute if score #dependency_error simplenergy.data matches 0 unless score #itemio.major load.status matches 1.. run scoreboard players set #dependency_error simplenergy.data 1
 execute if score #dependency_error simplenergy.data matches 0 if score #itemio.major load.status matches 1 unless score #itemio.minor load.status matches 8.. run scoreboard players set #dependency_error simplenergy.data 1
 execute if score #dependency_error simplenergy.data matches 0 if score #itemio.major load.status matches 1 if score #itemio.minor load.status matches 8 unless score #itemio.patch load.status matches 1.. run scoreboard players set #dependency_error simplenergy.data 1
