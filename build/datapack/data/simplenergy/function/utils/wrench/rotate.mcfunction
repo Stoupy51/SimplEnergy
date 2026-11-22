@@ -19,6 +19,10 @@ execute store result entity @s Rotation[0] float 1 run scoreboard players get #r
 # Rotate base block
 function #simplenergy:calls/wrench_rotate
 
+# Reconnect the energy sides, as blocked faces may have turned toward a cable
+execute if entity @s[tag=energy.receive] run function simplenergy:utils/wrench/reconnect
+execute if entity @s[tag=energy.send,tag=!energy.receive] run function simplenergy:utils/wrench/reconnect
+
 # Memory clean up and particle effect
 data remove storage simplenergy:main Block
 particle block{block_state:"minecraft:furnace"} ~ ~ ~ .5 .5 .5 0.1 10

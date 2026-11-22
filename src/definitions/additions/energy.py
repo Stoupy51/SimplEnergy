@@ -183,7 +183,7 @@ def main_additions() -> None:
 			{"text":"\nHigher altitude increases energy generation","color":"gray"},
 			{"text":"\n(0 kW at y=50, 2 kW at y=60, ..., 20 kW at y=150)","color":"gray"},
 		])],
-		components={"custom_data": {"energy": {"generation":20, "max_storage": 800}}}
+		components={"custom_data": {"energy": {"generation":20, "max_storage": 800, "blocked_faces": ["top"]}}}
 	)
 
 	Block(
@@ -202,7 +202,7 @@ def main_additions() -> None:
 			{"text":"\nRequires direct sunlight to operate","color":"gray"},
 			{"text":"\nBalances energy storage with adjacent solar panels","color":"gray"},
 		])],
-		components={"custom_data": {"energy": {"generation":4, "max_storage": 600}}}
+		components={"custom_data": {"energy": {"generation":4, "max_storage": 600, "blocked_faces": ["top"]}}}
 	)
 
 	# Machines

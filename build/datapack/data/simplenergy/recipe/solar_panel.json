@@ -19,7 +19,10 @@
 			"minecraft:custom_data": {
 				"energy": {
 					"generation": 4,
-					"max_storage": 600
+					"max_storage": 600,
+					"blocked_faces": [
+						"top"
+					]
 				},
 				"simplenergy": {
 					"solar_panel": true

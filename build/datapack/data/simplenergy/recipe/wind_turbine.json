@@ -19,7 +19,10 @@
 			"minecraft:custom_data": {
 				"energy": {
 					"generation": 20,
-					"max_storage": 800
+					"max_storage": 800,
+					"blocked_faces": [
+						"top"
+					]
 				},
 				"simplenergy": {
 					"wind_turbine": true

@@ -154,10 +154,17 @@ execute store result entity @s Rotation[0] float 1 run scoreboard players get #r
 # Rotate base block
 function #{ns}:calls/wrench_rotate
 
+# Reconnect the energy sides, as blocked faces may have turned toward a cable
+execute if entity @s[tag=energy.receive] run function {ns}:utils/wrench/reconnect
+execute if entity @s[tag=energy.send,tag=!energy.receive] run function {ns}:utils/wrench/reconnect
+
 # Memory clean up and particle effect
 data remove storage {ns}:main Block
 particle block{{block_state:"minecraft:furnace"}} ~ ~ ~ .5 .5 .5 0.1 10
 """)
+	write_function(f"{ns}:utils/wrench/reconnect", "\n".join(
+		f"scoreboard players set @s energy.network_id_{side} 0" for side in ("up", "down", "north", "south", "east", "west")
+	) + "\nfunction energy:v1/api/init_machine\n")
 	write_function(f"{ns}:utils/wrench/rotate/furnace", f"""
 # Check for furnace rotation
 scoreboard players set #is_furnace {ns}.data 0

@@ -910,7 +910,7 @@
 			[{"text": "Altitude-dependent wind generator.","color": "yellow"},{"text": "\nHigher altitude increases energy generation","color": "gray"},{"text": "\n(0 kW at y=50, 2 kW at y=60, ..., 20 kW at y=150)","color": "gray"}]
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 20,"max_storage": 800},"simplenergy": {"wind_turbine": true},"smithed": {"id": "simplenergy:wind_turbine","origin": "simplenergy","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 20,"max_storage": 800,"blocked_faces": ["top"]},"simplenergy": {"wind_turbine": true},"smithed": {"id": "simplenergy:wind_turbine","origin": "simplenergy","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:wind_turbine","from": "simplenergy"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 20 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 800 kJ]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},{"text": "뀁SimplEnergy","italic": false,"color": "white","font": "simplenergy:tooltip"}]],
@@ -941,7 +941,7 @@
 			[{"text": "Daylight-powered generator.","color": "yellow"},{"text": "\nRequires direct sunlight to operate","color": "gray"},{"text": "\nBalances energy storage with adjacent solar panels","color": "gray"}]
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 4,"max_storage": 600},"simplenergy": {"solar_panel": true},"smithed": {"id": "simplenergy:solar_panel","origin": "simplenergy","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 4,"max_storage": 600,"blocked_faces": ["top"]},"simplenergy": {"solar_panel": true},"smithed": {"id": "simplenergy:solar_panel","origin": "simplenergy","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "simplenergy:solar_panel","from": "simplenergy"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 4 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 600 kJ]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},{"text": "뀁SimplEnergy","italic": false,"color": "white","font": "simplenergy:tooltip"}]],
