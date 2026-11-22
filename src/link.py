@@ -4,7 +4,6 @@ from beet import Context
 from stewbeet.contrib.simplenergy import (
 	GuiTranslation,
 	energy_cables_models,
-	insert_lib_calls,
 	item_cables_models,
 	keep_energy_for_batteries,
 	servo_mechanisms_models,
@@ -21,9 +20,6 @@ from .utils.remaining import setup_remaining
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 def beet_default(ctx: Context) -> None:
-
-	# Add commands to place and destroy functions for energy items
-	insert_lib_calls()
 
 	# Add advancements to the datapack
 	add_visible_advancements()
