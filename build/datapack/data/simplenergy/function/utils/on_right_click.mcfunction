@@ -4,6 +4,7 @@
 # @executed	as the player & at current position
 #
 # @within	advancement simplenergy:technical/right_click
+#			simplenergy:utils/on_interaction_click
 #
 
 # Advancement revoke

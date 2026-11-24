@@ -2,14 +2,16 @@
 # ruff: noqa: E501
 # Imports
 from stewbeet import (
-    Advancement,
+	Advancement,
 	BlockTag,
 	FunctionTag,
-    Item,
+	Item,
 	ItemModifier,
 	JsonDict,
 	Mem,
 	Predicate,
+	advancement_entity,
+	entity_type_field,
 	set_json_encoder,
 	write_function,
 	write_load_file,
@@ -91,6 +93,13 @@ tellraw @s ["",{{"text":"Markers on furnaces: ","color":"gray"}},{{"score":{{"na
 	# Setup block tags
 	Mem.ctx.data[ns].block_tags["solid"] = BlockTag(source_path=f"{ROOT}/solid.json")
 
+	# Where a tool's raycast stops: a solid block, or the interaction a block without collision stands in
+	write_function(f"{ns}:utils/ray_hit", f"""
+execute if block ~ ~ ~ #{ns}:solid run return 1
+execute align xyz positioned ~0.5 ~ ~0.5 if entity @e[type=interaction,distance=..0.01] run return 1
+return fail
+""")
+
 
 	## Right click detection
 	json_content: JsonDict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":{"type":"minecraft:entity_scores","entity":"this","scores":{f"{ns}.right_click":{"min":1}}}}}},"requirements":[["requirement"]],"rewards":{"function":f"{ns}:utils/on_right_click"}}
@@ -109,6 +118,14 @@ execute if items entity @s weapon.offhand *[custom_data~{{"{ns}":{{"battery_swit
 scoreboard players reset @s {ns}.right_click
 """)
 
+	# Using an interaction never uses the item in hand, so a machine of any pack standing in one is clicked from here
+	json_content = {"criteria":{"requirement":{"trigger":"minecraft:player_interacted_with_entity","conditions":{"entity":advancement_entity(entity_type_field("minecraft:interaction"))}}},"requirements":[["requirement"]],"rewards":{"function":f"{ns}:utils/on_interaction_click"}}
+	Mem.ctx.data[ns].advancements["technical/interaction_click"] = set_json_encoder(Advancement(json_content), max_level = -1)
+	write_function(f"{ns}:utils/on_interaction_click", f"""
+advancement revoke @s only {ns}:technical/interaction_click
+function {ns}:utils/on_right_click
+""")
+
 
 	# Setup wrench stuff
 	json_content: JsonDict = {"values": [f"{ns}:utils/wrench/rotate/furnace"]}
@@ -120,11 +137,11 @@ execute anchored eyes positioned ^ ^ ^.2 run function {ns}:utils/wrench/raycast
 scoreboard players reset #raycast {ns}.data
 """)
 	write_function(f"{ns}:utils/wrench/raycast", f"""
-# Stop case when raycast hits a block that is from wrench_raycast tag
-execute if block ~ ~ ~ #{ns}:solid align xyz run function {ns}:utils/wrench/stop_case
+# Stop case when raycast hits a solid block or an interaction
+execute if function {ns}:utils/ray_hit align xyz run function {ns}:utils/wrench/stop_case
 
-# Continue raycast until it hits a block that is solid or the max distance is reached
-execute if score #raycast {ns}.data matches 0 if entity @s[distance=..5] unless block ~ ~ ~ #{ns}:solid positioned ^ ^ ^.2 run function {ns}:utils/wrench/raycast
+# Continue raycast until it hits a solid block, an interaction, or the max distance
+execute if score #raycast {ns}.data matches 0 if entity @s[distance=..5] unless function {ns}:utils/ray_hit positioned ^ ^ ^.2 run function {ns}:utils/wrench/raycast
 """)
 	write_function(f"{ns}:utils/wrench/stop_case", f"""
 # Try to rotation block from {ns} or mechanization or break cable
@@ -186,11 +203,11 @@ execute if score #is_furnace {ns}.data matches 1 run data modify block ~ ~ ~ {{}
 execute anchored eyes positioned ^ ^ ^.2 run function {ns}:utils/multimeter/right_click/raycast
 """)
 	write_function(f"{ns}:utils/multimeter/right_click/raycast", f"""
-# Stop case when raycast hits a block that is solid
-execute if block ~ ~ ~ #{ns}:solid run function {ns}:utils/multimeter/right_click/stop_case
+# Stop case when raycast hits a solid block or an interaction
+execute if function {ns}:utils/ray_hit run function {ns}:utils/multimeter/right_click/stop_case
 
-# Continue raycast until it hits a block that is solid or the max distance is reached
-execute if entity @s[distance=..5] unless block ~ ~ ~ #{ns}:solid positioned ^ ^ ^.2 run function {ns}:utils/multimeter/right_click/raycast
+# Continue raycast until it hits a solid block, an interaction, or the max distance
+execute if entity @s[distance=..5] unless function {ns}:utils/ray_hit positioned ^ ^ ^.2 run function {ns}:utils/multimeter/right_click/raycast
 """)
 	write_function(f"{ns}:utils/multimeter/right_click/stop_case", f"""
 # Tellraw Energy Display
@@ -201,11 +218,11 @@ tag @s remove {ns}.temp
 
 	# Passive
 	write_function(f"{ns}:utils/multimeter/passive/main", f"""
-# Stop case when raycast hits a block that is solid
-execute if block ~ ~ ~ #{ns}:solid run function {ns}:utils/multimeter/passive/stop_case
+# Stop case when raycast hits a solid block or an interaction
+execute if function {ns}:utils/ray_hit run function {ns}:utils/multimeter/passive/stop_case
 
-# Continue raycast until it hits a block that is solid or the max distance is reached
-execute if entity @s[distance=..5] unless block ~ ~ ~ #{ns}:solid positioned ^ ^ ^.5 run function {ns}:utils/multimeter/passive/main
+# Continue raycast until it hits a solid block, an interaction, or the max distance
+execute if entity @s[distance=..5] unless function {ns}:utils/ray_hit positioned ^ ^ ^.5 run function {ns}:utils/multimeter/passive/main
 """)
 	write_function(f"{ns}:utils/multimeter/passive/stop_case", f"""
 # Execute at the block found the function
@@ -215,7 +232,7 @@ tag @s remove {ns}.temp
 """)
 	write_function(f"{ns}:utils/multimeter/passive/found_entity", f"""
 # Summon glowing snowball on block
-execute if block ~ ~ ~ #{ns}:solid run summon snowball ~.5 ~.3 ~.5 {{NoGravity:1b,Silent:1b,Glowing:1b,Tags:["{ns}.multimeter_marker"]}}
+execute if function {ns}:utils/ray_hit run summon snowball ~.5 ~.3 ~.5 {{NoGravity:1b,Silent:1b,Glowing:1b,Tags:["{ns}.multimeter_marker"]}}
 
 # Title to the player
 title @a[tag={ns}.temp] actionbar [{{"text":"Energy stored: ","italic":false,"color":"aqua"}},{{"score":{{"name":"@s","objective":"energy.storage"}},"italic":false,"color":"yellow"}},{{"text":"/"}},{{"score":{{"name":"@s","objective":"energy.max_storage"}},"italic":false,"color":"yellow"}},{{"text":" kJ"}},{{"text":"  |  ","color":"yellow"}},{{"text":"Change Rate: "}},{{"score":{{"name":"@s","objective":"energy.change_rate"}},"italic":false,"color":"yellow"}},{{"text":" kW"}}]
@@ -264,11 +281,11 @@ execute if score #state {ns}.data matches 3 run tag @s remove energy.send
 execute anchored eyes positioned ^ ^ ^.2 run function {ns}:utils/battery_switcher/right_click/raycast
 """)
 	write_function(f"{ns}:utils/battery_switcher/right_click/raycast", f"""
-# Stop case when raycast hits a block that is solid
-execute if block ~ ~ ~ #{ns}:solid run function {ns}:utils/battery_switcher/right_click/stop_case
+# Stop case when raycast hits a solid block or an interaction
+execute if function {ns}:utils/ray_hit run function {ns}:utils/battery_switcher/right_click/stop_case
 
-# Continue raycast until it hits a block that is solid or the max distance is reached
-execute if entity @s[distance=..5] unless block ~ ~ ~ #{ns}:solid positioned ^ ^ ^.2 run function {ns}:utils/battery_switcher/right_click/raycast
+# Continue raycast until it hits a solid block, an interaction, or the max distance
+execute if entity @s[distance=..5] unless function {ns}:utils/ray_hit positioned ^ ^ ^.2 run function {ns}:utils/battery_switcher/right_click/raycast
 """)
 	write_function(f"{ns}:utils/battery_switcher/right_click/stop_case", f"""
 tag @s add {ns}.temp
@@ -289,11 +306,11 @@ function {ns}:utils/battery_switcher/passive/main
 execute if score #state {ns}.data matches 0 run item modify entity @s weapon.offhand {ns}:battery_switcher/default
 """)
 	write_function(f"{ns}:utils/battery_switcher/passive/main", f"""
-# Stop case when raycast hits a block that is solid
-execute if block ~ ~ ~ #{ns}:solid run function {ns}:utils/battery_switcher/passive/stop_case
+# Stop case when raycast hits a solid block or an interaction
+execute if function {ns}:utils/ray_hit run function {ns}:utils/battery_switcher/passive/stop_case
 
-# Continue raycast until it hits a block that is solid or the max distance is reached
-execute if entity @s[distance=..5] unless block ~ ~ ~ #{ns}:solid positioned ^ ^ ^.5 run function {ns}:utils/battery_switcher/passive/main
+# Continue raycast until it hits a solid block, an interaction, or the max distance
+execute if entity @s[distance=..5] unless function {ns}:utils/ray_hit positioned ^ ^ ^.5 run function {ns}:utils/battery_switcher/passive/main
 """)
 	write_function(f"{ns}:utils/battery_switcher/passive/stop_case", f"""
 # Execute at the block found the function
@@ -307,7 +324,7 @@ tag @s remove {ns}.temp
 function {ns}:utils/battery_switcher/get_state
 
 # Summon glowing egg on block depending on the state
-execute if block ~ ~ ~ #{ns}:solid run summon egg ~ ~ ~ {{NoGravity:1b,Silent:1b,Glowing:1b,Tags:["{ns}.battery_switcher_marker"]}}
+execute if function {ns}:utils/ray_hit run summon egg ~ ~ ~ {{NoGravity:1b,Silent:1b,Glowing:1b,Tags:["{ns}.battery_switcher_marker"]}}
 execute if score #state {ns}.data matches 1 run team join {ns}.green @e[type=egg,tag={ns}.battery_switcher_marker,distance=..0.5]
 execute if score #state {ns}.data matches 2 run team join {ns}.aqua @e[type=egg,tag={ns}.battery_switcher_marker,distance=..0.5]
 execute if score #state {ns}.data matches 3 run team join {ns}.gold @e[type=egg,tag={ns}.battery_switcher_marker,distance=..0.5]
