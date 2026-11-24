@@ -1,7 +1,18 @@
 
-# ruff: noqa: E501
 # Imports
-from stewbeet import COMMON_SIGNAL, COMMON_SIGNAL_HIDDEN, CUSTOM_ITEM_VANILLA, Block, BlockFunctions, JsonDict, McFunction, Mem, persistent_item_display, write_function, write_load_file
+from stewbeet import (
+	COMMON_SIGNAL,
+	COMMON_SIGNAL_HIDDEN,
+	CUSTOM_ITEM_VANILLA,
+	Block,
+	BlockFunctions,
+	JsonDict,
+	McFunction,
+	Mem,
+	persistent_item_display,
+	write_function,
+	write_load_file,
+)
 
 
 # Setup pulverizer work and visuals
@@ -18,7 +29,7 @@ def pulverizer(gui: dict[str, str]) -> None:
 	all_gui: list[str] = [x for x in gui if "pulverizer_" in x]
 	gui_slot: int = 26
 	nb_gui: int = len(all_gui)
-	nb_gui_2: int = nb_gui - 2	# nb_gui-2 because we don't count the 0 and last
+	nb_gui_2: int = nb_gui - 2  # nb_gui-2 because we don't count the 0 and last
 	machine_gui: list[str] = []
 	previous_max: int = 0
 	for i, gui_name in enumerate(all_gui):
@@ -87,7 +98,7 @@ $execute if entity @s[tag={ns}.pulverizer_unlocked_$(index)] run function {funcs
 	# Gui progression function
 	progressions_gui: list[str] = []
 	nb_gui = len(progressions_cmd)
-	nb_gui_2 = nb_gui - 2	# nb_gui-2 because we don't count the 0 and last
+	nb_gui_2 = nb_gui - 2  # nb_gui-2 because we don't count the 0 and last
 	previous_max: int = 0
 	for i, progression in enumerate(progressions_cmd):
 		if i == 0:
@@ -249,6 +260,4 @@ tag @s add itemio.container.hopper
 	content += "function #itemio:calls/container/init\n"
 	write_function(funcs.place_secondary, content)
 	write_function(funcs.destroy, "# ItemIO compatibility\nfunction #itemio:calls/container/destroy\n\n", prepend = True)
-
-	return
 

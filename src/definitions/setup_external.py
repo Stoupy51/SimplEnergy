@@ -1,6 +1,12 @@
 
 # Imports
-from stewbeet import Context, ExternalItem, Mem, add_item_name_and_lore_if_missing, export_all_definitions_to_json
+from stewbeet import (
+	Context,
+	ExternalItem,
+	Mem,
+	add_item_name_and_lore_if_missing,
+	export_all_definitions_to_json,
+)
 
 
 # Make all the external item definitions

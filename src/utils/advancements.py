@@ -1,5 +1,4 @@
 
-# ruff: noqa: E501
 # Imports
 from typing import Any
 
@@ -86,6 +85,4 @@ def add_visible_advancements() -> None:
 		# Set the advancement
 		advancement = super_merge_dict(advancement, adv)
 		Mem.ctx.data[ns].advancements[f"visible/{item}"] = Advancement(stp.json_dump(advancement, max_level = 7))
-
-	return
 

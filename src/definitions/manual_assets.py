@@ -21,5 +21,3 @@ def manual_assets_main() -> None:
 	super_copy(f"{ASSETS_FOLDER}/servo_extractor.png", f"{renders}/{Mem.ctx.project_id}/")
 	super_copy(f"{ASSETS_FOLDER}/servo_inserter.png", f"{renders}/{Mem.ctx.project_id}/")
 
-	return
-
