@@ -15,7 +15,7 @@ scoreboard players set #energy simplenergy.data 0
 execute store result score #energy simplenergy.data run data get storage energy:temp list[0].components."minecraft:custom_data".energy.storage
 scoreboard players operation #part_1 simplenergy.data = #energy simplenergy.data
 scoreboard players operation #part_2 simplenergy.data = #energy simplenergy.data
-data modify storage simplenergy:temp macro set value {part_1:0, part_2:0, scale:""}
+data modify storage simplenergy:temp macro set value {part_1:0, part_2:0, pad:"", scale:""}
 
 ## kJ, MJ, GJ, TJ cases
 execute if score #energy simplenergy.data matches ..999 run data modify storage simplenergy:temp macro.scale set value " kJ]"
@@ -38,6 +38,9 @@ execute if score #energy simplenergy.data matches 1000000000.. run data modify s
 execute if score #energy simplenergy.data matches 1000000000.. run scoreboard players operation #part_1 simplenergy.data /= #1000000000 simplenergy.data
 execute if score #energy simplenergy.data matches 1000000000.. run scoreboard players operation #part_2 simplenergy.data %= #1000000000 simplenergy.data
 execute if score #energy simplenergy.data matches 1000000000.. run scoreboard players operation #part_2 simplenergy.data /= #10000000 simplenergy.data
+
+# Two decimals, so 12050 kJ reads 12.05 MJ
+execute if score #energy simplenergy.data matches 1000.. if score #part_2 simplenergy.data matches ..9 run data modify storage simplenergy:temp macro.pad set value "0"
 
 # Apply the new lore to the item
 execute store result storage simplenergy:temp macro.part_1 int 1 run scoreboard players get #part_1 simplenergy.data

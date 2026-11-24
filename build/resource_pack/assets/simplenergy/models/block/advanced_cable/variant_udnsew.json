@@ -6,11 +6,6 @@
 	},
 	"elements": [
 		{
-			"from": [4,4,4],
-			"to": [12,12,12],
-			"faces": {}
-		},
-		{
 			"from": [4,12,4],
 			"to": [12,16,12],
 			"faces": {"up": {"uv": [12,12,16,16],"texture": "#0"},"north": {"uv": [12,5,16,6],"rotation": 0,"texture": "#0"},"south": {"uv": [12,5,16,6],"rotation": 0,"texture": "#0"},"east": {"uv": [12,5,16,6],"rotation": 0,"texture": "#0"},"west": {"uv": [12,5,16,6],"rotation": 0,"texture": "#0"}}

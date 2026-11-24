@@ -26,7 +26,9 @@ function simplenergy:custom_blocks/compute_brightness
 tag @s add simplenergy.battery_switcher
 tag @s add energy.receive
 tag @s add energy.send
+data remove storage simplenergy:temp energy
 data modify storage simplenergy:temp energy set from entity @p[tag=simplenergy.placer] SelectedItem.components."minecraft:custom_data".energy
+execute unless data storage simplenergy:temp energy run data modify storage simplenergy:temp energy set from entity @p[tag=simplenergy.placer] equipment.offhand.components."minecraft:custom_data".energy
 execute store result score @s energy.max_storage run data get storage simplenergy:temp energy.max_storage
 execute store result score @s energy.storage run data get storage simplenergy:temp energy.storage
 scoreboard players operation @s energy.transfer_rate = @s energy.max_storage
