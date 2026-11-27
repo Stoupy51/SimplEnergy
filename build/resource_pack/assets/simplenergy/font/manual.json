@@ -222,6 +222,8 @@
 		{"type": "bitmap","file": "simplenergy:font/wiki_ingredient_of_craft.png","ascent": 8,"height": 16,"chars": ["3"]},
 		{"type": "bitmap","file": "simplenergy:font/shaped_3x3.png","ascent": 1,"height": 58,"chars": ["6"]},
 		{"type": "bitmap","file": "simplenergy:font/shaped_2x2.png","ascent": 1,"height": 58,"chars": ["5"]},
+		{"type": "bitmap","file": "simplenergy:font/shaped_3x3_grid.png","ascent": 1,"height": 58,"chars": ["Z"]},
+		{"type": "bitmap","file": "simplenergy:font/shaped_2x2_grid.png","ascent": 1,"height": 58,"chars": ["Y"]},
 		{"type": "bitmap","file": "simplenergy:font/furnace.png","ascent": 1,"height": 58,"chars": ["7"]},
 		{"type": "bitmap","file": "simplenergy:font/stonecutting.png","ascent": 4,"height": 58,"chars": ["8"]},
 		{"type": "bitmap","file": "simplenergy:font/pulverizing.png","ascent": 4,"height": 58,"chars": ["9"]},

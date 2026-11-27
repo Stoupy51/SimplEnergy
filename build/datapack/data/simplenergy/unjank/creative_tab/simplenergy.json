@@ -1,0 +1,85 @@
+{
+	"icon": {
+		"id": "minecraft:recovery_compass",
+		"components": {
+			"minecraft:custom_data": {
+				"smithed": {"dict": {"ingot": {"simplunium": true}},"id": "simplenergy:simplunium_ingot","origin": "simplenergy","ignore": {"functionality": true,"crafting": true}},
+				"simplenergy": {"simplunium_ingot": true}
+			},
+			"minecraft:item_model": "simplenergy:simplunium_ingot",
+			"minecraft:item_name": {
+				"translate": "simplenergy.simplunium_ingot","fallback": "Simplunium Ingot"
+			},
+			"minecraft:lore": [
+				["",{"text": "ꀁ","color": "white","italic": false,"font": "simplenergy:tooltip"},[{"text":"뀁","italic": false,"color": "white","font": "simplenergy:tooltip"}, {"translate": "simplenergy","fallback": "SimplEnergy"}]]
+			]
+		}
+	},
+	"title": "SimplEnergy",
+	"items": [
+		{
+			"type": "unjank:loot",
+			"loot": [
+				"simplenergy:i/simplunium_ingot",
+				"simplenergy:i/simplunium_nugget",
+				"simplenergy:i/raw_simplunium",
+				"simplenergy:i/simplunium_dust",
+				"simplenergy:i/simplunium_block",
+				"simplenergy:i/simplunium_ore",
+				"simplenergy:i/deepslate_simplunium_ore",
+				"simplenergy:i/raw_simplunium_block",
+				"simplenergy:i/simplunium_helmet",
+				"simplenergy:i/simplunium_chestplate",
+				"simplenergy:i/simplunium_leggings",
+				"simplenergy:i/simplunium_boots",
+				"simplenergy:i/simplunium_sword",
+				"simplenergy:i/simplunium_pickaxe",
+				"simplenergy:i/simplunium_axe",
+				"simplenergy:i/simplunium_shovel",
+				"simplenergy:i/simplunium_hoe",
+				"simplenergy:i/simplunium_spear",
+				"simplenergy:i/copper_dust",
+				"simplenergy:i/iron_dust",
+				"simplenergy:i/gold_dust",
+				"simplenergy:i/lapis_dust",
+				"simplenergy:i/diamond_dust",
+				"simplenergy:i/emerald_dust",
+				"simplenergy:i/quartz_dust",
+				"simplenergy:i/netherite_dust",
+				"simplenergy:i/tin_dust",
+				"simplenergy:i/titanium_dust",
+				"simplenergy:i/luxio_je_taime_stoupy51",
+				"simplenergy:i/machine_block",
+				"simplenergy:i/simple_battery",
+				"simplenergy:i/advanced_battery",
+				"simplenergy:i/elite_battery",
+				"simplenergy:i/creative_battery",
+				"simplenergy:i/cauldron_generator",
+				"simplenergy:i/furnace_generator",
+				"simplenergy:i/redstone_generator",
+				"simplenergy:i/heat_generator",
+				"simplenergy:i/wind_turbine",
+				"simplenergy:i/solar_panel",
+				"simplenergy:i/electric_furnace",
+				"simplenergy:i/electric_smelter",
+				"simplenergy:i/electric_brewing_stand",
+				"simplenergy:i/pulverizer",
+				"simplenergy:i/elevator",
+				"simplenergy:i/simple_cable",
+				"simplenergy:i/advanced_cable",
+				"simplenergy:i/elite_cable",
+				"simplenergy:i/basic_item_cable",
+				"simplenergy:i/servo_extractor",
+				"simplenergy:i/servo_inserter",
+				"simplenergy:i/multimeter",
+				"simplenergy:i/wrench",
+				"simplenergy:i/slot_unlocker",
+				"simplenergy:i/battery_switcher",
+				"simplenergy:i/battery_switcher_both",
+				"simplenergy:i/battery_switcher_output",
+				"simplenergy:i/battery_switcher_input",
+				"simplenergy:i/manual"
+			]
+		}
+	]
+}
