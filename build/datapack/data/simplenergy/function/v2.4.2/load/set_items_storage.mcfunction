@@ -1,7 +1,7 @@
 
-#> simplenergy:v2.4.1/load/set_items_storage
+#> simplenergy:v2.4.2/load/set_items_storage
 #
-# @within	simplenergy:v2.4.1/load/confirm_load
+# @within	simplenergy:v2.4.2/load/confirm_load
 #
 
 # Items storage
